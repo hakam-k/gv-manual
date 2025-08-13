@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1114016" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0031 &#x002F; P0032: Tensión baja&#x002F;alta del circuito de control del calentador del HO2S (sensor-1)
+</title>
+<servinfosub id = "E8T40A1114016001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1114015">DTC P0030: Circuito de control del calentador de HO2S (sensor-1):M16A y J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1114016002">
+<title>
+Descripción del sensor A&#x002F;F
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1111010">Descripción del sensor de relación aire&#x002F;combustible:M16A y J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1114016003">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.354in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.834in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0031:
+</emph>
+</ptxt>
+<ptxt>
+La tensión del circuito de control del calentador del sensor A&#x002F;F (aire&#x002F;combustible) es menor que la especificación durante más tiempo del especificado de forma continua, aunque la relación de servicio del control del calentador del sensor A&#x002F;F (aire&#x002F;combustible) es inferior al 90 &#x0025; con el motor en marcha. (El impulso de servicio del control del calentador no se detecta en su circuito del ECM)
+</ptxt>
+<ptxt>
+(Lógica de detección de 2 ciclo de conducción)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0032:
+</emph>
+</ptxt>
+<ptxt>
+La tensión del circuito de control del calentador del sensor A&#x002F;F (aire&#x002F;combustible) es mayor que la especificación durante más tiempo del establecido, de forma continua, incluso si la relación de servicio del control del calentador del sensor A&#x002F;F (aire&#x002F;combustible) es superior al 10 &#x0025; con el motor en marcha. (El impulso de servicio del control del calentador no se detecta en su circuito del ECM)
+</ptxt>
+<ptxt>
+(Lógica de detección de 2 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del calentador del sensor A&#x002F;F (aire&#x002F;combustible)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Calentador del sensor A&#x002F;F
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1114016004">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, conecte la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y deje que se caliente hasta que alcance su temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Haga funcionar el motor en régimen de ralentí durante 1 min. o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Verifique el DTC y los DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1114016005">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las medidas de precaución para la localización y reparación de averías de los DTC; para ello, consulte 
+<intxref refid = "E8T40A1110003">Precauciones para la localización y reparación de averías del DTC:M16A y J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E8T40A1114016006">
+<testgroup id = "E8T40A1114016007">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114001">Inspección del sistema de control del motor y de las emisiones:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016008">
+<title>
+Inspección del circuito del calentador del sensor A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del sensor A&#x002F;F (aire&#x002F;combustible) con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que el conector del sensor A&#x002F;F (aire&#x002F;combustible) esté bien conectado.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien conectado, mida la tensión entre el terminal de alimentación del calentador del conector del sensor A&#x002F;F (aire&#x002F;combustible) y la masa de la carrocería del vehículo con el interruptor de encendido en posición ON.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión medida de 10 - 14 V?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016009">
+<title>
+Comprobación del fusible del calentador de HO2S
+</title>
+<test1>
+<ptxt>
+Compruebe si el fusible &#34;O2 HTR&#34; (1) está fundido.
+</ptxt>
+<testfigure>
+<title>
+Para el motor J20A
+</title>
+<graphic graphicname = "I5JB0A110028.swf" width = "90.000mm" height = "47.981mm" ver = "02" gw = "155" gh = "119"/>
+</testfigure>
+<testfigure>
+<title>
+Para el motor M16A
+</title>
+<graphic graphicname = "I5JB0A110029.swf" width = "90.000mm" height = "47.628mm" ver = "02" gw = "156" gh = "118"/>
+</testfigure>
+</test1>
+<question>
+¿Está en buenas condiciones el fusible &#34;O2 HTR&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016010">
+<title>
+Comprobación de la resistencia del calentador de HO2S y del sensor A&#x002F;F (aire&#x002F;combustible)
+</title>
+<test1>
+<ptxt>
+Desconecte el conector de la HO2S-2 con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la resistencia en el calentador del sensor A&#x002F;F (aire&#x002F;combustible) y de HO2S; para ello, consulte 
+<intxref refid = "E8T40A1316010">Inspección en el vehículo del sensor de relación entre aire &#x002F; combustible (A&#x002F;F):M16A y J20A</intxref>
+ y 
+<intxref refid = "E8T40A1316011">Inspección en el vehículo del calentador del sensor de oxígeno calentado (HO2S-2):M16A y J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están en buen estado el calentador del sensor A&#x002F;F (aire&#x002F;combustible) y el calentador de HO2S?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el sensor defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016011">
+<title>
+Inspección del circuito de alimentación del relé del calentador de HO2S
+</title>
+<test1>
+<ptxt>
+Extraiga el relé de integración n&#176; 2 (para el motor J20A) (1) o el relé del calentador de HO2S (para el motor M16A) (2) con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión al conector del relé sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si la conexión está bien, mida la tensión entre cada terminal de alimentación del conector del relé y la masa de la carrocería del vehículo con el interruptor de encendido en la posición ON.
+</ptxt>
+<testfigure>
+<title>
+Para el motor J20A
+</title>
+<graphic graphicname = "I5JB0A110030.swf" width = "90.000mm" height = "48.333mm" ver = "02" gw = "155" gh = "120"/>
+</testfigure>
+<testfigure>
+<title>
+Para el motor M16A
+</title>
+<graphic graphicname = "I5JB0A110031.swf" width = "90.000mm" height = "52.214mm" ver = "03" gw = "156" gh = "131"/>
+</testfigure>
+</test1>
+<question>
+¿Son todas las tensiones medidas de 10 - 14 V?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El circuito de alimentación está abierto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016012">
+<title>
+Compruebe el relé del calentador de HO2S
+</title>
+<test1>
+<ptxt>
+Compruebe el relé de integración n&#176; 2 (para el motor J20A) o el relé del calentador de HO2S (para el motor M16A); para ello, consulte 
+<intxref refid = "E8T40A1316018">Inspección del relé de control:M16A y J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el relé.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016013">
+<title>
+Inspección del circuito del calentador del sensor A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Mida la resistencia de aislamiento entre los terminales del calentador del conector del sensor A&#x002F;F (aire&#x002F;combustible).
+</ptxt>
+</test1>
+<question>
+¿Tiene la resistencia el valor infinito?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el cable con cortocircuito.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016014">
+<title>
+Inspección del circuito del relé del calentador de HO2S
+</title>
+<test1>
+<ptxt>
+Mida la resistencia del cable entre el terminal de masa de la bobina del conector del relé y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿La resistencia medida es inferior a 1 &#937;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+El cable de salida del conector del relé está abierto o en cortocircuito a masa.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el circuito defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016015">
+<title>
+ Inspección del calentador del sensor A&#x002F;F (aire&#x002F;combustible)
+</title>
+<test1>
+<ptxt>
+Compruebe la resistencia del calentador del sensor A&#x002F;F (aire&#x002F;combustible); para ello, consulte 
+<intxref refid = "E8T40A1316010">Inspección en el vehículo del sensor de relación entre aire &#x002F; combustible (A&#x002F;F):M16A y J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buen estado el calentador del sensor A&#x002F;F (aire&#x002F;combustible)?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el sensor A&#x002F;F.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016016">
+<title>
+Inspección del circuito de control del calentador del sensor A&#x002F;F (aire&#x002F;combustible)
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del ECM con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que el terminal del circuito del calentador del sensor A&#x002F;F (aire&#x002F;combustible) esté bien conectado al conector del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien conectado, mida la resistencia de cada cable del circuito de control del calentador del sensor en el conector del ECM entre el ECM y el sensor A&#x002F;F (aire&#x002F;combustible), y entre el ECM y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿La resistencia medida de cada uno de los cables es inferior a 1 &#937;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el circuito de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114016017">
+<title>
+Inspección del circuito del calentador del sensor A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Mida la resistencia de aislamiento entre el terminal de control del calentador del sensor A&#x002F;F (aire&#x002F;combustible) y el terminal de masa del calentador del sensor A&#x002F;F (aire&#x002F;combustible) en el conector del ECM.
+</ptxt>
+</test1>
+<question>
+¿Tiene la resistencia el valor infinito?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el cable con cortocircuito.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A1104012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Le témoin de panne reste allumé après le démarrage du moteur
+</title>
+<servinfosub id = "F5JB0A1104012001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0A1104011">Le témoin de panne (MIL) ne s&apos;allume pas lorsque le contacteur d&apos;allumage est en position ON, moteur à l&apos;arrêt (mais le moteur peut être mis en marche)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A1104012002">
+<title>
+Description du circuit
+</title>
+<ptxt>
+Lorsque le contacteur d&apos;allumage est mis en position ON, l&apos;ECM active le relais principal (ferme le point de contact). Puis, l&apos;ECM, alimenté par l&apos;alimentation électrique principale, transmet le signal d&apos;indication ON du témoin de panne (MIL) au combiné d&apos;instruments de manière à allumer le MIL. Le combiné d&apos;instruments allume alors le témoin MIL. Lorsque le moteur commence à tourner et qu&apos;aucun dysfonctionnement n&apos;est détecté dans le système, l&apos;ECM transmet le signal d&apos;indication MIL OFF au combiné d&apos;instruments afin d&apos;éteindre le MIL. Le combiné d&apos;instruments éteint alors le MIL; toutefois, si un dysfonctionnement est ou a été détecté, le MIL reste allumé pendant que le moteur tourne.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A1104012003">
+<title>
+Recherche de pannes
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Avant d&apos;effectuer une recherche de pannes, s&apos;assurer d&apos;avoir lu le point 
+<intxref refid = "F5JB0A1100003">Précautions lors de la vérification du circuit de l&apos;ECM</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lors du mesurage de la tension, de la résistance et&#x002F;ou du signal d&apos;impulsion du circuit au connecteur de l&apos;ECM, raccorder l&apos;outil spécial à l&apos;ECM et&#x002F;ou aux connecteurs de l&apos;ECM en se reportant au point 
+<intxref refid = "F5JB0A1104063">Vérification de l&apos;ECM et de ses circuits</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "F5JB0A1104012004">
+<testgroup>
+<title>
+Vérification des DTC
+</title>
+<test1>
+<ptxt>
+Démarrer le moteur et vérifier à nouveau les DTC de l&apos;ECM et du TCM (pour modèles A&#x002F;T) pendant que le moteur tourne.
+</ptxt>
+</test1>
+<question>
+Un ou plusieurs DTC sont-ils signalés?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2 du point 
+<intxref refid = "F5JB0A1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+, l&apos;étape 2 du point 
+<intxref refid = "F5JB0A5104001">Vérification du système A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de la ligne de communication CAN
+</title>
+<test1>
+<ptxt>
+Vérifier le circuit de ligne de communication CAN entre le combiné d&apos;instruments et l&apos;ECM, le TCM (pour modèles A&#x002F;T), l&apos;ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS, le module de commande 4WD (pour moteur J20), le module de commande de démarrage sans clé (si le véhicule en est équipé) en se reportant aux étapes 9 à 15 du point 
+<intxref refid = "F5JB0A1104058">DTC P1674: Problème de communication CAN (erreur bus éteint)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le circuit est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le combiné d&apos;instruments par un autre en bon état et vérifier à nouveau. Si le témoin MIL reste allumé, remplacer l&#8217;ECM par un ECM en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

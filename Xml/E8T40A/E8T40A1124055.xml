@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1124055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2135
+</title>
+<servinfosub id = "E8T40A1124055001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2135: Correlación de tensión del sensor&#x002F;interruptor &#34;A&#34; &#x002F; &#34;B&#34; de posición del pedal o de la mariposa
+</emph>
+</ptxt>
+<ptxt>
+La diferencia entre el sensor TP principal y el secundario es mayor que el valor especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor de TP y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Conjunto del cuerpo de la mariposa
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1124055002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124055003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention3>
+<ptxt>
+Si se detecta algún otro DTC, además del DTC deseado, en el procedimiento de confirmación de DTC, asegúrese de realizar el procedimiento de localización y reparación de averías del DTC detectado previamente.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el pedal del acelerador completamente pisado durante 2 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el pedal del acelerador sin pisar durante 2 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repita 3 veces los pasos 2) y 3).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1124055004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1124055005">
+<testgroup id = "E8T40A1124055006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124055007">
+<title>
+Verificación de DTC
+</title>
+<test1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</test1>
+<question>
+¿Hay algún otro DTC además del P2135?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124055008">
+<title>
+Inspección del mazo de cables
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito del sensor (principal y secundario) TP como sigue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito principal del sensor TP: Consulte los pasos 2 a 5 de 
+<intxref refid = "E8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito del sensor (secundario) TP: Consulte los pasos 2 a 5 de 
+<intxref refid = "E8T40A1124028">DTC P0222 &#x002F; P0223:J24B</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124055009">
+<title>
+Comprobación del sensor TP
+</title>
+<test1>
+<ptxt>
+Inspeccione el rendimiento del sensor TP; para ello, consulte &#34;Inspección del rendimiento del sensor TP (posición de la mariposa)&#34; en 
+<intxref refid = "E8T40A1326004">Inspección en el vehículo del conjunto del cuerpo de la mariposa:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto del cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E8204039" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1334 &#x002F; B1338: Court-circuit au circuit d&apos;alimentation du dispositif d&apos;actionnement du rideau de sécurité latéral gauche &#x002F; droit
+</title>
+<servinfosub id = "F5JB0E8204039001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0E8204036">DTC B1331 &#x002F; B1335: Résistance élevée du circuit du dispositif d&apos;actionnement du rideau de sécurité latéral gauche &#x002F; droit</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+S&apos;assurer de respecter les instructions de la rubrique ATTENTION dans &#8220;Vérification du système de diagnostic de coussin de sécurité&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "F5JB0E8204039002">
+<title>
+Le DTC est émis lorsque
+</title>
+<ptxt>
+La tension mesurée dans le circuit du dispositif d&apos;actionnement du rideau de sécurité latéral (gauche ou droit) est supérieure à la valeur prescrite pendant une durée déterminée.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E8204039003">
+<title>
+Description du schéma de vérification
+</title>
+<ptxt>
+<emph etype = "bold">
+Etape 1: Vérifier si le module (dispositif de gonflage) du rideau de sécurité latéral présente un dysfonctionnement.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 2: Vérifier le circuit du dispositif d&apos;actionnement du rideau de sécurité latéral.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E8204039004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<diag type = "test" id = "F5JB0E8204039005">
+<testgroup>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, enlever le panneau de custode supérieur arrière côté gauche ou droit et débrancher le connecteur du module (dispositif de gonflage) du rideau de sécurité latéral.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le raccordement des bornes du module (dispositif de gonflage) du rideau de sécurité latéral dans le connecteur &#8220;G18&#8221; ou &#8220;G41&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, raccorder les outils spéciaux (A), (B) et (C) au connecteur du module (dispositif de gonflage) de rideau de sécurité latéral.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0179">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0180">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0181">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820057.swf" width = "90.000mm" height = "53.625mm" ver = "01" gw = "124" gh = "135"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Vérifier le DTC du SDM.
+</ptxt>
+</test1>
+<question>
+Le DTC B1334 ou B1338 s&apos;affiche-t-il lorsque le contacteur d&apos;allumage est en position ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Remplacer le module (dispositif de gonflage) de rideau de sécurité latéral en se reportant au point 
+<intxref refid = "F5JB0E8206011">Dépose et repose du module (dispositif de gonflage) du rideau de sécurité latéral</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher le connecteur &#8220;L32&#8221; du SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Relâcher la barre de court-circuit du connecteur SDM à l&apos;aide de l&apos;outil de libération (1) inclus dans l&apos;outil spécial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la tension entre la borne &#8220;L32-1&#8221; et la masse de carrosserie, entre la borne &#8220;L32-2&#8221; et la masse de carrosserie (pour le DTC B1334) ou entre la borne &#8220;L32-3&#8221; et la masse de carrosserie et entre &#8220;L32-4&#8221; et la masse de carrosserie (pour le DTC B1338) avec les outils spéciaux (A), (B) et (C) raccordés.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0182">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0183">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0184">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820060.swf" width = "90.000mm" height = "55.742mm" ver = "01" gw = "229" gh = "141"/>
+</testfigure>
+</test1>
+<question>
+Contacteur d&apos;allumage en position ON, la tension est-elle de 4 V maximum?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le SDM par un SDM en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1034: Remédier au court-circuit au circuit d&apos;alimentation du circuit du fil &#8220;YEL&#x002F;GRN&#8221; ou &#8220;YEL&#x002F;BLU&#8221;.
+</ptxt>
+<ptxt>
+DTC B1038: Remédier au court-circuit au circuit d&apos;alimentation du circuit du fil &#8220;BLK&#x002F;YEL&#8221; ou &#8220;BRN&#x002F;YEL&#8221;.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+La vérification et les réparations terminées, effectuer les opérations suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Raccorder tous les composants du système du coussin de sécurité et s&apos;assurer qu&apos;ils sont tous correctement montés.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Supprimer les DTC éventuels en se référant aux indications du point 
+<intxref refid = "F5JB0E8204005">Suppression des DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Effectuer à nouveau la 
+<intxref refid = "F5JB0E8204001">Vérification du système de diagnostic de coussin de sécurité</intxref>
+ pour confirmer que la panne a été réparée.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

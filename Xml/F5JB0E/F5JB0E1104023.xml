@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E1104023" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0108: Haute tension d&apos;entrée dans le circuit du détecteur de pression absolue de collecteur
+</title>
+<servinfosub id = "F5JB0E1104023001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0E1104021">DTC P0106: Problème de plage &#x002F; performance de pression absolue au collecteur</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E1104023002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.650in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.541in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La tension de sortie du détecteur de pression absolue de collecteur est constamment supérieure à la valeur spécifiée pendant le temps spécifié.
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit du détecteur de pression absolue du collecteur
+</ptxt>
+</item>
+<item>
+<ptxt>
+Détecteur de pression absolue de collecteur
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Lorsque les DTC P0113, P0118 et P0533 sont indiqués ensemble, il est possible que le circuit du câble &#8220;GRY&#x002F;GRN&#8221; soit coupé.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "F5JB0E1104023003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON, supprimer le DTC à l&apos;aide du dispositif de balayage et amener le moteur à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire tourner le moteur au ralenti pendant 1 minute.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier le DTC et le DTC en attente.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0E1104023004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0E1100003">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F5JB0E1104023005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0E1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du détecteur MAP et de son circuit
+</title>
+<test1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la pression de tubulure d&apos;admission affichée sur le dispositif de balayage.
+</ptxt>
+</test1>
+<question>
+Est-elle de 127 kPa?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuelles pannes intermittentes en se reportant au point 
+<intxref refid = "F5JB0E0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la tension de l&apos;alimentation électrique du détecteur MAP
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du détecteur MAP avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du détecteur MAP avec les bornes des câbles &#8220;GRY&#x002F;RED&#8221;, &#8220;RED&#x002F;WHT&#8221; et &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et mesurer la tension entre la masse du moteur et la borne du câble &#8220;GRY&#x002F;RED&#8221; du connecteur du détecteur MAP.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110035.swf" width = "90.000mm" height = "37.411mm" ver = "01" gw = "120" gh = "89"/>
+</testfigure>
+</test1>
+<question>
+La tension est-elle de 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Câble &#8220;GRY&#x002F;RED&#8221; court-circuité à l&apos;alimentation.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de mise à la masse du détecteur MAP
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne du câble &#8220;GRY&#x002F;GRN&#8221; du connecteur du détecteur MAP et la masse du moteur, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de mise à la masse
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne &#8220;C37-57&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée au niveau du câble &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuit ouvert ou résistance élevée au niveau de &#8220;C37-58&#8221;, &#8220;C37-48&#8221;, &#8220;C37-30&#8221;, &#8220;C37-29&#8221; et&#x002F;ou &#8220;C37-15&#8221; dans le circuit de masse de l&apos;ECM.
+</ptxt>
+<ptxt>
+Si les câbles sont en bon état, remplacer l&apos;ECM par un ECM en bon état, et vérifier à nouveau.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de signal du détecteur MAP
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la tension entre la borne du câble &#8220;RED&#x002F;WHT&#8221; du connecteur du détecteur MAP et la masse du moteur.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de signal du détecteur MAP
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne du câble &#8220;RED&#x002F;WHT&#8221; du connecteur du détecteur MAP et la borne &#8220;C37-55&#8221; du connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Câble &#8220;RED&#x002F;WHT&#8221; court-circuité au circuit d&apos;alimentation électrique.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée au niveau du câble &#8220;RED&#x002F;WHT&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du signal de sortie du détecteur MAP
+</title>
+<test1>
+<ptxt>
+Vérifier le détecteur MAP conformément au point 
+<intxref refid = "F5JB0E1306002">Vérification du détecteur de pression absolue de collecteur (MAP)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Détecteur MAP défectueux.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

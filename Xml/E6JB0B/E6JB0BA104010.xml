@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10A">
+<servcat sctnbr = "10" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0BA104010" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0566 &#x002F; P0567 &#x002F; P0568: Señal de desactivación &#x002F; Señal de reanudación &#x002F; Señal de establecimiento de control de crucero
+</title>
+<servinfosub id = "E6JB0BA104010001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0BA104009">DTC P0565: Señal de activación de control de crucero</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0BA104010002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.740in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.425in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0566:
+</emph>
+</ptxt>
+<ptxt>
+La tensión de la señal del interruptor CANCEL es inferior al valor especificado ininterrumpidamente durante 40 segundos.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0567:
+</emph>
+</ptxt>
+<ptxt>
+La tensión de la señal del interruptor RES&#x002F;ACC tiene valor especificado ininterrumpidamente durante 120 segundos.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0568:
+</emph>
+</ptxt>
+<ptxt>
+La tensión de la señal del interruptor SET&#x002F;COAST tiene valor especificado ininterrumpidamente durante 120 segundos.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de control de crucero y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0BA104010003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, conecte la herramienta de escaneado al DLC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y deje que se caliente hasta que alcance su temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Presione una vez el interruptor de control de crucero.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduzca el vehículo a una velocidad de 40 km&#x002F;h (25 mph) o superior durante un mínimo de 3 minutos.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E6JB0BA104010004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea y siga 
+<intxref refid = "E6JB0B1100003">Precauciones para la localización y reparación de averías del DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E6JB0BA104010005">
+<testgroup>
+<title>
+Inspección del interruptor de control de la velocidad de crucero
+</title>
+<test1>
+<ptxt>
+Inspeccione el interruptor de control de la velocidad de crucero refiriéndose a 
+<intxref refid = "E6JB0BA106002">Inspección del interruptor de control de la velocidad de crucero</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el interruptor de control de crucero.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito del interruptor de control de la velocidad de crucero
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que todos los terminales del circuito del interruptor de control de crucero estén correctamente conectados al conector del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si están bien conectados, inspeccione lo siguiente en el circuito del interruptor de control de crucero.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia entre el terminal del cable &#8220;LT GRN&#8221; y el terminal del cable &#8220;BLK&#x002F;YEL&#8221; del conector del interruptor de control de crucero es infinita (prueba de no continuidad).
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia entre el terminal del cable &#8220;LT GRN&#8221; del conector del interruptor de control de crucero y la masa de la carrocería del vehículo es infinita (prueba de cortocircuito a masa).
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el circuito del cable.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

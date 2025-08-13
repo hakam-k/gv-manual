@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E5104045" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P1875: Défaillance du circuit du contacteur 4L (coupure)
+</title>
+<servinfosub id = "F5JB0E5104045001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se référer à 
+<intxref refid = "F5JB0E5104044">DTC P1874: Défaillance du circuit du contacteur 4L (court-circuit)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E5104045002">
+<title>
+Condition de détection de DTC et zone de défaut
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.996in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du code
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Zone de défaut
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La position réelle de transfert est 4L bien que le TCM ait détecté un contacteur de court sur OFF, vitesse de véhicule étant entre 29 km&#x002F;h et 88 km&#x002F;h. (si équipé du contacteur 4L&#x002F;N)
+</ptxt>
+<ptxt>
+(Logique de détection sur 1 trajet)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Contacteur 4L&#x002F;N ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0E5104045003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Connecter l&#8217;analyseur-contrôleur au DLC, contact coupé.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Effacer les codes dans les mémoires du TCM et de l&#8217;ECM à l&#8217;aide de l&#8217;analyseur-contrôleur.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et mettre le contacteur de position de transfert en position &#8220;4L&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laisser le moteur tourner au ralenti pendant au moins 10 secondes avec le levier de sélection sur la gamme &#8220;D&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le véhicule en marche et amener la vitesse à environ 50 km&#x002F;h en position &#8220;4L&#8221; pendant 2 minutes.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC, les DTC provisoires et les données figées.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0E5104045004">
+<title>
+Diagnostic de panne des DTC
+</title>
+<diag type = "test" id = "F5JB0E5104045005">
+<testgroup>
+<title>
+Vérification du signal de vitesse du véhicule
+</title>
+<test1>
+<ptxt>
+Contrôler les DTC dans l&#8217;ECM et le module de commande ABS&#x002F;ESP&#174; en se référant à 
+<intxref refid = "F5JB0E1104003">Vérification des DTC</intxref>
+ ou 
+<intxref refid = "F5JB0E4504004">Vérification de DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Y a-t-il présence du DTC P P0500: Défaillance du capteur de vitesse du véhicule (VSS) dans l&apos;ECM et&#x002F;ou DTC C1021, C1022, C1025, C1026, C1031, C1032, C1035 et&#x002F;ou C1036 dans le module de commande ABS&#x002F;ESP&#174;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel du DTC concerné.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+La &#8220;Vérification du système A&#x002F;T&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0E5104001">Vérification du système A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Un analyseur-contrôleur SUZUKI est-il disponible?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du contacteur 4L et de son circuit
+</title>
+<test1>
+<ptxt>
+Raccorder l&#8217;analyseur-contrôleur SUZUKI au DLC, clé de contact sur OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Tourner la clé de contact sur ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sélectionner le mode &#8220;DATA LIST&#8221; (liste des données) sur l&#8217;analyseur-contrôleur.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le signal du contacteur 4L&#x002F;N (ON ou OFF) sur l&#8217;affichage en tournant le commutateur de transfert à chaque position.
+</ptxt>
+<spec>
+<title>
+Spécifications du contacteur 4L&#x002F;N
+</title>
+<ptxt>
+Position &#8220;4H&#8221;: OFF (hors fonction)
+</ptxt>
+<ptxt>
+Position &#8220;4L&#8221;: ON (en fonction)
+</ptxt>
+</spec>
+</test1>
+<question>
+OFF&#x002F;ON affiché comme décrit ci-dessus?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Problème intermittent ou TCM défectueux. Vérifier la présence de pannes intermittentes en se référant à 
+<intxref refid = "F5JB0E0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+. Si tout est en ordre, remplacer le TCM par un TCM réputé en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du contacteur 4L&#x002F;N et de son circuit
+</title>
+<test1>
+<ptxt>
+Tourner la clé de contact sur ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la tension à la borne &#8220;E93-4&#8221; du connecteur du TCM branché en tournant la commande de transfert à chaque position.
+</ptxt>
+<spec>
+<title>
+Spécifications du contacteur 4L&#x002F;N
+</title>
+<ptxt>
+Position &#8220;4H&#8221;: 10 &#8211; 14 V
+</ptxt>
+<ptxt>
+Position &#8220;4L&#8221;: 0 &#8211; 1 V
+</ptxt>
+</spec>
+</test1>
+<question>
+La tension est-elle conforme aux spécifications?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Problème intermittent ou TCM défectueux. Vérifier la présence de pannes intermittentes en se référant à 
+<intxref refid = "F5JB0E0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+. Si tout est en ordre, remplacer le TCM par un TCM réputé en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du contacteur 4L&#x002F;N
+</title>
+<test1>
+<ptxt>
+Vérifier le fonctionnement du contacteur 4L&#x002F;N en se référant à 
+<intxref refid = "F5JB0E3316010">Vérification de l&#8217;ensemble boîte de transfert:Type sélection à moteur (boîte de transfert avec actionneur de sélection)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il satisfaisant?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Coupure du circuit du contacteur 4L&#x002F;N Si le fil et le contact sont satisfaisants, monter un TCM neuf et revérifier.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le contacteur 4L&#x002F;N.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

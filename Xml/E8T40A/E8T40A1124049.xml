@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1124049" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2101
+</title>
+<servinfosub id = "E8T40A1124049001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2101: Extensión &#x002F; rendimiento del circuito del motor de control del motor de la mariposa
+</emph>
+</ptxt>
+<ptxt>
+El circuito de accionamiento del motor de la mariposa está averiado (circuito abierto o temperatura excesiva del dispositivo).
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motor de la mariposa y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1124049002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124049003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el pedal del acelerador completamente pisado durante 2 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el pedal del acelerador en posición de ralentí durante 2 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repita 3 veces los pasos 2) y 3).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1124049004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1124049005">
+<testgroup id = "E8T40A1124049006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124049007">
+<title>
+Comprobación del circuito de accionamiento del motor de la mariposa
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte los conectores del conjunto del cuerpo de la mariposa y del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal a los conectores del conjunto del cuerpo de la mariposa y del ECM sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, inspeccione el circuito de accionamiento del motor de la mariposa (B1 - B2) de la forma siguiente.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables de cada circuito de accionamiento del motor del actuador es inferior a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento de cada circuito de accionamiento del motor de la mariposa tiene un valor infinito entre el conector del conjunto del cuerpo de la mariposa y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre cada terminal del circuito de accionamiento del motor de la mariposa y cada uno de los terminales del conector del conjunto del cuerpo de la mariposa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión de cada circuito de accionamiento del motor de la mariposa es de 0 - 1 V con el interruptor de encendido en la posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124049008">
+<title>
+Comprobación del conjunto del cuerpo de la mariposa
+</title>
+<test1>
+<ptxt>
+Compruebe el rendimiento del cuerpo de la mariposa. 
+<intxreftitleoff1 refid = "E8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto del cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

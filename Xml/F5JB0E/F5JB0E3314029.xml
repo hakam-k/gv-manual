@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E3314029" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "0" modify = "0">
+<title>
+DTC U1121: Perte de communication avec le modulateur de pression&#x002F;module de commande d&#8217;ABS&#x002F;de l&#8217;électro-stabilisateur programmé
+</title>
+<servinfosub id = "F5JB0E3314029001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se référer à 
+<intxref refid = "F5JB0E3314026">DTC U1073: Bus de communication de module de commande hors fonction:Type sélection à moteur (boîte de transfert avec actionneur de sélection)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E3314029002">
+<title>
+Condition de détection de DTC et zone de défaut
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.001in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.178in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection de DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Zone de défaut
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erreur de réception des données de communication pour le modulateur de pression&#x002F;module de commande d&#8217;ABS ou ESP&#174; détectée continuellement plus du temps spécifié.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de communication CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ensemble modulateur de pression&#x002F;module de commande ABS ou ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande 4WD
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0E3314029003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Effacer le DTC à l&#8217;aide de l&#8217;analyseur-contrôleur.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le laisser tourner pendant au moins 1 minute.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule et vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F5JB0E3314029004">
+<title>
+Diagnostic de panne
+</title>
+<diag type = "test" id = "F5JB0E3314029005">
+<testgroup>
+<question>
+La &#8220;Vérification du système de commande 4WD&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0E3314001">Vérification du système de commande 4WD:Type sélection à moteur (boîte de transfert avec actionneur de sélection)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC du module de commande 4WD.
+</ptxt>
+</test1>
+<question>
+Les DTC U1100 et U1073 sont-ils détectés ensemble?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0E3314026">DTC U1073: Bus de communication de module de commande hors fonction:Type sélection à moteur (boîte de transfert avec actionneur de sélection)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC du modulateur de pression&#174;module de commande ABS ou ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Le DTC U1073 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0E4504020">DTC U1073: Bus de communication de module de commande hors fonction</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier tous les connecteurs des modules de commande.
+</title>
+<test1>
+<ptxt>
+Vérifier la connexion des connecteurs de tous les modules de commande communiquant par le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Revérifier le module de commande 4WD.
+</ptxt>
+</test1>
+<question>
+Le DTC U1100 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Panne intermittente. Vérifier la présence de pannes intermittentes en se référant à 
+<intxref refid = "F5JB0E0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Tourner la clé de contact à la position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher les connecteurs de tous les modules de commande communiquant par le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher une coupure, un court-circuit ou une résistance élevée dans le circuit de communication CAN entre les modules de commande.
+</ptxt>
+</test1>
+<question>
+Tous les circuits de communication CAN sont-ils en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Contrôler le circuit d&#8217;alimentation et de la masse du module de commande ABS ou ESP&#174;. Si le circuit est en ordre, substituer le modulateur de pression&#x002F;module de commande ABS ou ESP&#174; par une pièce réputée en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A1104043" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0403: Circuit de commande de recirculation des gaz d&apos;échappement
+</title>
+<servinfosub id = "F5JB0A1104043001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0A1104042">DTC P0401 &#x002F; P0402: Débit de recirculation des gaz d&apos;échappement insuffisant &#x002F; excessif détecté</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A1104043002">
+<title>
+Condition de détection de DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.370in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.813in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La tension de sortie de la soupape EGR est différente de la commande de sortie de plus d&apos;un pôle parmi 4 pôles.
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de la soupape EGR ouvert
+</ptxt>
+</item>
+<item>
+<ptxt>
+Soupape EGR
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0A1104043003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lors d&apos;un essai sur route, choisir un endroit où il n&apos;y a ni trafic ni risque d&apos;accident et rester très prudent pendant l&apos;essai pour éviter tout accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;essai sur route doit être effectué par 2 personnes, un conducteur et un technicien procédant aux essais, sur une route en bon état.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, raccorder le dispositif de balayage au DLC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire démarrer le moteur et l&apos;amener à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire le véhicule à un régime moteur de 2000 &#8211; 3500 tr&#x002F;min.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Maintenir le véhicule à cette vitesse pendant 1 minute (l&apos;ouverture du papillon d&apos;accélération est maintenue constante à ce stade).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule et vérifier le DTC et le DTC en attente.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0A1104043004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0A1100005">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F5JB0A1104043005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0A1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit d&apos;alimentation électrique de la soupape EGR
+</title>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher le connecteur de la soupape EGR.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position ON, mesurer la tension entre la borne du câble &#8220;BLU&#x002F;BLK&#8221; du connecteur de la soupape EGR et la masse de carrosserie du véhicule.
+</ptxt>
+</test1>
+<question>
+La tension de vérification est-elle de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert au niveau du câble &#8220;BLU&#x002F;BLK&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du câble
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la tension entre la masse du moteur et chacune des bornes des câbles &#8220;YEL&#x002F;BLK&#8221;, &#8220;YEL&#x002F;RED&#8221;, &#8220;YEL&#x002F;GRN&#8221;, &#8220;YEL&#8221; du connecteur de la soupape EGR.
+</ptxt>
+</test1>
+<question>
+Chaque tension est-elle de 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Un ou plusieurs câbles défectueux sont en court-circuit avec un autre circuit.
+</ptxt>
+<ptxt>
+Si les câbles sont en bon état, remplacer l&apos;ECM par un ECM en bon état, et vérifier à nouveau.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du câble
+</title>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, mesurer la résistance entre la masse du moteur et chacune des bornes des câbles &#8220;YEL&#x002F;BLK&#8221;, &#8220;YEL&#x002F;RED&#8221;, &#8220;YEL&#x002F;GRN&#8221;, &#8220;YEL&#8221; du connecteur de la soupape EGR.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Un ou plusieurs câbles défectueux sont court-circuités à la masse.
+</ptxt>
+<ptxt>
+Si les câbles sont en bon état, remplacer l&apos;ECM par un ECM en bon état, et vérifier à nouveau.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des courts-circuits dans le circuit de commande de la soupape EGR
+</title>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, mesurer la résistance entre chaque câble du circuit de commande de la soupape EGR (&#8220;YEL&#x002F;BLK&#8221;, &#8220;YEL&#x002F;RED&#8221;, &#8220;YEL&#x002F;GRN&#8221; et &#8220;YEL&#8221;) et chaque câble du circuit de commande de soupape EGR.
+</ptxt>
+</test1>
+<question>
+Chaque résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Un ou plusieurs câbles défectueux sont court-circuités.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de la bobine du moteur pas à pas de soupape EGR
+</title>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, brancher le connecteur de la soupape EGR.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne &#8220;E23-1&#x002F;16&#8221; et chacune des bornes &#8220;C37-3&#8221;, &#8220;C37-4&#8221;, &#8220;C37-5&#8221;, &#8220;C37-6&#8221; du connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle de 20 &#8211; 31 &#937; à 20 &#176;C?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+ECM défectueux. Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la soupape EGR
+</title>
+<test1>
+<ptxt>
+Vérifier la résistance de la soupape EGR en se reportant au point 
+<intxref refid = "F5JB0A1206008">Vérification de la soupape EGR</intxref>
+.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle conforme aux valeurs prescrites?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Un ou plusieurs circuits de câbles défectueux sont ouverts ou présentent un résistance élevée. Si les câbles sont en bon état, remplacer l&apos;ECM par un ECM en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Soupape EGR défectueuse.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

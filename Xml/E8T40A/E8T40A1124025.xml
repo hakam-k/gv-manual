@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1124025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0133
+</title>
+<servinfosub id = "E8T40A1124025001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.535in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.638in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+P0133: Respuesta lenta del circuito del sensor O2
+</emph>
+</ptxt>
+<ptxt>
+La relación entre el valor integrado de la variación de salida del sensor A&#x002F;F (aire&#x002F;combustible) y el valor integrado de la variación del reajuste de combustible a corto plazo es mayor que el valor especificado en las condiciones de conducción especificadas.
+</ptxt>
+<ptxt>
+(Lógica de detección de 2 ciclos de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor A&#x002F;F y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1124025002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1124013">DTC P0031 &#x002F; P0032:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124025003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Para efectuar una prueba en carretera, elija un lugar donde no haya tráfico ni riesgo de accidentes, y conduzca con cautela para evitar cualquier posible incidencia.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prueba en carretera debe ser realizada por 2 personas, un conductor y un probador, en una carretera nivelada.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Si se detecta algún otro DTC, además del DTC deseado, en el procedimiento de confirmación de DTC, asegúrese de realizar el procedimiento de localización y reparación de averías del DTC detectado previamente.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Arranque el motor y deje que se caliente hasta que alcance su temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduzca el vehículo a 60 - 100 km&#x002F;h (37 - 62 mile&#x002F;h) durante 6 min. (mantenga la apertura de la válvula de mariposa constante en este paso).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1124025004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1124025005">
+<testgroup id = "E8T40A1124025006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124025007">
+<title>
+Verificación de DTC
+</title>
+<question>
+¿Aparece algún otro DTC además del P0133?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la localización y reparación de averías de DTC correspondiente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124025008">
+<title>
+Inspección del circuito de señal del sensor A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de señal del sensor A&#x002F;F (aire&#x002F;combustible); para ello, consulte el paso 3 de 
+<intxref refid = "E8T40A1124024">DTC P0131 &#x002F; P0132 &#x002F; P0134 &#x002F; P2195 &#x002F; P2196 &#x002F; P2237:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124025009">
+<title>
+Nueva comprobación del DTC.
+</title>
+<test1>
+<ptxt>
+Reemplace el sensor A&#x002F;F. 
+<intxreftitleoff1 refid = "E8T40A1326013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Realice el procedimiento de confirmación del DTC y verifíquelo.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P0133?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Fin de la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

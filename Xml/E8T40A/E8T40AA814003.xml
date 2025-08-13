@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40AA814003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Localización y reparación de averías para Comunicación perdida
+</title>
+<servinfosub id = "E8T40AA814003001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40AA812001">Diagrama de circuito del sistema de comunicación CAN:Modelos M16A y J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40AA814003002">
+<title>
+Procedimiento de diagnóstico
+</title>
+<attention3>
+<ptxt>
+Antes de seguir las indicaciones de esta tabla de flujo, asegúrese de llevar a cabo el procedimiento descrito en 
+<intxref refid = "E8T40AA814001">Comprobación del sistema de comunicación CAN:Modelos M16A y J20A</intxref>
+.
+</ptxt>
+</attention3>
+<ptxt>
+Si se detecta &#34;Comunicación perdida&#34; en alguno de los módulos de control, realice la inspección siguiendo el procedimiento siguiente.
+</ptxt>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado SUZUKI al DLC (1) y el interruptor de encendido en posición ON.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L10H101">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+Herramienta de escaneado de SUZUKI (SUZUKI-SDT)
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I9T401720004.swf" width = "88.000mm" height = "58.917mm" ver = "01" gw = "138" gh = "150"/>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Con la &#34;Comprobación del bus de comunicación&#34; en &#34;Comprobación de bus&#34; de la herramienta de escaneado SUZUKI (SUZUKI-SDT), compruebe el módulo de control desactivado para la comunicación (no hay visualización en la pantalla).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+En función de los resultados de comprobación anteriores, seleccione el código de flujo de diagnóstico pertinente (de A a K) desde 
+<intxref refid = "E8T40AA814003003">Tabla de selección de flujos de diagnóstico</intxref>
+ y realice la localización y reparación de averías en función del flujo de diagnóstico seleccionado.
+</ptxt>
+<attention3>
+<ptxt>
+Si no se puede seleccionar un código de flujo de diagnóstico adecuado desde &#34;Tabla de selección de flujos de diagnóstico&#34; 
+<intxref refid = "E8T40AA814003003">Tabla de selección de flujos de diagnóstico</intxref>
+ o &#34;dos o más códigos de flujo de diagnóstico son seleccionables&#34;, realice 
+<intxref refid = "E8T40AA814004">Localización y reparación de averías para Bus de comunicación apagado:Modelos M16A y J20A</intxref>
+.
+</ptxt>
+</attention3>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40AA814003003">
+<title>
+Tabla de selección de flujos de diagnóstico
+</title>
+<attention3>
+<ptxt>
+Los códigos de flujo de diagnóstico A a J se vinculan con las líneas de comunicación CAN &#x005B;a&#x005D; a &#x005B;j&#x005D; de 
+<intxref refid = "E8T40AA812001">Diagrama de circuito del sistema de comunicación CAN:Modelos M16A y J20A</intxref>
+.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.689in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.520in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Sensor&#x002F;módulo de control de comunicación desactivada
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Código del flujo de diagnóstico
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM y módulo de control del ABS&#x002F;ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+B
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Juego de instrumentos
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+C
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Sensor del ángulo de dirección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+D
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Módulo de control de arranque sin llave
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+E
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Módulo de control 4WD
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+F
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Distinto de BCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+G
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+H
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Módulo de control HVAC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+I
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Todo el módulo de control comunicado mediante CAN
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+J
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+K
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Módulo de control del ABS &#x002F; ESP&#174;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40AA814003004">
+<title>
+Localización y reparación de averías
+</title>
+<topic id = "E8T40AA814003007">
+<title>
+Código del flujo de diagnóstico: A
+</title>
+<diag type = "test" id = "E8T40AA814003008">
+<testgroup id = "E8T40AA814003005">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM y del módulo de control del ABS&#x002F;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal al circuito de comunicación CAN del ECM y de los conectores del módulo de control del ABS&#x002F;ESP&#174; sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector del ECM y el conector del módulo de control del ABS&#x002F;ESP&#174; no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003006">
+<title>
+Verificación del circuito de la alimentación y a masa del ECM
+</title>
+<test1>
+<ptxt>
+Revise el circuito a masa y de alimentación del ECM. 
+<intxreftitleoff1 refid = "E8T40A1114081"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003019">
+<title>
+Comprobación de la resistencia de terminación del CAN del ECM
+</title>
+<test1>
+<ptxt>
+Acople el conector al ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la resistencia de terminación CAN del ECM como se indica a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modelo con ESP&#174;:
+</ptxt>
+<ptxt>
+Mida la resistencia entre los terminales &#34;E53-43&#34; y &#34;E53-44&#34; del conector del módulo de control del ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modelo sin ESP&#174;:
+</ptxt>
+<ptxt>
+Mida la resistencia entre los terminales &#34;E03-10&#34; y &#34;E03-8&#34; del conector del módulo de control del ABS.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es la resistencia 114 - 134 &#937;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace el módulo de control del ABS&#x002F;ESP&#174; por otro en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003009">
+<title>
+Código del flujo de diagnóstico: B
+</title>
+<diag type = "test" id = "E8T40AA814003010">
+<testgroup id = "E8T40AA814003020">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores del BCM y del módulo de control del ABS&#x002F;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal al circuito de comunicación CAN del BCM y de los conectores del módulo de control del ABS&#x002F;ESP&#174; sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector BCM y el conector del módulo de control del ABS&#x002F;ESP&#174; no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace el módulo de control del ABS&#x002F;ESP&#174; por otro en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003011">
+<title>
+Código del flujo de diagnóstico: C
+</title>
+<diag type = "test" id = "E8T40AA814003012">
+<testgroup id = "E8T40AA814003021">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores del BCM y del juego de instrumentos.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal al circuito de comunicación CAN del BCM y de los conectores del juego de instrumentos sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector del BCM y el conector del juego de instrumentos no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003022">
+<title>
+Inspección del circuito de alimentación eléctrica y del circuito a masa del juego de instrumentos
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de alimentación eléctrica y el circuito a masa del juego de instrumentos.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un juego de instrumentos en buen estado, y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003013">
+<title>
+Código del flujo de diagnóstico: D
+</title>
+<diag type = "test" id = "E8T40AA814003014">
+<testgroup id = "E8T40AA814003023">
+<title>
+Inspección del circuito de alimentación eléctrica y del circuito a masa del sensor del ángulo de dirección
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de alimentación eléctrica y el circuito a masa del sensor del ángulo de dirección.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003024">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del sensor del ángulo de dirección y del módulo de control del ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión de terminales al circuito de comunicación CAN en los conectores del sensor del ángulo de dirección y del módulo de control del ESP&#174; sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector del sensor del ángulo de dirección y el conector del módulo de control del ESP&#174; no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace el sensor del ángulo de la dirección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003015">
+<title>
+Código del flujo de diagnóstico: E
+</title>
+<diag type = "test" id = "E8T40AA814003016">
+<testgroup id = "E8T40AA814003025">
+<title>
+Inspección del circuito de alimentación eléctrica y del circuito a masa del módulo de control de arranque sin llave.
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de alimentación eléctrica y el circuito a masa del módulo de control de arranque sin llave. 
+<intxreftitleoff1 refid = "E8T40AA504015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003026">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control de arranque sin llave y del BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión de terminales al circuito de comunicación CAN en los conectores del módulo de control de arranque sin llave y del BCM sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector del módulo de control de arranque sin llave y el conector del BCM no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de control de arranque sin llave en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003017">
+<title>
+Código del flujo de diagnóstico: F
+</title>
+<diag type = "test" id = "E8T40AA814003018">
+<testgroup id = "E8T40AA814003027">
+<title>
+Inspección del circuito de alimentación eléctrica y del circuito a masa del módulo de control 4WD.
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de alimentación eléctrica y el circuito a masa del módulo de control 4WD.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003028">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores del módulo de control 4WD y del módulo de control del ABS&#x002F;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión de terminales al circuito de comunicación CAN en los conectores del módulo de control 4WD y en los conectores del módulo de control del ABS&#x002F;ESP&#174; sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector del módulo de control 4WD y el conector del módulo de control del ABS&#x002F;ESP&#174; no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de control 4WD en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003029">
+<title>
+Código del flujo de diagnóstico: G
+</title>
+<diag type = "test" id = "E8T40AA814003030">
+<testgroup id = "E8T40AA814003031">
+<title>
+Inspección del circuito de alimentación eléctrica y del circuito a masa del BCM
+</title>
+<test1>
+<ptxt>
+Inspeccione los circuitos a masa y de alimentación del BCM. 
+<intxreftitleoff1 refid = "E8T40AA204007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003032">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores del BCM y del módulo de control del ABS&#x002F;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal al circuito de comunicación CAN del BCM y de los conectores del módulo de control del ABS&#x002F;ESP&#174; sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector BCM y el conector del módulo de control del ABS&#x002F;ESP&#174; no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un BCM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003033">
+<title>
+Código del flujo de diagnóstico: H
+</title>
+<diag type = "test" id = "E8T40AA814003034">
+<testgroup id = "E8T40AA814003035">
+<title>
+Comprobación del circuito a masa y alimentación del TCM
+</title>
+<test1>
+<ptxt>
+Inspeccione los circuitos de alimentación eléctrica y a masa del TCM. 
+<intxreftitleoff1 refid = "E8T40A5114050"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003036">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del TCM y BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión de terminales al circuito de comunicación CAN en el TCM y BCM sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector del TCM y el conector del BCM no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un TCM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003037">
+<title>
+Código del flujo de diagnóstico: I
+</title>
+<diag type = "test" id = "E8T40AA814003038">
+<testgroup id = "E8T40AA814003039">
+<title>
+Inspección del circuito de alimentación eléctrica y del circuito a masa del módulo de control HVAC
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de alimentación eléctrica y el circuito a masa del módulo de control HVAC.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003040">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control HVAC y del BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión de terminales al circuito de comunicación CAN en los conectores del módulo de control HVAC y el BCM sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector del módulo de control HVAC y el conector del BCM no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de control de HVAC en buen estado y revise de nuevo.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003041">
+<title>
+Código del flujo de diagnóstico: J
+</title>
+<diag type = "test" id = "E8T40AA814003043">
+<testgroup id = "E8T40AA814003044">
+<title>
+Inspección del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector &#34;G31&#34; del BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal al circuito de comunicación CAN del conector del BCM sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe que los circuitos de comunicación CAN entre el conector del BCM y el conector del DLC no presenten interrupciones de corriente.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicación CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40AA814003046">
+<title>
+Comprobación de la resistencia de terminación CAN del juego de instrumentos
+</title>
+<test1>
+<ptxt>
+Conecte el conector &#34;G31&#34; al BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control del ABS&#x002F;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal de CAN alta y el terminal de CAN baja en el DLC.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia 114 - 134 &#937;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40AA814004">Localización y reparación de averías para Bus de comunicación apagado:Modelos M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace por un BCM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "E8T40AA814003045">
+<title>
+Código del flujo de diagnóstico: K
+</title>
+<diag type = "test" id = "E8T40AA814003047">
+<testgroup id = "E8T40AA814003048">
+<title>
+Inspección del circuito de alimentación eléctrica y del circuito a masa del módulo de control que no logra establecer la comunicación
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de alimentación eléctrica y el circuito a masa del módulo de control que no logra establecer la comunicación (BCM o módulo de control del ABS&#x002F;ESP&#174;).
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el módulo de control (BCM o módulo de control del ABS&#x002F;ESP&#174;) y vuelva a inspeccionar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación eléctrica y&#x002F;o de masa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

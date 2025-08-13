@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A4504015" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1057: Circuit d&#8217;alimentation électrique
+</title>
+<servinfosub id = "F5JB0A4504015001">
+<title>
+Schéma de câblage
+</title>
+<figure>
+<graphic graphicname = "I5JB0A450016.swf" width = "183.000mm" height = "68.795mm" ver = "02" gw = "335" gh = "178"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.302in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.176in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.302in"/>
+<colspec colnum = "4" colname = "4" colwidth = "3.189in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS (vu du côté borne)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Boîte à fusibles principale
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Batterie
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "F5JB0A4504015002">
+<title>
+Condition de détection du DTC
+</title>
+<ptxt>
+L&apos;unité de commande ABS surveille la tension de la source d&apos;alimentation à la borne &#34;E03&#x002D;14&#34;. Lorsque la tension de la source d&apos;alimentation devient extrêmement élevée ou basse pendant que le véhicule roule à plus de 20 km&#x002F;h, ce DTC est affiché. Dès que la tension de la source d&apos;alimentation devient normale, le témoin ABS s&apos;éteint et l&apos;unité de commande ABS revient au fonctionnement normal, mais le DTC émis reste affiché.
+</ptxt>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F5JB0A4504015003">
+<title>
+Recherche de pannes à partir du DTC
+</title>
+<diag type = "test" id = "F5JB0A4504015004">
+<testgroup>
+<question>
+La &#34;Vérification ABS&#34; a&#x002D;t&#x002D;elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0A4504001">Vérification de l&apos;ABS</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Débrancher le connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS avec le contacteur d&#8217;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS aux bornes &#x201C;E03&#x002D;14&#8221; et &#x201C;E03&#x002D;13&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, mettre le contacteur d&apos;allumage en position ON et mesurer la tension entre les bornes &#34;E03&#x002D;14&#34; et &#34;E03&#x002D;13&#34;. 
+</ptxt>
+</test1>
+<question>
+La tension est&#x002D;elle de 9,7 ± 0,3 V ou plus?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Mettre le contact d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS aux bornes &#x201C;E03&#x002D;13&#8221; et &#x201C;E03&#x002D;26&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, mesurer la résistance entre les bornes &#x201C;E03&#x002D;13&#8221;, &#x201C;E03&#x002D;26&#8221; et la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La résistance est&#x002D;elle inférieure à 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure ou résistance trop élevée dans le circuit du câble &#34;BLK&#34;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Moteur en marche, mesurer la tension entre la borne positive de la batterie et la masse de carrosserie du véhicule.
+</ptxt>
+</test1>
+<question>
+La tension est&#x002D;elle de 9,7 ± 0,3 V ou plus?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Court&#x002D;circuit imparfait entre le circuit du câble &#34;WHT&#x002F;RED&#34; et la masse de carrosserie.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier le système de charge en se reportant à 
+<intxref refid = "F5JB0A1A04002">Essai de l&#8217;alternateur (vérification de batterie déchargée)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Le moteur étant en marche, mesurer la tension entre les bornes &#x201C;E03&#x002D;14&#8221; et &#x201C;E03&#x002D;13&#8221;.
+</ptxt>
+</test1>
+<question>
+La tension est&#x002D;elle de 18 ± 1,0 V maximum?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Raccordement défectueux aux bornes &#x201C;E03&#x002D;14&#8221; et&#x002F;ou &#x201C;E03&#x002D;13&#8221;. Si les bornes sont en bon état, remplacer le groupe hydraulique ABS &#x002F; l&apos;unité de commande ABS par un groupe hydraulique ABS &#x002F; unité de commande ABS en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier le système de charge en se reportant à 
+<intxref refid = "F5JB0A1A04003">Essai de l&#8217;alternateur (vérification de batterie trop chargée)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

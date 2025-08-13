@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A5104042" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0974 &#x002F; P0977: Haute tension dans les  circuits de commande du solénoïde de passage &#34;A&#34; &#x002F; &#x201C;B&#8221;
+</title>
+<servinfosub id = "F5JB0A5104042001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter à 
+<intxref refid = "F5JB0A5104041">DTC P0973 &#x002F; P0976: Basse tension dans les circuits de commande du solénoïde de passage &#34;A&#34; &#x002F; &#x201C;B&#8221;</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A5104042002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tension de la borne du TCM de l&#8217;électrovanne de passage est élevée bien que le TCM mette le solénoïde de passage en position OFF.
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de l&#8217;électrovanne de passage coupé ou en court&#x002D;circuit avec le circuit d&#8217;alimentation électrique.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Dysfonctionnement de l&#8217;électrovanne de passage.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0A5104042003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lors d&apos;un essai sur route, choisir un endroit où il n&apos;y a pas de trafic ni de risque d&apos;accident et agir avec précaution pendant l&apos;essai pour éviter tout accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;essai sur route doit être effectué par 2 personnes, un conducteur et un technicien procédant aux essais, sur une route plane.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Supprimer les DTC des mémoires du TCM et de l&apos;ECM à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et placer le levier sélecteur en position &#34;D&#34;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le véhicule et augmenter sa vitesse jusqu&#8217;à 60 km&#x002F;h en position &#34;D&#34;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire à cette vitesse pendant 20 secondes puis réduire progressivement la vitesse du véhicule.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC, les DTC en attente et les données d&apos;arrêt sur image.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0A5104042004">
+<title>
+Recherche de pannes à partir du DTC
+</title>
+<diag type = "test" id = "F5JB0A5104042005">
+<testgroup>
+<question>
+La &#34;Vérification du système A&#x002F;T&#34; a&#x002D;t&#x002D;elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0A5104001">Vérification du système A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Rechercher un éventuel court&#x002D;circuit à l&apos;alimentation dans le circuit de l&#8217;électrovanne de passage.
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs du TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du TCM à la borne &#34;E92&#x002D;16&#34; (pour le solénoïde de passage&#x002D;A), &#34;E92&#x002D;15&#34; (pour le solénoïde de passage&#x002D;B).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, mettre le contacteur d&apos;allumage en position ON et mesurer la tension entre la borne &#34;E92&#x002D;16&#34; (pour l&apos;électrovanne de passage&#x002D;A), &#34;E92&#x002D;15&#34; (pour l&apos;électrovanne de passage&#x002D;B) du connecteur du TCM débranché (côté faisceau de câbles) et la masse.
+</ptxt>
+</test1>
+<question>
+La tension est&#x002D;elle de 0 &#8211; 2 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC P0974: Circuit de l&apos;électrovanne de passage&#x002D;A en court&#x002D;circuit au circuit d&apos;alimentation.
+</ptxt>
+<ptxt>
+DTC P0977: Circuit de l&apos;électrovanne de passage&#x002D;B en court&#x002D;circuit au circuit d&apos;alimentation.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Rechercher une éventuelle coupure dans le circuit de l&apos;électrovanne.
+</title>
+<test1>
+<ptxt>
+Vérifier la continuité entre la borne &#34;E92&#x002D;16&#34; (pour l&apos;électrovanne&#x002D;A) ou &#34;E92&#x002D;15&#34; (pour l&apos;électrovanne&#x002D;B) du connecteur du TCM débranché (côté faisceau de câbles) et la masse.
+</ptxt>
+</test1>
+<question>
+Est&#x002D;elle infinie?
+</question>
+<result>
+YES
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+DTC P0974: Coupure du circuit de l&apos;électrovanne&#x002D;A.
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC P0977: Coupure du circuit de l&apos;électrovanne&#x002D;B.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si le circuit est en ordre, passer à l&apos;étape 4.
+</ptxt>
+</item>
+</list1>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;électrovanne
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;électrovanne en se référant à 
+<intxref refid = "F5JB0A5106061">Vérification des électrovannes (électrovanne de passage&#x002D;A, électrovanne de passage&#x002D;B, électrovanne régulatrice de pression du TCC et électrovanne régulatrice de pression)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Les résultats de la vérification sont&#x002D;il satisfaisants?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Panne intermittente ou TCM défectueux. Vérifier le problème intermittent en se reportant à 
+<intxref refid = "F5JB0A0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+. Si tout est en ordre, remplacer le TCM par un TCM en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;électrovanne défectueuse en se référant à 
+<intxref refid = "F5JB0A5106060">Dépose et repose des électrovannes (électrovanne de passage&#x002D;A, électrovanne de passage&#x002D;B, électrovanne régulatrice de pression du TCC et électrovanne régulatrice de pression)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

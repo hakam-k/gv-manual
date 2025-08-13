@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E8T40A7221002" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Descripción del sistema de control HVAC
+</title>
+<ptxt>
+Se envían los siguientes datos desde cada módulo de control al módulo de control HVAC a través de la comunicación CAN. Para obtener información sobre el sistema de comunicación CAN, consulte la descripción en 
+<intxref refid = "E8T40AA821001">Descripción del sistema de comunicación CAN:Modelos J24B y N32A</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Temperatura del refrigerante del motor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Velocidad del motor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Presión del refrigerante del A&#x002F;C
+</ptxt>
+</item>
+<item>
+<ptxt>
+Velocidad del vehículo (velocidad de la rueda)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Temperatura del aire exterior
+</ptxt>
+</item>
+<item>
+<ptxt>
+Estado del embrague del compresor del A&#x002F;C
+</ptxt>
+</item>
+</list1>
+<ptxt>
+A partir de los datos anteriores y de la señal del sensor de temperatura del evaporador, el módulo de control HVAC envía la señal de solicitud de apagado&#x002F;encendido del compresor del A&#x002F;C al BCM a través de la comunicación CAN.
+</ptxt>
+<ptxt>
+El BCM envía esta señal a través de comunicación CAN al ECM, que hace que el relé del compresor se coloque en la posición ON&#x002F;OFF.
+</ptxt>
+<ptxt>
+Para obtener más información acerca de la transmisión y recepción de la señal del sistema de A&#x002F;C automático, consulte 
+<intxref refid = "E8T40A7222003">Diagrama de entrada &#x002F; salida del control electrónico del A&#x002F;C automático:Modelos J24B y N32A</intxref>
+.
+</ptxt>
+<ptxt>
+El módulo de control HVAC tiene una función para establecer la configuración inicial del actuador de control de temperatura, el actuador de admisión de aire y el actuador de flujo de aire.
+</ptxt>
+<ptxt>
+La configuración inicial de los actuadores se establece automáticamente cuando se arranca el motor por primera vez tras conectar la batería.
+</ptxt>
+<ptxt>
+Cuando se establece la configuración inicial, se fuerza a cada actuador a funcionar ininterrumpidamente durante unos 15 segundos.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

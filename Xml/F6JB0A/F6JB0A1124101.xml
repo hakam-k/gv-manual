@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A1124101" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0225: Circuit du capteur APP (principal)
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ce défaut peut apparaître en cas d&apos;endommagement du faisceau de câbles. Suivre le procédé décrit sous 
+<intxref refid = "F6JB0A0006001">Procédure de vérification du circuit électrique</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cette vérification permet le contrôle de l&apos;état et de la conformité du faisceau de câbles du moteur.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions d&apos;application de la procédure de découverte des défauts pour les défauts enregistrés:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Ce défaut s&apos;est déclaré après une succession d&apos;enfoncement maximal&#x002F;relâchement de la pédale d&apos;accélérateur.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+La turbocompression, l&apos;activation de la résistance du chauffage de l&apos;habitacle et le régulateur&#x002F;limiteur de vitesse sont désactivés.
+</ptxt>
+<ptxt>
+En cas de présence de CO0, CC1 ou D1, le témoin d&apos;injection (témoin à gravité 1) est allumé.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le régime moteur est fixé à 1400 tr&#x002F;min en cas d&apos;anomalie des capteurs principal et secondaire de la pédale d&apos;accélérateur (APP) et le couple moteur est limité.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Recourir à un câble de branchement lors de toute intervention sur les connecteurs de régulateur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Priorités lors de la présence de plusieurs défauts:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Régler le défaut 
+<intxref refid = "F6JB0A1124126">DTC P0641: Circuit de tension de référence de capteur 1:Pour les modèles à moteur Diesel</intxref>
+ en premier lieu s&apos;il est présent ou enregistré.
+</ptxt>
+</item>
+</list2>
+</list1>
+</attention3>
+<servinfosub id = "F6JB0A1124101001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Pour les numéros des connecteurs et des bornes, se référer à 
+<intxref refid = "F6JB0A910E048">A-5 Schéma du circuit du système de commande du moteur et de la climatisation (A&#x002F;C) (diesel)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A1124101002">
+<title>
+Condition de détection
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Affichage au dispositif de balayage SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Coupure du circuit ou court-circuit à la masse de la caisse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Court-circuit à &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Incohérence du signal
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Capteur de position de la pédale de l&apos;accélérateur (APP) bloqué
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1124101003">
+<title>
+Recherche de CO0: Coupure du circuit ou court-circuit à la masse de la caisse
+</title>
+<attention3>
+<ptxt>
+Priorités lors de la présence de plusieurs défauts:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Si le défaut 
+<intxref refid = "F6JB0A1124137">DTC P2120: Circuit du capteur APP (secondaire):Pour les modèles à moteur Diesel</intxref>
+ coexiste, vérifier si le connecteur de l&apos;ensemble capteur de position de la pédale de l&apos;accélérateur (APP) est branché correctement.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connexions du capteur de position de la pédale de l&apos;accélérateur (APP).
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité et l&apos;isolation de la masse de la caisse des connexions suivantes:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;E68-3&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-3&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;E68-2&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-4&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Mesurer la résistance du capteur principal sur l&apos;ensemble capteur de position de la pédale de l&apos;accélérateur (APP) entre &#8220;E68-4&#8221; et &#8220;E68-2&#8221;.
+</ptxt>
+<ptxt>
+Remplacer l&apos;ensemble capteur de position de la pédale de l&apos;accélérateur (APP) si la résistance n&apos;est pas d&apos;environ 0,8 &#8211; 2,6 k&#937;.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F6JB0A1124101004">
+<title>
+Recherche de CC1: Court-circuit à &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connexions du capteur de position de la pédale de l&apos;accélérateur (APP).
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM. 
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité et l&apos;isolation de l&apos;alimentation de &#x002B;12 V des connexions suivantes:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;E68-3&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-3&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;E68-2&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-4&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;E68-4&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-5&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Mesurer la résistance du capteur principal sur l&apos;ensemble capteur de position de la pédale de l&apos;accélérateur (APP) entre &#8220;E68-4&#8221; et &#8220;E68-2&#8221;.
+</ptxt>
+<ptxt>
+Remplacer l&apos;ensemble capteur de position de la pédale de l&apos;accélérateur (APP) si la résistance n&apos;est pas d&apos;environ 0,8 &#8211; 2,6 k&#937;.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1124101005">
+<title>
+Recherche de D1: Incohérence du signal
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connexions du capteur de position de la pédale de l&apos;accélérateur (APP).
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité des connexions suivantes et s&apos;assurer qu&apos;il n&apos;y a pas de résistance aux interférences:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;E68-3&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-3&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;E68-2&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-4&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;E68-4&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-5&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;E68-6&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-21&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;E68-1&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-15&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;E68-5&#8221; du connecteur du capteur de position de la pédale de l&apos;accélérateur (APP) et la borne &#8220;E66-27&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent, remplacer l&apos;ensemble capteur de position de la pédale de l&apos;accélérateur (APP).
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1124101006">
+<title>
+Recherche de D2: Capteur de position de la pédale de l&apos;accélérateur (APP) bloqué
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Contrôler la mécanique de la pédale d&apos;accélérateur:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Blocage en position pleine charge.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Pédale bloquée par une pièce tierce
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+<ptxt>
+Varier la position de la pédale et afficher le paramètre &#8220;Pedal position&#8221; dans la liste des données (Data List) du dispositif de balayage SUZUKI.
+</ptxt>
+<ptxt>
+Si les valeurs affichées ne concordent pas, remplacer l&apos;ensemble capteur de position de la pédale de l&apos;accélérateur (APP).
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

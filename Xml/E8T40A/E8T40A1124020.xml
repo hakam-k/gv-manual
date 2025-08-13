@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1124020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0112 &#x002F; P0113
+</title>
+<servinfosub id = "E8T40A1124020001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.301in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.904in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0112: Señal baja del circuito del sensor 1 de temperatura del aire de admisión
+</emph>
+</ptxt>
+<ptxt>
+La tensión de salida del circuito de señal del sensor IAT es inferior a 0,15 V durante 5 seg.
+</ptxt>
+<ptxt>
+(Lógica de detección de 2 ciclos de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor IAT y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0113: Señal alta del circuito 1 del sensor de temperatura del aire de admisión
+</emph>
+</ptxt>
+<ptxt>
+La tensión de salida del circuito de señal del sensor IAT es superior a 4,85 V durante 5 seg.
+</ptxt>
+<ptxt>
+(Lógica de detección de 2 ciclos de conducción)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1124020002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1124073">DTC P0101:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124020003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON durante 10 seg.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1124020004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1124020005">
+<testgroup id = "E8T40A1124020006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124020007">
+<title>
+Comprobación del circuito del sensor IAT
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito del sensor IAT; para ello, consulte el paso 3 de 
+<intxref refid = "E8T40A1124019">DTC P0111:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124020008">
+<title>
+Inspección del sensor IAT
+</title>
+<test1>
+<ptxt>
+Compruebe el sensor IAT. 
+<intxreftitleoff1 refid = "E8T40A1326022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el sensor MAF e IAT.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

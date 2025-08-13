@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A5114028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0713: Señal alta del circuito &#34;A&#34; del sensor de temperatura del líquido de transmisión
+</title>
+<servinfosub id = "E8T40A5114028001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A5114027">DTC P0712: Señal baja del circuito &#34;A&#34; del sensor de temperatura del líquido de transmisión:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A5114028002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.890in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.297in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tensión del terminal del sensor de temperatura del líquido de la transmisión es menor de 4,89 V en el estado del vehículo que se muestra a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de encendido en posición ON durante 1 minuto o más
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor de temperatura del líquido de la transmisión o su circuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A5114028003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Con la herramienta de escaneado, borre los DTC de la memoria de los módulos TCM y ECM.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga el motor en marcha.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el motor en régimen de ralentí durante 1 minuto o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repita los pasos del 3) al 5) una vez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC, el DTC pendiente y los datos de imagen fija.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A5114028004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A5114028005">
+<testgroup>
+<question>
+¿Se ha llevado a cabo la &#34;Inspección del sistema de la A&#x002F;T&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A5114001">Comprobación del sistema de A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si está abierto el circuito del sensor de temperatura del líquido de la transmisión
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte del módulo TCM los conectores de TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el estado de la conexión al sensor de temperatura del líquido de la transmisión, en los terminales &#34;E92-11&#34; y &#34;E92-12&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcto, compruebe la continuidad entre los terminales &#34;E92-11&#34; y &#34;E92-12&#34; del conector del TCM desconectado del lado del mazo de cables.
+</ptxt>
+</test1>
+<question>
+¿Se indica continuidad?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El circuito del sensor de temperatura del líquido de la transmisión está abierto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si el circuito del sensor de temperatura del líquido de la transmisión está cortocircuitado a la alimentación eléctrica
+</title>
+<test1>
+<ptxt>
+Baje la temperatura del líquido de A&#x002F;T a temperatura ambiente.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Enchufe los conectores del TCM al módulo TCM, con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal &#34;E92-11&#34; del conector del módulo TCM y masa.
+</ptxt>
+</test1>
+<question>
+¿Es igual o mayor que 4,89 V?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+El circuito del sensor de temperatura del líquido de la transmisión está cortocircuitado al circuito de alimentación eléctrica. Si el circuito es correcto, vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Avería intermitente o TCM defectuoso. Compruebe si existen problemas intermitentes. Consulte para ello 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+. Si todo es correcto, instale un TCM en buen estado y realice la comprobación otra vez.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe el sensor de temperatura del líquido de la transmisión
+</title>
+<test1>
+<ptxt>
+Inspeccione el sensor de temperatura del líquido de la transmisión; para ello, consulte 
+<intxref refid = "E8T40A5116024">Inspección del sensor de temperatura del líquido de la transmisión:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Avería intermitente o TCM defectuoso. Compruebe si existen problemas intermitentes. Consulte para ello 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+. Si todo es correcto, instale un TCM en buen estado y realice la comprobación otra vez.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el mazo de cables de solenoide, incluido el sensor de temperatura del líquido de la transmisión; para ello, consulte 
+<intxref refid = "E8T40A5116023">Extracción e instalación del sensor de temperatura del líquido de la transmisión:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

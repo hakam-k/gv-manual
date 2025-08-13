@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A5114055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2762
+</title>
+<servinfosub id = "E8T40A5114055001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.672in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.532in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P2762: Rendimiento&#x002F;posición del circuito de control del solenoide de control de presión del embrague del convertidor de par
+</emph>
+</ptxt>
+<ptxt>
+La diferencia entre la corriente real del circuito de la válvula solenoide de TCC y la corriente de monitor del circuito de la válvula solenoide de TCC es superior al valor especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Válvula solenoide de control de presión del TCC o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A5114055002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A5114047">DTC P2763: Señal alta del circuito de control de la válvula solenoide de regulación de la presión del embrague convertidor de par:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A5114055003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Con la herramienta de escaneado, borre los DTC de la memoria de los módulos TCM y ECM.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga el motor en marcha y deje que se caliente hasta que alcance la temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el motor en régimen de ralentí durante 30 segundos o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC, el DTC pendiente y los datos de imagen fija.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A5114055004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A5114055005">
+<testgroup id = "E8T40A5114055006">
+<question>
+¿Se ha llevado a cabo la &#34;Inspección del sistema de la A&#x002F;T&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A5114001">Comprobación del sistema de A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A5114055007">
+<title>
+Compruebe el circuito de la válvula solenoide de control de presión del TCC.
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte del módulo TCM los conectores de TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la conexión correcta del TCM y los conectores de TCM en los terminales relacionados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, compruebe la resistencia del circuito de la válvula solenoide de control de presión del TCC.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito &#34;GRN&#x002F;YEL&#34; o &#34;PPL&#x002F;WHT&#34;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A5114055008">
+<title>
+Mida la resistencia de la válvula solenoide de control de presión del TCC
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del solenoide en A&#x002F;T.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la conexión correcta del conector del solenoide en los terminales relacionados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique la resistencia de la válvula solenoide de control de presión del TCC; para ello, consulte 
+<intxref refid = "E8T40A5116022">Inspección de válvulas solenoides (Solenoide de cambio-A, Solenoide de cambio-B, Solenoide de control de presión del TCC y Solenoide de control de presión):4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Avería intermitente o TCM defectuoso. Compruebe si existen problemas intermitentes. Consulte para ello 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+. Si todo es correcto, instale un TCM en buen estado y realice la comprobación otra vez.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace la válvula solenoide de control de presión del TCC o conector del solenoide.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A1104052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0533: Tension élevée dans le circuit du détecteur de pression de réfrigérant A&#x002F;C
+</title>
+<servinfosub id = "F5JB0A1104052001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0A1104051">DTC P0532: Tension faible dans le circuit du détecteur de pression de réfrigérant A&#x002F;C</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A1104052002">
+<title>
+Condition de détection de DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tension du signal du détecteur de pression de réfrigérant A&#x002F;C est supérieure à 4,93 V pendant 0,5 seconde en continu.
+</ptxt>
+<ptxt>
+(logique de détection à 1 cycle de conduite mais le témoin MIL ne s&apos;allume pas)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit du détecteur de pression de réfrigérant A&#x002F;C
+</ptxt>
+</item>
+<item>
+<ptxt>
+Détecteur de pression de réfrigérant A&#x002F;C
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Lorsque les DTC P0108, P0113 et P0118 sont indiqués ensemble, il est possible que le circuit du câble &#8220;GRY&#x002F;GRN&#8221; soit ouvert.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "F5JB0A1104052003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier le DTC et le DTC en attente.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0A1104052004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0A1100005">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F5JB0A1104052005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0A1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit d&apos;alimentation électrique du détecteur de pression de réfrigérant A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du détecteur de pression de réfrigérant A&#x002F;C, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du détecteur de pression de réfrigérant A&#x002F;C aux bornes des câbles &#8220;GRY&#x002F;RED&#8221;, &#8220;GRY&#x002F;BLK&#8221; et &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON, puis mesurer la tension entre la masse du moteur et la borne du câble &#8220;GRY&#x002F;RED&#8221; du connecteur du détecteur de pression de réfrigérant A&#x002F;C.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du signal du détecteur de pression de réfrigérant A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON, puis mesurer la tension entre la masse du moteur et la borne du câble &#8220;GRY&#x002F;BLK&#8221; du connecteur du détecteur de pression de réfrigérant A&#x002F;C.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du signal du détecteur de pression de réfrigérant A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne du câble &#8220;GRY&#x002F;BLK&#8221; du connecteur du détecteur de pression de réfrigérant A&#x002F;C et la borne &#8220;C37-12&#8221; du connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Le câble &#8220;GRY&#x002F;BLK&#8221; est en court-circuit avec le circuit d&apos;alimentation électrique.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée au niveau du câble &#8220;GRY&#x002F;BLK&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de masse du détecteur de pression de réfrigérant A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF, puis mesurer la résistance entre la masse du moteur et la borne du câble &#8220;GRY&#x002F;GRN&#8221; du connecteur du détecteur de pression de réfrigérant A&#x002F;C.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier le circuit de mise à la masse de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Déposer l&apos;ECM de son support, avec les connecteurs de l&apos;ECM branchés.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la masse du moteur et la borne &#8220;C37-57&#8221; du connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée au niveau du câble &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée de &#8220;C37-58&#8221;, &#8220;C37-48&#8221;, &#8220;C37-30&#8221;, &#8220;C37-29&#8221; et&#x002F;ou &#8220;C37-15&#8221; dans le circuit de masse de l&apos;ECM.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du détecteur de pression de réfrigérant A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Vérifier le détecteur de pression de réfrigérant A&#x002F;C en se reportant au point 
+<intxref refid = "F5JB0A7206051">Vérification du détecteur de pression de réfrigérant d&apos;A&#x002F;C et son circuit</intxref>
+</ptxt>
+</test1>
+<question>
+Le système est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Détecteur de pression de réfrigérant A&#x002F;C défectueux.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

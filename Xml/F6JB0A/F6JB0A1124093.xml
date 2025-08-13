@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A1124093" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0105: Circuit de pression barométrique
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions d&apos;application de la procédure de découverte des défauts pour les défauts enregistrés:
+</ptxt>
+<ptxt>
+Le défaut se déclare:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Lors de la tentative de mise en marche du moteur
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le moteur étant en marche
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Le capteur de pression barométrique est intégré à l&apos;ECM et ne peut être démonté.
+</ptxt>
+<ptxt>
+Si le défaut est déclaré:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Il y a présence d&apos;un peu de fumée à l&apos;échappement.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La valeur de la pression atmosphérique passe en mode de sécurité, &#8220;Barometric Pres&#8221; (pression barométrique) de la liste des données (Data List) du dispositif de balayage SUZUKI &#x003D; 1000 hPa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le témoin d&apos;injection (témoin à gravité 1) est allumé.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Recourir à un câble de branchement lors de toute intervention sur les connecteurs de régulateur.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "F6JB0A1124093001">
+<title>
+Condition de détection
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Affichage au dispositif de balayage SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signal au-delà de la limite supérieure
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signal en deçà de la limite inférieure
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signal incohérent
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1124093002">
+<title>
+Recherche de pannes
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Débrancher l&apos;ECM et vérifier l&apos;état de ses contacts et de son connecteur.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+<ptxt>
+Afficher la valeur du paramètre &#8220;Turbo Pressure&#8221; (pression turbo) de la liste des données (Data List) du dispositif de balayage SUZUKI.
+</ptxt>
+<ptxt>
+Si la valeur est bloquée à 1000 hPa, se reporter à l&apos;interprétation du défaut 
+<intxref refid = "F6JB0A1124102">DTC P0235: Circuit de détecteur de suralimentation:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, substituer un ECM réputé bon et revérifier.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0B1104173" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Test 8: Défaillance d&#8217;injecteur
+</title>
+<attention1>
+<ptxt>
+Avant toute intervention sur le circuit d&#8217;alimentation en carburant, respecter les consignes d&#8217;AVERTISSEMENT sous 
+<intxref refid = "F5JB0B1700001">Précautions pour les interventions sur le système d&#8217;alimentation en carburant</intxref>
+ afin de réduire les risque d&#8217;incendies et de blessure.
+</ptxt>
+</attention1>
+<diag type = "test" id = "F5JB0B1104173001">
+<testgroup>
+<ptxt>
+VERIFICATION DE LA REPARTITION DU CARBURANT DE CHAQUE INJECTEUR
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Le moteur au ralenti, la température du liquide de refroidissement &gt; 80 &#176;C, afficher les valeurs de correction du débit de carburant de chacun des injecteurs à l&#8217;aide de la commande &#8220;Cyl &#x0023; FF Correction&#8221; (correction du débit de carburant du cylindre) de la liste des données (Data List) du dispositif de balayage SUZUKI.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+La valeur normale de la correction du débit de carburant d&#8217;un injecteur est de &#177; 1,0 mm&#x00B3;&#x002F;temps.
+</ptxt>
+<ptxt>
+Cette tolérance peut augmenter avec le temps, mais un défaut d&#8217;injecteur&#x002F;cylindre se déclare en cas de dépassement de &#177; 5,0 mm&#x00B3;&#x002F; temps.
+</ptxt>
+<question>
+Une de ces valeurs dépasse-t-elle &#177; 5,0 mm&#x00B3;&#x002F;temps?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+VERIFICATION DE LA REPARTITION DU CARBURANT DE CHAQUE INJECTEUR:
+</ptxt>
+<test1>
+<ptxt>
+Si au moins une de ces valeurs &gt; &#x002B; 5,0 mm&#x00B3;&#x002F;temps:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vérifier le jeu aux soupapes.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier la compression du moteur en se référant à 
+<intxref refid = "F5JB0B1404001">Vérification de la compression</intxref>
+.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Si le test de la compression révèle un défaut de cylindre, effectuer les réparations nécessaires.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si la compression est en ordre, vérifier la conformité de l&#8217;ensemble injecteurs en se référant à 
+<intxref refid = "F5JB0B1706007">Dépose et pose d&#8217;injecteur de carburant</intxref>
+, puis vérifier une nouvelle fois la régulation du carburant, un injecteur après l&#8217;autre. Si le problème persiste, remplacer l&#8217;injecteur.
+</ptxt>
+</item>
+</list2>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Si au moins une de ces valeurs &lt; &#8211; 5,0 mm&#x00B3;&#x002F;temps:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vérifier le jeu aux soupapes.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier le niveau et l&#8217;état de l&#8217;huile moteur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Déposer l&#8217;injecteur possédant le réglage le plus grand.
+</ptxt>
+</item>
+<item>
+<ptxt>
+S&#8217;il y a pollution par diesel, vérifier l&#8217;état du cylindre concerné (cylindre, piston et soupapes).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Remplacer l&#8217;injecteur.
+</ptxt>
+</item>
+</list1>
+<paragroup>
+<attention3>
+<ptxt>
+Avant de remplacer l&#8217;injecteur, s&#8217;assurer de la présence et de la conformité de la rondelle d&#8217;étanchéité (se reporter à 
+<intxref refid = "F5JB0B1104158">Tableau 5: Mauvaises performances et présence de fumée</intxref>
+).
+</ptxt>
+</attention3>
+<ptxt>
+Après le remplacement de l&#8217;injecteur, entrer le code à programmer dans l&#8217;injecteur en se référant à 
+<intxref refid = "F5JB0B1306006">Procédure d&#8217;enregistrement du code d&#8217;étalonnage d&#8217;injecteur de carburant</intxref>
+.
+</ptxt>
+</paragroup>
+</test1>
+<question>
+L&#8217;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+CONFIRMATION DES DEFAUTS DETECTES POUR LA CORRECTION DU DEBIT, INJECTEUR PAR INJECTEUR:
+</ptxt>
+<ptxt>
+Effacer le ou les défauts, puis effectuer un test le moteur étant au ralenti et la température du liquide de refroidissement &gt; 80 &#176;C, puis vérifier qu&#8217;aucun défaut ne s&#8217;affiche à l&#8217;aide de l&#8217;outil de diagnostic, et que les valeurs de correction de débit de carburant n&#8217;atteignent pas &#177; 5,0 mm&#x00B3;&#x002F;temps afin de confirmer que tout est en ordre.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Si les valeurs de correction du débit de carburant d&#8217;un autre cylindre &gt; &#177; 5,0 mm&#x00B3;&#x002F;temps, suivre le procédé de détection de défaut à l&#8217;étape 2 de ce test.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si les réparations effectuées n&#8217;ont pas réglé le problème, remplacer l&#8217;ECM par une pièce réputée en bon état, et vérifier à nouveau.
+</ptxt>
+</item>
+</list1>
+<question>
+L&#8217;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+VERIFICATION DE L&#8217;EQUILIBRAGE DU DEBIT DE RETOUR D&#8217;INJECTEUR
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Faire chauffer le moteur à une température du liquide de refroidissement de &gt; 80 &#176;C.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Couper l&#8217;allumage.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Protéger les coins supérieurs du moteur à l&#8217;aide de chiffons (particulièrement autour des injecteurs).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Débrancher les tuyaux de retour d&#8217;injecteur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Raccorder l&#8217;outil spécial (09912 &#8211; 96540) à l&#8217;injecteur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mettre le moteur en marche et le laisser tourner au ralenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Débrancher le régulateur de pression de carburant.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mettre le contact et effectuer une séquence de mise en marche (actionner le démarreur pendant 5 secondes).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le débit de carburant sur le retour devrait être très faible.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Sinon, remplacer l&#8217;injecteur.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Effacer le défaut causé par la déconnexion de l&#8217;actionneur de débit de carburant.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Remettre les tuyaux de retour de carburant des injecteurs après s&#8217;être assuré du bon état des joints et des tuyaux.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si ce n&#8217;est pas le cas, remplacer les tuyaux de retour de carburant des injecteurs.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Confirmer les réparations en effectuant un essai sur route.
+</ptxt>
+</item>
+</list1>
+<servicetool>
+<servicetoolitem id = "L1A002">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09912-96540">
+09912&#8211;96540
+</s-number>
+</servicetoolitem>
+</servicetool>
+<question>
+L&#8217;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+TEST D&#8217;ETANCHEITE DES GICLEURS D&#8217;INJECTEUR
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vérifier le niveau et l&#8217;état de l&#8217;huile moteur:
+</ptxt>
+</item>
+<item>
+<ptxt>
+S&#8217;il y a pollution par diesel, le gicleur d&#8217;injecteur qui fuit sera graisseux.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Débrancher le relais du préchauffage.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+S&#8217;assurer que ce n&#8217;est pas causé par un niveau d&#8217;huile montant en vérifiant les valeurs de compression du moteur.
+</ptxt>
+<ptxt>
+Vérifier l&#8217;état de la bougie de préchauffage: ne peut être humide. Si c&#8217;est le cas, remplacer l&#8217;injecteur défectueux.
+</ptxt>
+<ptxt>
+Si les valeurs de compression sont en ordre, trouver l&#8217;injecteur défectueux en examinant l&#8217;état des cylindres et des pistons par les puits de bougie de préchauffage (cylindre graisseux, surchauffé, commençant à se désintégrer, etc.).
+</ptxt>
+<ptxt>
+Si l&#8217;examen cylindre-piston est peu concluant, retirer les injecteurs et remplacer celui au gicleur graisseux.
+</ptxt>
+<paragroup>
+<attention3>
+<ptxt>
+Avant de remplacer l&#8217;injecteur, s&#8217;assurer de la présence et de la conformité de la rondelle d&#8217;étanchéité (se reporter à 
+<intxref refid = "F5JB0B1104158">Tableau 5: Mauvaises performances et présence de fumée</intxref>
+).
+</ptxt>
+</attention3>
+</paragroup>
+<question>
+L&#8217;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Injecteur de carburant en bon état
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

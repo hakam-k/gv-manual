@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "F5JB0E1101005" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Description du système de communication CAN
+</title>
+<ptxt>
+Les ECM (1), module de commande ABS&#x002F;ESP&#174; (2), TCM (pour modèle A&#x002F;T) (3), BCM (4), module de commande 4WD (selon l&#8217;équipement) (5), combiné des instruments (6), module de commande de démarrage sans clé (selon l&#8217;équipement) (7), capteur d&#8217;angle de braquage (pour les véhicules équipés d&#8217;ESP&#174;) (8), communiquent des données de commande avec chaque module de commande.
+</ptxt>
+<ptxt>
+Les communications de chaque module de commande sont assurées par le réseau de communication CAN.
+</ptxt>
+<figure>
+<graphic graphicname = "I6JB01110110.swf" width = "183.000mm" height = "73.733mm" ver = "02" gw = "291" gh = "192"/>
+</figure>
+<ptxt>
+Le réseau CAN utilise une communication sérielle, par laquelle les données sont transmises à grande vitesse. Il utilise une paire torsadée de deux lignes de communication pour la transmission à grande vitesse des données. Une de ses caractéristiques est que divers modules de commande peuvent communiquer simultanément. En outre, il possède une fonction de détection automatique d&#8217;erreur de communication. Chaque module lit les données nécessaires parmi celles reçues et transmet des données. L&#8217;ECM communique des données de commande à chaque module de la façon suivante.
+</ptxt>
+<servinfosub id = "F5JB0E1101005001">
+<title>
+Transmission de données ECM
+</title>
+<figure>
+<graphic graphicname = "I5JB0D110001F.swf" width = "183.000mm" height = "182.742mm" ver = "01" gw = "449" gh = "501"/>
+</figure>
+<attention3>
+<ptxt>
+Lors de la communication entre l&#8217;ECM et le combiné d&#8217;instruments, entre l&#8217;ECM et le module de commande de démarrage sans clé (selon l&#8217;équipement) et entre l&#8217;ECM et le module de commande 4WD (selon l&#8217;équipement), les données ne sont transmises que de l&#8217;ECM au combiné d&#8217;instruments, au module de commande de démarrage sans clé (selon l&#8217;équipement) et au module de commande 4WD (selon l&#8217;équipement). (Les combiné d&#8217;instruments, module de commande de démarrage sans clé (selon l&#8217;équipement) et module de commande 4WD (selon l&#8217;équipement) ne transmettent pas de données à l&#8217;ECM.)
+</ptxt>
+</attention3>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F5JB0E1101005002">
+<title>
+Réception de données de l&#8217;ECM
+</title>
+<figure>
+<graphic graphicname = "I5JB0D110002F.swf" width = "183.000mm" height = "128.061mm" ver = "01" gw = "423" gh = "346"/>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

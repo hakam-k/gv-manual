@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40AA324001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Comprobación del sistema de control del inmovilizador
+</title>
+<diag type = "test" id = "E8T40AA324001001">
+<testgroup>
+<title>
+Comprobación de la luz de advertencia de inyección encendida ON
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON utilizando la llave encendido.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I8T40AA33002.swf" width = "88.000mm" height = "53.625mm" ver = "01" gw = "216" gh = "135"/>
+</testfigure>
+</test1>
+<question>
+¿Se enciende la luz de advertencia de inyección (1)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40AA324006">La luz de advertencia de inyección no se enciende ON con el interruptor de encendido en la posición ON y el motor parado:Modelo con motor diesel</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del parpadeo de la luz de advertencia de inyección
+</title>
+<question>
+¿Se enciende y apaga continuamente la luz de advertencia de inyección en el Paso 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Compruebe si el ICM presenta algún DTC consultando 
+<intxref refid = "E8T40AA324002">Comprobación del DTC:Modelo con motor diesel</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del arranque del motor
+</title>
+<test1>
+<ptxt>
+Ponga en marcha el motor utilizando la llave de encendido.
+</ptxt>
+</test1>
+<question>
+¿Arranca el motor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1144004">Inspección del sistema de control del motor y de las emisiones:F9Q</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de que la luz de advertencia de inyección permanece encendida ON
+</title>
+<test1>
+<ptxt>
+Compruebe si la luz de advertencia de inyección permanece encendida ON después de que arranque el motor.
+</ptxt>
+</test1>
+<question>
+¿Permanece la luz de advertencia de inyección encendida ON después de arrancar el motor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40AA324007">La luz de advertencia de inyección permanece encendida después de arrancar el motor:Modelo con motor diesel</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El sistema de control del inmovilizador está en buenas condiciones.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

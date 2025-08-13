@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0EA204002" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Vérification du système de gestion de l&#8217;équipement électrique de la carrosserie
+</title>
+<diag type = "test" id = "F5JB0EA204002001">
+<testgroup>
+<title>
+<intxreftitleoff refid = "F5JB0EA204002002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Analyse de la plainte du client
+</title>
+<test1>
+<ptxt>
+Effectuer l&#8217;analyse de la plainte du client.
+</ptxt>
+</test1>
+<question>
+L&#8217;analyse de la plainte du client a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Effectuer l&#8217;analyse de la plainte du client.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "F5JB0EA204002003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Confirmation du symptôme du problème
+</title>
+<test1>
+<ptxt>
+Effectuer la confirmation du symptôme du problème.
+</ptxt>
+</test1>
+<question>
+Le problème survient-il à nouveau?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "F5JB0EA204002004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Vérification des DTC
+</title>
+<test1>
+<ptxt>
+Vérifier la présence de DTC.
+</ptxt>
+</test1>
+<question>
+Y a-t-il présence de codes d&#8217;anomalie?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "F5JB0EA204002005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Recherche de pannes à partir des DTC
+</title>
+<test1>
+<ptxt>
+Vérifier et réparer en fonction du schéma fonctionnel des DTC.
+</ptxt>
+</test1>
+<question>
+Les vérifications et réparations sont-elles terminées?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier et réparer la ou les pièces défectueuses.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "F5JB0EA204002006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Diagnostic de symptôme du système de gestion de l&#8217;équipement électrique de la carrosserie
+</title>
+<test1>
+<ptxt>
+Effectuer la vérification et les réparations en se référant à &#8220;Diagnostic de symptôme&#8221; du système connaissant la panne.
+</ptxt>
+</test1>
+<question>
+Un défaut est-il constaté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la ou les pièces défectueuses.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "F5JB0EA204002007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Vérifier les problèmes intermittents
+</title>
+<test1>
+<ptxt>
+Vérifier les pannes intermittentes.
+</ptxt>
+</test1>
+<question>
+Un défaut est-il constaté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la ou les pièces défectueuses.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "F5JB0EA204002008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Essai de confirmation final
+</title>
+<test1>
+<ptxt>
+Effacer les DTC en se référant à 
+<intxref refid = "F5JB0EA204006">Suppression des DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier les DTC en se référant à 
+<intxref refid = "F5JB0EA204005">Vérification des DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Y a-t-il présence de DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Fin.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<servinfosub id = "F5JB0EA204002002">
+<title>
+Analyse de la plainte du client
+</title>
+<ptxt>
+Noter tous les détails relatifs au problème (panne, plainte) et les circonstances de l&#8217;apparition du problème telles que décrites par le client.
+</ptxt>
+<ptxt>
+Pour ce faire, utiliser un questionnaire comme celui illustré afin de faciliter le recueil des informations avec la précision nécessaire pour une analyse et un diagnostic adéquats.
+</ptxt>
+<figure>
+<title>
+Questionnaire pour le client (exemple)
+</title>
+<graphic graphicname = "I5RS0DA20006F.swf" width = "183.000mm" height = "141.114mm" ver = "01" gw = "469" gh = "383"/>
+</figure>
+</servinfosub>
+<servinfosub id = "F5JB0EA204002003">
+<title>
+Confirmation des symptômes du problème
+</title>
+<ptxt>
+Vérifier si les déclarations faites par le client dans le &#8220;Questionnaire pour le client&#8221; sont confirmées au niveau du véhicule. Si le symptôme est présent, vérifier alors s&#8217;il s&#8217;agit bien d&#8217;une panne. (Cette étape doit être exécutée dans la mesure du possible en présence du client).
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0EA204002004">
+<title>
+Vérification des DTC
+</title>
+<ptxt>
+Vérifier les DTC dans la mémoire du BCM en se référant à 
+<intxref refid = "F5JB0EA204005">Vérification des DTC</intxref>
+, les noter, puis les effacer en se référant à 
+<intxref refid = "F5JB0EA204006">Suppression des DTC</intxref>
+. Le DTC signale une anomalie dans le système mais n&#8217;indique pas si cette anomalie existe toujours ou si elle s&#8217;est produite dans le passé et qu&#8217;un retour à la normale s&#8217;est produit. Afin de découvrir le cas dont il s&#8217;agit, effacer une fois les DTC et vérifier si un défaut existe ou non.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0EA204002005">
+<title>
+Diagnostic de panne grâce aux codes d&#8217;anomalie (DTC)
+</title>
+<ptxt>
+Sur la base du DTC indiqué à l&#8217;étape 3, et en procédant comme indiqué dans le schéma fonctionnel du DTC concerné, localiser l&#8217;origine de la panne, dans un capteur, faisceau de câbles, connecteur, le BCM ou toute autre pièce, puis réparer ou remplacer les pièces défectueuses.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0EA204002006">
+<title>
+Diagnostic de symptôme du système de gestion de l&#8217;équipement électrique de la carrosserie
+</title>
+<ptxt>
+Vérifier les pièces ou le système suspecté d&#8217;être en cause en se référant au diagnostic des symptômes de chaque système.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0EA204002007">
+<title>
+Vérifier les problèmes intermittents
+</title>
+<ptxt>
+Contrôler les pièces pouvant facilement présenter une panne intermittente (p. ex., faisceau de câbles, connecteur, etc.), en se reportant à 
+<intxref refid = "F5JB0E0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0EA204002008">
+<title>
+Essai final de confirmation
+</title>
+<ptxt>
+Confirmer la disparition du symptôme et des anomalies du système de gestion de l&#8217;équipement électrique de la carrosserie. Si les réparations effectuées ont trait au DTC de l&#8217;anomalie, s&#8217;assurer que le DTC ne réapparaît plus.
+</ptxt>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

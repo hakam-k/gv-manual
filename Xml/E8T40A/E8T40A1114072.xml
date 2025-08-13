@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1114072" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119: Margen&#x002F;rendimiento del cuerpo de la mariposa de control del actuador de la mariposa
+</title>
+<servinfosub id = "E8T40A1114072001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1114068">DTC P2101: Margen&#x002F;rendimiento del circuito del motor de control del actuador de la mariposa:M16A y J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1114072002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La diferencia entre el ángulo de apertura medido (real) de la válvula de mariposa y el ángulo de apertura deseado de la válvula de mariposa, que se calcula basándose en el ángulo de apertura del pedal del acelerador y el estado del motor, es superior al especificado ininterrumpidamente durante el tiempo especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del actuador de la mariposa
+</ptxt>
+</item>
+<item>
+<ptxt>
+Conjunto eléctrico del cuerpo de la mariposa
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1114072003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, conecte la herramienta de escaneado. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el pedal del acelerador en posición de ralentí durante 2 segundos.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el pedal del acelerador completamente pisado durante 2 segundos.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repita 3 veces los pasos 3) y 4).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1114072004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las medidas de precaución para la localización y reparación de averías de los DTC; para ello, consulte 
+<intxref refid = "E8T40A1110003">Precauciones para la localización y reparación de averías del DTC:M16A y J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E8T40A1114072005">
+<testgroup id = "E8T40A1114072006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114001">Inspección del sistema de control del motor y de las emisiones:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114072007">
+<title>
+Inspección del sistema del conjunto eléctrico del cuerpo de la mariposa
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición ON y compruebe cada tensión de &#34;Tensión Sensor TP 1&#34; y &#34;Tensión Sensor TP 2&#34; que aparecen en la herramienta de escaneado cuando el pedal del acelerador está en posición de ralentí y pisado a fondo.
+</ptxt>
+</test1>
+<question>
+¿El valor mostrado de cada sensor TP coincide con la tensión descrita en 
+<intxref refid = "E8T40A1114007">Datos de la herramienta de escaneado:M16A y J20A</intxref>
+?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114072008">
+<title>
+Inspección del circuito del actuador de la mariposa
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del conjunto eléctrico del cuerpo de la mariposa con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que los terminales de los cables &#34;BLU&#x002F;YEL&#34; y &#34;BLU&#x002F;RED&#34; estén bien conectados al conjunto del cuerpo de la mariposa eléctrica.
+</ptxt>
+<testfigure>
+<title>
+Para el motor J20A
+</title>
+<graphic graphicname = "I5JB0A110042.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "158" gh = "76"/>
+</testfigure>
+<testfigure>
+<title>
+Para el motor M16A
+</title>
+<graphic graphicname = "I5JB0A110043.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "149" gh = "76"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si es correcta la conexión de los terminales &#34;C37-45&#34; y &#34;C37-44&#34; con el ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales de conexión siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal del cable &#34;BLU&#x002F;YEL&#34; del conector del conjunto del cuerpo de la mariposa eléctrica y el terminal &#34;C37-45&#34; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal del cable &#34;BLU&#x002F;RED&#34; del conector del conjunto del cuerpo de la mariposa eléctrica y el terminal &#34;C37-44&#34; del conector del ECM
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Son todas las resistencias inferiores a 3 &#937;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia elevada en el cable &#34;BLU&#x002F;YEL&#34; y&#x002F;o en el cable &#34;BLU&#x002F;RED&#34;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114072009">
+<title>
+Inspección del conjunto eléctrico del cuerpo de la mariposa
+</title>
+<test1>
+<ptxt>
+Inspeccione el conjunto eléctrico del cuerpo de la mariposa según las indicaciones de &#34;Inspección del conjunto eléctrico del cuerpo de la mariposa y su circuito&#34; en 
+<intxref refid = "E8T40A1316003">Inspección en el vehículo del conjunto eléctrico del cuerpo de la mariposa:M16A y J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto eléctrico del cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

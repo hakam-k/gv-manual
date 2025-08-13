@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1114053" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0532: Señal baja del circuito del sensor de presión del refrigerante del A&#x002F;C
+</title>
+<servinfosub id = "E8T40A1114053001">
+<title>
+Diagrama de cableado
+</title>
+<figure>
+<graphic graphicname = "I5JB0A110061.swf" width = "183.000mm" height = "95.606mm" ver = "01" gw = "446" gh = "254"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.348in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.555in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.348in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.349in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Sensor de presión del refrigerante del A&#x002F;C
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+A otros sensores
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Al sensor de corriente de carga eléctrica (para el motor J20A) y sensor MAP
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "E8T40A1114053002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tensión de la señal del sensor de presión del refrigerante del A&#x002F;C es inferior a 0,15 V durante 0,5 seg. ininterrumpidos.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción, pero la MIL no se enciende)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del sensor de presión del refrigerante del A&#x002F;C
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de presión del refrigerante del A&#x002F;C
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Cuando los DTC P0107 y P1501 se indican juntos, es posible que haya un circuito abierto en el cable &#34;GRY&#x002F;RED&#34;.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "E8T40A1114053003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Verifique el DTC y los DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1114053004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las medidas de precaución para la localización y reparación de averías de los DTC; para ello, consulte 
+<intxref refid = "E8T40A1110003">Precauciones para la localización y reparación de averías del DTC:M16A y J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E8T40A1114053005">
+<testgroup id = "E8T40A1114053006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114001">Inspección del sistema de control del motor y de las emisiones:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114053007">
+<title>
+Inspección del circuito de alimentación eléctrica del sensor de presión del refrigerante del A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del sensor de presión del refrigerante del A&#x002F;C con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que los terminales de los cables &#34;GRY&#x002F;RED&#34;, &#34;GRY&#x002F;BLK&#34; y &#34;GRY&#x002F;GRN&#34; del sensor de presión del refrigerante del A&#x002F;C estén bien conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON, mida la tensión entre la masa del motor y el terminal del cable &#34;GRY&#x002F;RED&#34; del conector del sensor de presión del refrigerante del A&#x002F;C.
+</ptxt>
+</test1>
+<question>
+¿La tensión es de 4 - 6 V?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114053008">
+<title>
+Inspección del circuito de alimentación eléctrica del sensor de presión del refrigerante del A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal del cable &#34;GRY&#x002F;RED&#34; del conector del sensor de presión del refrigerante del A&#x002F;C y el terminal &#34;C37-14&#34; del conector del ECM.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El cable &#34;GRY&#x002F;RED&#34; tiene un circuito abierto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114053009">
+<title>
+Inspección del circuito de alimentación eléctrica del sensor de presión del refrigerante del A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Mida la resistencia entre la masa del motor y el terminal &#34;C37-14&#34; del conector del ECM.
+</ptxt>
+</test1>
+<question>
+¿Equivale la resistencia a infinito?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cortocircuito del cable &#34;GRY&#x002F;RED&#34; a masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114053010">
+<title>
+Inspección del circuito de la señal del sensor de presión del refrigerante del A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Conecte los conectores al ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON, mida la tensión entre la masa del motor y el terminal del cable &#34;GRY&#x002F;BLK&#34; del conector del sensor de presión del refrigerante del A&#x002F;C.
+</ptxt>
+</test1>
+<question>
+¿La tensión es de 4 - 6 V?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114053011">
+<title>
+Inspección del circuito de la señal del sensor de presión del refrigerante del A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre la masa del motor y el terminal &#34;C37-12&#34; del conector del ECM.
+</ptxt>
+</test1>
+<question>
+¿Equivale la resistencia a infinito?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cortocircuito a masa del cable &#34;GRY&#x002F;BLK&#34;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114053012">
+<title>
+Inspección del sensor de presión del refrigerante del A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Inspeccione el sensor de presión del refrigerante del A&#x002F;C consultando 
+<intxref refid = "E8T40A7216015">Inspección del sensor de presión del refrigerante de A&#x002F;C y su circuito (modelo con motor de gasolina):Modelos M16A, J20A y F9Q</intxref>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Avería en el sensor de presión del refrigerante del A&#x002F;C.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

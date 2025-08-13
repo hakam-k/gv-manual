@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1124033" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0340
+</title>
+<servinfosub id = "E8T40A1124033001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.889in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.311in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0340: Circuito &#34;A&#34; del sensor de posición del árbol de levas
+</emph>
+</ptxt>
+<ptxt>
+Este DTC se detecta si se cumple alguna de las condiciones siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+El impulso del sensor CMP es inferior a 20 impulsos por cada 8 revoluciones del cigüeñal.
+</ptxt>
+</item>
+<item>
+<ptxt>
+El impulso del sensor CMP es superior a 28 impulsos por cada 8 revoluciones del cigüeñal.
+</ptxt>
+</item>
+<item>
+<ptxt>
+El impulso del sensor CMP es de menos de 20 impulsos entre 75&#176; BTDC y 5&#176; BTDC en las 8 revoluciones del cigüeñal siguientes al arranque del motor.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor CMP y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Rotor de señales
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1124033002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1124031">DTC P0335:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124033003">
+<title>
+Descripción del sistema
+</title>
+<ptxt>
+El sensor CMP ubicado en la culata se compone de un generador de señales (sensor magnético) y de un rotor de señales (fijado al árbol de levas de admisión).
+</ptxt>
+<ptxt>
+El generador de señales genera señales de referencia a través de las ranuras del rotor de señales, que gira junto con el árbol de levas.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124033004">
+<title>
+Señal de referencia
+</title>
+<ptxt>
+El sensor CMP genera 6 impulsos de señales, cada una de las cuales dispone de una longitud de onda diferente, mientras el árbol de levas realiza una rotación completa. Consulte 
+<intxref refid = "E8T40A1124063">Inspección del ECM y sus circuitos:J24B</intxref>
+.
+</ptxt>
+<ptxt>
+Basándose en las señales del sensor CKP y CMP, el ECM determina qué pistón del cilindro se encuentra en la carrera de compresión.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124033005">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention3>
+<ptxt>
+Si se detecta algún otro DTC, además del DTC deseado, en el procedimiento de confirmación de DTC, asegúrese de realizar el procedimiento de localización y reparación de averías del DTC detectado previamente.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Arranque el motor durante 5 seg. (Interruptor de encendido: posición ST).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1124033006">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1124033007">
+<testgroup id = "E8T40A1124033008">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124033009">
+<title>
+Verificación de DTC
+</title>
+<test1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</test1>
+<question>
+¿Aparece algún otro DTC además del P0340?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124033010">
+<title>
+Comprobación del circuito de alimentación eléctrica del sensor CMP
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte el conector del sensor CMP.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal al conector del sensor CMP es correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, ponga el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que el circuito de alimentación del sensor CMP (A1) funciona con tensión de batería.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124033011">
+<title>
+Inspección del circuito de la señal y del circuito de masa del sensor CMP
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte los conectores del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión del terminal a los conectores del ECM es correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, compruebe que el circuito de la señal del sensor CMP (A2) y el circuito de masa (A3) son como se describen a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables de cada circuito de la señal del sensor CMP y del circuito de masa es inferior a 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento entre el circuito de la señal del sensor CMP y la masa de la carrocería del vehículo es infinita.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el terminal del circuito de señal del sensor CMP y cada terminal del conector del sensor CMP.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el terminal del circuito de masa del sensor CMP y cada terminal del conector del sensor CMP.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión de cada circuito de señal del sensor CMP y del circuito de masa es de 0 - 1 V con el interruptor de encendido en la posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124033012">
+<title>
+Comprobación del sensor CMP y del rotor de señales
+</title>
+<test1>
+<ptxt>
+Compruebe el sensor CMP y el rotor de señales. 
+<intxreftitleoff1 refid = "E8T40A1326015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el sensor CMP.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

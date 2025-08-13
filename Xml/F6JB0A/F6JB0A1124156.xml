@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A1124156" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Tableau 3: Le moteur se met difficilement en marche.
+</title>
+<servinfosub id = "F6JB0A1124156001">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F6JB0A1124156002">
+<testgroup>
+<ptxt>
+Vérifier si le réservoir est rempli correctement et le type de carburant est approprié.
+</ptxt>
+<question>
+Est-ce que le réservoir est rempli correctement et le type de carburant est approprié?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplir correctement le réservoir. Purger les circuits diesel basse et haute pression.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Vérifier les masses du moteur.
+</ptxt>
+<ptxt>
+S&apos;assurer que le régime moteur atteint 250 tr&#x002F;min avec le démarreur, comme affiché au dispositif de balayage SUZUKI.
+</ptxt>
+<question>
+Est-ce que le démarreur fonctionne correctement?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Effectuer les réparations nécessaires.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM.
+</ptxt>
+<question>
+Le DTC P0335 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A1124109">DTC P0335: Circuit du capteur CKP:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM.
+</ptxt>
+<question>
+Le DTC P0016 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A1124089">DTC P0016: Corrélation CKP &#8211; CMP:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+S&apos;assurer que la mise à la terre du moteur est en ordre (oxydation, serrage, etc.).
+</ptxt>
+<ptxt>
+Vérifier la fixation, l&apos;écartement et l&apos;état du capteur (surchauffe).
+</ptxt>
+<question>
+L&apos;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+S&apos;assurer de l&apos;absence de fuite dans le circuit de carburant.
+</ptxt>
+<ptxt>
+Si le défaut se déclare toujours, se reporter à 
+<intxref refid = "F6JB0A1124091">DTC P0089: Performance de l&apos;actionneur de débit de carburant:Pour les modèles à moteur Diesel</intxref>
+ de la recherche de 2.DEF: Pression mesurée trop basse
+</ptxt>
+<question>
+L&apos;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Vérifier les points suivants:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+S&apos;assurer que les bougies de préchauffage sont actionnées à l&apos;aide de la commande &#8220;Pre&#x002F;post Heater Relay Control&#8221; (commande du relais de pré &#x002F;post chauffage) du dispositif de balayage SUZUKI.
+</ptxt>
+</item>
+<item>
+<ptxt>
+S&apos;assurer que l&apos;actionneur du débit de carburant est actionné à l&apos;aide de la commande &#8220;IMV&#x002F;Flow actuator&#8221; (actionneur IMV &#x002F;débit) du dispositif de balayage SUZUKI.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier le système d&apos;échappement en se référant à 
+<intxref refid = "F6JB0A1124166">Test 1: Vérification du système d&#8217;échappement:Pour les modèles à moteur Diesel</intxref>
+. 
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier le circuit basse pression en se référant à 
+<intxref refid = "F6JB0A1124167">Test 2: Vérification du circuit de basse pression:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier qu&apos;il n&apos;y ait de fuites au circuit haute pression en se référant à 
+<intxref refid = "F6JB0A1124173">Test 8: Défaillance d&apos;injecteur:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier le circuit d&#8217;entrée d&#8217;air suralimenté en se référant à 
+<intxref refid = "F6JB0A1124168">Test 3: Vérification du circuit d&apos;entrée d&apos;air suralimenté:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier le capteur MAF en se référant à 
+<intxref refid = "F6JB0A1124169">Test 4: Capteur MAF:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier la cohérence du signal du capteur de température du liquide de refroidissement du moteur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+S&apos;assurer que les injecteurs fonctionnent correctement (fuite au retour trop importante, obstructions, blocages) en se référant à 
+<intxref refid = "F6JB0A1124173">Test 8: Défaillance d&apos;injecteur:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier le calage à l&apos;allumage (et la position de la roue d&#8217;entraînement de la pompe haute pression).
+</ptxt>
+</item>
+</list1>
+<question>
+L&apos;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Les compressions sont-elles correctes?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Fin de la découverte des défauts.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Effectuer les réparations nécessaires.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

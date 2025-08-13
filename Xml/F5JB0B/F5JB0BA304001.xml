@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0BA304001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "0" modify = "0">
+<title>
+Vérification du module de commande de l&#8217;antidémarrage
+</title>
+<diag type = "test" id = "F5JB0BA304001001">
+<testgroup>
+<title>
+Vérification de l&#8217;allumage du témoin d&#8217;injection
+</title>
+<test1>
+<ptxt>
+Mettre le contact.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0BA30002.swf" width = "90.000mm" height = "55.742mm" ver = "02" gw = "195" gh = "141"/>
+</testfigure>
+</test1>
+<question>
+Le témoin d&#8217;injection (1) s&#8217;allume-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0BA304006">Le témoin d&#8217;injection ne s&#8217;allume pas alors que le commutateur d&#8217;allumage est sur ON et le moteur est coupé.</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du clignotement du témoin d&#8217;injection
+</title>
+<question>
+Le témoin d&#8217;injection clignote-t-il de façon continue à l&#8217;étape 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la communication ICM
+</title>
+<test1>
+<ptxt>
+Contact coupé, raccorder le dispositif de balayage SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence de DTC dans l&#8217;ICM en se référant à 
+<intxref refid = "F5JB0BA304002">Vérification des codes d&#8217;anomalie (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Y a-t-il communication entre l&#8217;ICM et le dispositif de balayage SUZUKI?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel du DTC concerné.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la tension aux bornes de connecteur d&#8217;ICM
+</title>
+<test1>
+<ptxt>
+Vérifier la tension aux bornes de connecteur d&#8217;ICM suivantes en se référant à 
+<intxref refid = "F5JB0BA304018">Contrôle du module de commande du système antidémarrage (ICM) et de son circuit</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit d&#8217;alimentation
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit de la masse
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ligne de communication série du connecteur de liaison de données
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La tension de chaque borne est-elle normale?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&#8217;ICM par un ICM en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification que le témoin d&#8217;injection reste allumé
+</title>
+<test1>
+<ptxt>
+Vérifier si le témoin d&#8217;injection reste allumé après la mise en marche du moteur.
+</ptxt>
+</test1>
+<question>
+Le témoin d&#8217;injection reste-t-il allumé après la mise en marche du moteur?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0BA304007">Le témoin d&#8217;injection reste allumé après la mise en marche du moteur.</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Le module de commande de l&#8217;antidémarrage est en bon état.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

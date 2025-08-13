@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A5104060" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1878: Vibration de l&apos;embrayage de convertisseur de couple
+</title>
+<servinfosub id = "F5JB0A5104060001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.744in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.465in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La fonction de commande du patinage de l&apos;accélération s&apos;arrête lorsqu&apos;une variation de la vitesse de rotation de sortie de l&apos;amplitude et du cycle spécifiés est détectée pendant une période de temps spécifiée. Lorsque la variation spécifiée n&apos;est pas détectée après l&apos;arrêt de la commande de patinage en accélération.
+</ptxt>
+<ptxt>
+(Logique de détection à 20 cycles de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ATF inadapté
+</ptxt>
+</item>
+<item>
+<ptxt>
+Dysfonctionnement de l&#8217;embrayage de convertisseur de couple
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0A5104060002">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Supprimer les DTC des mémoires du TCM et de l&apos;ECM à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire démarrer le moteur et l&apos;amener à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire le véhicule en 3ème ou 4ème vitesse, en position &#34;D&#34; et pontage du convertisseur à commande de patinage sur ON pendant 20 secondes ou plus en se référant à 
+<intxref refid = "F5JB0A5101009">Tableau de changement de vitesse automatique</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC, les DTC en attente et les données d&apos;arrêt sur image.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0A5104060003">
+<title>
+Recherche de pannes à partir du DTC
+</title>
+<diag type = "test" id = "F5JB0A5104060004">
+<testgroup>
+<question>
+La &#34;Vérification du système A&#x002F;T&#34; a&#x002D;t&#x002D;elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0A5104001">Vérification du système A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Changer le liquide d&apos;A&#x002F;T en se référant à 
+<intxref refid = "F5JB0A5106042">Changement de liquide de boîte automatique (A&#x002F;T)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le DTC après avoir effectué la 
+<intxref refid = "F5JB0A5104060002">Procédure de confirmation de DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1878 est&#x002D;il toujours indiqué?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Embrayage de convertisseur de couple défectueux. Remplacer le convertisseur de couple.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Le système est en bon état.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

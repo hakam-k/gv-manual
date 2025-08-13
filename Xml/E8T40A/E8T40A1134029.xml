@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1134029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306
+</title>
+<attention3>
+<ptxt>
+Para ver la identificación de cada cilindro y banco, consulte 
+<intxref refid = "E8T40A1130007">Medidas de precaución para la identificación del cilindro y del banco:N32A</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "E8T40A1134029001">
+<title>
+Descripción del sistema
+</title>
+<ptxt>
+El ECM mide el ángulo del cigüeñal en función de la señal de impulso del sensor CKP y del sensor CMP de cada cilindro. Si detecta un gran cambio en la velocidad del ángulo del cigüeñal, deduce que se ha producido un fallo en el encendido. Cuando el número de fallos de encendido que cuenta el ECM supera la condición de detección del DTC, determina el cilindro en el que se ha producido el fallo de encendido y lo indica como un DTC.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1134029002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.514in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.690in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0300: Fallo de encendido del cilindro múltiple&#x002F;aleatorio, detectado
+</emph>
+</ptxt>
+<ptxt>
+Este DTC se detecta si se cumple alguna de las condiciones siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Las tasas de fallos de encendido en 2 o más cilindros exceden la tasa de fallos de encendido especificada que ocasiona daños al convertidor catalítico. 
+</ptxt>
+<ptxt>
+(El indicador MIL parpadea mientras el fallo de encendido se produzca continuamente)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Las tasas de fallos de encendido en 2 o más cilindros exceden la tasa de fallos de encendido especificada que afecta las emisiones de escape adversamente.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Lógica de detección de 2 ciclos de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Combustible (presión, falta de combustible o combustible de baja calidad)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema de admisión de aire
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema de escape
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema de encendido
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema de combustible
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema mecánico del motor
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0301: Fallo de encendido del cilindro 1 detectado
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0302: Fallo de encendido del cilindro 2 detectado
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+P0303: Fallo de encendido del cilindro 3 detectado
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0304: Fallo de encendido del cilindro 4 detectado
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0305: Fallo de encendido del cilindro 5 detectado
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+P0306: Fallo de encendido del cilindro 6 detectado
+</emph>
+</ptxt>
+<ptxt>
+Este DTC se detecta si se cumple alguna de las condiciones siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La tasa de fallos de encendido en el cilindro especificado excede la tasa de fallos de encendido especificada que ocasiona daños al convertidor catalítico. 
+</ptxt>
+<ptxt>
+(El indicador MIL parpadea mientras el fallo de encendido se produzca continuamente)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tasa de fallos de encendido en el cilindro especificado excede la tasa de fallos de encendido especificada que afecta las emisiones de escape adversamente.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Lógica de detección de 2 ciclos de conducción)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1134029003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cuando efectúe una prueba de carretera, elija un lugar donde no haya tráfico o riesgo de accidentes, y conduzca con mucho cuidado para evitar cualquier accidente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prueba de carretera deben realizarla 2 personas, un conductor y una persona encargada de la prueba, en una carretera nivelada.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Si se detecta algún otro DTC, además del DTC deseado, en el procedimiento de confirmación de DTC, asegúrese de realizar el procedimiento de localización y reparación de averías del DTC detectado previamente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Asegúrese de que se cumplan las condiciones siguientes cuando se utilice este procedimiento.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Nivel de combustible &#8805; 15,0 &#x0025;
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+En caso de que se sospeche que hay combustible de calidad inferior mezclado en el depósito de combustible, sustituya todo el combustible del depósito con combustible de alta calidad.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Arranque el motor y deje que se caliente hasta que alcance su temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduzca el vehículo a 40 - 50 km&#x002F;h (25 - 31 mile&#x002F;h) durante 5 min.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Haga funcionar el motor en régimen de ralentí durante 5 min..
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduzca el vehículo durante varios minutos en las condiciones indicadas por los datos de imagen fija (régimen del motor, carga del motor, etc.) memorizados en el ECM.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1134029004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1134029005">
+<testgroup id = "E8T40A1134029006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1134001">Inspección del sistema de control del motor y de las emisiones:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134029007">
+<question>
+¿El indicador de combustible señala &#34;E&#34; (vacío)?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Añada combustible y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134029008">
+<title>
+Inspección del sistema de admisión de aire y del sistema de escape
+</title>
+<test1>
+<ptxt>
+Compruebe si hay obstrucciones o fugas en el sistema de admisión de aire, en el sistema de escape, en las mangueras de vacío y en las mangueras de PCV.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya la pieza defectuosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134029009">
+<title>
+Inspección del sistema de encendido
+</title>
+<test1>
+<ptxt>
+Inspeccione el sistema de encendido. 
+<intxreftitleoff1 refid = "E8T40A1834003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya la pieza defectuosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134029010">
+<title>
+Inspección del inyector de combustible y su circuito
+</title>
+<test1>
+<ptxt>
+Compruebe que el inyector de combustible y su circuito sean como se describe a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del inyector de combustible: 
+<intxreftitleoff1 refid = "E8T40A1734005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Inyector de combustible: 
+<intxreftitleoff1 refid = "E8T40A1736009"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya la pieza defectuosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134029011">
+<title>
+Inspección del sistema mecánico del motor
+</title>
+<test1>
+<ptxt>
+Inspeccione las piezas mecánicas del motor o del sistema que pueden provocar irregularidades en el ralentí o un rendimiento pobre del motor.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Compresión del motor: 
+<intxreftitleoff1 refid = "E8T40A1444001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ajuste del encendido: 
+<intxreftitleoff1 refid = "E8T40A1836005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya la pieza defectuosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134029012">
+<title>
+Localización y reparación de averías de otros DTC detectados al mismo tiempo
+</title>
+<question>
+¿Se detectan otros DTC al mismo tiempo?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la localización y reparación de averías de DTC correspondiente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

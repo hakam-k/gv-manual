@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A1104091" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0625 &#x002F; P0626: Tension faible &#x002F; tension élevée dans le circuit de borne de bobine d&apos;induction de l&apos;alternateur
+</title>
+<servinfosub id = "F5JB0A1104091001">
+<title>
+Schéma du système et du câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0A1104090">DTC P0620: Circuit de commande d&apos;alternateur</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A1104091002">
+<title>
+Description du système de commande de l&apos;alternateur
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0A1101011">Description du système de commande de l&apos;alternateur</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A1104091003">
+<title>
+Condition de détection de DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.116in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.086in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0625:
+</emph>
+</ptxt>
+<ptxt>
+Le taux de service de la bobine d&apos;induction de l&apos;alternateur est de 100&#x0025; (tension faible) plus longtemps que spécifié bien que la commande de l&apos;alternateur soit en régulation maximale (taux de service de commande de 100&#x0025;), ou le taux de service de la bobine d&apos;induction de l&apos;alternateur est de 100&#x0025; (tension faible) au démarrage du moteur.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0626:
+</emph>
+</ptxt>
+<ptxt>
+Le taux de service de la bobine d&apos;induction de l&apos;alternateur est de 0&#x0025; (tension élevée) plus longtemps que spécifié bien que la commande de l&apos;alternateur soit en régulation minimale (taux de service de commande 0&#x0025;).
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Alternateur et&#x002F;ou son circuit
+</ptxt>
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0A1104091004">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, raccorder le dispositif de balayage au DLC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+S&apos;assurer que tous les contacteurs accessoires sont en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire démarrer le moteur et l&apos;amener à température normale de fonctionnement (ECT approx. 90 &#8211; 95 &#176;C).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre les contacteurs accessoires suivants en position ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Contacteur des phares.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Contacteur de moteur de soufflante (position max.).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Contacteur de désembuage de lunette arrière.
+</ptxt>
+</item>
+</list1>
+</s1>
+<s1>
+<ptxt>
+Porter le régime moteur à 4000 tr&#x002F;min et maintenir ce régime pendant 10 s au moins.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Diminuer le régime moteur jusqu&apos;au ralenti.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier le DTC et le DTC en attente.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F5JB0A1104091005">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0A1100005">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F5JB0A1104091006">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0A1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de commande de l&apos;alternateur
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur de l&apos;alternateur et de l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement de la borne du câble au connecteur de l&apos;alternateur et au connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si les connexions sont en ordre, vérifier les points suivants pour le circuit de commande de l&apos;alternateur (borne &#8220;C&#8221; de l&apos;alternateur) et le circuit de contrôle de la bobine d&apos;induction (borne &#8220;FR&#8221; de l&apos;alternateur).
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La résistance de chaque câble de commande de l&apos;alternateur et câble de contrôle de la bobine d&apos;induction entre le connecteur de l&apos;alternateur et le connecteur de l&apos;ECM est inférieure à 1 &#937; (vérification de continuité)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance entre le câble de commande de l&apos;alternateur et le câble de contrôle de la bobine d&apos;induction du connecteur de l&apos;alternateur est égale à l&apos;infini (vérification de l&apos;isolation)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance entre chaque câble de commande de l&apos;alternateur et le câble de contrôle de bobine d&apos;induction du connecteur de l&apos;alternateur et la masse de la carrosserie du véhicule est infinie (vérification de présence d&apos;un court-circuit à la masse)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tension entre chaque câble de commande de l&apos;alternateur et chaque câble de contrôle de bobine d&apos;induction du connecteur de l&apos;alternateur et la masse de la carrosserie du véhicule est de 0 V, contacteur d&apos;allumage en position ON (vérification de court-circuit du circuit d&apos;alimentation)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Tout est-il en ordre?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le câble défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;alternateur
+</title>
+<test1>
+<ptxt>
+Vérifier la tension de sortie de l&apos;alternateur en se reportant aux points 
+<intxref refid = "F5JB0A1A04002">Essai de l&#8217;alternateur (vérification de batterie déchargée)</intxref>
+ et 
+<intxref refid = "F5JB0A1A06009">Vérification de l&apos;alternateur</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il satisfaisant?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer l&apos;alternateur.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A4604043" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1079: Fallo de calibración del sensor del ángulo de dirección
+</title>
+<servinfosub id = "E8T40A4604043001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+No se puede llevar a cabo la calibración del sensor del ángulo de dirección. 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor del ángulo de dirección
+</ptxt>
+</item>
+<item>
+<ptxt>
+La calibración del sensor del ángulo de dirección no se ha terminado
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A4604043002">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A4604043003">
+<testgroup id = "E8T40A4604043004">
+<question>
+¿Se ha realizado una &#34;comprobación de programa de estabilidad electrónica&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A4604001">Comprobación del programa de estabilidad electrónica</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604043005">
+<title>
+Comprobación de DTC para el ESP&#174;
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en ON y compruebe los DTC para el ESP&#174;.
+</ptxt>
+</test1>
+<question>
+¿Hay algún DTC distinto de C1075 y C1079?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de diagnóstico del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604043006">
+<title>
+Compruebe la calibración del sensor
+</title>
+<test1>
+<ptxt>
+Calibre el sensor del ángulo de dirección. 
+<intxreftitleoff1 refid = "E8T40A4606002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Borre los DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC para el ESP&#174; tras una prueba de conducción.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC C1079?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un sensor del ángulo de la dirección en buen estado y vuelva a comprobar. Si vuelve a detectarse el DTC, sustituya el conjunto de unidad hidráulica&#x002F;módulo de control del ESP&#174; por uno en buen estado.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La calibración no se ha terminado.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

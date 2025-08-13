@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1114009" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Inspección básica del motor
+</title>
+<ptxt>
+Esta comprobación es muy importante para la localización y reparación de averías cuando el ECM no ha detectado ningún DTC y no se han encontrado anomalías en 
+<intxref refid = "E8T40A1114008">Inspección visual:M16A y J20A</intxref>
+.
+</ptxt>
+<ptxt>
+Siga cuidadosamente las instrucciones de la tabla.
+</ptxt>
+<diag type = "test" id = "E8T40A1114009001">
+<testgroup id = "E8T40A1114009002">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114001">Inspección del sistema de control del motor y de las emisiones:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009003">
+<title>
+Compruebe la tensión de la batería
+</title>
+<question>
+¿Es igual o mayor que 11 V?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cargue o sustituya la batería.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009004">
+<question>
+¿Está el vehículo equipado con sistema de control de arranque sin llave?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009005">
+<title>
+Compruebe si hay alguna avería en el sistema de control de arranque sin llave (si el sistema de control de arranque sin llave está instalado)
+</title>
+<test1>
+<ptxt>
+Verifique el sistema de control de arranque sin llave según las indicaciones de 
+<intxref refid = "E8T40AA504010">Inspección del funcionamiento del sistema de arranque sin llave</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Anomalía del sistema de control de arranque sin llave.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009006">
+<question>
+¿Gira el motor para arrancar?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1914001">Diagnóstico de síntomas del sistema de arranque:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009007">
+<question>
+¿Arranca el motor?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009008">
+<title>
+Compruebe el régimen de ralentí
+</title>
+<test1>
+<ptxt>
+Caliente el motor hasta que llegue a la temperatura normal de funcionamiento.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Cambie la transmisión a la posición de punto muerto en modelos con M&#x002F;T (posición &#34;P&#34; en modelos con A&#x002F;T).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Asegúrese de que todas las cargas eléctricas están desactivadas.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique el régimen de ralentí del motor con la herramienta de escaneado.
+</ptxt>
+</test1>
+<question>
+¿Es de 600 - 700 (en el motor J20A), 610 - 710 (en el motor M16A) r&#x002F;min?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114010">Diagnóstico de síntomas del motor:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009009">
+<title>
+Verifique el ajuste del encendido
+</title>
+<test1>
+<ptxt>
+Cuando utilice la herramienta de escaneado SUZUKI, seleccione el modo &#34;Prueba activa&#34; y restablezca el ajuste del encendido al inicial.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el ajuste del encendido inicial con la luz temporizadora (1).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L1A102">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09930-76420">
+09930-76420
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<title>
+Para el motor J20A
+</title>
+<graphic graphicname = "I5JB0A110021.swf" width = "90.000mm" height = "52.567mm" ver = "01" gw = "134" gh = "132"/>
+</testfigure>
+<testfigure>
+<title>
+Para el motor M16A
+</title>
+<graphic graphicname = "I5JB0A110022.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "165" gh = "128"/>
+</testfigure>
+</test1>
+<question>
+¿Es 5&#176; - 15&#176; (en el motor J20A), 7&#176; - 17&#176; (en el motor M16A) BTDC al régimen de ralentí especificado?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114010">Diagnóstico de síntomas del motor:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Inspeccione las piezas relacionadas con el control del encendido; consulte la sección 
+<intxref refid = "E8T40A1816007">Inspección del ajuste del encendido:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009010">
+<title>
+Compruebe si hay alguna avería en el sistema del inmovilizador (si el sistema de control del inmovilizador está instalado)
+</title>
+<test1>
+<ptxt>
+Inspeccione el sistema de control del inmovilizador; para ello, consulte 
+<intxref refid = "E8T40AA314001">Comprobación del sistema de control del inmovilizador:Modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Avería en el sistema de control del inmovilizador.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009011">
+<title>
+Compruebe la alimentación de combustible
+</title>
+<test1>
+<ptxt>
+Asegúrese de que queda suficiente combustible en el depósito.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON durante 2 segundos y a continuación colóquelo en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Repita el paso 2) varias veces.
+</ptxt>
+</test1>
+<question>
+¿Se nota la presión del combustible en la manguera de alimentación de combustible cuando se coloca el interruptor de encendido en posición ON?
+</question>
+<testfigure>
+<title>
+Para el motor J20A
+</title>
+<graphic graphicname = "I5JB0A110023.swf" width = "90.000mm" height = "46.570mm" ver = "01" gw = "130" gh = "115"/>
+</testfigure>
+<testfigure>
+<title>
+Para el motor M16A
+</title>
+<graphic graphicname = "I5JB0A110024.swf" width = "90.000mm" height = "46.922mm" ver = "01" gw = "138" gh = "116"/>
+</testfigure>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009012">
+<title>
+Compruebe si la bomba de combustible funciona
+</title>
+<question>
+¿Se oye el sonido del funcionamiento de la bomba de combustible desde el tapón de llenado de combustible, unos 2 segundos después de colocar el interruptor de encendido en la posición ON y se detiene posteriormente?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1714004">Comprobación de la presión de combustible:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114083">Inspección de la bomba de combustible y sus circuitos:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009013">
+<title>
+Compruebe si hay chispa de encendido
+</title>
+<test1>
+<ptxt>
+Desconecte los acopladores del inyector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Extraiga las bujías y conéctelas a los cables de alta tensión o a los conjuntos de las bobinas de encendido.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Conecte a masa las bujías.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Haga girar el motor y compruebe si salta una chispa en cada bujía.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1814004">Prueba de la chispa de encendido:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114009014">
+<title>
+Compruebe si funciona el inyector de combustible
+</title>
+<test1>
+<ptxt>
+Instale las bujías y conecte los conectores del inyector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Con un estetoscopio (1), compruebe el sonido de funcionamiento de cada inyector (2) cuando el motor gira para arrancar.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I3RM0A110015.swf" width = "90.000mm" height = "49.095mm" ver = "01" gw = "145" gh = "122"/>
+</testfigure>
+</test1>
+<question>
+¿Se ha oído el sonido de funcionamiento de todos los inyectores?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114010">Diagnóstico de síntomas del motor:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1114082">Inspección del circuito del inyector de combustible:M16A y J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E1104072" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P2119: Problème de plage &#x002F; performance du porte-papillon de commande de l&apos;actionneur du papillon
+</title>
+<servinfosub id = "F5JB0E1104072001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0E1104068">DTC P2101: Problème de plage &#x002F; performance du circuit du moteur de commande de l&apos;actionneur du papillon</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E1104072002">
+<title>
+Condition de détection de DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La différence entre l&apos;angle d&apos;ouverture mesuré (réel) du papillon et l&apos;angle d&apos;ouverture cible du papillon, calculé sur la base de l&apos;angle d&apos;ouverture de la pédale d&apos;accélérateur et l&apos;état du moteur, est constamment supérieure aux spécifications pendant le temps spécifié.
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de l&apos;actionneur du papillon
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ensemble de porte-papillon électrique
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0E1104072003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, raccorder le dispositif de balayage. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Maintenir la pédale d&apos;accélérateur en position de ralenti pendant 2 secondes.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Maintenir la pédale d&apos;accélérateur en position complètement enfoncée pendant 2 secondes.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Répéter 3 fois les étapes 3) et 4).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0E1104072004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0E1100003">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F5JB0E1104072005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0E1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du système de l&apos;ensemble de porte-papillon électrique
+</title>
+<test1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et vérifier chacune des tensions &#8220;Tension capteur TP 1&#8221; et &#8220;Tension capteur TP 2&#8221; affichées sur le dispositif de balayage, pédale d&apos;accélérateur en position de ralenti, puis complètement enfoncée.
+</ptxt>
+</test1>
+<question>
+Les valeurs affichées pour chaque détecteur TP correspondent-elle à la tension décrite au point 
+<intxref refid = "F5JB0E1104007">Données du dispositif de balayage</intxref>
+?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuelles pannes intermittentes en se reportant au point 
+<intxref refid = "F5JB0E0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de l&apos;actionneur du papillon
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur de l&apos;ensemble de porte-papillon électrique, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement de l&apos;ensemble de porte-papillon électrique aux bornes des câbles &#8220;BLU&#x002F;YEL&#8221; et &#8220;BLU&#x002F;RED&#8221;.
+</ptxt>
+<testfigure>
+<title>
+Pour moteur J20
+</title>
+<graphic graphicname = "I5JB0A110042.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "158" gh = "76"/>
+</testfigure>
+<testfigure>
+<title>
+Pour moteur M16
+</title>
+<graphic graphicname = "I5JB0A110043.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "149" gh = "76"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Débrancher les connecteurs de l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement de l&apos;ECM aux bornes &#8220;C37-45&#8221; et &#8220;C37-44&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes de connecteur suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne du câble &#8220;BLU&#x002F;YEL&#8221; du connecteur de l&apos;ensemble de porte-papillon électrique et la borne &#8220;C37-45&#8221; du connecteur de l&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne du câble &#8220;BLU&#x002F;RED&#8221; du connecteur de l&apos;ensemble de porte-papillon électrique et la borne &#8220;C37-44&#8221; du connecteur de l&apos;ECM
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Chaque résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée dans le câble &#8220;BLU&#x002F;YEL&#8221; et&#x002F;ou le câble &#8220;BLU&#x002F;RED&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;ensemble de porte-papillon électrique
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;ensemble de porte-papillon électrique en se référant à &#8220;Vérification de l&apos;ensemble de porte-papillon électrique et de son circuit&#8221; au point 
+<intxref refid = "F5JB0E1306003">Vérification de l&apos;ensemble de porte-papillon électrique sur le véhicule</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il satisfaisant?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble de porte-papillon électrique.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

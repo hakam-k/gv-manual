@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1134028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0222 &#x002F; P0223
+</title>
+<servinfosub id = "E8T40A1134028001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.960in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.229in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0222: Señal baja del circuito &#34;B&#34; bajo del interruptor&#x002F;sensor de posición del pedal o de la mariposa
+</emph>
+</ptxt>
+<ptxt>
+La tensión del circuito de señal del sensor TP (secundario) es inferior a 0,16 V.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor TP (secundario) y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0223: Señal alta del circuito &#34;B&#34; del interruptor&#x002F;sensor de posición del pedal o de la mariposa
+</emph>
+</ptxt>
+<ptxt>
+La tensión del circuito de señal del sensor TP (secundario) es superior a 4,88 V.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1134028002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1134028003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention3>
+<ptxt>
+Asegúrese de que se satisfacen las condiciones siguientes cuando se aplica este procedimiento.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tensión de la batería &gt; 7 V
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Ponga el motor en marcha.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Pise a fondo el pedal del acelerador y suéltelo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Haga funcionar el motor al ralentí.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repita 3 veces los pasos 2) y 3).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1134028004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1134028005">
+<testgroup id = "E8T40A1134028006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1134001">Inspección del sistema de control del motor y de las emisiones:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134028007">
+<title>
+Inspección del circuito de alimentación eléctrica del sensor TP
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte el conector del cuerpo de la mariposa.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal al conector del cuerpo de la mariposa sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, ponga el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la tensión entre el circuito de alimentación eléctrica del sensor TP (A1) y la masa de la carrocería del vehículo sea de 5 V.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134028008">
+<title>
+Comprobación del circuito de masa del sensor TP
+</title>
+<test1>
+<ptxt>
+Compruebe que la tensión entre el circuito de alimentación eléctrica del sensor TP (A1) y el circuito de masa (A4) sea de 5 V.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+<ptxt>
+Si se sigue detectando este DTC, vaya al paso 7.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134028009">
+<title>
+Inspección del circuito de alimentación eléctrica del sensor TP
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte los conectores del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión del terminal a los conectores del ECM es correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones están bien, verifique que el circuito de alimentación eléctrica del sensor TP (A1) sea como se describe a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables del circuito de alimentación del sensor TP es inferior a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del circuito de alimentación eléctrica del sensor TP tiene un valor infinito entre el cuerpo de la mariposa y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el terminal de alimentación eléctrica del sensor TP y cada uno de los otros terminales del conector del cuerpo de la mariposa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del circuito de alimentación del sensor TP es de 0 - 1 V con el interruptor de encendido en posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134028010">
+<title>
+Inspección del circuito de señal del sensor TP (secundario)
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte los conectores del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión del terminal a los conectores del ECM es correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, verifique que el circuito de señal del sensor TP (secundario) (A3) sea como se describe a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables de cada circuito de la señal del sensor TP (secundario) es inferior a 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del circuito de señal del sensor TP (secundario) tiene un valor infinito entre el cuerpo de la mariposa y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el terminal de señal del sensor TP (secundario) y cada uno de los otros terminales del conector del cuerpo de la mariposa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del circuito de la señal del sensor TP (secundario) es de 0 - 1 V con el interruptor de encendido en posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134028011">
+<title>
+Comprobación del sensor TP
+</title>
+<test1>
+<ptxt>
+Inspeccione el rendimiento del sensor TP. 
+<intxreftitleoff1 refid = "E8T40A1336004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134028012">
+<title>
+Localización y reparación de averías de otros DTC detectados al mismo tiempo
+</title>
+<question>
+¿Se detectan otros DTC al mismo tiempo?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la localización y reparación de averías de DTC correspondiente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

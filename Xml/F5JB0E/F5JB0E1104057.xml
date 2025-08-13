@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E1104057" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0617: Tension élevée du circuit du relais du démarreur
+</title>
+<servinfosub id = "F5JB0E1104057001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0E1104056">DTC P0616: Tension faible du circuit du relais du démarreur</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E1104057002">
+<title>
+Condition de détection de DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.650in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.541in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Tension élevée du signal du démarreur du moteur pendant 180 secondes en continu, moteur en marche
+</ptxt>
+<ptxt>
+(Logique de détection à 2 cycles de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit du signal du démarreur du moteur
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0E1104057003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, raccorder le dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le laisser tourner au ralenti pendant 3 minutes minimum.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier le DTC et le DTC en attente.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0E1104057004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0E1100003">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F5JB0E1104057005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0E1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du signal du démarreur
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Déposer l&apos;ECM de son support, avec les connecteurs de l&apos;ECM branchés.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Démarrer le moteur, puis mesurer la tension entre la borne &#8220;C37-22&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuelles pannes intermittentes en se reportant au point 
+<intxref refid = "F5JB0E0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+. Si tout est en ordre, remplacer l&#8217;ECM par un ECM en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du câble
+</title>
+<test1>
+<ptxt>
+Débrancher le relais de commande du moteur de démarreur dans la boîte à fusibles n&#176;2, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du relais de commande du moteur de démarreur aux bornes des câbles &#8220;BLK&#x002F;YEL&#8221;, &#8220;BLK&#x002F;RED&#8221; et &#8220;BLK&#8221; (pour le modèle M&#x002F;T).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du moteur de démarrage.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la tension entre la borne &#8220;C37-22&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule, contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Le câble &#8220;BLK&#x002F;YEL&#8221; est en court-circuit avec le circuit d&apos;alimentation.
+</ptxt>
+<ptxt>
+Si les câbles sont en bon état, remplacer l&apos;ECM par un ECM en bon état, et vérifier à nouveau.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du câble
+</title>
+<test1>
+<ptxt>
+Mesurer la tension entre la borne du câble &#8220;BLK&#x002F;YEL&#8221; côté bobine du connecteur du relais de commande du moteur de démarreur et la masse de la carrosserie du véhicule, contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vérifier le relais de commande du moteur de démarreur Si tout est en ordre, remplacer l&#8217;ECM par un ECM en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Vérifier le contacteur d&apos;allumage en se reportant au point 
+<intxref refid = "F5JB0E9306002">Examen du commutateur d&#8217;allumage</intxref>
+.
+</ptxt>
+<ptxt>
+Si le contacteur d&apos;allumage est en ordre, rechercher la présence éventuelle d&apos;un court-circuit entre le contacteur d&apos;allumage et le relais de commande du moteur de démarrage avec le circuit d&apos;alimentation électrique.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

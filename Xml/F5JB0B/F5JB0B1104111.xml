@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0B1104111" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0380: Défaillance du circuit &#8220;A&#8221; du réchauffeur&#x002F;de la bougie de préchauffage
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions d&#8217;application de la procédure de découverte des défauts pour le défaut enregistré:
+</ptxt>
+<ptxt>
+Le défaut se déclare après le test de sortie &#8220;Pre&#x002F;Post Heater Relay Control&#8221; (commande du relais de pré&#x002F;post chauffage) du dispositif de balayage SUZUKI ou après une tentative de mise en marche du moteur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+En cas de présence de ce défaut, il est difficile, voire impossible de démarrer le véhicule à froid.
+</ptxt>
+</item>
+<item>
+<ptxt>
+En cas de présence de ce défaut, le témoin d&#8217;injection (témoin à gravité 1) est allumé.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Recourir à un câble de branchement lors de toute intervention sur les connecteurs d&#8217;ECM.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "F5JB0B1104111001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Pour les numéros des connecteurs et des bornes, se référer à 
+<intxref refid = "F5JB0B910E048">A-5 Schéma du circuit du système de gestion du moteur et de la climatisation (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0B1104111002">
+<title>
+Condition de détection 
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Affichage au dispositif de balayage SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anomalie détectée
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC.1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Court-circuit à &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC.0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Coupure du circuit ou court-circuit à la masse de la caisse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+C0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Coupure du circuit
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+1.DEF
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Défectuosité électronique interne
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0B1104111003">
+<title>
+Recherche de CC.1: Court-circuit à &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connexions du module de commande des bougies de préchauffage, ainsi que les câbles d&#8217;alimentation des bougies de préchauffage.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&#8217;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier l&#8217;état du fusible de 80 A sur la boîte à fusibles de la batterie.
+</ptxt>
+<ptxt>
+Vérifier la continuité et l&#8217;isolation de l&#8217;alimentation de &#x002B;12 V des connexions suivantes:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C74-3&#8221; du connecteur du module de commande des bougies de préchauffage et la borne &#8220;C85-1&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C74-1&#8221; du connecteur du module de commande des bougies de préchauffage et la borne &#8220;C85-17&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent, remplacer le module de commande des bougies de préchauffage.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0B1104111004">
+<title>
+Recherche de CC.0: Coupure du circuit ou court-circuit à la masse de la caisse et au CO: Coupure du circuit
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Si le module de commande des bougies de préchauffage est court-circuité à la masse de la caisse, il se peut que les bougies fonctionnent sans interruption.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Les bougies de préchauffage ainsi que le moteur risquent d&#8217;être endommagées.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connexions du module de commande des bougies de préchauffage, ainsi que les câbles d&#8217;alimentation des bougies de préchauffage.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&#8217;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier l&#8217;état du fusible de 80 A sur la boîte à fusibles de la batterie.
+</ptxt>
+<ptxt>
+Vérifier la continuité et l&#8217;isolation à la masse de la caisse de la connexion suivante:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C74-3&#8221; du connecteur du module de commande des bougies de préchauffage et la borne &#8220;C85-1&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C74-1&#8221; du connecteur du module de commande des bougies de préchauffage et la borne &#8220;C85-17&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent, remplacer le module de commande des bougies de préchauffage.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0B1104111005">
+<title>
+Recherche de 1.DEF: Défectuosité électronique interne
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connexions du module de commande des bougies de préchauffage, ainsi que les câbles d&#8217;alimentation des bougies de préchauffage.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&#8217;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier l&#8217;état du fusible de 80 A sur la boîte à fusibles de la batterie.
+</ptxt>
+<ptxt>
+Vérifier la continuité et l&#8217;isolation à la masse de la caisse de la connexion suivante:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C74-3&#8221; du connecteur du module de commande des bougies de préchauffage et la borne &#8220;C85-1&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C74-1&#8221; du connecteur du module de commande des bougies de préchauffage et la borne &#8220;C85-17&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent, remplacer le module de commande des bougies de préchauffage.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

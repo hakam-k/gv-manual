@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E1104012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "0" modify = "0">
+<title>
+Le témoin de panne reste allumé après démarrage du moteur
+</title>
+<servinfosub id = "F5JB0E1104012001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se référer à 
+<intxref refid = "F5JB0E1104011">Le témoin de panne ne s&#8217;allume pas alors que le contacteur d&#8217;allumage est en position ON et le moteur est coupé (mais le moteur peut être mis en marche).</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E1104012002">
+<title>
+Description du circuit
+</title>
+<ptxt>
+Lorsque le contact est mis, l&#8217;ECM active le relais principal (ferme le point de contact). Ensuite, l&#8217;ECM étant alimenté, il transmet le signal de témoin de panne (MIL) ON au combiné d&#8217;instruments en vue de l&#8217;allumage du MIL. Le combiné d&#8217;instruments allume ensuite le MIL. Lorsque le moteur se met en marche et qu&#8217;aucune défaillance n&#8217;est détectée, l&#8217;ECM transmet le signal de témoin MIL OFF au combiné d&#8217;instruments afin d&#8217;éteindre le témoin MIL. Le combiné d&#8217;instruments éteint alors le MIL, mais en cas de détection d&#8217;une défaillance, le MIL reste allumé même après la mise en marche du moteur.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E1104012003">
+<title>
+Diagnostic de panne
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bien veiller à lire la section 
+<intxref refid = "F5JB0E1100004">Précautions lors de la vérification du circuit de l&apos;ECM</intxref>
+ avant d&#8217;effectuer le diagnostic des pannes.
+</ptxt>
+</item>
+<item>
+<ptxt>
+En mesurant la tension, la résistance et&#x002F;ou le signal d&#8217;impulsion du circuit au connecteur d&#8217;ECM, brancher l&#8217;outil spécial à l&#8217;ECM et&#x002F;ou aux connecteurs d&#8217;ECM en se référant à 
+<intxref refid = "F5JB0E1104080">Examen de l&#8217;ECM et de ses circuits</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "F5JB0E1104012004">
+<testgroup>
+<title>
+Vérification des DTC
+</title>
+<test1>
+<ptxt>
+Mettre le moteur en marche et recontrôler les DTC de l&#8217;ECM et du TCM (modèle A&#x002F;T) le moteur étant allumé.
+</ptxt>
+</test1>
+<question>
+Y a-t-il présence de DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2 de 
+<intxref refid = "F5JB0E1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+ et à l&#8217;étape 2 de 
+<intxref refid = "F5JB0E5104001">Vérification du système A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de ligne de communication CAN
+</title>
+<test1>
+<ptxt>
+Vérifier le circuit de communication CAN entre le combiné d&#8217;instruments et l&#8217;ECM, le TCM (modèle A&#x002F;T), le module de commande ABS&#x002F;ESP&#174;, le module de commande 4WD (selon l&#8217;équipement) et le module de commande du système de démarrage sans clé (selon l&#8217;équipement), en se référant aux étapes 9 à 15 sous 
+<intxref refid = "F5JB0E1104064">DTC P1674: Communication CAN (erreur de coupure de bus)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le circuit est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le combiné des instruments par un combiné des instruments en bon état, et vérifier à nouveau. Si le MIL reste allumé, remplacer l&#8217;ECM par un ECM en bon état, et revérifier.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

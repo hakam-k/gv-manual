@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1124088" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0625 &#x002F; P0626
+</title>
+<servinfosub id = "E8T40A1124088001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.835in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.369in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P0625: Tensión baja en el circuito del terminal de campo del generador
+</emph>
+</ptxt>
+<ptxt>
+La señal de servicio de la bobina de campo del generador es superior a 99,9 &#x0025; (tensión baja) durante 10 seg. incluso si la señal de control de servicio del control del generador es máxima (100 &#x0025;).
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclos de conducción, pero la MIL no se enciende)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Generador y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+DTC P0626: Tensión alta en el circuito del terminal de campo del generador
+</emph>
+</ptxt>
+<ptxt>
+La señal de control de servicio de la bobina de campo del generador es inferior a 1 &#x0025; (tensión alta) durante 10 seg. incluso si la señal de control de servicio del control del generador es mínima (0 &#x0025;).
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclos de conducción, pero la MIL no se enciende)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1124088002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1124087">DTC P0620:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124088003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Arranque el motor y deje que se caliente hasta que alcance su temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Asegúrese de que se cumplan las siguientes condiciones.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ventilador del soplador: ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de los faros: ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor del desempañador trasero: ON
+</ptxt>
+</item>
+</list1>
+</s1>
+<s1>
+<ptxt>
+Haga funcionar el motor en régimen de ralentí durante 5 min..
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1124088004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1124088005">
+<testgroup id = "E8T40A1124088006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124088007">
+<title>
+Comprobación del circuito de señal del monitor de la bobina de campo del generador
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte los conectores del generador y del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión de los terminales al conector del generador y a los conectores del ECM sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, compruebe que el circuito de señal del monitor de la bobina de campo del generador (B1) sea como se describe a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables del circuito de señal del monitor de la bobina de campo del generador es inferior a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento entre el circuito de señal del monitor de la bobina de campo del generador y la masa de la carrocería del vehículo tiene un valor infinito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el terminal del circuito de señal del monitor de la bobina de campo del generador y cada terminal del conector del generador.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del circuito de señal del monitor de la bobina de campo del generador es de 0 - 1 V con el interruptor de encendido en la posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124088008">
+<test1>
+<ptxt>
+Reemplace el generador. 
+<intxreftitleoff1 refid = "E8T40A1A26005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P0625 o P0626?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Fin de la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

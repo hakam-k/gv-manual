@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A1104094" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1685: Erreur de communication CAN (erreur de réception pour le module de commande ABS)
+</title>
+<servinfosub id = "F5JB0A1104094001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0A1104058">DTC P1674: Problème de communication CAN (erreur bus éteint)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A1104094002">
+<title>
+Condition de détection de DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erreur de réception des données de communication de l&apos;ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS détectée plus longtemps que spécifié constamment.
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit de la ligne de communication CAN
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0A1104094003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le laisser tourner pendant 1 minute au moins.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0A1104094004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0A1100005">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+</servinfosub>
+<diag type = "test" id = "F5JB0A1104094005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0A1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC
+</title>
+<test1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM, le TCM (pour les modèles A&#x002F;T), l&apos;ensemble du groupe hydraulique ABS&#x002F; de l&apos;unité de commande ABS, le module de commande 4WD (pour moteur J20), le module de commande de démarrage sans clé (si le véhicule en est équipé) et le BCM.
+</ptxt>
+</test1>
+<question>
+Un ou plusieurs DTC autres que des DTC de communication CAN sur chaque module de commande (autres que les DTC P1618, P1674, P1676, P1678, P1685 dans l&apos;ECM, les DTC P1774, P1777, P1778 dans le TCM (pour les modèles A&#x002F;T), les DTC U1073, U1100, U1101, U1121 dans le BCM, l&apos;ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS et le module de commande 4WD (pour moteur J20) et les DTC n&#176;31 &#x002F; 33 dans le module de commande de démarrage sans clé (si le véhicule en est équipé)) sont-ils signalés?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel de diagnostic du DTC concerné.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier la présence d&apos;une erreur de communication CAN dans l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1674 est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0A1104058">DTC P1674: Problème de communication CAN (erreur bus éteint)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du connecteur de l&apos;ECM et du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</title>
+<test1>
+<ptxt>
+Vérifier le bon raccordement de chaque borne du connecteur de l&apos;ECM et du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si les raccordements sont en ordre, vérifier à nouveau la présence de DTC pour l&apos;ECM, moteur en marche.
+</ptxt>
+</test1>
+<question>
+Le DTC P1685 est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuelles pannes intermittentes en se reportant au point 
+<intxref refid = "F5JB0A0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de mise à la masse et d&apos;alimentation électrique de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits de masse et d&apos;alimentation électrique de l&apos;ECM en se reportant au point 
+<intxref refid = "F5JB0A1104064">Vérification du circuit de masse et d&apos;alimentation électrique de l&apos;ECM</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Tout est-il en ordre?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les circuits de mise à la masse et&#x002F;ou d&apos;alimentation électrique de l&apos;ECM.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC dans l&apos;ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</title>
+<test1>
+<ptxt>
+Vérifier la présence du DTC U1073 dans l&apos;ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS.
+</ptxt>
+</test1>
+<question>
+Est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0A4504020">DTC U1073: Bus de communication de l&apos;unité de commande éteint</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC pour l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du BCM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1685 est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée dans le câble du circuit &#8220;G31-1&#8221; ou &#8220;G31-3&#8221; entre le BCM et le connecteur de raccordement au circuit CAN. Si les câbles sont en ordre, remplacer le BCM par un BCM en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC pour l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs du TCM (pour les modèles A&#x002F;T), contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1685 est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée dans le câble du circuit &#8220;E92-17&#8221; ou &#8220;E92-7&#8221; entre le TCM et le connecteur de raccordement au circuit CAN. Si les câbles sont en ordre, remplacer le TCM par un TCM en bon état (pour les modèles A&#x002F;T), et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC pour l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande de démarrage sans clé (si le véhicule en est équipé), contacteur d&#8217;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1685 est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée dans le câble du circuit &#8220;G44-19&#8221; ou &#8220;G44-18&#8221; entre le module de commande de démarrage sans clé et le connecteur de raccordement au circuit CAN. Si les câbles sont en ordre, remplacer le module de commande de démarrage sans clé par un module en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC pour l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du combiné d&apos;instruments, avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1685 est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée dans le câble du circuit &#8220;G28-10&#8221; ou &#8220;G28-8&#8221; entre le combiné d&apos;instruments et le connecteur de raccordement au circuit CAN. Si les câbles sont en ordre, remplacer le combiné d&apos;instruments ou le module de commande de démarrage sans clé (si le véhicule en est équipé) par un combiné &#x002F; un module en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC pour l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande 4WD (pour moteur J20), contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence de DTC pour l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1685 est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuit ouvert ou résistance élevée dans le câble du circuit &#8220;E91-22&#8221; ou &#8220;E91-23&#8221; entre le module de commande 4WD et le connecteur de raccordement au circuit CAN. Si les câbles sont en ordre, remplacer le module de commande 4WD par un module en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la continuité du circuit de la ligne de communication CAN
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de tous les modules de commande communiquant par CAN, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes de connecteur suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne &#8220;E23-4&#8221; du connecteur de l&apos;ECM et la borne &#8220;E03-10&#8221; du connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;E23-19&#8221; du connecteur de l&apos;ECM et la borne &#8220;E03-8&#8221; du connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Chaque résistance est-elle inférieure à 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le dysfonctionnement à l&apos;orgine du circuit ouvert ou de la résistance élevée dans le circuit de la ligne de communication CAN en se reportant au point 
+<intxref refid = "F5JB0A0000005">Précautions pour le système de communication CAN</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;isolation du circuit de la ligne de communication CAN
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance entre les bornes &#8220;E23-4&#8221; et &#8220;E23-19&#8221; du connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer l&apos;isolation du circuit de la ligne de communication CAN en se référant au point 
+<intxref refid = "F5JB0A0000005">Précautions pour le système de communication CAN</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la présence d&apos;un court-circuit à la masse dans le circuit de la ligne de communication CAN
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes de connecteur suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne &#8220;E23-4&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;E23-19&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Chaque résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 15.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le court-circuit à la masse du circuit de la ligne de communication CAN en se reportant au point 
+<intxref refid = "F5JB0A0000005">Précautions pour le système de communication CAN</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier la présence éventuelle d&apos;un court-circuit de la ligne de communication CAN avec le circuit d&apos;alimentation électrique
+</title>
+<test1>
+<ptxt>
+Mesurer la tension aux bornes de connecteur suivantes, contacteur d&apos;allumage en position ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne &#8220;E23-4&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;E23-19&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La tension est-elle à chaque fois de 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 16.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le court-circuit à l&apos;alimentation électrique du circuit de la ligne de communication CAN en se reportant au point 
+<intxref refid = "F5JB0A0000005">Précautions pour le système de communication CAN</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Raccorder le connecteur au groupe hydraulique ABS &#x002F; l&apos;unité de commande ABS, contacteur d&#8217;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes de connecteur suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre les bornes &#8220;E03-8&#8221; et &#8220;E03-6&#8221; du connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre les bornes &#8220;E03-10&#8221; et &#8220;E03-12&#8221; du connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La résistance est-elle inférieure à 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 17.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble de groupe hydraulique &#x002F; d&apos;unité de commande ABS par un autre en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du témoin ABS
+</title>
+<test1>
+<ptxt>
+Brancher les connecteurs à tous les modules de commande communiquant par CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+Le témoin ABS est-il allumé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble de groupe hydraulique &#x002F; d&apos;unité de commande ABS par un autre en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

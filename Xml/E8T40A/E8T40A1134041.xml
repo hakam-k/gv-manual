@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1134041" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0481
+</title>
+<servinfosub id = "E8T40A1134041001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.290in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.913in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0481: Circuito de control del ventilador 2
+</emph>
+</ptxt>
+<ptxt>
+Se detecta una avería en el circuito de accionamiento del relé n&#176; 2 del ventilador de refrigeración del radiador.
+</ptxt>
+<ptxt>
+(Lógica de detección de 2 ciclos de conducción, pero la MIL no se enciende)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé n&#176; 2 del ventilador de refrigeración del radiador (lado de la bobina) y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1134041002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1134040">DTC P0480:N32A</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1134041003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Mantenga el motor al ralentí durante 1 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1134041004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1134041005">
+<testgroup id = "E8T40A1134041006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1134001">Inspección del sistema de control del motor y de las emisiones:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134041007">
+<title>
+Comprobación del circuito de alimentación del relé n&#176; 2 del ventilador de refrigeración del radiador (lado del interruptor)
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, extraiga el relé n&#176; 2 del ventilador de refrigeración del radiador.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal a los conectores del relé n&#176; 2 del ventilador de refrigeración sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, compruebe que el circuito de alimentación eléctrica del relé n&#176; 2 del ventilador de refrigeración del radiador (lado de la bobina) (C1) funciona con tensión de la batería con el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134041008">
+<title>
+Comprobación del relé n&#176; 2 del ventilador de refrigeración del radiador
+</title>
+<test1>
+<ptxt>
+Compruebe el relé n&#176; 2 del ventilador de refrigeración del radiador 
+<intxreftitleoff1 refid = "E8T40A1636010"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el relé n&#176; 2 del ventilador de refrigeración del radiador.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134041009">
+<title>
+Comprobación del circuito de accionamiento del relé n&#176; 2 del ventilador de refrigeración del radiador
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte los conectores del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, compruebe que el circuito de accionamiento n&#176; 2 del relé del ventilador de refrigeración del radiador (C3) sea como se describe a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables del circuito de accionamiento n&#176; 2 del relé del ventilador de refrigeración del radiador es inferior a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento entre el circuito de accionamiento n&#176; 2 del relé del ventilador de refrigeración del radiador y la masa de la carrocería del vehículo tiene un valor infinito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el terminal del circuito de accionamiento n&#176; 2 del ventilador de refrigeración del radiador y cada terminal del conector n&#176; 2 del relé del ventilador de refrigeración del radiador.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del circuito de accionamiento n&#176; 2 del relé del ventilador de refrigeración del radiador es de 0 - 1 V con el interruptor de encendido en posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134041010">
+<title>
+Localización y reparación de averías de otros DTC detectados al mismo tiempo
+</title>
+<question>
+¿Se detectan otros DTC al mismo tiempo?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la localización y reparación de averías de DTC correspondiente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

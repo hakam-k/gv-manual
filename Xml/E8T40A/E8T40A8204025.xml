@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A8204025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1053 &#x002F; B1057: Cortocircuito a masa del circuito de activación del pretensor del conductor &#x002F; pasajero
+</title>
+<servinfosub id = "E8T40A8204025001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A8204023">DTC B1051 &#x002F; B1055: Resistencia alta del circuito del activador del pretensor del conductor&#x002F;pasajero</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Siga estrictamente las instrucciones de la sección PRECAUCIONES en &#34;Tabla de inspección del sistema de diagnóstico del airbag&#34;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "E8T40A8204025002">
+<title>
+Se emite un DTC cuando
+</title>
+<ptxt>
+La tensión medida en el circuito del activador del pretensor del cinturón de seguridad del conductor o del pasajero es inferior a un valor especificado durante el tiempo indicado.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A8204025003">
+<title>
+Descripción de la prueba de flujo
+</title>
+<ptxt>
+<emph etype = "bold">
+Paso 1: Compruebe si la avería está en el pretensor de cinturón de seguridad.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 2: Verifique el circuito iniciador del pretensor del cinturón de seguridad. (Entre &#34;L29&#34; y &#34;L12&#34;; o entre &#34;L29&#34; y &#34;L36&#34;)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 3: Verifique el circuito iniciador del pretensor del cinturón de seguridad. (Entre &#34;G55&#34; y &#34;G47&#34;, entre &#34;L12&#34; y &#34;L33&#34;, o entre &#34;L36&#34; y &#34;L33&#34;)
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A8204025004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A8204025005">
+<testgroup id = "E8T40A8204025006">
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, retire el embellecedor inferior del pilar central del lado del conductor o del pasajero, y después desconecte el conector &#34;L12&#34; o &#34;L36&#34; (1) del pretensor del cinturón de seguridad.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si la conexión al pretensor del cinturón de seguridad es correcta en los terminales del conector &#34;L12&#34; o &#34;L36&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si lo es, conecte las herramientas especiales (A), (B) y (C) al conector &#34;L12&#34; o &#34;L36&#34; desconectado en el paso 1).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0105">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0106">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0107">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820039.swf" width = "90.000mm" height = "59.622mm" ver = "01" gw = "171" gh = "152"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece todavía el DTC B1053 o B1057?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Sin airbag lateral ni airbag de cortina: Vaya al paso 2.
+</ptxt>
+<ptxt>
+Con airbag lateral y airbag de cortina: Vaya al paso 3.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF. Sustituya el pretensor del cinturón de seguridad como se indica en 
+<intxref refid = "E8T40A8106002">Extracción e instalación del cinturón de seguridad delantero</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "E8T40A8204025007">
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte el conector &#34;G55&#34; situado cerca de la caja de la consola.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si la conexión al pretensor del cinturón de seguridad correspondiente es correcta en el terminal del conector &#34;G55&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si lo es, conecte las herramientas especiales (B) y (D) al conector &#34;G55&#34;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0108">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0109">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820040.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "150" gh = "128"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece todavía el DTC B1053 o B1057?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1053: Cortocircuito a masa en &#34;GRN&#x002F;ORN&#34; o &#34;GRN&#x002F;YEL&#34;. (Entre los conectores &#34;L29&#34; y &#34;L12&#34;)
+</ptxt>
+<ptxt>
+DTC B1057: Cortocircuito a masa en &#34;BLU&#x002F;ORN&#34; o &#34;BLU&#x002F;YEL&#34;. (Entre los conectores &#34;L29&#34; y &#34;L36&#34;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "E8T40A8204025008">
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte las herramientas especiales (A), (B) y (C) o (D) y el conector &#34;G47&#34; o &#34;L33&#34; del SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Libere la barra de cortocircuito del conector del SDM insertando la herramienta de liberación (1) incluida en la herramienta especial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre &#34;G47-7&#34; y la masa de la carrocería, y entre &#34;G47-8&#34; y la masa de la carrocería (para DTC B1053); o entre &#34;G47-1&#34; y la masa de la carrocería, y entre &#34;G47-2&#34; y la masa de la carrocería (para DTC B1057) &#x005B;A&#x005D;; o entre &#34;L33-5&#34; y la masa de la carrocería, y entre &#34;L33-6&#34; y la masa de la carrocería (para DTC B1053); o entre &#34;L33-7&#34; y la masa de la carrocería, y entre &#34;L33-8&#34; y la masa de la carrocería (para DTC B1057) &#x005B;B&#x005D;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0110">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0111">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0112">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0113">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820042.swf" width = "90.000mm" height = "117.478mm" ver = "01" gw = "235" gh = "316"/>
+</testfigure>
+</test1>
+<question>
+¿Equivale la resistencia a infinito?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustitúyalo por un SDM en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1053: Cortocircuito a masa en &#34;GRN&#x002F;ORN&#34; o &#34;GRN&#x002F;YEL&#34;. (Entre los conectores &#34;G55&#34; y &#34;G47&#34;, o entre los conectores &#34;L12&#34; y &#34;L33&#34;.)
+</ptxt>
+<ptxt>
+DTC B1057: Cortocircuito a masa en &#34;BLU&#x002F;ORN&#34; o &#34;BLU&#x002F;YEL&#34;. (Entre los conectores &#34;G55&#34; y &#34;G47&#34;, o entre los conectores &#34;L36&#34; y &#34;L33&#34;.)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Después de terminar la inspección y las reparaciones, realice los siguientes pasos.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vuelva a conectar los componentes del sistema de airbag, y asegúrese de que están correctamente montados.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si aparece algún DTC, bórrelo como se explica en 
+<intxref refid = "E8T40A8204005">Borrado de DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repita los pasos de 
+<intxref refid = "E8T40A8204001">Inspección del sistema de diagnóstico del airbag</intxref>
+ para asegurarse de que la avería está corregida.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

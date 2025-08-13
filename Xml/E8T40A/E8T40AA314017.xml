@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40AA314017" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1638: La información del inmovilizador no coincide
+</title>
+<ptxt>
+<intxrefpoff refid = "E8T40AA312001">Diagrama del circuito del cableado del sistema de control del inmovilizador:Modelo con motor de gasolina</intxrefpoff>
+</ptxt>
+<servinfosub id = "E8T40AA314017001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La información del sistema de control del inmovilizador del ECM y la del BCM no coinciden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+El registro de la información del sistema de control del inmovilizador en el ECM ha fallado.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se ha usado un ECM equivocado
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuitos de cables de comunicación CAN defectuosos
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control del ABS o módulo de control del ESP&#174; averiados
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defectuoso
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40AA314017002">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E8T40AA314017003">
+<testgroup>
+<title>
+Confirmación de códigos de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Borre los DTC; consulte para ello 
+<intxref refid = "E8T40AA314003">Borrado de DTC:Modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique si se ha detectado algún DTC. Para ello consulte 
+<intxref refid = "E8T40AA314002">Comprobación del DTC:Modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P1638?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y reparación de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Confirmación de códigos de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Desconecte el cable negativo (-) de la batería durante más de 5 segundos.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Conecte el cable negativo (-) a la batería.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique si se ha detectado algún DTC. Para ello consulte 
+<intxref refid = "E8T40AA314002">Comprobación del DTC:Modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P1638?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y reparación de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verifique la especificación del ECM
+</title>
+<test1>
+<ptxt>
+Verifique el número de pieza del ECM para ver si el ECM es el que corresponde al vehículo en reparación.
+</ptxt>
+</test1>
+<question>
+¿Se utiliza el ECM correcto para el vehículo en reparación?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por el correcto y vuelva a verificar si el ECM sigue detectando al DTC P1638.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de códigos de diagnóstico (DTC) en el ECM
+</title>
+<question>
+¿Se detecta algún DTC que no sea el P1638 en el Paso 1?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Efectúe la localización y reparación de la avería; para ello, consulte el diagrama de flujo correspondiente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de códigos de diagnóstico (DTC) en el BCM
+</title>
+<test1>
+<ptxt>
+Revise el BCM por si hay algún DTC consultando 
+<intxref refid = "E8T40AA204005">Comprobación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se ha detectado algún DTC?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Realice la localización de averías; para ello, consulte el diagrama de flujo correspondiente en la sección 10B.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Sustitución del BCM
+</title>
+<test1>
+<ptxt>
+Sustituya el BCM por uno nuevo. Para ello, consulte 
+<intxref refid = "E8T40AA206001">Extracción e instalación del BMC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si el ECM emite algún DTC; para ello, consulte 
+<intxref refid = "E8T40AA314002">Comprobación del DTC:Modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P1638?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y reparación de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Sustitución del ECM
+</title>
+<test1>
+<ptxt>
+Reemplace el ECM por uno nuevo.
+</ptxt>
+<ptxt>
+- Modelos M16A y J20A: 
+<intxreftitleoff1 refid = "E8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modelo J24B: 
+<intxreftitleoff1 refid = "E8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modelo N32A: 
+<intxreftitleoff1 refid = "E8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si el ECM emite algún DTC; para ello, consulte 
+<intxref refid = "E8T40AA314002">Comprobación del DTC:Modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P1638?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vuelva a verificar los circuitos de cables de comunicación CAN y las malas conexiones de los conectores del ECM, el módulo de control del ABS y el BCM.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y reparación de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

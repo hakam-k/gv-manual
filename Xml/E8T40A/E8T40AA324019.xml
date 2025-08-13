@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40AA324019" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1702: Error 1 de comunicación ECM
+</title>
+<servinfosub id = "E8T40AA324019001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40AA322001">Diagrama del circuito del cableado del sistema de control del inmovilizador:Modelo con motor diesel</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40AA324019002">
+<title>
+Condición de detección y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Error de comunicación entre ICM y ECM o la tensión de la batería es menor que el valor especificado
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tensión baja de la batería
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fusible(s) correspondiente(s) fundido(s)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito de alimentación del ICM y masa
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito de alimentación del ECM y masa
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito de comunicaciones CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de ángulo de la dirección (modelo con ESP&#174;)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de arranque sin llave (si el vehículo dispone de él)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de ABS &#x002F; ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Juego de instrumentos
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cuando el ICM detecta DTC B1702 aunque el motor haya arrancado, puede que la batería esté defectuosa. En tal caso, revise la batería, consultando 
+<intxref refid = "E8T40A1A34001">Inspección de la batería:F9Q</intxref>
+. Recargue o reemplace la batería en caso necesario. Después, vuelva a revisar el DTC.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando se detectan el DTC B1702 y B1709 al mismo tiempo, puede que el circuito de comunicación CAN esté defectuoso. Compruebe si el DTC relacionado con el fallo de la CAN se detecta mediante el ECM, BCM, módulo de control de arranque sin llave (modelo de arranque sin llave), módulo de control de 4WD y&#x002F;o módulo de control de ABS&#x002F;ESP&#174;. Si es detectado, lleve a cabo el diagnóstico de flujo DTC aplicable.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "E8T40AA324019003">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E8T40AA324019004">
+<testgroup>
+<question>
+¿Se realizó la &#8220;Inspección del sistema de control del inmovilizador&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40AA324001">Comprobación del sistema de control del inmovilizador:Modelo con motor diesel</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de códigos de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Compruebe si el ECM emite algún DTC; para ello, consulte 
+<intxref refid = "E8T40A1144005">Comprobación del DTC:F9Q</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Revise el módulo de control ABS o el módulo de control ESP&#174; por si hay algún DTC. Para el modelo de ESP&#174;, consulte 
+<intxref refid = "E8T40A4604005">Comprobación del DTC</intxref>
+. Para el modelo sin ESP&#174;, consulte 
+<intxref refid = "E8T40A4504004">Comprobación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Revise BCM por si hay algún DTC consultando 
+<intxref refid = "E8T40AA204005">Comprobación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detectó algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de diagnóstico del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del fusible
+</title>
+<test1>
+<ptxt>
+Compruebe si se ha fundido algún fusible.
+</ptxt>
+</test1>
+<question>
+¿Está fundido algún fusible?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace el fusible(s) fundido.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del conector del ICM
+</title>
+<test1>
+<ptxt>
+Con la llave de encendido en la posición OFF, desconecte el conector ICM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión en los terminales y cables del conector es correcta. Consulte 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están bien las conexiones de cada cable y terminal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare las malas conexiones.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del conector ECM 
+</title>
+<test1>
+<ptxt>
+Con la llave de encendido en la posición OFF, desconecte los conectores ECM. 
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión en los terminales y cables de los conectores ECM es correcta. Consulte 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están bien las conexiones de cada cable y terminal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare las malas conexiones.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de comunicaciones CAN
+</title>
+<test1>
+<ptxt>
+Compruebe si está abierto, en cortocircuito o con alta resistencia, el circuito de comunicación de CAN entre el ICM y el ECM. Consulte 
+<intxref refid = "E8T40A0006001">Procedimiento de comprobación de circuitos eléctricos</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están todos los circuitos de comunicaciones CAN en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del circuito de alimentación del ICM y de masa
+</title>
+<test1>
+<ptxt>
+Compruebe el circuito de alimentación y masa del ICM consultando 
+<intxref refid = "E8T40AA324018">Inspección del módulo de control del inmovilizador (ICM) y su circuito:Modelo con motor diesel</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es el circuito de alimentación y masa del ICM normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de ICM en buen estado y vuelva a realizar la inspección. Si se detecta un DTC B1702, sustituya el ECM por uno en buen estado y vuelva a efectuar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación y masa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

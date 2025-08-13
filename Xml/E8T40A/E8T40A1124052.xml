@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1124052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119
+</title>
+<servinfosub id = "E8T40A1124052001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2119: Sistema de control del actuador de la mariposa fijo en abierto
+</emph>
+</ptxt>
+<ptxt>
+La diferencia entre la TP deseada y la TP medida es mayor que el valor especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motor de la mariposa y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito del sensor TP (principal)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Conjunto del cuerpo de la mariposa
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1124052002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124052003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention3>
+<ptxt>
+Si se detecta algún otro DTC, además del DTC deseado, en el procedimiento de confirmación de DTC, asegúrese de realizar el procedimiento de localización y reparación de averías del DTC detectado previamente.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Arranque el motor y deje que se caliente hasta que alcance su temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Haga funcionar el motor en régimen de ralentí durante 20 seg..
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Haga funcionar el motor a 3.000 rpm durante 20 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repita 3 veces los pasos 2) y 3).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1124052004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1124052005">
+<testgroup id = "E8T40A1124052006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124052007">
+<title>
+Verificación de DTC
+</title>
+<test1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</test1>
+<question>
+¿Aparece algún otro DTC además del P2119?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124052008">
+<title>
+Comprobación del circuito de suministro de electricidad al motor de la mariposa
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte los conectores del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique que la conexión del terminal a los conectores del ECM es correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, ponga el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que el circuito de alimentación eléctrica del motor de la mariposa (A4) funcione con tensión de la batería.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124052009">
+<title>
+Comprobación del circuito de accionamiento del motor de la mariposa
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte el conector del conjunto del cuerpo de la mariposa.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión del terminal al conector del conjunto del cuerpo de la mariposa sea correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, compruebe que el circuito de accionamiento del motor de la mariposa (abierto y cerrado) (B1 - B2) sea como se describe a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables de cada circuito de accionamiento del motor del actuador es inferior a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento de cada circuito de accionamiento del motor de la mariposa tiene un valor infinito entre el conector del conjunto del cuerpo de la mariposa y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre cada terminal del circuito de accionamiento del motor de la mariposa y cada uno de los otros terminales del conector del conjunto del cuerpo de la mariposa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del circuito de accionamiento del motor de la mariposa es de 0 - 1 V con el interruptor de encendido en la posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124052010">
+<title>
+Verificación del circuito de señal del sensor TP (principal)
+</title>
+<test1>
+<ptxt>
+Compruebe que el circuito de señal del sensor TP (principal) (C2) sea como se describe a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables de cada circuito de la señal del sensor TP (principal) es inferior a 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del circuito de señal del sensor TP (principal) tiene un valor infinito entre el conector del conjunto del cuerpo de la mariposa y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el circuito de señal del sensor TP (principal) y cada terminal del conector del conjunto del cuerpo de la mariposa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del circuito de señal del sensor TP (principal) es de 0 - 1 V con el interruptor de encendido en la posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124052011">
+<title>
+Comprobación del conjunto del cuerpo de la mariposa
+</title>
+<test1>
+<ptxt>
+Compruebe el funcionamiento y el estado del cuerpo de la mariposa. 
+<intxreftitleoff1 refid = "E8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto del cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

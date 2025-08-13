@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0B1104130" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0697: Défaillance de coupure&#x002F;circuit &#8220;C&#8221; de tension de référence de capteur
+</title>
+<attention2>
+<ptxt>
+Ce défaut peut apparaître en cas d&#8217;endommagement du faisceau de câbles.
+</ptxt>
+<ptxt>
+Suivre le procédé décrit sous 
+<intxref refid = "F5JB0B0006001">Procédure de vérification du circuit électrique</intxref>
+.
+</ptxt>
+<ptxt>
+Cette vérification permet le contrôle de l&#8217;état et de la conformité du faisceau de câbles du moteur.
+</ptxt>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions d&#8217;application de la procédure de découverte des défauts pour les défauts enregistrés:
+</ptxt>
+<ptxt>
+Le défaut s&#8217;est déclaré après un essai sur route ou après plusieurs tentatives de mise en marche du moteur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si le défaut est déclaré:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+La fonction de l&#8217;EGR est désactivée.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le moteur s&#8217;arrête.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le témoin rouge de stop (témoin à gravité 2) est allumé.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Recourir à un câble de branchement lors de toute intervention sur les connecteurs d&#8217;ECM.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "F5JB0B1104130001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Pour les numéros des connecteurs et des bornes, se référer à 
+<intxref refid = "F5JB0B910E048">A-5 Schéma du circuit du système de gestion du moteur et de la climatisation (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0B1104130002">
+<title>
+Condition de détection 
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Affichage au dispositif de balayage SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anomalie détectée
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+1.DEF
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Tension de référence du capteur trop basse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+2.DEF
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Tension de référence du capteur trop élevée
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F5JB0B1104130003">
+<title>
+Diagnostic de panne
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Les capteurs branchés à l&#8217;alimentation n° 3 sont:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Capteur de pression de carburant
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ensemble capteur MAF et capteur IAT
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Afin de trouver tout capteur et&#x002F;ou connexion fautive, débrancher un des capteurs et vérifier si le défaut s&#8217;enregistre.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, recommencer avec les autres capteurs.
+</ptxt>
+<ptxt>
+(Attendre quelques secondes entre chaque déconnexion afin de permettre à l&#8217;ordinateur d&#8217;effectuer la mesure.)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut s&#8217;enregistre après une déconnexion, remplacer le capteur défectueux ou réparer sa connexion.
+</ptxt>
+<ptxt>
+Effacer les défauts créés par les déconnexions effectuées.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent après que ces deux capteurs aient été déconnectés.
+</ptxt>
+<list1 type = "ordered">
+<item>
+<ptxt>
+Vérifier l&#8217;isolation à la masse de la caisse des connexions suivantes:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C84-2&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-32&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C84-3&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-48&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-6&#8221; de l&#8217;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-12&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-5&#8221; de l&#8217;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-47&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-2&#8221; de l&#8217;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-24&#8221; du connecteur ECM
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Vérifier l&#8217;isolation à &#x002B;12 V des connexions suivantes:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C84-2&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-32&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C84-3&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-48&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C84-1&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-46&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-6&#8221; de l&#8217;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-12&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-5&#8221; de l&#8217;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-47&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-2&#8221; de l&#8217;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-24&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Vérifier l&#8217;isolation entre les connexions suivantes après avoir débranché les capteurs et l&#8217;ECM:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Entre les fils &#8220;C84-1&#8221; et &#8220;C84-3&#8221; du connecteur de capteur de pression de carburant et les fils &#8220;C13-2&#8221; et &#8220;C13-5&#8221; de l&#8217;ensemble capteur MAF avec le connecteur du capteur IAT
+</ptxt>
+</item>
+</list2>
+</list1>
+<ptxt>
+Si ces vérifications ne donnent pas des résultats corrects, remplacer le ou les capteurs défectueux.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, substituer un ECM réputé bon et revérifier.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

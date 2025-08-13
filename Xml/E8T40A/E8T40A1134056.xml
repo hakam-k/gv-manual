@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1134056" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2138
+</title>
+<servinfosub id = "E8T40A1134056001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2138: Correlación de tensión del sensor&#x002F;interruptor &#34;D&#34; &#x002F; &#34;E&#34; de posición del pedal o de la mariposa
+</emph>
+</ptxt>
+<ptxt>
+La diferencia entre la tensión de la señal del sensor APP (principal) y la tensión de la señal del sensor APP (secundario) es superior al valor especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor APP (principal y secundario) y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1134056002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1134056003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention3>
+<ptxt>
+Asegúrese de que se cumplan las condiciones siguientes cuando se utilice este procedimiento.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tensión de la batería &gt; 7 V
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Ponga el motor en marcha.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Pise a fondo el pedal del acelerador y suéltelo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repita 3 veces el paso 2).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1134056004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A1134056005">
+<testgroup id = "E8T40A1134056006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1134001">Inspección del sistema de control del motor y de las emisiones:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134056007">
+<title>
+Inspección del sensor APP
+</title>
+<test1>
+<ptxt>
+Compruebe el sensor APP (principal) y el sensor APP (secundario). 
+<intxreftitleoff1 refid = "E8T40A1336006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto del pedal del acelerador (incorporado en el sensor APP)
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134056008">
+<title>
+Comprobación del circuito del sensor APP
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito del sensor (principal y secundario) APP como sigue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del sensor APP (principal): Consulte los pasos del 3 al 6 en 
+<intxref refid = "E8T40A1134053">DTC P2122 &#x002F; P2123:N32A</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito del sensor APP (secundario): Consulte los pasos del 3 al 6 en 
+<intxref refid = "E8T40A1134054">DTC P2127 &#x002F; P2128:N32A</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1134056009">
+<title>
+Localización y reparación de averías de otros DTC detectados al mismo tiempo
+</title>
+<question>
+¿Se detectan otros DTC al mismo tiempo?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la localización y reparación de averías de DTC correspondiente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

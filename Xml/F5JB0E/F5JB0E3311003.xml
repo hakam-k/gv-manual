@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "F5JB0E3311003" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Description du système de commande 4WD
+</title>
+<servinfosub id = "F5JB0E3311003001">
+<title>
+Commande des vitesses du transfert
+</title>
+<ptxt>
+Le module de commande 4WD commande l&#8217;actionneur de commande de transfert en fonction de signaux en provenance de la commande de transfert, de sorte que le transfert passe à la position sélectionnée (4H, 4H-lock, N ou 4L-lock). (Un passage à la position de point mort N nécessite que le contacteur soit placé à la position &#8220;&#x25A1;&#8221; (1) pendant environ 10 secondes avant d&#8217;être tourné à la position &#8220;N&#8221;.)
+</ptxt>
+<ptxt>
+L&#8217;actionneur de transfert consiste en un moteur d&#8217;actionneur et un contacteur de position de moteur d&#8217;actionneur. Le module de commande 4WD détecte la position du moteur d&#8217;actionneur à l&#8217;aide du contacteur de position et commande la mise en route&#x002F;l&#8217;arrêt du moteur.
+</ptxt>
+<ptxt>
+De plus, le contacteur 4L&#x002F;N et le contacteur de blocage de différentiel central, équipant l&#8217;ensemble transfert, détectent toutes les positions des fourchettes de sélection Haute&#x002F;Basse et du blocage de différentiel. Le module de commande 4WD détecte la position de la boîte de transfert actuelle (4H, 4H-lock, N ou 4L-lock) à l&#8217;aide des signaux du contacteur 4L&#x002F;N et du contacteur de blocage de différentiel central comme suit.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A332002.swf" width = "88.000mm" height = "42.689mm" ver = "01" gw = "117" gh = "104"/>
+</figure>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Rapport entre la position de vitesse du transfert et des contacteurs
+</title>
+<tgroup cols = "5" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.165in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.259in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.259in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.259in"/>
+<colspec colnum = "5" colname = "5" colwidth = "1.259in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Contacteur ou commutateur
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Position de la boîte de transfert
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4H
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4H-lock
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+N
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4L-lock
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Contacteur 4L&#x002F;N
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF (hors fonction)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF (hors fonction)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON (en fonction)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON (en fonction)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Contacteur de blocage de différentiel central
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON (en fonction)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF (hors fonction)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON (en fonction)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF (hors fonction)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<ptxt>
+Lorsque la position du moteur d&#8217;actionneur de commande de transfert détectée par le contacteur de position du moteur concorde avec la vitesse de transfert sélectionnée détectée par les contacteurs cités plus haut, le module de commande 4WD détermine que le passage de vitesse est effectué.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E3311003002">
+<title>
+Commande de tentative supplémentaire
+</title>
+<ptxt>
+Lorsque le module de commande 4WD ne parvient pas à déterminer que le passage à la vitesse cible a été effectué, il commande jusqu&#8217;à 3 tentatives de passage de vitesse supplémentaires. Si les tentatives n&#8217;aboutissent pas, la boîte retourne à la vitesse précédente et signale l&#8217;échec par le biais de l&#8217;indicateur et du vibreur.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E3311003003">
+<title>
+Fonctionnement de l&#8217;indicateur et du vibreur
+</title>
+<ptxt>
+Le module de commande 4WD transmet le signal de fonctionnement des indicateurs de blocage de différentiel, 4L et N, ainsi que du vibreur au BCM. Les indicateurs et le vibreur signalent de la façon suivante l&#8217;état du système de commande de la boîte de transfert.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1" page = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.787in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.181in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.181in"/>
+<colspec colnum = "4" colname = "4" colwidth = "4.055in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Fonctionnement
+</ptxt>
+</entry>
+<entry colname = "4" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Condition
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Témoin
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Vibreur
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Indicateur de blocage de différentiel
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF (hors fonction)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Commutateur d&#8217;allumage à la position OFF.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Transfert à la position 4H&#x002F;N
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON (en fonction)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Dans les 2 secondes après avoir tourné la clé de contact sur ON (contrôle du fonctionnement de l&#8217;indicateur).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Transfert à la position 4H-lock&#x002F; 4L-lock
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+S&#8217;allume 3 fois pendant 0,25 seconde à intervalles de 20 secondes.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Retentit pendant 1 seconde à intervalles de 20 secondes.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La position de la boîte transfert diffère de celle sélectionnée à la commande de transfert.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Clignote sans arrêt à intervalles de 0,25 seconde.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Présence de DTC du système de commande 4WD détectée par le module de commande 4WD
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Clignote sans arrêt à intervalles de 0,5 seconde.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Le passage s&#8217;effectue entre 4H et 4H-lock.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le passage s&#8217;effectue entre 4H-lock et 4H.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La vitesse 4H-lock n&#8217;a pas pu être engagée complètement.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Indicateur 4L
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF (hors fonction)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Commutateur d&#8217;allumage à la position OFF.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Transfert à la position 4H-lock&#x002F;N
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON (en fonction)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Dans les 2 secondes après avoir tourné la clé de contact sur ON (contrôle du fonctionnement de l&#8217;indicateur).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Transfert à la position 4L-lock
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+S&#8217;allume 3 fois pendant 0,25 seconde à intervalles de 20 secondes.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Retentit pendant 1 seconde à intervalles de 20 secondes.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La position de la boîte transfert diffère de celle sélectionnée à la commande de transfert.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Clignote sans arrêt à intervalles de 0,25 seconde.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Présence de DTC du système de commande 4WD détectée par le module de commande 4WD
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Clignote sans arrêt à intervalles de 0,5 seconde.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Le passage s&#8217;effectue entre 4H-lock et 4L-lock.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le passage s&#8217;effectue entre 4L-lock et 4H-lock
+</ptxt>
+</item>
+<item>
+<ptxt>
+La vitesse 4L-lock n&#8217;a pas pu être engagée complètement.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Indicateur N
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF (hors fonction)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Commutateur d&#8217;allumage à la position OFF.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Transfert à la position 4H&#x002F;4H-lock&#x002F;4L-lock
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON (en fonction)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Dans les 2 secondes après avoir tourné la clé de contact sur ON (contrôle du fonctionnement de l&#8217;indicateur).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Transfert à la position N
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+S&#8217;allume 3 fois pendant 0,25 seconde à intervalles de 20 secondes.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Retentit pendant 1 seconde à intervalles de 20 secondes.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La position de la boîte transfert diffère de celle sélectionnée à la commande de transfert.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Clignote sans arrêt à intervalles de 0,2 seconde.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Présence de DTC du système de commande 4WD détectée par le module de commande 4WD
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Clignote sans arrêt à intervalles de 0,5 secondes
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La vitesse N n&#8217;a pas pu être engagée complètement.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Retentit 2 fois pendant 0,2 seconde à intervalles de 3 secondes.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Transfert à la position N
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

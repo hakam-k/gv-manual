@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1124050" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2102 &#x002F; P2103
+</title>
+<servinfosub id = "E8T40A1124050001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2102: Tensión baja en el circuito del motor de control del actuador de la mariposa
+</emph>
+</ptxt>
+<ptxt>
+La tensión del monitor del circuito de alimentación eléctrica del motor de la mariposa es inferior a 5 V incluso si el relé de control del motor de la mariposa está activado (el interruptor de encendido está en la posición ON).
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé de control del motor de la mariposa y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fusible &#34;THR MOT&#34;
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2103: Alta tensión en el circuito del motor de control del actuador de la mariposa
+</emph>
+</ptxt>
+<ptxt>
+La tensión de salida del circuito de alimentación eléctrica del motor de la mariposa es superior a 5 V incluso si el relé de control del motor de la mariposa está desactivado (el interruptor de encendido está en la posición OFF).
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé de control del motor de la mariposa y&#x002F;o su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A1124050002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1124050003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON durante 10 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF durante 10 seg.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A1124050004">
+<title>
+Localización y reparación de averías del DTC (P2102)
+</title>
+<diag type = "test" id = "E8T40A1124050005">
+<testgroup id = "E8T40A1124050006">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124050007">
+<title>
+Comprobación del circuito del relé de control del motor de la mariposa
+</title>
+<test1>
+<ptxt>
+Compruebe el relé de control del motor de la mariposa. 
+<intxreftitleoff1 refid = "E8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el relé de control del motor de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124050008">
+<title>
+Comprobación del circuito de alimentación del relé de control del motor de la mariposa
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y extraiga el relé de control del motor de la mariposa.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si es correcta la conexión de terminales al conector del relé de control del motor de la mariposa.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, compruebe que la tensión entre el circuito de alimentación eléctrica del relé de control del motor de la mariposa (A1 - A2) y la masa de la carrocería del vehículo funcione con tensión de la batería.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124050009">
+<title>
+Comprobación del circuito de alimentación del motor de la mariposa y circuito accionador del relé de control del motor de la mariposa.
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte los conectores del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que el circuito de accionamiento del relé de control del motor de la mariposa (A3) y el circuito de alimentación eléctrica del motor de la mariposa (A4) sean como se describe a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables del circuito de accionamiento del relé de control del motor de la mariposa y del circuito de alimentación eléctrica del motor de la mariposa es inferior a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento entre el circuito de accionamiento del relé de control del motor de la mariposa y el circuito de alimentación eléctrica del motor de la mariposa y la masa de la carrocería del vehículo tiene un valor infinito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el terminal del circuito de accionamiento del relé de control del motor de la mariposa y cada terminal del conector del relé de control del motor de la mariposa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento del mazo de cables tiene un valor infinito entre el terminal del circuito de alimentación eléctrica del motor de la mariposa y cada terminal del conector del relé de control del motor de la mariposa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del circuito de accionamiento del relé de control del motor de la mariposa y del circuito de alimentación eléctrica del motor de la mariposa es de 0 - 1 V con el interruptor de encendido en posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+<servinfosub id = "E8T40A1124050010">
+<title>
+Localización y reparación de averías del DTC (P2103)
+</title>
+<diag type = "test" id = "E8T40A1124050011">
+<testgroup id = "E8T40A1124050012">
+<question>
+¿Se ha realizado la &#34;Inspección del sistema de control del motor y de las emisiones&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A1124001">Inspección del sistema de control del motor y de las emisiones:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124050013">
+<title>
+Comprobación del relé de control del motor de mando del acelerador
+</title>
+<test1>
+<ptxt>
+Compruebe el relé de control del motor de la mariposa. 
+<intxreftitleoff1 refid = "E8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el relé de control del motor de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1124050014">
+<title>
+Comprobación del circuito de suministro de electricidad al motor de la mariposa
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que el circuito de alimentación del motor de la mariposa (A4) es de 0 - 1 V con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Sustituya el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

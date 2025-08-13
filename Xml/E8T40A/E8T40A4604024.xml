@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A4604024" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1039: Fallo interno del conjunto del sensor giroscopio y el sensor G
+</title>
+<servinfosub id = "E8T40A4604024001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se ha detectado un fallo interno en el conjunto del sensor giroscopio &#x002F; sensor G.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conjunto del sensor G&#x002F;sensor giroscopio
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A4604024002">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A4604024003">
+<testgroup id = "E8T40A4604024004">
+<question>
+¿Se ha realizado una &#34;comprobación de programa de estabilidad electrónica&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A4604001">Comprobación del programa de estabilidad electrónica</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604024005">
+<title>
+Verificación de DTC
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y compruebe los DTC
+</ptxt>
+</test1>
+<question>
+¿Se han detectado los DTC C1034 y&#x002F;o C1073?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de diagnóstico del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604024006">
+<title>
+Compruebe la calibración del sensor
+</title>
+<test1>
+<ptxt>
+Calibre el conjunto del sensor G&#x002F;sensor giroscopio. 
+<intxreftitleoff1 refid = "E8T40A4606002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Borre todos los DTC y vuelva a comprobar el DTC.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC C1039?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La calibración del conjunto del sensor G&#x002F;sensor giroscopio no se ha completado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604024007">
+<title>
+Compruebe el conjunto del sensor G&#x002F;sensor giroscopio
+</title>
+<test1>
+<ptxt>
+Compruebe el conjunto del sensor G&#x002F;sensor giroscopio. 
+<intxreftitleoff1 refid = "E8T40A4606016"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace el conjunto de la unidad hidráulica&#x002F;módulo de control del ESP&#174; por uno en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto del sensor G&#x002F;sensor giroscopio.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

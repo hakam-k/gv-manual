@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A1104080" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2111: Système de commande de l&apos;actionneur du papillon - Bloqué en position ouverte
+</title>
+<servinfosub id = "F5JB0A1104080001">
+<title>
+Condition de détection de DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+L&apos;ouverture par défaut du papillon est supérieure à 7&#176; à partir de la position fermée complémentaire lors du diagnostic du papillon, contacteur d&apos;allumage en position OFF.
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ensemble de porte-papillon électrique
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0A1104080002">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, raccorder le dispositif de balayage. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Contacteur d&apos;allumage maintenu en position OFF pendant 20 secondes au minimum.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0A1104080003">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0A1100005">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F5JB0A1104080004">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0A1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification visuelle du papillon
+</title>
+<test1>
+<ptxt>
+Vérifier qu&apos;il n&apos;y a pas de corps étranger coincé entre le papillon et le logement du porte-papillon en se reportant à &#8220;Vérification visuelle du papillon&#8221; au point 
+<intxref refid = "F5JB0A1306022">Vérification de l&apos;ensemble de porte-papillon électrique sur le véhicule</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Enlevez-le après avoir déposé le porte-papillon et nettoyez l&apos;intérieur du porte-papillon soigneusement.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du fonctionnement du papillon
+</title>
+<test1>
+<ptxt>
+Vérifier le fonctionnement du papillon en se reportant à &#8220;Vérification du fonctionnement du papillon&#8221; au point 
+<intxref refid = "F5JB0A1306022">Vérification de l&apos;ensemble de porte-papillon électrique sur le véhicule</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il satisfaisant?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble de porte-papillon électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;actionneur du papillon (moteur) 
+</title>
+<test1>
+<ptxt>
+Vérifier le fonctionnement de l&apos;actionneur du papillon en se reportant à &#8220;Vérification de l&apos;actionneur du papillon (moteur) &#8221; au point 
+<intxref refid = "F5JB0A1306022">Vérification de l&apos;ensemble de porte-papillon électrique sur le véhicule</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il satisfaisant?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble de porte-papillon électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des performances du détecteur de position du papillon
+</title>
+<test1>
+<ptxt>
+Vérifier les performances du détecteur de position du papillon en se reportant à &#8220;Vérification des performances du détecteur de position du papillon&#8221; au point 
+<intxref refid = "F5JB0A1306022">Vérification de l&apos;ensemble de porte-papillon électrique sur le véhicule</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il satisfaisant?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble de porte-papillon électrique.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

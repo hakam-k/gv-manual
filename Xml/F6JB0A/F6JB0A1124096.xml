@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A1124096" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0190: Circuit de détecteur de pression de carburant
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions d&apos;application de la procédure de découverte des défauts pour les défauts enregistrés:
+</ptxt>
+<ptxt>
+Le défaut se déclare après des mises en marche successives ou pendant que le moteur tourne.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Recourir à un câble de branchement lors de toute intervention sur les connecteurs de régulateur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si le défaut est déclaré:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Le moteur se coupe immédiatement.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il est impossible de remettre le moteur en marche.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le témoin rouge de stop (témoin à gravité 2) est allumé.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Priorités lors de la présence de plusieurs défauts:
+</ptxt>
+<ptxt>
+Il convient de régler le défaut 
+<intxref refid = "F6JB0A1124130">DTC P0697: Circuit de tension de référence de capteur 3:Pour les modèles à moteur Diesel</intxref>
+ en cas de présence ou d&apos;enregistrement de celui-ci.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "F6JB0A1124096001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Pour les numéros des connecteurs et des bornes, se référer à 
+<intxref refid = "F6JB0A910E048">A-5 Schéma du circuit du système de commande du moteur et de la climatisation (A&#x002F;C) (diesel)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A1124096002">
+<title>
+Condition de détection
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Affichage au dispositif de balayage SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Court-circuit à la masse de la caisse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Coupure du circuit ou court-circuit à &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Décalage au seuil minimum
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1124096003">
+<title>
+Recherche de CC0: Court-circuit à la masse de la caisse
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connecteurs du capteur de pression de carburant.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité et l&apos;isolation de la masse de la caisse des connexions suivantes:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C84-2&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-32&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C84-3&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-48&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent, remplacer le capteur de pression de carburant et le rail commun en se référant à 
+<intxref refid = "F6JB0A1726034">Dépose et repose de la rampe commune (rampe d&apos;injection de carburant haute pression):Pour modèle à moteur diesel</intxref>
+.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F6JB0A1124096004">
+<title>
+Recherche de CO1: Coupure du circuit ou court-circuit à &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connecteurs du capteur de pression de carburant.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité et l&apos;isolation de l&apos;alimentation de &#x002B;12 V des connexions suivantes:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C84-2&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-32&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C84-1&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-46&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C84-3&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-48&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent, remplacer le capteur de pression de carburant et le rail commun en se référant à 
+<intxref refid = "F6JB0A1726034">Dépose et repose de la rampe commune (rampe d&apos;injection de carburant haute pression):Pour modèle à moteur diesel</intxref>
+.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1124096005">
+<title>
+Recherche de D1: Décalage au seuil minimum
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier les connecteurs du capteur de pression de carburant.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité des connexions suivantes et s&apos;assurer qu&apos;il n&apos;y a pas de résistance aux interférences:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C84-2&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-32&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C84-3&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-48&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C84-1&#8221; du connecteur du capteur de pression de carburant et la borne &#8220;C86-46&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Le contact étant mis et le moteur arrêté pendant plus d&apos;une minute:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vérifier la tension de sortie du capteur de pression de carburant entre les fils &#8220;C84-2&#8221; et &#8220;C84-1&#8221; de son connecteur.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Si la tension est supérieure à 0,5 V, le capteur est en bon état.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Dans ce cas, substituer l&apos;ECM par une pièce réputée en bon état et revérifier.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Si la tension est inférieure à 0,5 V, remplacer le capteur de pression de carburant et le rail commun en se référant à 
+<intxref refid = "F6JB0A1726034">Dépose et repose de la rampe commune (rampe d&apos;injection de carburant haute pression):Pour modèle à moteur diesel</intxref>
+.
+</ptxt>
+</item>
+</list2>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

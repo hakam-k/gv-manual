@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A8204013" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1017: Basse tension d&apos;alimentation
+</title>
+<servinfosub id = "F5JB0A8204013001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter à 
+<intxref refid = "F5JB0A8204012">DTC B1016: Tension d&apos;alimentation élevée</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+S&apos;assurer de respecter les instructions de la rubrique ATTENTION dans &#8220;Vérification du système de diagnostic de coussin de sécurité&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "F5JB0A8204013002">
+<title>
+Le DTC est émis lorsque
+</title>
+<ptxt>
+La tension d&apos;alimentation est inférieure à la valeur prescrite pendant une durée déterminée.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A8204013003">
+<title>
+Description du schéma de vérification
+</title>
+<ptxt>
+<emph etype = "bold">
+Etape 1: Vérifier si la tension de la batterie se situe dans la plage normale.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 2: Vérifier si la tension appliquée au SDM se situe dans la plage normale.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 3: Vérifier si la tension appliquée au connecteur &#8220;L04&#8221; se situe dans la plage normale.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 4: Vérifier si le DTC B1017 est toujours indiqué.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A8204013004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<diag type = "test" id = "F5JB0A8204013005">
+<testgroup>
+<test1>
+<ptxt>
+Mesurer la tension de la batterie.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 11 V ou plus?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier le système de charge et réparer au besoin en se reportant au point 
+<intxref refid = "F5JB0A1A04002">Essai de l&#8217;alternateur (vérification de batterie déchargée)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher le connecteur SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le raccordement du SDM à la borne &#8220;G47-16&#8221; ou &#8220;G46-11&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, mettre le contacteur d&apos;allumage en position ON, puis vérifier la tension entre la borne &#8221;G47-16&#8221; &#x005B;A&#x005D; ou la borne &#8220;G46-11&#8221; &#x005B;B&#x005D; du connecteur SDM et la masse de la carrosserie.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B007">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820023.swf" width = "90.000mm" height = "62.797mm" ver = "01" gw = "145" gh = "161"/>
+</testfigure>
+</test1>
+<question>
+La tension est-elle de 8 V ou plus?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher le connecteur &#8220;G01&#8221; de l&apos;ensemble de bloc de jonction.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement à la borne &#8220;G01-15&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, mettre le contacteur d&apos;allumage en position ON, puis vérifier la tension entre la borne &#8220;G01-15&#8221; et la masse de carrosserie.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A820024.swf" width = "90.000mm" height = "72.675mm" ver = "01" gw = "221" gh = "189"/>
+</testfigure>
+</test1>
+<question>
+La tension est-elle de 8 V ou plus?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier le circuit entre la batterie et le connecteur &#8220;G01&#8221; ainsi que le système de charge.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, raccorder le connecteur SDM.
+</ptxt>
+</test1>
+<question>
+Contacteur d&apos;allumage en position ON, le DTC B1017 est-il encore indiqué?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le SDM par un SDM en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier le système de charge et réparer au besoin en se reportant au point 
+<intxref refid = "F5JB0A1A04002">Essai de l&#8217;alternateur (vérification de batterie déchargée)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+La vérification et les réparations terminées, effectuer les opérations suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Raccorder tous les composants du système de coussin de sécurité et s&apos;assurer qu&apos;ils sont tous correctement montés.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Supprimer les DTC éventuels en se référant aux indications du point 
+<intxref refid = "F5JB0A8204005">Suppression des DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Effectuer à nouveau la 
+<intxref refid = "F5JB0A8204001">Vérification du système de diagnostic de coussin de sécurité</intxref>
+ pour confirmer que la panne a été réparée.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

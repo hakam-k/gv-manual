@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A1114012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+La luz indicadora de averías permanece encendida después de arrancar el motor
+</title>
+<servinfosub id = "E8T40A1114012001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A1114011">La luz indicadora de averías no se enciende con el interruptor de encendido en posición ON y el motor detenido (pero el motor puede arrancarse):M16A y J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1114012002">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+Cuando se coloca el interruptor de encendido en posición ON, el ECM hace que el relé principal pase a ON (cierra el punto de contacto). Entonces, el ECM, que recibe la alimentación principal, transmite la indicación de señal ON de la luz indicadora de averías (MIL) al juego de instrumentos para encender la MIL. Y el juego de instrumentos enciende la MIL. Cuando el motor comienza a funcionar y no se detecta ninguna disfunción en el sistema, el ECM transmite la de señal OFF de la luz indicadora MIL al juego de instrumentos para apagarlo. A continuación, el juego de instrumentos apaga la MIL. Si se ha detectado o se detecta una avería, la MIL permanece encendida incluso si el motor sigue en marcha.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A1114012003">
+<title>
+Localización y reparación de averías
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Antes de realizar la localización y reparación de averías, asegúrese de leer 
+<intxref refid = "E8T40A1110004">Precauciones para la inspección del circuito del ECM:M16A y J20A</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando mida la tensión del circuito, la resistencia y&#x002F;o los impulsos del conector del ECM, conecte la herramienta especial al ECM y&#x002F;o a los conectores del ECM de acuerdo con 
+<intxref refid = "E8T40A1114080">Inspección del ECM y sus circuitos:M16A y J20A</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "E8T40A1114012004">
+<testgroup id = "E8T40A1114012005">
+<title>
+Verificación de DTC
+</title>
+<test1>
+<ptxt>
+Encienda el motor y vuelva a comprobar el DTC del ECM y del TCM (en modelos A&#x002F;T) mientras el motor está en funcionamiento.
+</ptxt>
+</test1>
+<question>
+¿Aparece algún DTC?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2 de 
+<intxref refid = "E8T40A1114001">Inspección del sistema de control del motor y de las emisiones:M16A y J20A</intxref>
+, paso 2 de 
+<intxref refid = "E8T40A5114001">Comprobación del sistema de A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A1114012006">
+<title>
+Inspección del circuito de la línea de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de la línea de comunicación CAN entre el juego de instrumentos y el ECM, el TCM (en modelos con A&#x002F;T), el módulo de control del ABS&#x002F;ESP&#174;, el módulo de control 4WD (si está instalado) y el módulo de control de arranque sin llave (si está instalado); para ello, consulte los pasos del 9 a 15 de 
+<intxref refid = "E8T40A1114064">DTC P1674: Comunicación CAN (error de bus):M16A y J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está el circuito en buen estado?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un juego de instrumentos en buen estado, y vuelva a realizar la inspección. Si la MIL permanece encendida, reemplácela por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el circuito de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0B1104172" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Test 7: Soupape de recirculation des gaz d&#8217;échappement
+</title>
+<diag type = "test" id = "F5JB0B1104172001">
+<testgroup>
+<ptxt>
+DECOUVERTE DE DEFAUTS DE POSITIONNEMENT DE SOUPAPE:
+</ptxt>
+<ptxt>
+Ou détection d&#8217;une fuite au niveau de la soupape de recirculation des gaz d&#8217;échappement
+</ptxt>
+<ptxt>
+Effacer les défauts.
+</ptxt>
+<ptxt>
+Se servir de la commande &#8220;Initialize EGR valve data&#8221; (initialiser les données de la soupape EGR) afin de tenter de réinitialiser les valeurs de fonctionnement de la soupape EGR.
+</ptxt>
+<ptxt>
+Couper le contact et attendre 40 secondes.
+</ptxt>
+<ptxt>
+Remettre le contact et vérifier les défauts.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Couper l&#8217;allumage.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Débrancher le connecteur de la soupape EGR.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Déposer la soupape EGR en se référant à 
+<intxref refid = "F5JB0B1406071">Dépose et pose de la soupape EGR</intxref>
+ et la rebrancher après l&#8217;avoir déposée.
+</ptxt>
+</item>
+<item>
+<ptxt>
+S&#8217;assurer qu&#8217;aucune particule ne bloque le mouvement du volet de soupape EGR.
+</ptxt>
+</item>
+<item>
+<ptxt>
+S&#8217;assurer que la soupape EGR n&#8217;est pas bloquée à une certaine position.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Remettre le contact.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier le mouvement de la soupape en affichant la commande &#8220;EGR position sensor&#8221; (capteur de position EGR) de la liste des données (Data List) du dispositif de balayage SUZUKI (course de 0 à 2,5 mm pour un taux cyclique d&#8217;ouverture de 40&#x0025; et quand tout à fait ouverte, ~ 5 mm, pour un taux cyclique d&#8217;ouverture de 95&#x0025;).
+</ptxt>
+</item>
+<item>
+<ptxt>
+S&#8217;assurer que le volet de la soupape EGR se referme tout à fait.
+</ptxt>
+</item>
+</list1>
+<question>
+L&#8217;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer la soupape EGR en se référant à 
+<intxref refid = "F5JB0B1406071">Dépose et pose de la soupape EGR</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+DETECTION DE DEFAUTS DE DOUILLE DE SOUPAPE EGR:
+</ptxt>
+<ptxt>
+Déposer la soupape EGR en se référant à 
+<intxref refid = "F5JB0B1406071">Dépose et pose de la soupape EGR</intxref>
+. Il ne peut y avoir un amas de suie entre la soupape EGR et sa base.
+</ptxt>
+<ptxt>
+Nettoyer le manchon de soupape d&#8217;EGR si nécessaire.
+</ptxt>
+<ptxt>
+</ptxt>
+<question>
+L&#8217;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer la soupape EGR en se référant à 
+<intxref refid = "F5JB0B1406071">Dépose et pose de la soupape EGR</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Se servir de la commande &#8220;Initialize EGR valve data&#8221; (initialiser les données de la soupape EGR) afin de tenter de réinitialiser les valeurs de fonctionnement de la soupape EGR.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le circuit d&#8217;air en se référant à 
+<intxref refid = "F5JB0B1104168">Test 3: Vérification du circuit d&#8217;entrée d&#8217;air suralimenté</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le capteur MAF en se référant à 
+<intxref refid = "F5JB0B1104169">Test 4: Capteur MAF</intxref>
+.
+</ptxt>
+</test1>
+<question>
+L&#8217;état est-il bon?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Confirmation de la détection de défaut:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Mettre le véhicule en marche.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Laisser tourner le moteur au ralenti pendant 1 minute.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Accélérer très lentement jusqu&#8217;à 1500 tr&#x002F;min pendant 2 minutes jusqu&#8217;à l&#8217;enclenchement de la fonction de recirculation des gaz d&#8217;échappement.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Effectuer un essai à vitesse réduite, sans forte accélération, puis à vitesse normale.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Rechercher les défauts en utilisant le dispositif de balayage SUZUKI.
+</ptxt>
+</item>
+</list1>
+<question>
+Le défaut réapparaît-il et le client se plaint-il à nouveau?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&#8217;ECM par un module réputé en bon état et revérifier.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Soupape de recirculation des gaz d&#8217;échappement correcte
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

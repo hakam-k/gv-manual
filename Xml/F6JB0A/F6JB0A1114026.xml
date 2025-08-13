@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A1114026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0113: Tension élevée dans le circuit du capteur de température d&apos;air d&apos;admission
+</title>
+<servinfosub id = "F6JB0A1114026001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0A1114024">DTC P0111: Problèmes de plage &#x002F; de performance du circuit de température d&apos;air d&apos;admission:Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A1114026002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.893in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.307in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La tension de la sortie du capteur IAT est supérieure à 4,8 V pendant 0,5 s (température d&apos;air d&apos;admission basse (tension haute &#x002F; résistance haute))
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit du capteur IAT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur IAT
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Lorsque les DTC P0108, P0118 et P0533 sont indiqués ensemble, il est possible que le circuit du câble &#8220;GRY&#x002F;GRN&#8221; soit ouvert.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "F6JB0A1114026003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, raccorder le dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et effacer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le laisser tourner pendant 10 s.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC et les DTC en attente.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F6JB0A1114026004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F6JB0A1110003">Précautions relatives à la recherche de pannes sur la base des DTC:Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F6JB0A1114026005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A1114001">Vérification du système de régulation du moteur et des émissions:Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du capteur IAT et de son circuit
+</title>
+<test1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la température de l&apos;air d&apos;admission affichée sur le dispositif de balayage.
+</ptxt>
+</test1>
+<question>
+La température affichée est-elle de &#8211;40 &#176;C (&#8211;40 &#176;F)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuels problèmes intermittents en se reportant au point 
+<intxref refid = "F6JB0A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la tension du capteur IAT
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du capteur MAF et IAT, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du détecteur MAF et IAT aux bornes des câbles &#8220;LT GRN&#8221; et &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est en ordre, mettre le contacteur d&apos;allumage en position ON et mesurer la tension entre la borne du câble &#8220;LT GRN&#8221; du connecteur du détecteur MAF et IAT (1) et la masse de carrosserie du véhicule.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110037.swf" width = "90.000mm" height = "52.736mm" ver = "02" gw = "202" gh = "132"/>
+</testfigure>
+</test1>
+<question>
+La tension est-elle d&apos;environ 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la tension de l&apos;ECM.
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Déposer l&apos;ECM de son support, en gardant ses connecteurs branchés.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du connecteur de l&apos;ECM à la borne du câble &#8220;C37-25&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est en ordre, mettre le contacteur d&apos;allumage en position ON et mesurer la tension entre la borne &#8220;C37-25&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule.
+</ptxt>
+</test1>
+<question>
+La tension est-elle d&apos;environ 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuit ouvert au niveau du câble &#8220;LT GRN&#8221;. Si le câble et le raccordement sont en ordre, passer à l&apos;étape 5.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du câble
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la tension entre la borne du câble &#8220;LT GRN&#8221; du connecteur du détecteur MAF et IAT et la masse de carrosserie du véhicule.
+</ptxt>
+</test1>
+<question>
+La tension est-elle d&apos;environ 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Le câble &#8220;LT GRN&#8221; est en court-circuit avec un autre circuit.
+</ptxt>
+<ptxt>
+Si le câble est conforme, remplacer l&apos;ECM par un ECM en bon état, et vérifier à nouveau.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du câble
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne &#8220;C37-25&#8221; du connecteur de l&apos;ECM et la borne du câble &#8220;LT GRN&#8221; du connecteur du détecteur MAF et IAT, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Résistance élevée au niveau du câble &#8220;LT GRN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de mise à la masse
+</title>
+<test1>
+<ptxt>
+Raccorder les connecteurs à l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne du câble &#8220;GRY&#x002F;GRN&#8221; du connecteur du capteur MAF et IAT et la masse de carrosserie du véhicule, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de mise à la masse
+</title>
+<test1>
+<ptxt>
+Déposer l&apos;ECM de son support, en gardant ses connecteurs branchés.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne &#8220;C37-57&#8221; du connecteur de l&apos;ECM et la masse de carrosserie du véhicule.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuit ouvert ou résistance élevée au niveau du câble &#8220;GRY&#x002F;GRN&#8221;. Mauvais raccordement de la borne &#8220;C37-57&#8221;.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuit de masse de l&apos;ECM défectueux. Si le circuit est en bon état, remplacer l&apos;ECM par un ECM en bon état, et revérifier.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des performances du capteur IAT
+</title>
+<test1>
+<ptxt>
+Vérifier le capteur IAT conformément au point 
+<intxref refid = "F6JB0A1316021">Vérification du détecteur de débit d&apos;air (MAF) et de température d&apos;air d&apos;admission (IAT):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Est-elle en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le capteur MAF et IAT.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A5124055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0602 &#x002F; P1702
+</title>
+<servinfosub id = "E8T40A5124055001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.024in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.181in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P0602: Error de programación del módulo de control
+</emph>
+</ptxt>
+<ptxt>
+Error de programación de datos
+</ptxt>
+<ptxt>
+(lógica de detección de 1 ciclo de conducción pero la luz de MIL &#x005B;modelo E-OBD&#x005D; o de advertencia de la transmisión &#x005B;modelo no E-OBD&#x005D; no se enciende)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P1702: Error en la suma de comprobación de la memoria del módulo de control interno
+</emph>
+</ptxt>
+<ptxt>
+El cálculo de los datos actuales memorizados en el TCM no es correcto en comparación con los datos de control prerregistrados en el TCM
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A5124055002">
+<title>
+Descripción del sistema
+</title>
+<ptxt>
+El módulo de control interno se instala en el ECM.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A5124055003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Borre el DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga en marcha el motor y manténgalo funcionando en ralentí, si fuera posible.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A5124055004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A5124055005">
+<testgroup id = "E8T40A5124055006">
+<title>
+Verificación de DTC
+</title>
+<test1>
+<ptxt>
+Borre el DTC como se indica en 
+<intxref refid = "E8T40A5124005">Borrado de DTC:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y vuelva a realizar la inspección del DTC.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P0602 o P1702?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un TCM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

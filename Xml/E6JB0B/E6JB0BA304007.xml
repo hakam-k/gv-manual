@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0BA304007" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+La luz indicadora del inmovilizador permanece encendida después de arrancar el motor
+</title>
+<servinfosub id = "E6JB0BA304007001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0BA302001">Diagrama del circuito del cableado del sistema de control del inmovilizador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0BA304007002">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+Cuando el interruptor de encendido pasa a la posición ON, el ECM envía la señal indicadora de encendido al juego de instrumentos para que encienda la luz indicadora del inmovilizador en caso de que no haya ningún problema con el sistema de control del inmovilizador. El juego de instrumentos enciende, pues, el indicador luminoso. Cuando se pone en marcha el motor, el ECM transmite la señal indicadora de apagado al juego de instrumentos para que se apague el indicador luminoso. Entonces, el juego de instrumentos apaga la luz indicadora del inmovilizador. No obstante, en caso de que haya algún problema con el sistema de control del inmovilizador, la luz indicadora del inmovilizador parpadea al poner el interruptor de encendido en posición ON.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0BA304007003">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E6JB0BA304007004">
+<testgroup>
+<title>
+Comprobación de códigos de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Ponga el motor en marcha.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique si el ECM detecta algún DTC consultando 
+<intxref refid = "E6JB0BA304002">Comprobación de códigos de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detectó algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0BA304001">Comprobación del sistema de control del inmovilizador</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de los circuitos de cableado de comunicaciones CAN
+</title>
+<test1>
+<ptxt>
+Inspeccione los circuitos de los cables de comunicación CAN entre el juego de instrumentos y el ECM como se explica en 
+<intxref refid = "E6JB0B1104080">DTC U0073: Bus de comunicación de los módulos de control apagado</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están los circuitos de cableado en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace el juego de instrumentos por uno en buen estado y vuelva a realizar la comprobación. Si la luz indicadora del Inmovilizador sigue aún apagada, reemplace el ECM por uno en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de cableado averiado.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E4604045" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC U1140: Perte de communication avec le BCM (erreur de réception)
+</title>
+<servinfosub id = "F5JB0E4604045001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se référer à 
+<intxref refid = "F5JB0E4604042">DTC U1101: Perte de communication avec le TCM (erreur de réception)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E4604045002">
+<title>
+Condition de détection de DTC et zone de défaut
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du code
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Zone de défaut
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Données de message BCM manquants dans la communication CAN
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de communication CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande de l&#8217;ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0E4604045003">
+<title>
+Diagnostic de panne des DTC
+</title>
+<diag type = "test" id = "F5JB0E4604045004">
+<testgroup>
+<question>
+La &#8220;Vérification de l&#8217;électro-stabilisateur programmé&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0E4604001">Vérification de l&#8217;électro-stabilisateur programmé</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC de l&#8217;ESP&#174;
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC de l&#8217;ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Les DTC U1140 et U1073 sont-ils détectés ensemble?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0E4504020">DTC U1073: Bus de communication de module de commande hors fonction</intxref>
+ pour effectuer la recherche de panne.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC de BCM
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC de BCM.
+</ptxt>
+</test1>
+<question>
+Le DTC U1073 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0EA204013">DTC U1073 (n° 1073): Bus de communication de module de commande hors fonction</intxref>
+ pour effectuer la recherche de panne.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier tous les connecteurs des modules de commande.
+</title>
+<test1>
+<ptxt>
+Vérifier la connexion des connecteurs de tous les modules de commande communiquant par le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier les DTC de l&#8217;ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Le DTC U1140 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier la présence de pannes intermittentes en se référant à 
+<intxref refid = "F5JB0E0006002">Vérification de connexion intermittente et mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Tourner la clé de contact à la position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher les connecteurs du module de commande de l&#8217;ESP&#174; et du BCM communiquant par le réseau CAN.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN entre le module de commande ESP&#174; et le BCM est-il coupé, court-circuité ou a-t-il une résistance élevée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la ligne de communication CAN.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de tous les modules de commande communiquant par le réseau CAN.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN entre les modules de commande débranchés (autres que ESP&#174; et BCM) est-il coupé, court-circuité ou a-t-il une résistance élevée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la ligne de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC de l&#8217;ESP&#174;
+</title>
+<test1>
+<ptxt>
+Brancher les connecteurs débranchés des modules de commande communiquant par le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher chaque connecteur.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (modèle A&#x002F;T)
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande 4WD (si le véhicule en est équipé)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande de démarrage sans clé (selon l&#8217;équipement)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur d&#8217;angle de braquage
+</ptxt>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Vérifier les DTC de l&#8217;ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Le DTC U1140 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Contrôler le circuit d&#8217;alimentation et de la masse du module de commande de l&#8217;ESP&#174;. Si les circuits sont en ordre, substituer l&#8217;ensemble modulateur de pression&#x002F;module de commande ESP&#174; par une pièce réputée en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Contrôler le circuit d&#8217;alimentation et de la masse du module de commande concerné. Si le circuit est en ordre, remplacer le module de commande par un élément réputé en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

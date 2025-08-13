@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A5114029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0717: No hay señal en el circuito &#34;A&#34; del sensor de velocidad de entrada&#x002F;turbina
+</title>
+<servinfosub id = "E8T40A5114029001">
+<title>
+Diagrama de cableado
+</title>
+<figure>
+<graphic graphicname = "I5JB0A510022S.swf" width = "183.000mm" height = "58.564mm" ver = "01" gw = "253" gh = "149"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.236in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.943in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.236in"/>
+<colspec colnum = "4" colname = "4" colwidth = "4.771in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Disposición de terminales en el conector del TCM (vistos desde el lado del mazo de cables)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Sensor de velocidad del eje de entrada
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "E8T40A5114029002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.031in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.163in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+No se ha introducido ninguna señal de pulso del sensor de velocidad del eje de entrada durante un periodo de 5 pulsos del sensor de velocidad del eje de salida aunque se han detectado más de 600 rpm.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Avería del sensor de velocidad del eje de entrada o su circuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Instalación incorrecta del sensor de velocidad del eje de entrada.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tambor de embrague dañado.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuerpo extraño fijado en el sensor o en el tambor.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A5114029003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Con la herramienta de escaneado, borre los DTC de la memoria de los módulos TCM y ECM.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y ponga la palanca de selección en la posición &#34;D&#34;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y aumente la velocidad del vehículo a unos 40 km&#x002F;h (25 mile&#x002F;h) durante 3 minutos o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC, el DTC pendiente y los datos de imagen fija.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A5114029004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A5114029005">
+<testgroup>
+<question>
+¿Se ha llevado a cabo la &#34;Inspección del sistema de la A&#x002F;T&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A5114001">Comprobación del sistema de A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspeccione el circuito del sensor de velocidad del eje de entrada.
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del módulo TCM con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el estado de las conexiones del sensor de velocidad del eje de entrada, en los terminales &#34;E93-6&#34; y &#34;E93-16&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, mida la resistencia del circuito del sensor.
+</ptxt>
+<spec>
+<title>
+Resistencia del circuito del sensor de velocidad del eje de entrada.
+</title>
+<ptxt>
+Entre los terminales &#34;E93-6&#34; y &#34;E93-16&#34; del conector del TCM desconectado del lado del mazo de cables: 560 - 680 &#937; a 20 &#176;C (68 &#176;F)
+</ptxt>
+<ptxt>
+Entre los terminales &#34;E93-16&#34; del conector del TCM desconectado del lado del mazo de cables y la masa: No hay continuidad
+</ptxt>
+</spec>
+</test1>
+<question>
+¿Son satisfactorios los resultados de la comprobación?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe el sensor de velocidad del eje de entrada
+</title>
+<test1>
+<ptxt>
+Inspeccione el sensor de velocidad del eje de entrada; para ello, consulte 
+<intxref refid = "E8T40A5116016">Inspección del sensor de velocidad del eje de entrada:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Circuito del sensor de velocidad del eje de entrada averiado.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si ocurre lo siguiente en el sensor de velocidad del eje de entrada y el tambor del embrague utilizando un espejo.
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+No hay daños
+</ptxt>
+</item>
+<item>
+<ptxt>
+No hay material extraño adherido
+</ptxt>
+</item>
+<item>
+<ptxt>
+Instalación es correcta
+</ptxt>
+</item>
+</list1>
+<testfigure>
+<graphic graphicname = "I2RH01510023.swf" width = "90.000mm" height = "26.108mm" ver = "01" gw = "71" gh = "57"/>
+</testfigure>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si existen problemas intermitentes. Consulte para ello 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Limpie, repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

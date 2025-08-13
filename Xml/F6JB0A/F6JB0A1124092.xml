@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A1124092" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0100: Circuit de débit massique ou volumique de l&apos;air
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions d&apos;application de la procédure de découverte des défauts pour les défauts enregistrés:
+</ptxt>
+<ptxt>
+Le défaut s&apos;est déclaré après un essai sur route.
+</ptxt>
+</item>
+<item>
+<ptxt>
+En cas de présence de ce défaut, le témoin d&apos;injection (témoin à gravité 1) est allumé.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Recourir à un câble de branchement lors de toute intervention sur les connecteurs d&apos;ECM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Priorités lors de la présence de plusieurs défauts:
+</ptxt>
+<ptxt>
+Il convient de régler le défaut 
+<intxref refid = "F6JB0A1124130">DTC P0697: Circuit de tension de référence de capteur 3:Pour les modèles à moteur Diesel</intxref>
+ en cas de présence ou d&apos;enregistrement de celui-ci.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "F6JB0A1124092001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Pour les numéros des connecteurs et des bornes, se référer à 
+<intxref refid = "F6JB0A910E048">A-5 Schéma du circuit du système de commande du moteur et de la climatisation (A&#x002F;C) (diesel)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A1124092002">
+<title>
+Condition de détection
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Affichage au dispositif de balayage SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Court-circuit à &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Coupure du circuit ou court-circuit à la masse de la caisse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Décalage au seuil maximum
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Décalage au seuil minimum
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1124092003">
+<title>
+Recherche de CC1: Court-circuit à &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier l&apos;ensemble capteur MAF avec les connexions du capteur IAT.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité et l&apos;isolation à &#x002B;12 V des connexions suivantes:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C13-2&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-24&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-6&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-12&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-5&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-47&#8221; du connecteur ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent, remplacer l&apos;ensemble capteur MAF avec le capteur IAT.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1124092004">
+<title>
+Recherche de CO0: Coupure du circuit ou court-circuit à la masse de la caisse
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier s&apos;il y a une alimentation de &#x002B;5 V au fil &#8220;C13-5&#8221; de l&apos;ensemble capteur MAF avec connecteur de capteur IAT.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+<ptxt>
+Vérifier l&apos;ensemble capteur MAF avec les connexions du capteur IAT.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité et l&apos;isolation de la masse de la caisse entre:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C13-2&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-24&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-5&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-47&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-6&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-12&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-4&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-6&#8221; du connecteur du relais principal
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent et reste présent, remplacer l&apos;ensemble capteur MAF avec le capteur IAT.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F6JB0A1124092005">
+<title>
+Recherche de D1: Décalage au seuil maximum et D2: Décalage au seuil minimum
+</title>
+<attention3>
+<ptxt>
+Conditions d&apos;application de la procédure de découverte des défauts pour le défaut enregistré: Le défaut se déclare après que le contact ait été coupé pour 40 secondes.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier l&apos;ensemble capteur MAF avec les connexions du capteur IAT.
+</ptxt>
+<ptxt>
+Vérifier les connexions de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité des connexions suivantes et s&apos;assurer qu&apos;il n&apos;y a pas de résistance aux interférences:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#8220;C13-5&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-47&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-6&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-12&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-2&#8221; de l&apos;ensemble capteur MAF avec le connecteur du capteur IAT et la borne &#8220;C86-24&#8221; du connecteur ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#8220;C13-4&#8221; de l&apos;ensemble capteur MAF avec capteur IAT branché et la borne &#8220;C86-6&#8221; du connecteur du relais principal
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si le défaut est toujours présent, effectuer les tests de découverte de défaut Test 3 en se référant à 
+<intxref refid = "F6JB0A1124168">Test 3: Vérification du circuit d&apos;entrée d&apos;air suralimenté:Pour les modèles à moteur Diesel</intxref>
+ et Test 4 en se référant à 
+<intxref refid = "F6JB0A1124169">Test 4: Capteur MAF:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+S&apos;assurer que le papillon d&apos;admission est ouvert.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;ensemble capteur MAF avec connecteur du capteur IAT étant branché, le contact mis et le moteur coupé:
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vérifier la tension entre les fils &#8220;C13-2&#8221; et &#8220;C13-6&#8221; de l&apos;ensemble capteur MAF avec connecteur du capteur IAT:
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Si la tension n&apos;est pas de 0,5 &#8211; 0,7 V, remplacer l&apos;ensemble capteur MAF avec le capteur IAT.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+S&apos;assurer que la soupape EGR n&apos;est pas bloquée en position ouverte:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Corriger tout problème.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Effectuer le test 7 des tests de découverte des défauts en se référant à 
+<intxref refid = "F6JB0A1124172">Test 7: Soupape de recirculation des gaz d&apos;échappement:Pour les modèles à moteur Diesel</intxref>
+.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Si ces vérifications confirment que la soupape est bloquée ou irrévocablement grippée, remplacer la soupape EGR.
+</ptxt>
+<ptxt>
+Si aucun problème n&apos;est découvert mais que le défaut est toujours présent, remplacer l&apos;ensemble capteur MAF avec le capteur IAT.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

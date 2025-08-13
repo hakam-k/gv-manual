@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A1114066" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1678: Communication CAN (erreur de réception du BCM)
+</title>
+<servinfosub id = "F6JB0A1114066001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0A1114064">DTC P1674: Problème de communication CAN (erreur bus éteint):Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A1114066002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erreur de réception en continu des données de communication du BCM détectée plus longtemps que spécifié.
+</ptxt>
+<ptxt>
+(logique de détection à 1 cycle de conduite mais le MIL ne s&apos;allume pas)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit de la ligne de communication CAN
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A1114066003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et effacer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le laisser tourner pendant au moins 1 minute.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F6JB0A1114066004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F6JB0A1110003">Précautions relatives à la recherche de pannes sur la base des DTC:Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F6JB0A1114066005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A1114001">Vérification du système de régulation du moteur et des émissions:Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence de DTC dans l&apos;ECM, le TCM (pour les modèles A&#x002F;T), le module de commande d&apos;ABS &#x002F; ESP&#174;, le module de commande 4WD (si le véhicule en est équipé), le module de commande de démarrage sans clé (si le véhicule en est équipé) et le BCM.
+</ptxt>
+</test1>
+<question>
+Un ou plusieurs DTC autres que des DTC de communication CAN sur chaque module de commande (autres que les DTC P1618, P1674, P1676, P1678, P1685 dans l&apos;ECM, les DTC P1774, P1777, P1778 dans le TCM (pour les modèles A&#x002F;T), les DTC U1073, U1100, U1101, U1121, U1126, U1139, U1140, U1144 dans le BCM, le module de commande d&apos;ABS &#x002F; ESP&#174; et le module de commande 4WD (si le véhicule en est équipé) et les DTC n° 31 &#x002F; 33 dans le module de commande de démarrage sans clé (si le véhicule en est équipé)) sont-ils signalés?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel de diagnostic du DTC concerné.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de présence d&apos;erreur de communication CAN dans l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Rechercher la présence de DTC au niveau de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1674 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A1114064">DTC P1674: Problème de communication CAN (erreur bus éteint):Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des connecteurs de l&apos;ECM, des modules de commande d&apos;ABS &#x002F;ESP&#174; et du BCM
+</title>
+<test1>
+<ptxt>
+Vérifier le bon raccordement de chaque borne du connecteur de l&apos;ECM, du module de commande d&apos;ABS &#x002F;ESP&#174; et du BCM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si les raccordements sont corrects, vérifier à nouveau les DTC de l&apos;ECM tandis que le moteur tourne.
+</ptxt>
+</test1>
+<question>
+Le DTC P1678 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuels problèmes intermittents en se reportant au point 
+<intxref refid = "F6JB0A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de mise à la masse et d&apos;alimentation électrique de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits de masse et d&apos;alimentation électrique de l&apos;ECM en se reportant au point 
+<intxref refid = "F6JB0A1114081">Vérification du circuit de mise à la masse et d&apos;alimentation électrique de l&apos;ECM:Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ces circuits sont-ils en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les circuits de mise à la masse et&#x002F;ou d&apos;alimentation électrique de l&apos;ECM.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Recherche de DTC dans le BCM
+</title>
+<test1>
+<ptxt>
+Vérifier le DTC U1073 dans le BCM.
+</ptxt>
+</test1>
+<question>
+Est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0AA204013">DTC U1073 (N° 1073): Bus de communication du module de commande désactivé</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs hors du BCM et de l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le circuit de communication CAN fonctionne comme suit.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La résistance du circuit de communication CAN est inférieure à 1 &#937; entre la borne &#8220;WHT&#x002F;RED&#8221; du connecteur d&apos;ECM et la borne &#8220;RED&#8221; du connecteur de BCM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance du circuit de communication CAN est inférieure à 1 &#937; entre la borne &#8220;WHT&#x002F;BLU&#8221; du connecteur d&apos;ECM et la borne &#8220;WHT&#8221; du connecteur de BCM.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Est-elle en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du module de commande d&apos;ABS ou d&apos;ESP&#174;
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes de connecteur suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre les bornes &#8220;WHT&#x002F;BLU&#8221; et &#8220;WHT&#8221; du connecteur du module de commande d&apos;ABS ou d&apos;ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre les bornes &#8220;WHT&#x002F;RED&#8221; et &#8220;RED&#8221; du connecteur du module de commande d&apos;ABS ou d&apos;ESP&#174;.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La résistance mesurée est-elle inférieure à 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée du câble du circuit de communication de CAN entre le BCM et le connecteur de l&apos;ECM .
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande d&apos;ABS ou d&apos;ESP&#174; par un élément en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Raccorder les connecteurs au BCM et à l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher les connecteurs du TCM (pour les véhicules à boîte de vitesses automatique), contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher la présence de DTC au niveau de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1678 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée dans le câble du circuit de communication de CAN entre le TCM et le connecteur de jonction du circuit CAN . Si les câbles sont en ordre, vérifier les circuits de masse et d&apos;alimentation du TCM. Si les circuits sont en ordre, remplacer le TCM par un élément en bon état (pour les véhicules à boîte de vitesses automatique), et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande de démarrage par télécommande (si le véhicule en est équipé), contacteur d&#8217;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher la présence de DTC au niveau de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1678 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée dans le câble du circuit de communication de CAN entre le module de commande de démarrage par télécommande et le connecteur de jonction du circuit CAN . Si les câbles sont en ordre, vérifier les circuits de masse et d&apos;alimentation du module de commande de démarrage par télécommande. Si les circuits sont en ordre, remplacer le module de commande de démarrage par télécommande par un module en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du combiné d&apos;instruments, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher la présence de DTC au niveau de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1678 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée du câble du circuit de communication de CAN entre le combiné d&apos;instruments et le connecteur de jonction du circuit CAN . Si les câbles sont en ordre, vérifier les circuits de masse et d&apos;alimentation du combiné d&apos;instruments. Si les circuits sont en ordre, remplacer le combiné d&apos;instruments par un élément en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande 4WD (si le véhicule en est équipé), contacteur d&#8217;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher la présence de DTC au niveau de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1678 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée du circuit de communication de CAN entre le module de commande 4WD et le connecteur de jonction du circuit de communication CAN . Si les câbles sont en ordre, vérifier les circuits de masse et d&apos;alimentation du module de commande 4WD. Si les circuits sont en ordre, remplacer le module de commande 4WD par un module en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du capteur d&apos;angle de braquage (véhicules avec l&apos;ESP&#174;), contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher la présence de DTC au niveau de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1678 s&apos;affiche-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée du circuit de communication de CAN entre le capteur d&apos;angle de direction et le connecteur de jonction du circuit de communication CAN. Si les câbles sont en ordre, vérifier les circuits de masse et d&apos;alimentation du capteur d&apos;angle de braquage. Si les circuits sont en ordre, remplacer le capteur d&apos;angle de braquage par un élément en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de tous les modules de commande (ECM, TCM (si le véhicule en est équipé), BCM, module de commande d&apos;ABS ou module de commande d&apos;ESP&#174;, module de commande 4WD (si le véhicule en est équipé), module de commande de démarrage par télécommande (si le véhicule en est équipé), combiné d&apos;instruments, capteur d&apos;angle de braquage (véhicules avec ESP&#174;)) avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le circuit de communication CAN fonctionne comme suit.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Toutes les résistances de faisceau de câbles du circuit de communication CAN sont inférieures à 1 &#937; entre chaque module de commande.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance de l&apos;isolation entre les câbles du circuit de communication CAN est égale à l&apos;infini pour chaque connecteur de module de commande.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance de l&apos;isolation entre chaque câble du circuit de communication CAN et la masse de carrosserie est égale à l&apos;infini pour chaque connecteur de module de commande.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tension du circuit de communication CAN est de 0 V avec le contacteur d&apos;allumage en position ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ces circuits sont-ils en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 15.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le circuit de communication CAN défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification spec véhicule
+</title>
+<question>
+Le véhicule est-il équipé d&apos;une boîte de vitesses automatique?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 16.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 17.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC pour le TCM (pour les véhicules à boîte de vitesses automatique)
+</title>
+<test1>
+<ptxt>
+Brancher les connecteurs sur tous les modules de commande, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence du DTC P1778 dans le TCM (pour les modèles A&#x002F;T).
+</ptxt>
+</test1>
+<question>
+Est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 17.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du fonctionnement du combiné d&apos;instruments
+</title>
+<test1>
+<ptxt>
+Vérifier le fonctionnement du combiné d&apos;instruments quant au témoin de ceinture de sécurité en attachant et détachant la ceinture de sécurité côté conducteur, contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il satisfaisant?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier les circuits d&apos;alimentation et de masse du BCM. Si les circuits sont conformes, remplacer le BCM par un élément en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

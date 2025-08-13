@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A5114045" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1875: Avería del circuito del interruptor bajo de 4WD (abierto)
+</title>
+<servinfosub id = "E8T40A5114045001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A5114044">DTC P1874: Avería del circuito del interruptor bajo de 4WD (cortocircuito):4 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A5114045002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.996in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La posición de transferencia real es 4L aunque el TCM detectó que el interruptor bajo está en posición OFF con la velocidad del vehículo entre 29 km&#x002F;h (18 mile&#x002F;h)y 88 km&#x002F;h (55 mile&#x002F;h). (si tiene instalado un interruptor 4L&#x002F;N)
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+El interruptor 4L&#x002F;N o su circuito está averiado o defectuoso.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A5114045003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Con la herramienta de escaneado, borre los DTC de la memoria de los módulos TCM y ECM.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga el motor en marcha y pase el interruptor a la posición &#34;4L&#34; (modelo de 4WD del tipo de cambio de motor).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el motor en régimen de ralentí durante 10 segundos o más con la palanca selectora en la posición &#34;D&#34;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga el vehículo en marcha y aumente la velocidad hasta unos 50 km&#x002F;h (31 mile&#x002F;h) en &#34;4L&#34;durante 2 minutos o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC, el DTC pendiente y los datos de imagen fija.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A5114045004">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A5114045005">
+<testgroup>
+<title>
+Verificación de la señal de velocidad del vehículo
+</title>
+<test1>
+<ptxt>
+Compruebe el DTC en el ECM, la unidad hidráulica&#x002F;módulo de control del ABS y la unidad hidráulica&#x002F;módulo de control del ESP&#174;; para ello, consulte 
+<intxref refid = "E8T40A1114003">Comprobación del DTC:M16A y J20A</intxref>
+, 
+<intxref refid = "E8T40A4504004">Comprobación del DTC</intxref>
+ y 
+<intxref refid = "E8T40A4604005">Comprobación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P P0500: avería del sensor de velocidad del vehículo (VSS) en el ECM y&#x002F;o el DTC C1021, C1022, C1025, C1026, C1031, C1032, C1035 y&#x002F;o C1036 en la unidad hidráulica&#x002F;módulo de control del ABS y la unidad hidráulica&#x002F;módulo de control del ESP&#174;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de diagnóstico del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Se ha llevado a cabo la &#34;Inspección del sistema de la A&#x002F;T&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A5114001">Comprobación del sistema de A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Dispone de una herramienta de escaneado SUZUKI?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del interruptor 4L&#x002F;N y de su circuito
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado SUZUKI al DLC, con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Seleccione el modo &#34;LISTA DE DATOS&#34; en la herramienta de escaneado.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Observe la señal del interruptor 4L&#x002F;N (ON u OFF) en la pantalla cuando coloque el interruptor de posición de transferencia en cada una de las posiciones.
+</ptxt>
+<spec>
+<title>
+Especificaciones del interruptor 4L&#x002F;N
+</title>
+<ptxt>
+Posición &#34;4H&#34;: OFF
+</ptxt>
+<ptxt>
+&#34;Posición &#34;4L&#34;: ON
+</ptxt>
+</spec>
+</test1>
+<question>
+¿Se muestra OFF&#x002F;ON como se ha descrito antes?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Avería intermitente o TCM defectuoso. Compruebe si existen problemas intermitentes. Consulte para ello 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+. Si todo es correcto, instale un TCM en buen estado y realice la comprobación otra vez.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del interruptor 4L&#x002F;N y de su circuito
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Examine la tensión del terminal &#34;E93-4&#34; del conector del TCM conectado al colocar el interruptor de posición de transferencia en cada posición.
+</ptxt>
+<spec>
+<title>
+Especificaciones del interruptor 4L&#x002F;N
+</title>
+<ptxt>
+Posición &#34;4H&#34;: 10 - 14 V
+</ptxt>
+<ptxt>
+&#34;Posición &#34;4L&#34;: 0 - 1 V
+</ptxt>
+</spec>
+</test1>
+<question>
+¿Está la tensión dentro de las especificaciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Avería intermitente o TCM defectuoso. Compruebe si existen problemas intermitentes. Consulte para ello 
+<intxref refid = "E8T40A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+. Si todo es correcto, instale un TCM en buen estado y realice la comprobación otra vez.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del interruptor 4L&#x002F;N
+</title>
+<test1>
+<ptxt>
+Inspeccione el interruptor 4L&#x002F;N; para ello, consulte 
+<intxref refid = "E8T40A3316010">Inspección del conjunto de transferencia:Tipo de cambio de motor (transferencia con actuador de cambio)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Circuito del interruptor 4L&#x002F;N abierto. Si los cables y las conexiones están en buen estado, sustituya el TCM por uno en buen estado y vuelva a efectuar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el interruptor 4L&#x002F;N
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

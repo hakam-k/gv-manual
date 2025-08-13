@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A4504018" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1071: Unité de commande ABS
+</title>
+<servinfosub id = "F5JB0A4504018001">
+<title>
+Schéma de câblage
+</title>
+<figure>
+<graphic graphicname = "I5JB0A450019.swf" width = "183.000mm" height = "68.442mm" ver = "02" gw = "421" gh = "177"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.308in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.273in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.308in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.294in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.319in"/>
+<colspec colnum = "6" colname = "6" colwidth = "2.250in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS (vu du côté borne)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Boîte à fusibles principale
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Batterie
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Unité de commande d&apos;alimentation ABS
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "F5JB0A4504018002">
+<title>
+Condition de détection du DTC
+</title>
+<ptxt>
+Ce DTC est émis lorsqu&apos;un dysfonctionnement interne est décelé dans l&#8217;unité de commande ABS.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A4504018003">
+<title>
+Recherche de pannes à partir du DTC
+</title>
+<diag type = "test" id = "F5JB0A4504018004">
+<testgroup>
+<question>
+La &#34;Vérification ABS&#34; a&#x002D;t&#x002D;elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F5JB0A4504001">Vérification de l&apos;ABS</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Supprimer tous les DTC et vérifier les DTC.
+</ptxt>
+<question>
+Le DTC C1071 est&#x002D;il émis?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il y a probablement un dysfonctionnement temporaire de l&#8217;unité de commande ABS.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, débrancher le connecteur du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS et vérifier les points suivants.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tension à la borne &#34;E03&#x002D;1&#34;: 10 &#x002D;14 V
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tension à la borne &#34;E03&#x002D;14&#34;: 10 &#x002D;14 V
+</ptxt>
+</item>
+<item>
+<ptxt>
+Résistance entre la borne &#34;E03&#x002D;13&#34; et la masse de carrosserie: continuité
+</ptxt>
+</item>
+<item>
+<ptxt>
+Résistance entre la borne &#34;E03&#x002D;26&#34; et la masse de carrosserie: continuité
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Les résultats de la vérification sont&#x002D;ils conformes aux spécifications?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble du groupe hydraulique ABS &#x002F; de l&apos;unité de commande ABS.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit &#x201C;WHT&#x002F;RED&#8221;, &#x201C;WHT&#x002F;BLU&#8221; et&#x002F;ou &#34;BLK&#34; et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

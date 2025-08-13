@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A4604011" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+La luz de advertencia ESP&#174; permanece encendida
+</title>
+<servinfosub id = "E8T40A4604011001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E8T40A4604010">La luz de advertencia del ESP&#174; no se enciende con el interruptor de encendido en posición ON</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A4604011002">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+El funcionamiento (ON&#x002F;OFF) de la luz de advertencia del ESP&#174; es controlado por el módulo de control del ESP&#174; a través del módulo de accionamiento de la luz del juego de instrumentos.
+</ptxt>
+<ptxt>
+Si el sistema ESP&#174; está en buen estado, el módulo de control del ESP&#174; enciende la luz de advertencia del ESP&#174;, con el interruptor de encendido en la posición ON, la mantiene encendida durante 2 segundos y, a continuación, la apaga. Si se detecta una anomalía en el sistema, el módulo de control del ESP&#174; enciende la luz de advertencia del ESP&#174; de manera continua. Además, se mantiene encendida de manera continua por el módulo de accionamiento de la luz cuando el conector del módulo de control del ESP&#174; se desconecta.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E8T40A4604011003">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E8T40A4604011004">
+<testgroup id = "E8T40A4604011005">
+<test1>
+<ptxt>
+Efectúe la comprobación de códigos de diagnóstico.
+</ptxt>
+</test1>
+<question>
+¿Aparece algún DTC?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de diagnóstico del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604011006">
+<question>
+¿Están en buen estado los fusibles principales de las válvulas solenoide y el motor de la bomba?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el fusible y verifique si se ha producido un cortocircuito a masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604011007">
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control del ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la conexión correcta del módulo de control del ESP&#174; en los terminales &#34;E53-39&#34;, &#34;E53-16&#34; y &#34;E53-47&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien, coloque el interruptor de encendido en posición ON y mida la tensión entre el terminal &#34;E53-35&#34; y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es el valor 10 - 14 V?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito &#34;GRN&#x002F;ORN&#34; abierto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604011008">
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la conexión correcta del módulo de control del ESP&#174; en los terminales &#34;E53-1&#34; y &#34;E53-32&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien, coloque el interruptor de encendido en posición ON y mida la tensión entre el terminal &#34;E53-1&#34;, &#34;E53-32&#34; y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es de 10 - 14 V?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto en &#34;WHT&#x002F;RED&#34; y&#x002F;o &#34;WHT&#x002F;BLU&#34;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604011009">
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y mida la resistencia entre cada terminal de &#34;E53-16&#34;, &#34;E53-47&#34; y la masa de la carrocería del vehículo..
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 2 &#937;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito de masa para el módulo de control del ESP&#174; abierto o alta resistencia.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E8T40A4604011010">
+<test1>
+<ptxt>
+Verifique el circuito de comunicación CAN entre el juego de instrumentos y el módulo de control del ESP&#174;. 
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modelos M16A y J20A: 
+<intxreftitleoff1 refid = "E8T40AA814002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modelos J24B y N32A: 
+<intxreftitleoff1 refid = "E8T40AA824002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modelo F9Q: 
+<intxreftitleoff1 refid = "E8T40AA834002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Está el circuito de comunicaciones CAN en buenas condiciones?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Reemplace por un juego de instrumentos en buen estado, y vuelva a realizar la inspección. Si la luz de advertencia del ABS permanece en ON, reemplace el conjunto de la unidad hidráulica&#x002F;módulo de control del ESP&#174; por uno en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

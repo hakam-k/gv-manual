@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0A8204031" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1322 &#x002F; B1326: Résistance faible du circuit du dispositif d&apos;actionnement du coussin de sécurité latéral gauche &#x002F; droit
+</title>
+<servinfosub id = "F5JB0A8204031001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0A8204030">DTC B1321 &#x002F; B1325: Résistance élevée du circuit du dispositif d&apos;actionnement du coussin de sécurité latéral gauche &#x002F; droit</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+S&apos;assurer de respecter les instructions de la rubrique ATTENTION dans &#8220;Vérification du système de diagnostic de coussin de sécurité&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "F5JB0A8204031002">
+<title>
+Le DTC est émis lorsque
+</title>
+<ptxt>
+La résistance combinée du module (dispositif de gonflage) de coussin de sécurité latéral (gauche ou droit), du faisceau de câbles et du contact de la borne du connecteur est inférieure à la valeur prescrite pendant un temps déterminé.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A8204031003">
+<title>
+Description du schéma de vérification
+</title>
+<ptxt>
+<emph>
+Etape 1: Vérifier si le module (dispositif de gonflage) du coussin de sécurité latéral présente un dysfonctionnement.
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+Etape 2: Vérifier le circuit du dispositif d&apos;actionnement du coussin de sécurité latéral dans le faisceau de câbles au plancher.
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+Etape 3: Vérifier le circuit du dispositif d&apos;actionnement du coussin de sécurité latéral dans le faisceau de câbles du siège.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0A8204031004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<diag type = "test" id = "F5JB0A8204031005">
+<testgroup>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher le connecteur du module (dispositif de gonflage) du coussin de sécurité latéral situé sous l&apos;assise de siège avant.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le raccordement des bornes du module (dispositif de gonflage) du coussin de sécurité latéral gauche ou droit dans le connecteur &#8220;L25&#8221; ou &#8220;L30&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, raccorder les outils spéciaux (B) et (C) au connecteur du module (dispositif de gonflage) du coussin de sécurité latéral débranché à l&apos;étape 1.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0137">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0138">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I4RS0A820032.swf" width = "90.000mm" height = "52.920mm" ver = "01" gw = "149" gh = "133"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Vérifier le DTC du SDM.
+</ptxt>
+</test1>
+<question>
+Le DTC B1322 ou B1326 s&apos;affiche-t-il lorsque le contacteur d&apos;allumage est en position ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher le connecteur &#8220;L33&#8221; du SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le raccordement du SDM aux bornes &#8220;L33-1&#8221; et &#8220;L33-2&#8221;, ou &#8220;L33-3&#8221; et &#8220;L33-4&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, relâcher la barre de court-circuit du connecteur SDM à l&apos;aide de l&apos;outil de libération (1) inclus dans l&apos;outil spécial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre les bornes &#8220;L33-1&#8221; et &#8220;L33-2&#8221; (pour le DTC B1322) ou &#8220;L33-3&#8221; et &#8220;L33-4&#8221; (pour le DTC B1326) à l&#8217;aide des outils spéciaux raccordés (B) et (C).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0139">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0140">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0141">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820045.swf" width = "90.000mm" height = "61.739mm" ver = "01" gw = "217" gh = "158"/>
+</testfigure>
+</test1>
+<question>
+La résistance est-elle de 0,65 &#937; minimum?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le SDM par un SDM en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1322: Remédier au court-circuit dans le circuit du fil &#8220;GRY&#x002F;RED&#8221; vers le circuit du fil &#8220;GRY&#8221; ou du circuit du fil &#8220;GRY&#x002F;RED&#8221; ou &#8220;GRY&#8221; vers un autre circuit du faisceau de câbles du plancher.
+</ptxt>
+<ptxt>
+DTC B1326: Remédier au court-circuit dans le circuit du fil &#8220;BRN&#x002F;WHT&#8221; vers le circuit du fil &#8220;BRN&#8221; ou dans le circuit du fil &#8220;BRN&#x002F;WHT&#8221; ou &#8220;BRN&#8221; vers un autre circuit du faisceau de câbles du plancher.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher les outils spéciaux (B) et (C) puis brancher à nouveau le connecteur &#8220;L25&#8221; ou &#8220;L30&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du module (dispositif de gonflage) &#8220;Q02&#8221; ou &#8220;Q03&#8221; du coussin de sécurité latéral.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+ Vérifier le raccordement du module (dispositif de gonflage) du coussin de sécurité latéral à la borne du connecteur.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, raccorder les outils spéciaux (A), (B) et (C) au connecteur du module (dispositif de gonflage) de coussin de sécurité latéral.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0142">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0143">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0144">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820046.swf" width = "90.000mm" height = "52.214mm" ver = "02" gw = "196" gh = "131"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Vérifier le DTC du SDM.
+</ptxt>
+</test1>
+<question>
+Le DTC B1322 ou B1326 s&apos;affiche-t-il lorsque le contacteur d&apos;allumage est en position ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1322: Remédier au court-circuit dans le circuit du fil &#8220;GRY&#x002F;RED&#8221; vers le circuit du faisceau de câbles du siège &#8220;GRY&#8221; ou dans le circuit du fil &#8220;GRY&#x002F;RED&#8221; ou &#8220;GRY&#8221; vers un autre circuit.
+</ptxt>
+<ptxt>
+DTC B1326: Remédier au court-circuit dans le circuit du fil &#8220;BRN&#x002F;WHT&#8221; vers le circuit du faisceau de câbles du siège &#8220;BRN&#8221; ou dans le circuit du câble &#8220;BRN&#x002F;WHT&#8221; ou &#8220;BRN&#8221; vers un autre circuit.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le module (dispositif de gonflage) de coussin de sécurité latéral en se reportant au point 
+<intxref refid = "F5JB0A8206009">Dépose et repose du module (dispositif de gonflage) du coussin de sécurité latéral</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+La vérification et les réparations terminées, effectuer les opérations suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Raccorder tous les composants du système du coussin de sécurité et s&apos;assurer qu&apos;ils sont tous correctement montés.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Supprimer les DTC éventuels en se référant aux indications du point 
+<intxref refid = "F5JB0A8204005">Suppression des DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Effectuer à nouveau la 
+<intxref refid = "F5JB0A8204001">Vérification du système de diagnostic de coussin de sécurité</intxref>
+ pour confirmer que la panne a été réparée.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0E1104016" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0031 &#x002F; P0032: Tension faible &#x002F; élevée dans le circuit de commande de réchauffeur HO2S (détecteur-1)
+</title>
+<servinfosub id = "F5JB0E1104016017">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0E1104015">DTC P0030: Circuit de commande de réchauffeur HO2S (détecteur-1)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E1104016006">
+<title>
+Description du détecteur A&#x002F;F
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F5JB0E1101010">Description du détecteur A&#x002F;F</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F5JB0E1104016015">
+<title>
+Condition de détection de DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.937in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.272in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0031:
+</emph>
+</ptxt>
+<ptxt>
+La tension du circuit de commande du réchauffeur du détecteur A&#x002F;F est constamment inférieure aux spécifications plus longtemps que prescrit, même si le taux de service de commande du réchauffeur du détecteur A&#x002F;F est inférieur à 90&#x0025;, moteur en marche. (Le signal d&apos;impulsion de taux de service de commande du réchauffeur n&apos;est pas détecté dans son circuit au niveau de l&apos;ECM)
+</ptxt>
+<ptxt>
+(Logique de détection à 2 cycles de conduite)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0032:
+</emph>
+</ptxt>
+<ptxt>
+La tension du circuit de commande du réchauffeur du détecteur A&#x002F;F est constamment supérieure aux spécifications plus longtemps que prescrit, même si le taux de service de commande du réchauffeur du détecteur A&#x002F;F est supérieur à 10&#x0025;, moteur en marche. (Le signal d&apos;impulsion de taux de service de commande du réchauffeur n&apos;est pas détecté dans son circuit au niveau de l&apos;ECM)
+</ptxt>
+<ptxt>
+(Logique de détection à 2 cycles de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit du réchauffeur du détecteur A&#x002F;F
+</ptxt>
+</item>
+<item>
+<ptxt>
+Réchauffeur du détecteur A&#x002F;F
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0E1104016003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Avec le contacteur d&apos;allumage en position OFF, raccorder le dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et l&apos;amener à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire tourner le moteur au ralenti pendant 1 minute minimum.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier le DTC et le DTC en attente.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F5JB0E1104016004">
+<title>
+Recherche de pannes sur la base des DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F5JB0E1100003">Précautions relatives à la recherche de pannes sur la base des DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F5JB0E1104016005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F5JB0E1104001">Vérification du système de régulation du moteur et des émissions</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du réchauffeur du détecteur A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du détecteur A&#x002F;F, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement avec le connecteur du détecteur A&#x002F;F.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est en ordre, mesurer la tension entre la borne d&apos;alimentation du réchauffeur du connecteur du détecteur A&#x002F;F et la masse de la carrosserie du véhicule, contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+La tension mesurée est-elle de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de fusible du réchauffeur HO2S
+</title>
+<test1>
+<ptxt>
+Vérifier si le fusible &#8220;O2 HTR&#8221; (1) n&apos;est pas grillé. 
+</ptxt>
+<testfigure>
+<title>
+Pour moteur J20
+</title>
+<graphic graphicname = "I5JB0A110028.swf" width = "90.000mm" height = "47.981mm" ver = "02" gw = "155" gh = "119"/>
+</testfigure>
+<testfigure>
+<title>
+Pour moteur M16
+</title>
+<graphic graphicname = "I5JB0A110029.swf" width = "90.000mm" height = "47.628mm" ver = "02" gw = "156" gh = "118"/>
+</testfigure>
+</test1>
+<question>
+Le fusible &#8220;O2 HTR&#8221; est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la résistance du réchauffeur HO2S et du détecteur A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur de l&apos;HO2S-2 avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la résistance du réchauffeur du détecteur A&#x002F;F et HO2S en se référant aux points 
+<intxref refid = "F5JB0E1306010">Vérification sur véhicule du détecteur de mélange air carburant (A&#x002F;F)</intxref>
+ et 
+<intxref refid = "F5JB0E1306011">Vérification sur véhicule du réchauffeur du détecteur d&apos;oxygène chauffé (HO2S-2)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le réchauffeur du détecteur A&#x002F;F et le réchauffeur HO2S sont-ils en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le détecteur défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit d&apos;alimentation du relais du réchauffeur HO2S
+</title>
+<test1>
+<ptxt>
+Déposer le relais d&apos;intégration n&#176;2 (pour moteur J20) (1) ou le relais du réchauffeur HO2S (pour moteur M16) (2), contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement avec le connecteur du relais.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est en ordre, mesurer la tension entre chaque borne d&apos;alimentation du connecteur du relais et la masse de la carrosserie du véhicule, contacteur d&apos;allumage en position ON.
+</ptxt>
+<testfigure>
+<title>
+Pour moteur J20
+</title>
+<graphic graphicname = "I5JB0A110030.swf" width = "90.000mm" height = "48.333mm" ver = "02" gw = "155" gh = "120"/>
+</testfigure>
+<testfigure>
+<title>
+Pour moteur M16
+</title>
+<graphic graphicname = "I5JB0A110031.swf" width = "90.000mm" height = "52.214mm" ver = "03" gw = "156" gh = "131"/>
+</testfigure>
+</test1>
+<question>
+La tension mesurée est-elle chaque fois de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Le circuit d&apos;alimentation est ouvert.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier le relais du réchauffeur HO2S
+</title>
+<test1>
+<ptxt>
+Vérifier le relais d&apos;intégration n&#176;2 (pour moteur J20) ou le relais du réchauffeur HO2S (pour moteur M16) en se référant au point 
+<intxref refid = "F5JB0E1306018">Vérification du relais de commande</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le relais.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du réchauffeur du détecteur A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance d&apos;isolation entre les bornes du réchauffeur du connecteur du détecteur A&#x002F;F.
+</ptxt>
+</test1>
+<question>
+La résistance mesurée est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le câble court-circuité.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du relais du réchauffeur HO2S
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance du câble entre la borne de masse de bobine du connecteur de relais et la masse de la carrosserie.
+</ptxt>
+</test1>
+<question>
+La résistance mesurée est-elle inférieure à 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Câble de sortie du connecteur du relais ouvert ou court-circuité à la masse.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le circuit défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ Vérifier le réchauffeur du détecteur A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Vérifier la résistance du réchauffeur du détecteur A&#x002F;F en se référant au point 
+<intxref refid = "F5JB0E1306010">Vérification sur véhicule du détecteur de mélange air carburant (A&#x002F;F)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le réchauffeur du détecteur A&#x002F;F est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le détecteur A&#x002F;F.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de commande du réchauffeur du détecteur A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur de l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement entre la borne du circuit du réchauffeur du détecteur A&#x002F;F et le connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est en ordre, mesurer la résistance de chaque câble du circuit de commande du réchauffeur du détecteur au niveau du connecteur de l&apos;ECM entre l&apos;ECM et le détecteur A&#x002F;F et l&apos;ECM et la masse de la carrosserie.
+</ptxt>
+</test1>
+<question>
+La résistance mesurée de chaque câble est-elle inférieure à 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le circuit du câble défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit du réchauffeur du détecteur A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance d&apos;isolation entre la borne de commande du réchauffeur du détecteur A&#x002F;F et la borne de masse du réchauffeur du détecteur A&#x002F;F au niveau du connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+La résistance mesurée est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le câble court-circuité.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

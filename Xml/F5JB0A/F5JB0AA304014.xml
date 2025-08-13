@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F5JB0AA304014" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1615: Erreur de communication de l&apos;unité de verrouillage de direction (pour les véhicules équipés du système de démarrage sans clé)
+</title>
+<ptxt>
+<intxrefpoff refid = "F5JB0AA302001">Schéma du circuit de câblage du système antidémarrage</intxrefpoff>
+</ptxt>
+<servinfosub id = "F5JB0AA304014001">
+<title>
+Description du circuit
+</title>
+<ptxt>
+Lorsque le code de transpondeur de la clé de contact est enregistré dans l&apos;ECM, le code d&apos;identification de la télécommande est enregistré dans l&apos;ECM et dans le module de commande de démarrage sans clé en même temps. Ce DTC est détecté uniquement dans le cas où le code d&apos;identification de la télécommande ne peut pas être enregistré dans l&apos;ECM et dans le module de commande de démarrage sans clé lorsque le code de transpondeur de la clé de contact est enregistré dans l&apos;ECM.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Effectuer d&apos;abord le dépannage pour le DTC P1618 si les DTC P1615 et P1618 sont détectés en même temps.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Après avoir remplacé l&apos;ECM, veiller à enregistrer le code de transpondeur de la clé de contact avec l&apos;ECM en se reportant à 
+<intxref refid = "F5JB0AA306002">Enregistrement de la clé de contact</intxref>
+. Après avoir remplacé le module de commande de démarrage sans clé du véhicule équipé du système de démarrage sans clé, veiller à exécuter 
+<intxref refid = "F5JB0AA306002">Enregistrement de la clé de contact</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "F5JB0AA304014002">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tout en enregistrant le code de transpondeur dans l&apos;ECM, le module de commande de démarrage sans clé a envoyé un signal à l&apos;ECM en indiquant que le code d&apos;identification de la télécommande n&apos;a pas pu être enregistré.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le code d&apos;identification de la télécommande n&apos;a pas pu être enregistré dans le module de commande de démarrage sans clé ou ECM. Et l&apos;enregistrement du code du transpondeur dans l&apos;ECM a été terminé de force.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Les circuits filaires entre l&apos;unité de verrouillage de direction et l&apos;unité de commande de démarrage sans clé sont ouverts ou présentent un court-circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuits filaires de communication CAN défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unité de verrouillage de direction défectueuse
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unité de commande de démarrage sans clé défectueuse
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM défectueux
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F5JB0AA304014004">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F5JB0AA304014005">
+<testgroup>
+<title>
+Confirmation des codes de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Effacer le(s) DTC en se reportant à 
+<intxref refid = "F5JB0AA304003">Suppression des codes de diagnostic (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la présence d&apos;un DTC en se reportant à 
+<intxref refid = "F5JB0AA304002">Vérification des codes de diagnostic (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1615 est-il toujours détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Enregistrement de la clé de contact
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et enregistrer le code de transpondeur dans le transpondeur de la clé de contact avec l&apos;ECM en se reportant à 
+<intxref refid = "F5JB0AA306002">Enregistrement de la clé de contact</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Etait-il possible d&apos;enregistrer la clé de contact (code de transpondeur) dans l&apos;ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des codes de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Vérifier la présence d&apos;un DTC en se reportant à 
+<intxref refid = "F5JB0AA304002">Vérification des codes de diagnostic (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Un DTC a-t-il été détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des codes de diagnostic (DTC)
+</title>
+<question>
+Un DTC autre que le P1615 est-il détecté à l&apos;étape 3?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Effectuer la recherche de pannes en se reportant au graphique correspondant.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;unité de verrouillage de direction
+</title>
+<test1>
+<ptxt>
+Mettre le bouton de démarrage du moteur du système de démarrage sans clé en position ON.
+</ptxt>
+</test1>
+<question>
+Le bouton de démarrage du moteur est-il en position ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;unité de verrouillage de direction par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du fonctionnement de l&apos;unité de verrouillage de direction
+</title>
+<test1>
+<ptxt>
+Vérifier le fonctionnement de l&apos;unité de verrouillage de direction en se reportant à 
+<intxref refid = "F5JB0A9306002">Vérification du contacteur d&apos;allumage</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le bouton de démarrage du moteur fonctionne-t-il comme indiqué?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;unité de verrouillage de direction en se reportant à 
+<intxref refid = "F5JB0A6206008">Dépose et repose du verrouillage de direction complet (contacteur d&#8217;allumage)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les circuits filaires ouverts entre l&apos;unité de verrouillage de direction et le module de commande de démarrage sans clé
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur de l&apos;unité de verrouillage de direction &#8220;G22&#8221; et le connecteur du module de commande de démarrage sans clé &#8220;G42&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre les bornes des connecteurs suivants.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne &#8220;G22-3&#8221; du connecteur de l&apos;unité de verrouillage de direction et la borne &#8220;G42-20&#8221; du connecteur du module de commande de démarrage sans clé.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G22-7&#8221; du connecteur de l&apos;unité de verrouillage de direction et la borne &#8220;G42-29&#8221; du connecteur du module de commande de démarrage sans clé.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G22-8&#8221; du connecteur de l&apos;unité de verrouillage de direction et la borne &#8220;G42-30&#8221; du connecteur du module de commande de démarrage sans clé.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Chaque résistance est-elle de 1 &#937; maximum?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture ou la résistance élevée dans le circuit filaire qui présente un dysfonctionnement.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les court-circuits dans les circuits filaires entre l&apos;unité de verrouillage de direction et le module de commande de démarrage sans clé
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance entre les bornes des connecteurs suivants.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre les bornes &#8220;G22-3&#8221;, &#8220;G22-7&#8221; et &#8220;G22-8&#8221; du connecteur de l&apos;unité de verrouillage de direction.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre les bornes &#8220;G42-20&#8221;, &#8220;G42-29&#8221; et &#8220;G42-30&#8221; du connecteur du module de commande de démarrage sans clé.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Chaque résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+S&apos;assurer de l&apos;isolation de chaque circuit filaire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les court-circuits dans les circuits filaires de mise à la masse entre l&apos;unité de verrouillage de direction et le module de commande de démarrage sans clé
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance entre les bornes des connecteurs suivants.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne &#8220;G22-3&#8221; du connecteur de l&apos;unité de verrouillage de direction et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G22-7&#8221; du connecteur de l&apos;unité de verrouillage de direction et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G22-8&#8221; du connecteur de l&apos;unité de verrouillage de direction et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G42-20&#8221; du connecteur du module de commande de démarrage sans clé et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G42-29&#8221; du connecteur du module de commande de démarrage sans clé et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G42-30&#8221; du connecteur du module de commande de démarrage sans clé et la masse de carrosserie.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Chaque résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans le circuit filaire de mise à la masse dans le circuit filaire qui présente un dysfonctionnement.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les court-circuits dans les circuits filaires d&apos;alimentation entre l&apos;unité de verrouillage de direction et le module de commande de démarrage sans clé
+</title>
+<test1>
+<ptxt>
+Mesurer la tension aux bornes de connecteur suivantes avec le contacteur d&apos;allumage mis en position ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne &#8220;G22-3&#8221; du connecteur de l&apos;unité de verrouillage de direction et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G22-7&#8221; du connecteur de l&apos;unité de verrouillage de direction et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G22-8&#8221; du connecteur de l&apos;unité de verrouillage de direction et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G42-20&#8221; du connecteur du module de commande de démarrage sans clé et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G42-29&#8221; du connecteur du module de commande de démarrage sans clé et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne &#8220;G42-30&#8221; du connecteur du module de commande de démarrage sans clé et la masse de carrosserie.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La tension est-elle à chaque fois de 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande de démarrage sans clé par un module en bon état et vérifier à nouveau. Si le DTC P1615 est toujours détecté, remplacer l&apos;ECM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans le circuit filaire d&apos;alimentation dans le circuit filaire qui présente un dysfonctionnement.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

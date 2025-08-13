@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E8T40A5114046" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1878: Vibración del embrague convertidor de par
+</title>
+<servinfosub id = "E8T40A5114046001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.433in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.772in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La función de control de deslizamiento de la aceleración se detiene, cuando la variación de la velocidad de revolución de salida, de la amplitud y ciclos especificados se detecta durante un período de tiempo especificado. Cuando la variación especificada no se detecta después de que el control de deslizamiento de la aceleración se haya detenido.
+</ptxt>
+<ptxt>
+(lógica de detección de 20 ciclo de conducción pero la luz de MIL &#x005B;modelo E-OBD&#x005D; o de advertencia de la transmisión &#x005B;modelo no E-OBD&#x005D; no se enciende)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ATF inadecuado
+</ptxt>
+</item>
+<item>
+<ptxt>
+Avería en el embrague convertidor de torsión
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E8T40A5114046002">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Con la herramienta de escaneado, borre los DTC de la memoria de los módulos TCM y ECM.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga el motor en marcha y deje que se caliente hasta que alcance la temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduzca el vehículo con el engranaje de 3ª o 4ª en la posición &#34;D&#34; y fije la posición ON durante 20 segundos o más; para ello, consulte &#34;Tabla del cambio de engranaje automático&#34; en 
+<intxref refid = "E8T40A5114012">Prueba de carretera:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC, el DTC pendiente y los datos de imagen fija.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E8T40A5114046003">
+<title>
+Localización y reparación de la avería correspondiente al DTC
+</title>
+<diag type = "test" id = "E8T40A5114046004">
+<testgroup>
+<question>
+¿Se ha llevado a cabo la &#34;Inspección del sistema de la A&#x002F;T&#34;?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E8T40A5114001">Comprobación del sistema de A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Cambie el líquido de la A&#x002F;T como se indica en 
+<intxref refid = "E8T40A5116002">Cambio del líquido de la A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Consulte el DTC después de realizar 
+<intxref refid = "E8T40A5114046002">Procedimiento de confirmación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Sigue indicándose el DTC P1878?
+</question>
+<result>
+SÍ
+</result>
+<action>
+<ptxt>
+Embrague de convertidor de torsión defectuoso. Reemplace el convertidor de par.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El sistema está en buenas condiciones.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>
