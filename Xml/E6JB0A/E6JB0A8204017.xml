@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0A8204017" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1033: Cortocircuito a masa en el activador del airbag del conductor
+</title>
+<servinfosub id = "E6JB0A8204017001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0A8204015">DTC B1031: Resistencia alta del circuito de activación del airbag del conductor</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Siga estrictamente las instrucciones de la sección PRECAUCIONES de &#8220;Secuencia de comprobaciones del sistema de diagnóstico de airbags&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "E6JB0A8204017002">
+<title>
+Se genera un DTC cuando
+</title>
+<ptxt>
+La tensión medida en el circuito del activador del airbag del conductor es inferior a un valor especificado durante el tiempo indicado.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A8204017003">
+<title>
+Descripción de la secuencia de pruebas
+</title>
+<ptxt>
+<emph etype = "bold">
+Paso 1: Compruebe si el problema está en la bobina de contacto y el módulo (inflador) del airbag del conductor, o en otros componentes.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 2: Inspeccione el circuito iniciador del módulo (inflador) del airbag del conductor.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 3: Compruebe si el problema está en la bobina de contacto y el módulo (inflador) del airbag del conductor.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A8204017004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E6JB0A8204017005">
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte el conector de la bobina de contacto situado bajo la columna de dirección.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el ajuste de las conexiones a la bobina de contacto en el terminal del conector &#8220;G26&#8221; o &#8220;G27&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está en orden, conecte las herramientas especiales (B) y (C) al conector &#8220;G26&#8221; (para vehículos sin sistema de control de velocidad de crucero - &#x005B;A&#x005D;) o las herramientas especiales (B) y (D) al conector &#8220;G27&#8221; (para vehículos con sistema de control de velocidad de crucero - &#x005B;B&#x005D;) (desconectado en el paso 1).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B032">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B033">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B034">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820026.swf" width = "90.000mm" height = "51.508mm" ver = "02" gw = "235" gh = "129"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece el DTC B1033?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte las herramientas especiales (B) y (C) o (D) del conector &#8220;G26&#8221; o &#8220;G27&#8221; y el conector SDM &#8220;G47&#8221; o &#8220;G46&#8221; del SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Libere la barra de cortocircuitos del conector del SDM insertando la herramienta de liberación (1) incluida en la herramienta especial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#8220;G47-5&#8221; y masa a carrocería, y entre el terminal &#8220;G47-6&#8221; y masa a carrocería &#x005B;A&#x005D;, o bien ente el terminal &#8220;G46-1&#8221; y masa a carrocería, y entre el terminal &#8220;G46-2&#8221; y masa a carrocería &#x005B;B&#x005D;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B035">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B036">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B037">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B038">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820030.swf" width = "90.000mm" height = "102.661mm" ver = "01" gw = "171" gh = "274"/>
+</testfigure>
+</test1>
+<question>
+¿Las resistencias muestran valor infinito?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un módulo de SDM en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito &#8220;GRN&#x002F;RED&#8221; o circuito &#8220;GRN&#8221; en cortocircuito a masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte las herramientas especiales (B) y (C) o (D) del conector &#8220;G26&#8221; o &#8220;G27&#8221;, y luego reconecte el conector de la bobina de contacto situado debajo de la columna de dirección.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Extraiga el módulo (inflador) del airbag del conductor de la columna de dirección como se indica en 
+<intxref refid = "E6JB0A8206005">Extracción e instalación del módulo (inflador) del airbag del conductor</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si la conexión al conector del módulo (inflador) del airbag del conductor es correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si lo es, conecte las herramientas especiales (A), (B) y (E) al conector del módulo (inflador) del airbag del conductor.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B039">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B040">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B041">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B042">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B043">
+<s-part>
+(E)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820028.swf" width = "90.000mm" height = "62.797mm" ver = "01" gw = "191" gh = "161"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece el DTC B1033?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF. Sustituya el conjunto de la bobina de contacto como se indica en 
+<intxref refid = "E6JB0A6206003">Extracción e instalación del conjunto del cable de la bobina de contacto</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF. Sustituya el módulo (inflador) del airbag del conductor como se indica en 
+<intxref refid = "E6JB0A8206005">Extracción e instalación del módulo (inflador) del airbag del conductor</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Después de terminar la inspección y las reparaciones, haga lo siguiente.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vuelva a conectar los componentes del sistema del airbag, y asegúrese de que están correctamente montados.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si aparece algún DTC, bórrelo como se explica en 
+<intxref refid = "E6JB0A8204005">Borrado de DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repita los pasos de 
+<intxref refid = "E6JB0A8204001">Inspección del sistema de diagnóstico del airbag</intxref>
+ para asegurarse de que la avería está corregida.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

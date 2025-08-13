@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0EA304011" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "0" modify = "0">
+<title>
+DTC P1618: Error de comunicación CAN del módulo de control del arranque sin llaves (para vehículos con sistema de arranque sin llaves)
+</title>
+<servinfosub id = "E5JB0EA304011001" page = "1">
+<title>
+Diagrama del cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0EA302001">Diagrama del circuito de cableado del sistema de control del inmovilizador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0EA304011002">
+<title>
+Condición de detección y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se detecta continuamente, durante un tiempo superior al especificado, un error de recepción de los datos de comunicación para el módulo de control del arranque sin llaves.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuitos de cables de la comunicación CAN, defectuosos
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor del ángulo de dirección (si está equipado), defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control del arranque sin llaves, defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control 4WD (si va equipado), defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (si va equipado), defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control ABS&#x002F;ESP&#174;, defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+Indicador combinado, averiado
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM averiado
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0EA304011003">
+<title>
+Localización y resolución de averías
+</title>
+<diag type = "test" id = "E5JB0EA304011004">
+<testgroup>
+<title>
+Confirmación del código de averías (DTC)
+</title>
+<test1>
+<ptxt>
+Borre el o los DTC consultando 
+<intxref refid = "E5JB0EA304003">Borrado de códigos de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si se detecta algún DTC consultando 
+<intxref refid = "E5JB0EA304002">Inspección del código de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detecta todavía el DTC P1618?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y resolución de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del código de averías (DTC) en el ECM
+</title>
+<question>
+¿Se detecta en el paso 1 un DTC que no sea el P1618?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lleve a cabo la localización y resolución de averías consultando el correspondiente diagrama de flujo.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión de la mala conexión en los conectores de los módulos de control ECM, ABS&#x002F;ESP&#174; y del arranque sin llaves
+</title>
+<test1>
+<ptxt>
+Para tener una conexión segura, revise todos los conectores y terminales de cable en los módulos de control ECM, ABS&#x002F;ESP&#174; y del arranque sin llaves, con el llave de encendido en OFF.
+</ptxt>
+</test1>
+<question>
+¿Están firmemente conectados todos los conectores y terminales de cable?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare la conexión o conexiones defectuosas.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si están abiertos o con alta resistencia los circuitos de cable de comunicación CAN entre los módulos de control ABS&#x002F;ESP&#174; y del arranque sin llaves
+</title>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;E03&#8221; del módulo de control ABS o el &#8220;E53&#8221; del módulo de control ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;G42&#8221; del módulo de control del arranque sin llaves.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia en los siguientes terminales de cable.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Vehículos no equipados con el módulo de control ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E03-12&#8221; del conector del ABS y el terminal de cable &#8220;G42-19&#8221; del conector del módulo de control del arranque sin llaves
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E03-6&#8221; del conector del ABS y el terminal de cable &#8220;G42-18&#8221; del conector del módulo de control del arranque sin llaves
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Vehículos equipados con el módulo de control ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E53-13&#8221; del conector del módulo de control ESP&#174; y el terminal de cable &#8220;G42-19&#8221; del conector del módulo de control del arranque sin llaves
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E53-44&#8221; del conector del módulo de control ESP&#174; y el terminal de cable &#8220;G42-18&#8221; del conector del módulo de control del arranque sin llaves
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es la resistencia de 1 &#937; o menos?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el corte o la alta resistencia que hay en el circuito de cable averiado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si hay cortocircuito entre los circuitos de cables de comunicación CAN entre los módulos de control ABS&#x002F;ESP&#174; y del arranque sin llaves
+</title>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;G31&#8221; del conector del BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;G28&#8221; del indicador combinado.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia en los siguientes terminales de cable.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Vehículos no equipados con el módulo de control ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E03-12&#8221; del conector del módulo de control ABS y el terminal de cable &#8220;G42-18&#8221; del conector del módulo de control del arranque sin llaves.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Vehículo equipado con el sistema ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E53-13&#8221; del conector del módulo de control ESP&#174; y el terminal de cable &#8220;G42-18&#8221; del conector del módulo de control del arranque sin llaves
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es infinita la resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito entre los circuitos de cable de comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si hay cortocircuito al circuito de masa en los circuitos de cable de la comunicación CAN
+</title>
+<test1>
+<ptxt>
+Mida la resistencia en los siguientes terminales de cable.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Vehículo no equipado con el sistema ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E03-6&#8221; del conector del módulo de control ABS y la masa de la carrocería
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E03-12&#8221; del conector del módulo de control ABS y la masa de la carrocería
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Vehículo equipado con el sistema ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E53-13&#8221; del conector del módulo de control ESP&#174; y la masa de la carrocería
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E53-44&#8221; del conector del módulo de control ESP&#174; y la masa de la carrocería
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es infinita la resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito al circuito de masa en los circuitos de cable de la comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si hay cortocircuito al circuito de alimentación en los circuitos de cable de la comunicación CAN.
+</title>
+<test1>
+<ptxt>
+Mida la resistencia en los siguientes terminales de cable con el interruptor de encendido en ON.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Vehículo no equipado con el sistema ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E03-6&#8221; del conector&#160;módulo de control ABS y la masa de la carrocería
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E03-12&#8221; del conector&#160;módulo de control ABS y la masa de la carrocería
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Vehículo equipado con el sistema ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E53-13&#8221; del conector del módulo de control ESP&#174; y la masa de la carrocería
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal de cable &#8220;E53-44&#8221; del conector del módulo de control ESP&#174; y la masa de la carrocería
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es la tensión de 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito al circuito de alimentación en los circuitos de cable de la comunicación CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión de los circuitos de masa y de alimentación del módulo de control del arranque sin llaves.
+</title>
+<test1>
+<ptxt>
+Revise los circuitos de masa y de alimentación del módulo de control del arranque sin llaves consultando 
+<intxref refid = "E5JB0EA504016">Inspección del circuito de alimentación eléctrica y de masa del módulo de control de arranque sin llave</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están bien?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace el módulo de control del arranque sin llaves por uno en buen estado y revise de nuevo.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de cable averiado.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

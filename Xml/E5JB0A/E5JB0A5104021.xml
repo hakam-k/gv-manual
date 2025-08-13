@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A5104021" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+No hay enclavamiento
+</title>
+<servinfosub id = "E5JB0A5104021001">
+<title>
+Descripción del sistema
+</title>
+<ptxt>
+El TCM desactiva la válvula solenoide de regulación de presión TCC en cualquiera de las situaciones siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La temperatura del refrigerante del motor es inferior a 60 &#176;C (140 &#176;F).
+</ptxt>
+</item>
+<item>
+<ptxt>
+El interruptor 4L&#x002F;N está encendido. (Modo 4L)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de luces de freno en posición ON. (El pedal de freno está pisado)
+</ptxt>
+</item>
+<item>
+<ptxt>
+El módulo TCM detecta los siguientes códigos DTC.
+</ptxt>
+<ptxt>
+P0712, P0713, P0717, P0722, P0962, P0963, P0973, P0974, P0976, P0977, P1702, P1703, P1774, P1777, P2763 y P2764
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "E5JB0A5104021002">
+<title>
+Localización y reparación de averías
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Para efectuar una prueba de carretera, elija un lugar donde no haya tráfico o riesgo de accidentes, y conduzca con cautela para evitar cualquier posible incidencia.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prueba de carretera debe ser realizada por 2 personas, un conductor y un encargado de pruebas, en una carretera nivelada.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<diag type = "test" id = "E5JB0A5104021003">
+<testgroup>
+<question>
+¿Se ha llevado a cabo la &#8220;Inspección del sistema de la A&#x002F;T&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A5104001">Inspección del sistema A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe el DTC
+</title>
+<question>
+¿Se ha detectado el DTC P0712, P0713, P0717, P0722, P0962, P0963, P0973, P0974, P0976, P0977, P1702, P1703, P1774, P1777, P2763 o P2764?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Aplique el diagrama de flujo del DTC para reparar y reintente la operación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de ECT
+</title>
+<test1>
+<ptxt>
+Caliente el motor hasta que llegue a su temperatura normal de funcionamiento.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Inspeccione la ECT con la herramienta de escaneado.
+</ptxt>
+</test1>
+<question>
+¿Se indica una ECT de más de 60 &#176;C (140&#176;F)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sensor de ECT, su circuito o sistema de refrigeración del motor, averiados. Si fuera éste el caso, reemplace por un TCM en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de señal del interruptor 4L&#x002F;N
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición ON, mida la tensión entre el terminal &#8220;E92-4&#8221; del conector del TCM y masa.
+</ptxt>
+<spec>
+<title>
+Especificación del interruptor 4L&#x002F;N
+</title>
+<ptxt>
+Posición de engranaje de transferencia o &#8220;4H&#8221;: Tensión de la batería
+</ptxt>
+<ptxt>
+Posición de engranaje de la transferencia &#8220;4L&#8221; o &#8220;N&#8221;: 0 &#8211; 2 V
+</ptxt>
+</spec>
+</test1>
+<question>
+¿Se encuentra el resultado dentro de las especificaciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Avería en el interruptor &#8220;4L&#8221; o en su circuito. Si fuera éste el caso, reemplace por un TCM en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de la señal del interruptor de luces de freno.
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición ON, mida la tensión entre el terminal &#8220;E61-34&#8221; del conector del ECM y masa.
+</ptxt>
+<spec>
+<title>
+Especificación del interruptor de luces de freno
+</title>
+<ptxt>
+El pedal de freno no está pisado: 0 &#8211; 1 V
+</ptxt>
+<ptxt>
+El pedal de freno está pisado: Tensión de la batería
+</ptxt>
+</spec>
+</test1>
+<question>
+¿se encuentra el resultado dentro de las especificaciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de TCM en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Interruptor de luces de freno mal ajustado; interruptor de luces de freno, o su circuito, defectuoso. Si fuera éste el caso, reemplace por un TCM en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E5JB0E1101003" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "0" modify = "0">
+<title>
+Descripción del sistema de diagnóstico a bordo
+</title>
+<servinfosub id = "E5JB0E1101003001">
+<title>
+Vehículo no equipado con conector de diagnóstico
+</title>
+<ptxt>
+El ECM de este vehículo realiza las funciones siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cuando la llave de contacto se coloca en ON, con el motor parado, el testigo de avería (MIL) (1) se enciende para verificar el circuito del testigo de avería (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando el ECM detecta una anomalía que afecta adversamente las emisiones del vehículo mientras el motor está en marcha, enciende el testigo de averías (1) en el indicador combinado del tablero de instrumentos, o lo hace destellar (el testigo destella solamente cuando se detecta un fallo de encendido que puede dañar el catalizador), y guarda en su memoria el área de la anomalía.
+</ptxt>
+<ptxt>
+(Sin embargo, si detecta consecutivamente 3 ciclos de conducción normales después de haber detectado una anomalía, apagará el testigo MIL (1) aunque el DTC permanecerá memorizado).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Con el fin de evitar detecciones erróneas y como condición para la detección de una avería en ciertas áreas del sistema supervisado por el ECM y para encender el testigo de averías (1), debido a tal anomalía, se ha adoptado la lógica de detección de dos ciclos de conducción.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando se detecta una avería, se almacenan en la memoria del ECM las condiciones del motor y de conducción como datos de imagen fija. (Consulte la descripción de otros detalles en 
+<intxref refid = "E5JB0E1101003007">Datos de imagen fija (vehículo no equipado con conector de diagnóstico)</intxref>
+.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Es posible comunicarse utilizando no sólo la herramienta de diagnóstico SUZUKI (2) sino también una herramienta de diagnóstico genérica OBD. (Con una herramienta de diagnóstico se puede acceder a la información de diagnóstico).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I5JB0A110002.swf" width = "88.000mm" height = "107.247mm" ver = "01" gw = "192" gh = "287"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "E5JB0E1101003002">
+<title>
+Vehículo equipado con conector de diagnóstico
+</title>
+<ptxt>
+Cuando la llave de contacto está en ON y el motor está en marcha, el ECM diagnostica los problemas que se pueden presentar en el área que incluye las piezas siguientes e indica el resultado encendiendo o haciendo destellar el testigo de averías (1).
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor A&#x002F;F (si va equipado)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de oxígeno calentado (si está instalado)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor ECT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor TP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor MAF
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor IAT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor MAP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor CMP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor CKP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de detonación
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de velocidad de rueda
+</ptxt>
+</item>
+<item>
+<ptxt>
+CPU (Unidad central de procesamiento) del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor APP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Válvula de control de aceite (motor M16)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relé del ventilador de refrigeración del radiador
+</ptxt>
+</item>
+</list1>
+<c-change/>
+<ptxt>
+El ECM y el testigo de averías (1) funcionan de la siguiente manera.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+El testigo de averías (1) se enciende cuando la llave de contacto se coloca en ON (pero el motor está parado) con el terminal del interruptor de diagnóstico sin conectar a masa, independientemente de la condición del sistema de control del motor y de las emisiones. Esto sólo es para comprobar el testigo de averías (1) en el juego de instrumentos y su circuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si las áreas precedentes del sistema de control del motor y de las emisiones no presentan ningún desperfecto después del arranque del motor (mientras el motor está funcionando), el testigo de averías (1) se apaga.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando el ECM detecta un desperfecto que ha ocurrido en las áreas anteriormente citadas, enciende el testigo de averías (1) mientras el motor está en marcha, avisando así al conductor de la existencia de una anomalía y, al mismo tiempo, almacena el área con anomalía en la memoria de reserva del ECM. (La memoria se mantiene inalterada incluso si la anomalía fue sólo temporal y desapareció inmediatamente. Y no se borra a menos que se corte la alimentación al ECM durante un tiempo especificado o se borre con la herramienta de diagnóstico SUZUKI (2)).
+</ptxt>
+<ptxt>
+Además, el DTC se puede leer con la herramienta de diagnóstico SUZUKI y con lo que se visualiza en el cuentakilómetros (5) del indicador combinado. (esto es, cuando el terminal (3) del interruptor de diagnóstico está conectado a masa con un cable de servicio (4) y la llave de contacto en ON.) Consulte otros detalles del procedimiento de revisión en 
+<intxref refid = "E5JB0E1104003">Comprobación de DTC</intxref>
+.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I5JB0A110003.swf" width = "88.000mm" height = "135.117mm" ver = "01" gw = "192" gh = "366"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Conector de diagnóstico
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "E5JB0E1101003003">
+<title>
+Ciclo de precalentamiento
+</title>
+<ptxt>
+Un ciclo de precalentamiento significa que el vehículo funciona durante el tiempo suficiente para que la temperatura del refrigerante del motor alcance al menos 22 &#176;C desde el arranque del motor, y llegue a la temperatura mínima de 70 &#176;C.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E1101003004">
+<title>
+Ciclo de conducción
+</title>
+<ptxt>
+Un &#8220;Ciclo de conducción&#8221; consiste en el arranque y parada del motor.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E1101003005">
+<title>
+Lógica de detección de 2 ciclos de conducción
+</title>
+<ptxt>
+La avería detectada en el primer ciclo de conducción se almacena en la memoria del ECM (en la forma de DTC provisional), pero el testigo de avería no se enciende en este momento. El testigo se enciende en la segunda detección de la misma avería en el siguiente ciclo de conducción.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E1101003006">
+<title>
+DTC pendiente
+</title>
+<ptxt>
+Un DTC pendiente es un DTC detectado y almacenado temporalmente en 1 ciclo de conducción del DTC que se detecta en la lógica de detección de 2 ciclos de conducción.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E1101003007">
+<title>
+Datos de imagen fija (vehículo no equipado con conector de diagnóstico)
+</title>
+<ptxt>
+El ECM almacena en su memoria las condiciones del motor y de conducción (con la forma de datos que se muestra en la figura) en el momento en que detecta una avería. Estos datos se denominan &#8220;Datos de imagen fija&#8221;.
+</ptxt>
+<ptxt>
+Por ello, es posible conocer las condiciones del motor y de la conducción (por ejemplo, si el motor estaba caliente o no, si el vehículo estaba en movimiento o parado, si la mezcla de aire &#x002F; combustible era rica o pobre) cuando se detectó una avería, consultando los datos de imagen fija. El ECM dispone además de una función que permite memorizar los datos de imagen fija de tres averías diferentes en el orden en que se detecta cada avería. Utilizando esta función es posible conocer el orden secuencial de las averías detectadas. El empleo de esta función es muy útil cuando se vuelve a inspeccionar o diagnosticar una avería.
+</ptxt>
+<figure>
+<graphic graphicname = "I3RB0A110002.swf" width = "88.000mm" height = "106.895mm" ver = "01" gw = "176" gh = "286"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Un 1 o un 2 entre paréntesis representa aquí el orden en el que se detecta la avería.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<topic id = "E5JB0E1101003008" page = "1">
+<title>
+Prioridad de los datos de imagen fija:
+</title>
+<ptxt>
+El ECM dispone de 4 recuadros en los que se pueden almacenar los datos de imagen fija. El primer recuadro conserva los datos de imagen fija de la avería que se detectó en primer lugar. Sin embargo, los datos de imagen fija que se conservan en este recuadro se actualizan de acuerdo con la prioridad descrita. (Si la avería descrita en el recuadro superior &#8220;1&#8221; se detecta mientras los datos de imagen fija del recuadro inferior &#8220;2&#8221; han sido memorizados, los datos de imagen fija &#8220;2&#8221; se actualizarán y se convertirán en los datos de imagen fija &#8220;1&#8221;).
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.787in"/>
+<colspec colnum = "2" colname = "2" colwidth = "6.417in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Prioridad
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Datos de imagen fija en el recuadro 1
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos de imagen fija en la detección inicial de la avería entre fallo de encendido (P0300 &#8211; P0304), sistema de combustible demasiado pobre (P0171), y sistema de combustible demasiado rico (P0172)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos de imagen fija cuando se detectó una avería diferente de las detectadas en &#8220;1&#8221;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<paragroup>
+<ptxt>
+Del 2º al 4º recuadro, los datos de imagen fija de cada avería se memorizan en el orden en que se detecta cada avería. Estos datos no se actualizan.
+</ptxt>
+<ptxt>
+En la tabla se muestran ejemplos de cómo se almacenan los datos de imagen fija cuando se detectan dos o más averías.
+</ptxt>
+</paragroup>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.167in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.802in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.457in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.260in"/>
+<colspec colnum = "5" colname = "5" colwidth = "1.260in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.260in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Orden de detección de la avería
+</ptxt>
+</entry>
+<entry namest = "3" nameend = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Recuadro
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Recuadro 1
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Recuadro 2
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Recuadro 3
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Recuadro 4
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Datos de imagen fija por actualizar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1ºs datos de imagen fija
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2ºs datos de imagen fija
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+3ºs datos de imagen fija
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+No hay avería
+</ptxt>
+</entry>
+<entry namest = "3" nameend = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+No hay datos de imagen fija
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+P0401 (EGR)
+</ptxt>
+<ptxt>
+detectado
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0401
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0401
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+P0171 (Sistema de combustible)
+</ptxt>
+<ptxt>
+detectado
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0171
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0401
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0171
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+P0300 (Fallo de encendido)
+</ptxt>
+<ptxt>
+detectado
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0171
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0401
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0171
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0300
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+P0301 (Fallo de encendido)
+</ptxt>
+<ptxt>
+detectado
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0171
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0401
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0171
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Datos al detectar P0300
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</topic>
+<topic id = "E5JB0E1101003009" page = "2">
+<title>
+Borrado de los datos de imagen fija:
+</title>
+<ptxt>
+Los datos de imagen fija se borran al mismo tiempo que se borra el DTC.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "E5JB0E1101003010">
+<title>
+Conector de enlace de datos (DLC)
+</title>
+<ptxt>
+El DLC (1) cumple con la norma SAE J1962 en lo que respecta a la forma del conector y la asignación de las patillas.
+</ptxt>
+<ptxt>
+La línea de datos en serie OBD (3) (línea K de ISO 9141) la utilizan la herramienta de diagnóstico SUZUKI o la herramienta genérica de diagnóstico OBD para comunicarse con el ECM, SDM del airbag, módulo de control del inmovilizador (en el ECM), BCM (módulo de control eléctrico de la carrocería), TCM (módulo de control de la transmisión (para el modelo A&#x002F;T)), módulo de control 4WD (si va equipado) y módulo de control ABS &#x002F; ESP&#174;.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A110004.swf" width = "88.000mm" height = "91.372mm" ver = "01" gw = "164" gh = "242"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+B &#x002B; (Positivo de la batería del vehículo sin interruptor)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Masa del ECM (Masa de la señal)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Masa de la carrocería (Masa de chasis)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0EA304012" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P1623: Error de línea de comunicación del inmovilizador
+</title>
+<servinfosub id = "E5JB0EA304012001" page = "1">
+<title>
+Diagrama del cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0EA302001">Diagrama del circuito de cableado del sistema de control del inmovilizador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0EA304012002">
+<title>
+Condición de detección y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+El ECM detecta un error de comunicación entre el módulo de control del inmovilizador (ICM) y el ECM.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fusible o fusibles relacionados, fundidos
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mala conexión en el conector del módulo de control del inmovilizador (ICM)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mala conexión en el conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito de cable de alimentación, abierto
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito de cable de masa, abierto
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuitos de cable de comunicación, abiertos
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cortocircuito al circuito de masa en los circuitos de cable de comunicación
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cortocircuito al circuito de alimentación en los circuitos de cable de comunicación
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cortocircuito de los circuitos de cable de comunicación
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control del inmovilizador (ICM), averiado
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM averiado
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0EA304012003">
+<title>
+Localización y resolución de averías
+</title>
+<diag type = "test" id = "E5JB0EA304012004">
+<testgroup>
+<title>
+Confirmación del código de averías (DTC)
+</title>
+<test1>
+<ptxt>
+Borre el o los DTC consultando 
+<intxref refid = "E5JB0EA304003">Borrado de códigos de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si se detecta algún DTC consultando 
+<intxref refid = "E5JB0EA304002">Inspección del código de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detecta todavía el DTC P1621?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y resolución de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del fusible
+</title>
+<test1>
+<ptxt>
+Compruebe si está fundido alguno de los fusibles relacionados.
+</ptxt>
+</test1>
+<question>
+¿Hay algún fusible fundido?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya el fusible o fusibles fundidos por otros nuevos.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión de la mala conexión del módulo de control del inmovilizador (ICM)
+</title>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) consultando 
+<intxref refid = "E5JB0EA306001">Extracción e instalación del módulo de control del inmovilizador (ICM)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si estñan bien las conexiones de cable en el conector &#8220;G24&#8221; del módulo de control del inmovilizador.
+</ptxt>
+</test1>
+<question>
+¿Están bien las conexiones de todos los cables?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare la conexión o conexiones defectuosas.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión de la conexión defectuosa del ECM 
+</title>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;E23&#8221; del ECM consultando 
+<intxref refid = "E5JB0E1306001">Extracción e instalación del módulo de control del motor (ECM)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si están bien las conexiones de cable en los terminales &#8220;E23-13&#8221; y &#8220;E23-28&#8221;.
+</ptxt>
+</test1>
+<question>
+¿Están bien las conexiones de todos los cables?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare la conexión o conexiones defectuosas.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si está abierto el circuito de alimentación.
+</title>
+<test1>
+<ptxt>
+Conecte el conector &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) consultando 
+<intxref refid = "E5JB0EA306001">Extracción e instalación del módulo de control del inmovilizador (ICM)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Con el interruptor de encendido en ON, revise la tensión entre el terminal de cable &#8220;G24-1&#8221; del conector del módulo de control del inmovilizador (ICM) y la masa de la carrocería.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión de 12 V aproximadamente?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto del circuito de alimentación.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si está abierto el circuito de masa
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en ON, revise la tensión entre el terminal de cable &#8220;G24-2&#8221; del conector del módulo de control del inmovilizador (ICM) y la masa de la carrocería.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 0?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto del circuito de masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si está abierto el circuito de comunicación
+</title>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) consultando 
+<intxref refid = "E5JB0EA306001">Extracción e instalación del módulo de control del inmovilizador (ICM)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;E23&#8221; del ECM consultando 
+<intxref refid = "E5JB0E1306001">Extracción e instalación del módulo de control del motor (ECM)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Revise la resistencia entre el terminal de cable &#8220;G24-3&#8221; del conector del módulo de control del inmovilizador y el terminal de cable &#8220;E23-28&#8221; del conector del ECM.
+</ptxt>
+</test1>
+<question>
+¿Es infinita la resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto del circuito de comunicación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si hay cortocircuito al circuito de masa en el circuito de comunicación
+</title>
+<test1>
+<ptxt>
+Con los conectores &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) y &#8220;E23&#8221; del ECM desconectados, revise la resistencia entre el terminal de cable &#8220;G24-3&#8221; del conector del módulo de control del inmovilizador y la masa de la carrocería.
+</ptxt>
+</test1>
+<question>
+¿Es infinita la resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito al circuito de masa del circuito de comunicación.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si hay cortocircuito al circuito de alimentación en el circuito de comunicación
+</title>
+<test1>
+<ptxt>
+Con los conectores &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) y &#8220;E23&#8221; del ECM desconectados, ponga el interruptor de encendido en ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal del cable &#8220;G24-3&#8221; del conector del módulo de control del inmovilizador y la masa de la carrocería.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión de 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito al circuito de alimentación del circuito de comunicación.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si está abierto el circuito de comunicación
+</title>
+<test1>
+<ptxt>
+Con los conectores &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) y &#8220;E23&#8221; del ECM desconectados, revise la resistencia entre el terminal de cable &#8220;G24-4&#8221; del conector del módulo de control del inmovilizador (ICM) y el terminal del cable &#8220;E23-13&#8221; del conector del ECM.
+</ptxt>
+</test1>
+<question>
+¿Es infinita la resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto del circuito de comunicación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si hay cortocircuito al circuito de masa en el circuito de comunicación
+</title>
+<test1>
+<ptxt>
+Con los conectores &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) y &#8220;E23&#8221; del ECM desconectados, revise la resistencia entre el terminal de cable &#8220;G24-4&#8221; del conector del módulo de control del inmovilizador y la masa de la carrocería.
+</ptxt>
+</test1>
+<question>
+¿Es infinita la resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito al circuito de masa del circuito de comunicación.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si hay cortocircuito al circuito de alimentación en el circuito de comunicación
+</title>
+<test1>
+<ptxt>
+Con los conectores &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) y &#8220;E23&#8221; del ECM desconectados, ponga el interruptor de encendido en ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal del cable &#8220;G24-4&#8221; del conector del módulo de control del inmovilizador y la masa de la carrocería.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión de 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito al circuito de alimentación del circuito de comunicación.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si está en cortocircuito el circuito de comunicación
+</title>
+<test1>
+<ptxt>
+Con los conectores &#8220;G24&#8221; del módulo de control del inmovilizador (ICM) y &#8220;E23&#8221; del ECM desconectados, revise la resistencia entre los terminales de cable &#8220;G24-3&#8221; y &#8220;G24-4&#8221; del conector del módulo de control del inmovilizador (ICM).
+</ptxt>
+</test1>
+<question>
+¿Es infinita la resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito de los circuitos de comunicación
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del módulo de control del inmovilizador (ICM)
+</title>
+<test1>
+<ptxt>
+Revise el módulo de control del inmovilizador (ICM) consultando 
+<intxref refid = "E5JB0EA304018">Inspección del módulo de control del inmovilizador (ICM) y su circuito</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está normal el módulo de control del inmovilizador (ICM)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace el ECM por uno nuevo consultando 
+<intxref refid = "E5JB0E1306001">Extracción e instalación del módulo de control del motor (ECM)</intxref>
+ y, después, lleve a cabo 
+<intxref refid = "E5JB0EA306003">Procedimiento para después de la sustitución del ECM</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el módulo de control del inmovilizador (ICM) por uno nuevo consultando 
+<intxref refid = "E5JB0EA306001">Extracción e instalación del módulo de control del inmovilizador (ICM)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

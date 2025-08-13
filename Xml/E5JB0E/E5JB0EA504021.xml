@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10E">
+<servcat sctnbr = "10" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0EA504021" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC nº 33: Bus de comunicación del módulo de control, desactivado
+</title>
+<servinfosub id = "E5JB0EA504021001">
+<title>
+Diagrama del cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0EA504020">DTC nº 31: Pérdida de comunicación con el BCM</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0EA504021002">
+<title>
+Condición de detección del DTC y área del problema
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.268in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.268in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+No está disponible la comunicación con todos los módulos de control conectados por CAN.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito de comunicación CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Indicador combinado
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control del arranque sin llave
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control 4WD (si va equipado)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control del ABS o del ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (modelo A&#x002F;T)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor del ángulo de dirección (si va equipado)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0EA504021003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Borre el DTC consultando 
+<intxref refid = "E5JB0EA504009">Borrado de DTC</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo en marcha durante 1 minuto o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Revise el DTC consultando 
+<intxref refid = "E5JB0EA504007">Revisión del DTC</intxref>
+.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "E5JB0EA504021004">
+<title>
+Localización y resolución de averías
+</title>
+<diag type = "test" id = "E5JB0EA504021005">
+<testgroup>
+<question>
+¿Se realizó la &#8220;Revisión del sistema de arranque sin llave&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0EA504004">Inspección del sistema de arranque sin llave</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del conector del módulo de control
+</title>
+<test1>
+<ptxt>
+Revise la conexión de los conectores de todos los módulos de control que se comunican mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe de nuevo si hay DTC para el módulo de control del arranque sin llave.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC nº 33?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Avería intermitente. Compruebe los problemas intermitentes consultando 
+<intxref refid = "E5JB0E0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del circuito de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores de todos los módulos de control que se comunican mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si está abierto, en cortocircuito o con alta resistencia, el circuito de comunicación CAN entre los módulos de control. 
+</ptxt>
+</test1>
+<question>
+¿Está en buen estado el circuito de comunicación CAN?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del DTC del módulo de control del arranque sin llave
+</title>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Conecte los conectores de todos los módulos de control desconectados que se comunican mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector de cualquier módulo de control que no sea el módulo de control del arranque sin llave y el indicador combinado.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe de nuevo el DTC para el módulo de control del arranque sin llave.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC nº 33?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+De la misma forma, desconecte uno a uno los conectores de módulos de control que no sean el módulo de control del arranque sin llave y el indicador combinado para comprobar si se detecta el DTC nº 33.
+</ptxt>
+<ptxt>
+Si se detecta el DTC nº 33, aunque el conector de un módulo de control que no es el módulo de control del arranque sin llave ni el indicador combinado está desconectado, reemplace el módulo de control del arranque sin llave por uno en buen estado y revise de nuevo.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Revise el circuito de alimentación y de masa del módulo de control desconectado. Si el circuito está bien, reemplace el módulo de control desconectado por uno en buen estado y revise de nuevo.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

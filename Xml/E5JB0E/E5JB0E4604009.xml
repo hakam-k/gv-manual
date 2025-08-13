@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0E4604009" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "0" modify = "0">
+<title>
+El testigo del ESP&#174; permanece encendido
+</title>
+<servinfosub id = "E5JB0E4604009001">
+<title>
+Diagrama del cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0E4604008">El testigo del ESP&#174; no se enciende con la llave de contacto en ON</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E4604009002">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+El funcionamiento (ON&#x002F;OFF) del testigo del ESP&#174; lo controla el módulo de control del ESP&#174; mediante el módulo impulsor de la luz en el indicador combinado.
+</ptxt>
+<ptxt>
+Si el sistema de ESP&#174; está en buen estado, el módulo de control del ESP&#174; enciende el testigo del ESP&#174;, con la llave de contacto en ON, lo mantiene encendido durante 2 segundos y, a continuación, lo apaga. Si se detecta una anomalía en el sistema, el módulo de control del ESP&#174; enciende de manera continua el testigo del ESP&#174;. Además, el módulo impulsor de la luz lo enciende de manera continua cuando está desconectado el módulo de control del ESP&#174;.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E4604009003">
+<title>
+Localización y resolución de averías
+</title>
+<diag type = "test" id = "E5JB0E4604009004">
+<testgroup>
+<test1>
+<ptxt>
+Lleve a cabo la revisión del código de averías.
+</ptxt>
+</test1>
+<question>
+¿Hay algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de flujo del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Están en buen estado los fusibles principales del motor de la bomba del ABS y de la solenoide del ABS?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el fusible y compruebe si hay cortocircuito a la masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ponga la llave de contacto en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control del ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la conexión correcta del módulo de control del ESP&#174; en los terminales &#8220;E53-35&#8221;, &#8220;E53-16&#8221; y &#8220;E53-47&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, coloque la llave de contacto en ON y mida la tensión entre el terminal &#8220;E53-35&#8221; y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito &#8220;GRN&#x002F;ORN&#8221;, abierto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ponga la llave de contacto en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que es correcta la conexión del módulo de control del ESP&#174; en los terminales &#8220;E53-1&#8221; y &#8220;E53-32&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, ponga la llave de contacto en ON y mida la tensión entre los terminales &#8220;E53-1&#8221;, &#8220;E53-32&#8221; y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito &#8220;WHT&#x002F;RED&#8221; y&#x002F;o &#8220;WHT&#x002F;BLU&#8221;, abierto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ponga la llave de contacto en OFF y mida la resistencia entre los terminales &#8220;E53-16&#8221; y &#8220;E53-47&#8221; y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia de menos de 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito de masa para el módulo de control ESP&#174; abierto o con alta resistencia.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Compruebe el circuito de comunicación de CAN entre el indicador combinado y el módulo de control del ESP&#174; consultando 
+<intxref refid = "E5JB0E4604020">DTC U1073: Bus de comunicación del módulo de control, desactivado</intxref>
+</ptxt>
+</test1>
+<question>
+¿Está el circuito de comunicación CAN en buen estado?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un indicador combinado en buen estado y revise de nuevo. Si el testigo del ABS permanece encendido, reemplace el conjunto de unidad hidráulica &#x002F; módulo de control del ESP&#174; por uno en buen estado y revise de nuevo.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

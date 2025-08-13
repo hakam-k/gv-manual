@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0B3304027" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "0" modify = "0">
+<title>
+DTC U1100: Pérdida de comunicación con el ECM
+</title>
+<servinfosub id = "E5JB0B3304027001">
+<title>
+Diagrama del cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0B3304026">DTC U1073: Bus de comunicación del módulo de control desactivado</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0B3304027002">
+<title>
+Condición de detección del DTC y área del problema
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.001in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.178in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se detecta continuamente, durante un tiempo superior al especificado, un error de recepción de datos de comunicación para el ECM.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito de comunicación de CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unidad hidráulica &#x002F; módulo de control de ABS o ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de 4WD
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0B3304027003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Borre el DTC con la herramienta de diagnóstico.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo en marcha durante 1 minuto o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo y revise el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "E5JB0B3304027004">
+<title>
+Localización de averías
+</title>
+<diag type = "test" id = "E5JB0B3304027005">
+<testgroup>
+<question>
+¿Se ha llevado a cabo una &#8220;comprobación del sistema de control 4WD&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0B3304001">Inspección del sistema de control de 4WD</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del DTC
+</title>
+<test1>
+<ptxt>
+Comprobación DTC en módulo de control 4WD.
+</ptxt>
+</test1>
+<question>
+¿Se detectan los DTC U1100 y U1073 juntos?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0B3304026">DTC U1073: Bus de comunicación del módulo de control desactivado</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del DTC
+</title>
+<test1>
+<ptxt>
+Revise el DTC en el ECM.
+</ptxt>
+</test1>
+<question>
+¿Se ha detectado el DTC P0500?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0B1104116">DTC P0500: Avería del sensor &#8220;A&#8221; de velocidad del vehículo</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe cada conector del módulo de control
+</title>
+<test1>
+<ptxt>
+Compruebe la conexión de los conectores de todos los módulos de control que se comunican mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vuelva a comprobar el módulo de control de 4WD.
+</ptxt>
+</test1>
+<question>
+¿Se ha detectado el DTC U1100?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+NO Avería intermitente. Compruebe los problemas intermitentes consultando 
+<intxref refid = "E5JB0B0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del circuito de comunicación de CAN
+</title>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores de todos los módulos de control que se comunican mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si está abierto, en cortocircuito o con alta resistencia, el circuito de comunicación de CAN entre los módulos de control. 
+</ptxt>
+</test1>
+<question>
+¿Está el circuito de comunicación de CAN en buen estado?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Revise el circuito de masa y de alimentación del ECM. Si el circuito está bien, reemplace el ECM por uno en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

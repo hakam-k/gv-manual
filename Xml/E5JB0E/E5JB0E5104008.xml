@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0E5104008" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Tabla a prueba de fallos
+</title>
+<ptxt>
+Esta función la suministra el mecanismo de seguridad que permite conducir de manera segura incluso aunque falle la válvula solenoide, el sensor o su circuito. En la tabla siguiente se muestra la función a prueba de fallos para cada condición de fallo del sensor, del solenoide, del TCM o de su circuito.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "3" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.629in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.466in"/>
+<colspec colnum = "3" colname = "3" colwidth = "4.095in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC nº
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+Funcionamiento a prueba de fallos
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104025"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0705
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Fallo de funcionamiento del circuito del sensor de posición de la transmisión (entrada de PRNDL)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+El control del TCM se realiza con el siguiente orden de prioridades.
+</ptxt>
+<ptxt>
+3&gt; D&gt; 2&gt; L&gt; R&gt; N&gt; P
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento controlada por deslizamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de marcha atrás.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de control de crucero. (si va equipado con el sistema de control de crucero)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el modo potencia.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104026"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0707
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito bajo del sensor de posición de la transmisión 
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se asume que la posición es &#8220;D&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento controlada por deslizamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de marcha atrás.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de control de crucero. (si va equipado con el sistema de control de crucero)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el modo potencia.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104027"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0712
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito bajo del sensor &#8220;A&#8221; de temperatura del líquido de la transmisión 
+</ptxt>
+</entry>
+<entry colname = "3" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se asume que la temperatura del líquido de A&#x002F;T es de 80 &#176;C.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de presión de la línea en el cambio de marchas.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104028"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0713
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito alto del sensor &#8220;A&#8221; de temperatura del líquido de la transmisión
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104029"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0717
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Sin señal del circuito del sensor de velocidad de la turbina &#x002F; entrada
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se inhibe la solicitud de reducción del par al ECM (control de reducción del par).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de presión de la línea en el cambio de marchas.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104030"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0722
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Sin señal del circuito del sensor de velocidad de salida
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Para el control del cambio de marchas se emplea la velocidad del vehículo calculada por la señal del sensor de velocidad del eje de entrada en vez de la velocidad del vehículo calculada por la señal del sensor VSS de velocidad del eje de salida.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el cambio ascendente a 4ª.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe la solicitud de reducción del par al ECM (control de reducción del par).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de presión de la línea en el cambio de marchas.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0742
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito del embrague del convertidor de par agarrotado activado
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Cuando la velocidad del vehículo es inferior a 10 km&#x002F;h, la posición del engranaje se fija en 1ª para impedir el calado del motor.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0752
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Solenoide de cambio &#8220;A&#8221; agarrotado activado
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se inhibe el cambio ascendente a 4ª.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104034"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0962
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito de control del solenoide &#8220;A&#8221; de control de presión, bajo
+</ptxt>
+</entry>
+<entry colname = "3" morerows = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se corta el suministro de alimentación para todas las válvulas solenoide.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La posición del engranaje se fija de acuerdo con la posición de la palanca de selección como se muestra a continuación.
+</ptxt>
+<ptxt>
+R: Marcha atrás
+</ptxt>
+<ptxt>
+D: 4ª
+</ptxt>
+<ptxt>
+3: 4ª
+</ptxt>
+<ptxt>
+2: 3ª
+</ptxt>
+<ptxt>
+L: 1ª
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de presión de la línea en el cambio de marchas.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104035"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0963
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito de control del solenoide &#8220;A&#8221; de control de presión, alto
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0973
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito de control del solenoide de cambio &#8220;A&#8221;, bajo
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104037"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0974
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito de control del solenoide de cambio &#8220;A&#8221;, alto
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0976
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito de control del solenoide de cambio &#8220;B&#8221;, bajo
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104037"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P0977
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito de control del solenoide de cambio &#8220;B&#8221;, alto
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104038"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P1702
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Error de suma de comprobación de la memoria del módulo de control interno
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se corta el suministro de alimentación para todas las válvulas solenoide.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La posición del engranaje se fija de acuerdo con la posición de la palanca de selección como se muestra a continuación.
+</ptxt>
+<ptxt>
+R: Marcha atrás
+</ptxt>
+<ptxt>
+D: 4ª
+</ptxt>
+<ptxt>
+3: 4ª
+</ptxt>
+<ptxt>
+2: 3ª
+</ptxt>
+<ptxt>
+L: 1ª
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de presión de la línea en el cambio de marchas.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104039"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P1703
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Datos no válidos de CAN - TCM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si hay un fallo de funcionamiento de la señal de posición de la mariposa:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se asume que la apertura de la mariposa para el control de presión de la línea es del 100&#x0025;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se asume que la apertura de la mariposa para el control del cambio de marcha es del 0&#x0025;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de presión de la línea en el cambio de marchas.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Si hay un fallo de funcionamiento de la señal de temperatura del refrigerante del motor:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se supone que la temperatura del refrigerante del motor es 80 &#176;C.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento controlada por deslizamiento.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Si hay un fallo de funcionamiento de la señal de revoluciones del motor:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se supone que las revoluciones del motor son las máximas.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Si hay un fallo de funcionamiento de la señal de par del motor:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento controlada por deslizamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se supone que el par del motor es el máximo.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+En el caso de señal de la velocidad del vehículo:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de control de crucero. (si va equipado con el sistema de control de crucero)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104041"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P1774
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Problema de comunicación de CAN - TCM
+</ptxt>
+</entry>
+<entry colname = "3" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se asume que la apertura de la mariposa para el control de presión de la línea es del 100&#x0025;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se asume que la apertura de la mariposa para el control del cambio de marcha es del 0&#x0025;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se supone que las revoluciones del motor son las máximas.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se supone que el par del motor es el máximo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se supone que la temperatura del refrigerante del motor es 80 &#176;C.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el control de presión de la línea en el cambio de marchas.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe la solicitud de reducción del par al ECM (control de reducción del par).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se emite el valor máximo de la presión de línea.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se inhibe el modo potencia. (sólo P1774)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104042"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P1777
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Pérdida de comunicación del TCM con el ECM (Error de recepción)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104043"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P1778
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Pérdida de comunicación del TCM con el BCM (error de recepción)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se inhibe el modo potencia. 
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104044"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P1874
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Avería del circuito del interruptor 4L (cortocircuito)
+</ptxt>
+</entry>
+<entry colname = "3" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento controlada por deslizamiento. (si va equipado con el interruptor 4L&#x002F;N)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104045"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P1875
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Avería del circuito del interruptor 4L (abierto)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104046"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P1878
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vibración del embrague del convertidor de par
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento controlada por deslizamiento.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104047"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P2763
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito del embrague del convertidor de par, alto
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se corta el suministro de alimentación para el solenoide de control de la presión TCC.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+<intxreftitleoff refid = "E5JB0E5104048"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+P2764
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito bajo del embrague del convertidor de par
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se inhibe el funcionamiento de la función de enclavamiento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando la velocidad del vehículo es inferior a 10 km&#x002F;h, la posición del engranaje se fija en 1ª para impedir el calado del motor.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

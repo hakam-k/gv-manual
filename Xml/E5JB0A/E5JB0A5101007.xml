@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E5JB0A5101007" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Descripción del sistema de diagnósticos en el vehículo
+</title>
+<servinfosub id = "E5JB0A5101007004">
+<title>
+Para vehículos sin conector de diagnóstico del motor
+</title>
+<ptxt>
+Para el sistema de control de la transmisión automática, el módulo de TCM tiene las funciones siguientes. Consulte 
+<intxref refid = "E5JB0A5104061">Inspección del TCM y sus circuitos</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cuando el interruptor de encendido se coloca en la posición ON con el motor parado,  se enciende el indicador luminoso de avería (MIL) (1) para comprobar la bombilla del MIL.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando el módulo TCM detecta una avería en el sistema de control de la A&#x002F;T, el módulo TCM enciende el indicador luminoso de avería (MIL) (1) y registra en la memoria del TCM el DTC de avería.
+</ptxt>
+<ptxt>
+(Sin embargo, si detecta que 3 ciclos de conducción continuos son normales tras detectar la avería, apaga la MIL aunque permanezca en memoria el DTC.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Es posible comunicarse a través de DLC (2) utilizando no sólo la herramienta de escaneado SUZUKI (3), sino también una herramienta de escaneado genérica OBD. (Es posible comprobar y borrar la información de diagnóstico utilizando un instrumento de escaneo)
+</ptxt>
+<figure page = "2">
+<graphic graphicname = "I5JB0A510011.swf" width = "88.000mm" height = "107.247mm" ver = "01" gw = "192" gh = "287"/>
+</figure>
+</item>
+</list1>
+<c-change/>
+<topic id = "E5JB0A5101007005">
+<title>
+Lógica de detección de 2 ciclos de conducción
+</title>
+<ptxt>
+La avería detectada en el primer ciclo de conducción se conserva en la memoria del módulo TCM (en forma de DTC pendiente y de datos de imagen fija), pero el indicador luminoso de avería no se enciende. El indicador luminoso se enciende cuando la misma avería se detecta por segunda vez en el siguiente ciclo de conducción.
+</ptxt>
+</topic>
+<topic id = "E5JB0A5101007006">
+<title>
+DTC pendiente
+</title>
+<ptxt>
+DTC pendiente significa que un DTC que ha sido memorizado temporalmente tras un 1 ciclo (trayecto) de conducción, se detecta también en la lógica de detección de segundo ciclo de conducción.
+</ptxt>
+</topic>
+<topic id = "E5JB0A5101007007">
+<title>
+Datos de imagen fija
+</title>
+<ptxt>
+El TCM memoriza el estado del motor y las características de conducción en el momento de la detección de una avería. Estos datos se llaman &#8220;Datos de imagen fija&#8221;.
+</ptxt>
+<ptxt>
+Gracias a ello, es posible examinar los datos de imagen fija y conocer el estado del motor y las características de conducción (por ejemplo, si el motor estaba caliente o no, si se estaba conduciendo el vehículo o si estaba detenido) cuando se detectó una avería.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "E5JB0A5101007001">
+<title>
+Para vehículos con conector de diagnóstico del motor
+</title>
+<ptxt>
+Para el sistema de control de la transmisión automática, el módulo de TCM tiene las funciones siguientes. Consulte 
+<intxref refid = "E5JB0A5104061">Inspección del TCM y sus circuitos</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cuando se enciende el interruptor de encendido sin que se detecte ninguna avería en el sistema de control A&#x002F;T, el indicador de advertencia de la transmisión (1) se ilumina durante unos 2 segundos después de que el interruptor de encendido se coloca en la posición ON y a continuación pasa a OFF para comprobar la bombilla.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando el TCM detecta una avería en el sistema de control de T&#x002F;A, lo indica con el indicador de advertencia de la transmisión (1) y almacena el DTC de avería en la memoria.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Es posible comunicar con el módulo TCM mediante el conector (3) de enlace de datos (DLC), empleando herramienta de escaneado (2). Es posible comprobar y borrar la información de diagnóstico por medio de la herramienta de escaneado SUZUKI.
+</ptxt>
+</item>
+<p-change/>
+<item>
+<ptxt>
+También es posible emitir el DTC almacenado en el TCM mostrando el DTC en el cuentakilómetros de pantalla digital (6) con el terminal del interruptor de diagnóstico (5) del conector del monitor (4) conectado a masa. Si no hay DTC en la memoria del módulo de TCM, se emite repetidamente el DTC 0000. Si hay uno o más DTC en la memoria del módulo de TCM, se emiten en orden secuencial creciente comenzando por el número de código más bajo. Una vez emitidos todos los DTC, vuelven a emitirse en la misma secuencia.
+</ptxt>
+<figure page = "2">
+<graphic graphicname = "I5JB0A510012.swf" width = "88.000mm" height = "179.920mm" ver = "01" gw = "192" gh = "493"/>
+</figure>
+</item>
+</list1>
+<c-change/>
+<topic id = "E5JB0A5101007003">
+<title>
+Lógica de detección de 2 ciclos de conducción
+</title>
+<ptxt>
+La avería detectada en el primer ciclo de conducción se conserva en la memoria del módulo TCM (en forma de DTC pendiente y de datos de imagen fija), pero el indicador luminoso de avería no se enciende. El indicador luminoso se enciende cuando la misma avería se detecta por segunda vez en el siguiente ciclo de conducción.
+</ptxt>
+</topic>
+<topic id = "E5JB0A5101007002">
+<title>
+DTC pendiente
+</title>
+<ptxt>
+DTC pendiente significa que un DTC que ha sido memorizado temporalmente tras un 1 ciclo (trayecto) de conducción, se detecta también en la lógica de detección de segundo ciclo de conducción.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

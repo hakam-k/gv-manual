@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0A1114064" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1674: Comunicación de la CAN (error de bus)
+</title>
+<servinfosub id = "E6JB0A1114064001">
+<title>
+Diagrama de cableado
+</title>
+<figure>
+<graphic graphicname = "I5JB0D110007.swf" width = "183.000mm" height = "183.800mm" ver = "01" gw = "444" gh = "504"/>
+<callout-l>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.937in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.559in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector del módulo de control de arranque sin llave (si está instalado) (visto desde el lado del mazo de cables)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector del ECM (visto desde el lado del mazo de cables)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Módulo de control de 4WD (si dispone de ello)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;C&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector del TCM (para el modelo A&#x002F;T) (visto desde el lado del mazo de cables)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+TCM (para modelos con A&#x002F;T)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;D&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+DLC (visto desde el lado del terminal)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Módulo de control de arranque sin llave (si el vehículo dispone de él)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;E&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector del conjunto de unidad hidráulica&#x002F;módulo de control del ABS (visto desde el lado del terminal) 
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;F&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector del juego de instrumentos (visto desde el lado del mazo de cables)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;G&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector del módulo de control 4WD (visto desde el lado del mazo de cables)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conjunto de módulo de control &#x002F; unidad hidráulica del ABS
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;H&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector del BCM (visto desde el lado del mazo de cables) 
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+8.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Juego de instrumentos
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;I&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+El conector del módulo de control del ESP&#174; (visto desde el lado del mazo de cables)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+9.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector de empalmes del circuito de la CAN
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;J&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Conector del sensor del ángulo de dirección (visto desde el lado del mazo de cables) 
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Módulo de control ESP&#174;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;K&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Vehículo sin ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Sensor de ángulo de la dirección (para vehículos con ESP&#174;)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;L&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Vehículo con ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout-l>
+</figure>
+</servinfosub>
+<servinfosub id = "E6JB0A1114064002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Error de transmisión incoherente con los datos de transmisión y los datos de la supervisión de la transmisión (supervisión de línea CAN) detectado de forma continua en más de 7 ocasiones
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (para modelos con A&#x002F;T)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de arranque sin llave (si el vehículo dispone de él)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control del ABS o ESP&#174; 
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de 4WD (si dispone de ello)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Juego de instrumentos
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito de la línea de comunicación de la CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de ángulo de la dirección (para vehículos con ESP&#174;)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0A1114064003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC utilizando la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo en marcha durante al menos 1 minuto.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E6JB0A1114064004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las medidas de precaución para la localización y reparación de averías del DTC en 
+<intxref refid = "E6JB0A1110003">Precauciones para la localización y reparación de averías del DTC:Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E6JB0A1114064005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0A1114001">Inspección del sistema de control del motor y de las emisiones:Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del DTC
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del ECM, TCM (en modelos con A&#x002F;T), módulo de control del ABS &#x002F; ESP&#174;, módulo de control de 4WD (si está instalado), módulo de control de arranque sin llave (si está instalado) y BCM.
+</ptxt>
+</test1>
+<question>
+¿Aparece algún otro DTC además de los de la comunicación de la CAN en cada módulo de control (además de los DTC P1618, P1674, P1676, P1678, P1685 en el ECM, los DTC P1774, P1777, P1778 en el TCM (en modelos con A&#x002F;T), los DTC U1073, U1100, U1101, U1121, U1126, U1139, U1140, U1144 en el BCM, en el módulo de control del ABS &#x002F; ESP&#x002F; y en el módulo de control de 4WD (si está instalado) y el DTC 31   &#x002F; 33 en el módulo de control de arranque sin llave (si está instalado))?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de diagnóstico del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de conectores de ECM, TCM (en modelos con A&#x002F;T), BCM, módulo de control del ABS &#x002F; ESP&#174;, módulo de control de 4WD (si está instalado), juego de instrumentos, módulo de control de arranque sin llave (si está instalado) y sensor de ángulo de la dirección (para vehículos con ESP&#174;.
+</title>
+<test1>
+<ptxt>
+Comprobación de la conexión en cada terminal de conector de ECM, TCM (en modelos con A&#x002F;T), BCM, módulo de control del ABS &#x002F; ESP&#174;, módulo de control de 4WD (si está instalado), juego de instrumentos, módulo de control de arranque sin llave (si está instalado) y sensor de ángulo de la dirección (para vehículos con ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones están bien, vuelva a revisar el DTC en el ECM con el motor en marcha.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E6JB0A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del circuito de la alimentación del ECM y de masa
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de alimentación y de masa del ECM (consulte 
+<intxref refid = "E6JB0A1114081">Inspección del circuito de alimentación y de masa del ECM:Para modelo con motor de gasolina</intxref>
+).
+</ptxt>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare los circuitos de masa y&#x002F;o de alimentación del ECM.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe el DTC del BCM, TCM (en modelos con A&#x002F;T), módulo de control del ABS &#x002F; ESP&#x002F;, módulo de control de 4WD (si está instalado) y módulo de control de arranque sin llave (si está instalado) (dus desactivado)
+</title>
+<test1>
+<ptxt>
+Compruebe los DTC en el TCM (en modelos con A&#x002F;T), módulo de control del ABS &#x002F; ESP&#174;, módulo de control de 4WD (si está instalado) y BCM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1774 en el TCM (en modelos con A&#x002F;T), el U1073 en el BCM, módulo de control del ABS &#x002F; ESP&#174; y módulo de control de 4WD (si está instalado) y  &#x002F;o el DTC 33 en el módulo de control de arranque sin llave (si está instalado)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de DTC en el ECM (bus desactivado)
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe los DTC en el TCM (en modelos con A&#x002F;T), BCM, módulo de control del ABS &#x002F; ESP&#174; y módulo de control de 4WD (si está instalado).
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1774 en el TCM (en modelos con A&#x002F;T), el U1073 en el BCM, módulo de control del ABS &#x002F; ESP&#174; y módulo de control de 4WD (si está instalado) y  &#x002F;o el DTC 33 en el módulo de control de arranque sin llave (si está instalado)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia elevada en el cable del circuito de comunicaciones de CAN entre el ECM y el módulo de control del ABS &#x002F; ESP&#174;. Si los cables están bien, reemplace por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Conecte los conectores del ECM y desconecte el conector del BCM con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay algún DTC del ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia elevada en el cable del circuito de comunicaciones CAN entre el BCM y el conector de empalme del circuito CAN. Si los cables están bien, reemplace por un BCM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del TCM (en modelos con A&#x002F;T) con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay algún DTC para el ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia elevada en el cable del circuito de comunicaciones CAN entre el TCM y el conector de empalme del circuito CAN. Si los cables están bien, sustituya por un TCM en buen estado (en modelos con A&#x002F;T) e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control de arranque sin llave (si está instalado) con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay algún DTC para el ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia elevada en el cable del circuito de comunicaciones CAN entre el módulo de control de arranque sin llave y el conector de empalme del circuito CAN. Si los cables están bien, sustituya por un módulo de control de arranque sin llave en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del juego de instrumentos con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay algún DTC para el ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia elevada en el cable del circuito de comunicaciones CAN entre el juego de instrumentos y el conector de empalme del circuito CAN. Si los cables están bien, sustituya por un juego de instrumentos o módulo de control de arranque sin llave (si está instalado) en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control de 4WD (si está instalado) con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay algún DTC para el ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia elevada en el cable del circuito de comunicaciones CAN entre el módulo de control de 4WD y el conector de empalme del circuito CAN. Si los cables están bien, sustituya por un módulo de control de 4WD en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del DTC
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del sensor del ángulo de dirección (vehículo equipado con módulo de control de ESP&#174;) con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay algún DTC para el ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia elevada en el cable del circuito de comunicaciones CAN entre el sensor del ángulo de dirección y el conector de empalme del circuito CAN. Si los cables funcionan correctamente, compruebe los circuitos de alimentación y de masa del sensor del ángulo de dirección. Si los circuitos funcionan correctamente, reemplace el sensor del ángulo de dirección por otro en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del módulo de control del ABS o EPS&#174;
+</title>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales de conexión siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal &#8220;WHT&#x002F;BLU&#8221; y el terminal &#8220;WHT&#8221; del conector del módulo de control del ABS o ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;WHT&#x002F;RED&#8221; y el terminal &#8220;RED&#8221; del conector del módulo de control del ABS o ESP&#174;.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es la resistencia inferior a 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el módulo de control del ABS o ESP&#174; por otro en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de comunicaciones CAN
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en posición OFF, desconecte los conectores de todos los módulos de control: ECM, TCM (si están instalados), BCM, el módulo de control del ABS o ESP&#174;, el módulo de control de 4WD (si está instalado), el módulo de control de arranque sin llave (si está instalado), el juego de instrumentos y el sensor del ángulo de dirección (si está instalado).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Asegúrese de que el circuito de comunicaciones CAN cumple con las siguientes especificaciones.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia total del mazo de cables del circuito de comunicaciones CAN es inferior a 1 &#937; entre cada módulo de control.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento entre los cables del circuito de comunicaciones CAN es infinita en cada conector del módulo de control.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento entre cada cable de circuito de comunicación CAN y la masa de la carrocería del vehículo es infinita en cada conector del módulo de control.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del circuito de comunicación CAN es 0 V, con el interruptor de encendido en posición ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 15.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el circuito de comunicaciones CAN defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del DTC
+</title>
+<test1>
+<ptxt>
+Conecte los conectores al ECM con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay algún DTC para el ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Compruebe los circuitos de alimentación y de masa del módulo de control del ABS o ESP&#174;. Si los circuitos funcionan correctamente, cambie el ABS o ESP&#174; por otro en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

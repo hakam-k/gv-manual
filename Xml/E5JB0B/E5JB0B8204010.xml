@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0B8204010" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "0" modify = "0">
+<title>
+El testigo de alerta &#8220;AIR BAG&#8221; no puede mostrar la pauta de destellos del DTC (cuando tiene el acoplador del monitor &#8220;AIR BAG&#8221;)
+</title>
+<servinfosub id = "E5JB0B8204010001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0B8204009">El indicador luminoso de advertencia &#8220;AIRBAG&#8221; parpadea</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Siga estrictamente las instrucciones de la sección PRECAUCIONES de &#8220;Secuencia de comprobaciones del sistema de diagnóstico de airbags&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "E5JB0B8204010002">
+<title>
+Descripción de la secuencia de pruebas
+</title>
+<ptxt>
+<emph etype = "bold">
+Paso 1: Compruebe el acoplador del monitor &#8220;AIR BAG&#8221;.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 2: Compruebe si el circuito del conmutador de diagnóstico está sin continuidad.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0B8204010003">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E5JB0B8204010004">
+<testgroup>
+<ptxt>
+Compruebe mediante el cable de mantenimiento la conexión entre el terminal del conmutador de diagnóstico del acoplador del monitor &#8220;AIR BAG&#8221; y el cable de masa.
+</ptxt>
+<question>
+¿Están firmemente conectados con el cable de mantenimiento?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Con el cable de mantenimiento, conecte bien el terminal del conmutador de diagnóstico del acoplador del monitor &#8220;AIR BAG&#8221; con la masa a carrocería.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Desconecte el conector del SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el ajuste correcto de las conexiones del cable &#8220;PPL&#8221; (terminal (&#8220;G47-14&#8221;, o terminal &#8220;G46-12&#8221;) del conector del SDM, y terminal &#8220;G34-2&#8221; del acoplador (1) del monitor &#8220;AIR BAG&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si están en orden, mida la resistencia entre &#8220;G47-14&#8221; (terminal &#x005B;A&#x005D;) o &#8220;G46-12&#8221; (terminal &#x005B;B&#x005D;) y el terminal &#8220;G34-2&#8221;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B005">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820021.swf" width = "90.000mm" height = "58.564mm" ver = "02" gw = "210" gh = "149"/>
+</testfigure>
+</test1>
+<question>
+La resistencia, ¿es igual o superior a 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Compruebe los terminales del cable &#8220;PPL&#8221;. Si están en orden, corrija la resistencia alta o el circuito sin continuidad del cable &#8220;PPL&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el SDM por otro en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Después de terminar la inspección y las reparaciones, haga lo siguiente.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vuelva a conectar los componentes del sistema del airbag, y asegúrese de que todos los componentes están correctamente montados.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repita los pasos de 
+<intxref refid = "E5JB0B8204001">Comprobación del sistema de diagnóstico de airbags</intxref>
+ para asegurarse de que la avería está corregida.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0A1124137" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2120: Circuito del sensor APP (secundario)
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Esta avería puede darse si se ha da&#x00F1;ado el mazo de cables.
+</ptxt>
+<ptxt>
+Siga el procedimiento que se describe en 
+<intxref refid = "E6JB0A0006001">Procedimiento de comprobación de circuitos eléctricos</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Esta comprobación permite verificar el estado y la conformidad del mazo de cables del motor.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<servinfosub id = "E6JB0A1124137001">
+<title>
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Condiciones para aplicar el procedimiento de detección de averías a las averías memorizadas:
+</ptxt>
+<ptxt>
+Esta avería se declara presente después de una serie de acciones de carga total &#x002F; sin carga en el pedal del acelerador.
+</ptxt>
+</item>
+<item>
+<ptxt>
+No están autorizados el limitador de velocidad &#x002F; control de crucero, la activación del resistor del calefactor del habitáculo del pasajero y la turboalimentación.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si la avería está presente, se enciende la luz de advertencia de inyección (luz de advertencia de gravedad 1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+El régimen del motor se fija en 1.400 rpm. si hay un fallo en el cable &#8220;principal&#8221; y &#8220;secundario&#8221; del sensor (APP) de posición del pedal del acelerador y se limita el par motor.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Utilice el cable de servicio para todas las operaciones en los conectores del controlador.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Prioridades cuando se trata con diversas averías:
+</ptxt>
+<ptxt>
+Aplique primero el procedimiento para tratar la avería 
+<intxref refid = "E6JB0A1124127">DTC P0651: Circuito 2 de tensión de referencia del sensor:Para modelo con motor diesel</intxref>
+ si está presente o memorizada.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "E6JB0A1124137002">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Sobre el circuito de cableado y el número del conector, consulte 
+<intxref refid = "E6JB0A910E048">A-5 Diagrama del circuito del sistema de control del A&#x002F;C y del motor (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A1124137003">
+<title>
+Condición de detección
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.362in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.803in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Visualizado en la herramienta de diagnóstico SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CO0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Circuito abierto o cortocircuito a la masa de la carrocería del vehículo
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Cortocircuito a &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Se&#x00F1;al inconsistente
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0A1124137004">
+<title>
+Localización y reparación de averías para CO0: Circuito abierto o cortocircuito a la masa de la carrocería del vehículo
+</title>
+<attention3>
+<ptxt>
+Prioridades cuando se trata con diversas averías:
+</ptxt>
+<ptxt>
+Si la avería 
+<intxref refid = "E6JB0A1124101">DTC P0225: Circuito del sensor APP (principal):Para modelo con motor diesel</intxref>
+ está presente al mismo tiempo, compruebe que el sensor está correctamente conectado.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Revise las conexiones del sensor (APP) de posición del pedal del acelerador.
+</ptxt>
+<ptxt>
+Compruebe las conexiones del ECM.
+</ptxt>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Revise la continuidad y el aislamiento de la masa de la carrocería del vehículo de las siguientes conexiones:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el cable &#8220;E68-6&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-21&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E68-1&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-15&#8221; del conector del ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Mida la resistencia en el sensor (APP) (secundario) de posición del pedal del acelerador en el grupo del sensor (APP) de posición del pedal del acelerador entre los terminales &#8220;E68-1&#8221; y &#8220;E68-5&#8221;.
+</ptxt>
+<ptxt>
+Reemplace el grupo del sensor (APP) de posición del pedal del acelerador si la resistencia no es de 0,8 &#8211; 4,9 k&#937; aproximadamente.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0A1124137005">
+<title>
+Localización y reparación de averías para CC1: Cortocircuito a &#x002B;12 V
+</title>
+<attention3>
+<ptxt>
+Prioridades cuando se trata con diversas averías:
+</ptxt>
+<ptxt>
+Si la avería 
+<intxref refid = "E6JB0A1124101">DTC P0225: Circuito del sensor APP (principal):Para modelo con motor diesel</intxref>
+ está presente al mismo tiempo, compruebe que el sensor está correctamente conectado.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Revise las conexiones del sensor (APP) de posición del pedal del acelerador.
+</ptxt>
+<ptxt>
+Compruebe las conexiones del ECM.
+</ptxt>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Revise la continuidad y el aislamiento en relación con &#x002B;12 V de las siguientes conexiones:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el cable &#8220;E68-6&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-21&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E68-1&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-15&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E68-5&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-27&#8221; del conector del ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Mida la resistencia en el sensor (APP) (secundario) de posición del pedal del acelerador en el grupo del sensor (APP) de posición del pedal del acelerador entre los terminales &#8220;E68-1&#8221; y &#8220;E68-5&#8221;.
+</ptxt>
+<ptxt>
+Reemplace el grupo del sensor (APP) de posición del pedal del acelerador si la resistencia no es de aproximadamente: 0.8 &#8211; 4,9 k&#937;.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0A1124137006">
+<title>
+Localización y reparación de averías para D1: Se&#x00F1;al inconsistente
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Revise los conectores del sensor de presión del combustible.
+</ptxt>
+<ptxt>
+Compruebe las conexiones del ECM.
+</ptxt>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Compruebe que hay continuidad en las siguientes conexiones y asegúrese de que no hay resistencia de interferencia:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el cable &#8220;E68-6&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-21&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E68-1&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-15&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E68-5&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-27&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E68-3&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-3&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E68-2&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-4&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E68-4&#8221; del conector del sensor (APP) de posición del pedal del acelerador y el terminal &#8220;E66-5&#8221; del conector del ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si la avería todavía está presente, reemplace el grupo del sensor (APP) de posición del pedal del acelerador.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

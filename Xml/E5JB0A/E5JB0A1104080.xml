@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A1104080" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2111: Sistema de control del actuador de la mariposa bloqueado en posición abierta
+</title>
+<servinfosub id = "E5JB0A1104080001">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La apertura por defecto de la válvula de mariposa es superior a 7&#176; desde su posición de cierre complementario cuando se realiza el diagnóstico de la válvula de mariposa con el interruptor de encendido en posición OFF.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conjunto eléctrico del cuerpo de la mariposa
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0A1104080002">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado con el interruptor de encendido en la posición OFF. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Interruptor de encendido en posición OFF durante un mínimo de 20 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y compruebe el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "E5JB0A1104080003">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las precauciones para la localización y reparación de averías del DTC en 
+<intxref refid = "E5JB0A1100005">Precauciones para la localización y reparación de averías del DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E5JB0A1104080004">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de la válvula de mariposa
+</title>
+<test1>
+<ptxt>
+Compruebe si no hay ningún objeto extraño atrapado entre la válvula de mariposa y la carcasa del cuerpo de la mariposa según las indicaciones de 
+<intxref refid = "E5JB0A1306022">Inspección en el vehículo del conjunto eléctrico del cuerpo de la mariposa</intxref>
+&#34;Inspección de la válvula de mariposa&#34;.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sáquelo después de extraer el cuerpo de la mariposa y limpie a fondo el interior del cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del funcionamiento de la válvula de mariposa
+</title>
+<test1>
+<ptxt>
+Compruebe el funcionamiento de la válvula de mariposa según las indicaciones de &#8220;Comprobación del funcionamiento de la válvula de mariposa&#8221; en 
+<intxref refid = "E5JB0A1306022">Inspección en el vehículo del conjunto eléctrico del cuerpo de la mariposa</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto eléctrico del cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del actuador de la mariposa (motor)
+</title>
+<test1>
+<ptxt>
+Compruebe el funcionamiento del actuador de la mariposa según las indicaciones de &#8220;Inspección del actuador de la mariposa (motor)&#8221; en 
+<intxref refid = "E5JB0A1306022">Inspección en el vehículo del conjunto eléctrico del cuerpo de la mariposa</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto eléctrico del cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del rendimiento del sensor de posición de la mariposa
+</title>
+<test1>
+<ptxt>
+Compruebe el rendimiento del sensor de posición de la mariposa según las indicaciones de &#8220;Comprobación del rendimiento del sensor de posición de la mariposa&#8221; en 
+<intxref refid = "E5JB0A1306022">Inspección en el vehículo del conjunto eléctrico del cuerpo de la mariposa</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el conjunto eléctrico del cuerpo de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

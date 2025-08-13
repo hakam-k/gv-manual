@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0B4604029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1024: Fallo en el circuito del sensor del ángulo de la dirección
+</title>
+<servinfosub id = "E6JB0B4604029001">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+El defecto interno en el sensor del ángulo de la dirección es detectado por la CPU en el sensor del ángulo de la dirección.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La señal del sensor del ángulo de la dirección está fuera del rango especificado.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor del ángulo de dirección
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0B4604029002">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E6JB0B4604029003">
+<testgroup>
+<question>
+¿Se ha realizado una &#8220;comprobación de programa de estabilidad electrónica&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0B4604001">Comprobación del programa de estabilidad electrónica</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación DTC para ESP&#174;
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en ON y revise el DTC para el ESP&#174;.
+</ptxt>
+</test1>
+<question>
+¿Se han detectado los DTC C1037 y&#x002F;o U1126?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Para localizar y reparar averías, vaya al diagrama pertinente de diagnóstico de DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe la calibración del sensor
+</title>
+<test1>
+<ptxt>
+Calibre el sensor del ángulo de la dirección consultando 
+<intxref refid = "E6JB0B4606015">Calibración del sensor</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Borre todos los DTC y vuelva a comprobar el DTC para el ESP&#174;.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC C1024?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La calibración del sensor de ángulo de la dirección no fue completada.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe el sensor de ángulo de la dirección
+</title>
+<test1>
+<ptxt>
+Compruebe el sensor del ángulo de la dirección consultando 
+<intxref refid = "E6JB0B4606020">Inspección en el vehículo del sensor de ángulo de la dirección</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un conjunto de unidad hidráulica&#x002F;módulo de control del ESP&#174; en buen estado y vuelva a comprobar el DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el sensor de ángulo de la dirección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

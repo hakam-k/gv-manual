@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0E5104040" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "0" modify = "0">
+<title>
+DTC P1723: Avería del interruptor de selección de posición
+</title>
+<servinfosub id = "E5JB0E5104040001">
+<title>
+Diagrama de cableado
+</title>
+<figure>
+<graphic graphicname = "I5JB0A510001.swf" width = "183.000mm" height = "62.797mm" ver = "01" gw = "252" gh = "161"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.236in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.890in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.236in"/>
+<colspec colnum = "4" colname = "4" colwidth = "4.783in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Interruptor de posición &#8220;3&#8221;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Disposición de los terminales en el conector del módulo TCM (vistos desde el lado del mazo de cables)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "E5JB0E5104040002">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se introduce la señal del interruptor de posición &#8220;3&#8221; a partir del valor especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Avería en el interruptor de posición &#8220;3&#8221; o en su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0E5104040003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Borre los DTC de la memoria de los módulos TCM y ECM con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo en marcha 20 seg. o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC, el DTC pendiente y los datos de imagen fija.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E5JB0E5104040004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E5JB0E5104040005">
+<testgroup>
+<question>
+¿Se ha llevado a cabo la &#8220;Inspección del sistema de la A&#x002F;T&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0E5104001">Inspección del sistema A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Examine el circuito del interruptor de posición &#8220;3&#8221;
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del TCM, con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión con el interruptor de posición &#8220;3&#8221; sea correcta en los terminales &#8220;E92-10&#8221; y &#8220;E92-20&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, mida la resistencia el circuito del interruptor entre los terminales &#8220;E92-10&#8221; y &#8220;E92-20&#8221; del conector del módulo TCM desconectado, en lado del mazo de cables.
+</ptxt>
+<spec>
+<title>
+Circuito del interruptor de posición &#8220;3&#8221;
+</title>
+<ptxt>
+Palanca de selección de cambio en posición &#8220;P&#8221;, &#8220;N&#8221; o &#8220;D&#8221;: 3,96 &#8211; 4,04 k&#937;
+</ptxt>
+<ptxt>
+Palanca de selección de cambio en posición &#8220;R&#8221;, &#8220;3&#8221;, &#8220;2&#8221; o &#8220;L&#8221;: 0,99 &#8211; 1,01 k&#937;
+</ptxt>
+</spec>
+</test1>
+<question>
+¿El resultado está dentro de las especificaciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Desperfecto intermitente o módulo TCM defectuoso. Compruebe si hay problemas intermitentes siguiendo las indicaciones de 
+<intxref refid = "E5JB0E0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+. Si los hubiera, reemplace por un TCM en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspeccione el interruptor de posición &#8220;3&#8221;
+</title>
+<ptxt>
+Inspeccione el interruptor de posición &#8220;3&#8221; como se indica en 
+<intxref refid = "E5JB0E5106007">Inspección del interruptor de posición &#8220;3&#8221;</intxref>
+.
+</ptxt>
+<question>
+¿El resultado está dentro de las especificaciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya el interruptor de posición &#8220;3&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El circuito del interruptor de posición &#8220;3&#8221; está averiado.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

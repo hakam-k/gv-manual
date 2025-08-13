@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0B1104095" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0115: Avería en el circuito de temperatura de refrigerante del motor
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Condiciones para aplicar el procedimiento de detección de averías a las averías memorizadas:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Cuando se hace un intento de arrancar el motor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Con el motor en marcha
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Si la avería está presente:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+La temperatura del refrigerante: &#8220;Coolant Temp&#8221; en la Lista de Datos de herramienta de diagnóstico SUZUKI está fija en 118,1 &#176;C con el motor en marcha, 0,1 &#176;C con el motor parado
+</ptxt>
+</item>
+<item>
+<ptxt>
+La fase de precalentamiento es de más de 10 segundos,
+</ptxt>
+</item>
+<item>
+<ptxt>
+El ventilador del radiador funciona continuamente,
+</ptxt>
+</item>
+<item>
+<ptxt>
+La luz de advertencia de inyección (luz de advertencia de gravedad 1) se enciende.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Utilice el cable de servicio para todas las operaciones en los conectores del ECM
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "E5JB0B1104095001">
+<title>
+Diagrama del cableado
+</title>
+<ptxt>
+Sobre el circuito de cableado y el número del conector, consulte 
+<intxref refid = "E5JB0B910E048">Diagrama de circuitos A-5 del sistema de control del motor y del A&#x002F;C (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0B1104095002">
+<title>
+Condición de detección
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Visualizado en la herramienta de diagnóstico SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC.0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Cortocircuito a la masa de la carrocería del vehículo
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO.1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito abierto o cortocircuito a &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0B1104095003">
+<title>
+Localización de averías
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Revise las conexiones del terminal &#8220;C09-4&#8221; del conector del sensor de ECT.
+</ptxt>
+<ptxt>
+Compruebe las conexiones del ECM.
+</ptxt>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+<ptxt>
+Mida la resistencia del sensor de ECT entre los terminales &#8220;C09-1&#8221; y &#8220;C09-4&#8221; de su conector.
+</ptxt>
+<paragroup>
+<spec>
+<title>
+Reemplace el sensor si su resistencia no es de aproximadamente:
+</title>
+<ptxt>
+68780 &#8211; 82780 &#937; a &#8211;40 &#176;C
+</ptxt>
+<ptxt>
+12338 &#8211; 12582 &#937; a &#8211;10 &#176;C
+</ptxt>
+<ptxt>
+2140 &#8211; 2364 &#937; a 25 &#176;C
+</ptxt>
+<ptxt>
+772 &#8211; 850 &#937; a 50 &#176;C
+</ptxt>
+<ptxt>
+275 &#8211; 291 &#937; a 80 &#176;C
+</ptxt>
+<ptxt>
+112 &#8211; 118 &#937; a 110 &#176;C
+</ptxt>
+<ptxt>
+85 &#8211; 89 &#937; a 120 &#176;C
+</ptxt>
+</spec>
+</paragroup>
+<ptxt>
+Verifique el aislamiento, la continuidad y la ausencia de resistencia de interferencia en las conexiones:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el cable &#8220;C09-1&#8221; del conector del sensor de ECT y el terminal &#8220;C86-23&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;C09-2&#8221; del conector del sensor de ECT y el terminal &#8220;C86-11&#8221; del conector del ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si la avería todavía está presente, reemplace el sensor de ECT.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1H">
+<servcat sctnbr = "01" scnbr = "08">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E6JB0A1801001" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Estructura del sistema de encendido
+</title>
+<ptxt>
+El sistema de encendido es electrónico (sin distribución). Para el motor J20 se adopta un sistema de encendido directo específico. Está formado por las siguientes partes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+<emph etype = "bold">
+ECM
+</emph>
+</ptxt>
+<ptxt>
+Detecta las condiciones del motor y del vehículo mediante las se&#x00F1;ales transmitidas por los sensores, determina el ajuste óptimo del encendido y la duración del flujo eléctrico a la bobina primaria, y envía una se&#x00F1;al al dispositivo de encendido (unidad de alimentación) en el conjunto de la bobina de encendido.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<emph etype = "bold">
+Conjunto de la bobina de encendido (incluye un dispositivo de encendido y una bobina de encendido)
+</emph>
+</ptxt>
+<ptxt>
+El conjunto de bobina de encendido tiene un dispositivo incorporado que activa (ON) o desactiva (OFF) el flujo de corriente a la bobina primaria, de acuerdo con la se&#x00F1;al procedente del ECM. Cuando se interrumpe (OFF) la corriente a la bobina primaria, se induce alta tensión en la bobina secundaria.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<emph etype = "bold">
+Cables de alta tensión (para el motor M16) y bujías
+</emph>
+</ptxt>
+</item>
+<item>
+<ptxt>
+<emph etype = "bold">
+Sensor CMP (Sensor de posición de árbol de levas) y sensor de CKP (Sensor de posición del cigüe&#x00F1;al)
+</emph>
+</ptxt>
+<ptxt>
+Utilizando las se&#x00F1;ales procedentes de estos sensores, el ECM identifica el cilindro específico cuyo pistón está en la carrera de compresión, detecta el ángulo del cigüe&#x00F1;al y realiza automáticamente el ajuste del encendido inicial.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<emph etype = "bold">
+Sensor de TP, sensor de ECT, sensor de MAP, sensor de MAF, sensor de IAT, sensor de detonación, sensor de velocidad de las ruedas (VSS) y otros sensores &#x002F; interruptores
+</emph>
+</ptxt>
+</item>
+</list1>
+<c-change/>
+<ptxt>
+Para el motor M16, este sistema de encendido no tiene distribuidor, pero cuenta con dos conjuntos de bobinas de encendido (uno para las bujías 1 y 4, y el otro para las bujías 2 y 3). Cuando se envía una se&#x00F1;al de encendido desde el módulo ECM al dispositivo de encendido del conjunto de la bobina de encendido para las bujías 1 y 4, se induce una alta tensión en la bobina secundaria que pasa por los cables de alta tensión y que provoca que en las bujías 1 y 4 salte simultáneamente una chispa. De la misma manera, cuando se envía una se&#x00F1;al de encendido al dispositivo de encendido del otro conjunto de bobinas, también salta una chispa de forma simultánea en las bujías 2 y 3.
+</ptxt>
+<ptxt>
+Para un motor J20, aunque el sistema de encendido no tiene un distribuidor ni cables de alta tensión, cada cilindro tiene un conjunto de bobinas de encendido (dispositivo de encendido y bobina de encendido) y la tensión secundaria que se produce en la bobina de encendido se envía directamente a la bujía. Asimismo, se envían se&#x00F1;ales del sensor CMP al ECM para controlar cada bobina de encendido independientemente mediante el dispositivo de encendido (en el conjunto de la bobina de encendido).
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

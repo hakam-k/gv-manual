@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0A1124119" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0560: Tensión del sistema
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Condiciones para aplicar los procedimientos de detección de averías a las averías memorizadas:
+</ptxt>
+<ptxt>
+La avería se declara presente después de una prueba en carretera o después de intentar arrancar el motor varias veces.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tensión de funcionamiento del ECM: 9 V  &lt; tensión de funcionamiento &lt; 16 V.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Una tensión de la batería demasiado baja puede hacer que se encienda la luz de advertencia de avería de nivel 1 provocando que aparezcan otras averías.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entonces no es posible arrancar el motor.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Utilice el cable de servicio para todas las operaciones en los conectores del ECM.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "E6JB0A1124119001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Sobre el circuito de cableado y el número del conector, consulte 
+<intxref refid = "E6JB0A910E048">A-5 Diagrama del circuito del sistema de control del A&#x002F;C y del motor (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A1124119002">
+<title>
+Condición de detección
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.362in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.937in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Visualizado en la herramienta de diagnóstico SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Sobretensión
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Subvoltaje
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0A1124119003">
+<title>
+Localización y reparación de averías para D1: Sobretensión
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Compruebe los circuitos de carga:
+</ptxt>
+<ptxt>
+Estado de la batería.
+</ptxt>
+<ptxt>
+Estado del alternador (detección de averías total)
+</ptxt>
+<ptxt>
+Lleve a cabo las reparaciones necesarias.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0A1124119004">
+<title>
+Localización y reparación de averías para D2: Subvoltaje
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Con el interruptor de encendido en OFF, mida la tensión entre los bornes de la batería.
+</ptxt>
+<ptxt>
+Si la tensión es inferior a 11,5 V, haga una prueba de la batería.
+</ptxt>
+<ptxt>
+Si la batería está defectuosa, reemplace la batería y haga una prueba del circuito de carga.
+</ptxt>
+<ptxt>
+Con el interruptor de encendido en ON y con el motor de arranque girando, mida la tensión entre los bornes de la batería.
+</ptxt>
+<ptxt>
+Si la tensión cae por debajo de 9,6 V, verifique el estado y si están sueltos los bornes de la batería.
+</ptxt>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+<ptxt>
+Si los bornes están en buen estado, haga una prueba de la batería.
+</ptxt>
+<ptxt>
+Si están defectuosos, reemplace la batería.
+</ptxt>
+<ptxt>
+Si el motor de arranque hace girar al motor correctamente pero la avería está todavía presente,
+</ptxt>
+<ptxt>
+Verifique la continuidad y la ausencia de resistencia de interferencia en las siguientes conexiones:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el cable &#8220;E33-6&#8221; del conector de montaje del relé principal y el terminal &#8220;C86-3&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el cable &#8220;E33-6&#8221; del conector de montaje del relé principal y el terminal &#8220;E66-2&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre los terminales &#8220;E66-1&#8221;, &#8220;E66-7&#8221; y &#8220;E66-8&#8221; del conector del ECM y el terminal de masa de la batería
+</ptxt>
+<ptxt>
+Repare si es necesario.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

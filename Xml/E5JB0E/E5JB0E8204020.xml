@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0E8204020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1042: Resistencia baja en el circuito de activación del airbag del pasajero
+</title>
+<servinfosub id = "E5JB0E8204020001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0E8204019">DTC B1041: Resistencia alta del circuito de activación del airbag del pasajero</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Siga estrictamente las instrucciones de la sección PRECAUCIONES de &#8220;Secuencia de comprobaciones del sistema de diagnóstico de airbags&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "E5JB0E8204020002">
+<title>
+Se genera un DTC cuando
+</title>
+<ptxt>
+La resistencia combinada del módulo (inflador) del airbag del pasajero, el mazo de cables y el contacto de terminales de conector es inferior a un valor especificado durante un tiempo especificado.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E8204020003">
+<title>
+Descripción de la secuencia de pruebas
+</title>
+<ptxt>
+<emph etype = "bold">
+Paso 1: Compruebe si el problema está en el módulo (inflador) del airbag del pasajero.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 2: Inspeccione el circuito de activación del módulo (inflador) del airbag del pasajero. (Entre &#8220;G68&#8221; y &#8220;G65&#8221;)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 3: Inspeccione el circuito de activación del módulo (inflador) del airbag del pasajero. (Entre &#8220;G67&#8221; y &#8220;G47&#8221;; o entre &#8220;G67&#8221; y &#8220;G46&#8221;)
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E8204020004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E5JB0E8204020005">
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte el conector del módulo (inflador) del airbag del pasajero.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el ajuste de la conexión al módulo de hinchado del airbag del pasajero, en los terminales del conector &#8220;G65&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si la conexión es correcta, conecte las herramientas especiales (A), (B) y (D) al conector &#8220;G65&#8221;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B064">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B065">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B066">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820033.swf" width = "90.000mm" height = "54.683mm" ver = "01" gw = "173" gh = "138"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece el DTC B1042?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF. Sustituya el módulo (inflador) del airbag del pasajero, consulte 
+<intxref refid = "E5JB0E8206007">Desmontaje y montaje del módulo de inflado del airbag de pasajero</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte el conector &#8220;G67&#8221; situado cerca de la guantera.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el ajuste de la conexión al conector del mazo de cables del tablero de instrumentos, en los terminales &#8220;G67-1&#8221; y &#8220;G67-2&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcto, conecte las herramientas especiales (B) y (C) al conector &#8220;G67&#8221; (desconectado en el paso 1).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B067">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B068">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820034.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "169" gh = "128"/>
+</testfigure>
+</test1>
+<test1>
+<paragroup>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</paragroup>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece el DTC B1042?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito &#8220;BLU&#x002F;RED&#8221; en cortocircuito con el &#8220;YEL&#x002F;RED&#8221;, circuito &#8220;BLU&#x002F;RED&#8221; o circuito &#8220;YEL&#x002F;RED&#8221; en cortocircuito con otro circuito. (Entre los conectores &#8220;G68&#8221; y &#8220;G65&#8221;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte el conector &#8220;G47&#8221; o &#8220;G46&#8221; del SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si son correctas las conexiones al SDM en los terminales &#8220;G47-3&#8221; y &#8220;G47-4&#8221;, o &#8220;G46-5&#8221; y &#8220;G46-6&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si están en orden, retire la barra de cortocircuitar del conector del SDM insertando la herramienta de liberación (1) incluida en la herramienta especial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre los terminales &#8220;G47-3&#8221; y &#8220;G47-4&#8221; (&#x005B;A&#x005D;), o entre los terminales &#8220;G46-5&#8221; y &#8220;G46-6&#8221; (&#x005B;B&#x005D;), con las herramientas especiales (B) y (C) conectadas.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B069">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B070">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B071">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820035.swf" width = "90.000mm" height = "107.247mm" ver = "01" gw = "186" gh = "287"/>
+</testfigure>
+</test1>
+<question>
+La resistencia, ¿es igual o superior a 0,65 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya el SDM por otro en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito &#8220;BLU&#x002F;RED&#8221; en cortocircuito con el &#8220;YEL&#x002F;RED&#8221;, circuito &#8220;BLU&#x002F;RED&#8221; o circuito &#8220;YEL&#x002F;RED&#8221; en cortocircuito con otro circuito. (Entre los conectores &#8220;G67&#8221; y &#8220;G47&#8221;, o entre los conectores &#8220;G67&#8221; y &#8220;G46&#8221;)
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Después de terminar la inspección y las reparaciones, haga lo siguiente.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vuelva a conectar los componentes del sistema del airbag, y asegúrese de que todos los componentes están correctamente montados.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Borre el DTC, como se explica en 
+<intxref refid = "E5JB0E8204005">Borrado de DTC</intxref>
+, si existe alguno.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repita los pasos de 
+<intxref refid = "E5JB0E8204001">Comprobación del sistema de diagnóstico de airbags</intxref>
+ para asegurarse de que la avería está corregida.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

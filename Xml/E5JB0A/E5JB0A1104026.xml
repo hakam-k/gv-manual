@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A1104026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0116: Margen&#x002F;rendimiento del circuito de temperatura del refrigerante del motor
+</title>
+<servinfosub id = "E5JB0A1104026001">
+<title>
+Diagrama de cableado
+</title>
+<figure>
+<graphic graphicname = "I5JB0A110038.swf" width = "183.000mm" height = "77.261mm" ver = "01" gw = "446" gh = "202"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.304in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.820in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Sensor de ECT
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+A otros sensores
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "E5JB0A1104026002">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.992in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.213in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "center">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Los valores del sensor de ECT son inferiores a &#8211;10 &#176;C, 14 &#176;F (en motores M16) o &#8211;5 &#176;C, 23 &#176;F (en motores J20) cuando el motor funciona con una carga superior a la especificada (más de 1000 rpm) durante un tiempo de 2 a 1116 minutos (en función de la ECT al arrancar el motor) ininterrumpidamente a partir del encendido del motor.
+</ptxt>
+<ptxt>
+(Lógica de detección de 2 ciclos de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor de ECT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito del sensor de ECT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Termostato
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0A1104026003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cuando efectúe una prueba de carretera, elija un lugar donde no haya tráfico o riesgo de accidentes y conduzca con mucho cuidado para evitar cualquier accidente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prueba de carretera deben realizarla 2 personas, un conductor y un probador, en una carretera nivelada.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Compruebe que se cumplen las siguientes condiciones cuando se utiliza este &#8220;Procedimiento de confirmación del DTC&#8221;.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Temperatura del aire de admisión en el encendido del motor: &#8211;10 &#176;C (14 &#176;F) a 80 &#176;C (176 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Temperatura del aire de admisión: &#8211;10 &#176;C (14 &#176;F) a 70 &#176;C (158 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Altitud (presión barométrica): 2400 m, 8000 ft o menos (560 mmHg, 75 kPa, o más)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, conecte la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Encienda el motor.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduzca el vehículo a una velocidad de 60 km&#x002F;h (40 millas&#x002F;h) o superior durante un mínimo de 20 minutos.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Verifique el DTC y los DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E5JB0A1104026004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las precauciones para la localización y reparación de averías del DTC en 
+<intxref refid = "E5JB0A1100005">Precauciones para la localización y reparación de averías del DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E5JB0A1104026005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de DTC
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, instale la herramienta de escaneado al DLC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gire el interruptor del encendido a la posición ON y compruebe el DTC utilizando la herramienta de escaneado.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P0118?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104028">DTC P0118: Alto nivel del circuito de temperatura del refrigerante del motor</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de la temperatura del refrigerante del motor
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición ON y compruebe la temperatura del refrigerante del motor que aparece en la herramienta de escaneado.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Caliente el motor hasta su temperatura normal de funcionamiento y compruebe la temperatura del refrigerante del motor que aparece en la herramienta de escaneado.
+</ptxt>
+</test1>
+<question>
+¿La temperatura del refrigerante del motor varía en más de 1 &#176;C (1 &#176;F) y supera los 70 &#176;C (158 &#176;F)?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problema intermitente.
+</ptxt>
+<ptxt>
+Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E5JB0A0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del termostato
+</title>
+<question>
+¿Hay algún síntoma que se deba a que el termostato permanece abierto (el calentador del vehículo tarda mucho tiempo en ser efectivo o lo es antes de que el motor adquiera su temperatura normal de funcionamiento, etc.)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Inspeccione el termostato consultando 
+<intxref refid = "E5JB0A1606007">Inspección del termostato</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del mazo de cables
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del sensor de ECT con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que los terminales de los cables &#8220;PPL&#x002F;YEL&#8221; y &#8220;GRY&#x002F;GRN&#8221; están bien conectados al conector del sensor de ECT.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si están bien conectados, coloque el interruptor de encendido en la posición ON, mida la tensión entre el terminal del cable &#8220;PPL&#x002F;YEL&#8221; del conector del sensor de ECT y la masa de la carrocería del vehículo.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110039.swf" width = "90.000mm" height = "39.951mm" ver = "01" gw = "106" gh = "96"/>
+</testfigure>
+</test1>
+<question>
+¿Es la tensión entre 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de la tensión del ECM
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Extraiga el ECM de su soporte con los conectores del ECM conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que el terminal &#8220;C37-24&#8221; está bien conectado al conector del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien conectado, coloque el interruptor de encendido en posición ON, mida la tensión entre el terminal &#8220;C37-24&#8221; del conector del ECM y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión entre 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito abierto en el cable &#8220;PPL&#x002F;YEL&#8221;.
+</ptxt>
+<ptxt>
+Si el cable y la conexión son correctos, vaya al paso 7.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de cableado
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal del cable &#8220;PPL&#x002F;YEL&#8221; del conector del sensor de ECT y la masa de la carrocería.
+</ptxt>
+</test1>
+<question>
+¿La tensión se sitúa en torno a los 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Cortocircuito del cable &#8220;PPL&#x002F;YEL&#8221; con otro circuito.
+</ptxt>
+<ptxt>
+Si el cable está bien, reemplace por un ECM en buen estado e inspeccione de nuevo.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de cableado
+</title>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#8220;C37-24&#8221; del conector del ECM y el terminal del cable &#8220;PPL&#x002F;YEL&#8221; del conector del sensor de ECT con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito de alta resistencia del cable &#8220;PPL&#x002F;YEL&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de masa
+</title>
+<test1>
+<ptxt>
+Conecte los conectores al ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que el terminal del cable &#8220;GRY&#x002F;GRN&#8221; está bien conectado al conector del sensor de ECT.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal del cable &#8220;GRY&#x002F;GRN&#8221; del conector del sensor de ECT y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de masa
+</title>
+<test1>
+<ptxt>
+Extraiga el ECM de su soporte con los conectores del ECM conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#8220;C37-57&#8221; del conector del ECM y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito de alta resistencia del cable &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+<ptxt>
+Conexión deficiente de &#8220;C37-57&#8221;.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito de masa del ECM defectuoso.
+</ptxt>
+<ptxt>
+Si el circuito está bien, reemplace por un ECM en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del sensor de ECT
+</title>
+<test1>
+<ptxt>
+Inspeccione el sensor de ECT de acuerdo con 
+<intxref refid = "E5JB0A1306009">Inspección del sensor de temperatura del refrigerante del motor (ECT)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el sensor de ECT.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

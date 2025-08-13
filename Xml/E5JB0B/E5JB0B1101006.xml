@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E5JB0B1101006" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "0" modify = "0">
+<title>
+Descripción de la regeneración del filtro de partículas diesel
+</title>
+<ptxt>
+Dado que el filtro de partículas diesel es un dispositivo para atrapar las partículas diesel (PM), es necesario quemar las PM acumuladas y regenerar el filtro de partículas diesel.
+</ptxt>
+<ptxt>
+Hay tres formas de regenerar el filtro de partículas diesel.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+&#8220;Regeneración natural&#8221; por catálisis y temperatura de los gases de escape
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8220;Regeneración forzada&#8221; por post-inyección
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8220;Regeneración post-venta&#8221; con la herramienta de diagnóstico SUZUKI
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Aquí se describe el mecanismo para regenerar el filtro de partículas diesel.
+</ptxt>
+<list1 type = "ordered">
+<item>
+<ptxt>
+El filtro de partículas diesel, tras atrapar las PM, lleva a cabo la &#8220;Regeneración natural&#8221; de acuerdo con las condiciones de conducción. El conductor no se dará cuenta.
+</ptxt>
+</item>
+<item>
+<ptxt>
+El ECM monitoriza constantemente la temperatura de los gases de escape, la cantidad de inyección, el tiempo de conducción, la velocidad del vehículo, la masa de las PM, etc. Cuando se mantiene durante mucho tiempo el ralentí o un atasco de tráfico a baja velocidad que produce una reducción de la temperatura de los gases de escape, las PM se acumulan gradualmente.
+</ptxt>
+<ptxt>
+Cuando la &#8220;Regeneración natural&#8221; se hace insuficiente (la masa de PM sobrepasa los 25 g), el ECM llevará a cabo la &#8220;Regeneración forzada&#8221; mediante la post-inyección en el punto en el estado de conducción apropiado. La post-inyección calentará la temperatura de los gases de escape para permitir la &#8220;Regeneración forzada&#8221;. En esta situación no se encenderá ningún indicador. Por lo tanto, el conductor no notará que se realiza la &#8220;Regeneración forzada&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si se interrumpe la &#8220;Regeneración forzada&#8221; por la parada del motor, o un ralentí o un atasco de tráfico a baja velocidad durante mucho tiempo que no mantienen la temperatura de los gases de escape especificada, el ECM lo memorizará como &#8220;Fallo de regeneración&#8221;. Cuando se da el número de &#8220;fallos de regeneración&#8221; (5 veces) o la masa de PM alcanza las condiciones especificadas (la masa de PM sobrepasa los 42 g), el ECM lo considerará como &#8220;regeneración imposible por el propio filtro de partículas diesel e incapaz de continuar con la conducción&#8221; y pedirá ayuda al conductor. Esto es la &#8220;Solicitud de velocidad&#8221; (speed request) que se comunica al conductor mediante el testigo (1) del filtro de partículas diesel en el indicador combinado. Se pedirá entonces al conductor que incremente al velocidad del vehículo a más de 75 km&#x002F;h de media para aumentar la temperatura de los gases de escape. Si se completa la regeneración mediante la &#8220;regeneración natural&#8221; o la &#8220;regeneración forzada&#8221; cuando se acumula el &#8220;fallo de regeneración&#8221;, se reinicializará la acumulación de &#8220;fallo de regeneración&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Una vez que el conductor satisface la &#8220;solicitud de velocidad&#8221; para la regeneración, y la masa de PM cae hasta el nivel especificado (5 ~ 8 g), se completará la regeneración y el testigo del filtro de partículas diesel se apagará. Si la conducción de regeneración se lleva a cabo correctamente, se tardarán 20 minutos en completar la regeneración. Durante la conducción de regeneración, se producirá al mismo tiempo la &#8220;regeneración forzada&#8221; para acelerar el incremento de la temperatura de los gases de escape y acortar el tiempo de regeneración. Cuando el motor se para antes de que el testigo del filtro de partículas diesel se apague, la masa de PM que se deberá disminuir se calculará la próxima vez que se arranque el motor. En ese momento, si la masa de PM no baja hasta la cantidad especificada, el testigo del filtro de partículas diesel se encenderá de nuevo y el vehículo pedirá de nuevo al conductor la conducción de regeneración.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si no se logra la conducción de regeneración y el filtro de partículas diesel llega a estar casi obstruido mientras está encendida la &#8220;Solicitud de velocidad&#8221;, la luz de advertencia de inyección (fallo de gravedad 1) (2) se iluminará en el indicador combinado. Además y para impedir que el filtro de partículas diesel se funda o se agriete, el ECM realizará las siguientes acciones:
+</ptxt>
+</item>
+</list1>
+<s1>
+<ptxt>
+Se interrumpirá el EGR (Recirculación de los gases de escape) para impedir la producción de PM extra.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+La &#8220;Regeneración forzada&#8221; dejará de funcionar.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Se reducirá el rendimiento de la conducción mediante la bajada del par motor para impedir la &#8220;Regeneración natural&#8221;.
+</ptxt>
+</s1>
+<ptxt>
+Por lo tanto, el conductor se dará cuenta de la avería del filtro de partículas diesel.
+</ptxt>
+<ptxt>
+En esta situación será necesaria la &#8220;Regeneración post-venta&#8221; con la herramienta de diagnóstico SUZUKI o, en el peor de los casos, se tendrá que reemplazar el filtro de partículas diesel.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0B110016.swf" width = "88.000mm" height = "49.745mm" ver = "01" gw = "198" gh = "124"/>
+</figure>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

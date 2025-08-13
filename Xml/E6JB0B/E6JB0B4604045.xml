@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0B4604045" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC U1140: Pérdida de comunicación con el BCM (error de recepción)
+</title>
+<servinfosub id = "E6JB0B4604045001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0B4604042">DTC U1101: Comunicación perdida con el TCM (error de recepción)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0B4604045002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Los datos del mensaje del BCM faltan en la comunicación CAN.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito de comunicaciones CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0B4604045003">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E6JB0B4604045004">
+<testgroup>
+<question>
+¿Se ha realizado una &#8220;comprobación de programa de estabilidad electrónica&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0B4604001">Comprobación del programa de estabilidad electrónica</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación DTC para ESP&#174;
+</title>
+<test1>
+<ptxt>
+Comprobación DTC para ESP&#174;.
+</ptxt>
+</test1>
+<question>
+¿Se detectan juntos los DTC U1140 y U1073?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Para localizar y reparar averías, vaya a 
+<intxref refid = "E6JB0B4504019">DTC U1073: Bus de comunicación de los módulos de control apagado</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación DTC para BCM
+</title>
+<test1>
+<ptxt>
+Compruebe los DTC para el BCM.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC U1073?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Para localizar y reparar averías, vaya a 
+<intxref refid = "E6JB0BA204013">DTC U1073 (N° 1073): Bus de comunicación de los módulos de control apagado</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verifique los conectores de todos los módulos de control
+</title>
+<test1>
+<ptxt>
+Verifique la conexión de los conectores de todos los módulos de control que se comunican mediante el sistema de comunicaciones CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Comprobación DTC para ESP&#174;.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC U1140?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Compruebe la existencia de problemas intermitentes. Consulte 
+<intxref refid = "E6JB0B0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de comunicaciones CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores del módulo de control ESP&#174;, BCM y ECM que se comunican mediante CAN.
+</ptxt>
+</test1>
+<question>
+¿Está abierto, cortocircuitado o con resistencia elevada cada circuito de comunicaciones CAN entre el módulo de control del ESP&#174;, BCM y ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Repare o sustituya la línea de comunicación CAN.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación DTC para ESP&#174;
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desacople los conectores de todos los módulos de control que se comunican a través de CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Conecte los conectores al módulo de control del ESP&#174; y BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Comprobación DTC para ESP&#174;.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC U1140?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de DTC del ECM
+</title>
+<test1>
+<ptxt>
+Revise el DTC en el ECM.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC U0140?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Compruebe el circuito de alimentación y masa del módulo de control ESP&#174;. Si el circuito funciona correctamente, sustituya por un módulo de control de ESP&#174; en buen estado y compruebe el DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de comunicaciones CAN
+</title>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores del módulo de control ESP&#174;, BCM y ECM que se comunican mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre los terminales de los cables &#8220;WHT&#x002F;BLU&#8221; y &#8220;WHT&#8221; del conector del módulo de control del ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre los terminales de los cables &#8220;WHT&#x002F;RED&#8221; y &#8220;RED&#8221; del conector del módulo de control del ESP&#174;.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es la resistencia inferior a 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Inspeccione el circuito de alimentación eléctrica y de masa del BCM. Si todo es correcto, instale un BCM en buen estado y compruebe el DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de control del ESP&#174; en buen estado y compruebe el DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de comunicaciones CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<question>
+¿Está abierto, cortocircuitado o con resistencia elevada cada circuito de comunicaciones CAN entre los módulos de control desconectados (excepto el módulo de control del ESP&#174; y BCM)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Repare o sustituya la línea de comunicación CAN.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación DTC para ESP&#174;
+</title>
+<test1>
+<ptxt>
+Conecte los conectores de todos los módulos de control desconectados que se comunican mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte todos los conectores.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (modelos con A&#x002F;T)
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de 4WD (si dispone de ello)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de arranque sin llave (si el vehículo dispone de él)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor del ángulo de dirección
+</ptxt>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Comprobación DTC para ESP&#174;.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC U1140?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Compruebe el circuito de alimentación y masa del módulo de control ESP&#174;. Si los circuitos están bien, reemplace por un conjunto de unidad hidráulica&#x002F;módulo de control del ESP&#174; en buen estado y compruebe el DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Verifique la alimentación del módulo de control correspondiente y el circuito a masa. Si el circuito funciona correctamente, sustituya por un módulo de control correspondiente en buen estado y compruebe el DTC.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

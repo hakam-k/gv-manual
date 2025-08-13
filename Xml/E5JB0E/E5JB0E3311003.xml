@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E5JB0E3311003" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Descripción del sistema de control 4WD
+</title>
+<servinfosub id = "E5JB0E3311003001">
+<title>
+Control del cambio de la transferencia
+</title>
+<ptxt>
+El módulo de control 4WD controla el accionador del cambio de la transferencia basándose en la señal del interruptor de la transferencia para que la transferencia cambie a la posición deseada (4H, 4H-lock, N o 4L-lock). (El cambio a la posición N requiere cambiar el interruptor a la posición &#8220;&#x25A1;&#8221; (1), mantenerlo ahí durante 10 segundos y, después, ponerlo en la posición &#8220;N&#8221;.)
+</ptxt>
+<ptxt>
+El accionador de la transferencia consta del motor actuador y del interruptor de posición del motor actuador. El módulo de control 4WD detecta la posición del motor actuador mediante el interruptor de posición y controla el motor actuador con la operación de marcha &#x002F; parada.
+</ptxt>
+<ptxt>
+Además, el interruptor 4L&#x002F;N y el interruptor de bloqueo del diferencial central, instalados en el grupo de la transferencia, detectan todas las posiciones de la horquilla de cambio de Alta &#x002F; Baja y de bloqueo del diferencial. El módulo de control 4WD detecta de la siguiente manera la posición real del cambio de la transferencia (4H, 4H-lock, N o 4L-lock) con la ayuda de las señales del interruptor de 4L&#x002F;N y del de bloqueo del diferencial central.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A332002.swf" width = "88.000mm" height = "42.689mm" ver = "01" gw = "117" gh = "104"/>
+</figure>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Relación entre la posición del cambio del diferencial y los interruptores
+</title>
+<tgroup cols = "5" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.165in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.872in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.872in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.872in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.872in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Interruptor
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Posición del cambio de la transferencia
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4H
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4H-lock
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+N
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4L-lock
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Interruptor 4L&#x002F;N
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF (inactivo)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF (inactivo)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON (activo)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON (activo)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Interruptor de bloqueo del diferencial central
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON (activo)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF (inactivo)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON (activo)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF (inactivo)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<ptxt>
+Cuando la posición del motor del accionador del cambio de la transferencia detectada por el interruptor de posición del motor coincide con la posición real del cambio de la transferencia detectada por los interruptores mencionados más arriba, el módulo de control 4WD considera que se ha efectuado el cambio de la transferencia.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E3311003002">
+<title>
+Control de reintento
+</title>
+<ptxt>
+Cuando el módulo de control 4WD no puede considerar que se ha efectuado el cambio a la posición deseada, envía la orden de intentarlo de nuevo 3 veces. Si no se puede reintentar el cambio, se recupera la posición anterior del cambio y se notifica el fallo con el indicador y el avisador acústico.
+</ptxt>
+</servinfosub>
+<p-change/>
+<servinfosub id = "E5JB0E3311003003">
+<title>
+Funcionamiento del indicador y del avisador acústico
+</title>
+<ptxt>
+El módulo de control 4WD transmite al BCM la señal de funcionamiento de los indicadores de bloqueo del diferencial, de 4L, de N y la del avisador acústico. Los indicadores y el avisador acústico indican de la siguiente manera el estado del sistema de control de la transferencia.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1" page = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.787in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.181in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.181in"/>
+<colspec colnum = "4" colname = "4" colwidth = "4.055in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Funcionamiento
+</ptxt>
+</entry>
+<entry colname = "4" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Condición
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Indicador
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Avisador acústico
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Indicador de bloqueo del diferencial
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF (inactivo)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Llave de contacto en OFF.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia está en la posición 4H&#x002F;N.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON (activo)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+En el plazo de 2 segundos después de poner la llave de contacto en ON (revisando el funcionamiento del indicador).
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia está en la posición 4H-lock&#x002F;4L-lock.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea 3 veces durante 0,25 segundos, a intervalos de 20 segundos.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Suena durante 1 segundo a intervalos de 20 segundos.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La posición del interruptor de la transferencia es diferente para el interruptor de la transferencia.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea continuamente a intervalos de 0,25 segundos
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+El módulo de control 4WD detecta DTC del sistema de control 4WD.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea continuamente a intervalos de 0,5 segundos
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La transferencia está cambiando de 4H a 4H-lock.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia está cambiando de 4H-lock a 4H.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia no pudo finalizar el cambio a 4H-lock.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Indicador 4L
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF (inactivo)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Llave de contacto en OFF.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia está en la posición 4H-lock&#x002F;N.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON (activo)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+En el plazo de 2 segundos después de poner la llave de contacto en ON (revisando el funcionamiento del indicador).
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia está en la posición 4L-lock.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea 3 veces durante 0,25 segundos, a intervalos de 20 segundos.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Suena durante 1 segundo a intervalos de 20 segundos.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La posición del interruptor de la transferencia es diferente para el interruptor de la transferencia.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea continuamente a intervalos de 0,25 segundos
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+El módulo de control 4WD detecta DTC del sistema de control 4WD.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea continuamente a intervalos de 0,5 segundos
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La transferencia está cambiando de 4H-lock a 4L-lock.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia está cambiando de 4L-lock a 4H-lock.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia no pudo finalizar el cambio a 4L-lock.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Indicador N
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF (inactivo)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Llave de contacto en OFF.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia está en la posición 4H&#x002F;4H-lock&#x002F;4L-lock.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON (activo)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+En el plazo de 2 segundos después de poner la llave de contacto en ON (revisando el funcionamiento del indicador).
+</ptxt>
+</item>
+<item>
+<ptxt>
+La transferencia está en la posición N.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea 3 veces durante 0,25 segundos, a intervalos de 20 segundos.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Suena durante 1 segundo a intervalos de 20 segundos.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La posición del interruptor de la transferencia es diferente para el interruptor de la transferencia.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea continuamente a intervalos de 0,2 segundos
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+El módulo de control 4WD detecta DTC del sistema de control 4WD.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Parpadea continuamente 0,5 segundos.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La transferencia no pudo finalizar el cambio a N.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Suena 2 veces durante 0,2 segundos, a intervalos de 3 segundos.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La transferencia está en la posición N.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A1104012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+El indicador luminoso de averías permanece encendido después de arrancar el motor
+</title>
+<servinfosub id = "E5JB0A1104012001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0A1104011">El indicador de averías luminoso no se enciende con el interruptor de arranque en posición ON y el motor detenido (pero el motor puede arrancarse)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A1104012002">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+Cuando se coloca el interruptor de encendido en posición ON, el ECM hace que se encienda el relé principal (cierra el punto de contacto). Entonces, el ECM, que recibe alimentación de la fuente principal, transmite la indicación de señal ON del indicador de averías (MIL) al juego de instrumentos para encender la MIL. Y después, el juego de instrumentos enciende la MIL. Cuando el motor comienza a funcionar y no se detecta ninguna avería en el sistema, el ECM transmite la indicación de señal OFF al juego de instrumentos para apagar la MIL. A continuación, el juego de instrumentos apaga la MIL, pero si se ha detectado o se detecta una avería, la MIL permanece encendida incluso si el motor sigue en marcha.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A1104012003">
+<title>
+Localización y reparación de averías
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Antes de realizar la localización y reparación de averías, asegúrese de leer 
+<intxref refid = "E5JB0A1100003">Precauciones para la inspección del circuito de ECM</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando mida la tensión del circuito, la resistencia y&#x002F;o los impulsos del conector del ECM, conecte la herramienta especial al ECM y&#x002F;o a los conectores del ECM de acuerdo con 
+<intxref refid = "E5JB0A1104063">Inspección del ECM y sus circuitos</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "E5JB0A1104012004">
+<testgroup>
+<title>
+Comprobación de DTC
+</title>
+<test1>
+<ptxt>
+Encienda el motor y vuelva a comprobar el DTC del ECM y del TCM (en modelos con A&#x002F;T) mientras el motor está en funcionamiento.
+</ptxt>
+</test1>
+<question>
+¿Aparece algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2 de 
+<intxref refid = "E5JB0A1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+, paso 2 de 
+<intxref refid = "E5JB0A5104001">Inspección del sistema A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de la línea de comunicación de la CAN
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito de comunicación de la CAN entre el juego de instrumentos y el ECM, el TCM (en modelos con A&#x002F;T), el conjunto de unidad hidráulica&#x002F;módulo de control del ABS, el módulo de control de 4WD (en motores J20) y el módulo de control de arranque sin llave (si el vehículo dispone de él); consulte los pasos 9 a 15 de 
+<intxref refid = "E5JB0A1104058">DTC P1674: Comunicación de la CAN (error de bus)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está el circuito en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un juego de instrumentos en buen estado y vuelva a comprobar. Si la MIL permanece encendida, reemplace por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el circuito de comunicaciones de la CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

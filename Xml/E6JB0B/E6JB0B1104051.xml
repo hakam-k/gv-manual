@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0B1104051" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0601 &#x002F; P0602 &#x002F; P0607: Error de suma de comprobación de la memoria del módulo de control interno &#x002F; Error de programación del módulo de control &#x002F; Rendimiento del módulo de control
+</title>
+<servinfosub id = "E6JB0B1104051001">
+<title>
+Descripción del sistema
+</title>
+<ptxt>
+El módulo de control interno se instala en el ECM.
+</ptxt>
+<attention3>
+<ptxt>
+Después de ejecutar la reprogramación del ECM, si se indica el DTC P0601 y&#x002F;o P0602, es posible que tal reprogramación del ECM no se haya completado correctamente.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "E6JB0B1104051002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.087in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.117in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+DTC P0601: Error en la suma de comprobación de la memoria del módulo de control interno
+</emph>
+</ptxt>
+<ptxt>
+Error de escritura de datos o error de suma de comprobación
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0602: Error de programación del módulo de control
+</emph>
+</ptxt>
+<ptxt>
+Error de programación de datos
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0607: Rendimiento del módulo de control
+</emph>
+</ptxt>
+<ptxt>
+Error del procesador interno
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0B1104051003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Instale la herramienta de escaneado con el interruptor de encendido en la posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Gire el interruptor del encendido a la posición ON y borre el DTC utilizando la herramienta de escaneado, si lo hubiera.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga en marcha el motor y manténgalo funcionando en ralentí, si fuera posible.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC utilizando la herramienta de escaneado.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E6JB0B1104051004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E6JB0B1104051005">
+<testgroup>
+<title>
+Nueva comprobación del DTC.
+</title>
+<test1>
+<ptxt>
+Borre el DTC refiriéndose a 
+<intxref refid = "E6JB0B1104008">Borrado de DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y compruebe el DTC.
+</ptxt>
+</test1>
+<question>
+¿Aparece todavía el DTC P0601, P0602 o P0607?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E6JB0B0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de la reprogramación del ECM
+</title>
+<question>
+¿Se ejecutó la reprogramación del ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vuelva a ejecutar correctamente la reprogramación del ECM.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del circuito de la alimentación del ECM y de masa
+</title>
+<test1>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0B1104085">Inspección del circuito de alimentación y de masa del ECM</intxref>
+ para comprobar si los circuitos de alimentación y de masa del ECM se encuentran en buenas condiciones.
+</ptxt>
+</test1>
+<question>
+¿Son correctos los resultados de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación o el de masa del ECM.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

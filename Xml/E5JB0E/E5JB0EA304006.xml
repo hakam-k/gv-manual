@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0EA304006" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "0" modify = "0">
+<title>
+El indicador luminoso del inmovilizador no se enciende cuando el interruptor de encendido está en posición ON ni cuando se para el motor.
+</title>
+<servinfosub id = "E5JB0EA304006001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0EA302001">Diagrama del circuito de cableado del sistema de control del inmovilizador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0EA304006002">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+Cuando el interruptor de encendido pasa a la posición ON, el ECM transmite la señal indicadora ON al juego de instrumentos para que encienda el indicador luminoso del Inmovilizador en caso de que no haya problema alguno con el sistema de control del Inmovilizador. Entonces, el juego de instrumentos enciende al indicador luminoso. Cuando se pone en marcha el motor, el ECM transmite la señala indicadora OFF al juego de instrumentos para que se apague el indicador luminoso. Entonces, el juego de instrumentos apaga al indicador luminoso del Inmovilizador. No obstante, en caso de que haya algún problema con el sistema de control del Inmovilizador, el indicador luminoso del Inmovilizador parpadea cuando el interruptor de encendido está en posición ON.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0EA304006003">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E5JB0EA304006004">
+<testgroup>
+<title>
+Verificación de entrada de corriente al indicador luminoso del Inmovilizador
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<question>
+¿Se encienden otras luces de advertencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Consulta del código de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Consulte si el ECM detecta los DTC P1674, P1675, P1678 y&#x002F;o P1685 en 
+<intxref refid = "E5JB0EA304002">Inspección del código de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detecta alguno de ellos?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Realice la localización de averías consultando el flujo de trabajo correspondiente en la Sección 1A.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el juego de instrumentos por uno en buen estado y vuelva a realizar la comprobación. Si el indicador luminoso del inmovilizador aún sigue apagado, reemplace el ECM por uno en buen estado y vuelva a verificar.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del fusible
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si alguno de los fusibles relacionados está fundido.
+</ptxt>
+</test1>
+<question>
+¿Está fundido algún fusible?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya el fusible fundido y, después, verifique si se ha producido un cortocircuito.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del circuito de cableado del suministro de corriente al juego de instrumentos
+</title>
+<test1>
+<ptxt>
+Extraiga el juego de instrumentos. Para ello consulte 
+<intxref refid = "E5JB0E9306003">Instalación y extracción del juego de instrumentos</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique si el conector del juego de instrumentos esta correctamente conectado a los terminales &#8220;G28-13&#8221; y &#8220;G28-15&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si la conexión es la correcta, coloque el interruptor de encendido en la posición ON y mida la tensión entre el terminal &#8220;G28-13&#8221; y la masa de la carrocería.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto en el circuito de alimentación.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del circuito de cableado a masa del juego de instrumentos.
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#34;G28-15&#34; del conector del juego de instrumentos y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia 1 &#937;, o menor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace el juego de instrumentos por uno en buen estado y vuelva a realizar la comprobación. Si el indicador luminoso del inmovilizador aún sigue apagado, reemplace el ECM por uno en buen estado y vuelva a verificar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto o la alta resistencia en el circuito de cableado a tierra.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

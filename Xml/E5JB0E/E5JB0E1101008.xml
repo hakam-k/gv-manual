@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E5JB0E1101008" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Descripción de la calibración del sistema eléctrico del cuerpo de la mariposa
+</title>
+<ptxt>
+El ECM calcula la apertura controlada de la válvula de la mariposa basándose en la posición completamente cerrada de la válvula de la mariposa del sistema eléctrico del cuerpo de la mariposa. Los datos de la posición de cierre completo se guardan en la memoria del ECM. Sin embargo, el cierre completo de la válvula de la mariposa del sistema eléctrico del cuerpo de la mariposa (tensión de señal procedente del sensor de posición cuando la mariposa está completamente cerrada) difiere dependiendo de las diferencias individuales de la válvula de la mariposa y del sensor de posición de la mariposa. Por ello, deben tenerse en cuenta tales diferencias individuales a la hora de controlar la válvula de la mariposa, siendo necesario registrar en el ECM los datos de la posición de cierre completo de la válvula de la mariposa. Cuando se registra ese dato en el ECM, se guarda en la memoria RAM del ECM y se utiliza como datos base para el control de la válvula de la mariposa. Estos datos se borran cuando se realiza cualquiera de los trabajos descritos en 
+<intxref refid = "E5JB0E1100005">Precauciones para la calibración del sistema eléctrico del cuerpo de mariposa</intxref>
+.
+</ptxt>
+<ptxt>
+De la misma manera, tras la sustitución de la válvula de la mariposa y&#x002F;o del conjunto del sensor de posición del pedal del acelerador (APP), los datos de cierre completo almacenados en la memoria del ECM deben borrarse una vez y registrarse de nuevo, o el ECM no podrá determinar correctamente la posición de cierre completo.
+</ptxt>
+<ptxt>
+Para conocer el procedimiento de registro de dichos datos, consulte 
+<intxref refid = "E5JB0E1306004">Calibración del sistema eléctrico del cuerpo de la mariposa</intxref>
+. Una vez borrados los datos de cierre completo, el ECM, sólo la primera vez, abre y cierra la válvula de la mariposa unos 5 segundos tras encender el interruptor de encendido, para registrar la posición de cierre completo de la válvula de la mariposa. Si el motor se arranca durante este proceso de registro, pueden presentarse síntomas como &#8220;mayor tiempo de arranque&#8221; o &#8220; un ascenso lento velocidad de revolución tras el encendido&#8221;. Sin embargo, si se apaga el interruptor de encendido una vez y se vuelve a arrancar, el registro se realizará correctamente.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

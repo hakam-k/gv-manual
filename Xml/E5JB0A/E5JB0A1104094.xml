@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A1104094" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1685: Comunicación de la CAN (error de recepción en el módulo de control del ABS)
+</title>
+<servinfosub id = "E5JB0A1104094001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0A1104058">DTC P1674: Comunicación de la CAN (error de bus)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A1104094002">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Error de recepción de datos de comunicación para el conjunto de unidad hidráulica&#x002F;módulo de control del ABS detectado continuamente durante un periodo superior al tiempo especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Conjunto de unidad hidráulica&#x002F;módulo de control del ABS
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito de la línea de comunicación de la CAN
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0A1104094003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor del encendido en la posición ON y borre el DTC utilizando la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo funcionando durante 1 minuto o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E5JB0A1104094004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las precauciones para la localización y reparación de averías del DTC en 
+<intxref refid = "E5JB0A1100005">Precauciones para la localización y reparación de averías del DTC</intxref>
+.
+</ptxt>
+</attention3>
+</servinfosub>
+<diag type = "test" id = "E5JB0A1104094005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de DTC
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del ECM, TCM (en modelos con A&#x002F;T), conjunto de unidad hidráulica&#x002F;módulo de control del ABS, módulo de control de 4WD (en motores J20), módulo de control de arranque sin llave (si está instalado) y BCM.
+</ptxt>
+</test1>
+<question>
+¿Aparece algún otro DTC además de los de la comunicación de la CAN en cada módulo de control (además de los DTC P1618, P1674, P1676, P1678, P1685 en el ECM, los DTC P1774, P1777, P1778 en el TCM (en modelos con A&#x002F;T), los DTC U1073, U1100, U1101, U1121 en el BCM, en el conjunto de unidad hidráulica&#x002F;módulo de control del ABS y el módulo de control de 4WD (en motores J20) y el DTC 31 &#x002F; 33 en el módulo de control de arranque sin llave (si está instalado))?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al diagrama de flujo de DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe el error de comunicación de la CAN al ECM
+</title>
+<test1>
+<ptxt>
+Compruebe si hay DTC del ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104058">DTC P1674: Comunicación de la CAN (error de bus)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del conector del ECM y del conjunto de unidad hidráulica&#x002F;módulo de control del ABS 
+</title>
+<test1>
+<ptxt>
+Compruebe si los terminales de los conectores del ECM y del conjunto de unidad hidráulica&#x002F;módulo de control del ABS están bien conectados, con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, compruebe de nuevo el DTC del ECM con el motor en funcionamiento.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1685?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes según las indicaciones de 
+<intxref refid = "E5JB0A0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de alimentación y de masa del ECM
+</title>
+<test1>
+<ptxt>
+Inspeccione los circuitos de alimentación y de masa del ECM consultando 
+<intxref refid = "E5JB0A1104064">Inspección del circuito de alimentación y de masa del ECM</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare los circuitos de alimentación y&#x002F;o de masa del ECM.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de DTC en el conjunto de unidad hidráulica&#x002F;módulo de control del ABS
+</title>
+<test1>
+<ptxt>
+Compruebe el DTC U1073 en el conjunto de unidad hidráulica&#x002F;módulo de control del ABS.
+</ptxt>
+</test1>
+<question>
+¿Aparece?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A4504020">DTC U1073: Línea de comunicación del módulo de control apagada</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del BCM con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay algún DTC del ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1685?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia alta en el cable &#8220;G31-1&#8221; o &#8220;G31-3&#8221; entre el BCM y el conector de empalmes del circuito de la CAN. Si los cables están bien, sustituya por un BCM en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del TCM (en modelos con A&#x002F;T) con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay DTC del ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1685?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia alta en el cable &#8220;E92-17&#8221; o &#8220;E92-7&#8221; entre el TCM y el conector de empalmes del circuito de la CAN. Si los cables están bien, sustituya por un TCM en buen estado (en modelos con A&#x002F;T) e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control de arranque sin llave (si está instalado) con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay DTC del ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1685?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia alta en el cable &#8220;G44-19&#8221; o &#8220;G44-18&#8221; entre el módulo de control de arranque sin llave y el conector de empalmes del circuito de la CAN. Si los cables están bien, sustituya por un módulo de control de arranque sin llave en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del juego de instrumentos con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay DTC del ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1685?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia alta en el cable &#8220;G28-10&#8221; o &#8220;G28-8&#8221; entre el juego de instrumentos y el conector de empalmes del circuito de la CAN. Si los cables están bien, sustituya por un juego de instrumentos o módulo de control de arranque sin llave (si está instalado) en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del DTC en el ECM
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control de 4WD (en motores J20) con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si hay DTC del ECM.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1685?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia alta en el cable &#8220;E91-22&#8221; o &#8220;E91-23&#8221; entre el módulo de control de 4WD y el conector de empalmes del circuito de la CAN. Si los cables están bien, sustituya por un módulo de control de 4WD en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prueba de continuidad del circuito de la línea de comunicación de la CAN
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores de todos los módulos de control que se comunican mediante la CAN, con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales de conexión siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal &#8220;E23-4&#8221; del conector del ECM y el terminal &#8220;E03-10&#8221; del conector del conjunto de unidad hidráulica&#x002F;módulo de control del ABS
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;E23-19&#8221; del conector del ECM y el terminal &#8220;E03-8&#8221; del conector del conjunto de unidad hidráulica&#x002F;módulo de control del ABS
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Son las resistencias inferiores a 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto o resistencia alta de la línea de comunicación de la CAN consultando 
+<intxref refid = "E5JB0A0000005">Precauciones para el Sistema de Comunicaciones CAN</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del aislamiento del circuito de la línea de comunicación de la CAN
+</title>
+<test1>
+<ptxt>
+Mida la resistencia entre los terminales &#8220;E23-4&#8221; y &#8220;E23-19&#8221; del conector del ECM.
+</ptxt>
+</test1>
+<question>
+¿Tiene la resistencia un valor infinito?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el aislamiento del circuito de la línea de comunicación de la CAN consultando 
+<intxref refid = "E5JB0A0000005">Precauciones para el Sistema de Comunicaciones CAN</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de cortocircuito a masa de la línea de comunicación de la CAN
+</title>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales de conexión siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal &#8220;E23-4&#8221; del conector del ECM y la masa de la carrocería del vehículo
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;E23-19&#8221; del conector del ECM y la masa de la carrocería del vehículo
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Tienen las resistencias un valor infinito?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 15.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito a masa de la línea de comunicación de la CAN consultando 
+<intxref refid = "E5JB0A0000005">Precauciones para el Sistema de Comunicaciones CAN</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe el cortocircuito de la línea de comunicación de la CAN al circuito de alimentación.
+</title>
+<test1>
+<ptxt>
+Mida la tensión en los siguientes terminales de conexión con el interruptor de encendido en posición ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal &#8220;E23-4&#8221; del conector del ECM y la masa de la carrocería del vehículo
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;E23-19&#8221; del conector del ECM y la masa de la carrocería del vehículo
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es cada tensión 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 16.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito en la alimentación de la línea de comunicación de la CAN consultando 
+<intxref refid = "E5JB0A0000005">Precauciones para el Sistema de Comunicaciones CAN</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito del ECM
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del conjunto de unidad hidráulica&#x002F;módulo de control del ABS con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales de conexión siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre los terminales &#8220;E03-8&#8221; y &#8220;E03-6&#8221; del conector del conjunto de unidad hidráulica&#x002F;módulo de control del ABS
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre los terminales &#8220;E03-10&#8221; y &#8220;E03-12&#8221; del conector del conjunto de unidad hidráulica&#x002F;módulo de control del ABS
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es la resistencia inferior a 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 17.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya por un conjunto de módulo de control&#x002F;unidad hidráulica del ABS en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del indicador de advertencia del ABS
+</title>
+<test1>
+<ptxt>
+Conecte los conectores a todos los módulos de control que se comunican mediante la CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<question>
+¿Se enciende el indicador de advertencia del ABS?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un conjunto de módulo de control&#x002F;unidad hidráulica del ABS en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado e inspeccione de nuevo.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

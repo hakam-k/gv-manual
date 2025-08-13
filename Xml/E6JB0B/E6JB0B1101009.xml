@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E6JB0B1101009" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Descripción del sistema de comunicaciones CAN
+</title>
+<ptxt>
+El ECM (1), el módulo de control de ABS o ESP&#174; (2), el TCM (modelo A&#x002F;T) (3), el BCM (4), el módulo de control 4WD (si está equipado) (5), el módulo de control de arranque sin llave (si está instalado) (7) y el sensor del ángulo de dirección (modelo ESP&#174;) (8) de este vehículo se comunican datos de control entre sí.
+</ptxt>
+<ptxt>
+La comunicación entre cada módulo de control se establece mediante el sistema de comunicaciones CAN (red de área del controlador).
+</ptxt>
+<figure>
+<graphic graphicname = "I6JB01110110.swf" width = "183.000mm" height = "73.733mm" ver = "02" gw = "291" gh = "192"/>
+</figure>
+<ptxt>
+El sistema de comunicaciones CAN utiliza la comunicación en serie, en la que los datos se transmiten a alta velocidad. Utiliza un par trenzado de dos líneas de comunicación para la transmisión de datos a alta velocidad. Una de sus características es que varios módulos de control se pueden comunicar simultáneamente. Además, dispone de una función para detectar automáticamente errores de comunicación. Cada módulo lee los datos necesarios de los datos recibidos y transmite datos. El ECM comunica los datos de control con cada módulo de control de la siguiente manera.
+</ptxt>
+<servinfosub id = "E6JB0B1101009001">
+<title>
+Datos de transmisión del ECM
+</title>
+<figure>
+<graphic graphicname = "I6JB0B110002S." width = "183.000mm" height = "131.236mm" ver = "02" gw = "505" gh = "355"/>
+</figure>
+<attention3>
+<ptxt>
+En la comunicación entre el ECM y el juego de instrumentos, entre el ECM y el módulo de control de arranque sin llave (si está instalado) y entre el ECM y el módulo de control de 4WD (si está instalado), los datos se transmiten únicamente desde el ECM hasta el juego de instrumentos, el módulo de control de arranque sin llave (si está instalado) y el módulo de control de 4WD (si está instalado). (El juego de instrumentos, el módulo de control de arranque sin llave (si está instalado) y el módulo de control de 4WD (si está instalado) no transmiten datos al ECM.)
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "E6JB0B1101009002">
+<title>
+Datos de recepción del ECM
+</title>
+<figure>
+<graphic graphicname = "I6JB0B110003S." width = "183.000mm" height = "139.350mm" ver = "03" gw = "502" gh = "378"/>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

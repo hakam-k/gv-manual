@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0EA304001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "0" modify = "0">
+<title>
+Comprobación del sistema de control del inmovilizador
+</title>
+<diag type = "test" id = "E5JB0EA304001001">
+<testgroup>
+<title>
+Comprobación del indicador luminoso del inmovilizador
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición ON utilizando la llave de encendido.
+</ptxt>
+</test1>
+<question>
+¿Se enciende el indicador luminoso (1) del inmovilizador?
+</question>
+<testfigure>
+<graphic graphicname = "I5JB0AA30004.swf" width = "90.000mm" height = "48.686mm" ver = "01" gw = "153" gh = "121"/>
+</testfigure>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Compruebe si el ECM detecta los DTC P1636 y&#x002F;o P1638. Consulte 
+<intxref refid = "E5JB0EA304002">Inspección del código de diagnóstico (DTC)</intxref>
+. Si los detecta, lleve a cabo la localización y reparación de averías siguiendo las indicaciones del organigrama correspondiente en esta sección. Si no se detecta, vaya a 
+<intxref refid = "E5JB0EA304006">El indicador luminoso del inmovilizador no se enciende cuando el interruptor de encendido está en posición ON ni cuando se para el motor.</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del parpadeo del indicador luminoso del inmovilizador
+</title>
+<question>
+¿Se enciende y apaga continuamente la lámpara del inmovilizador en el paso 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Verifique qué DTC detecta el ECM consultando 
+<intxref refid = "E5JB0EA304002">Inspección del código de diagnóstico (DTC)</intxref>
+. Después realice la localización de averías consultando el diagrama de flujo de esta sección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del arranque del motor
+</title>
+<test1>
+<ptxt>
+Ponga en marcha el motor utilizando la llave de encendido.
+</ptxt>
+</test1>
+<question>
+¿Arranca el motor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Efectúe 
+<intxref refid = "E5JB0E1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de que el indicador luminoso del inmovilizador permanece encendido
+</title>
+<test1>
+<ptxt>
+Verifique si el indicador luminoso del inmovilizador permanece encendido después de haber puesto en marcha el motor.
+</ptxt>
+</test1>
+<question>
+¿Permanece encendido el indicador luminoso del inmovilizador después de haber puesto en marcha el motor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0EA304007">La señal luminosa del inmovilizador permanece encendida después de arrancar el motor</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El sistema de control del inmovilizador está en buenas condiciones. Entonces vaya a 
+<intxref refid = "E5JB0EA504004">Inspección del sistema de arranque sin llave</intxref>
+ para los vehículos con sistema de arranque sin llave.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

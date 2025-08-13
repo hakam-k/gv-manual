@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10E">
+<servcat sctnbr = "10" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E6JB0AA501003" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Función de arranque sin llave del motor
+</title>
+<ptxt>
+Al activar la perilla de encendido (2) instalada en la unidad de bloqueo de la dirección (1), el módulo de control de arranque sin llave (3) activa la antena central (4) para que emita la señal de solicitud dentro del vehículo. Cuando el mando a distancia (5) recibe la señal de solicitud desde la antena central, transmite el código ID al módulo de control de arranque sin llave. Este módulo compara el código ID enviado por el mando a distancia con el código ID registrado en el módulo de control de arranque sin llave. Si los códigos ID coinciden, el módulo de control de arranque sin llave hace que el indicador luminoso de la llave (7) en el juego de instrumentos (6) se encienda en azul. Desbloqueándose la unidad de bloqueo de la dirección para poder girar la perilla de encendido. Cuando la perilla de encendido está en este estado y se coloca en ON, los códigos ID del ECM y del módulo de control de arranque sin llave se comparan a través del sistema de comunicaciones CAN (función del inmovilizador).
+</ptxt>
+<ptxt>
+Si los códigos coinciden, al colocar la perilla de encendido en la posición de arranque, el motor se pondrá en marcha.
+</ptxt>
+<attention3>
+<ptxt>
+Cuando la perilla de encendido esté en ACC u ON (motor parado) y cualquier otra puerta se haya mantenido abierta durante cierto tiempo, puede que el motor no arranque. En tal caso, gire la perilla de encendido a OFF una vez y luego pruebe a arrancar de nuevo el motor.
+</ptxt>
+</attention3>
+<figure>
+<graphic graphicname = "I6JB01A50002.swf" width = "183.000mm" height = "130.531mm" ver = "01" gw = "431" gh = "353"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.181in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.787in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Flujo de señal
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+8.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<ptxt>
+Cuando el código ID del mando a distancia y el código ID registrado en el módulo de control de arranque sin llave no coinciden, o cuando el mando a distancia está fuera de su área de funcionamiento y se pulsa la perilla de encendido, la unidad de bloqueo de la dirección no se puede desbloquear y, por lo tanto, no se puede girar la perilla de encendido. A continuación, el módulo de control de arranque sin llave hace que el indicador luminoso de la llave situado en el juego de instrumentos se encienda en rojo para advertir al conductor de que no se puede girar la perilla de encendido. Además, en caso de que el código ID del ECM y el del módulo de control de arranque sin llave no coincidan, no se puede poner en marcha el motor aunque la perilla de encendido se coloque en la posición de arranque. Entonces, el ECM hace que indicador luminoso del inmovilizador situado en el juego de instrumentos parpadee para advertir al conductor de que no se puede arrancar el motor.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

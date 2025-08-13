@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0AA204001" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Función de autodiagnóstico del BCM
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+El BCM monitoriza las condiciones de los componentes del sistema y su circuito con el interruptor de encendido colocado en posición ON. Si se produce una anomalía en el sistema, el área en la que se encuentra se registra en la memoria de EEPROM del BCM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+El DTC se puede inspeccionar de una de las siguientes maneras.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+El DTC se puede inspeccionar con la herramienta de escaneado SUZUKI (2) conectada al DLC (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+El DTC puede leerse a partir del patrón de parpadeo del indicador antirrobo (3). Además, cuando el indicador del sistema antirrobo parpadea, el DTC aparece en la pantalla del juego de instrumentos (4).
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0AA20004.swf" width = "183.000mm" height = "64.914mm" ver = "01" gw = "439" gh = "167"/>
+</figure>
+</item>
+</list2>
+</list1>
+<p-change/>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Tabla de entrada&#x002F;salida del BCM
+</title>
+<tgroup cols = "3" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.732in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.994in"/>
+<colspec colnum = "3" colname = "3" colwidth = "2.484in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Control
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Entrada
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Salida
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sistema de cierre centralizado de puertas
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor del cilindro de la llave
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de cierre manual de las puertas
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Actuador de la cerradura de la puerta del conductor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Otro que no sea el actuador de la cerradura de la puerta del conductor
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sistema de entrada sin llave
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor recordatorio de la llave
+</ptxt>
+</item>
+<item>
+<ptxt>
+Receptor de entrada sin llave
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de la puerta del conductor
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Actuador de la cerradura de la puerta del conductor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Otro que no sea el actuador de la cerradura de la puerta del conductor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relé de los intermitentes y de advertencia de riesgo
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luz interior
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sistema de arranque sin llave
+</ptxt>
+<ptxt>
+(función de cierre de las puertas)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Módulo de control de arranque sin llave
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Actuador de la cerradura de la puerta del conductor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Otro que no sea el actuador de la cerradura de la puerta del conductor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relé de los intermitentes y de advertencia de riesgo
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luz interior
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Limpialunetas trasero 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor INT del limpialunetas trasero
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor LO del limpialunetas trasero
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé del limpialunetas trasero
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Juego de instrumentos
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de las luces
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de nivel del líquido de frenos
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se&#x00F1;al del indicador recordatorio del cinturón de seguridad
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generador
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de presión de aceite
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor del freno de estacionamiento
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor selector de modo POWER&#x002F;NORMAL (modelo con A&#x002F;T)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de graduación de la luz (luz larga)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de la puerta
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se&#x00F1;al DTC del BCM
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Juego de instrumentos
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Luz interior
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de cada puerta
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor recordatorio de la llave
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Luz interior
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luz del maletero
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Avisador acústico de advertencia
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor recordatorio de la llave
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de las luces traseras
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de la puerta del conductor
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (se&#x00F1;al de velocidad del vehículo)
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (se&#x00F1;al de marcha atrás) (si el vehículo dispone de ella)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de 4WD (si dispone de ello)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de arranque sin llave (si el vehículo dispone de él)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Avisador acústico de advertencia (situado en el BCM)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sistema DRL
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de las luces
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (motor encendido, se&#x00F1;al OFF)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generador
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé del faro de luces cortas
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sistema del encendido automático de faros
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de las luces
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor del freno de estacionamiento
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor del encendido automático de faros
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé de las luces traseras
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relé del faro de luces cortas
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Luz antiniebla delantera
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de las luces
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor de faros antiniebla delanteros
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé de los faros antiniebla delanteros
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Desempa&#x00F1;ador de la luneta de la puerta trasera y calentador del retrovisor exterior
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor del desempa&#x00F1;ador de la luneta de la puerta trasera (incluido en el módulo de control HVAC)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generador
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (motor encendido, se&#x00F1;al OFF)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé del desempa&#x00F1;ador de la luneta de la puerta trasera
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relé del calentador del retrovisor (si el vehículo dispone de él)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Luces traseras
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de las luces
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relé de las luces traseras
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Dispositivo de anulación del bloqueo de la puerta
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+SDM (se&#x00F1;al de despliegue del airbag)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Actuador de la cerradura de la puerta del conductor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Otro que no sea el actuador de la cerradura de la puerta del conductor
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Indicador luminoso del sistema antirrobo
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor recordatorio de la llave
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Indicador del sistema antirrobo (en el módulo de control de HVAC)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

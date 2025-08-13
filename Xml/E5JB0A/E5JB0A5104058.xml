@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A5104058" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1777: Comunicación perdida entre el módulo TCM y el módulo ECM (error de recepción)
+</title>
+<servinfosub id = "E5JB0A5104058001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0A5104057">DTC P1774: Bus de comunicación CAN desactivado</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A5104058002">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Error de recepción de datos de comunicación para ECM detectado continuamente durante un periodo superior al tiempo especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unidad hidráulica ABS &#x002F; módulo de control
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito de la línea de comunicación de la CAN
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0A5104058003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo funcionando durante 1 minuto o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC y los DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "E5JB0A5104058004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Una vez completada la inspección y el trabajo de reparación, realice el 
+<intxref refid = "E5JB0A5104058003">Procedimiento de confirmación del DTC</intxref>
+ y confirme que la avería se ha corregido.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E5JB0A5104058005">
+<testgroup>
+<question>
+¿Se ha llevado a cabo la &#8220;Inspección del sistema de la A&#x002F;T&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A5104001">Inspección del sistema A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del conector del módulo de control
+</title>
+<test1>
+<ptxt>
+Verifique la conexión de los conectores de todos los módulos de control realizando la comunicación mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe de nuevo el DTC del TCM como se indica en 
+<intxref refid = "E5JB0A5104006">Comprobación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Hay DTC P1777?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E5JB0A0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de DTC en la unidad hidráulica ABS &#x002F; módulo de control
+</title>
+<test1>
+<ptxt>
+Inspeccione el DTC en la unidad hidráulica ABS &#x002F; módulo de control.
+</ptxt>
+</test1>
+<question>
+¿Hay DTC U1100?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del DTC
+</title>
+<test1>
+<ptxt>
+Compruebe el DTC en el ECM, como se explica en 
+<intxref refid = "E5JB0A1104003">Comprobación de DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Aparece el DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104058">DTC P1674: Comunicación de la CAN (error de bus)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Inspeccione el circuito eléctrico y a masa del ECM. Si el circuito está bien, el circuito de comunicación CAN entre el ECM y la unidad hidráulica ABS &#x002F; está abierto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del sistema de comunicación CAN
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte los conectores de todos los módulos de control realizando la comunicación mediante CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si el circuito de comunicación CAN entre los módulos de control está abierto, hay cortocircuito o alta resistencia.
+</ptxt>
+</test1>
+<question>
+¿Está cada circuito de comunicación CAN en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Inspeccione el circuito eléctrico y a masa del TCM. Si el circuito está bien, reemplace por un TCM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

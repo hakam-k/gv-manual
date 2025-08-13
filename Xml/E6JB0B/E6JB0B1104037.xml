@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0B1104037" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306: Fallo de encendido detectado
+</title>
+<servinfosub id = "E6JB0B1104037001">
+<title>
+Descripción del sistema
+</title>
+<ptxt>
+El ECM mide el ángulo del cigüeñal en base a la señal de pulso del sensor de CKP y del sensor de CMP de cada cilindro. Si detecta un gran cambio en la velocidad angular del cigüeñal, concluye que se produjo un fallo en el encendido. Cuando el número de éstos que cuenta el ECM supera la condición de detección del DTC, determina el cilindro en el que se produjo el fallo del encendido y lo indica como un DTC.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0B1104037002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.296in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.908in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0300: Aleatoria
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fallo de encendido detectado en 2 o más cilindros, que hace que el catalizador se sobrecaliente durante 200 revoluciones del motor. (El indicador MIL parpadea mientras el fallo de encendido se produzca continuamente).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fallo de encendido detectado en 2 o más cilindros, que afecta negativamente a las emisiones de escape durante 1.000 revoluciones del motor.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Lógica de detección de 2 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sistema de encendido
+</ptxt>
+</item>
+<item>
+<ptxt>
+Inyector de combustible y su circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Presión del combustible
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema de EGR (si está instalado)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de nivel de combustible
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entrada anormal de aire
+</ptxt>
+</item>
+<item>
+<ptxt>
+Compresión del motor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Juego de válvula (holgura)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sincronización de las válvulas
+</ptxt>
+</item>
+<item>
+<ptxt>
+Escasez de combustible
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema de escape
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mala calidad del combustible
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0301: Cilindro n° 1, P0302: Cilindro n° 1, P0303: Cilindro n° 3, P0304: Cilindro n° 4, P0305: Cilindro n° 5, P0306: Cilindro n° 6
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fallo de encendido detectado en 1 cilindro, que hace que el catalizador se recaliente durante 200 revoluciones del motor. (El indicador MIL parpadea mientras el fallo de encendido se produzca continuamente).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fallo de encendido detectado en 1 cilindro, que afecta negativamente a la emisión del escape durante 1.000 revoluciones del motor.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Lógica de detección de 2 ciclo de conducción)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0B1104037003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cuando efectúe una prueba de carretera, elija un lugar donde no haya tráfico o riesgo de accidentes, y conduzca con mucho cuidado para evitar cualquier accidente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prueba de carretera deben realizarla 2 personas, un conductor y una persona encargada de la prueba, en una carretera nivelada.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Asegúrese de que se cumplen las siguientes condiciones cuando se utiliza este &#8220;Procedimiento de confirmación del DTC&#8221;.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Presión atmosférica: superior a 75 kpa (560 mmHg) (Altitud: inferior a 2790 m (9150 ft)).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Temperatura del refrigerante del motor: superior a &#8211;10 &#176;C (14 &#176;F).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Asegúrese de que el ajuste del encendido sea correcto refiriéndose a 
+<intxref refid = "E6JB0B1806001">Inspección del ajuste del encendido</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Instale la herramienta de escaneado con el interruptor de encendido en la posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Gire el interruptor del encendido a la posición ON y borre el DTC utilizando la herramienta de escaneado, si lo hubiera.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduzca el vehículo a más de 60 km&#x002F;h (37 mph) durante más de 1 minuto.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo y utilice la herramienta de escaneado para comprobar si hay DTC y DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E6JB0B1104037004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E6JB0B1104037005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0B1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿El indicador de nivel de combustible marca &#8220;E&#8221; (vacío)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Añada combustible y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del sistema de admisión de aire y del sistema de escape
+</title>
+<test1>
+<ptxt>
+Compruebe posibles fugas en el sistema de admisión de aire y en el sistema de escape.
+</ptxt>
+</test1>
+<question>
+¿Están en buenas condiciones los sistemas de admisión y escape?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del sistema de encendido
+</title>
+<test1>
+<ptxt>
+Inspeccione la bujía y la chispa de encendido del cilindro en el que se produjo el fallo de encendido, consultando 
+<intxref refid = "E6JB0B1806005">Inspección de la bujía</intxref>
+ y 
+<intxref refid = "E6JB0B1804003">Inspección de la bujía de encendido</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Bobina de encendido, mazo de cables bujía defectuosos. Si está bien, sustituya por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del inyector de combustible y su circuito
+</title>
+<test1>
+<ptxt>
+Inspeccione el circuito del inyector de combustible refiriéndose a 
+<intxref refid = "E6JB0B1104086">Inspección del circuito del inyector de combustible</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de la presión del combustible
+</title>
+<test1>
+<ptxt>
+Compruebe la presión del combustible, consulte 
+<intxref refid = "E6JB0B1104088">Comprobación de la presión de combustible</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del inyector de combustible
+</title>
+<test1>
+<ptxt>
+Inspeccione los inyectores de combustible, consulte 
+<intxref refid = "E6JB0B1706009">Inspección del inyector del combustible</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del sistema de EGR (si está instalado)
+</title>
+<test1>
+<ptxt>
+Inspeccione el sistema de EGR; para ello consulte 
+<intxref refid = "E6JB0B1204001">Inspección del sistema de EGR (si está instalado)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del sensor de nivel del combustible
+</title>
+<test1>
+<ptxt>
+Inspeccione el sensor del nivel de combustible como se indica en 
+<intxref refid = "E6JB0B9306005">Inspección del sensor del nivel de combustible</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación de los sistemas de mecánica del motor
+</title>
+<test1>
+<ptxt>
+Inspeccione los sistemas mecánicos del motor.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Compresión del motor: Consulte 
+<intxref refid = "E6JB0B1404001">Comprobación de la compresión</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Juego de válvulas: Consulte 
+<intxref refid = "E6JB0B1404003">Comprobación del juego de válvulas (holgura)</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sincronización de las válvulas: Consulte 
+<intxref refid = "E6JB0B1406019">Extracción e instalación de la 2da cadena de distribución del banco izquierdo (N° 1) y el tensor de cadena</intxref>
+ y 
+<intxref refid = "E6JB0B1406022">Extracción y montaje de la 1ra cadena de distribución y del tensor de la cadena</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

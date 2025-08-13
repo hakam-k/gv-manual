@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A1104039" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0327 &#x002F; P0328: Baja&#x002F;alta tensión en el circuito del sensor de detonación
+</title>
+<servinfosub id = "E5JB0A1104039001">
+<title>
+Diagrama de cableado
+</title>
+<figure>
+<graphic graphicname = "I5JB0A110046.swf" width = "183.000mm" height = "82.553mm" ver = "01" gw = "446" gh = "217"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.734in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Sensor de detonación
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "E5JB0A1104039002">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.000in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.199in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+El DTC se fijará cuando se den durante 0,5 segundos ininterrumpidamente todas las condiciones siguientes.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+DTC P0327:
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motor funcionando
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del sensor de detonación es inferior a 1,23 V
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+DTC P0328:
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motor funcionando
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión del sensor de detonación es de al menos 3,91 V
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del sensor de detonación (abierto o en cortocircuito)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de detonación
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0A1104039003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y, utilizando la herramienta de escaneado, borre el  DTC, los DTC pendientes y los datos de imagen fija.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo en marcha durante 10 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC utilizando la herramienta de escaneado.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E5JB0A1104039004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las medidas de precaución para la localización y reparación de averías del DTC en 
+<intxref refid = "E5JB0A1100005">Precauciones para la localización y reparación de averías del DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E5JB0A1104039005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito del sensor de detonación
+</title>
+<test1>
+<ptxt>
+Extraiga el ECM de su soporte con los conectores del ECM conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal &#8220;C37-56&#8221; del conector del ECM y la masa de la carrocería del vehículo con el motor en funcionamiento.
+</ptxt>
+</test1>
+<question>
+¿Se encuentra la tensión entre 1,23 &#8211; 3,91 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E5JB0A0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+. Si estuviera bien, sustituya por un ECM en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de circuito abierto en el sensor de detonación
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del sensor de detonación con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON, mida la tensión entre el cable &#8220;WHT&#8221; del conector del sensor de detonación y la masa del motor.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I2RH01110089.swf" width = "90.000mm" height = "44.185mm" ver = "01" gw = "162" gh = "108"/>
+</testfigure>
+</test1>
+<question>
+¿Es la tensión 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de circuito abierto en el sensor de detonación
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y mida la tensión entre el terminal &#8220;C37-56&#8221; del conector del ECM y la masa del motor
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+El circuito del cable &#8220;WHT&#8221; está abierto.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de cortocircuito en el sensor de detonación
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#8220;C37-56&#8221; del conector del ECM y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿La resistencia equivale a infinito?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Cortocircuito a masa del cable &#8220;WHT&#8221;.
+</ptxt>
+<ptxt>
+Si el cable está bien, sustituya por un ECM en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de cortocircuito en el sensor de detonación
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y mida la tensión entre el terminal &#8220;C37-56&#8221; del conector del ECM y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cortocircuito del cable &#8220;WHT&#8221; con otro circuito.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de resistencia alta en el circuito del sensor de detonación
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF, mida la resistencia entre el terminal &#8220;C37-56&#8221; del conector del ECM y el terminal del cable &#8220;RED&#8221; del conector del mazo del sensor de detonación.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sensor de detonación defectuoso.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito de resistencia alta del cable &#8220;WHT&#8221;.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

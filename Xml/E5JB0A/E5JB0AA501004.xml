@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10E">
+<servcat sctnbr = "10" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "E5JB0AA501004" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Función de bloqueo de las puertas del sistema de arranque sin llave
+</title>
+<ptxt>
+Cuando se pulsa el interruptor (1) de solicitud incorporado en la manecilla exterior de la puerta del conductor, del pasajero o de la puerta trasera, el módulo (2) de control de arranque sin llave activa la antena (3) central y la antena (4) del maletero que envían ondas de radio en el interior del vehículo para comprobar si se encuentra en él el mando (5) a distancia. Si el módulo de control de arranque sin llave no recibe señal del mando a distancia (es decir, éste no se encuentra en el interior del vehículo), se activa la antena (6) de la puerta en la que se ha pulsado el interruptor de solicitud, la cual envía la señal de solicitud fuera del vehículo. Si el mando a distancia está dentro de la zona de funcionamiento del bloqueo de puertas, recibe la señal de solicitud de la antena antes mencionada, envía el código ID del mando a distancia y la señal de solicitud al módulo de control de arranque sin llave y, al mismo tiempo, hace que se encienda el indicador (7) luminoso del mando a distancia. Cuando se enciende el indicador luminoso de funcionamiento significa que el mando a distancia envió el código ID y la señal de solicitud.
+</ptxt>
+<ptxt>
+El módulo de control de arranque sin llave compara el código ID enviado por el mando a distancia con el código ID registrado en el módulo de control de arranque sin llave. Si ambos códigos coinciden, el módulo de control de arranque sin llave envía la señal de solicitud de bloqueo o desbloqueo (dependiendo del estado del interruptor (8) de cierre de la puerta) al BCM (9). Cuando el BCM recibe la señal del módulo de control de arranque sin llave a través de las líneas de comunicación CAN, activa o desactiva el actuador de cierre de las puertas para bloquearlas o desbloquearlas.
+</ptxt>
+<ptxt>
+Cuando el módulo de control de arranque sin llave recibe una señal del mando a distancia ( es decir, el mando a distancia se encuentra en el interior del vehículo), se activa el funcionamiento del sistema de arranque sin llave, y el módulo de control de arranque sin llave envía una señal de solicitud al BCM para desbloquear las puertas y así evitar que el mando a distancia se quede dentro del vehículo cerrado. De este modo, las puertas permanecen abiertas.
+</ptxt>
+<ptxt>
+También, si el conductor o el pasajero se ha dejado el mando a distancia en el interior del vehículo y ha cerrado las puertas utilizando el botón de bloqueo de la puerta o el interruptor de cierre manual de las puertas, se activa la función que impide que el mando a distancia se quede dentro del vehículo cerrado, y las puertas se desbloquean.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0AA50003.swf" width = "183.000mm" height = "115.009mm" ver = "01" gw = "431" gh = "309"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.892in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Flujo de la señal
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<ptxt>
+Además, si los códigos ID del mando a distancia y del módulo de control de arranque sin llave no coinciden, o si el mando a distancia está fuera de la zona de funcionamiento, las puertas no se bloquean o desbloquean, aunque se pulse el interruptor de solicitud de la manecilla exterior.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

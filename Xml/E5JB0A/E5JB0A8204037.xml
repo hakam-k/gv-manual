@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A8204037" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1074 &#x002F; B1078: Circuito del sensor delantero del conductor &#x002F; pasajero abierto o en cortocircuito con el circuito de alimentación eléctrica
+</title>
+<servinfosub id = "E5JB0A8204037001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0A8204036">DTC B1073 &#x002F; B1077: Cortocircuito a masa del circuito del sensor frontal del conductor &#x002F; pasajero</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Respete estrictamente las instrucciones de la sección PRECAUCIONES de &#8220;Secuencia de inspección del sistema de diagnóstico del airbag&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "E5JB0A8204037002">
+<title>
+Se generará un DTC cuando
+</title>
+<ptxt>
+El SDM detecta una señal de anomalía en el sensor delantero.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A8204037003">
+<title>
+Descripción de la prueba de flujo
+</title>
+<ptxt>
+<emph etype = "bold">
+Paso 1: Compruebe si está abierto el circuito del sensor delantero.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 2: Compruebe si hay cortocircuito entre el circuito del sensor delantero y el circuito de alimentación.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 3: Verifique si la avería está en el sensor delantero.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A8204037004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E5JB0A8204037005">
+<testgroup>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector &#8220;E13&#8221;, o el &#8220;E24&#8221;, del sensor delantero.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del SDM &#8220;G47&#8221;, o &#8220;L33&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que es correcta la conexión al SDM de los terminales &#8220;G47-9&#8221; y &#8220;G47-17&#8221;, o del &#8220;L33-9&#8221; y el &#8220;L33-10&#8221; (para DTC B1074); o de los terminales &#8220;G47-11&#8221; y &#8220;G47-19&#8221;, o del &#8220;L33-11&#8221; y el &#8220;L33-12&#8221; (para DTC B1078).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión al conector del sensor delantero de los terminales &#8220;E13-1&#8221; y &#8220;E13-2&#8221;; o del &#8220;E24-1&#8221; y el &#8220;E24-2&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Usando el cable de mantenimiento (1), conecte los terminales del conector del sensor delantero &#8220;E13-1&#8221; y &#8220;E13-2&#8221; (para DTC B1074); o bien &#8220;E24-1&#8221; y &#8220;E24-2&#8221; (para DTC B1078) .
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre &#8220;G47-9&#8221; y &#8220;G47-17&#8221; (para DTC B1074);  o entre &#8220;G47-11&#8221; y &#8220;G47-19&#8221; (para DTC B1078) (&#x005B;A&#x005D;); o entre &#8220;L33-9&#8221; y &#8220;L33-10&#8221; (para DTC B1074); o entre &#8220;L33-11&#8221; y &#8220;L33-12&#8221; (para DTC B1078) (&#x005B;B&#x005D;).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0125">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820051.swf" width = "90.000mm" height = "60.681mm" ver = "01" gw = "230" gh = "155"/>
+</testfigure>
+</test1>
+<question>
+¿Es la resistencia igual o menor a 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Para el DTC B1074 Resistencia elevada o circuito abierto &#8220;ORN&#8221;, o &#8220;PNK&#x002F;BLK&#8221;.
+</ptxt>
+<ptxt>
+Para el DTC B1078 Resistencia alta o circuito abierto en &#8220;PNK&#8221;, o &#8220;PNK&#x002F;BLU&#8221;.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Desconecte el cable de mantenimiento del conector &#8220;E13&#8221;, o del &#8220;E24&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre &#8220;G47-9&#8221; y masa a carrocería, y &#8220;G47-17&#8221; y masa a carrocería (para DTC B1074);  o entre &#8220;G47-11&#8221; y masa a carrocería, y &#8220;G47-19&#8221; y masa a carrocería (para DTC B1078) &#x005B;A&#x005D;, o entre &#8220;L33-9&#8221; y masa a carrocería, y &#8220;L33-10&#8221; y masa a carrocería (para DTC B1074); o entre &#8220;L33-11&#8221; y masa a carrocería, y &#8220;L33-12&#8221; y masa a carrocería (para DTC B1078) &#x005B;B&#x005D;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0126">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820052.swf" width = "90.000mm" height = "59.975mm" ver = "01" gw = "195" gh = "153"/>
+</testfigure>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿es la tensión igual o inferior a 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Para el DTC B1074 Circuito &#8220;ORN&#8221;, o circuito &#8220;PNK&#x002F;BLK&#8221;, en cortocircuito con el circuito de alimentación eléctrica.
+</ptxt>
+<ptxt>
+Para el DTC B1078 Circuito &#8220;PNK&#8221;, o circuito &#8220;PNK&#x002F;BLU&#8221;, en cortocircuito con el circuito de alimentación eléctrica.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Sustituya el sensor delantero. Consulte 
+<intxref refid = "E5JB0A8206014">Inspección del sensor delantero</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un SDM en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el sensor delantero. Consulte 
+<intxref refid = "E5JB0A8206013">Desmontaje y montaje del sensor delantero</intxref>
+. Si el DTC persiste, reemplace por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Después de terminar la inspección y las reparaciones, haga lo siguiente.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vuelva a conectar todos los componentes del sistema de airbag, y compruebe si todos los componentes están montados correctamente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Borre el DTC, como se explica en 
+<intxref refid = "E5JB0A8204005">Borrado de DTC</intxref>
+, si existe alguno.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repita la 
+<intxref refid = "E5JB0A8204001">Comprobación del sistema de diagnóstico de airbags</intxref>
+ para confirmar que la avería se ha corregido.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

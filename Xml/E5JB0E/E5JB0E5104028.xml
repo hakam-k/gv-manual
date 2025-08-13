@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0E5104028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0713: Circuito del sensor &#8220;A&#8221; de temperatura del líquido de la transmisión alto
+</title>
+<servinfosub id = "E5JB0E5104028001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0E5104027">DTC P0712: Circuito del sensor de temperatura del líquido de la transmisión bajo &#8220;A&#8221;</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E5104028002">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.067in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.099in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tensión del terminal del sensor de temperatura de la transmisión es menor de 4,89 V en el estado del vehículo que se muestra a continuación.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de encendido en posición ON durante 15 minutos o más
+</ptxt>
+</item>
+<item>
+<ptxt>
+La temperatura del refrigerante del motor es superior a 50 &#176;C (122 &#176;F)
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensor de temperatura del líquido de la transmisión o su circuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0E5104028003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Con la herramienta de escaneado, borre los DTC de la memoria de los módulos TCM y ECM.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Encienda el motor.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Haga avanzar el vehículo y aumente la velocidad hasta unos 40 km&#x002F;h (25mile&#x002F;h) durante 20 minutos o más.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC, el DTC pendiente y los datos de imagen fija.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E5JB0E5104028004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E5JB0E5104028005">
+<testgroup>
+<question>
+¿Se ha llevado a cabo la &#8220;Inspección del sistema de la A&#x002F;T&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0E5104001">Inspección del sistema A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si el circuito del sensor de temperatura del líquido de la transmisión está abierto
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte del módulo TCM los conectores de TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe el estado de la conexión al sensor de temperatura del líquido de la transmisión, en los terminales &#8220;E92-11&#8221; y &#8220;E92-12&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcto, compruebe la continuidad entre los terminales &#8220;E92-11&#8221; y &#8220;E92-12&#8221; del conector del módulo TCM desconectado, en lado del mazo de cables.
+</ptxt>
+</test1>
+<question>
+¿Se indica continuidad?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El circuito del sensor de temperatura de líquido de la transmisión está abierto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe si el circuito del sensor de temperatura del líquido de la transmisión está en cortocircuito a la alimentación
+</title>
+<test1>
+<ptxt>
+Baje la temperatura del líquido de la A&#x002F;T a temperatura ambiente.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Enchufe los conectores del TCM al módulo TCM, con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal &#8220;E92-11&#8221; del conector del módulo TCM y masa.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 4,89 V, o más?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+El circuito del sensor de temperatura del líquido de la transmisión está en cortocircuito al circuito de alimentación. Si el circuito es correcto, vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Desperfecto intermitente o módulo TCM defectuoso. Compruebe si hay problemas intermitentes siguiendo las indicaciones de 
+<intxref refid = "E5JB0E0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+. Si los hubiera, reemplace por un TCM en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspeccione el sensor de temperatura de fluido de la transmisión
+</title>
+<test1>
+<ptxt>
+Inspeccione el sensor de temperatura del líquido de la transmisión como se indica en 
+<intxref refid = "E5JB0E5106024">Inspección del sensor de temperatura del líquido de la transmisión</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Desperfecto intermitente o módulo TCM defectuoso. Compruebe si hay problemas intermitentes siguiendo las indicaciones de 
+<intxref refid = "E5JB0E0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+. Si los hubiera, reemplace por un TCM en buen estado y vuelva a inspeccionar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituye el mazo de cables del cuerpo de la válvula, incluido el sensor de temperatura del fluido de la transmisión, como se indica en 
+<intxref refid = "E5JB0E5106023">Extracción e instalación del sensor de temperatura del líquido de la transmisión</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

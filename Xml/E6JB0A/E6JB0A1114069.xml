@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0A1114069" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2102: Circuito del motor de control del actuador de la mariposa bajo
+</title>
+<servinfosub id = "E6JB0A1114069001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0A1114068">DTC P2101: Margen&#x002F;rendimiento del circuito del motor de control del actuador de la mariposa:Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A1114069002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+El suministro eléctrico del circuito de control del actuador de la mariposa es inferior a 5 V durante el tiempo especificado incluso cuando el relé de control del actuador de la mariposa está encendido.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del relé de control del actuador de la mariposa
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relé de control del actuador de la mariposa
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0A1114069003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, conecte la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo en marcha durante al menos 1 minuto.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E6JB0A1114069004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las medidas de precaución para la localización y reparación de averías del DTC en 
+<intxref refid = "E6JB0A1110003">Precauciones para la localización y reparación de averías del DTC:Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</attention3>
+<p-change/>
+<diag type = "test" id = "E6JB0A1114069005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0A1114001">Inspección del sistema de control del motor y de las emisiones:Para modelo con motor de gasolina</intxref>
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito del relé de control del actuador de la mariposa
+</title>
+<test1>
+<ptxt>
+Extraiga el ECM de su soporte con los conectores del ECM conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si los terminales &#8220;E23-50&#8221; y &#8220;E23-17&#8221; están bien conectados al conector del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal &#8220;E23-17&#8221; del conector del ECM y la masa del motor.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E6JB0A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Está en buenas condiciones el fusible &#8220;THR MOT&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el fusible y compruebe si hay cortocircuitos en los circuitos conectados a este fusible.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito del relé de control del actuador de la mariposa
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en posición OFF, extraiga el relé de control del actuador de la mariposa de la caja de relés.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si los terminales de los cables &#8220;BLU&#x002F;BLK&#8221;, &#8220;BLU&#x002F;RED&#8221;, &#8220;BLU&#x002F;ORN&#8221; y &#8220;GRN&#8221; están bien conectados al relé de control de actuador de la mariposa.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre cada terminal de cable &#8220;BLU&#x002F;BLK&#8221;, &#8220;BLU&#x002F;RED&#8221; y la masa del motor con el interruptor de encendido en posición ON.
+</ptxt>
+</test1>
+<question>
+¿Es cada tensión de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto o resistencia alta en el cable &#8220;BLU&#x002F;BLK&#8221; y&#x002F;o &#8220;BLU&#x002F;RED&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito del relé de control del actuador de la mariposa
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales de conexión siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal del cable &#8220;BLU&#x002F;ORN&#8221; del conector del relé de control del actuador de la mariposa y el terminal &#8220;E23-50&#8221; del conector del ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal del cable &#8220;GRN&#8221; del conector del relé de control del actuador de la mariposa y el terminal &#8220;E23-17&#8221; del conector del ECM
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Son todas las resistencias inferiores a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El circuito del cable &#8220;BLU&#x002F;ORN&#8221; y&#x002F;o &#8220;GRN&#8221; está abierto o tiene resistencia alta.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del relé de control del actuador de la mariposa
+</title>
+<test1>
+<ptxt>
+Inspeccione el relé de control del actuador de la mariposa según las indicaciones de 
+<intxref refid = "E6JB0A1316018">Inspección del relé de control:Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el relé de control del actuador de la mariposa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

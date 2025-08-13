@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0B8204026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1054 &#x002F; B1058: Cortocircuito entre el circuito de activación del pretensor del conductor &#x002F; pasajero y el circuito de alimentación eléctrica 
+</title>
+<servinfosub id = "E5JB0B8204026001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0B8204023">DTC B1051 &#x002F; B1055: Resistencia alta del circuito iniciador del pretensor del conductor &#x002F; pasajero</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Respete estrictamente las instrucciones de la sección PRECAUCIONES de &#8220;Secuencia de inspección del sistema de diagnóstico del airbag&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "E5JB0B8204026002">
+<title>
+Se generará un DTC cuando
+</title>
+<ptxt>
+La tensión medida en el circuito de activación de pretensor del cinturón de seguridad del conductor o del pasajero es superior a un valor especificado durante un tiempo determinado.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0B8204026003">
+<title>
+Descripción de la prueba de flujo
+</title>
+<ptxt>
+<emph etype = "bold">
+Paso 1: Compruebe si la avería está en el pretensor de cinturón de seguridad.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 2: Verifique el circuito de activación del pretensor del cinturón de seguridad (Entre &#8220;L29&#8221; y &#8220;L12&#8221;; o entre &#8220;L29&#8221; y &#8220;L36&#8221;)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 3: Verifique el circuito de activación del pretensor del cinturón de seguridad (Entre &#8220;G55&#8221; y &#8220;G47&#8221;, entre &#8220;L12&#8221; y &#8220;L33&#8221;, o entre &#8220;L36&#8221; y &#8220;L33&#8221;)
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0B8204026004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E5JB0B8204026005">
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, quite la guarnición inferior del montante central del lado del conductor o del pasajero, y después desconecte los conectores &#8220;L12&#8221; y &#8220;L36&#8221; del pretensor del cinturón de seguridad (1).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique la conexión al pretensor del cinturón de seguridad en los terminales del conector &#8220;L12&#8221; o &#8220;L36&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está en orden, conecte las herramientas especiales (A), (B) y (C) al conector &#8220;L12&#8221; o &#8220;L36&#8221; (desconectado en el paso 1).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0115">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0116">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0117">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820039.swf" width = "90.000mm" height = "59.622mm" ver = "01" gw = "171" gh = "152"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece todavía el DTC B1054 o B1058?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Sin airbag lateral ni airbag de cortina Vaya al paso 2.
+</ptxt>
+<ptxt>
+Con airbag lateral y airbag de cortina Vaya al paso 3.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF. Sustituya el pretensor del cinturón de seguridad, tal como se indica en 
+<intxref refid = "E5JB0B8106002">Extracción e instalación del cinturón de seguridad delantero</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte el conector &#8220;G55&#8221; situado cerca de la caja de la consola.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la conexión al pretensor de cinturón de seguridad correspondiente, en el terminal del conector &#8220;G55&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si la conexión está en orden, conecte las herramientas especiales (B) y (D) al conector &#8220;G55&#8221;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0118">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0119">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820040.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "150" gh = "128"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece todavía el DTC B1054 o B1058?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1054: Circuito &#8220;GRN&#x002F;ORN&#8221;, o &#8220;GRN&#x002F;YEL&#8221; en cortocircuito con el circuito de alimentación eléctrica. (Entre los conectores &#8220;L29&#8221; y &#8220;L12&#8221;)
+</ptxt>
+<ptxt>
+DTC B1058: Circuito &#8220;BLU&#x002F;ORN&#8221;, o &#8220;BLU&#x002F;YEL&#8221;, en cortocircuito con el circuito de alimentación eléctrica. (Entre los conectores &#8220;L29&#8221; y &#8220;L36&#8221;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, desconecte las herramientas especiales (A), (B) y (C) o (D) y el conector del SDM &#8220;G47&#8221; o &#8220;L33&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Libere la barra de cortocircuitos del conector del SDM insertando la herramienta de liberación (1) incluida en la herramienta especial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre &#8220;G47-7&#8221; y masa a carrocería, y &#8220;G47-8&#8221; y masa a carrocería (para DTC B1053);  o entre &#8220;G47-1&#8221; y masa a carrocería, y &#8220;G47-2&#8221; y masa a carrocería (para DTC B1057) &#x005B;A&#x005D;, o entre &#8220;L33-5&#8221; y masa a carrocería, y &#8220;L33-6&#8221; y masa a carrocería (para DTC B1053); o entre &#8220;L33-7&#8221; y masa a carrocería, y &#8220;L33-8&#8221; y masa a carrocería (para DTC B1057) &#x005B;B&#x005D;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0120">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0121">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0122">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0123">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820043.swf" width = "90.000mm" height = "118.184mm" ver = "01" gw = "236" gh = "318"/>
+</testfigure>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿es la tensión igual o inferior a 4 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un SDM en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1054: Circuito &#8220;GRN&#x002F;ORN&#8221;, o &#8220;GRN&#x002F;YEL&#8221;, en cortocircuito con el circuito de alimentación eléctrica. Entre los conectores &#8220;G55&#8221; y &#8220;G47&#8221;, o entre los conectores &#8220;L12&#8221; y &#8220;L33&#8221;.
+</ptxt>
+<ptxt>
+DTC B1058: Circuito &#8220;BLU&#x002F;ORN&#8221;, o &#8220;BLU&#x002F;YEL&#8221;, en cortocircuito con el circuito de alimentación eléctrica. Entre los conectores &#8220;G55&#8221; y &#8220;G47&#8221;, o entre los conectores &#8220;L36&#8221; y &#8220;L33&#8221;.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Después de completar la inspección y los trabajos de reparación, efectúe lo siguiente.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vuelva a conectar todos los componentes del sistema de airbag, y compruebe si todos los componentes están montados correctamente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Borre el DTC, como se explica en 
+<intxref refid = "E5JB0B8204005">Borrado de DTC</intxref>
+, si existe alguno.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repita la 
+<intxref refid = "E5JB0B8204001">Comprobación del sistema de diagnóstico de airbags</intxref>
+ para confirmar que la avería se ha corregido.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

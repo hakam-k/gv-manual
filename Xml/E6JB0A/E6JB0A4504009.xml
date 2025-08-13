@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0A4504009" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+El indicador de advertencia del ABS se mantiene en posición ON
+</title>
+<servinfosub id = "E6JB0A4504009001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0A4504008">El indicador de advertencia del ABS no se enciende al poner el interruptor de encendido en ON</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A4504009002">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+El funcionamiento (ON&#x002F;OFF) del indicador de advertencia del ABS es controlado por el módulo de control del ABS (ESP&#174;) a través del módulo de accionamiento del indicador en el juego de instrumentos.
+</ptxt>
+<ptxt>
+Si el sistema de frenos antibloqueo está en buenas condiciones, el módulo de control del ABS (ESP&#174;) enciende el indicador de advertencia del ABS, con el interruptor de encendido en la posición ON, lo mantiene encendido durante 2 segundos, y a continuación lo apaga. Si se detecta una anormalidad en el sistema, el indicador de advertencia del ABS se enciende de manera continua con el módulo de control del ABS (ESP&#174;). Además, es encendido de manera continua por el módulo de accionamiento del indicador cuando el conector del módulo de control del ABS (ESP&#174;) es desconectado.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A4504009003">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E6JB0A4504009004">
+<testgroup>
+<test1>
+<ptxt>
+Efectúe la comprobación del código de diagnóstico.
+</ptxt>
+</test1>
+<question>
+¿Aparece algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de diagnóstico del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Están en buen estado los fusibles principales del motor de la bomba del ABS y la válvula solenoide del ABS?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el fusible y verifique si se ha producido un cortocircuito a masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Desconecte el conector del módulo de control del ABS (ESP&#174;).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si está bien la conexión al conector del módulo de control del ABS (ESP&#174;) en los terminales &#8220;E03-7&#8221;, &#8220;E03-13&#8221; y &#8220;E03-26&#8221; (o &#8220;E53-16&#8221;, &#8220;E53-35&#8221; y &#8220;E53-47&#8221;).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien, coloque el interruptor de encendido en posición ON y mida la tensión entre el terminal &#8220;E03-7&#8221; (o &#8220;E53-35&#8221;) y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto de &#8220;GRN&#x002F;ORN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si está bien la conexión al conector del módulo de control del ABS (ESP&#174;) en los terminales &#8220;E03-1&#8221; y &#8220;E03-14&#8221; (o &#8220;E53-1&#8221; y &#8220;E53-32&#8221;).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien, coloque el interruptor de encendido en posición ON y mida la tensión entre cada terminal &#8220;E03-1&#8221;, &#8220;E03-14&#8221; (o &#8220;E53-1&#8221;, &#8220;E53-32&#8221;) y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿La tensión es de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto en &#8220;WHT&#x002F;RED&#8221; y&#x002F;o &#8220;WHT&#x002F;BLU&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y mida la resistencia entre cada terminal de &#8220;E03-13&#8221;, &#8220;E03-26&#8221; (o &#8220;E-53-16&#8221;, &#8220;E53-47&#8221;) y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito de masa para la unidad hidráulica &#x002F; módulo de control ABS (ESP&#174;) abierto o resistencia elevada.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Compruebe el circuito de comunicación CAN entre el juego de instrumentos y módulo de control del ABS (ESP&#174;) consultando 
+<intxref refid = "E6JB0A4504019">DTC U1073: Bus de comunicación de los módulos de control apagado (modelo con motor de gasolina)</intxref>
+.
+</ptxt>
+<question>
+¿Está el circuito de comunicaciones CAN en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un juego de instrumentos en buen estado, y vuelva a realizar la inspección. Si el indicador de advertencia del ABS permanece en ON, reemplace el conjunto del módulo de control &#x002F; unidad hidráulica del ABS (ESP&#174;) y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o reemplace.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

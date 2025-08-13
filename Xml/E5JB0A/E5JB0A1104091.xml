@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A1104091" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0625 &#x002F; P0626: Baja&#x002F;alta tensión en el circuito del terminal de campo del generador
+</title>
+<servinfosub id = "E5JB0A1104091001">
+<title>
+Diagrama de cableado y del sistema
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0A1104090">DTC P0620: Circuito de control del generador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A1104091002">
+<title>
+Descripción del sistema de control del generador
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0A1101011">Descripción del sistema de control del generador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A1104091003">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.116in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.086in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0625:
+</emph>
+</ptxt>
+<ptxt>
+El servicio de la bobina de campo del generador es del 100&#x0025; (baja tensión) durante más tiempo que el especificado incluso si el control del generador está regulado al máximo (servicio de control del 100&#x0025;), o el servicio de la bobina de campo del generador es del 100&#x0025; (baja tensión) cuando se arranca el motor.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0626:
+</emph>
+</ptxt>
+<ptxt>
+El servicio de la bobina de campo del generador es del 0&#x0025; (alta tensión) durante más tiempo que el especificado incluso si el control del generador está regulado al mínimo (servicio de control del 0&#x0025;).
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Generador y&#x002F;o su circuito
+</ptxt>
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0A1104091004">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en la posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Asegúrese de que todos los interruptores suplementarios están desactivados.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga el motor en marcha y deje que se caliente hasta que alcance la temperatura normal de funcionamiento (ECT aprox. 90 &#8211; 95 &#176;C, 193 &#8211; 203 &#176;F).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Encienda el siguiente interruptor suplementario.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruptor de faros.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor del motor del soplador (al máximo).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruptor del desempañador trasero.
+</ptxt>
+</item>
+</list1>
+</s1>
+<s1>
+<ptxt>
+Aumente el régimen del motor a 4000 rpm y manténgalo durante un mínimo de 10 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Reduzca el régimen del motor hasta el ralentí.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC y los DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "E5JB0A1104091005">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las precauciones para la localización y reparación de averías del DTC en 
+<intxref refid = "E5JB0A1100005">Precauciones para la localización y reparación de averías del DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E5JB0A1104091006">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de control del generador
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del generador y del ECM con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si el terminal del cable del conector del generador está bien conectado al conector del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien conectado, compruebe lo siguiente en el circuito de control del generador (terminal &#8220;C&#8221; del generador) y el circuito de supervisión de la bobina de campo (terminal &#8220;FR&#8221; del generador).
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia de cada cable de control del generador y del cable de supervisión de la bobina de campo entre el conector del generador y el conector del ECM es inferior a 1 &#937; (prueba de continuidad)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia entre el cable de control del generador y el cable de supervisión de la bobina de campo del conector del generador tiene un valor infinito (prueba de aislamiento)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia entre el cable de control del generador y el cable de supervisión de la bobina de campo del conector del generador y la masa de la carrocería del vehículo tiene un valor infinito (prueba de cortocircuito a masa)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión entre cada cable de control del generador y el cable de supervisión de la bobina de campo del conector del generador y la masa de la carrocería del vehículo es 0 V con el interruptor de encendido en ON (prueba de cortocircuito en el circuito de alimentación)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el cable defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del generador
+</title>
+<test1>
+<ptxt>
+Compruebe la salida del generador. Para ello consulte 
+<intxref refid = "E5JB0A1A04002">Prueba del generador (comprobación de batería descargada)</intxref>
+ y 
+<intxref refid = "E5JB0A1A06009">Inspección del generador</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el generador.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0AA324006" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+La luz de advertencia de inyección no se enciende ON con el interruptor de encendido en la posición ON y el motor parado
+</title>
+<servinfosub id = "E6JB0AA324006001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0AA322001">Diagrama del circuito del cableado del sistema de control del inmovilizador:Para modelo con motor diesel</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0AA324006002">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+Cuando se coloca el interruptor de encendido en la posición ON, el ECM transmite la señal ON de indicación al medidor combinado para encender la luz de advertencia de inyección en caso de que no haya ningún problema con el sistema de control del inmovilizador. El juego de instrumentos enciende, pues, el indicador luminoso. Cuando se pone en marcha el motor, el ECM transmite la señal indicadora de apagado al juego de instrumentos para que se apague el indicador luminoso. A continuación, el medidor combinado apaga la luz de advertencia de inyección. No obstante, en caso de que haya algún problema con el sistema de control de inmovilizador, la luz de advertencia de inyección se enciende y apaga cuando se coloca el interruptor de encendido en la posición ON conectada.
+</ptxt>
+</servinfosub>
+<p-change/>
+<servinfosub id = "E6JB0AA324006003">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E6JB0AA324006004">
+<testgroup>
+<title>
+Comprobación del suministro de alimentación de la luz de advertencia de inyección
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<question>
+¿Se encienden otros indicadores de advertencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de códigos de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Compruebe si el ECM emite algún DTC; para ello, consulte 
+<intxref refid = "E6JB0A1124005">Comprobación del DTC:Para modelo con motor diesel</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Revise el módulo de control ABS o el módulo de control ESP&#174; por si hay algún DTC. Para el modelo de ESP&#174;, consulte 
+<intxref refid = "E6JB0A4604006">Tabla de DTC</intxref>
+. Para el modelo sin ESP&#174;, consulte 
+<intxref refid = "E6JB0A4504004">Comprobación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Revise BCM por si hay algún DTC consultando 
+<intxref refid = "E6JB0AA204005">Comprobación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detectó algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de diagnóstico del DTC pertinente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el juego de instrumentos por uno en buen estado y vuelva a realizar la comprobación. Si la luz de advertencia de inyección permanece apagada, reemplace el ECM por uno en buen estado y vuelva a revisar.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del fusible
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si alguno de los fusibles relacionados está fundido.
+</ptxt>
+</test1>
+<question>
+¿Está fundido algún fusible?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya el fusible fundido y verifique si se ha producido un cortocircuito.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito del cableado de la fuente de alimentación del juego de instrumentos
+</title>
+<test1>
+<ptxt>
+Extraiga el juego de instrumentos siguiendo las indicaciones de 
+<intxref refid = "E6JB0A9306003">Instalación y extracción del juego de instrumentos</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si es correcta la conexión de los terminales del conector del juego de instrumentos.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si lo es, coloque el interruptor de encendido en la posición ON y mida la tensión entre el terminal de la fuente de alimentación del juego de instrumentos y la masa de la carrocería consultando 
+<intxref refid = "E6JB0A9302001">Diagrama del circuito del juego de instrumentos</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto de cableado de alimentación.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito del cableado a masa del juego de instrumentos
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal a masa del conector del juego de instrumentos y la masa de la carrocería del vehículo consultando 
+<intxref refid = "E6JB0A9302001">Diagrama del circuito del juego de instrumentos</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia igual o inferior a 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace el juego de instrumentos por uno en buen estado y vuelva a realizar la comprobación. Si la luz de advertencia de inyección permanece apagada, reemplace el ECM por uno en buen estado y vuelva a revisar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto o la alta resistencia en el circuito de cableado a tierra.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

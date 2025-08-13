@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0B1104044" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0403: Circuito de control de recirculación de los gases de escape
+</title>
+<servinfosub id = "E6JB0B1104044001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0B1104043">DTC P0401 &#x002F; P0402: Detectado flujo insuficiente&#x002F;excesivo de recirculación de gases de escape</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0B1104044002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.564in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.648in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La señal de supervisión del pulso de trabajo de control de la válvula de EGR es inferior a 0,8 V con el pulso de trabajo desactivado (OFF) o superior a 2,2 V con el pulso de trabajo activado (ON) durante más de 4 veces.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito abierto en la válvula de EGR
+</ptxt>
+</item>
+<item>
+<ptxt>
+Válvula de EGR
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0B1104044003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Para efectuar una prueba de carretera, elija un lugar donde no haya tráfico ni riesgo de accidentes, y conduzca con cautela para evitar cualquier posible incidencia.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prueba de carretera deben realizarla 2 personas, un conductor y una persona encargada de la prueba, en una carretera nivelada.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en la posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga el motor en marcha y deje que se caliente hasta que alcance la temperatura normal de funcionamiento.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Haga funcionar el motor a 2.000 rpm, aumente el régimen del motor a 5.000 rpm, y después redúzcalo a 2.000 rpm a fin de no cerrar la válvula de mariposa.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repita el paso 4) 4 veces.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Detenga el vehículo y compruebe el DTC pendiente y el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E6JB0B1104044004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E6JB0B1104044005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0B1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de alimentación eléctrica de la válvula de EGR
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en OFF, desconecte el conector de la válvula de EGR.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición ON, compruebe si la tensión de la alimentación eléctrica entre
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+el terminal &#8220;a&#8221; de la válvula de EGR y la masa de la carrocería del vehículo es la tensión de la batería.
+</ptxt>
+</item>
+<item>
+<ptxt>
+el terminal &#8220;b&#8221; de la válvula de EGR y la masa de la carrocería del vehículo es la tensión de la batería.
+</ptxt>
+</item>
+</list1>
+<testfigure>
+<graphic graphicname = "I4JA01111012.swf" width = "90.000mm" height = "39.358mm" ver = "01" gw = "103" gh = "95"/>
+</testfigure>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El circuito de alimentación eléctrica de la válvula de EGR está abierto o corticircuitado a masa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del mazo de cables
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si la conexión de los terminales a la válvula de EGR y los conectores del ECM es correcta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si las conexiones son correctas, inspeccione el circuito de control de la válvula de EGR de la forma siguiente.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistencia del mazo de cables de todos los circuitos de control de la válvula de EGR es inferior a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistencia de aislamiento entre todos los circuitos de control de la válvula de EGR y la masa de la carrocería del vehículo es infinita.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Están en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare o sustituya el mazo de cables defectuoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de la válvula de EGR
+</title>
+<test1>
+<ptxt>
+Compruebe la resistencia de la válvula de EGR refiriéndose a 
+<intxref refid = "E6JB0B1206010">Inspección del conjunto de la válvula de EGR (si está instalado)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a realizar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya la válvula de EGR.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

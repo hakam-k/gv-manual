@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0E1104020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0103: Alto nivel de entrada al circuito del caudal de masa de aire
+</title>
+<servinfosub id = "E5JB0E1104020001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0E1104018">DTC P0101: Margen&#x002F;rendimiento del circuito del caudal de masa de aire</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E1104020002">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.752in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.447in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+El DTC se fijará cuando se detecten las siguientes condiciones durante 0,5 segundos ininterrumpidos.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motor funcionando
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensión de salida del sensor de MAF es superior al valor especificado ininterrumpidamente durante el tiempo especificado.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del sensor de MAF abierto o en cortocircuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de MAF
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0E1104020003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, conecte la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC utilizando la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo en marcha 10 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Verifique el DTC y los DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E5JB0E1104020004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las precauciones para la localización y reparación de averías del DTC en 
+<intxref refid = "E5JB0E1100003">Precauciones para la localización y reparación de averías del DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E5JB0E1104020005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0E1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del sensor de MAF y su circuito
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Encienda el motor y verifique el valor de MAF que muestra la herramienta de escaneado. (Consulte el valor normal en 
+<intxref refid = "E5JB0E1104007">Datos de la herramienta de escaneado</intxref>
+).
+</ptxt>
+</test1>
+<question>
+¿Aparece el valor normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problema intermitente.
+</ptxt>
+<ptxt>
+Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E5JB0E0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de la tensión del suministro eléctrico del sensor de MAF
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en posición OFF, desconecte el conector del sensor de MAF y de IAT.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON, mida la tensión entre la masa del motor y el terminal del cable &#8220;BLU&#x002F;BLK&#8221; del conector del sensor de MAF y de IAT.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto en el cable &#8220;BLU&#x002F;BLK&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de masa del sensor de MAF
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF, mida la resistencia entre el terminal del cable &#8220;BLU&#8221; del conector del sensor de MAF y de IAT y la masa del motor.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de masa
+</title>
+<test1>
+<ptxt>
+Extraiga el ECM de su soporte con los conectores del ECM conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#8220;C37-27&#8221; del conector del ECM y la masa del motor.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Cable &#8220;BLU&#8221; abierto o circuito de resistencia elevada.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito a masa del ECM &#8220;C37-58&#8221;, &#8220;C37-48&#8221;, &#8220;C37-30&#8221;, &#8220;C37-29&#8221; y&#x002F;o &#8220;C37-15&#8221; abierto o de resistencia elevada.
+</ptxt>
+<ptxt>
+Si los cables están bien, reemplace por un ECM en buen estado y vuelva a inspeccionar.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de señal del sensor de MAF
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal del cable &#8220;RED&#8221; del conector del sensor de MAF y de IAT y la masa del motor.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cortocircuito del cable &#8220;RED&#8221; con otro circuito.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de la señal de salida del sensor de MAF
+</title>
+<test1>
+<ptxt>
+Conecte el conector al sensor de MAF y de IAT y al ECM con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre los terminales &#8220;C37-26&#8221; y &#8220;C37-27&#8221; del conector del ECM consultando 
+<intxref refid = "E5JB0E1306019">Inspección en el vehículo del sensor de caudal de masa de aire (MAF) y de temperatura del aire de admisión (IAT)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está cada valor dentro de los márgenes especificados?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sensor de MAF e IAT averiado.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

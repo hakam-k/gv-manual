@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0B7204020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1521: Avería en el selector de velocidad del soplador o en su circuito
+</title>
+<servinfosub id = "E5JB0B7204020001">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.177in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.028in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Este DTC se fijará cuando se detecte una avería interno en el módulo de control de HVAC.
+</ptxt>
+<ptxt>
+La tensión de la señal del selector de velocidad del soplador es inferior o superior al valor especificado ininterrumpidamente durante el tiempo especificado.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Módulo de control de HVAC (selector de velocidad del soplador)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0B7204020005">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC utilizando la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Gire el selector de velocidad del soplador hacia la derecha y hacia la izquierda hasta que se detenga; repita la operación durante 10 segundos.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E5JB0B7204020002">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E5JB0B7204020003">
+<testgroup id = "E5JB0B7204020004">
+<title>
+Comprobación del DTC
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gire el interruptor de encendido a la posición ON y borre el DTC (consulte 
+<intxref refid = "E5JB0B7204003">Borrado de DTC</intxref>
+).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gire el interruptor de encendido a la posición ON y compruebe el DTC (consulte 
+<intxref refid = "E5JB0B7204002">Comprobación del DTC</intxref>
+).
+</ptxt>
+</test1>
+<question>
+¿Se indica el DTC B1521?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E5JB0B0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E5JB0B7204020006">
+<title>
+Inspección del terminal del módulo de control de HVAC
+</title>
+<test1>
+<ptxt>
+Extraiga el módulo de control HVAC (consulte 
+<intxref refid = "E5JB0B7106011">Extracción e instalación del módulo de control HVAC</intxref>
+).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si la conexión al conector del módulo de control de HVAC es correcta en todos los terminales.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de control de HVAC en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare la avería.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

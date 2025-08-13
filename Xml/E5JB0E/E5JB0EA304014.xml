@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0EA304014" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P1623: Transpondedor no registrado
+</title>
+<servinfosub id = "E5JB0EA304014001" page = "1">
+<title>
+Diagrama del cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0EA302001">Diagrama del circuito de cableado del sistema de control del inmovilizador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0EA304014002">
+<title>
+Condición de detección y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" page = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+El código del transpondedor incorporado en la llave de encendido no es válido.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Uso de la llave de encendido no registrada
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control del inmovilizador (ICM), averiado
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM averiado
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0EA304014003">
+<title>
+Localización y resolución de averías
+</title>
+<diag type = "test" id = "E5JB0EA304014004">
+<testgroup>
+<title>
+Confirmación del código de averías (DTC)
+</title>
+<test1>
+<ptxt>
+Borre el o los DTC consultando 
+<intxref refid = "E5JB0EA304003">Borrado de códigos de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ponga el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si se detecta algún DTC consultando 
+<intxref refid = "E5JB0EA304002">Inspección del código de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detecta todavía el DTC P1623?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y resolución de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del código de averías (DTC)
+</title>
+<question>
+¿Se detecta en el paso 1 un DTC que no sea el P1623?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Realice la localización y resolución de averías consultando el correspondiente diagrama de flujo y, despues, vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registro de la llave de encendido sin registrar con el ECM y revisión del código de averías (DTC) 
+</title>
+<test1>
+<ptxt>
+Registre con el ECM el código del transpondedor en el transpondedor de la llave de encendido sin registrar consultando 
+<intxref refid = "E5JB0EA306002">Registro de la llave de encendido</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si se detecta ese DTC P1623 consultando 
+<intxref refid = "E5JB0EA304002">Inspección del código de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC P1623?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y resolución de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del módulo de control del inmovilizador (ICM)
+</title>
+<test1>
+<ptxt>
+Revise el módulo de control del inmovilizador (ICM) consultando 
+<intxref refid = "E5JB0EA304018">Inspección del módulo de control del inmovilizador (ICM) y su circuito</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está normal el conjunto del controlador del inmovilizador?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace el ECM por uno nuevo consultando 
+<intxref refid = "E5JB0E1306001">Extracción e instalación del módulo de control del motor (ECM)</intxref>
+ y, después, lleve a cabo 
+<intxref refid = "E5JB0EA306003">Procedimiento para después de la sustitución del ECM</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el módulo de control del inmovilizador (ICM) por uno nuevo consultando 
+<intxref refid = "E5JB0EA306001">Extracción e instalación del módulo de control del inmovilizador (ICM)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

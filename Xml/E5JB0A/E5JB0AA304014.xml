@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0AA304014" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1615: Error de comunicación en la unidad de bloqueo de la dirección (para vehículos con sistema de arranque sin llave)
+</title>
+<ptxt>
+<intxrefpoff refid = "E5JB0AA302001">Diagrama de cableado del sistema de control del inmovilizador</intxrefpoff>
+</ptxt>
+<servinfosub id = "E5JB0AA304014001">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+Cuando el código del transpondedor de la llave de encendido está registrada en el ECM, el código de identificación del mando a distancia se registra simultáneamente tanto en el ECM como en el módulo de control del arranque sin llave. Este DTC se detecta solamente en caso de que el código de identificación del mando a distancia no se pueda registrar ni en el ECM ni en el módulo de control del arranque sin llave cuando el código del transpondedor de la llave de encendido se registra en el ECM.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Realice la localización y reparación de la avería en primer lugar para el DTC P1618 si se detectan simultáneamente el DTC P1615 y el P1618.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luego de sustituido el ECM, asegúrese de registrar el código del transpondedor de la llave de encendido en el ECM consultando 
+<intxref refid = "E5JB0AA306002">Registro de la llave de encendido</intxref>
+. Después de reemplazar el módulo de control del arranque sin llave del vehículo equipado con el sistema de arranque sin llave, asegúrese de realizar 
+<intxref refid = "E5JB0AA306002">Registro de la llave de encendido</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "E5JB0AA304014002">
+<title>
+Estado de detección y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Al registrar el código del transpondedor en el ECM, el módulo de control del arranque sin llave envió una señal al ECM indicando que no se pudo registrar el código de identificación del mando a distancia.
+</ptxt>
+</item>
+<item>
+<ptxt>
+El código de identificación del mando a distancia no se ha podido registrar en el módulo de control del arranque sin llave o en el ECM. Además, el registro del código del transpondedor en el ECM ha finalizado repentinamente.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuitos de cableado entre la unidad de bloqueo de la dirección y la unidad de control de arranque sin llave en circuito abierto o en cortocircuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Anomalía en los circuitos del cable de comunicaciones CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unidad de bloqueo de la dirección defectuosa
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de arranque sin llave defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defectuoso
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0AA304014004">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E5JB0AA304014005">
+<testgroup>
+<title>
+Confirmación del código de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Borrel el DTC, como se explica en 
+<intxref refid = "E5JB0AA304003">Borrado de códigos de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique si se detecta algún DTC; consulte 
+<intxref refid = "E5JB0AA304002">Inspección del código de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P1615?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y reparación de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registro de la llave de encendido
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gire el interruptor de encendido a la posición ON y registre el código del transpondedor en el transpondedor de la llave de encendido en el ECM. Para ello, consulte 
+<intxref refid = "E5JB0AA306002">Registro de la llave de encendido</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Pudo registrar la llave de encendido (código del transpondedor) en el ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+La localización y reparación de averías ha finalizado.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del código de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Verifique si se detecta algún DTC; consulte 
+<intxref refid = "E5JB0AA304002">Inspección del código de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detectó algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el ECM por uno en buen estado y vuelva a verificar.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del código de diagnóstico (DTC)
+</title>
+<question>
+¿Se detecta algún DTC que no sea el P1615 en el paso 3?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Efectúe la localización y reparación de la avería consultando el diagrama de flujo correspondiente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación de la unidad de bloqueo de la dirección
+</title>
+<test1>
+<ptxt>
+Haga girar a la posición ON el interruptor de arranque del motor del sistema de arranque sin llave.
+</ptxt>
+</test1>
+<question>
+¿Se encuentra el interruptor de arranque del motor en la posición ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace la unidad de bloqueo de la dirección por una que esté en buen estado y vuelva a verificar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del funcionamiento de la unidad de bloqueo de la dirección
+</title>
+<test1>
+<ptxt>
+Verifique el funcionamiento de la unidad de bloqueo de la dirección. Para ello, consulte 
+<intxref refid = "E5JB0A9306002">Inspección del interruptor de encendido</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Funciona el interruptor arranque del motor según lo especificado?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya la unidad de bloqueo de la dirección. Para ello, consulte 
+<intxref refid = "E5JB0A6206008">Extracción e instalación del conjunto de bloqueo de dirección (interruptor de encendido)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verifique si hay circuitos de cableado abiertos entre la unidad de bloqueo de la dirección y el módulo de control de arranque sin llave
+</title>
+<test1>
+<ptxt>
+Desconecte el conector de la unidad de bloqueo de la dirección &#8220;G22&#8221; y el conector del módulo de control de arranque sin llave &#8220;G42&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-3&#8221; del conector de la unidad de bloqueo de la dirección y el terminal &#8220;G42-20&#8221; del conector del módulo de control de arranque sin llave.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-7&#8221; del conector de la unidad de bloqueo de la dirección y el terminal &#8220;G42-29&#8221; del conector del módulo de control de arranque sin llave.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-8&#8221; del conector de la unidad de bloqueo de la dirección y el terminal &#8220;G42-30&#8221; del conector del módulo de control de arranque sin llave.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es la resistencia de 1 &#937; o menor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito abierto o la alta resistencia en el circuito averiado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verifique si hay cortocircuitos en el cableado entre la unidad de bloqueo de la dirección y el módulo de control de arranque sin llave
+</title>
+<test1>
+<ptxt>
+Mida la resistencia en los terminales siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre los terminales &#8220;G22-3&#8221;, &#8220;G22-7&#8221; y &#8220;G22-8&#8221; del conector de la unidad de bloqueo de la dirección.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre los terminales &#8220;G42-20&#8221;, &#8220;G42-29&#8221; y &#8220;G42-30&#8221; del conector del módulo de control de arranque sin llave.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es infinito cada resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Asegúrese del aislamiento de cada uno de los circuitos de cableado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verifique si hay cortocircuitos a masa en el cableado entre la unidad de bloqueo de la dirección y el módulo de control de arranque sin llave
+</title>
+<test1>
+<ptxt>
+Mida la resistencia entre los terminales siguientes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-3&#8221; del conector de la unidad de bloqueo de la dirección y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-7&#8221; del conector de la unidad de bloqueo de la dirección y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-8&#8221; del conector de la unidad de bloqueo de la dirección y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G42-20&#8221; del conector del módulo de control de arranque sin llave y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G42-29&#8221; del conector del módulo de control de arranque sin llave y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G42-30&#8221; del conector del módulo de control de arranque sin llave y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es infinito cada resistencia?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el cortocircuito a masa en el cableado averiado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verifique si hay cortocircuitos en el circuito de alimentación del cableado entre la unidad de bloqueo de la dirección y el módulo de control de arranque sin llave
+</title>
+<test1>
+<ptxt>
+Mida la tensión entre los siguientes terminales con el interruptor de arranque en posición ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-3&#8221; del conector de la unidad de bloqueo de la dirección y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-7&#8221; del conector de la unidad de bloqueo de la dirección y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G22-8&#8221; del conector de la unidad de bloqueo de la dirección y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G42-20&#8221; del conector del módulo de control de arranque sin llave y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G42-29&#8221; del conector del módulo de control de arranque sin llave y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre el terminal &#8220;G42-30&#8221; del conector del módulo de control de arranque sin llave y la masa de la carrocería del vehículo.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+¿Es cada tensión 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya el módulo de control de arranque sin llave por uno en buen estado y vuelva a realizar la verificación. Si se sigue detectando un DTC P1615, reemplace el ECM por uno en buen estado y vuelva a realizar la verificación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el corto del circuito de alimentación en el circuito averiado.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

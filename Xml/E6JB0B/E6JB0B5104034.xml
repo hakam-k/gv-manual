@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0B5104034" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0963 &#x002F; P0967 &#x002F; P0971: Circuito de control de soleniode &#8220;A&#8221; de control de presión - Alta &#x002F; Circuito de control de soleniode &#8220;B&#8221; de control de presión - Alta &#x002F; Circuito de control de soleniode &#8220;C&#8221; de control de presión - Alta
+</title>
+<servinfosub id = "E6JB0B5104034001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0B5104033">DTC P0962 &#x002F; P0966 &#x002F; P0970: Circuito de control de soleniode &#8220;A&#8221; de control de presión - Baja &#x002F; Circuito de control de soleniode &#8220;B&#8221; de control de presión - Baja &#x002F; Circuito de control de soleniode &#8220;C&#8221; de control de presión - Baja</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0B5104034002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.020in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tensión de salida de la válvula solenoide de control de presión es muy alta comparada con el valor del comando del TCM.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Válvula solenoide de control de presión en cortocircuito al circuito de alimentación.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Anomalía de la válvula solenoide de control de presión.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E6JB0B5104034003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Con la herramienta de escaneado, borre los DTC de la memoria de los módulos TCM y ECM.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ponga el motor en marcha.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el motor en régimen de ralentí durante al menos 10 segundos.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Compruebe el DTC, el DTC pendiente y los datos de imagen fija.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E6JB0B5104034004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E6JB0B5104034005">
+<testgroup id = "E6JB0B5104034006">
+<question>
+¿Se ha llevado a cabo la &#8220;Inspección del sistema de la A&#x002F;T&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0B5104001">Inspección del sistema A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "E6JB0B5104034007">
+<title>
+Compruebe si en el circuito de la válvula solenoide de control de presión hay cortocircuito a la fuente de alimentación.
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la conexión adecuada al TCM en los terminales &#8220;E92-2&#8221; y &#8220;E92-4&#8221; (para la válvula A de solenoide de presión), &#8220;E92-9&#8221; y &#8220;E92-22&#8221; (para la válvula B de solenoide de presión) o &#8220;E92-19&#8221; y &#8220;E92-21&#8221; (para la válvula C de solenoide de presión).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si la conexión es correcta, ponga la llave de encendido en ON y mida la tensión entre el terminal &#8220;E92-2&#8221; (para la válvula A de solenoide de presión), &#8220;E92-9&#8221;&#8221; (para la válvula B de solenoide de presión) o &#8220;E92-19&#8221; (para la válvula C de solenoide de presión) del conector de TCM del lado de mazo de cables desconectado y masa.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 0 &#8211; 2 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+El circuito de control o de masa de la válvula de solenoide A, B, o C de control de presión está cortocircuitado al circuito de alimentación eléctrica.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "E6JB0B5104034008">
+<title>
+Inspeccione la válvula solenoide de control de presión
+</title>
+<ptxt>
+Inspeccione la válvula solenoide de control de presión refifiéndose a 
+<intxref refid = "E6JB0B5106022">Inspección de las álvulas de solenoide (solenoide-A del cambio, solenoide-B del cambio, solenoide-E del cambio, solenoide de TCC, solenoide-A de control de presión, solenoide-B de control de presión y solenoide-C de control de presión)</intxref>
+.
+</ptxt>
+<question>
+¿Es satisfactorio el resultado de la comprobación?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Avería intermitente o TCM defectuoso. Compruebe la existencia de problemas intermitentes. Consulte 
+<intxref refid = "E6JB0B0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+. Si todo es correcto, instale un TCM en buen estado y realice la comprobación otra vez.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Inspeccione la válvula solenoide de control de presión refiriéndose a 
+<intxref refid = "E6JB0B5106021">Extracción e instalación de las álvulas de solenoide (solenoide A del cambio, solenoide B del cambio, solenoide E del cambio, solenoide de TCC, solenoide A de control de presión, solenoide B de control de presión y solenoide C de control de presión)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

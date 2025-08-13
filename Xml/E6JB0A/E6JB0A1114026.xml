@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0A1114026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0113: Alto nivel del circuito del sensor de temperatura del aire de admisión
+</title>
+<servinfosub id = "E6JB0A1114026001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0A1114024">DTC P0111: Margen&#x002F;rendimiento del circuito de temperatura del aire de admisión:Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A1114026002">
+<title>
+Condición de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.893in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.307in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La tensión de la salida del sensor de IAT es superior a 4,8 V durante 0,5 segundos de forma continua (baja temperatura de aire de entrada (alta tensión &#x002F; alta resistencia))
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del sensor IAT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor IAT 
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Cuando los DTC P0108, P0118 y P0533 se indican juntos, es posible que haya un circuito abierto en el cable &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "E6JB0A1114026003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, conecte la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON y borre el DTC con la herramienta de escaneado.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arranque el motor y manténgalo en marcha durante 10 seg.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Verifique el DTC y los DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E6JB0A1114026004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las medidas de precaución para la localización y reparación de averías del DTC en 
+<intxref refid = "E6JB0A1110003">Precauciones para la localización y reparación de averías del DTC:Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E6JB0A1114026005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;Inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0A1114001">Inspección del sistema de control del motor y de las emisiones:Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del sensor de IAT y su circuito
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique la temperatura del aire de admisión que aparece en la herramienta de escaneado.
+</ptxt>
+</test1>
+<question>
+¿Se indica &#8211;40 &#176;C (&#8211;40 &#176;F)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E6JB0A0006002">Comprobación de averías intermitentes y malas conexiones</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de la tensión del sensor IAT
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del sensor MAF e IAT con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que los terminales de los cables &#8220;LT GRN&#8221; y &#8220;GRY&#x002F;GRN&#8221; están bien conectados al sensor de MAF e IAT.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si están bien conectados, coloque el interruptor de encendido en la posición ON, mida la tensión entre el terminal del cable &#8220;LT GRN&#8221; del conector del sensor de MAF e IAT (1) y la masa de la carrocería del vehículo.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110037.swf" width = "90.000mm" height = "52.736mm" ver = "02" gw = "202" gh = "132"/>
+</testfigure>
+</test1>
+<question>
+¿Es la tensión entre 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión de la tensión del ECM
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Extraiga el ECM de su soporte con los conectores del ECM conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe si el terminal &#8220;C37-25&#8221; está bien conectado al conector del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si está bien conectado, coloque el interruptor de encendido en posición ON, mida la tensión entre el terminal &#8220;C37-25&#8221; del conector del ECM y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión entre 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito abierto del cable &#8220;LT GRN&#8221;. Si el cable y la conexión son correctos, vaya al paso 5.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de cableado
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido en OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal del cable &#8220;LT GRN&#8221; del conector del sensor de MAF y de IAT y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿La tensión se sitúa en torno a los 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Cortocircuito del cable &#8220;LT GRN&#8221; con otro circuito.
+</ptxt>
+<ptxt>
+Si el cable está bien, reemplace por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de cableado
+</title>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#8220;C37-25&#8221; del conector del ECM y el terminal del cable &#8220;LT GRN&#8221; del conector del sensor de MAF e IAT con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito de alta resistencia del cable &#8220;LT GRN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito a masa
+</title>
+<test1>
+<ptxt>
+Acople los conectores al ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal del cable &#8220;GRY&#x002F;GRN&#8221; del conector del sensor MAF e IAT y la masa de la carrocería del vehículo con el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito a masa
+</title>
+<test1>
+<ptxt>
+Extraiga el ECM de su soporte con los conectores del ECM conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#8220;C37-57&#8221; del conector del ECM y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Cable &#8220;GRY&#x002F;GRN&#8221; en circuito abierto o resistencia alta en el circuito. Conexión deficiente de &#8220;C37-57&#8221;.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito a masa del ECM defectuoso. Si el circuito es correcto, reemplace el ECM por uno en buen estado y vuelva a inspeccionar.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Revisión del rendimiento del sensor de IAT
+</title>
+<test1>
+<ptxt>
+Revise el sensor de IAT consultando 
+<intxref refid = "E6JB0A1316021">Inspección del sensor de caudal de masa de aire (MAF) y de temperatura del aire de admisión (IAT):Para modelo con motor de gasolina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un módulo de ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sustituya el sensor MAF e IAT.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

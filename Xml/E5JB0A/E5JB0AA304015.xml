@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0AA304015" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1616: No se ha registrado el módulo de control de arranque sin llave (para vehículos con sistema de arranque sin llave)
+</title>
+<servinfosub id = "E5JB0AA304015001">
+<title>
+Descripción del circuito
+</title>
+<ptxt>
+El P1616 se detecta cuando el ECM detecta distintos códigos de identificación registrados en el ECM y en el módulo de control de arranque sin llave después de haberse girado el interruptor de arranque del motor a la posición ON. Normalmente, cuando el módulo de control del arranque sin llave se sustituye por uno nuevo, el ECM registra automáticamente el código a aplicar en el módulo de control de arranque sin llave una vez girado el interruptor de encendido a la posición ON. Sin embargo, cuando el módulo de control del arranque sin llave se sustituye por uno usado, el ECM no registra automáticamente el código a aplicar en el módulo de control de arranque sin llave al girar el interruptor de encendido a la posición ON.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0AA304015002">
+<title>
+Estado de detección y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+El ECM detecta diferentes códigos ID registrados en el ECM y en el módulo de control sin llave.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Unidad de control de arranque sin llave defectuosa
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defectuoso
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0AA304015004">
+<title>
+Localización y reparación de averías
+</title>
+<diag type = "test" id = "E5JB0AA304015005">
+<testgroup>
+<title>
+Confirmación del código de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Borrel el DTC, como se explica en 
+<intxref refid = "E5JB0AA304003">Borrado de códigos de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verifique si se detecta algún DTC; consulte 
+<intxref refid = "E5JB0AA304004">Tabla de códigos de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se sigue detectando el DTC P1616?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La localización y reparación de averías ha finalizado.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registro de la llave de encendido
+</title>
+<test1>
+<ptxt>
+Borre el DTC, como se explica en 
+<intxref refid = "E5JB0AA304003">Borrado de códigos de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Registre el código del transpondedor que figura en el transpondedor de la llave de encendido en el ECM. Para ello, consulte 
+<intxref refid = "E5JB0AA306002">Registro de la llave de encendido</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Pudo registrar la llave de encendido (código del transpondedor) en el ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del funcionamiento del sistema de arranque sin llave
+</title>
+<test1>
+<ptxt>
+Ponga en marcha el motor utilizando el sistema de arranque sin llave.
+</ptxt>
+</test1>
+<question>
+¿El motor arranca?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+La localización y reparación de averías ha finalizado.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Verifique si el ECM detecta algún DTC. Si lo detecta, efectúe la localización y reparación de la averías consultando el diagrama de flujo correspondiente.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de códigos de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Compruebe el DTC del módulo ECM. Para ello, consulte 
+<intxref refid = "E5JB0AA304002">Inspección del código de diagnóstico (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detectan los DTC P1618 y&#x002F;o P1615 además del P1616?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a la localización y reparación de averías del DTC P1618.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a la localización y reparación de averías del DTC P1615.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

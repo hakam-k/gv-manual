@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0B4604089" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC C1091 &#x002F; 1093: Fallo de los datos del módulo de control 4WD &#x002F; ECM en la línea CAN
+</title>
+<servinfosub id = "E5JB0B4604089001">
+<title>
+Condición de detección del DTC y área del problema
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.427in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.427in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+C1091:
+</emph>
+</ptxt>
+<ptxt>
+El ECM ha enviado una señal no válida al módulo de control del ESP&#174;.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sistema de control del motor
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+C1093:
+</emph>
+</ptxt>
+<ptxt>
+El módulo de control de 4WD ha enviado una señal no válida al módulo de control ESP&#174;. (si está instalado el módulo de control 4WD)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sistema de control de 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control de 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+Módulo de control ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "E5JB0B4604089003">
+<title>
+Localización de averías del DTC
+</title>
+<diag type = "test" id = "E5JB0B4604089004">
+<testgroup>
+<question>
+¿Se ha realizado una &#8220;comprobación de programa de estabilidad electrónica&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0B4604046">Comprobación del programa de estabilidad electrónica</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Compruebe los DTC de otro módulo distinto a ESP&#174;
+</title>
+<test1>
+<ptxt>
+Compruebe los DTC para los módulos de control ECM y&#x002F;o 4WD.
+</ptxt>
+</test1>
+<question>
+¿Hay algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de flujo de diagnóstico del DTC aplicable.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace por una unidad hidráulica&#x002F;módulo de control del ESP&#174; en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

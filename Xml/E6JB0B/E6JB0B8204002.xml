@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0B8204002" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Tabla de inspección del sistema de diagnóstico del airbag
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Asegúrese de llevar a cabo la 
+<intxref refid = "E6JB0B8204001">Inspección del sistema de diagnóstico del airbag</intxref>
+ antes de comenzar el diagnóstico siguiendo el flujo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando en la tabla de flujo se requiera la medición de la resistencia o la tensión, utilice un probador con el adaptador de terminal correcto de la herramienta especial (conjunto de adaptador de prueba de conector).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando sea necesario comprobar si la conexión es correcta, consulte 
+<intxref refid = "E6JB0B8204040">Inspección de conexiones deficientes e intermitentes</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si se detecta un circuito abierto en el mazo de cables del airbag o que el conector o el terminal están dañados, reemplace el mazo de cables, los conectores y los terminales como un solo conjunto.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<servinfosub id = "E6JB0B8204002001">
+<title>
+Descripción de la prueba de flujo
+</title>
+<ptxt>
+<emph etype = "bold">
+Paso 1: Inspeccione la luz de advertencia y los circuitos de &#8220;AIRBAG&#8221;.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 2: Compruebe si la luz de advertencia del &#8220;AIRBAG&#8221; se enciende.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 3: Inspeccione el circuito del interruptor de diagnóstico.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 4: Compruebe si la luz de advertencia del &#8220;AIRBAG&#8221; destella 6 veces después de que el interruptor de encendido se coloca en la posición ON.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 6: Compruebe si el código o códigos de historial están en la memoria del SDM. (utilizando la herramienta de escaneado SUZUKI)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 7: Compruebe si el código o códigos de historial están en la memoria del SDM. (utilizando para ello el acoplador del monitor)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 9: Compruebe si el código actual está memorizado en el SDM. (utilizando la herramienta de escaneado SUZUKI)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 10: Compruebe si el código actual está memorizado en el SDM. (utilizando para ello el acoplador del monitor)
+</emph>
+</ptxt>
+<diag type = "test" id = "E6JB0B8204002002">
+<testgroup>
+<test1>
+<ptxt>
+Asegúrese de que la tensión de la batería es de unos 11 V o superior.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Observe la luz de advertencia &#8220;AIR BAG&#8221; cuando el interruptor de encendido se coloque en la posición ON.
+</ptxt>
+</test1>
+<question>
+Cuando el interruptor de encendido se gira a la posición ON, ¿se enciende la luz de advertencia &#8220;AIR BAG&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0B8204008">La luz de advertencia &#8220;AIR BAG&#8221; no se enciende</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Permanece encendida la luz de advertencia &#8220;AIR BAG&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0B8204007">La luz de advertencia &#8220;AIR BAG&#8221; se enciende y permanece encendida</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Cuando el interruptor de encendido está en la posición ON, ¿sigue parpadeando e indicando DTC la luz de advertencia &#8220;AIR BAG&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E6JB0B8204009">La luz de advertencia &#8220;AIR BAG&#8221; parpadea</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Se apaga la luz de advertencia &#8220;AIR BAG&#8221; después de 6 destellos?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+El circuito de la luz de advertencia &#8220;AIR BAG&#8221; funciona correctamente. Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El circuito de la luz de advertencia &#8220;AIR BAG&#8221; funciona correctamente. Vaya al paso 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Dispone de una herramienta de escaneado SUZUKI?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Compruebe el DTC con la herramienta de escaneado SUZUKI consultando 
+<intxref refid = "E6JB0B8204004">Comprobación del DTC</intxref>
+.
+</ptxt>
+<question>
+¿Aparece &#8220;NO CODES&#8221; en la herramienta de escaneado SUZUKI?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+El sistema de airbag funciona correctamente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Se ha producido en algún sitio una anomalía intermitente.
+</ptxt>
+<ptxt>
+Revise el mazo de cables del conector y demás elementos del DTC en cuestión.
+</ptxt>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0B8204040">Inspección de conexiones deficientes e intermitentes</intxref>
+.
+</ptxt>
+<ptxt>
+Borre después el DTC (como se indica en 
+<intxref refid = "E6JB0B8204005">Borrado de DTC</intxref>
+) y repita esta tabla de flujo.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Compruebe el DTC consultando 
+<intxref refid = "E6JB0B8204004">Comprobación del DTC</intxref>
+ y usando el conector del monitor (si el vehículo dispone de ello).
+</ptxt>
+</test1>
+<question>
+¿Aparece la pauta de destellos DTC No. 0000 en la luz de advertnncia &#8220;AIR BAG&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+El sistema de airbag funciona correctamente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Se ha producido en algún sitio una anomalía intermitente.
+</ptxt>
+<ptxt>
+Revise el mazo de cables del conector y demás elementos del DTC en cuestión.
+</ptxt>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0B8204040">Inspección de conexiones deficientes e intermitentes</intxref>
+.
+</ptxt>
+<ptxt>
+Borre después el DTC (como se indica en 
+<intxref refid = "E6JB0B8204005">Borrado de DTC</intxref>
+) y repita esta tabla de flujo.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<question>
+¿Dispone de una herramienta de escaneado SUZUKI?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Compruebe el DTC con la herramienta de escaneado SUZUKI consultando 
+<intxref refid = "E6JB0B8204004">Comprobación del DTC</intxref>
+.
+</ptxt>
+<question>
+¿Aparece &#8220;NO CODES&#8221; en la herramienta de escaneado SUZUKI?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un módulo de SDM en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Realice la comprobación y la reparación según la tabla de flujo que corresponda a ese DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Compruebe el DTC consultando 
+<intxref refid = "E6JB0B8204004">Comprobación del DTC</intxref>
+ y usando el conector del monitor (si el vehículo dispone de ello).
+</ptxt>
+<question>
+¿Aparece la pauta de destellos DTC No. 0000 en la luz de advertnncia &#8220;AIR BAG&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un módulo de SDM en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Realice la comprobación y la reparación según la tabla de flujo que corresponda a ese DTC.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

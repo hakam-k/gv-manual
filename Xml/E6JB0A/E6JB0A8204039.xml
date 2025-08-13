@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E6JB0A8204039" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1334 &#x002F; B1338: Circuito de activación del airbag de cortina lateral izquierdo &#x002F; derecho, en cortocircuito con el circuito de alimentación eléctrica.
+</title>
+<servinfosub id = "E6JB0A8204039001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E6JB0A8204036">DTC B1331 &#x002F; B1335: Resistencia elevada del circuito de activación del airbag lateral de cortina izquierdo &#x002F; derecho</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Siga estrictamente las instrucciones de la sección PRECAUCIONES de &#8220;Secuencia de comprobaciones del sistema de diagnóstico de airbags&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "E6JB0A8204039002">
+<title>
+Se genera un DTC cuando
+</title>
+<ptxt>
+La tensión medida en el circuito de activación del airbag de cortina lateral izquierdo o derecho, es inferior a un valor especificado durante un tiempo determinado.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A8204039003">
+<title>
+Descripción de la secuencia de pruebas
+</title>
+<ptxt>
+<emph etype = "bold">
+Paso 1: Compruebe si la avería está en el módulo (inflador) del airbag de cortina lateral.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Paso 2: Revise el circuito de activación del airbag de cortina lateral.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "E6JB0A8204039004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<diag type = "test" id = "E6JB0A8204039005">
+<testgroup>
+<test1>
+<ptxt>
+Con el interruptor de encendido en la posición OFF, quite la guarnición lateral superior trasera izquierda o derecha, y desconecte el conector del módulo (inflador) del airbag de cortina lateral.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la conexión al módulo (inflador) del airbag de cortina lateral, en los terminales del conector &#8220;G18&#8221; o &#8220;G41&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si es correcta, conecte las herramientas especiales (A), (B) y (C) al conector del módulo (inflador) del airbag de cortina lateral.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0179">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0180">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0181">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820057.swf" width = "90.000mm" height = "53.625mm" ver = "01" gw = "124" gh = "135"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Compruebe el DTC del SDM.
+</ptxt>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿aparece todavía el DTC B1334 o B1338?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Sustituya el módulo (inflador) del airbag de cortina lateral como se indica en 
+<intxref refid = "E6JB0A8206011">Extracción e instalación del módulo (inflador) del airbag de cortina lateral</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición OFF y desconecte el conector &#8220;L32&#8221; del SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Libere la barra de cortocircuitos del conector del SDM insertando la herramienta de liberación (1) incluida en la herramienta especial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida con las herramientas especiales (A), (B) y (C) conectadas la tensión entre &#8220;L32-1&#8221; y masa de carrocería, y entre &#8220;L32-2&#8221; y masa de carrocería (para DTC B1334); o entre &#8220;L32-3&#8221; y masa de carrocería, y entre &#8220;L32-4&#8221; y masa de carrocería (para DTC B1338).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0182">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0183">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0184">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820060.swf" width = "90.000mm" height = "55.742mm" ver = "01" gw = "229" gh = "141"/>
+</testfigure>
+</test1>
+<question>
+Con el interruptor de encendido en la posición ON, ¿es la tensión igual o inferior a 4 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un módulo de SDM en buen estado, y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1034: Repare el cortocircuito con el circuito de alimentación eléctrica, del circuito del cable &#8220;YEL&#x002F;GRN&#8221; o del &#8220;YEL&#x002F;BLU&#8221;.
+</ptxt>
+<ptxt>
+DTC B1038: Repare el cortocircuito con el circuito de alimentación eléctrica, del circuito del cable &#8220;BLK&#x002F;YEL&#x002F; o del &#8220;BRN&#x002F;YEL&#8221;.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Después de terminar la inspección y las reparaciones, haga lo siguiente.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vuelva a conectar todos los componentes del sistema de airbag y compruebe si están montados correctamente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si aparece algún DTC, bórrelo como se explica en 
+<intxref refid = "E6JB0A8204005">Borrado de DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repita los pasos de 
+<intxref refid = "E6JB0A8204001">Inspección del sistema de diagnóstico del airbag</intxref>
+ para asegurarse de que la avería está corregida.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

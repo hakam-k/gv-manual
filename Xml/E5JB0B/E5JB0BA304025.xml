@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0BA304025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1708: Error de código ECM
+</title>
+<servinfosub id = "E5JB0BA304025010">
+<title>
+Diagrama del cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0BA302001">Diagrama del circuito de cableado del sistema de control del inmovilizador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0BA304025001">
+<title>
+Condición de detección y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condición de detección
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Error de verificación entre el ICM y el ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+El ECM no se ha registrado con el sistema de control del inmovilizador
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM defectuoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM, defectuoso
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "E5JB0BA304025002">
+<title>
+Localización de averías
+</title>
+<diag type = "test" id = "E5JB0BA304025004">
+<testgroup>
+<title>
+Comprobación del ECM
+</title>
+<question>
+¿Se ha detectado el DTC B1708 inmediatamente después de reemplazar el ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registre el ECM
+</title>
+<test1>
+<ptxt>
+Registre el ECM consultando 
+<intxref refid = "E5JB0BA306003">Procedimiento para después del reemplazo del ECM</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vuelva a comprobar el DTC.
+</ptxt>
+</test1>
+<question>
+¿Se detecta el DTC B1707?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Compruebe que el motor puede arrancarse y vuelva a comprobar el DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Consulta del código de diagnóstico (DTC)
+</title>
+<test1>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0B1104005">Inspección del DTC</intxref>
+ y revise el DTC del ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Revise el módulo de control ABS o el módulo de control ESP&#174; por si hay algún DTC. Para vehículos equipados con sistema ESP&#174;, consulte 
+<intxref refid = "E5JB0B4604050">Inspección del DTC</intxref>
+. Para vehículos equipados con sistema ESP&#174;, consulte 
+<intxref refid = "E5JB0B4504004">Inspección del DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Revise BCM por si hay algún DTC consultando 
+<intxref refid = "E5JB0BA204005">Comprobación del DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Se detectó algún DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya a la tabla de flujo de diagnóstico del DTC aplicable.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del conector ICM
+</title>
+<test1>
+<ptxt>
+Con la llave de encendido en la posición OFF, desconecte el conector ICM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión en los terminales y cables del conector ICM es correcta. Consulte 
+<intxref refid = "E5JB0B0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están bien las conexiones de cada cable y terminal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare las conexiones defectuosas.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación del conector ECM
+</title>
+<test1>
+<ptxt>
+Con la llave de encendido en la posición OFF, desconecte los conectores ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que la conexión en los terminales y cables del conector ECM es correcta. Consulte 
+<intxref refid = "E5JB0B0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Están bien las conexiones de cada cable y terminal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare las conexiones defectuosas.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificación del circuito de alimentación del ICM y de masa
+</title>
+<test1>
+<ptxt>
+Compruebe el circuito de alimentación y masa del ICM consultando 
+<intxref refid = "E5JB0BA304018">Inspección del módulo de control del inmovilizador (ICM) y su circuito</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Es el cicuito de alimentación y masa del ICM normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un ICM en buen estado y vuelva a efectuar la comprobación. Si se detecta un DTC B1708, sustituya el ECM por uno en buen estado y vuelva a efectuar la comprobación.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repare el circuito de alimentación y masa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

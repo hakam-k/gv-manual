@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0E1104088" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Inspección del sistema de control de alta velocidad del ventilador de refrigeración del radiador
+</title>
+<servinfosub id = "E5JB0E1104088001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0E1104087">Inspección del sistema de control de baja velocidad del ventilador de refrigeración del radiador</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0E1104088002">
+<title>
+Localización y reparación de averías
+</title>
+<attention1>
+<ptxt>
+Mantenga las manos, herramientas y ropa lejos del ventilador de refrigeración del motor, para así evitar lesiones corporales. Este ventilador es eléctrico y puede empezar a funcionar aunque el motor no esté funcionando. El ventilador puede funcionar automáticamente como respuesta al sensor de ECT, con el interruptor de encendido en la posición &#8220;ON&#8221;.
+</ptxt>
+</attention1>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Antes de realizar la localización y reparación de averías, asegúrese de leer 
+<intxref refid = "E5JB0E1100004">Precauciones para la inspección del circuito de ECM</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cuando mida la tensión del circuito, la resistencia y&#x002F;o los impulsos del conector del ECM, conecte la herramienta especial al ECM y&#x002F;o a los conectores del ECM; consulte 
+<intxref refid = "E5JB0E1104080">Inspección del ECM y sus circuitos</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "E5JB0E1104088003">
+<testgroup>
+<question>
+¿Se emite el DTC del circuito del sensor de ECT (DTC P0116 &#x002F; P0117 &#x002F; P0118) y&#x002F;o del circuito del ventilador de refrigeración del radiador (DTC P0480)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al diagrama de flujo del DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de control del ventilador de refrigeración del radiador de baja velocidad
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Arranque el motor y seleccione el modo &#8220;LISTA DE DATO&#8221; en la herramienta de escaneado.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Caliente el motor hasta que la temperatura del refrigerante alcance 97,5 &#176;C (207,5 &#176;F) o más, y el interruptor del A&#x002F;C se apague (OFF) (si está equipado con A&#x002F;C). (Si la temperatura del refrigerante del motor no sube, inspeccione el sistema de refrigeración del motor, o el sensor de ECT.)
+</ptxt>
+</test1>
+<question>
+¿Se pone en marcha el ventilador de refrigeración del radiador a baja velocidad cuando la temperatura del refrigerante del motor alcanza la temperatura anterior?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Realice los pasos 2 a 5 de 
+<intxref refid = "E5JB0E1104087">Inspección del sistema de control de baja velocidad del ventilador de refrigeración del radiador</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de control del ventilador de refrigeración del radiador de alta velocidad
+</title>
+<test1>
+<ptxt>
+Arranque el motor y seleccione el modo &#8220;LISTA DE DATO&#8221; en la herramienta de escaneado.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Caliente el motor hasta que la temperatura del refrigerante alcance 102,5 &#176;C (216,5 &#176;F) o más, y el interruptor del A&#x002F;C se apague (OFF) (si está equipado con A&#x002F;C). (Si la temperatura del refrigerante del motor no sube, inspeccione el sistema de refrigeración del motor, o el sensor de ECT.)
+</ptxt>
+</test1>
+<question>
+¿Se pone en marcha el ventilador de refrigeración del radiador a alta velocidad cuando la temperatura del refrigerante del motor alcanza la temperatura anterior?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+El sistema de control del ventilador de refrigeración del radiador está en buenas condiciones.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Realice los pasos del 8 al 19 en el diagrama de flujo DTC P0480.
+</ptxt>
+<ptxt>
+Si están bien, vaya al paso 4.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de cableado
+</title>
+<test1>
+<ptxt>
+Con el interruptor de encendido en posición OFF, desconecte el relé n&#176; 3 del ventilador de refrigeración del radiador de la caja de relés.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal del cable &#8220;BLU&#x002F;BLK&#8221; del conector del relé n&#176; 3 del ventilador de refrigeración del radiador y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto en el cable &#8220;BLU&#x002F;BLK&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del control del ventilador de refrigeración del radiador
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del motor n&#176; 2 del ventilador de refrigeración del radiador con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal del cable &#8220;BLU&#8221; del conector del relé n&#176; 3 del ventilador de refrigeración del radiador y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cortocircuito del cable &#8220;BLU&#8221; con otro circuito.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de cableado
+</title>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal del cable &#8220;BLU&#8221; del conector del relé n&#176; 3 del ventilador de refrigeración del radiador y el conector del motor n&#176; 2 del ventilador de refrigeración del radiador con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito del cable &#8220;BLU&#8221; abierto o resistencia alta.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de cableado
+</title>
+<test1>
+<ptxt>
+Desconecte el relé n&#176; 2 del ventilador de refrigeración del radiador de la caja de relés.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal del cable &#8220;BLK&#8221; del conector del relé n&#176; 2 del ventilador de refrigeración del radiador y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Circuito abierto en el cable &#8220;BLK&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del relé del ventilador de refrigeración del radiador
+</title>
+<test1>
+<ptxt>
+Inspeccione el relé del ventilador de refrigeración del radiador; consulte 
+<intxref refid = "E5JB0E1606011">Inspección del relé del ventilador de refrigeración del radiador</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el relé del ventilador de refrigeración del radiador.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del motor del ventilador de refrigeración del radiador
+</title>
+<test1>
+<ptxt>
+Inspeccione el motor del ventilador de refrigeración del radiador. Consulte 
+<intxref refid = "E5JB0E1606010">Inspección en el vehículo del motor del ventilador de refrigeración del radiador</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Reemplace por un ECM en buen estado y vuelva a realizar la inspección.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reemplace el motor del ventilador de refrigeración del radiador.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

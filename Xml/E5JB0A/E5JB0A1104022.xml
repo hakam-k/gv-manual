@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "E5JB0A1104022" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0108: Entrada alta del circuito de presión absoluta del colector
+</title>
+<servinfosub id = "E5JB0A1104022001">
+<title>
+Diagrama de cableado
+</title>
+<ptxt>
+Consulte 
+<intxref refid = "E5JB0A1104020">DTC P0106: Margen&#x002F;rendimiento de la presión absoluta del colector</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "E5JB0A1104022002">
+<title>
+Estado de detección del DTC y área afectada
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.650in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.541in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Estado de detección del DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Área afectada
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La tensión de salida del sensor de presión absoluta del colector es superior al valor especificado ininterrumpidamente durante el tiempo especificado.
+</ptxt>
+<ptxt>
+(Lógica de detección de 1 ciclo de conducción)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del sensor de presión absoluta del colector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensor de presión absoluta del colector
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Cuando los DTC P0113, P0118 y P0533 se indican juntos, es posible que haya un circuito abierto en el cable &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "E5JB0A1104022003">
+<title>
+Procedimiento de confirmación del DTC
+</title>
+<s1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Gire el interruptor del encendido a la posición ON y borre el DTC utilizando la herramienta de escaneado y caliente el motor completamente.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenga el motor en ralentí durante 1 min.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Verifique el DTC y los DTC pendientes.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "E5JB0A1104022004">
+<title>
+Localización y reparación de averías del DTC
+</title>
+<attention3>
+<ptxt>
+Antes de realizar esta localización y reparación de averías, lea las precauciones para la localización y reparación de averías del DTC en 
+<intxref refid = "E5JB0A1100005">Precauciones para la localización y reparación de averías del DTC</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "E5JB0A1104022005">
+<testgroup>
+<question>
+¿Se ha realizado la &#8220;inspección del sistema de control del motor y de las emisiones&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya a 
+<intxref refid = "E5JB0A1104001">Inspección del sistema de control del motor y de las emisiones</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del sensor de MAP y su circuito
+</title>
+<test1>
+<ptxt>
+Conecte la herramienta de escaneado al DLC con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe la presión del colector de admisión que aparece en la herramienta de escaneado.
+</ptxt>
+</test1>
+<question>
+¿Es de 127 kPa (37,5 in.Hg)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problema intermitente. Compruebe si hay problemas intermitentes. Para ello consulte 
+<intxref refid = "E5JB0A0006002">Inspección de avería intermitente y conexión deficiente</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Comprobación de la tensión del suministro eléctrico del sensor de MAP
+</title>
+<test1>
+<ptxt>
+Desconecte el conector del sensor de MAP con el interruptor de encendido en posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Compruebe que los terminales de los cables &#8220;GRY&#x002F;RED&#8221;, &#8220;RED&#x002F;WHT&#8221; y &#8220;GRY&#x002F;GRN&#8221; del sensor de MAP están bien conectados.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON, mida la tensión entre la masa del motor y el terminal del cable &#8220;GRY&#x002F;RED&#8221; del conector del sensor de MAP.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110035.swf" width = "90.000mm" height = "37.411mm" ver = "01" gw = "120" gh = "89"/>
+</testfigure>
+</test1>
+<question>
+¿Es la tensión 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cortocircuito del cable &#8220;GRY&#x002F;RED&#8221; con el circuito de alimentación.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de masa del sensor de MAP
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en posición OFF, mida la resistencia entre el terminal del cable &#8220;GRY&#x002F;GRN&#8221; del conector del sensor de MAP y la masa del motor.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de masa
+</title>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal &#8220;C37-57&#8221; del conector del ECM y la masa de la carrocería del vehículo.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+El circuito del cable &#8220;GRY&#x002F;GRN&#8221; está abierto o tiene resistencia alta.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito a masa del ECM &#8220;C37-58&#8221;, &#8220;C37-48&#8221;, &#8220;C37-30&#8221;, &#8220;C37-29&#8221; y&#x002F;o &#8220;C37-15&#8221; abierto o de resistencia elevada.
+</ptxt>
+<ptxt>
+Si los cables están bien, reemplace por un ECM en buen estado y vuelva a inspeccionar.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de señal del sensor de MAP
+</title>
+<test1>
+<ptxt>
+Coloque el interruptor de encendido en la posición ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la tensión entre el terminal del cable &#8220;RED&#x002F;WHT&#8221; del conector del sensor de MAP y la masa del motor.
+</ptxt>
+</test1>
+<question>
+¿Es la tensión 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vaya al paso 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vaya al paso 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección del circuito de señal del sensor de MAP
+</title>
+<test1>
+<ptxt>
+Desconecte los conectores del ECM con el interruptor de encendido colocado en la posición OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mida la resistencia entre el terminal del cable &#8220;RED&#x002F;WHT&#8221; del conector del sensor de MAP y el terminal &#8220;C37-55&#8221; del conector del ECM.
+</ptxt>
+</test1>
+<question>
+¿Es la resistencia inferior a 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Cortocircuito del cable &#8220;RED&#x002F;WHT&#8221; con el circuito de alimentación eléctrica.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+El circuito del cable &#8220;RED&#x002F;WHT&#8221; está abierto o tiene resistencia alta.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Inspección de la señal de salida del sensor de MAP
+</title>
+<test1>
+<ptxt>
+Inspeccione el sensor de MAP de acuerdo con 
+<intxref refid = "E5JB0A1306005">Inspección del sensor de presión absoluta del colector (MAP)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+¿Está en buenas condiciones?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sustituya por un ECM en buen estado y vuelva a comprobar.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sensor de MAP averiado.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>
