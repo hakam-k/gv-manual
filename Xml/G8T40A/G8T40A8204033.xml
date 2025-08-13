@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A8204033" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1322&#x002F;B1326: Niedriger Widerstand im Auslöseschaltkreis des linken&#x002F;rechten Seitenairbags
+</title>
+<servinfosub id = "G8T40A8204033001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A8204032">DTC B1321&#x002F;B1325: Hoher Widerstand im Auslöseschaltkreis des linken&#x002F;rechten Seitenairbags</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Unbedingt die Anweisungen unter VORSICHT in &#34;Überprüfungsablauf des Airbag-Diagnosesystems&#34; beachten.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "G8T40A8204033002">
+<title>
+DTC wird durch Folgendes ausgelöst
+</title>
+<ptxt>
+Der kombinierte Widerstand von Seitenairbagmodul (Gasgenerator) (links oder rechts), Kabelbaumverdrahtung und Kontakt der Steckverbinderklemmen liegt für einen bestimmten Zeitraum unter dem Sollwert.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A8204033003">
+<title>
+Beschreibung des Diagnoseablauftests
+</title>
+<ptxt>
+<emph>
+Schritt 1: Prüfen, ob im Seitenairbagmodul (Gasgenerator) eine Störung vorliegt.
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+Schritt 2: Den Initiatorschaltkreis des Seitenairbags im Bodenkabelbaum überprüfen.
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+Schritt 3: Den Initiatorschaltkreis des Seitenairbags im Sitz-Kabelbaum überprüfen.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A8204033004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A8204033005">
+<testgroup id = "G8T40A8204033006">
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder des Seitenairbagmoduls (Gasgenerator) unter dem Vordersitzkissen lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum linken oder rechten Seitenairbagmodul (Gasgenerator) an den Klemmen des Steckverbinders &#34;L25&#34; oder &#34;L30&#34; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, die Spezialwerkzeuge (B) und (C) an den in Schritt 1 gelösten Steckverbinder des Seitenairbagmoduls (Gasgenerator) anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0136">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0137">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932-78340
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I4RS0A820032.swf" width = "90.000mm" height = "52.920mm" ver = "01" gw = "149" gh = "133"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Die DTCs des SDM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1322 oder B1326 bei Zündschalterstellung ON noch immer angezeigt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "G8T40A8204033007">
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den SDM-Steckverbinder &#34;L33&#34; abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Klemmen &#34;L33-1&#34; und &#34;L33-2&#34; bzw. &#34;L33-3&#34; und &#34;L33-4&#34; auf einwandfreien Anschluss am SDM überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, den Kurzschlussbügel im SDM-Steckverbinder mit dem im Spezialwerkzeug (A) enthaltenen Lösewerkzeug (1) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mit angeschlossenen Spezialwerkzeugen (B) und (C) den Widerstand zwischen den Anschlussklemmen &#34;L33-1&#34; und &#34;L33-2&#34; (bei DTC B1322) bzw. &#34;L33-3&#34; und &#34;L33-4&#34; (bei DTC B1326) messen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0138">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0139">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0140">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932-78340
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820045.swf" width = "90.000mm" height = "61.739mm" ver = "01" gw = "217" gh = "158"/>
+</testfigure>
+</test1>
+<question>
+Beträgt der Widerstand 0,65 &#937; oder mehr?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes SDM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1322: Den Kurzschluss zwischen Kabelkreis &#34;GRY&#x002F;RED&#34; und Kabelkreis &#34;GRY&#34; oder zwischen Kabelkreis &#34;GRY&#x002F;RED&#34; bzw. &#34;GRY&#34; und anderem Kabelkreis des Bodenkabelbaums beheben.
+</ptxt>
+<ptxt>
+DTC B1326: Den Kurzschluss zwischen Kabelkreis &#34;BRN&#x002F;WHT&#34; und Kabelkreis &#34;BRN&#34; oder zwischen Kabelkreis &#34;BRN&#x002F;WHT&#34; bzw. &#34;BRN&#34; und anderem Kabelkreis des Bodenkabelbaums beheben.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "G8T40A8204033008">
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Spezialwerkzeuge (B) und (C) lösen und dann den Steckverbinder &#34;L25&#34; bzw. &#34;L30&#34; wieder anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder des Seitenairbagmoduls (Gasgenerators) &#34;Q07&#34; oder &#34;Q05&#34; vom Seitenairbagmodul (Gasgenerator) abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+ Die Klemme im Steckverbinder auf einwandfreien Anschluss am Seitenairbagmodul (Gasgenerator) überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, die Spezialwerkzeuge (A), (B) und (C) am Steckverbinder des Seitenairbags (Gasgenerator) anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0141">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0142">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0143">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I9T401822013.swf" width = "90.000mm" height = "52.920mm" ver = "01" gw = "196" gh = "133"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Die DTCs des SDM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1322 oder B1326 bei Zündschalterstellung ON noch immer angezeigt?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1322: Den Kurzschluss zwischen Kabelkreis &#34;GRY&#x002F;RED&#34; und Kabelkreis &#34;GRY&#34; im Sitz-Kabelbaum oder zwischen Kabelkreis &#34;GRY&#x002F;RED&#34; bzw. &#34;GRY&#34; und anderem Kabelkreis beheben.
+</ptxt>
+<ptxt>
+DTC B1326: Den Kurzschluss zwischen Kabelschaltkreis &#34;BRN&#x002F;WHT&#34; und Kabelschaltkreis &#34;BRN&#34; des Sitz-Kabelbaums oder zwischen Kabelschaltkreis &#34;BRN&#x002F;WHT&#34; bzw. &#34;BRN&#34; und anderem Kabelschaltkreis beheben.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Das Seitenairbagmodul (Gasgenerator) austauschen. Siehe dazu 
+<intxref refid = "G8T40A8206009">Aus- und Einbau des Seitenairbagmoduls (Gasgenerator)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Nach Abschluss der Überprüfung und der Reparaturarbeiten die folgenden Arbeiten durchführen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle Bauteile des Airbagsystems wieder anschließen und sicherstellen, dass alle Bauteile einwandfrei befestigt sind.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Eventuelle DTCs löschen. Siehe dazu 
+<intxref refid = "G8T40A8204005">Löschen von DTCs</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<intxref refid = "G8T40A8204001">Überprüfung des Airbag-Diagnosesystems</intxref>
+ wiederholen, um sicherzustellen, dass die Störung behoben wurde.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

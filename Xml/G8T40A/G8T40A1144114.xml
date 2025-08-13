@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1144114" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0470: Schaltkreis des Differenzsensors
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler:
+</ptxt>
+<ptxt>
+Der Fehler wird nach dem Anlassen des Motors oder nach einer Testfahrt als vorhanden gemeldet.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls die Störung vorliegt:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Die Einspritzwarnleuchte (Fehlerwichtigkeit 1) leuchtet.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Diagnose des Dieselpartikelfilters wird verhindert.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Regenerierung des Dieselpartikelfilters wird verhindert.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Falls CCI oder D4 vorliegt, leuchtet die Störungsleuchte (MIL) nach drei aufeinander folgenden Fahrzyklen (Starten &#x002B;5 Sekunden &#x002B; Zündschalter auf OFF stellen und 40 Sekunden warten) auf.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "G8T40A1144114001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Für Schaltkreis und Steckverbindernummer siehe 
+<intxref refid = "G8T40A910E013">A-5 Schaltplan der Motor- und Klimaanlagensteuerung (Dieselmotor-Modell)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1144114002">
+<title>
+Erfassungsbedingung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.596in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.596in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anzeige des SUZUKI-Diagnosegeräts
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Unterbrechung im Signalkreis und Stromversorgungskreis
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Unterbrechung oder Kurzschluss mit Karosseriemasse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kurzschluss mit &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signalunvereinbarkeit
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signal außerhalb Untergrenze
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signal außerhalb Obergrenze
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Unterbrechung im Masseschaltkreis
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144114003">
+<title>
+Fehlersuche für CO: Unterbrechung im Signalkreis und Stromversorgungskreis, D4 Unterbrechung im Masseschaltkreis und CC1: Kurzschluss mit &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.192in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Zustand der Steckverbinder des Differenzdrucksensors und des ECM prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Auf Isolierung, Durchgang und Fehlen von Störwiderständen an folgenden Anschlüssen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#34;C89-2&#34; am Steckverbinder des Differenzdrucksensors und Klemme &#34;C85-12&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#34;C89-3&#34; am Steckverbinder des Differenzdrucksensors und Klemme &#34;C85-14&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#34;C89-1&#34; am Steckverbinder des Differenzdrucksensors und Klemme &#34;C86-42&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#34;C89-2&#34; am Steckverbinder des Differenzdrucksensors auf Masseschluss untersuchen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+<ptxt>
+Falls die Störung noch immer vorliegt, den Differenzdrucksensor austauschen und erneut prüfen.
+</ptxt>
+<ptxt>
+Falls die Störung noch immer vorliegt, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144114004">
+<title>
+Fehlersuche für CO0: Unterbrechung oder Kurzschluss mit Karosseriemasse
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.192in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Auf Durchgang und Fehlen von Störwiderständen und die Isolierung gegenüber Karosseriemasse an folgenden Anschlüssen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#34;C89-3&#34; am Steckverbinder des Differenzdrucksensors und Klemme &#34;C85-14&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#34;C89-1&#34; am Steckverbinder des Differenzdrucksensors und Klemme &#34;C86-42&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+<ptxt>
+Falls die Störung noch immer vorliegt, den Differenzdrucksensor austauschen und erneut prüfen.
+</ptxt>
+<ptxt>
+Falls die Störung noch immer vorliegt, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144114005">
+<title>
+Fehlersuche für D1: Signalunvereinbarkeit, D2: Signal außerhalb Untergrenze und D3: Signal außerhalb Obergrenze
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.192in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Zustand der Druckleitungen am Differenzdrucksensor prüfen.
+</ptxt>
+<ptxt>
+Die Dichtigkeit und Einbaulage prüfen.
+</ptxt>
+<ptxt>
+Falls erforderlich, austauschen.
+</ptxt>
+<ptxt>
+Den Zustand der Steckverbinder des Differenzdrucksensors und des ECM prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Auf Durchgang und Fehlen von Störwiderständen an folgenden Anschlüssen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#34;C89-3&#34; am Steckverbinder des Differenzdrucksensors und Klemme &#34;C85-14&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#34;C89-1&#34; am Steckverbinder des Differenzdrucksensors und Klemme &#34;C86-42&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+<ptxt>
+Falls die Störung noch immer vorliegt, den Differenzdrucksensor austauschen und erneut prüfen.
+</ptxt>
+<ptxt>
+Falls die Störung noch immer vorliegt, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

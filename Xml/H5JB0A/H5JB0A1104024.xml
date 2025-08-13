@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A1104024" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0112: Beszívott levegő hőmérséklet-érzékelő áramkörének feszültsége alacsony
+</title>
+<servinfosub id = "H5JB0A1104024001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104023">DTC P0111: Beszívott levegő hőmérséklete áramkör tartománya &#x002F; működése</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A1104024002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.945in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.255in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+DTC kerül kijelzésre amikor a következő körülmények 0,5 másodpercen keresztül folyamatosan észlelhetők.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A motor jár
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az IAT-érzékelő kimenő jele kisebb az előírtnál
+</ptxt>
+<ptxt>
+(Magas beszívott levegő-hőmérséklet (alacsony feszültség &#x002F; kis ellenállás))
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+IAT-érzékelő áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+IAT-érzékelő
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H5JB0A1104024003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa be a motort és járassa 10 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t és a feltételes DTC-t.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H5JB0A1104024004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd 
+<intxref refid = "H5JB0A1100005">DTC hibaelhárítással kapcsolatos óvintézkedések</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H5JB0A1104024005">
+<testgroup>
+<question>
+A &#8220;Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 2. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+IAT-érzékelő és áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a vizsgálókészüléken kijelzett beszívott levegő hőmérsékletet.
+</ptxt>
+</test1>
+<question>
+A kijelzett érték 119&#176;C (&#176;F)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 3. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Időszakos hiba.
+</ptxt>
+<ptxt>
+Ellenőrizze, hogy fennáll-e időszakos hiba, lásd 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM feszültség ellenőrzés
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le a MAF és IAT-érzékelő csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a MAF és IAT-érzékelő &#8220;LT GRN&#8221; és &#8220;GRY&#x002F;GRN&#8221; vezetékérintkezőinek csatlakozása.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Amennyiben igen, akkor fordítsa a gyújtáskapcsolót ON helyzetbe, és mérje meg a feszültséget a MAF és IAT-érzékelő csatlakozójának (1) &#8220;LT GRN&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110037.swf" width = "90.000mm" height = "52.736mm" ver = "02" gw = "202" gh = "132"/>
+</testfigure>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V körül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 6. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 4. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+IAT-érzékelő rövidzár áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást a MAF és IAT-érzékelő csatlakozó &#8220;LT GRN&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen az 5. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+A &#8220;LT GRN&#8221; vezeték testzárlatos.
+</ptxt>
+<ptxt>
+Ha a vezeték rendben van, a meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+IAT-érzékelő rövidzárlatának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg a feszültséget a MAF és IAT-érzékelő csatlakozó &#8220;LT GRN&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V körül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 6. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+A &#8220;LT GRN&#8221; vezeték zárlatos más áramkörrel.
+</ptxt>
+<ptxt>
+Ha a vezeték rendben van, a meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+IAT-érzékelő működésének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az IAT-érzékelőt, lásd 
+<intxref refid = "H5JB0A1306021">Légtömegáram (MAF) és beszívott levegő hőmérséklet (IAT) érzékelő ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A MAF és IAT-érzékelőt cserélje ki.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

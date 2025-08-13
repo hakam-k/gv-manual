@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1114075" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2127: Zu niedrige Eingangsspannung im Schaltkreis des APP-Sensors (Nebensensor)
+</title>
+<servinfosub id = "G8T40A1114075001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A1114073">DTC P2122: Zu niedrige Eingangsspannung im Schaltkreis des Pedalpositionssensors (Hauptsensor):M16A und J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1114075002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.946in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.269in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Ausgangsspannung des Gaspedalpositionssensors (Nebensensor) liegt ständig 0,5 Sek. lang unter 0,2 V.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des Gaspedalpositionssensors (APP-Sensor) (Nebensensor)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gaspedalpositionssensor (APP-Sensor)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fehlerhafter Einbau des Gaspedalpositionssensors (APP-Sensor)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1114075003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Testgerät anschließen. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zündschalter auf ON drehen und DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Gaspedal 2 Sekunden in Leerlaufstellung halten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Gaspedal 2 Sekunden vollständig durchtreten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Schritte 3) und 4) 3-mal wiederholen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G8T40A1114075004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G8T40A1110003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche:M16A und J20A</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G8T40A1114075005">
+<testgroup>
+<question>
+Wurde die &#8220;Prüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:M16A und J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Einbaus des Gaspedalpositionssensors (APP-Sensor)
+</title>
+<test1>
+<ptxt>
+Sicherstellen, dass der Gaspedalpositionssensor (APP-Sensor) ordnungsgemäß an der Fahrzeugkarosserie montiert wurde (kein Einklemmen des Bodenteppichs usw.).
+</ptxt>
+</test1>
+<question>
+In Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den Gaspedalpositionssensor (APP-Sensor) ordnungsgemäß wieder einbauen. Siehe 
+<intxref refid = "G8T40A1316006">Aus- und Einbau der Sensorbaugruppe für die Gaspedalposition (APP):M16A und J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Gaspedalpositionssensors (Nebensensor) und dessen Schaltkreis
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei Zündschalter auf OFF an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und den Spannungswert von &#8220;APP SENSOR 2 VOLT&#8221; auf dem Testgerät ablesen.
+</ptxt>
+</test1>
+<question>
+Beträgt die angezeigte Spannung weniger als 0,1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Wackelkontakt.
+</ptxt>
+<ptxt>
+Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der ECM-Spannung
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom Gaspedalpositionssensor (APP-Sensor) abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum Gaspedalpositionssensor (APP-Sensor) an den Kabelanschlüssen &#8220;ORN&#x002F;BLU&#8221;, &#8220;BLU&#x002F;GRN&#8221; und &#8220;BLU&#x002F;YEL&#8221; prüfen.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110071.swf" width = "90.000mm" height = "33.517mm" ver = "01" gw = "168" gh = "78"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Falls OK, Spannung zwischen 	Anschlussklemme &#8220;ORN&#x002F;BLU&#8221; des Steckverbinders des Gaspedalpositionssensors (APP-Sensor) und Karosseriemasse bei bei Zündschalterstellung ON messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der ECM-Spannung
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Das ECM aus der Halterung nehmen, ohne die Steckverbinder abzuklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung des ECM-Steckverbinders an Anschlussklemme &#8220;E23-53&#8221; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, bei Zündschalterstellung ON die Spannung zwischen Anschlussklemme &#8220;E23-53&#8221; des ECM-Steckverbinders und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabelschaltkreis &#8220;ORN&#x002F;BLU&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen Anschlussklemme &#8220;E23-53&#8221; des ECM-Steckverbinders und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ECM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Masseschluss im Schaltkreis des Kabels &#8220;ORN&#x002F;BLU&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung des ECM-Steckverbinders an den Anschlussklemmen &#8220;E23-54&#8221;, &#8220;E23-52&#8221; und &#8220;E23-51&#8221; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, den Widerstand zwischen dem Kabelanschluss &#8220;BLU&#x002F;GRN&#8221; des Steckverbinders vom Gaspedalpositionssensor (APP-Sensor) und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Masseschluss im Kabel &#8220;BLU&#x002F;GRN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Widerstand zwischen der Anschlussklemme &#8220;E23-52&#8221; und den Anschlussklemmen &#8220;E23-54&#8221; und &#8220;E23-51&#8221; des ECM-Steckverbinders messen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kabel &#8220;BLU&#x002F;GRN&#8221; an Kabel &#8220;ORN&#8221; und&#x002F;oder Kabel &#8220;BLU&#x002F;YEL&#8221; kurzgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Widerstand zwischen Kabelanschluss &#8220;BLU&#x002F;GRN&#8221; des Steckverbinders vom Gaspedalpositionssensor (APP-Sensor) und Anschlussklemme &#8220;E23-52&#8221; den ECM-Steckverbinders messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabelschaltkreis &#8220;BLU&#x002F;GRN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Masseverbindung
+</title>
+<test1>
+<ptxt>
+Die Steckverbinder bei Zündschalterstellung OFF an das ECM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen dem Kabelanschluss &#8220;BLU&#x002F;YEL&#8221; des Steckverbinders vom Gaspedalpositionssensor (APP-Sensor) und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Masseverbindung
+</title>
+<test1>
+<ptxt>
+Das ECM aus der Halterung nehmen, ohne die Steckverbinder abzuklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung des ECM-Steckverbinders an Anschlussklemme &#8220;E23-51&#8221; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, den Widerstand zwischen Anschlussklemme &#8220;E23-51&#8221; des ECM-Steckverbinders und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Kabel &#8220;BLU&#x002F;YEL&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+ECM-Masseverbindung defekt. Falls der Schaltkreis einwandfrei ist, intaktes Ersatz-SDM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Gaspedalpositionssensors (APP-Sensor)
+</title>
+<test1>
+<ptxt>
+Den Gaspedalpositionssensor (Nebensensor) überprüfen. Siehe 
+<intxref refid = "G8T40A1316007">Überprüfung der Sensorbaugruppe für die Gaspedalposition (APP):M16A und J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Entspricht die Ausgangsspannung dem Sollwert?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den Gaspedalpositionssensor (APP-Sensor) austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

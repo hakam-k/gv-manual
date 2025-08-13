@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0EA304017" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P1638: Wegfahrsperren-Daten stimmen nicht überein.
+</title>
+<servinfosub id = "G5JB0EA304017001" page = "1">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0EA302001">Schaltplan der Wegfahrsperre</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0EA304017002">
+<title>
+DTC-Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Die Wegfahrsperren-Daten in ECM und BCM stimmen nicht überein.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Wegfahrsperren-Datenregistrierung im ECM ist abgebrochen
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Falsches ECM in Verwendung
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkwinkelsensor (falls vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Steuermodul für schlüsselloses Startsystem (falls vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-Steuermodul (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (falls vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Störung in CAN-Kommunikationsschaltkreisen
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kombinationsinstrument defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS-&#x002F;ESP&#174;-Steuermodul defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G5JB0EA304017003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0EA304017004">
+<testgroup>
+<title>
+DTC-Bestätigung
+</title>
+<test1>
+<ptxt>
+DTC gemäß 
+<intxref refid = "G5JB0EA304003">Löschen von Diagnosecodes (DTC)</intxref>
+ löschen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0EA304002">Abruf von Diagnosecodes (DTC)</intxref>
+ prüfen, ob DTC vorliegen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1638 immer noch vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist beendet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC-Bestätigung
+</title>
+<test1>
+<ptxt>
+Das Massekabel (&#8211;) mindestens 5 Sekunden lang von der Batterie lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Das Minuskabel (&#8211;) an der Batterie anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0EA304002">Abruf von Diagnosecodes (DTC)</intxref>
+ prüfen, ob DTC vorliegen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1638 immer noch vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist beendet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Die ECM-Spezifikation prüfen.
+</title>
+<test1>
+<ptxt>
+Die Teilenummer des ECM prüfen, um sicherzustellen, dass es auf das Fahrzeug zutrifft.
+</ptxt>
+</test1>
+<question>
+Trifft das ECM auf das Fahrzeug zu?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Das ECM gegen ein zutreffendes austauschen und erneut prüfen, ob DTC P1638 im ECM vorliegt.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC im ECM
+</title>
+<question>
+Liegen in Schritt 1 andere DTC als P1638 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die Fehlersuche gemäß dem entsprechenden Ablaufplan ausführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC im BCM
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0EA204005">Diagnosecodeüberprüfung</intxref>
+ DTC vom BCM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt ein DTC vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die Fehlersuche gemäß dem entsprechenden Ablaufplan in Abschnitt 10B ausführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Austausch des BCM
+</title>
+<test1>
+<ptxt>
+Das BCM gemäß 
+<intxref refid = "G5JB0EA206001">Ausbau und Einbau des BCM</intxref>
+ austauschen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0EA304002">Abruf von Diagnosecodes (DTC)</intxref>
+ DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1638 immer noch vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist beendet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Austausch des ECM
+</title>
+<test1>
+<ptxt>
+Das ECM gemäß 
+<intxref refid = "G5JB0E1306001">Aus- und Einbau des Motorsteuermoduls (ECM)</intxref>
+ austauschen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0EA304002">Abruf von Diagnosecodes (DTC)</intxref>
+ DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1638 immer noch vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+CAN-Kommunikationsschaltkreise erneut prüfen und sicherstellen, dass die Steckverbinderanschlüsse an ECM, ABS&#x002F;ESP&#174;-Steuermodul und BCM in Ordnung sind.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist beendet.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

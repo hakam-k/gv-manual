@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A5114051" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0602 &#x002F; P1702
+</title>
+<servinfosub id = "G8T40A5114051001">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.381in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.823in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P0602: Steuermodul-Programmierungsfehler
+</emph>
+</ptxt>
+<ptxt>
+Daten-Programmierfehler.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik, aber MIL leuchtet nicht auf (E-OBD-Modell) oder Getriebe-Warnleuchte (Nicht-E-OBD-Modell) leuchtet nicht auf)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P1702: Prüfsummenfehler im internen Steuermodulspeicher
+</emph>
+</ptxt>
+<ptxt>
+Die Berechnung der gegenwärtig im TCM gespeicherten Daten stimmt nicht mit den zuvor im TCM gespeicherten Prüfdaten überein.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A5114051002">
+<title>
+Systembeschreibung
+</title>
+<ptxt>
+Das interne Steuermodul befindet sich im ECM.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A5114051003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+ DTC löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor starten und wenn möglich im Leerlauf laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die DTCs abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A5114051004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A5114051005">
+<testgroup id = "G8T40A5114051006">
+<title>
+DTC-Überprüfung
+</title>
+<test1>
+<ptxt>
+DTC löschen. Siehe dazu 
+<intxref refid = "G8T40A5114007">Löschen von DTCs:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON stellen und die DTCs erneut prüfen.
+</ptxt>
+</test1>
+<question>
+Werden DTC P0602 oder P1702 weiterhin erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes TCM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Zeitweilige Störung. Auf zeitweilige Störung prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

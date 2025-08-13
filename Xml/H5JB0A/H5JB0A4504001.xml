@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A4504001" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+ABS ellenőrzése
+</title>
+<ptxt>
+Az egyes lépések részletes ismertetése a következő pontokban található.
+</ptxt>
+<diag type = "test" id = "H5JB0A4504001001">
+<testgroup>
+<title>
+<intxreftitleoff refid = "H5JB0A4504001002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Működési hibák elemzése
+</title>
+<test1>
+<ptxt>
+Hajtsa végre a 
+<intxref refid = "H5JB0A4504001003">Ügyfélpanasz felmérése</intxref>
+ utasításait.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Hajtsa végre a 
+<intxref refid = "H5JB0A4504001004">A hibajelenségek meglétének ellenőrzése</intxref>
+ utasításait.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Hajtsa végre a 
+<intxref refid = "H5JB0A4504001005">DTC-k ellenőrzése, feljegyzése és törlése</intxref>
+ utasításait, majd újból kérdezze le a DTC-ket.
+</ptxt>
+</test1>
+<question>
+Megjelenik bármilyen működési hibát jelző DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "H5JB0A4504001006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Menetpróba
+</title>
+<test1>
+<ptxt>
+Hajtsa végre a 
+<intxref refid = "H5JB0A4504001006">2. lépés: Menetpróba</intxref>
+ utasításait.
+</ptxt>
+</test1>
+<question>
+Azonosítható a hibajelenség?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "H5JB0A4504001007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Hajtsa végre a 
+<intxref refid = "H5JB0A4504004">DTC-lekérdezés</intxref>
+ utasításait.
+</ptxt>
+</test1>
+<question>
+Megjelenik hibakód?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "H5JB0A4504001008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ ABS ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizzen és javítson a megfelelő DTC folyamat alapján.
+</ptxt>
+</test1>
+<question>
+Ismét jelentkezik a hiba?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "H5JB0A4504001009"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Hibakeresés a fékeknél
+</title>
+<test1>
+<ptxt>
+Ellenőrizzen és javítson, lásd: 
+<intxref refid = "H5JB0A4104002">Fékek hibajelenségeinek diagnosztizálása</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ismét jelentkezik a hiba?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "H5JB0A4504001010"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Időszakos hibák ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+, és az 1. lépésben feljegyzett hibakódhoz kapcsolódó áramkört.
+</ptxt>
+</test1>
+<question>
+Ismét jelentkezik a hiba?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "H5JB0A4504001011"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Végső ellenőrző próba
+</title>
+<test1>
+<ptxt>
+Hajtsa végre a 
+<intxref refid = "H5JB0A4504001011">7. lépés: Végső ellenőrző próba</intxref>
+ utasításait.
+</ptxt>
+</test1>
+<question>
+Ismét jelentkezik a hiba?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vége.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<servinfosub id = "H5JB0A4504001002" page = "1">
+<title>
+1. lépés: Működési hibák elemzése
+</title>
+<topic id = "H5JB0A4504001003">
+<title>
+Ügyfélpanasz felmérése
+</title>
+<ptxt>
+Az ügyfél által leírtak alapján rögzítse a probléma részleteit (hiba, panasz) és bekövetkezésének körülményeit. 
+</ptxt>
+<ptxt>
+Erre a célra használjon az alábbihoz hasonló kérdőívet, mellyel megkönnyítheti a megfelelő kiértékeléshez és diagnosztikához szükséges információk összegyűjtését.
+</ptxt>
+<figure>
+<graphic graphicname = "I2RH01450014H.swf" width = "183.000mm" height = "151.838mm" ver = "05" gw = "506" gh = "413"/>
+</figure>
+</topic>
+<topic id = "H5JB0A4504001004">
+<title>
+A hibajelenségek meglétének ellenőrzése
+</title>
+<ptxt>
+Ellenőrizze, hogy azok a jelenségek, amelyeket az ügyfél az &#8220;Ügyfél kérdőív&#8221;-en megjelölt, a járművön valóban tapasztalhatók-e és azok tényleg hibajelenségnek tekinthetők-e. (Ezt a lépést lehetőleg az ügyféllel közösen hajtsa végre.) Ellenőrizze a fékrendszerrel kapcsolatos figyelmeztető lámpákat, lásd: 
+<intxref refid = "H5JB0A4504003">EBD figyelmeztető lámpa (fék figyelmeztető lámpa) ellenőrzése</intxref>
+ és 
+<intxref refid = "H5JB0A4504002">ABS figyelmeztető lámpa ellenőrzése</intxref>
+.
+</ptxt>
+</topic>
+<topic id = "H5JB0A4504001005">
+<title>
+DTC-k ellenőrzése, feljegyzése és törlése
+</title>
+<ptxt>
+Hajtsa végre a 
+<intxref refid = "H5JB0A4504004">DTC-lekérdezés</intxref>
+ műveletsort, jegyezze fel, majd törölje ki, lásd: 
+<intxref refid = "H5JB0A4504006">DTC törlése</intxref>
+.
+</ptxt>
+<ptxt>
+Újból végezze el a DTC-lekérdezést, lásd: 
+<intxref refid = "H5JB0A4504004">DTC-lekérdezés</intxref>
+.
+</ptxt>
+<ptxt>
+Ha a DTC-lekérdezési művelet során feljegyzett DTC-t a DTC-k törlése után újból észleli, lépjen a 
+<intxref refid = "H5JB0A4504001008">4. lépés: ABS ellenőrzése</intxref>
+ részhez és folytassa a hibakeresést.
+</ptxt>
+<ptxt>
+Ha a DTC-lekérdezés során feljegyzett DTC a DTC-k törlése után már nem jelentkezik, akkor az ABS-vezérlőmodul nem hajtotta végre a hibakeresést a rendszeren, vagy ideiglenes rendellenesség lépett fel, ezért lépjen a 
+<intxref refid = "H5JB0A4504001006">2. lépés: Menetpróba</intxref>
+ részhez és folytassa a hibakeresést.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "H5JB0A4504001006">
+<title>
+2. lépés: Menetpróba
+</title>
+<ptxt>
+Hajtson végre a járművel több mint 1 perces menetpróbát, 40 km&#x002F;h sebességgel, és ellenőrizze, hogy fennáll-e bármiféle hibajelenség (például az ABS figyelmeztető lámpa rendellenes működése).
+</ptxt>
+<ptxt>
+Ha a gyújtáskapcsoló ON helyzetében az eredetileg észlelt hibakód ismét jelentkezik, akkor a fenti menetpróbára nincs szükség. Folytassa a 3. lépéssel.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A4504001007">
+<title>
+3. lépés: DTC-lekérdezés
+</title>
+<ptxt>
+Újból végezze el a DTC-lekérdezést, lásd: 
+<intxref refid = "H5JB0A4504004">DTC-lekérdezés</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A4504001008">
+<title>
+4. lépés: ABS ellenőrzése
+</title>
+<ptxt>
+&#34;Az ABS ellenőrzése&#34; 3. lépésében megerősített hibakód alapján azonosítsa a hiba okát, például egy érzékelőben, kapcsolóban, vezetékkötegben, csatlakozóban, működtetőegységben vagy más alkatrészben, és javítsa meg vagy cserélje ki a hibás részeket.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A4504001009">
+<title>
+5. lépés: Hibakeresés a fékeknél
+</title>
+<ptxt>
+Ellenőrizze azokat az alkatrészeket vagy rendszereket, amelyek a hibát okozhatják, az 
+<intxref refid = "H5JB0A4104002">Fékek hibajelenségeinek diagnosztizálása</intxref>
+ és a jármű hibajelenségei alapján (az 1. és 2. lépésben kapott hibajelenségek alapján, és javítsa meg vagy cserélje ki az esetleges hibás alkatrészeket).
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A4504001010">
+<title>
+6. lépés: Ellenőrizze az időszakos hibákat
+</title>
+<ptxt>
+Ellenőrizze azokat az alkatrészeket, ahol könnyen előfordulhatnak időszakos zavarok (pl. vezetékköteg, csatlakozó stb.), lásd: 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+, és az 1 &#8211; 3 lépésben feljegyzett hibakódokhoz kapcsolódó áramköröket.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A4504001011">
+<title>
+7. lépés: Végső ellenőrző próba
+</title>
+<ptxt>
+Győződjön meg arról, hogy a hibajelenségek megszűntek és az ABS minden tekintetben normálisan működik. Ha a kijavított hiba működési hibát jelző DTC-vel állt kapcsolatban, törölje a DTC-t a 
+<intxref refid = "H5JB0A4504006">DTC törlése</intxref>
+ című rész alapján, végezzen menetpróbát és győződjön meg arról, hogy a DTC nem jelentkezik ismét.
+</ptxt>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A1114029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0118: Zu hohe Spannung im Schaltkreis des Kühlmittel-Temperaturfühlers
+</title>
+<servinfosub id = "G6JB0A1114029001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0A1114027">DTC P0116: Bereich&#x002F;Leistung des Kühlmittel-Temperaturfühler-Schaltkreises:Für Modelle mit Benzinmotor</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A1114029002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.205in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.985in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Ausgangsspannung des ECT-Sensors liegt ständig 0,5 Sek. über 4,8 V.
+</ptxt>
+<ptxt>
+(Zu niedrige Kühlmitteltemperatur (zu hohe Spannung&#x002F;zu hoher Widerstand))		
+</ptxt>
+<ptxt>
+(1 Fahrt-Erfassungslogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des ECT-Fühlers
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECT-Sensor (Wassertemperaturfühler)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Wenn die DTC P0108, P0113 und P0533 zusammen angezeigt werden, liegt möglicherweise eine Unterbrechung im Kabelschaltkreis &#8220;GRY&#x002F;GRN&#8221; vor.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "G6JB0A1114029003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Testgerät anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zündschalter auf ON drehen und DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und 10 Sek. oder länger laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Aktuelle und vorläufige Diagnosecodes abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G6JB0A1114029004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G6JB0A1110003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche:Für Modelle mit Benzinmotor</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G6JB0A1114029005">
+<testgroup>
+<question>
+Wurde die &#8220;Prüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:Für Modelle mit Benzinmotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des ECT-Fühlers und seines Schaltkreises
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei Zündschalterstellung OFF anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die vom Testgerät angezeigte Kühlmitteltemperatur prüfen.
+</ptxt>
+</test1>
+<question>
+Lautet die Anzeige &#8211;40 &#176;C (&#8211;40 &#176;F)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Wackelkontakt.
+</ptxt>
+<ptxt>
+Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Spannung des ECT-Fühlers
+</title>
+<test1>
+<ptxt>
+Den Steckverbinder des ECT-Fühlers bei Zündschalterstellung OFF abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum ECT-Fühler an den Kabelanschlüssen &#8220;PPL&#x002F;YEL&#8221; und &#8220;GRY&#x002F;GRN&#8221; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, bei Zündschalterstellung ON die Spannung zwischen dem Kabelanschluss &#8220;PPL&#x002F;YEL&#8221; des ECT-Fühler-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110040.swf" width = "90.000mm" height = "33.220mm" ver = "01" gw = "109" gh = "77"/>
+</testfigure>
+</test1>
+<question>
+Beträgt die Spannung ca. 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der ECM-Spannung
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Das ECM aus der Halterung nehmen, ohne die Steckverbinder abzuklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung des ECM-Steckverbinders an Anschlussklemme &#8220;C37-24&#8221; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, bei Zündschalterstellung ON die Spannung zwischen Kabelanschluss &#8220;C37-24&#8221; des ECM-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung ca. 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Unterbrechung im Kabel &#8220;PPL&#x002F;YEL&#8221; Falls Kabel und Verbindung einwandfrei sind, weiter mit Schritt 5.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Spannungsprüfung des ECT-Fühler-Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen dem Kabelanschluss &#8220;PPL&#x002F;YEL&#8221; des ECT-Fühler-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung ca. 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Kurzschluss des Kabels &#8220;PPL&#x002F;YEL&#8221; an anderem Schaltkreis.
+</ptxt>
+<ptxt>
+Falls das Kabel einwandfrei ist, intaktes Ersatz-ECM einbauen und Prüfung wiederholen.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Widerstandsprüfung des ECT-Fühler-Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Widerstand zwischen Anschlussklemme &#8220;C37-24&#8221; des ECM-Steckverbinders und Kabelanschluss &#8220;PPL&#x002F;YEL&#8221; des ECT-Fühler-Steckverbinders messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Zu hoher Widerstand im Kabelschaltkreis &#8220;PPL&#x002F;YEL&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Masseverbindung des ECT-Fühlers
+</title>
+<test1>
+<ptxt>
+Steckverbinder an das ECM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung des ECT-Fühler-Steckverbinders am Kabelanschluss &#8220;GRY&#x002F;GRN&#8221; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen dem Kabelanschluss &#8220;GRY&#x002F;GRN&#8221; des ECT-Fühler-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Masseverbindung des ECT-Fühlers
+</title>
+<test1>
+<ptxt>
+Den Widerstand zwischen Anschlussklemme &#8220;C37-57&#8221; am ECM-Steckverbinder und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Kabel &#8220;GRY&#x002F;GRN&#8221;. Schlechte Verbindung an Anschlussklemme &#8220;C37-57&#8221;.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+ECM-Masseverbindung defekt. Falls der Schaltkreis einwandfrei ist, intaktes Ersatz-SDM einbauen und Prüfung wiederholen.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Funktionsprüfung des ECT-Fühlers
+</title>
+<test1>
+<ptxt>
+Den ECT-Fühler überprüfen. Siehe dazu 
+<intxref refid = "G6JB0A1316009">Überprüfung des Kühlmitteltemperaturfühlers (ECT-Fühler):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+In Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ECM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den ECT-Fühler austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

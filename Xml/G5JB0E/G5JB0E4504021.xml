@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E4504021" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC U1100: Kommunikation zum ECM unterbrochen (Empfangsfehler)
+</title>
+<servinfosub id = "G5JB0E4504021001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E4504020">DTC U1073: Steuermodul-Kommunikationsbus aus</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E4504021002">
+<title>
+DTC-Erfassungsbedingung
+</title>
+<ptxt>
+Ein Empfangsfehler in den Kommunikationsdaten des ECM wurde öfter als vorgegeben erfasst.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E4504021003">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0E4504021004">
+<testgroup>
+<question>
+Wurde die &#8220;Prüfung ABS&#8221; ausgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E4504001">Prüfung ABS</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+DTC des ABS (ESP&#174;) abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC U1073 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E4504020">DTC U1073: Steuermodul-Kommunikationsbus aus</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1674 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E1104064">DTC P1674: CAN-Kommunikation (Bus-aus-Fehler)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Den Anschluss der Steckverbinder aller Steuermodule, die via CAN kommunizieren, prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC des ABS (ESP&#174;) abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC U1100 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wackelkontakt Gemäß 
+<intxref refid = "G5JB0E0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+ auf Wackelkontakte untersuchen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+CAN-Kommunikations-Steckverbinder zwischen ABS (ESP&#174;)-Steuermodul und ECM lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis zwischen ABS (ESP&#174;)-Steuermodul und ECM auf Unterbrechung, Kurzschluss und hohen Widerstand untersuchen.
+</ptxt>
+</test1>
+<question>
+Ist der CAN-Kommunikationsschaltkreis in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN-Kommunikationsleitung reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Die Steckverbinder aller Steuermodule, die via CAN kommunizieren, lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis zwischen anderen Steuermodulen als denen in Schritt 5 auf Unterbrechung, Kurzschluss und hohen Widerstand untersuchen.
+</ptxt>
+</test1>
+<question>
+Sind alle CAN-Kommunikationsschaltkreise in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN-Kommunikationsleitung reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Die Steckverbinder aller Steuermodule, die via CAN kommunizieren, anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sämtliche Steckverbinder lösen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (A&#x002F;T-Modell)
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-Steuermodul (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Steuermodul für schlüsselloses Startsystem (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkwinkelsensor (mit ESP&#174;)
+</ptxt>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+DTC des ABS (ESP&#174;) abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC U1140 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die Stromversorgungs- und Massekreise des ABS (ESP&#174;)-Steuermoduls prüfen. Falls die Schaltkreise in Ordnung sind, ein funktionierendes ABS (ESP&#174;)-Hydraulik-&#x002F;Steuermodul probeweise anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die entsprechenden Stromversorgungs- und Massekreise prüfen. Falls der Schaltkreis in Ordnung ist, probeweise ein funktionierendes Steuermodul anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

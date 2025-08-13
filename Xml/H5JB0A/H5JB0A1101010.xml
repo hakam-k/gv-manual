@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H5JB0A1101010" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Elektromos fojtószeleptest rendszer kalibrálásának leírása
+</title>
+<ptxt>
+Az ECM kiszámítja a fojtószelep vezérelt nyitását az elektromos fojtószeleptest rendszer teljesen zárt fojtószelep helyzetének alapján. A teljesen zárt helyzet adatai el vannak mentve az ECM memóriájában. Az elektromos fojtószeleptest rendszer fojtószelepének teljesen zárt helyzetei (a fojtószelep helyzetérzékelőjének jelfeszültsége, amikor a fojtószelep teljesen zárt) azonban különböznek egymástól a fojtószelep és a fojtószelep helyzetérzékelőjének egyedi különbözőségei miatt. Az ilyen egyedi eltéréseket számításba kell venni a fojtószelep vezérlésénél, szükség van a teljesen zárt fojtószelep helyzetének regisztrálására az ECM-ben. Amikor ezek az adatok rögzítésre kerülnek az ECM-ben, akkor mentésre kerülnek az ECM RAM memóriájában, és a fojtószelep vezérlési alapadataként használják. Ezeket az adatokat akkor törlik, amikor 
+<intxref refid = "H5JB0A1100004">Elektromos fojtószeleptest rendszer kalibrálásával kapcsolatos óvintézkedések</intxref>
+-ban leírt munkák egyikét hajtják végre.
+</ptxt>
+<ptxt>
+A fojtószeleptest és&#x002F;vagy a gázpdelál helyzet (APP) érzékelő egység lecserélése után is ki kell törölni az ECM memóriájából a teljesen zárt helyzet adatait, és új adatokat kell rögzíteni, ellenkező esetben az ECM nem tudja tökéletesen megítélni a teljesen zárt helyzetet.
+</ptxt>
+<ptxt>
+Az ilyen adatok rögzítési eljárására vonatkozó eljárást lásd 
+<intxref refid = "H5JB0A1306023">Elektromos fojtószeleptest rendszer kalibrálása</intxref>
+. (A teljesen zárt helyzet adatainak törlése után az ECM, csak az első alkalommal, 5 másodpercig nyitja és zárja a fojtószelepet a gyújtáskapcsoló ON helyzetbe fordítása után a teljesen zárt fojtószelep helyzet rögzítéséhez. Ha a motor beindításra kerül a rögzítési folyamat közben, előfordulhat olyan jelenség, mint a &#8220;hosszabb ideig tartó motorbeindítás&#8221; vagy a &#8220;fordulatszám lassú növekedése az indítás után közvetlenül&#8221;. Azonban a gyújtáskapcsolót egyszer OFF helyzetbe fordítva és újra indítva a helyes rögzítés megtörténik.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

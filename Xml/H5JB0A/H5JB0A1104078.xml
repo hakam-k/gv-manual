@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A1104078" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2102: Fojtószelep működtető vezérlő motor áramkörének feszültsége alacsony
+</title>
+<servinfosub id = "H5JB0A1104078001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104077">DTC P2101: Fojtószelep működtető vezérlőmotor áramkör tartománya &#x002F; működése</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A1104078002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+A fojtószelep működtető tápellátásának vezérlő áramköri feszültsége az előírt 5 V-nál alacsonyabb még akkor is, amikor a működtető vezérlőreléje bekapcsolt állapotban van.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fojtószelep működtető vezérlőrelé áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fojtószelep működtető vezérlőrelé
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H5JB0A1104078003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa be a motort és járassa legalább 1 percig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H5JB0A1104078004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd 
+<intxref refid = "H5JB0A1100005">DTC hibaelhárítással kapcsolatos óvintézkedések</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H5JB0A1104078005">
+<testgroup>
+<question>
+A &#8220;Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 2. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése</intxref>
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működtető vezérlőrelé áramköri ellenőrzés
+</title>
+<test1>
+<ptxt>
+Szedje ki az ECM-et a foglalatából bekapcsolt ECM csatlakozók mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a tökéletes csatlakozást az ECM csatlakozó &#8220;E23-50&#8221; és &#8220;E23-17&#8221; érintkezői között.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg a feszültséget az ECM csatlakozó &#8220;E23-17&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Időszakos hiba. Ellenőrizze, hogy fennáll-e időszakos hiba, lásd 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 3. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+A &#8220;THR MOT&#8221; biztosíték jó állapotban van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 4. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki a biztosítékot és ellenőrizze, hogy nincs-e rövidzárlat az ehhez a biztosítékhoz csatlakoztatott áramkörökben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működtető vezérlőrelé áramköri ellenőrzés
+</title>
+<test1>
+<ptxt>
+A gyújtáskapcsoló OFF helyzetében vegye ki a fojtószelep működtető vezérlőrelét a relétáblából.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozás a fojtószelep működtető vezérlőrelé felé a &#8220;BLU&#x002F;BLK&#8221;, &#8220;BLU&#x002F;RED&#8221;, &#8220;BLU&#x002F;ORN&#8221;és &#8220;GRN&#8221; vezetékérintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+A gyújtáskapcsoló ON helyzetében mérje meg a feszültséget a motor testelése és a &#8220;BLU&#x002F;BLK&#8221;, &#8220;BLU&#x002F;RED&#8221; vezetékérintkező között egyenként.
+</ptxt>
+</test1>
+<question>
+Mindegyik feszültség 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen az 5. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;BLU&#x002F;BLK&#8221; vezeték és&#x002F;vagy a &#8220;BLU&#x002F;RED&#8221; vezeték szakadt vagy az ellenállása nagy.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működtető vezérlőrelé áramköri ellenőrzés
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az alábbi csatlakozó érintkezőknél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A fojtószelep működtető vezérlőrelé csatlakozó &#8220;BLU&#x002F;ORN&#8221; vezetékérintkezője és az ECM csatlakozó &#8220;E23-50&#8221; érintkezője között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A fojtószelep működtető vezérlőrelé csatlakozó &#8220;GRN&#8221; vezetékérintkezője és az ECM csatlakozó &#8220;E23-17&#8221; érintkezője között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Mindegyik ellenállás kisebb, mint 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 6. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;BLU&#x002F;ORN&#8221; vezeték és&#x002F;vagy a &#8220;GRN&#8221; vezeték szakadt vagy az ellenállása nagy.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működtető vezérlőrelé ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep működtető vezérlőrelét, lásd 
+<intxref refid = "H5JB0A1306018">Vezérlőrelé ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószelep működtető vezérlőrelét.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

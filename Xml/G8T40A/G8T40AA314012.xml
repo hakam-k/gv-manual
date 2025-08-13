@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA314012" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1621: Fehler in der Kommunikationsleitung der Wegfahrsperre
+</title>
+<ptxt>
+<intxrefpoff refid = "G8T40AA312001">Schaltplan des Wegfahrsperren-Steuersystems:Benzinmotor-Modell</intxrefpoff>
+</ptxt>
+<servinfosub id = "G8T40AA314012001">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.560in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.644in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kommunikationsfehler zwischen ICM und ECM wird durch ECM erfasst.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zugehörige Sicherung(en) durchgebrannt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlechte Verbindung am ICM-Steckverbinder
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlechte Verbindung am ECM-Steckverbinder
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unterbrechung im Stromversorgungskabelschaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unterbrechung im Massekabelschaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unterbrechung in Kommunikationskabelschaltkreisen
+</ptxt>
+</item>
+<item>
+<ptxt>
+Masseschluss der Kommunikationskabelschaltkreisen
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kurzschluss zur Stromversorgung der Kommunikationskabelschaltkreise
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kurzschluss in Kommunikationskabelschaltkreisen
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40AA314012002">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G8T40AA314012003">
+<testgroup>
+<title>
+Bestätigung von Diagnosecodes (DTCs)
+</title>
+<test1>
+<ptxt>
+DTC(s) löschen. Siehe dazu 
+<intxref refid = "G8T40AA314003">Löschen von DTCs:Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob ein DTC erfasst wird. Siehe hierzu 
+<intxref refid = "G8T40AA314002">DTC-Überprüfung:Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1621 noch immer erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Sicherung
+</title>
+<test1>
+<ptxt>
+Überprüfen, ob eine der zugehörigen Sicherungen durchgebrannt ist.
+</ptxt>
+</test1>
+<question>
+Ist eine Sicherung durchgebrannt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Durchgebrannte Sicherung(en) durch neue ersetzen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des ICM auf schlechte Verbindung
+</title>
+<test1>
+<ptxt>
+ICM-Steckverbinder &#34;G24&#34; abziehen. Siehe hierzu 
+<intxref refid = "G8T40AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob die Kabelanschlüsse am ICM-Steckverbinder &#34;G24&#34; normal sind.
+</ptxt>
+</test1>
+<question>
+Sind alle Kabelanschlüsse normal?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Schlechte Verbindung(en) reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des ECM auf schlechte Verbindung
+</title>
+<test1>
+<ptxt>
+Den ECM-Steckverbinder &#34;E23&#34; abklemmen.
+</ptxt>
+<ptxt>
+- M16A- und J20A-Modelle: 
+<intxreftitleoff1 refid = "G8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B-Modell: 
+<intxreftitleoff1 refid = "G8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A-Modell: 
+<intxreftitleoff1 refid = "G8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei folgenden Klemmen auf richtigen Anschluss an ECM-Steckverbinder prüfen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+M16A-, J20A- und J24B-Modelle: &#34;E23-13&#34; und &#34;E23-28&#34;
+</ptxt>
+</item>
+<item>
+<ptxt>
+N32A-Modell: &#34;E23-1&#34; und &#34;E23-3&#34;
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Sind alle Kabelanschlüsse normal?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Schlechte Verbindung(en) reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Unterbrechung im Stromversorgungskabelschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+ICM-Steckverbinder &#34;G24&#34; anschließen. Siehe hierzu 
+<intxref refid = "G8T40AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalter auf ON die Spannung zwischen dem Kabelklemme &#34;G24-1&#34; am ICM und Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung etwa 12 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Unterbrechung im Stromversorgungskreis beheben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Unterbrechung im Massekabelschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+Bei Zündschalter auf ON die Spannung zwischen dem Kabelklemme &#34;G24-2&#34; am ICM und Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Unterbrechung im Massekabelschaltkreis beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kommunikationskabelschaltkreis auf Masseschluss prüfen.
+</title>
+<test1>
+<ptxt>
+Bei abgeklemmtem ICM-Steckverbinder &#34;G24&#34; und abgeklemmtem ECM-Steckverbinder &#34;E23&#34; den Widerstand zwischen Kabelklemme &#34;G24-4&#34;&#x002F;&#34;G24-3&#34; an ICM-Steckverbinder und Karosseriemasse prüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Masseschluss im Kommunikationskabelschaltkreis beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kommunikationskabelschaltkreis auf Kurzschluss zur Stromversorgung prüfen.
+</title>
+<test1>
+<ptxt>
+Bei abgeklemmtem ICM-Steckverbinder &#34;G24&#34; und abgeklemmtem ECM-Steckverbinder &#34;E23&#34; den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen Kabelklemme &#34;G24-4&#34;&#x002F;&#34;G24-3&#34; an ICM-Steckverbinder und Karosseriemasse prüfen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Kurzschluss zur Stromversorgung im Kommunikationskabelschaltkreises beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Kurzschluss im Kommunikationskabelschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+Bei abgeklemmtem ICM-Steckverbinder &#34;G24&#34; und abgeklemmtem ECM-Steckverbinder &#34;E23&#34; den Widerstand zwischen Kabelklemme &#34;G24-3&#34; und Kabelklemme &#34;G24-4&#34; am ICM-Steckverbinder prüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Kurzschluss in Kommunikationskabelschaltkreisen beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Unterbrechung im Kommunikationskabelschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+ICM-Steckverbinder &#34;G24&#34; abziehen. Siehe hierzu 
+<intxref refid = "G8T40AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den ECM-Steckverbinder &#34;E23&#34; abklemmen.
+</ptxt>
+<ptxt>
+- M16A- und J20A-Modelle: 
+<intxreftitleoff1 refid = "G8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B-Modell: 
+<intxreftitleoff1 refid = "G8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A-Modell: 
+<intxreftitleoff1 refid = "G8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen folgenden Anschlussklemmen an ICM-Steckverbinder und ECM-Steckverbinder bei Zündschalter auf ON prüfen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+M16A-, J20A- und J24B-Modelle: Kabelklemme &#34;G24-4&#34; und &#34;E23-13&#34; (&#34;PNK&#x002F;BLU&#34;)&#x002F;
+</ptxt>
+<ptxt>
+Kabelklemme &#34;G24-3&#34; und &#34;E23-28&#34; (&#34;GRY&#x002F;BLU&#34;)
+</ptxt>
+</item>
+<item>
+<ptxt>
+N32A-Modell: Kabelklemme &#34;G24-4&#34; und &#34;E23-1&#34; (&#34;PNK&#x002F;BLU&#34;)&#x002F;
+</ptxt>
+<ptxt>
+ Kabelklemme &#34;G24-3&#34; und &#34;E23-3&#34; (&#34;GRY&#x002F;BLU&#34;)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Unterbrechung im Kommunikationskabelschaltkreis beseitigen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM-Prüfung
+</title>
+<test1>
+<ptxt>
+ICM überprüfen. Siehe hierzu 
+<intxref refid = "G8T40AA314020">Überprüfung des Wegfahrsperren-Steuermoduls (ICM) und seines Schaltkreises:Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist ICM in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+ECM durch ein neues ersetzen.
+</ptxt>
+<ptxt>
+- M16A- und J20A-Modelle: 
+<intxreftitleoff1 refid = "G8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B-Modell: 
+<intxreftitleoff1 refid = "G8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A-Modell: 
+<intxreftitleoff1 refid = "G8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Anschließend 
+<intxref refid = "G8T40AA316003">Vorgehensweise nach dem Austausch des ECM:Benzinmotor-Modell</intxref>
+ ausführen.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+ICM gegen ein neues austauschen. Siehe dazu 
+<intxref refid = "G8T40AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

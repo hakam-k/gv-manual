@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A5104028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0713: zu hohe Spannung im Schaltkreis des Getriebeöl-Temperaturfühlers &#8220;A&#8221;.
+</title>
+<servinfosub id = "G6JB0A5104028001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0A5104027">DTC P0712: zu niedrige Spannung im Schaltkreis des Getriebeöl-Temperaturfühlers &#8220;A&#8221;.</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A5104028002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.067in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.099in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Spannung an der Klemme des Getriebeöl-Temperaturfühlers beträgt unter den folgenden Fahrzeugbedingungen weniger als 4,89 V.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zündschalter für mindestens 15 Minuten eingeschaltet
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kühlwassertemperatur beträgt über 50 &#176;C (122 &#176;F)
+</ptxt>
+<ptxt>
+(1 Fahrt-Erfassungslogik)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Getriebeöl-Temperaturfühler oder dessen Schaltkreis.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A5104028003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Das Testgerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die im TCM und ECM gespeicherten DTC mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fahrzeug starten und die Geschwindigkeit während mindestens 20 Minuten auf ca. 40 km&#x002F;h halten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug anhalten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC, vorgemerkte DTC und Schnappschussdaten abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G6JB0A5104028004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0A5104028005">
+<testgroup id = "G6JB0A5104028006">
+<question>
+Wurde die &#8220;Überprüfung des A&#x002F;T-Systems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0A5104001">Überprüfung des A&#x002F;T-Systems</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104028007">
+<title>
+Schaltkreis des Getriebeöl-Temperaturfühlers auf Unterbrechung prüfen.
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die TCM-Steckverbinder vom TCM abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+An den Klemmen &#8220;E92-11&#8221; und &#8220;E92-12&#8221; auf einwandfreien Anschluss an den Getriebeöl-Temperaturfühler prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, zwischen den Klemmen &#8220;E92-11&#8221; und &#8220;E92-12&#8221; des abgezogenen kabelbaumseitigen TCM-Steckverbinders auf Durchgang prüfen.
+</ptxt>
+</test1>
+<question>
+Besteht Durchgang?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung im Schaltkreis des Getriebeöl-Temperaturfühlers.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104028008">
+<title>
+Schaltkreis des Getriebeöl-Temperaturfühlers auf Kurzschluss der Stromversorgung prüfen
+</title>
+<test1>
+<ptxt>
+Das A&#x002F;T-Getriebeöl auf Umgebungstemperatur abkühlen lassen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+In Zündschalterstellung OFF die TCM-Steckverbinder an das TCM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Zündung auf ON schalten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen Klemme &#8220;E92-11&#8221; des TCM-Steckverbinders und Masse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 4,89 V oder mehr?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Kurzschluss im Versorgungskreis des Getriebeöl-Temperaturfühlers. Falls OK, weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wackelkontakt oder TCM defekt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Falls OK, ein intaktes Ersatz-TCM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104028009">
+<title>
+Überprüfung des Getriebeöl-Temperaturfühlers
+</title>
+<test1>
+<ptxt>
+Den Getriebeöl-Temperaturfühler prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A5106024">Überprüfung des Getriebeöl-Temperaturfühlers</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Ergebnis zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Wackelkontakt oder TCM defekt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Falls OK, ein intaktes Ersatz-TCM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ventilgehäuse-Kabelbaum einschließlich Getriebeöl-Temperaturfühler austauschen. Siehe hierzu 
+<intxref refid = "G6JB0A5106023">Aus- und Einbau des Getriebeöl-Temperaturfühlers</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

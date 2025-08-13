@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H5JB0A7201005" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+HVAC-vezérlőrendszer leírása
+</title>
+<ptxt>
+A CAN kommunikációs rendszer leírását lásd: 
+<intxref refid = "H5JB0A1101005">CAN kommunikációs rendszer leírása</intxref>
+.
+</ptxt>
+<ptxt>
+Amikor a következő adatok kerülnek továbbításra a vezérlőmoduloktól a BCM felé a CAN kommunikációs rendszeren keresztül, ezek az adatok a BCM-ből a HVAC-ba jutnak a soros kommunikációs vezetéken keresztül.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Hűtőfolyadék hőmérséklete
+</ptxt>
+</item>
+<item>
+<ptxt>
+Motor-fordulatszám
+</ptxt>
+</item>
+<item>
+<ptxt>
+A&#x002F;C hűtőközeg nyomása
+</ptxt>
+</item>
+<item>
+<ptxt>
+Jármű sebesség (kerék-fordulatszám)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Külső levegő hőmérséklete
+</ptxt>
+</item>
+</list1>
+<ptxt>
+A fenti adatok alapján a HVAC-vezérlőmodul megküldi az A&#x002F;C kompresszor ON &#x002F; OFF kérőjelet a BCM felé a soros kommunikációs vezetéken keresztül.
+</ptxt>
+<ptxt>
+A BCM a CAN kommunikációs vonalon keresztül elküldi ezt a jelet az ECM-re, amelyik a kompresszor relét ON &#x002F; OFF helyzetbe fordítja.
+</ptxt>
+<ptxt>
+Az Auto A&#x002F;C jelátvitel és a jelfogadás további részleteit illetően lásd 
+<intxref refid = "H5JB0A7202004">Auto A&#x002F;C elektronikus vezérlés bemenet &#x002F; kimenet ábra</intxref>
+.
+</ptxt>
+<ptxt>
+A HVAC vezérlőmodul beállítja a hőmérséklet-szabályozó működtető, a beszívott levegő működtető és a légáram működtető kiindulási értékeit.
+</ptxt>
+<ptxt>
+A működtetőelemek kiinduló beállításai automatikusan megtörténnek az akkumulátor bekötése után történő első motorindítás alkalmával.
+</ptxt>
+<ptxt>
+Amikor a kiinduló beállítások megtörténnek, mindegyik működtetőelem megközelítőleg 15 másodperces folyamatos működésre kényszerül.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

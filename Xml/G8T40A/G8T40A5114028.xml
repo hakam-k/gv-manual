@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A5114028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0713: Hohe Spannung im Schaltkreis des Temperatursensors für Getriebeflüssigkeit &#8220;A&#8221;
+</title>
+<servinfosub id = "G8T40A5114028001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A5114027">DTC P0712: Niedrige Spannung im Temperatursensor für Getriebeflüssigkeit &#8220;A&#8221;:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A5114028002">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.067in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.099in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Spannung an der Anschlussklemme des Temperatursensors für Getriebeflüssigkeit beträgt unter den folgenden Fahrzeugbedingungen weniger als 4,89 V.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zündschalter für mindestens 1 Minute eingeschaltet
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Temperatursensor für Getriebeflüssigkeit oder sein Schaltkreis.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A5114028003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Das Diagnosegerät bei Zündschalterstellung OFF an das DLC anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die in TCM und ECM gespeicherten DTCs mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor mindestens 1 Minute im Leerlauf drehen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Schritte 3) bis 5) einmal wiederholen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTCs, vorgemerkte DTCs und Schnappschussdaten abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A5114028004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A5114028005">
+<testgroup>
+<question>
+Wurde die &#34;A&#x002F;T-Systemüberprüfung&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A5114001">A&#x002F;T-Systemüberprüfung:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Den Schaltkreis des Temperatursensors für Getriebeflüssigkeit auf Unterbrechung prüfen.
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die TCM-Steckverbinder vom TCM abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+An Anschlussklemme &#34;E92-11&#34; und &#34;E92-12&#34; auf ordnungsgemäßen Anschluss an den Temperatursensor für Getriebeflüssigkeit prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, zwischen den Klemmen &#34;E92-11&#34; und &#34;E92-12&#34; des abgezogenen kabelbaumseitigen TCM-Steckverbinders auf Durchgang prüfen.
+</ptxt>
+</test1>
+<question>
+Besteht Durchgang?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Unterbrechung im Schaltkreis des Temperatursensors für Getriebeflüssigkeit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Den Schaltkreis des Temperatursensors für Getriebeflüssigkeit auf Kurzschluss der Stromversorgung prüfen
+</title>
+<test1>
+<ptxt>
+A&#x002F;T-Flüssigkeit auf Umgebungstemperatur abkühlen lassen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+In Zündschalterstellung OFF die TCM-Steckverbinder an das TCM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen Anschlussklemme &#34;E92-11&#34; des TCM-Steckverbinders und Masse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt sie 4,89 V oder mehr?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Kurzschluss im Stromversorgungskreis des Temperatursensors für Getriebeflüssigkeit. Falls der Schaltkreis OK ist, weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Zeitweilige Störung oder fehlerhaftes TCM. Auf zeitweilige Störungen prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Temperatursensor für Getriebeflüssigkeit prüfen
+</title>
+<test1>
+<ptxt>
+Den Temperatursensor für Getriebeflüssigkeit überprüfen. Siehe hierzu 
+<intxref refid = "G8T40A5116024">Überprüfung des Temperatursensors für Getriebeflüssigkeit:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Ergebnis zufriedenstellend?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Zeitweilige Störung oder fehlerhaftes TCM. Auf zeitweilige Störungen prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Magnetventil-Kabelbaum einschließlich Temperatursensor für Getriebeflüssigkeit austauschen. Siehe hierzu 
+<intxref refid = "G8T40A5116023">Aus- und Einbau des Temperatursensors für Getriebeflüssigkeit:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

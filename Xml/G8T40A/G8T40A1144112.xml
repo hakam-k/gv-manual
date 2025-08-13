@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1144112" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0403: EGR-Steuerschaltkreis
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler:
+</ptxt>
+<ptxt>
+Der Fehler wird nach einer Testfahrt als vorhanden gemeldet.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls mehrere Störungen mit 
+<intxref refid = "G8T40A1144125">DTC P0638: Bereich&#x002F;Leistung der Drosselklappensteuerung:F9Q</intxref>
+ vorliegen, wird die EGR-Funktion verhindert.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bei D1:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Die Einspritzanlagen-Warnleuchte (Fehlerwichtigkeit 1) brennt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Fahrzeugleistung ist geschwächt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Auspuff raucht.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Für Anschlüsse an den ECM-Steckverbindern sind Wartungskabel zu verwenden.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "G8T40A1144112001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Für Schaltkreise und Steckverbindernummern siehe 
+<intxref refid = "G8T40A910E013">A-5 Schaltplan der Motor- und Klimaanlagensteuerung (Dieselmotor-Modell)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1144112002">
+<title>
+Erfassungsbedingung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.596in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.596in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anzeige des SUZUKI-Testgeräts
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ventil sitzt in geöffneter Stellung fest
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ventil sitzt in geschlossener Stellung fest
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144112003">
+<title>
+Fehlersuche
+</title>
+<attention2>
+<ptxt>
+Beim Austausch des EGR-Ventils ist eine EGR-Ventildaten-Initialisierung notwendig.
+</ptxt>
+<ptxt>
+Die Parameter &#8220;EGR valve initial offset&#8221; und &#8220;EGR valve last offset&#8221; müssen initialisiert werden.
+</ptxt>
+<ptxt>
+Einzelheiten zu dieser Programmierung siehe 
+<intxref refid = "G8T40A1346025">EGR-Ventildaten-Initialisierung:F9Q</intxref>
+.
+</ptxt>
+</attention2>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.192in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die EGR-Ventilanschlüsse prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Widerstand des EGR-Ventils messen zwischen den Klemmen &#8220;C10-4&#8221; und &#8220;C10-6&#8221;.
+</ptxt>
+<ptxt>
+Falls der angezeigte Widerstand nicht ca. 2,66 &#8211; 3,26 &#937; bei 20 &#176;C, 68 &#176;F beträgt, das EGR-Ventil austauschen.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und das Fehlen von Störwiderständen an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C10-4&#8221; des EGR-Ventilsteckverbinders und Klemme &#8220;C86-26&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C10-6&#8221; des EGR-Ventilsteckverbinders und Klemme &#8220;C86-25&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Sicherstellen, dass keine Lecks im EGR-Kreis vorliegen: beschädigte Leitungen, gelockerte Schellen.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Funktion des EGR-Ventils prüfen:
+</ptxt>
+<ptxt>
+&#8220;Initialize EGR valve data&#8221; am SUZUKI-Testgerät ausfuhren, um die Betriebswerte des Ventils zu initialisieren und die Programmierung der EGR-Ausgleiche zu starten (siehe 
+<intxref refid = "G8T40A1346025">EGR-Ventildaten-Initialisierung:F9Q</intxref>
+).
+</ptxt>
+<ptxt>
+Falls das Ventil festsitzt oder festgefressen ist, das EGR-Ventil austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

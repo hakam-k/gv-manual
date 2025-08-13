@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A1104080" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2111: Fojtószelep működtető vezérlő rendszer - megakadt nyitott állapot
+</title>
+<servinfosub id = "H5JB0A1104080001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+A fojtószelep alaphelyzeti nyitása több mint 7&#176; a teljesen zárt helyzethez képest, amikor a fojtószelep diagnosztikája történik kikapcsolt gyújtáskapcsolóval.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Elektromos fojtószeleptest egység
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H5JB0A1104080002">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+A gyújtáskapcsoló OFF helyzetben van legalább 20 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe és ellenőrizze, van-e DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H5JB0A1104080003">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd 
+<intxref refid = "H5JB0A1100005">DTC hibaelhárítással kapcsolatos óvintézkedések</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H5JB0A1104080004">
+<testgroup>
+<question>
+A &#8220;Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 2. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep szemrevételezése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, hogy nem került-e valamilyen idegen anyag a fojtószelep és a fojtószeleptest közé, lásd a &#8220;Fojtószelep szemrevételezése&#8221; pontot az 
+<intxref refid = "H5JB0A1306022">Elektromos fojtószeleptest egység ellenőrzése járműbe szerelt állapotban</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 3. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vegye ki az idegen anyagot, miután kiszerelte a fojtószeleptestet és tisztítsa meg alaposan a fojtószeleptest belsejét.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működésének ellenőrzése 
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep működését, lásd a &#8220;Fojtószelep működésének ellenőrzése&#8221; pontot az 
+<intxref refid = "H5JB0A1306022">Elektromos fojtószeleptest egység ellenőrzése járműbe szerelt állapotban</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az ellenőrzés eredménye megfelelő?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 4. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki az elektromos fojtószeleptest egységet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működtető (motor) ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep működtetőjét, lásd a &#8220;Fojtószelep működtető (motor) ellenőrzése&#8221; című pontot az 
+<intxref refid = "H5JB0A1306022">Elektromos fojtószeleptest egység ellenőrzése járműbe szerelt állapotban</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az ellenőrzés eredménye megfelelő?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen az 5. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki az elektromos fojtószeleptest egységet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep helyzetérzékelő működésének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep helyzetérzékelő működését, lásd a &#8220;Fojtószelep helyzetérzékelő működésének ellenőrzése&#8221; pontot az 
+<intxref refid = "H5JB0A1306022">Elektromos fojtószeleptest egység ellenőrzése járműbe szerelt állapotban</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az ellenőrzés eredménye megfelelő?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki az elektromos fojtószeleptest egységet.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

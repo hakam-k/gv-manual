@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA314009" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1615: Lenkradschloss-Kommunikationsfehler (für Fahrzeuge mit schlüssellosem Anlassersystem)
+</title>
+<servinfosub id = "G6JB0AA314009001" page = "1">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA312001">Schaltplan des Wegfahrsperren-Steuersystems:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA314009002">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+Wenn der Transpondercode des Zündschlüssels im ECM registriert wird, wird gleichzeitig auch der Fernbedienungs-ID-Code im ECM und im schlüssellosen Anlassersteuermodul registriert. Dieser DTC wird nur erfasst, falls der Fernbedienungs-ID-Code nicht im ECM und im schlüssellosen Anlassersteuermodul registriert werden kann, wenn der Transpondercode des Zündschlüssels im ECM registriert wird.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zunächst Fehlersuche für DTC P1618 durchführen, wenn DTC P1615 und P1618 gleichzeitig erfasst werden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Nach dem Austausch des ECM unbedingt den Transpondercode im Zündschlüssel im ECM registrieren. Siehe dazu 
+<intxref refid = "G6JB0AA316002">Registrierung des Zündschlüssels:Für Benzinmotor-Modell</intxref>
+. Nach dem Austausch des schlüssellosen Anlassersteuermoduls des mit einem schlüssellosen Anlassersystem ausgestatteten Fahrzeugs unbedingt 
+<intxref refid = "G6JB0AA316002">Registrierung des Zündschlüssels:Für Benzinmotor-Modell</intxref>
+ durchführen.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "G6JB0AA314009003">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bei der Registrierung des Transpondercodes im ECM gab das schlüssellose Anlassersteuermodul dem ECM ein Signal ein, das anzeigte, dass der Fernbedienungs-ID-Code nicht registriert werden kann.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Fernbedienungs-ID-Code konnte nicht in dem schlüssellosen Anlassersteuermodul oder dem ECM registriert werden. Und die Registrierung des Transpondercodes im ECM wurde zwangsweise abgebrochen.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Unterbrechung oder Kurzschluss in den Kabelschaltkreisen zwischen Lenkradschlosseinheit und schlüsselloser Anlassersteuereinheit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kabelschaltkreis der CAN-Kommunikation defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkradschlosseinheit defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselloses Anlassersteuermodul defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0AA314009004">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA314009005">
+<testgroup>
+<title>
+Bestätigung von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Fehlercode(s) löschen. Siehe dazu 
+<intxref refid = "G6JB0AA314003">Löschen von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob ein Diagnosecode erfasst wird. Siehe hierzu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1615 noch immer erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registrierung des Zündschlüssels
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und den Transpondercode im Transponder im Zündschlüssel im ECM registrieren. Siehe dazu 
+<intxref refid = "G6JB0AA316002">Registrierung des Zündschlüssels:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Konnte der Zündschlüssel (Transpondercode) im ECM registriert werden?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Überprüfen, ob ein Diagnosecode erfasst wird. Siehe hierzu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird irgendein Störungscode erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Das ECM durch ein intaktes austauschen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<question>
+Is any DTC other than P1615 detected in Step 3?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Fehlersuche entsprechend dem Ablaufschema durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Lenkradschlosseinheit
+</title>
+<test1>
+<ptxt>
+Motoranlasserknopf des schlüssellosen Anlassersystems einschalten.
+</ptxt>
+</test1>
+<question>
+Befindet sich Motoranlasserknopf auf ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die Lenkradschlosseinheit durch eine intakte austauschen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Funktionsprüfung der Lenkradschlosseinheit
+</title>
+<test1>
+<ptxt>
+Lenkradschlosseinheit auf Funktion überprüfen. Siehe dazu 
+<intxref refid = "G6JB0A9306002">Überprüfung des Zündschalters</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Funktioniert der Motoranlasserknopf wie vorgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lenkradschlosseinheit austauschen. Siehe hierzu 
+<intxref refid = "G6JB0A6206011">Aus- und Einbau des Lenkradschlosses (Zündschalter)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreise zwischen Lenkradschlosseinheit und schlüssellosem Anlassersteuermodul auf Unterbrechung prüfen
+</title>
+<test1>
+<ptxt>
+Steckverbinder &#8220;G22&#8221; der Lenkradschlosseinheit und Steckverbinder &#8220;G42&#8221; des schlüssellosen Anlassersteuermoduls abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand an den folgenden Steckverbinderanschlüssen messen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-3&#8221; des Steckverbinders der Lenkradschlosseinheit und Anschluss &#8220;G42-20&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-7&#8221; des Steckverbinders der Lenkradschlosseinheit und Anschluss &#8220;G42-29&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-8&#8221; des Steckverbinders der Lenkradschlosseinheit und Anschluss &#8220;G42-30&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Beträgt der Widerstand maximal 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hohen Widerstand des fehlerhaften Kabelschaltkreises beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreise zwischen Lenkradschlosseinheit und schlüssellosem Anlassersteuermodul auf Kurzschluss prüfen
+</title>
+<test1>
+<ptxt>
+Den Widerstand an den folgenden Steckverbinderanschlüssen messen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen den Anschlüssen &#8220;G22-3&#8221;, &#8220;G22-7&#8221; und &#8220;G22-8&#8221; des Steckverbinders der Lenkradschlosseinheit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen den Anschlüssen &#8220;G42-20&#8221;, &#8220;G42-29&#8221; und &#8220;G42-30&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ist jeder Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Isolation aller Kabelschaltkreise sicherstellen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreise zwischen Lenkradschlosseinheit und schlüssellosem Anlassersteuermodul auf Masseschluss prüfen
+</title>
+<test1>
+<ptxt>
+Den Widerstand an den folgenden Steckverbinderanschlüssen messen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-3&#8221; des Steckverbinders der Lenkradschlosseinheit und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-7&#8221; des Steckverbinders der Lenkradschlosseinheit und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-8&#8221; des Steckverbinders der Lenkradschlosseinheit und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G42-20&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G42-29&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G42-30&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ist jeder Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Masseschluss des fehlerhaften Kabelschaltkreises beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreise zwischen Lenkradschlosseinheit und schlüssellosem Anlassersteuermodul auf Kurzschluss zur Stromversorgung prüfen
+</title>
+<test1>
+<ptxt>
+Die Spannung an den folgenden Steckverbinderanschlüssen bei Zündschalter auf ON überprüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-3&#8221; des Steckverbinders der Lenkradschlosseinheit und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-7&#8221; des Steckverbinders der Lenkradschlosseinheit und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G22-8&#8221; des Steckverbinders der Lenkradschlosseinheit und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G42-20&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G42-29&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschluss &#8220;G42-30&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls und Fahrzeugkarosseriemasse.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Beträgt die Spannung jeweils 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Schlüsselloses Anlassersteurmodul durch ein intaktes ersetzen und die Prüfung wiederholen. Falls immer noch DTC P1615 erkannt wird, ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kurzschluss zur Stromversorgung des fehlerhaften Kabelschaltkreises beseitigen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

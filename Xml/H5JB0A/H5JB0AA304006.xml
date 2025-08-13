@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0AA304006" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1614: Transzponder válasz hiba
+</title>
+<servinfosub id = "H5JB0AA304006001">
+<title>
+Észlelési körülmények és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Észlelési körülmények
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A gyújtáskulcsba beépített transzponder kódját nem lehet leolvasni az indításgátló vezérlőmodulon keresztül (ICM).
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Transzponder nélküli gyújtáskulcs használata
+</ptxt>
+</item>
+<item>
+<ptxt>
+Nem regisztrált gyújtáskulcs használata
+</ptxt>
+</item>
+<item>
+<ptxt>
+A gyújtáskulcsba épített transzponder meghibásodása
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az indításgátló vezérlőmodul (ICM) hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM hibás
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H5JB0AA304006003">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H5JB0AA304006004">
+<testgroup>
+<title>
+Diagnosztikai hibakód (DTC) megerősítése
+</title>
+<test1>
+<ptxt>
+Törölje a DTC-(ke)t, lásd: 
+<intxref refid = "H5JB0AA304003">Diagnosztikai hibakódok (DTC) törlése</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le, észlelt-e hibakódot az ECM, lásd: 
+<intxref refid = "H5JB0AA304002">Diagnosztikai hibakódok (DTC) ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a P1614 számú hibakódot?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosztikai hibakódok (DTC) lekérdezése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, észlelt-e más hibakódot az ECM a P1614 mellett, lásd: 
+<intxref refid = "H5JB0AA304002">Diagnosztikai hibakódok (DTC) ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Észlelt más hibakódot az ECM a P1614 mellett?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Végezze el a hibaelhárítást, lásd a jelen fejezetben szereplő vonatkozó folyamat-táblázatot, majd lépjen a 3. lépéshez.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A használt gyújtáskulcs regisztrálása az ECM-ben és a diagnosztikai hibakódok (DTC) lekérdezése
+</title>
+<test1>
+<ptxt>
+Lehetséges, hogy nem regisztrált gyújtáskulcsot használ. Ezért regisztrálja a 		gyújtáskulcsba beépített transzponder kódját az ECM-ben, lásd: 
+<intxref refid = "H5JB0AA306002">A gyújtáskulcs regisztrálása</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le, észlelte-e az ECM a P1614 hibakódot, lásd: 
+<intxref refid = "H5JB0AA304002">Diagnosztikai hibakódok (DTC) ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Észlelte a P1614 számú hibakódot?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Új gyújtáskulcs regisztrálása az ECM-ben és diagnosztikai hibakódok (DTC) lekérdezése
+</title>
+<test1>
+<ptxt>
+A gyújtáskulcsba beépített transzponder meghibásodott, vagy transzponder nélküli gyújtáskulcsot használ. Ezért készítsen új gyújtáskulcsot.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Regisztrálja az új gyújtáskulcsba beépített transzponder kódját az ECM-ben, lásd: 
+<intxref refid = "H5JB0AA306002">A gyújtáskulcs regisztrálása</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le, észlelte-e az ECM a P1614 hibakódot, lásd: 
+<intxref refid = "H5JB0AA304002">Diagnosztikai hibakódok (DTC) ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Észlelte a P1614 számú hibakódot?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Indításgátló vezérlőmodul (ICM) ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az indításgátló vezérlőmodult (ICM), lásd: 
+<intxref refid = "H5JB0AA304011">Indításgátló vezérlőmodul (ICM) és áramkörének ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az indításgátló vezérlőmodul (ICM) jó állapotban van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Cserélje ki az ECM-et új ECM-re, lásd: 
+<intxref refid = "H5JB0A1306004">Motorvezérlő egység (ECM) leszerelése és felszerelése</intxref>
+, majd hajtsa végre az 
+<intxref refid = "H5JB0AA306003">Eljárás az ECM cseréje után</intxref>
+ című fejezet utasításait.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki az indításgátló vezérlőmodult (ICM) új ICM-re, lásd: 
+<intxref refid = "H5JB0AA306001">Indításgátló vezérlőmodul (ICM) leszerelése és felszerelése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

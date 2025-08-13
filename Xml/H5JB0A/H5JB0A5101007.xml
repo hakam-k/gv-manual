@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H5JB0A5101007" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Fedélzeti diagnosztikai rendszer leírása
+</title>
+<servinfosub id = "H5JB0A5101007004">
+<title>
+Motordiagnosztikai csatlakozó nélküli járművek esetén
+</title>
+<ptxt>
+Automatikus sebességváltó vezérlőrendszer esetén a TCM az alábbi funkciókkal rendelkezik. Lásd: 
+<intxref refid = "H5JB0A5104061">TCM és áramköreinek ellenőrzése</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ha a gyújtáskapcsolót ON helyzetbe fordítja és a motor áll, a hibajelző lámpa (MIL) (1) kigyullad, hogy ellenőrizze a MIL izzójának működőképességét.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ha a TCM működési hibát észlel az automatikus sebességváltó vezérlőrendszerében, akkor villogni kezd a hibajelző lámpa (MIL), és a TCM a memóriájában tárolja a hibakódot (DTC).
+</ptxt>
+<ptxt>
+(Ha a készülék a hiba észlelését követően egymás után 3 működési cikluson át normális működést észlel, kikapcsolja a hibajelző lámpát, de a memóriában tárolt DTC (diagnosztikai hibakód) megmarad.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+A DLC (2) útján történő kommunikációra nemcsak a SUZUKI vizsgálókészülék (3) használható, hanem OBD általános vizsgálókészülék is. (A diagnosztikai adatok vizsgálókészülék használatával ellenőrizhetők és törölhetők.)
+</ptxt>
+<figure page = "2">
+<graphic graphicname = "I5JB0A510011.swf" width = "88.000mm" height = "107.247mm" ver = "01" gw = "192" gh = "287"/>
+</figure>
+</item>
+</list1>
+<topic id = "H5JB0A5101007005">
+<title>
+2 működési ciklusos észlelési logika
+</title>
+<ptxt>
+Az első működési ciklusban észlelt működési hiba a TCM memóriájában tárolódik (feltételes DTC és befagyasztott adatok formájában), de a hibajelző lámpa ekkor még nem gyullad ki. A lámpa csak ugyanannak a működési hibának a másodszori észlelése alkalmával, tehát a következő működési ciklus során gyullad ki.
+</ptxt>
+</topic>
+<topic id = "H5JB0A5101007006">
+<title>
+Feltételes DTC
+</title>
+<ptxt>
+A feltételes DTC a két működési ciklusos észlelési logika alkalmazása során az első működési ciklus alatt észlelt és ideiglenesen tárolt DTC-t jelenti.
+</ptxt>
+</topic>
+<topic id = "H5JB0A5101007007">
+<title>
+Befagyasztott adatok
+</title>
+<ptxt>
+A TCM a memóriájában tárolja a motor- és menetviszonyokat, a működési hiba észlelésének pillanatában. Ezeket az adatokat &#8220;befagyasztott adatoknak&#8221; nevezzük.
+</ptxt>
+<ptxt>
+Így a befagyasztott adatok ellenőrzésével megismerhetők azok a motor- és menetviszonyok, amelyek a hiba észlelésének pillanatában fennálltak (pl. meleg volt-e a motor vagy nem, a jármű haladt vagy állt).
+</ptxt>
+</topic>
+</servinfosub>
+<c-change/>
+<servinfosub id = "H5JB0A5101007001">
+<title>
+Motordiagnosztikai csatlakozóval ellátott járművek esetén
+</title>
+<ptxt>
+Automatikus sebességváltó vezérlőrendszer esetén a TCM az alábbi funkciókkal rendelkezik. Lásd: 
+<intxref refid = "H5JB0A5104061">TCM és áramköreinek ellenőrzése</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ha a rendszer nem észlel hibát az automatikus sebességváltó vezérlőrendszerében, amikor a gyújtáskapcsolót ON helyzetbe fordítja, a sebességváltó figyelmeztető lámpa (1) &#8211; az izzó ellenőrzése céljából &#8211; kb. 2 másodpercre kigyullad a gyújtáskapcsoló ON helyzetbe történő fordítása után, majd kialszik.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ha a TCM hibát észlel az automatikus sebességváltó vezérlőrendszerében, akkor villogni kezd a sebességváltó figyelmeztető lámpa (1), és a TCM a memóriájában tárolja a hibakódot (DTC).
+</ptxt>
+</item>
+<item>
+<ptxt>
+A SUZUKI vizsgálókészülék (2) használatával az adatátviteli csatlakozó (DLC) (3) útján lehetséges a kommunikáció a TCM-mel. A diagnosztikai adatok ellenőrizhetők és törölhetők a SUZUKI vizsgálókészülék használatával.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TCM memóriájában tárolt hibakód úgy is előhívható, hogy a testelt monitorcsatlakozó (4) diagnosztikai kapcsoló érintkezőjével (5) kijelzi a digitális kijelzőjű kilométerszámlálón (6). Ha a TCM memóriájában nincs tárolva DTC, akkor újból a DTC 0000 jelenik meg. Ha a TCM memóriájában egy vagy több DTC van tárolva, akkor ezek a legkisebb kódszámtól kezdve, emelkedő sorrendben jelennek meg. Miután az összes DTC megjelent, akkor ugyanilyen módon ismét megjelennek.
+</ptxt>
+<figure page = "2">
+<graphic graphicname = "I5JB0A510012.swf" width = "88.000mm" height = "179.920mm" ver = "01" gw = "192" gh = "493"/>
+</figure>
+</item>
+</list1>
+<c-change/>
+<topic id = "H5JB0A5101007003">
+<title>
+2 működési ciklusos észlelési logika
+</title>
+<ptxt>
+Az első működési ciklusban észlelt működési hiba a TCM memóriájában tárolódik (feltételes DTC és befagyasztott adatok formájában), de a hibajelző lámpa ekkor még nem gyullad ki. A lámpa csak ugyanannak a működési hibának a másodszori észlelése alkalmával, tehát a következő működési ciklus során gyullad ki.
+</ptxt>
+</topic>
+<topic id = "H5JB0A5101007002">
+<title>
+Feltételes DTC
+</title>
+<ptxt>
+A feltételes DTC a két működési ciklusos észlelési logika alkalmazása során az első működési ciklus alatt észlelt és ideiglenesen tárolt DTC-t jelenti.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

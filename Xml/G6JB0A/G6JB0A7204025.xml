@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A7204025" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1552: Störung im Schaltkreis der seriellen Kommunikation
+</title>
+<servinfosub id = "G6JB0A7204025001">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.768in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.436in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Daten, die das HVAC-Steuermodul vom BCM erhält, sind anhaltend fehlerhaft.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+HVAC-Steuermodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A7204025002">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Das Testgerät bei Zündschalter auf OFF an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zündschalter auf ON drehen und DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G6JB0A7204025003">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0A7204025004">
+<testgroup>
+<title>
+Überprüfung der Signaldaten der seriellen Kommunikation
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei Zündschalter auf OFF an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Motor starten und den Modus &#8220;DATA LIST&#8221; (Datenliste) auf dem Testgerät wählen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen Sie, ob &#8220;Kältemitteldruck&#8221;, &#8220;FHZGESCHW&#8221;, &#8220;KÜHLWATEMPERATUR&#8221; und &#8220;AUSSENTEMPERATUR&#8221; auf dem Testgerät angezeigt werden.
+</ptxt>
+</test1>
+<question>
+Wird alles auf dem Testgerät gemäß 
+<intxref refid = "G6JB0A7204006">Testgerät-Ausgabeparameter</intxref>
+ angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Signals der seriellen Kommunikation
+</title>
+<test1>
+<ptxt>
+Die Steckverbinder mit BCM und HVAC-Steuermodul verbinden.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mit dem Oszilloskop überprüfen, ob das Signal der seriellen Kommunikation bei &#8220;G30-5&#8221; ausgegeben wird, siehe &#8220;Spannungsprüfung&#8221; unter 
+<intxref refid = "G6JB0AA204017">Überprüfung von BCM und Schaltkreisen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird das Signal der seriellen Kommunikation bei Anschluss &#8220;G30-5&#8221; des BCM-Steckverbinders ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+HVAC-Steuermodul defekt.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+BCM (in Sicherungskasten-Baugruppe enthalten) defekt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

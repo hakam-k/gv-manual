@@ -1,0 +1,944 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A1114064" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1674: CAN-Kommunikation (Bus-Aus-Fehler)
+</title>
+<servinfosub id = "G6JB0A1114064001">
+<title>
+Schaltplan
+</title>
+<figure>
+<graphic graphicname = "I5JB0D110007.swf" width = "183.000mm" height = "183.800mm" ver = "01" gw = "444" gh = "504"/>
+<callout-l>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.320in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.920in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.320in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.385in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Steckverbinder des schlüssellosen Anlassersteuermoduls (falls vorhanden) (Ansicht von der Kabelbaumseite)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM-Steckverbinder (von der Kabelbaumseite aus gesehen)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+4WD-Steuermodul (falls vorhanden)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;C&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+TCM-Steckverbinder (für Modell mit Automatikgetriebe) (Ansicht von der Kabelbaumseite)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+TCM (bei A&#x002F;T-Modellen)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;D&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+DLC (von Klemmenseite her gesehen)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Schlüsselloses Anlassersteuermodul (falls vorhanden)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;E&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Steckverbinder des ABS-Hydraulik-&#x002F;Steuermoduls (von Klemmenseite her gesehen) 
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;F&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Steckverbinder des Kombinationsinstruments (Ansicht von der Kabelbaumseite)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;G&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Steckverbinder 4WD-Steuermoduls (von der Kabelbaumseite aus gesehen)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ABS-Hydraulik-&#x002F;Steuermodul
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;H&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+BCM-Steckverbinder (Ansicht von der Kabelbaumseite) 
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+8.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Kombinationsinstrument
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;I&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ESP&#174;-Steuermodul-Steckverbinder (von der Kabelbaumseite aus gesehen)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+9.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Anschlusssteckverbinder des CAN-Schaltkreises
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;J&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Lenkwinkelsensor-Steckverbinder (Ansicht von der Kabelbaumseite) 
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ESP&#174;-Steuermodul
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;K&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Fahrzeug ohne ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Lenkwinkelsensor (für Fahrzeuge mit ESP&#174;)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+&#x005B;L&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Fahrzeug mit ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout-l>
+</figure>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G6JB0A1114064002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Übertragungsfehler, der zwischen den Übertragungsdaten und Übertragungsmonitordaten (CAN-Busmonitor) inkonsistent ist, wurde mehr als siebenmal nacheinander erfasst.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (bei A&#x002F;T-Modellen)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselloses Anlassersteuermodul (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS- bzw. ESP&#174;-Steuermodul 
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-Steuermodul (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kombinationsinstrument
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schaltkreis der CAN-Kommunikationsleitung
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkwinkelsensor (für Fahrzeuge mit ESP&#174;)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1114064003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Das Testgerät bei Zündschalter auf OFF an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und die DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und für mindestens 1 Minute laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G6JB0A1114064004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G6JB0A1110003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche:Für Modelle mit Benzinmotor</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G6JB0A1114064005">
+<testgroup>
+<question>
+Wurde die &#8220;Prüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:Für Modelle mit Benzinmotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei Zündschalter auf OFF an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+ECM, TCM (bei Modellen mit Automatikgetriebe), ABS &#x002F; ESP&#174;-Steuermodul, 4WD-Steuermodul (falls vorhanden), schlüsselloses Anlassersteuermodul (falls vorhanden) und BCM auf DTCs überprüfen.
+</ptxt>
+</test1>
+<question>
+Liegen für die jeweiligen Steuermodule, außer den DTCs für die CAN-Kommunikation (außer DTC P1618, P1674, P1676, P1678, P1685 für das ECM, DTC P1774, P1777, P1778 für das TCM (bei Modellen mit Automatikgetriebe), DTC U1073, U1100, U1101, U1121, U1126, U1139, U1140, U1144 für das BCM, ABS &#x002F; ESP&#174;-Steuermodul und 4WD-Steuermodul (falls vorhanden) und DTC Nr. 31 &#x002F; 33 für das schlüsselloses Anlassersteuermodul (falls vorhanden)), weitere DTCs vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Steckverbinder von ECM, TCM (bei Modellen mit Automatikgetriebe), BCM, ABS &#x002F; ESP&#174;-Steuermodul, 4WD-Steuermodul (falls vorhanden), Kombinationsinstrument, schlüsselloses Anlassersteuermodul (falls vorhanden) und Lenkwinkelsensor (für Fahrzeuge mit ESP&#174;).
+</title>
+<test1>
+<ptxt>
+Wenn der Zündschalter auf OFF steht, Überprüfung der Steckverbinderklemmen von ECM, TCM (bei Modellen mit Automatikgetriebe), BCM, ABS &#x002F; ESP&#174;-Steuermodul, 4WD-Steuermodul (falls vorhanden), Kombinationsinstrument, schlüsselloses Anlassersteuermodul (falls vorhanden) und Lenkwinkelsensor (für Fahrzeuge mit ESP&#174;).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn die Verbindungen einwandfrei sind, das ECM bei laufendem Motor erneut auf DTCs überprüfen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) P1674 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des ECM-Stromversorgungskreises und des Massekreises
+</title>
+<test1>
+<ptxt>
+Den Stromversorgungsschaltkreis und die Masseverbindung des ECM überprüfen. Siehe dazu 
+<intxref refid = "G6JB0A1114081">Überprüfung der ECM-Stromversorgung und -Masseverbindung:Für Modelle mit Benzinmotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Werden die Vorgaben erfüllt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und &#x002F;oder die Masseverbindung des ECM reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+BCM, TCM (bei Modellen mit Automatikgetriebe), ABS &#x002F; ESP&#174;-Steuermodul, 4WD-Steuermodul (falls vorhanden) und schlüsselloses Anlassersteuermodul (falls vorhanden) (Bus OFF) auf DTCs überprüfen.
+</title>
+<test1>
+<ptxt>
+Auf DTCs für das TCM (bei Modellen mit Automatikgetriebe), ABS &#x002F; ESP&#174;-Steuermodul, 4WD-Steuermodul (falls vorhanden) und BCM prüfen.
+</ptxt>
+</test1>
+<question>
+Werden die DTCs P1774 für das TCM (bei Modellen mit Automatikgetriebe), U1073 für das BCM, ABS &#x002F; ESP&#174;-Steuermodul und das 4WD-Steuermodul (falls vorhanden) und&#x002F;oder DTC Nr. 33 für das schlüssellose Anlassersteuermodul (falls vorhanden) angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung des ECM (Bus aus)
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf DTCs für das TCM (für Modelle mit Automatikgetriebe), BCM, ABS &#x002F; ESP&#174;-Steuermodul und 4WD-Steuermodul (falls vorhanden) prüfen.
+</ptxt>
+</test1>
+<question>
+Werden die DTCs P1774 für das TCM (bei Modellen mit Automatikgetriebe), U1073 für das BCM, ABS &#x002F; ESP&#174;-Steuermodul, 4WD-Steuermodul (falls vorhanden) und&#x002F;oder DTC Nr. 33 für das schlüssellose Anlassersteuermodul (falls vorhanden) angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabel des CAN-Kommunikationsschaltkreises zwischen ECM und ABS &#x002F; ESP&#174;-Steuermodul. Falls die Kabel einwandfrei sind, intaktes Ersatz-ECM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der DTCs im ECM
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder am ECM anschließen und den Steckverbinder vom BCM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTCs vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) P1674 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabel des CAN-Kommunikationsschaltkreises zwischen BCM und Anschlusssteckverbinder des CAN-Schaltkreises. Falls die Leitungen in Ordnung sind, probeweise ein funktionierendes BCM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der DTCs im ECM
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom TCM (bei A&#x002F;T-Modellen) abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTCs für das ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) P1674 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabel des CAN-Kommunikationsschaltkreises zwischen TCM und Anschlusssteckverbinder des CAN-Schaltkreises. Wenn die Leitungen in Ordnung sind, probeweise ein funktionierendes TCM (A&#x002F;T-Modell) anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der DTCs im ECM
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom schlüssellosen Anlassersteuermodul (falls vorhanden) abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTCs für das ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) P1674 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabel des CAN-Kommunikationsschaltkreises zwischen schlüssellosem Anlassersteuermodul und Anschlusssteckverbinder des CAN-Schaltkreises. Falls die Leitungen in Ordnung sind, probeweise ein funktionierendes Fernbedienungs-Startsteuermodul anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der DTCs im ECM
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom Kombinationsinstrument abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTCs für das ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) P1674 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabel des CAN-Kommunikationsschaltkreises zwischen Kombinationsinstrument und Anschlusssteckverbinder des CAN-Schaltkreises. Falls die Leitungen in Ordnung sind, probeweise ein funktionierendes Kombinationsinstrument oder Fernbedienungs-Startsteuermodul (falls vorhanden) anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der DTCs im ECM
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom 4WD-Steuermodul (falls vorhanden) abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTCs für das ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) P1674 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabel des CAN-Kommunikationsschaltkreises zwischen 4WD-Steuermodul und Anschlusssteckverbinder des CAN-Schaltkreises. Falls die Leitungen in Ordnung sind, probeweise ein funktionierendes 4WD-Steuermodul anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom Lenkwinkelsensor (falls Fahrzeug mit ESP&#174;-Steuermodul ausgestattet) abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTCs für das ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) P1674 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabel des CAN-Kommunikationsschaltkreises zwischen Lenkwinkelsensor und Anschlusssteckverbinder des CAN-Schaltkreises. Falls die Kabel einwandfrei sind, den Stromversorgungsschaltkreis und die Masseverbindung des Lenkwinkelsensors überprüfen. Falls die Schaltkreise einwandfrei sind, intakten Ersatz-Lenkwinkelsensor einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des ABS- oder ESP&#174;-Steuermoduls
+</title>
+<test1>
+<ptxt>
+Den Widerstand an den folgenden Steckverbinderklemmen messen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Anschlussklemme &#8220;WHT&#x002F;BLU&#8221; und Anschlussklemme &#8220;WHT&#8221; des ABS- oder ESP&#174;-Steuermodul-Steckverbinders.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Anschlussklemme &#8220;WHT&#x002F;RED&#8221; und Anschlussklemme &#8220;RED&#8221; des ABS- oder ESP&#174;-Steuermodul-Steckverbinders.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Beträgt der gemessene Widerstand weniger als 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ABS- oder ESP&#174;-Steuermodul einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreisüberprüfung der CAN-Kommunikation
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder aller Steuermodule (ECM, TCM (falls vorhanden), BCM, ABS- oder ESP&#174;-Steuermodul, 4WD-Steuermodul (falls vorhanden), schlüsselloses Anlassersteuermodul (falls vorhanden), Kombinationsinstrument, Lenkwinkelsensor (falls vorhanden)) abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass die folgenden Vorgaben für den CAN-Kommunikationsschaltkreis erfüllt werden.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Der Widerstand zwischen dem CAN-Kommunikationsschaltkreis und ALLEN Steuermodulen beträgt weniger als 1 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Isolationswiderstand zwischen den Kabeln des CAN-Kommunikationsschaltkreises ist an allen Steuermodul-Steckverbindern unendlich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Isolationswiderstand zwischen den einzelnen Kabeln des CAN-Kommunikationsschaltkreises und der Fahrzeugkarosseriemasse ist an allen Steuermodul-Steckverbindern unendlich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bei Zündschalterstellung ON beträgt die Spannung des CAN-Kommunikationsschaltkreises 0 V.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Werden die Vorgaben erfüllt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 15.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den defekten CAN-Kommunikationsschaltkreis reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung
+</title>
+<test1>
+<ptxt>
+Die Steckverbinder bei Zündschalterstellung OFF an das ECM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTCs für das ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) P1674 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ECM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und die Masseverbindung des ABS- oder ESP&#174;-Steuermoduls überprüfen. Falls die Schaltkreise einwandfrei sind, intaktes Ersatz-ABS- oder ESP&#174;-Steuermodul einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

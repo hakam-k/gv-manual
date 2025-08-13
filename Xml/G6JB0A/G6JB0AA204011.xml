@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA204011" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1157 (Nr. 1157) Signaleingang zur Auslösung des Airbags
+</title>
+<servinfosub id = "G6JB0AA204011001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA204010">DTC B1150 (Nr. 1150): Störung im Schaltkreis der Airbagkommunikation</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA204011002">
+<title>
+Bedingung für Störungserfassung und mögliche Ursache
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.643in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.560in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Mögliche Ursache
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signal zur Auslösung des Airbags wird vom SDM zum BCM übertragen.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bauteile des Airbagsystems
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM-Fehlfunktion
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0AA204011003">
+<title>
+Beschreibung des Diagnoseablauftests
+</title>
+<ptxt>
+<emph etype = "bold">
+Schritt 1: DTC für SDM abrufen.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA204011004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA204011005">
+<testgroup>
+<title>
+DTC für SDM abrufen
+</title>
+<test1>
+<ptxt>
+Die im SDM gespeicherten Diagnosecodes abrufen. Siehe dazu 
+<intxref refid = "G6JB0A8204004">Diagnosecodeüberprüfung</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1021 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0A8204014">DTC B1021: Airbagmodul wurde ausgelöst</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ein intaktes Ersatz-BCM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

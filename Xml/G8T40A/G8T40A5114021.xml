@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A5114021" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Überbrückung rückt nicht ein
+</title>
+<servinfosub id = "G8T40A5114021001">
+<title>
+Symptombeschreibung
+</title>
+<ptxt>
+Das TCM schaltet die TCC-Druckregelmagnetspule unter den folgenden Bedingungen aus.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kühlmitteltemperatur beträgt unter 60 &#176;C (140 &#176;F).
+</ptxt>
+</item>
+<item>
+<ptxt>
+4L&#x002F;N -Schalter (falls vorhanden) ist eingeschaltet. (Modus 4L oder N)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bremslichtschalter ist eingeschaltet. (Bremspedal ist betätigt)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Das TCM erfasst die folgenden DTCs.
+</ptxt>
+<ptxt>
+DTC P0602, P0712, P0713, P0717, P0722, P0962, P0963, P0973, P0974, P0976, P0977, P1702, P1703, P1706, P1774, P1777, P2763, P2764, U0073 und&#x002F;oder U0100
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "G8T40A5114021002">
+<title>
+Fehlersuche
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zur Durchführung der Probefahrt einen sicheren, verkehrsfreien Ort wählen, wo die Möglichkeit von Verkehrsunfällen praktisch ausgeschlossen ist. Vorsichtig vorgehen, um Unfälle zu vermeiden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Probefahrt sollte von 2 Personen, einem Fahrer und einem Prüfer, auf einer ebenen Straße ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<diag type = "test" id = "G8T40A5114021003">
+<testgroup>
+<question>
+Wurde die &#34;A&#x002F;T-Systemüberprüfung&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A5114001">A&#x002F;T-Systemüberprüfung:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC abrufen
+</title>
+<question>
+Wird DTC P0602, P0712, P0713, P0717, P0722, P0962, P0963, P0973, P0974, P0976, P0977, P1702, P1703, P1706, P1774, P1777, P2763, P2764, U0073 oder U0100 erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Diagnoseablaufplan zwecks Reparatur und erneuter Prüfung durchführen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Kühlwassertemperatur (ECT)
+</title>
+<test1>
+<ptxt>
+Den Motor auf normale Betriebstemperatur bringen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Kühlwassertemperatur (ECT) mit dem Diagnosegerät überprüfen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Kühlwassertemperatur (ECT) mehr als 60 &#176;C (140 &#176;F)?
+</question>
+<result>
+JA
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bei Fahrzeug mit 4L&#x002F;N-Schalter, weiter mit Schritt 4.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bei Fahrzeug ohne 4L&#x002F;N-Schalter, weiter mit Schritt 5.
+</ptxt>
+</item>
+</list1>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+ECT-Sensor, Schaltkreis oder Motorkühlsystem defekt. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des 4L&#x002F;N-Schaltersignals
+</title>
+<test1>
+<ptxt>
+In Zündschalterstellung ON die Spannung zwischen Anschlussklemme &#34;E93-4&#34; des TCM-Steckverbinders und Masse prüfen.
+</ptxt>
+<spec>
+<title>
+Vorgabe für 4L&#x002F;N-Schalter
+</title>
+<ptxt>
+Verteilergetriebestellung oder &#34;4H&#34;: Batteriespannung
+</ptxt>
+<ptxt>
+Verteilergetriebestellung &#34;4L&#34; oder &#34;N&#34;: 0 - 2 V
+</ptxt>
+</spec>
+</test1>
+<question>
+Wird die Vorgabe erfüllt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+4L&#x002F;N-Schalter oder dessen Schaltkreis defekt. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des Bremslichtschaltersignals
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen Anschlussklemme des ECM-Steckverbinders und Masse überprüfen.
+</ptxt>
+<spec>
+<title>
+Vorgabe für Bremslichtschalter
+</title>
+<ptxt>
+Bremspedal ist freigegeben: 0 - 1 V
+</ptxt>
+<ptxt>
+Bremspedal ist betätigt: Batteriespannung
+</ptxt>
+</spec>
+</test1>
+<question>
+Wird die Vorgabe erfüllt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes TCM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Bremslichtschalter falsch eingestellt, Defekt im Bremslichtschalter bzw. dessen Schaltkreis. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

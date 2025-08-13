@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A8204020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1042: Niedriger Widerstand im Auslöseschaltkreis des Beifahrerairbags
+</title>
+<servinfosub id = "G8T40A8204020001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A8204019">DTC B1041: Hoher Widerstand im Auslöseschaltkreis des Beifahrerairbags</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Unbedingt die Anweisungen unter VORSICHT in &#34;Überprüfungsablauf des Airbag-Diagnosesystems&#34; beachten.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "G8T40A8204020002">
+<title>
+DTC wird durch Folgendes ausgelöst
+</title>
+<ptxt>
+Der gesamte Widerstand von Beifahrer-Airbagmodul (Gasgenerator), Kabelbaum und Kontakt der Steckerklemme liegt für einen gewissen Zeitraum unter einem Sollwert.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A8204020003">
+<title>
+Beschreibung des Diagnoseablauftests
+</title>
+<ptxt>
+<emph etype = "bold">
+Schritt 1: Überprüfen, ob im Beifahrer-Airbagmodul (Gasgenerator) eine Störung vorliegt.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 2: Den Auslöseschaltkreis des Beifahrer-Airbagmoduls (Gasgenerator) überprüfen. (Zwischen &#34;Q01&#34; und &#34;Q02&#34;)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 3: Den Auslöseschaltkreis des Beifahrer-Airbagmoduls (Gasgenerator) überprüfen. (Zwischen &#34;G67&#34; und &#34;G47&#34; bzw. &#34;G67&#34; und &#34;G46&#34;)
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A8204020004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A8204020005">
+<testgroup id = "G8T40A8204020006">
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder des Beifahrer-Airbagmoduls (Gasgenerator) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum Beifahrer-Airbagmodul (Gasgenerator) an den Klemmen des Steckverbinders &#34;Q02&#34; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, die Spezialwerkzeuge (A), (B) und (D) an den Steckverbinder &#34;Q02&#34; anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B063">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B064">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B065">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I9T401822011.swf" width = "90.000mm" height = "54.683mm" ver = "01" gw = "173" gh = "138"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Die DTCs des SDM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1042 bei Zündschalterstellung ON angezeigt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Zündschalter auf OFF drehen. Ds Beifahrer-Airbagmodul (Gasgenerator) austauschen. Siehe dazu 
+<intxref refid = "G8T40A8206007">Aus- und Einbau des Beifahrer-Airbagmoduls (Gasgenerator)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A8204020007">
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den in der Nähe des Handschuhfachs befindlichen Steckverbinder &#34;G67&#34; lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum Steckverbinder des Armaturenbrett-Kabelbaums an Klemme &#34;G67-1&#34; und &#34;G67-2&#34; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, die Spezialwerkzeuge (B) und (C) an den in Schritt 1) gelösten Steckverbinder &#34;G67&#34; anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B066">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B067">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820034.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "169" gh = "128"/>
+</testfigure>
+</test1>
+<test1>
+<paragroup>
+<ptxt>
+Die DTCs des SDM abrufen.
+</ptxt>
+</paragroup>
+</test1>
+<question>
+Wird DTC B1042 bei Zündschalterstellung ON angezeigt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Schaltkreis &#34;BLU&#x002F;RED&#34; kurzgeschlossen mit Schaltkreis &#34;YEL&#x002F;RED&#34;; Schaltkreis &#34;BLU&#x002F;RED&#34; oder Schaltkreis &#34;YEL&#x002F;RED&#34; mit anderem Schaltkreis kurzgeschlossen. (Zwischen den Steckverbindern &#34;Q01&#34; und &#34;Q02&#34;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "G8T40A8204020008">
+<test1>
+<ptxt>
+Den SDM-Steckverbinder &#34;G47&#34; oder &#34;G46&#34; bei Zündschalterstellung OFF abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Klemmen &#34;G47-3&#34; und &#34;G47-4&#34; bzw. &#34;G46-5&#34; und &#34;G46-6&#34; auf einwandfreien Anschluss am SDM überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, den Kurzschlussbügel im SDM-Steckverbinder mit dem im Spezialwerkzeug (A) enthaltenen Lösewerkzeug (1) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen den Klemmen &#34;G47-3&#34; und &#34;G47-4&#34; &#x005B;A&#x005D; oder zwischen den Klemmen &#34;G46-5&#34; und &#34;G46-6&#34; &#x005B;B&#x005D; mit angeschlossenen Spezialwerkzeugen (B) und (C) messen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B068">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B069">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B070">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820035.swf" width = "90.000mm" height = "107.247mm" ver = "01" gw = "186" gh = "287"/>
+</testfigure>
+</test1>
+<question>
+Beträgt der Widerstand 0,65 &#937; oder mehr?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes SDM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Schaltkreis &#34;BLU&#x002F;RED&#34; kurzgeschlossen mit Schaltkreis &#34;YEL&#x002F;RED&#34;; Schaltkreis &#34;BLU&#x002F;RED&#34; oder Schaltkreis &#34;YEL&#x002F;RED&#34; mit anderem Schaltkreis kurzgeschlossen. (Zwischen den Steckverbindern &#34;G67&#34; und &#34;G47&#34; oder den Steckverbindern &#34;G67&#34; und &#34;G46&#34;)
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Nach Abschluss der Überprüfung und der Reparaturarbeiten die folgenden Arbeiten durchführen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle Bauteile des Airbagsystems wieder anschließen und sicherstellen, dass alle Bauteile einwandfrei montiert sind.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Eventuelle DTCs löschen. Siehe dazu 
+<intxref refid = "G8T40A8204005">Löschen von DTCs</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<intxref refid = "G8T40A8204001">Überprüfung des Airbag-Diagnosesystems</intxref>
+ wiederholen, um sicherzustellen, dass die Störung behoben wurde.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

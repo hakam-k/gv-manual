@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10E">
+<servcat sctnbr = "10" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA504021" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC-Nr. 33: Steuermodul des Kommunikationsbusses ausgeschaltet
+</title>
+<servinfosub id = "G6JB0AA504021001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA504020">DTC-Nr. 31: Kommunikationsverlust mit BCM</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA504021002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.055in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kommunikation mit allen über CAN verbunden Steuermodulen ist nicht verfügbar
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN-Kommunikationsschaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kombinationsinstrument
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselloses Anlassersteuermodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-Steuermodul (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS- bzw. ESP&#174;-Steuermodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (Modell mit Automatikgetriebe)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkwinkelsensor (falls vorhanden)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0AA504021003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+DTC löschen. Siehe dazu 
+<intxref refid = "G6JB0AA504009">Löschen von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und für mindestens 1 Minute laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC abrufen. Siehe dazu 
+<intxref refid = "G6JB0AA504007">Diagnosecodeüberprüfung</intxref>
+.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G6JB0AA504021004">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA504021005">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung des schlüssellosen Anlassersystems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0AA504004">Überprüfung des schlüssellosen Anlassersystems</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Steckverbinders des Steuermoduls
+</title>
+<test1>
+<ptxt>
+Verbindung aller Steckverbinder der über das CAN-Datenbussystem kommunizierenden Steuermodule überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Schlüsselloses Anlassersteuermodul erneut auf Diagnosecodes überprüfen.
+</ptxt>
+</test1>
+<question>
+Wird DTC-Nr. 33 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreisüberprüfung der CAN-Kommunikation
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Steckverbinder aller über das CAN-Datenbussystem kommunizierenden Steuermodule abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Schaltkreis der CAN-Kommunikation zwischen den Steuermodulen auf Unterbrechung, Kurzschluss und zu hohen Widerstand überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung des schlüssellosen Anlassersteuermoduls
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Steckverbinder aller über das CAN-Datenbussystem kommunizierenden Steuermodule anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder aller Steuermodule trennen mit Ausnahme des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Schlüsselloses Anlassersteuermodul erneut auf Diagnosecodes überprüfen.
+</ptxt>
+</test1>
+<question>
+Wird DTC Nr. 33 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Mit dem gleichen Verfahren die Steckverbinder der Steuermodule außer dem schlüssellosen Anlassersteuermodul und dem Kombinationsinstrument nacheinander abklemmen, um zu prüfen, ob DTC Nr. 33 erfasst wird.
+</ptxt>
+<ptxt>
+Wenn DTC Nr. 33 erfasst wird, auch wenn der Steckverbinder des Steuermoduls, außer des schlüssellosen Anlassersteuermoduls und Kombinationsinstruments, abgeklemmt ist, ein intaktes schlüsselloses Steuermodul einbauen und erneut überprüfen.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Stromversorgungs- und Massekreis des getrennten Steuermoduls prüfen. Falls Schaltkreis einwandfrei ist, ein intaktes abgeklemmtes Ersatz-Steuermodul einbauen und erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

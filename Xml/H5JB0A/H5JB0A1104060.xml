@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A1104060" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1676: CAN kommunikáció (adatvételi hiba a TCM-nél (automatikus sebességváltóval szerelt modellek esetén))
+</title>
+<servinfosub id = "H5JB0A1104060001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104058">DTC P1674: CAN kommunikáció (busz ki hiba)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A1104060002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A TCM-nél kommunikációs adatvételi hiba észlelése folyamatosan, az előírt időnél hosszabb ideig.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (automatikus sebességváltóval szerelt modelleknél)
+</ptxt>
+</item>
+<item>
+<ptxt>
+CAN kommunikációs vezeték áramköre
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H5JB0A1104060003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa be a motort és járassa legalább 1 percig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "H5JB0A1104060004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd 
+<intxref refid = "H5JB0A1100005">DTC hibaelhárítással kapcsolatos óvintézkedések</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H5JB0A1104060005">
+<testgroup>
+<question>
+A &#8220;Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 2. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-et, a TCM-et (automatikus sebességváltóval szerelt modellek esetén), az ABS-hidraulikaegységet &#x002F; vezérlőmodul egységet, a 4WD vezérlőmodult (J20 motor esetén), a kulcsnélküli indításvezérlő modult (ha van) és a BCM-et, hogy van-e DTC.
+</ptxt>
+</test1>
+<question>
+Az egyes vezérlőmoduloknál van a CAN kommunikációs DTC-n (DTC-ken) kívül (az ECM-ben a DTC P1618, P1674, P01676, P1678, P1685 hibakódokon, a TCM-ben (automatikus sebességváltóval szerelt modelleknél) a DTC P1774, P1777, P1778 hibakódokon,  a BCM-ben, az ABS-hidraulikaegység &#x002F; vezérlőmodul egységben és a 4WD vezérlőmodulban (J20 motor esetén) a DTC U1073, U1100, U 1101, U1121 hibakódokon és a kulcsnélküli indításvezérlő modulban (ha van) a DTC 31. sz.&#x002F;  33. sz. hibakódokon kívül) más DTC is? 
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a vonatkozó DTC diagnosztikai folyamat táblázatra.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 3. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a CAN kommunikációs hibát az ECM esetén
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-t, hogy van-e DTC?
+</ptxt>
+</test1>
+<question>
+Kijelzésre kerül DTC P1674?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104058">DTC P1674: CAN kommunikáció (busz ki hiba)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 4. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM, ABS-hidraulikaegység &#x002F; vezérlőmodul és TCM (automatikus sebességváltóval szerelt modellek esetén) csatlakozóinak ellenőrzése
+</title>
+<test1>
+<ptxt>
+A gyújtáskapcsoló OFF helyzeténél egyenként ellenőrizze, hogy megfelelő-e az ECM, ABS-hidraulikaegység &#x002F; vezérlőmodul és a TCM (automatikus sebességváltóval szerelt modellek esetén) csatlakozó érintkezők csatlakozása.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Amennyiben a csatlakozások rendben vannak, járó motornál ellenőrizze újra az ECM-t, hogy van-e DTC.
+</ptxt>
+</test1>
+<question>
+Kijelzésre kerül DTC P1676?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen az 5. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Időszakos hiba. Ellenőrizze, hogy fennáll-e időszakos hiba, lásd 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM tápáramköri és testáramköri ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECM táp- és testáramköreit, lásd 
+<intxref refid = "H5JB0A1104064">ECM táp-és testáramkörének ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben vannak?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 6. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg az ECM tápáramkörét és&#x002F;vagy testáramkörét.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzése a TCM-ben (automatikus sebességváltóval szerelt modellek esetén)
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, van-e DTC P1774 a TCM-ben (automatikus sebességváltóval szerelt modellek esetén).
+</ptxt>
+</test1>
+<question>
+Kijelzésre került?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A5104057">DTC P1774: CAN kommunikációs busza kikapcsolva</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 7. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés az ECM-ben
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le a BCM csatlakozót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-et, hogy van-e DTC?
+</ptxt>
+</test1>
+<question>
+Kijelzésre kerül DTC P1676?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 8. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;G31-1&#8221; vagy a &#8220;G31-3&#8221; áramköri vezeték a BCM és a CAN áramkör elosztódoboz csatlakozója között szakadt vagy az ellenállása nagy. Ha a vezetékek rendben vannak, a meglévő helyett tegyen be egy bizonyosan jó BCM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés az ECM-ben
+</title>
+<test1>
+<ptxt>
+Kösse le a csatlakozókat a TCM-ről (automatikus sebességváltóval szerelt modellek esetén) kikapcsolt gyújtás mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-t, hogy van-e DTC?
+</ptxt>
+</test1>
+<question>
+Kijelzésre kerül DTC P1676?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 9. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Az &#8220;E92-17&#8221; vagy az &#8220;E92-7&#8221; áramköri vezeték a TCM és a CAN áramkör elosztódoboz csatlakozója között szakadt vagy az ellenállása nagy. Ha a vezetékek rendben vannak, a mostani helyére tegyen be egy bizonyosan jó TCM-et (automatikus sebességváltóval szerelt modellek esetén), és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés az ECM-ben
+</title>
+<test1>
+<ptxt>
+A gyújtáskapcsoló OFF helyzetében vegye le a csatlakozót a kulcsnélküli indításvezérlő modulról.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-t, hogy van-e DTC?
+</ptxt>
+</test1>
+<question>
+Kijelzésre kerül DTC P1676?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 10. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;G44-19&#8221; vagy a &#8220;G44-18&#8221; áramköri vezeték a kulcsnélküli indításvezérlő modul és a CAN áramkör elosztódoboz csatlakozója között szakadt vagy az ellenállása nagy. Ha a vezetékek rendben vannak, a meglévő helyett tegyen be egy bizonyosan jó kulcsnélküli indításvezérlő modult, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés az ECM-ben
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le a csatlakozót a műszeregységről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-t, hogy van-e DTC?
+</ptxt>
+</test1>
+<question>
+Kijelzésre kerül DTC P1676?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 11. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;G28-10&#8221; vagy a &#8220;G28-8&#8221; áramköri vezeték a műszeregység és a CAN áramkör elosztódoboz csatlakozója között szakadt vagy az ellenállása nagy. Ha a vezetékek rendben vannak, a meglévő helyett tegyen be egy bizonyosan jó műszeregységet vagy kulcsnélküli indításvezérlő modult (ha van), és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés az ECM-ben
+</title>
+<test1>
+<ptxt>
+A gyújtáskapcsoló OFF helyzetében vegye le a csatlakozót a 4WD vezérlőmodulról (J20 motor esetén).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-t, hogy van-e DTC?
+</ptxt>
+</test1>
+<question>
+Kijelzésre kerül DTC P1676?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 12. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Az &#8220;E91-22&#8221; vagy az &#8220;E91-23&#8221; áramköri vezeték a 4WD vezérlőmodul és a CAN áramkör elosztódoboz csatlakozója között szakadt vagy az ellenállása nagy. Ha a vezetékek rendben vannak, a meglévő helyett tegyen be egy bizonyosan jó 4WD vezérlőmodult, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ABS-hidraulikaegység &#x002F; vezérlőmodul egység ellenőrzése
+</title>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az alábbi csatlakozó érintkezőknél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozójának &#8220;E03-8&#8221; érintkezője és &#8220;E03-6&#8221; érintkezője között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozójának &#8220;E03-10&#8221; érintkezője és &#8220;E03-12&#8221; érintkezője között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+A mért ellenállás kisebb, mint 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 13. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ABS-hidraulikaegységet &#x002F; vezérlőmodult, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs vezeték áramkör folytonosságának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsolónál vegye le a csatlakozókat a CAN segítségével kommunikáló összes vezérlőmodulról.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az alábbi csatlakozó érintkezőknél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozójának &#8220;E03-10&#8221; érintkezője és az ECM csatlakozó &#8220;E23-4&#8221; érintkezője között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozójának &#8220;E03-8&#8221; érintkezője és az ECM csatlakozó &#8220;E23-19&#8221; érintkezője között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozó &#8220;E03-12&#8221; érintkezője és TCM csatlakozó &#8220;E92-17&#8221; érintkezője között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozó &#8220;E03-6&#8221; érintkezője és TCM csatlakozó &#8220;E92-7&#8221; érintkezője között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Mindegyik ellenállás kisebb, mint 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 14. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a szakadt vagy nagy ellenállású CAN kommunikációs vezeték áramkört, lásd 
+<intxref refid = "H5JB0A0000005">Óvintézkedés a CAN Kommunikációs Rendszerhez</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs vezeték áramkör szigetelésének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az alábbi csatlakozó érintkezőknél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az ECM csatlakozó &#8220;E23-4&#8221; és &#8220;E23-19&#8221; érintkezői között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TCM csatlakozó &#8220;E92-17&#8221; és &#8220;E92-7&#8221; érintkezői között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Mindegyik ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 15. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a CAN kommunikációs vezeték áramkört, lásd 
+<intxref refid = "H5JB0A0000005">Óvintézkedés a CAN Kommunikációs Rendszerhez</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs vezeték áramkör rövidzárlat ellenőrzése
+</title>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az alábbi csatlakozó érintkezőknél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az ECM csatlakozó &#8220;E23-4&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM csatlakozó &#8220;E23-19&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TCM csatlakozó &#8220;E92-7&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TCM csatlakozó &#8220;E92-17&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Mindegyik ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 16. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa ki a CAN kommunikációs vezeték áramkör rövidzárlatot, lásd 
+<intxref refid = "H5JB0A0000005">Óvintézkedés a CAN Kommunikációs Rendszerhez</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze, hogy nem zárlatos-e a CAN kommunikációs vezeték tápáramköre.
+</title>
+<test1>
+<ptxt>
+Bekapcsolt gyújtáskapcsolónál mérje meg a következő csatlakozó érintkezők feszültségét.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az ECM csatlakozó &#8220;E23-4&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM csatlakozó &#8220;E23-19&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TCM csatlakozó &#8220;E92-7&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TCM csatlakozó &#8220;E92-17&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Mindegyik feszültség 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 17. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa ki a CAN kommunikációs vezeték tápáramkör rövidzárlatot, lásd 
+<intxref refid = "H5JB0A0000005">Óvintézkedés a CAN Kommunikációs Rendszerhez</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés a BCM-ben
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsolónál tegye fel a csatlakozókat a CAN segítségével kommunikáló összes vezérlőmodulra.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy van-e DTC U1001 a BCM-ben.
+</ptxt>
+</test1>
+<question>
+Kijelzésre került?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ellenőrizze a TCM táp- és testáramkört. Ha az áramkör rendben van, a meglévő helyett tegyen be egy bizonyosan jó TCM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

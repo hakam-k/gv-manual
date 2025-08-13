@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A1114069" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2102: Zu niedrige Spannung im Schaltkreis des Drosselklappenmotors
+</title>
+<servinfosub id = "G6JB0A1114069001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0A1114068">DTC P2101: Bereich&#x002F;Leistung des Drosselklappenmotor-Schaltkreises:Für Modelle mit Benzinmotor</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A1114069002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Versorgungsspannung im Schaltkreis des Drosselklappenreglers liegt selbst bei eingeschaltetem Drosselklappenregler-Steuerrelais für eine vorgeschriebene Zeit unter 5 V.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des Drosselklappenregler-Steuerrelais
+</ptxt>
+</item>
+<item>
+<ptxt>
+Drosselklappenregler-Steuerrelais
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1114069003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Testgerät anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zündschalter auf ON drehen und DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und für mindestens 1 Minute laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G6JB0A1114069004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G6JB0A1110003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche:Für Modelle mit Benzinmotor</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G6JB0A1114069005">
+<testgroup>
+<question>
+Wurde die &#8220;Prüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:Für Modelle mit Benzinmotor</intxref>
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreisüberprüfung des Drosselklappenregler-Steuerrelais
+</title>
+<test1>
+<ptxt>
+Das ECM aus der Halterung nehmen, ohne die Steckverbinder abzuklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Anschlussklemmen &#8220;E23-50&#8221; und &#8220;C37-17&#8221; des ECM-Steckverbinders auf einwandfreie Verbindung prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen Anschlussklemme &#8220;E23-17&#8221; des ECM-Steckverbinders und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Ist die &#8220;THR MOT&#8221;-Sicherung einwandfrei?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Sicherung austauschen und die mit dieser Sicherung verbundenen Schaltkreise auf Kurzschluss prüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreisüberprüfung des Drosselklappenregler-Steuerrelais
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF das Drosselklappenregler-Steuerrelais im Relaiskasten abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum Drosselklappenregler-Steuerrelais an den Kabelanschlüssen &#8220;BLU&#x002F;BLK&#8221;, &#8220;BLU&#x002F;RED&#8221;, &#8220;BLU&#x002F;ORN&#8221; und &#8220;GRN&#8221; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen Motormasse und den Kabelanschlüssen &#8220;BLU&#x002F;BLK&#8221; und &#8220;BLU&#x002F;RED&#8221; messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung jeweils 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabel &#8220;BLU&#x002F;BLK&#8221; und&#x002F;oder &#8220;BLU&#x002F;RED&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreisüberprüfung des Drosselklappenregler-Steuerrelais
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand an den folgenden Steckverbinderklemmen messen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;BLU&#x002F;ORN&#8221; des Steckverbinders des Drosselklappenregler-Steuerrelais und Klemme &#8220;E23-50&#8221; des ECM-Steckverbinders.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;GRN&#8221; des Steckverbinders des Drosselklappenregler-Steuerrelais und Klemme &#8220;E23-17&#8221; des ECM-Steckverbinders.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Liegt der Widerstand jeweils unter 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Kabel &#8220;BLU&#x002F;ORN&#8221; und&#x002F;oder &#8220;GRN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Drosselklappenregler-Steuerrelais
+</title>
+<test1>
+<ptxt>
+Das Drosselklappenregler-Steuerrelais überprüfen. Siehe dazu 
+<intxref refid = "G6JB0A1316018">Überprüfung des Steuerrelais:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+In Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ECM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Das Drosselklappenregler-Steuerrelais austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

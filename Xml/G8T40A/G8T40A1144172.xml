@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1144172" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Test 7: Abgasrückführungsventil
+</title>
+<diag type = "test" id = "G8T40A1144172001">
+<testgroup id = "G8T40A1144172002">
+<ptxt>
+VENTILSTELLUNGS-FEHLERSUCHE:
+</ptxt>
+<ptxt>
+Ermittlung eines Lecks im Abgasrückführungsventil
+</ptxt>
+<ptxt>
+Die Störungen löschen.
+</ptxt>
+<ptxt>
+Mit dem Befehl &#34;EGR-Ventildaten initialisieren&#34; am SUZUKI-Diagnosegerät versuchen, die Betriebswerte des EGR-Ventils neu zu initialisieren.
+</ptxt>
+<ptxt>
+Den Zündschalter auf OFF stellen und 40 Sekunden warten.
+</ptxt>
+<ptxt>
+Die Zündung wieder einschalten und Störungen abrufen.
+</ptxt>
+<ptxt>
+Falls die Störung noch immer vorliegt:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Den Steckverbinder des EGR-Ventils lösen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Das EGR-Ventil gemäß 
+<intxref refid = "G8T40A1456071">Aus- und Einbau des EGR-Ventils:F9Q</intxref>
+ ausbauen und dann wieder einbauen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sicherstellen, dass keinerlei Partikel die EGR-Ventilklappe versperren.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sicherstellen, dass das EGR-Ventil nicht blockiert oder in einer Stellung festklemmt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Den Zündschalter wieder auf ON stellen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mit der Funktion &#34;EGR Pos.-Sensor&#34; unter Datenliste am SUZUKI-Diagnosegerät die Bewegung des Ventils anzeigen (0 bis 2,5 mm Hub bei einem zyklischen Öffnungsverhältnis von 40 &#x0025; bzw., wenn völlig geöffnet, ~ 5 mm bei einem zyklischen Öffnungsverhältnis von 95 &#x0025;).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sicherstellen, dass die EGR-Ventilklappe vollständig schließt
+</ptxt>
+</item>
+</list1>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+EGR-Ventil gemäß 
+<intxref refid = "G8T40A1456071">Aus- und Einbau des EGR-Ventils:F9Q</intxref>
+ austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1144172003">
+<ptxt>
+EGR-VENTILBUCHSEN-FEHLERSUCHE:
+</ptxt>
+<ptxt>
+Das EGR-Ventil gemäß 
+<intxref refid = "G8T40A1456071">Aus- und Einbau des EGR-Ventils:F9Q</intxref>
+ ausbauen; es sollten sich keine Rußansammlungen zwischen Sockel und Ventil befinden.
+</ptxt>
+<ptxt>
+Gegebenenfalls die Ventilbuchse reinigen.
+</ptxt>
+<ptxt>
+</ptxt>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+EGR-Ventil gemäß 
+<intxref refid = "G8T40A1456071">Aus- und Einbau des EGR-Ventils:F9Q</intxref>
+ austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1144172004">
+<test1>
+<ptxt>
+Mit dem Befehl &#34;EGR-Ventildaten initialisieren&#34; am SUZUKI-Diagnosegerät versuchen, die Betriebswerte des EGR-Ventils neu zu initialisieren.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Luftkreis gemäß 
+<intxref refid = "G8T40A1144168">Test 3: Prüfung des Turbolader-Lufteinlasskreises:F9Q</intxref>
+ prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den MAF-Sensor gemäß 
+<intxref refid = "G8T40A1144169">Test 4: MAF-Sensor:F9Q</intxref>
+ prüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1144172005">
+<ptxt>
+Bestätigung der Fehlersuche:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Das Fahrzeug starten.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Den Motor 1 min. lang im Leerlauf betreiben.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Langsam 2 Minuten lang auf 1500 min-1 beschleunigen, bis die Abgasrückführung aktiv wird.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Eine Probefahrt mit niedriger Geschwindigkeit vornehmen, ohne stark, dann normal zu beschleunigen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mit dem SUZUKI-Diagnosegerät Störungen abrufen.
+</ptxt>
+</item>
+</list1>
+<question>
+Treten die Kundenbeschwerde oder Störungen erneut auf?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Abgasrückführungsventil (EGR) in Ordnung.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

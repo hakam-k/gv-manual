@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1124050" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2102 &#x002F; P2103
+</title>
+<servinfosub id = "G8T40A1124050001">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.240in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.953in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2102: Niedrige Spannung im Schaltkreis des Drosselklappenstellglied-Steuermotors
+</emph>
+</ptxt>
+<ptxt>
+Die überwachte Spannung des Stromversorgungskreises für den Drosselklappenstellmotor liegt unter 5 V, obwohl das Steuerrelais des Drosselklappenstellmotors aktiviert wird (Zündschalter auf ON).
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relais des Drosselklappenstellmotors und&#x002F;oder zugehöriger Schaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sicherung &#34;THR MOT&#34;
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2103: Hohe Spannung im Schaltkreis des Drosselklappenstellglied-Steuermotors
+</emph>
+</ptxt>
+<ptxt>
+Die Ausgangsspannung des Stromversorgungskreises für den Drosselklappenstellmotor liegt über 5 V, obwohl das Steuerrelais des Drosselklappenstellmotors deaktiviert wird (Zündschalter auf OFF).
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relais des Drosselklappenstellmotors und&#x002F;oder zugehöriger Schaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1124050002">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1124050003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Den Zündschalter für 10 Sek. auf ON drehen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter für 10 Sek. auf OFF drehen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A1124050004">
+<title>
+DTC-Fehlersuche (P2102)
+</title>
+<diag type = "test" id = "G8T40A1124050005">
+<testgroup id = "G8T40A1124050006">
+<question>
+Wurde die &#34;Überprüfung des Motor- und Abgassteuerungssystems&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1124001">Überprüfung des Motor- und Abgassteuerungssystems:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1124050007">
+<title>
+Überprüfung des Schaltkreises des Drosselklappenmotor-Steuerrelais
+</title>
+<test1>
+<ptxt>
+Steuerrelais des Drosselklappenstellmotors überprüfen. 
+<intxreftitleoff1 refid = "G8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Steuerrelais des Drosselklappenstellmotors austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1124050008">
+<title>
+Überprüfung des Stromversorgungskreises des Drosselklappenmotor-Steuerrelais
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen und das Steuerrelais des Drosselklappenstellmotors ausbauen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf ordnungsgemäßen Klemmenanschluss am Steckverbinder des Drosselklappenmotor-Steuerrelais prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn die Verbindungen in Ordnung sind, sicherstellen, dass die Spannung zwischen dem Stromversorgungskreis (A1 - A2) des Steuerrelais des Drosselklappenstellmotors und Karosseriemasse der Batteriespannung entspricht.
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defekten Kabelbaum reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1124050009">
+<title>
+Überprüfung von Treiberschaltkreis und Stromversorgungskreis des Drosselklappenmotor-Steuerrelais
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen und die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Treiberschaltkreis (A3) des Steuerrelais des Drosselklappenstellmotors und der Stromversorgungskreis (A4) des Drosselklappenstellmotors Folgendem entsprechen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Der Kabelbaumwiderstand des Treiberschaltkreises des Steuerrelais des Drosselklappenstellmotors und des Stromversorgungskreises des Drosselklappenstellmotors liegt unter 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Isolationswiderstand zwischen Treiberschaltkreis des Steuerrelais des Drosselklappenstellmotors und Stromversorgungskreis des Drosselklappenstellmotors und Karosseriemasse ist unendlich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Kabelbaum-Isolationswiderstand zwischen den Anschlussklemmen des Treiberschaltkreises des Steuerrelais des Drosselklappenstellmotors und den Anschlussklemmen am Steckverbinder des Steuerrelais des Drosselklappenstellmotors ist unendlich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Kabelbaum-Isolationswiderstand zwischen den Anschlussklemmen des Stromversorgungskreises des Drosselklappenstellmotors und den Anschlussklemmen am Steckverbinder des Steuerrelais des Drosselklappenstellmotors ist unendlich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Spannung des Treiberschaltkreises des Steuerrelais des Drosselklappenstellmotors und Stromversorgungskreis des Drosselklappenstellmotors beträgt bei Zündschalter auf ON jeweils 0 - 1 V.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Sind sie in einwandfreiem Zustand?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defekten Kabelbaum reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+<servinfosub id = "G8T40A1124050010">
+<title>
+DTC-Fehlersuche (P2103)
+</title>
+<diag type = "test" id = "G8T40A1124050011">
+<testgroup id = "G8T40A1124050012">
+<question>
+Wurde die &#34;Überprüfung des Motor- und Abgassteuerungssystems&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1124001">Überprüfung des Motor- und Abgassteuerungssystems:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1124050013">
+<title>
+Überprüfung des Drosselklappenmotor-Steuerrelais
+</title>
+<test1>
+<ptxt>
+Steuerrelais des Drosselklappenstellmotors überprüfen. 
+<intxreftitleoff1 refid = "G8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Steuerrelais des Drosselklappenstellmotors austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1124050014">
+<title>
+Überprüfung des Stromversorgungskreises des Drosselklappenstellmotors
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass die Spannung im Stromversorgungskreis (A4) des Drosselklappenstellmotors bei Zündschalter auf OFF 0 - 1 V beträgt.
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defekten Kabelbaum reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A1104095" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0463: Üzemanyagszint-érzékelő áramkörének feszültsége magas
+</title>
+<servinfosub id = "H5JB0A1104095001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104047">DTC P0462: Üzemanyagszint-érzékelő áramkörének feszültsége alacsony</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A1104095002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.156in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.048in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Az üzemanyagszint-érzékelő feszültsége magasabb az előírt értéknél 3 másodpercig folyamatosan.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési hiba, de a MIL nem gyullad fel)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM tápáramkör és&#x002F;vagy testáramkör működési hiba
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM működési hiba
+</ptxt>
+</item>
+<item>
+<ptxt>
+Üzemanyagszint-érzékelő és&#x002F;vagy áramkörének hibás működése
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H5JB0A1104095003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa el a motort és járassa legalább 30 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t és a feltételes DTC-t.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H5JB0A1104095004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd 
+<intxref refid = "H5JB0A1100005">DTC hibaelhárítással kapcsolatos óvintézkedések</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H5JB0A1104095005">
+<testgroup>
+<question>
+A &#8220;Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 2. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Az üzemanyagszint jelző a műszeregységben &#8220;E&#8221;-t (üres) mutat?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Töltse fel az üzemanyagtartályt üzemanyaggal, és menjen a 3. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 3. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Van SUZUKI vizsgálókészüléke?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 4. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen az 5. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Üzemanyagszint-érzékelő kimenő jel ellenőrzése SUZUKI vizsgálókészülékkel
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a SUZUKI vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe, és ellenőrizze a SUZUKI vizsgálókészüléken kijelzett üzemanyagszintet.
+</ptxt>
+</test1>
+<question>
+A kijelzett érték 3&#x0025; vagy kevesebb?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 6. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Időszakos hiba. Ellenőrizze, hogy fennáll-e időszakos hiba, lásd 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Üzemanyagszint-érzékelő kimenő jel ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Szedje ki az ECM-et a foglalatából bekapcsolt ECM csatlakozók mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe, és mérje meg a feszültséget az ECM csatlakozó &#8220;E23-24&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség értéke 3,5 V körül van, vagy több?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 6. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Időszakos hiba. Ellenőrizze, hogy fennáll-e időszakos hiba, lásd 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Üzemanyagszint-érzékelő áramkör ellenállásának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e az érintkezés az ECM csatlakozó &#8220;E23-24&#8221; érintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Amennyiben rendben van, mérje meg az ellenállást az ECM csatlakozó &#8220;E23-24&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 280 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 7. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 8. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Az üzemanyagszint-érzékelő kimenő jel áramkörének ellenőrzése zárlat szempontjából
+</title>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe, és mérje meg a feszültséget az ECM csatlakozó &#8220;E23-24&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 8. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;YEL&#x002F;RED&#8221; vezeték rövidre zárt más áramkör felé.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Az üzemanyagszint-érzékelő kimenő jel áramkörének ellenőrzése szakadás szempontjából
+</title>
+<test1>
+<ptxt>
+Kösse le az üzemanyag-szivattyú csatlakozóját, lásd 
+<intxref refid = "H5JB0A1706012">Az üzemanyagtartály le- és felszerelése</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e az üzemanyag-szivattyú csatlakozása a &#8220;YEL&#x002F;RED	&#8221; és a &#8220;YEL&#x002F;GRN&#8221; vezetékérintkezők felé.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Csatlakoztassa a csatlakozókat az ECM-re.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe, és mérje meg a feszültséget a lekötött üzemanyag-szivattyú &#8220;YEL&#x002F;RED&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 10. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 9. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Az üzemanyagszint-érzékelő kimenő jel áramkörének ellenőrzése szakadás szempontjából
+</title>
+<test1>
+<ptxt>
+Mérje meg a feszültséget az ECM csatlakozó &#8220;E23-24&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A &#8220;YEL&#x002F;RED&#8221; vezeték áramköre szakadt.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Az üzemanyagszint-érzékelő testáramköri ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le a segéd üzemanyagszint érzékelő csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az üzemanyag-szivattyú csatlakozó &#8220;BLK&#x002F;YEL&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 11. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;BLK&#x002F;YEL&#8221; vezeték szakadt vagy az áramkör ellenállása nagy.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Az üzemanyagszint-érzékelő áramkör ellenőrzése, hogy az áramkör ellenállása nagy-e
+</title>
+<test1>
+<ptxt>
+Vegye le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az üzemanyag-szivattyú csatlakozó &#8220;YEL&#x002F;RED&#8221; vezetékérintkezője és az ECM csatlakozó &#8220;E23-24&#8221; vezetékérintkezője között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 12. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;YEL&#x002F;RED&#8221; vezetékáramkör ellenállása nagy.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Üzemanyagszint-érzékelő ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az üzemanyagszint-érzékelőt (főérzékelőt és mellékérzékelőt), lásd 
+<intxref refid = "H5JB0A9306005">Üzemanyagszint-érzékelő ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A &#8220;YEL&#x002F;GRN&#8221; vezeték a fő üzemanyagszint- és a mellék üzemanyagszint-érzékelő között szakadt vagy az ellenállása nagy. Ha a vezeték rendben van, a meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Hibás üzemanyagszint-érzékelő.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

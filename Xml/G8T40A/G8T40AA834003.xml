@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA834003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Fehlersuche bei Kommunikationsabbruch
+</title>
+<servinfosub id = "G8T40AA834003001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40AA832001">Schaltplan des CAN-Kommunikationssystems:F9Q-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40AA834003002">
+<title>
+Diagnoseablauf
+</title>
+<attention3>
+<ptxt>
+Vor dem Ausführen der Punkte in diesem Ablauf unbedingt 
+<intxref refid = "G8T40AA834001">Prüfung des CAN-Kommunikationssystems:F9Q-Modell</intxref>
+ durchführen.
+</ptxt>
+</attention3>
+<ptxt>
+Wurde ein &#34;KommVerlust&#34; an einem Steuermodul erfasst, die Überprüfung mithilfe des folgenden Verfahrens durchführen.
+</ptxt>
+<s1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Bei Zündschalterstellung ON das SUZUKI-Diagnosegerät mit dem DLC (1) verbinden.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L10H303">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI-Testgerät (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I9T401720004.swf" width = "88.000mm" height = "58.917mm" ver = "01" gw = "138" gh = "150"/>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Mittels &#34;KommBus-Prüfung&#34; im Menu &#34;Bus-Prüfung&#34; des SUZUKI-Diagnosegeräts (SUZUKI-SDT) prüfen, welche Steuermodule nicht kommunizieren können (keine Anzeige auf dem Bildschirm).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Auf Grundlage der obigen Prüfergebnisse den entsprechenden Diagnoseablaufcode (A bis J) unter 
+<intxref refid = "G8T40AA834003003">Diagnoseablauf-Auswahltabelle</intxref>
+ wählen und die Fehlersuche gemäß dem gewählten Diagnoseablauf durchführen.
+</ptxt>
+<attention3>
+<ptxt>
+Ist es nicht möglich, einen geeigneten Diagnoseablaufcode unter &#34;Diagnoseablauf-Auswahltabelle&#34; oder &#34;Zwei oder mehrere Diagnoseabläufe auswählbar&#34; zu wählen, 
+<intxref refid = "G8T40AA834004">Fehlersuche bei &#34;Kommunikationsbus Aus&#34;:F9Q-Modell</intxref>
+ durchführen.
+</ptxt>
+</attention3>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40AA834003003">
+<title>
+Diagnoseablauf-Auswahltabelle
+</title>
+<attention3>
+<ptxt>
+Die Diagnoseablaufcodes A bis I sind mit den CAN-Kommunikationsleitung &#x005B;a&#x005D; bis &#x005B;i&#x005D; von 
+<intxref refid = "G8T40AA832001">Schaltplan des CAN-Kommunikationssystems:F9Q-Modell</intxref>
+ verbunden.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.689in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.520in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Steuermodul&#x002F;Sensor ohne Kommunikation
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Diagnoseablaufcode
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM und ABS&#x002F;ESP&#174;-Steuermodul
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+B
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kombiinstrument
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+C
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Lenkwinkelsensor
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+D
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Steuermodul für schlüsselloses Starten
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+E
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Außer BCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+F
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4WD-Steuermodul
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+G
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+HVAC-Steuermodul
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+H
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Alle über CAN kommunizierenden Steuermodule
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+I
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+J
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ABS-&#x002F;ESP&#174;-Steuermodul
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40AA834003004">
+<title>
+Fehlersuche
+</title>
+<topic id = "G8T40AA834003007">
+<title>
+Diagnoseablaufcode: A
+</title>
+<diag type = "test" id = "G8T40AA834003008">
+<testgroup id = "G8T40AA834003005">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder vom ECM und vom ABS-&#x002F;ESP&#174;-Steuermodul abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder von ECM und ABS-&#x002F;ESP&#174;-Steuermodul auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem ECM-Steckverbinder und dem Steckverbinder des ABS-&#x002F;ESP&#174;-Steuermoduls auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003006">
+<title>
+Prüfung von Hauptstrom- und Massestromkreis des ECM
+</title>
+<test1>
+<ptxt>
+Hauptstrom- und Massestromkreis des ECM überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und&#x002F;oder den Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003013">
+<title>
+Überprüfung des CAN-Abschlusswiderstands im ECM
+</title>
+<test1>
+<ptxt>
+Steckverbinder an das ECM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den CAN-Abschlusswiderstand im ECM wie folgt prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modelle mit ESP&#174;:
+</ptxt>
+<ptxt>
+Den Widerstand zwischen den Anschlussklemmen &#34;E53-43&#34; und &#34;E53-44&#34; am Steckverbinder des ESP&#174;-Steuermoduls messen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modell ohne ESP&#174;:
+</ptxt>
+<ptxt>
+Den Widerstand zwischen den Anschlussklemmen &#34;E03-10&#34; und &#34;E03-8&#34; am Steckverbinder des ABS-Steuermoduls messen.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Beträgt der Widerstand 114 - 134 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ABS-&#x002F;ESP&#174;-Steuermodul einbauen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003009">
+<title>
+Diagnoseablaufcode: B
+</title>
+<diag type = "test" id = "G8T40AA834003010">
+<testgroup id = "G8T40AA834003014">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder vom BCM und vom ABS-&#x002F;ESP&#174;-Steuermodul abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder von BCM und ABS-&#x002F;ESP&#174;-Steuermodul auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem BCM-Steckverbinder und dem Steckverbinder des ABS-&#x002F;ESP&#174;-Steuermoduls auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ABS&#x002F;ESP&#174;-Steuermodul einbauen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003011">
+<title>
+Diagnoseablaufcode: C
+</title>
+<diag type = "test" id = "G8T40AA834003012">
+<testgroup id = "G8T40AA834003019">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder vom BCM und vom Kombiinstrument abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder von BCM und Kombiinstrument auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem dem BCM-Steckverbinder und dem Kombiinstrument-Steckverbinder auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003020">
+<title>
+Prüfung des Hauptstrom- und Masseschaltkreises des Kombiinstruments
+</title>
+<test1>
+<ptxt>
+Hauptstrom- und Masseschaltkreis des Kombiinstrumens prüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Durch ein intaktes Kombiinstrument ersetzen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und&#x002F;oder den Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003021">
+<title>
+Diagnoseablaufcode: D
+</title>
+<diag type = "test" id = "G8T40AA834003027">
+<testgroup id = "G8T40AA834003028">
+<title>
+Prüfung des Hauptstrom- und Massestromkreises von Lenkwinkelsensor
+</title>
+<test1>
+<ptxt>
+Hauptstrom- und Masseschaltkreise des Lenkwinkelsensors überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und&#x002F;oder den Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003025">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder vom Lenkwinkelsensor und ESP&#174;-Steuermodul abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder von Lenkwinkelsensor- und ESP&#174;-Steuermodul auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem Lenkwinkelsensor-Steckverbinder und dem Steckverbinder des ESP&#174;-Steuermoduls auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Den Lenkwinkelsensor austauschen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003026">
+<title>
+Diagnoseablaufcode: E
+</title>
+<diag type = "test" id = "G8T40AA834003030">
+<testgroup id = "G8T40AA834003031">
+<title>
+Prüfung der Strom- und Masseschaltkreise des Steuermoduls für schlüsselloses Starten
+</title>
+<test1>
+<ptxt>
+Strom- und Masseschaltkreise des Steuermoduls für schlüsselloses Starten überprüfen. 
+<intxreftitleoff1 refid = "G8T40AA504015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und&#x002F;oder den Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003032">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder vom Steuermodul für schlüsselloses Starten und BCM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder von BCM und Steuermodul für schlüsselloses Starten auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem Steckverbinder des Steuermoduls für schlüsselloses Starten und dem BCM-Steckverbinder auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Durch ein intaktes Steuermodul für schlüsselloses Starten ersetzen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003029">
+<title>
+Diagnoseablaufcode: F
+</title>
+<diag type = "test" id = "G8T40AA834003034">
+<testgroup id = "G8T40AA834003035">
+<title>
+Prüfung von Strom- und Masseschaltkreis des BCM
+</title>
+<test1>
+<ptxt>
+Stromversorgungs- und Massekreis des BCM überprüfen. 
+<intxreftitleoff1 refid = "G8T40AA204007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und&#x002F;oder den Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003036">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder vom BCM und vom ABS-&#x002F;ESP&#174;-Steuermodul abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder von BCM und ABS-&#x002F;ESP&#174;-Steuermodul auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem BCM-Steckverbinder und dem Steckverbinder des ABS-&#x002F;ESP&#174;-Steuermoduls auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Durch ein intaktes BCM ersetzen und noch einmal prüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003033">
+<title>
+Diagnoseablaufcode: G
+</title>
+<diag type = "test" id = "G8T40AA834003038">
+<testgroup id = "G8T40AA834003039">
+<title>
+Prüfung der Hauptstrom- und Masseschaltkreise des 4WD-Steuermoduls
+</title>
+<test1>
+<ptxt>
+Strom- und Masseschaltkreise des 4WD-Steuermoduls überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und&#x002F;oder den Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003040">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder vom 4WD-Steuermodul und vom ABS&#x002F;ESP&#174;-Steuermodul abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder von 4WD-Steuermodul und ABS&#x002F;ESP&#174;-Steuermodul auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem 4WD-Steckverbinder und dem Steckverbinder des ABS&#x002F;ESP&#174;-Steuermoduls auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes 4WD-Steuermodul einbauen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003037">
+<title>
+Diagnoseablaufcode: H
+</title>
+<diag type = "test" id = "G8T40AA834003042">
+<testgroup id = "G8T40AA834003043">
+<title>
+Prüfung der Strom- und Masseschaltkreise des HVAC-Steuermoduls
+</title>
+<test1>
+<ptxt>
+Strom- und Masseschaltkreise des HAVC-Steuermoduls überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und&#x002F;oder den Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003044">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder vom HVAC-Steuermodul und vom BCM lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder von HVAC-Steuermodul und BCM auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem Steckverbinder des HVAC-Steuermoduls und dem BCM-Steckverbinder auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Durch ein intaktes HVAC-Steuermodul ersetzen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003015">
+<title>
+Diagnoseablaufcode: I
+</title>
+<diag type = "test" id = "G8T40AA834003016">
+<testgroup id = "G8T40AA834003022">
+<title>
+Überprüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder &#34;G31&#34; vom BCM lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den BCM-Steckverbinder auf korrekten Klemmenanschluss zum CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, die CAN-Kommunikationsschaltkreise zwischen dem DLC und dem BCM-Steckverbinder auf Unterbrechung überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834003023">
+<title>
+Überprüfung des CAN-Abschlusswiderstands im Kombiinstrument
+</title>
+<test1>
+<ptxt>
+Den Steckverbinder &#34;G31&#34; am BCM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder vom ABS-&#x002F;ESP&#174;-Steuermodul abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen CAN-High-Anschlussklemme und CAN-Low-Anschlussklemme am DLC messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand 114 - 134 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40AA834004">Fehlersuche bei &#34;Kommunikationsbus Aus&#34;:F9Q-Modell</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Durch ein intaktes BCM ersetzen und noch einmal prüfen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "G8T40AA834003017">
+<title>
+Diagnoseablaufcode: J
+</title>
+<diag type = "test" id = "G8T40AA834003018">
+<testgroup id = "G8T40AA834003024">
+<title>
+Prüfung der Strom- und Masseschaltkreise des Steuermoduls liefert keine Kommunikation
+</title>
+<test1>
+<ptxt>
+Strom- und Masseschaltkreise des Steuermoduls ohne Kommunikation prüfen (BCM oder ABS&#x002F;ESP&#174;-Steuermodul).
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Intaktes Steuermodul (BCM oder ABS&#x002F;ESP&#174;-Steuermodul) einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Stromversorgungsschaltkreis und&#x002F;oder den Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

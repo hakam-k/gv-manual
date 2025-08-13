@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA834004" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Fehlersuche bei &#34;Kommunikationsbus Aus&#34;
+</title>
+<servinfosub id = "G8T40AA834004001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40AA832001">Schaltplan des CAN-Kommunikationssystems:F9Q-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40AA834004002">
+<title>
+Diagnoseablauf
+</title>
+<attention3>
+<ptxt>
+Vor dem Ausführen der Punkte in diesem Ablauf unbedingt 
+<intxref refid = "G8T40AA834001">Prüfung des CAN-Kommunikationssystems:F9Q-Modell</intxref>
+ durchführen.
+</ptxt>
+</attention3>
+<ptxt>
+Wenn &#34;CAN-KommBus Aus&#34; in einem Steuermodul erfasst wird, oder wenn eine Kommunikation mittels des SUZUKI-Diagnosegeräts (SUZUKI SDT) mit den Steuermodulen nicht möglich ist, eine Überprüfung gemäß dem folgenden Verfahren durchführen.
+</ptxt>
+<s1>
+<ptxt>
+Das SUZUKI-Diagnosegerät (SUZUKI SDT) anschließen und die DTCs des BCM anzeigen, um die BCM-Kommunikation zu prüfen. Falls das SUZUKI-Diagnosegerät nicht mit dem BCM kommunizieren kann, das Diagnosegerät, das Verbindungskabel sowie den Hauptstrom- und Massestromkreis des DLC prüfen.
+</ptxt>
+<ptxt>
+Falls die Kommunikation einwandfrei funktioniert, mit dem nächsten Schritt fortfahren.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mit einem Oszilloskop oder der Oszilloskop-Funktion des SUZUKI-Diagnosegeräts (SUZUKI SDT) sowohl die CAN-High-Anschlussklemme (1) als auch die CAN-Low-Anschlussklemme (2) im Hinblick auf ein CAN-Kommunikationssignal (Wellenform) am DTC gemäß folgenden Bedingungen und mit Zündschalter auf ON beobachten.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Messbedingung
+</title>
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Prüfklemme
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: CAN-High-Anschlussklemme (1) an DLC-Masseklemme (3)
+</ptxt>
+<ptxt>
+CH2: CAN-Low-Anschlussklemme (2) an DLC-Masseklemme (3)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Oszilloskopeinstellung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: 1 V&#x002F;DIV., CH2: 1 V&#x002F;DIV.
+</ptxt>
+<ptxt>
+ZEIT: 5 ms.&#x002F;DIV.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Prüfbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Zündschalter auf ON
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<figure>
+<graphic graphicname = "I7V10AA81005.swf" width = "88.000mm" height = "32.106mm" ver = "02" gw = "223" gh = "74"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.703in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC (Ansicht: &#x005B;a&#x005D;)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Die beobachtete Signalwellenform mit den unter 
+<intxref refid = "G8T40AA834004003">Bezugswellenform</intxref>
+ angegebenen Wellenformen vergleichen. Die ähnlichste Signalwellenform suchen und das fehlerhafte System sowie die Störungsart anhand der entsprechenden &#34;Bezugswellenform&#34; identifizieren.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Nach Identifizierung des fehlerhaften Systems und der Störungsart die Fehlersuche gemäß 
+<intxref refid = "G8T40AA834004011">Fehlersuche</intxref>
+ durchführen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40AA834004003">
+<title>
+Bezugswellenform
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Nachfolgend sind als Referenzbeispiele Wellenformen dargestellt, die mittels der Oszilloskop-Funktion des SUZUKI-Diagnosegeräts (SUZUKI SDT) beobachtet wurden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die unter &#34;Beispiele für unnormale Wellenformen&#34; gezeigten Muster wurden exemplarisch für die während einer Störung auftretenden Wellenformen von CAN-Kommunikationssignalen ausgewählt. Es ist jedoch nicht zwangsläufig so, dass die gleiche Wellenform beobachtet werden kann. Daher muss zur Identifizierung der Störung eine Wellenform gewählt werden, die der beobachteten Wellenform in 
+<intxref refid = "G8T40AA834004005">Beispiele für unnormale Wellenformen</intxref>
+ am ähnlichsten ist.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<topic id = "G8T40AA834004004">
+<title>
+Normale Wellenform
+</title>
+<ptxt>
+Die Referenzspannung sowohl des CAN-High-Signals (2) als auch des CAN-Low-Signals (3) liegt bei 2,5 V (1).
+</ptxt>
+<ptxt>
+Die Wellenform des CAN-High-Signals liegt bei 2,5 - 3,5 V und die des CAN-Low-Signals bei 2,5 - 1,5 V.
+</ptxt>
+<ptxt>
+Für Einzelheiten siehe &#34;CAN-Kommunikationssignal&#34; unter 
+<intxref refid = "G8T40AA831001">Beschreibung des CAN-Kommunikationssystems:F9Q-Modell</intxref>
+.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81006.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "162" gh = "188"/>
+</figure>
+<figure>
+<title>
+Referenz (Zeiteinteilung 50 us)
+</title>
+<graphic graphicname = "I7V10AA81007.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "158" gh = "188"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.752in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.752in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Referenzspannung (2,5 V)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN-Low-Signal
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN-High-Signal
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</topic>
+<topic id = "G8T40AA834004005">
+<title>
+Beispiele für unnormale Wellenformen
+</title>
+<subtopic id = "G8T40AA834004006">
+<title>
+Bei Auftreteten eines Masseschlusses im CAN-High- und&#x002F;oder CAN-Low-Signalkabel
+</title>
+<ptxt>
+<emph etype = "bold">
+Merkmale der Wellenform
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wenn ein Masseschluss im CAN-High-Signalkabel vorliegt: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Sowohl CAN-High-Signal als auch CAN-Low-Signal liegen unveränderlich auf GND-Level (0 V) (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wenn ein Masseschluss im CAN-Low-Signalkabel vorliegt: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Der Referenzwert sowohl des CAN-High-Signals als auch des CAN-Low-Signals entspricht dem GND-Wert (0 V).
+</ptxt>
+<ptxt>
+Die Wellenform des CAN-High-Signals oszilliert unregelmäßig (4) zwischen 0 V und 3 V und die Wellenform des CAN-Low-Signals bleibt unveränderlich bei 0 V (3)
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81008.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "376" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Referenzspannung (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "G8T40AA834004007">
+<title>
+Bei Auftreten einer Unterbrechung im CAN-High- und&#x002F;oder CAN-Low-Signalkabel:
+</title>
+<ptxt>
+<emph etype = "bold">
+Merkmale der Wellenform
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wenn eine Unterbrechung im CAN-High-Signalkabel vorliegt: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Der Referenzspannungswert sowohl des CAN-High-Signals als auch des CAN-Low-Signals ist instabil und tendiert dazu, einen niedrigeren als den normalerweise üblichen Wert (2,5 V) (1) anzuzeigen. Ferner oszilliert die Wellenform des CAN-High-Signals unregelmäßig (3), die Wellenform des CAN-Low-Signals bleibt jedoch nahezu konstant (2).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wenn eine Unterbrechung im CAN-Low-Signalkabel vorliegt: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Der Referenzspannungswert sowohl des CAN-High-Signals als auch des CAN-Low-Signals ist instabil und tendiert dazu, einen höheren als den normalerweise üblichen Wert (2,5 V) (4) anzuzeigen. Ferner ist die Wellenform des CAN-High-Signals nahezu konstant (5), die Wellenform des CAN-Low-Signals oszilliert jedoch unregelmäßig (6).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81009.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+</figure>
+</subtopic>
+<subtopic id = "G8T40AA834004008">
+<title>
+Bei Auftreten eines Kurzschlusses zum Stromversorgungsschaltkreis (12 V) im CAN-High- und&#x002F;oder CAN-Low-Signalkabel
+</title>
+<ptxt>
+<emph etype = "bold">
+Merkmale der Wellenform
+</emph>
+</ptxt>
+<ptxt>
+Die Werte sowohl des CAN-High-Signals als auch des CAN-Low-Signals liegen unveränderlich bei 12 V (2). 
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81010.swf" width = "88.000mm" height = "71.278mm" ver = "01" gw = "149" gh = "185"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.598in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Referenzspannung (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "G8T40AA834004009">
+<title>
+Bei Auftreten eines Kurzschlusses zum Stromversorgungsschaltkreis (5 V) im CAN-High- und&#x002F;oder CAN-Low-Signalkabel
+</title>
+<ptxt>
+<emph etype = "bold">
+Merkmale der Wellenform
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wenn ein Kurzschluss zum Stromversorgungsschaltkreis (5 V) im CAN-High-Signalkabel vorliegt: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Die Referenzspannung (1) sowohl des CAN-High-Signals als auch des CAN-Low-Signals liegt bei 5 V.
+</ptxt>
+<ptxt>
+Die Wellenform des CAN-High-Signals oszilliert unregelmäßig bei etwa 5 V (3) und die Wellenform des CAN-Low-Signals schwankt zwischen 5 V und 2 V (4).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wenn ein Kurzschluss zum Stromversorgungsschaltkreis (5 V) im CAN-Low-Signalkabel vorliegt: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Die Referenzspannung (5) sowohl des CAN-High-Signals als auch des CAN-Low-Signals liegt bei 5 V. Beide Signale weisen die gleiche Phase auf und ihre Wellenform schwankt unregelmäßig (6) zwischen 5 V und 2,5 V.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81011.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.673in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Referenzspannung (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "G8T40AA834004010">
+<title>
+Bei Auftreten eines Kurzschlusses zwischen dem CAN-High- und dem CAN-Low-Signalkabel
+</title>
+<ptxt>
+<emph etype = "bold">
+Merkmale der Wellenform
+</emph>
+</ptxt>
+<ptxt>
+Die Werte sowohl des CAN-High-Signals als auch des CAN-Low-Signals liegen unveränderlich bei etwa 2,5 V (1).
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81012.swf" width = "88.000mm" height = "70.770mm" ver = "01" gw = "149" gh = "184"/>
+</figure>
+</subtopic>
+</topic>
+</servinfosub>
+<servinfosub id = "G8T40AA834004011">
+<title>
+Fehlersuche
+</title>
+<ptxt>
+Eine Überprüfung gemäß dem folgenden Fehlersuchverfahren durchführen.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bei Durchführen der &#34;KommBus-Prüfung&#34; mit dem SUZUKI-Diagnosegerät (SUZUKI-SDT) muss bei jedem Schritt dieser Fehlersuche die folgende Tabelle verwendet werden, damit festgestellt werden kann, ob das Steuermodul ordnungsgemäß funktioniert oder nicht.
+</ptxt>
+<ptxt>
+Während der &#34;KommBus-Prüfung&#34; darf auch kein anderer Arbeitsschritt durchgeführt werden, als der, der für diese Fehlersuche vorgeschrieben ist. Andernfalls kann es vorkommen, dass das Display des Steuermoduls&#x002F;Senders auf dem SUZUKI-SDT-Schirm und&#x002F;oder dessen Hintergrund die Farbe wechseln.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.303in"/>
+<colspec colnum = "2" colname = "2" colwidth = "5.787in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beurteilung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Display bei der Kommunikationsbus-Prüfung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Normal
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle angeschlossenen (und über CAN kommunizierenden) Steuermodule&#x002F;Sensoren werden angezeigt; die Hintergrundfarbe ist &#34;Weiß&#34;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Alle oben genannten Zustände bleiben während der Beobachtungsphase von mehr als 1 Minute unveränderlich.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Unzulässiger Wert
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Eine&#x002F;r der angeschlossenen (über CAN kommunizierenden) Steuereinheiten&#x002F;Sensoren wird nicht angezeigt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Anzeige einer&#x002F;eines der angeschlossenen (über CAN kommunizierenden) Steuereinheiten&#x002F;Sensoren verändert sich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Hintergrundfarbe von einem der angeschlossenen (über CAN kommunizierenden) Steuermodule&#x002F;Sensoren wird in &#34;Grau&#34; oder &#34;Hellgrün&#34; angezeigt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Hintergrundfarbe von einem der angeschlossenen (über CAN kommunizierenden) Steuermodule&#x002F;Sensoren verändert sich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die &#34;KommBus-Prüfung&#34; kann nicht ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</item>
+<item>
+<ptxt>
+Vor der Überprüfung die Fahrzeugausführung prüfen und sich mit den eingebauten Steuermodulen vertraut machen. Dann die Fehlersuche durchführen.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "G8T40AA834004012">
+<testgroup id = "G8T40AA834004013">
+<title>
+Überprüfung der CAN-Kommunikationsleitung
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder aller über das CAN kommunizierenden Steuermodule&#x002F;Sensoren abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Alle Steckverbinder der (über CAN kommunizierenden) Steuermodule&#x002F;Sensoren auf korrekten Klemmenanschluss zu jedem CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, alle CAN-Kommunikationsschaltkreise auf Unterbrechung, Kurzschluss zum Hauptstromkreis, Kurzschluss zum Masseschaltkreis, Kurzschluss zu einem anderen CAN-Kommunikationskabel oder hohen Widerstand prüfen. Dieses sollte auf Basis der Ergebnisse geschehen, die durch Messen und Identifizieren der Störungsart gemäß den Schritten 2) und 3) unter 
+<intxref refid = "G8T40AA834004002">Diagnoseablauf</intxref>
+ ermittelt wurden.
+</ptxt>
+</test1>
+<question>
+Sind alle CAN-Kommunikationsschaltkreise in gutem Zustand?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+CAN-Kommunikationsleitung reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834004014">
+<title>
+Überprüfung des CAN-Abschlusswiderstands im ECM
+</title>
+<test1>
+<ptxt>
+Steckverbinder an das ECM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den CAN-Abschlusswiderstand im ECM wie folgt prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modelle mit ESP&#174;:
+</ptxt>
+<ptxt>
+Den Widerstand zwischen den Anschlussklemmen &#34;E53-43&#34; und &#34;E53-44&#34; am Steckverbinder des ESP&#174;-Steuermoduls messen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modell ohne ESP&#174;:
+</ptxt>
+<ptxt>
+Den Widerstand zwischen den Anschlussklemmen &#34;E03-10&#34; und &#34;E03-8&#34; am Steckverbinder des ABS-Steuermoduls messen.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Beträgt der Widerstand 114 - 134 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834004015">
+<title>
+Überprüfung des CAN-Abschlusswiderstands im Kombiinstrument 
+</title>
+<test1>
+<ptxt>
+Den Steckverbinder am Kombiinstrument anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen den Anschlussklemmen &#34;G31-1&#34; und &#34;G31-3&#34; des BCM-Steckverbinders messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand 114 - 134 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Durch ein intaktes Kombiinstrument ersetzen und erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834004016">
+<title>
+Prüfung von ECM, Kombiinstrument und BCM
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder am BCM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Anschlussklemmen am Steckverbinder des ABS-&#x002F;ESP&#174;-Steuermoduls mithilfe des Prüfkabels (1) wie folgt verbinden:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modell mit ESP&#174; &#x005B;A&#x005D;:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Das Prüfkabel zwischen den Anschlussklemmen &#34;E53-43&#34; und &#34;E53-42&#34; am Steckverbinder des ESP&#174;-Steuermoduls anschließen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Das Prüfkabel zwischen den Anschlussklemmen &#34;E53-44&#34; und &#34;E53-45&#34; am Steckverbinder des ESP&#174;-Steuermoduls anschließen.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Modell ohne ESP&#174; &#x005B;B&#x005D;:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Das Prüfkabel zwischen den Anschlussklemmen &#34;E03-12&#34; und &#34;E03-10&#34; am Steckverbinder des ABS-Steuermoduls anschließen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Das Prüfkabel zwischen den Anschlussklemmen &#34;E03-6&#34; und &#34;E03-8&#34; am Steckverbinder des ABS-Steuermoduls anschließen.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80006.swf" width = "88.000mm" height = "69.147mm" ver = "01" gw = "228" gh = "179"/>
+</testfigure>
+</item>
+</list2>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die Option &#34;KommBus-Prüfung&#34; unter &#34;Bus-Prüfung&#34; des SUZUKI-Diagnosegeräts wählen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Prüfen, ob die CAN-Kommunikation mit ECM, Kombiinstrument und BCM ordnungsgemäß funktioniert.
+</ptxt>
+</test1>
+<question>
+Ist die Kommunikation in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+4WD-Modell, Motor-Schalttyp: Weiter mit Schritt 5.
+</ptxt>
+<ptxt>
+4WD-Modell vom Typ ohne Schaltung: Weiter mit Schritt 6.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834004017">
+<title>
+Prüfung des 4WD-Steuermoduls
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Steckverbinder an das 4WD-Steuermodul anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die Option &#34;KommBus-Prüfung&#34; unter &#34;Bus-Prüfung&#34; des SUZUKI-Diagnosegeräts wählen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Prüfen, ob die CAN-Kommunikation mit ECM, Kombiinstrument, BCM und 4WD-Steuermodul ordnungsgemäß funktioniert.
+</ptxt>
+</test1>
+<question>
+Ist die Kommunikation in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Modelle mit ESP&#174;: Weiter mit Schritt 7.
+</ptxt>
+<ptxt>
+Modell ohne ESP&#174;: Weiter mit Schritt 8.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Ein intaktes 4WD-Steuermodul einbauen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des Lenkwinkelsensors
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Steckverbinder am Lenkwinkelsensor anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die Option &#34;KommBus-Prüfung&#34; unter &#34;Bus-Prüfung&#34; des SUZUKI-Diagnosegeräts wählen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Prüfen, ob die CAN-Kommunikation mit ECM, Kombiinstrument, BCM, 4WD-Steuermodul (4WD-Modell, Motor-Schalttyp) und Lenkwinkelsensor ordnungsgemäß funktioniert.
+</ptxt>
+</test1>
+<question>
+Ist die Kommunikation in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Lenkwinkelsensor austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des HVAC-Steuermoduls
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Steckverbinder an HVAC-Steuermodul anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die Option &#34;KommBus-Prüfung&#34; unter &#34;Bus-Prüfung&#34; des SUZUKI-Diagnosegeräts wählen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Prüfen, ob die CAN-Kommunikation mit ECM, Kombiinstrument, BCM, 4WD-Steuermodul (4WD-Steuermodul Motor-Schalttyp), Lenkwinkelsensor (ESP&#174;-Modell) und HVAC-Steuermodul ordnungsgemäß funktioniert.
+</ptxt>
+</test1>
+<question>
+Ist die Kommunikation in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Modell mit System für schlüsselloses Starten: Weiter mit Schritt 8.
+</ptxt>
+<ptxt>
+Modell ohne System für schlüsselloses Starten: Ein intaktes ABS-&#x002F;ESP&#174;-Steuermodul einbauen und die Prüfung wiederholen.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Durch ein intaktes HVAC-Steuermodul ersetzen und erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des Steuermoduls für schlüsselloses Starten
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder an das Steuermodul für schlüsselloses Starten anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die Option &#34;KommBus-Prüfung&#34; unter &#34;Bus-Prüfung&#34; des SUZUKI-Diagnosegeräts wählen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Prüfen, ob die CAN-Kommunikation mit ECM, Kombiinstrument, BCM, 4WD-Steuermodul (4WD-Steuermodul Motor-Schalttyp), Lenkwinkelsensor (ESP&#174;-Modell), HVAC-Steuermodul und Steuermodul für schlüsselloses Starten ordnungsgemäß funktioniert.
+</ptxt>
+</test1>
+<question>
+Ist die Kommunikation in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ABS-&#x002F;ESP&#174;-Steuermodul einbauen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Durch ein intaktes Steuermodul für schlüsselloses Starten ersetzen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834004018">
+<title>
+BCM-Überprüfung
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder vom BCM lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Anschlussklemmen am Steckverbinder des BCM mithilfe des Prüfkabels (1) wie folgt verbinden:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Prüfkabel zwischen den Anschlussklemmen &#34;G31-3&#34; und &#34;G31-4&#34; des BCM-Steckverbinders anschließen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Prüfkabel zwischen den Anschlussklemmen &#34;G31-2&#34; und &#34;G31-1&#34; des BCM-Steckverbinders anschließen.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80005.swf" width = "88.000mm" height = "55.389mm" ver = "01" gw = "214" gh = "140"/>
+</testfigure>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die Option &#34;KommBus-Prüfung&#34; unter &#34;Bus-Prüfung&#34; des SUZUKI-Diagnosegeräts wählen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Prüfen, ob die CAN-Kommunikation mit dem ECM und dem Kombiinstrument ordnungsgemäß funktioniert.
+</ptxt>
+</test1>
+<question>
+Ist die Kommunikation in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Durch ein intaktes BCM ersetzen und noch einmal prüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40AA834004019">
+<title>
+Prüfung des Kombiinstruments
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die gemäß obigem Schritt 4 angeschlossenen Prüfkabel vom Steckverbinder des ABS&#x002F;ESP&#174;-Steuermoduls abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die gemäß obigem Schritt 9 angeschlossenen Prüfkabel vom BCM-Steckverbinder abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Wellenform der über die Anschlussklemmen &#34;G31-1&#34; und &#34;G31-3&#34; am BCM-Steckverbinder empfangenen Signale beobachten.
+</ptxt>
+</test1>
+<question>
+Ist die beobachtete Wellenform normal?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Durch ein intaktes Kombiinstrument ersetzen und erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA314016" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1636: Registrierungsfehler der Wegfahrsperrendaten
+</title>
+<servinfosub id = "G6JB0AA314016001" page = "1">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA312001">Schaltplan des Wegfahrsperren-Steuersystems:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA314016002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Registrierung der Wegfahrsperren-Steuersystemdaten im ECM ist fehlerhaft.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kabelschaltkreis der CAN-Kommunikation defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkwinkelsensor (falls vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselloses Anlassersteuermodul (falls vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-Steuermodul (falls vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (wenn vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM defekt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS &#x002F; ESP&#174;-Steuermodul defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kombinationsinstrument defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0AA314016003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA314016004">
+<testgroup>
+<title>
+Bestätigung von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Fehlercode(s) löschen. Siehe dazu 
+<intxref refid = "G6JB0AA314003">Löschen von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob ein Diagnosecode erfasst wird. Siehe hierzu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1636 noch immer erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeprüfung (DTC) beim ECM
+</title>
+<question>
+Wird irgendein anderer Störungscode außer P1636 in Schritt 1 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Fehlersuche entsprechend dem Ablaufschema durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC) im BCM
+</title>
+<test1>
+<ptxt>
+Diagnosecode (DTC) im BCM abrufen. Siehe hierzu 
+<intxref refid = "G6JB0AA204005">Diagnosecodeüberprüfung</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird irgendein Störungscode erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Fehlersuche entsprechend dem Ablaufschema im Abschnitt 10B durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Austausch des BCM
+</title>
+<test1>
+<ptxt>
+BCM durch ein neues ersetzen. Siehe hierzu 
+<intxref refid = "G6JB0AA206001">Ausbau und Einbau des BCM</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Diagnosecode (DTC) im ECM abrufen. Siehe dazu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1636 noch immer erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Austausch des ECM
+</title>
+<test1>
+<ptxt>
+ECM durch ein neues ersetzen. Siehe hierzu 
+<intxref refid = "G6JB0A1316001">Aus- und Einbau des Motorsteuermoduls (ECM):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Diagnosecode (DTC) im ECM abrufen. Siehe dazu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1636 noch immer erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Kabelschaltkreise der CAN-Kommunikation und Steckverbinder von ECM, ABS&#x002F;ESP&#174; und BCM noch einmal auf schlechte Verbindung prüfen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

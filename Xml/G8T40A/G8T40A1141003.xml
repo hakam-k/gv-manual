@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "G8T40A1141003" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Beschreibung des Borddiagnosesystems
+</title>
+<ptxt>
+Das ECM dieses Fahrzeugs erfüllt folgende Aufgaben:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wenn der Zündschalter bei abgestelltem Motor auf ON gedreht wird, leuchtet die MIL (1) auf, um die Funktion der Warnleuchte und deren Schaltkreis zu prüfen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sollte das ECM eine Störung erfassen, schaltet es die Einspritzwarnleuchte (Fehlerwichtigkeit 1) (2) und&#x002F;oder die rote Stopp-Warnleuchte (Fehlerwichtigkeit 2) (3) im Kombiinstrument des Armaturenbretts ein und speichert den betreffenden Fehlerbereich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Erfasst das ECM während der Fahrt eine Störung, die die Abgasemission beeinträchtigt, schaltet es die MIL im Kombiinstrument des Armaturenbretts ein und speichert die Störung ab.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wenn eine Funktionsstörung erfasst wird, wird sie für einige Bereiche des Systems und Fahrzyklen im ECM-Speicher gesichert (Einzelheiten siehe 
+<intxref refid = "G8T40A1144008">Tabelle der Kontrollleuchtenfunktion:F9Q</intxref>
+).
+</ptxt>
+<figure>
+<graphic graphicname = "I8T40A114001.swf" width = "88.000mm" height = "104.778mm" ver = "01" gw = "190" gh = "280"/>
+</figure>
+</item>
+</list1>
+<servinfosub id = "G8T40A1141003001">
+<title>
+Warmlaufphase
+</title>
+<ptxt>
+Als Warmlaufphase bezeichnet man die Zeitspanne nach dem Starten des Motors, bis die Kühlmitteltemperatur um mindestens 22 &#176;C (40 &#176;F) auf eine Mindesttemperatur von 70 &#176;C (160 &#176;F) angestiegen ist.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1141003002">
+<title>
+Fahrzyklus
+</title>
+<ptxt>
+Ein &#34;Fahrzyklus&#34; umfasst zwei Teile, das Anlassen und Abschalten des Motors. 
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1141003003">
+<title>
+3-Fahrten-Testlogik
+</title>
+<ptxt>
+Die während des ersten Fahrzyklus erfasste Störung wird im ECM-Speicher (in Form eines vorgemerkten DTC) gespeichert, aber die Störungsleuchte leuchtet zu diesem Zeitpunkt nicht auf. 
+</ptxt>
+<ptxt>
+Die Leuchte wird auch nicht beim zweiten Erfassen derselben Störung im nächsten Fahrzyklus eingeschaltet. Die Leuchte wird erst beim dritten Erfassen derselben Störung im dritten Fahrzyklus eingeschaltet.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1141003004">
+<title>
+Vorläufiger Diagnosecode (DTC)
+</title>
+<ptxt>
+Ein vorläufiger DTC ist ein DTC, der von der 3-Fahrten-Testlogik beim ersten oder zweiten Auftreten einer bestimmten Störung erkannt und provisorisch gespeichert wird.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1141003005">
+<title>
+Datenübertragungsanschluss (DLC)
+</title>
+<ptxt>
+Die Einbauposition, die Form des Steckverbinders und der Stiftaufbau des DLC (1) sind mit SAE J1962 kompatibel. 
+</ptxt>
+<ptxt>
+Für die Kommunikation zwischen SUZUKI-Diagnosegerät oder Standard-OBD-Diagnosegerät und ECM, Airbag-SDM, Wegfahrsperren-Steuermodul, BCM (zentrales Steuermodul für Karosserieelektrik), 4WD-Steuermodul und ABS&#x002F;ESP&#174;-Steuermodul wird eine serielle OBD-Datenleitung (3) (K-Leitung nach ISO 9141) verwendet.
+</ptxt>
+<figure>
+<graphic graphicname = "I8T40A114002.swf" width = "88.000mm" height = "90.667mm" ver = "01" gw = "172" gh = "240"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.606in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.831in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.315in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.956in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+B&#x002B;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+ECM-Masse
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Karosseriemasse
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

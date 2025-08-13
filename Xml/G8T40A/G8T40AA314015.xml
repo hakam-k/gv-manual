@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA314015" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1625: Fehler der Wegfahrsperrenantenne
+</title>
+<servinfosub id = "G8T40AA314015001">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ICM defekt.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wegfahrsperren-Steuermodul defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40AA314015002">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G8T40AA314015003">
+<testgroup>
+<title>
+Bestätigung von Diagnosecodes (DTCs)
+</title>
+<test1>
+<ptxt>
+DTC(s) löschen. Siehe dazu 
+<intxref refid = "G8T40AA314003">Löschen von DTCs:Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob ein DTC erfasst wird. Siehe hierzu 
+<intxref refid = "G8T40AA314002">DTC-Überprüfung:Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1625 noch immer erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Austausch des ICM und Überprüfung von Diagnosecodes (DTCs)
+</title>
+<test1>
+<ptxt>
+ICM austauschen. Siehe hierzu 
+<intxref refid = "G8T40AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob DTC P1625 noch immer erfasst wird. Siehe dazu 
+<intxref refid = "G8T40AA314002">DTC-Überprüfung:Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1625 noch immer erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+ECM durch ein neues ersetzen.
+</ptxt>
+<ptxt>
+- M16A- und J20A-Modelle: 
+<intxreftitleoff1 refid = "G8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B-Modell: 
+<intxreftitleoff1 refid = "G8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A-Modell: 
+<intxreftitleoff1 refid = "G8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Anschließend 
+<intxref refid = "G8T40AA316003">Vorgehensweise nach dem Austausch des ECM:Benzinmotor-Modell</intxref>
+ ausführen.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA324033" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1718: Kommunikationsfehler Lenkradschlosseinheit
+</title>
+<servinfosub id = "G8T40AA324033001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40AA322001">Schaltplan des Wegfahrsperren-Steuersystems:Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40AA324033002">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+Wenn der Kontrollcode im ECM am Wegfahrsperren-Steuersystem registriert wird, wird gleichzeitig auch der ID-Code im ECM und im schlüssellosen Anlassersteuermodul registriert. Dieser Diagnosecode wird nur erfasst, falls der ID-Code nicht im ECM und im schlüssellosen Anlassersteuermodul registriert werden kann, wenn der Kontrollcode im ECM am Wegfahrsperren-Steuersystem registriert wird.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Falls DTC B1716 und B1718 gemeinsam vorliegen, zuerst DTC B1716 beseitigen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Nach dem Austausch des ECM unbedingt 
+<intxref refid = "G8T40AA326003">Vorgehensweise nach dem Austausch des ECM:Dieselmotor-Modell</intxref>
+ durchführen. Nach dem Austausch des schlüssellosen Anlasser-Steuermoduls unbedingt 
+<intxref refid = "G8T40AA326003">Vorgehensweise nach dem Austausch des ECM:Dieselmotor-Modell</intxref>
+ durchführen.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "G8T40AA324033003">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bei der Registrierung des Kontrollcodes im ECM für das Wegfahrsperren-Steuersystem gab das schlüssellose Anlassersteuermodul dem ECM ein Signal, das anzeigte, dass der ID-Code nicht registriert werden konnte.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der ID-Code konnte weder im schlüssellosen Anlassersteuermodul noch im ECM registriert werden.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreise zwischen Lenkradschlosseinheit und schlüsselloser Anlassersteuereinheit defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkradschlosseinheit
+</ptxt>
+</item>
+<item>
+<ptxt>
+CAN-Kommunikationsschaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkwinkelsensor (Modell mit ESP&#174;)
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-Steuermodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselloses Anlassersteuermodul (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS-&#x002F;ESP&#174;-Steuermodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kombinationsinstrument
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40AA324033004">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G8T40AA324033005">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung des Wegfahrsperren-Steuersystems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40AA324001">Überprüfung des Wegfahrsperren-Steuersystems:Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registrierung von ECM
+</title>
+<test1>
+<ptxt>
+ECM am Wegfahrsperren-Steuersytem registrieren, siehe 
+<intxref refid = "G8T40AA326003">Vorgehensweise nach dem Austausch des ECM:Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wurde die Registrierung von ECM am Wegfahrsperren-Steuersystem abgeschlossen?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+ECM erneut auf DTC prüfen. Falls DTC P1718 noch immer erfasst wird, mit Schritt 3 fortfahren.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung
+</title>
+<question>
+Wird ein anderer DTC als P1718 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung des schlüssellosen Anlassersteuermoduls
+</title>
+<test1>
+<ptxt>
+Schlüsselloses Anlassersteuermodul auf Diagnosecodes überprüfen. Siehe dazu 
+<intxref refid = "G8T40AA504006">Diagnosecodeüberprüfung</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird ein DTC erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kommunikationsschaltkreis zwischen Lenkradschlosseinheit und schlüssellosem Anlassersteuermodul überprüfen.
+</title>
+<test1>
+<ptxt>
+Wenn der Zündschlüssel in Stellung OFF steht, den Steckverbinder der Lenkradsperre und den Steckverbinder des schlüssellosen Anlassersteuermoduls trennen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die einwandfreie Verbindung an den Anschlüssen und Kabeln jedes Steckverbinders 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+ prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, auf Unterbrechungen, Kurzschlüsse und hohen Widerstand in jedem Schaltkreis zwischen der Lenkradsperre und dem schlüssellosen Anlassersteuermodul prüfen. Siehe Schritt 2 in 
+<intxref refid = "G8T40AA504016">DTC-Nr. 11: Kommunikationsfehler mit Lenkradschlosseinheit</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis einwandfrei?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Defektes Teil reparieren und erneut prüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Stromversorgung der Lenkradschlosseinheit
+</title>
+<test1>
+<ptxt>
+Steckverbinder für schlüsselloses Anlassersteuermodul anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter in die Stellung ON drehen und die Anschlussspannung der Stromversorgung am Steckverbinder der Lenksperreneinheit prüfen. Siehe 
+<intxref refid = "G8T40AA504015">Überprüfung von Stromversorgungsschaltkreis und Masseverbindung des schlüssellosen Anlassersteuermoduls</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lenkradschlosseinheit austauschen und Diagnosecode erneut abrufen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Durch ein intaktes schlüsselloses Ersatz-Anlassersteuermodul ersetzen und die Prüfung wiederholen. Falls DTC B1718 immer noch vorliegt, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

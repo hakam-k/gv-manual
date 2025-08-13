@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E5104037" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0974 &#x002F; P0977: zu hohe Spannung im Steuerschaltkreis von Schaltmagnetventil &#8220;A&#8221; &#x002F; zu hohe Spannung im Steuerschaltkreis von Schaltmagnetventil &#8220;B&#8221;
+</title>
+<servinfosub id = "G5JB0E5104037001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E5104036">DTC P0973 &#x002F; P0976: niedrige Spannung im Steuerschaltkreis von Schaltmagnetventil &#8220;A&#8221; &#x002F; niedrige Spannung im Steuerschaltkreis von Schaltmagnetventil &#8220;B&#8221;</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E5104037002">
+<title>
+Bedingung für DTC-Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für DTC-Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Spannung an der TCM-Anschlussklemme des Schaltmagnetventils ist zu hoch, obwohl TCM das Ausschalten dieses Ventils angewiesen hat.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Erfassungslogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des Schaltmagnetventils ist unterbrochen oder hat Kurzschluss mit Stromversorgungsschaltkreis.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schaltmagnetventil defekt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0E5104037003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zur Durchführung der Probefahrt einen sicheren, verkehrsfreien Ort wählen, wo die Möglichkeit von Verkehrsunfällen praktisch ausgeschlossen ist. Vorsichtig vorgehen, um Unfälle zu vermeiden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Probefahrt sollte von zwei Personen - Fahrer und Prüfer - auf einer ebenen Straße ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Das Testgerät bei ausgeschalteter Zündung an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die im TCM und ECM gespeicherten DTC mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Motor starten und Wählhebel auf &#8220;D&#8221; stellen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug starten und die Geschwindigkeit im Wählbereich &#8220;D&#8221; auf mindestens 60 km&#x002F;h (37 mile&#x002F;h) erhöhen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mit dieser Geschwindigkeit für 20 Sekunden weiterfahren und die Geschwindigkeit nach und nach verringern.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug anhalten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC, vorgemerkte DTC und Schnappschussdaten abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G5JB0E5104037004">
+<title>
+Fehlersuche anhand von DTC
+</title>
+<diag type = "test" id = "G5JB0E5104037005">
+<testgroup>
+<question>
+Wurde &#8220;Überprüfung des A&#x002F;T-Systems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0E5104001">Überprüfung des A&#x002F;T-Systems</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Den Versorgungskreis des Schaltmagnetventils auf Kurzschluss prüfen.
+</title>
+<test1>
+<ptxt>
+Die TCM-Steckverbinder abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+An Anschlussklemme &#8220;E92-16&#8221; (Schaltmagnetventil&#8211;A) bzw. &#8220;E92-15&#8221; (Schaltmagnetventil&#8211;B) auf einwandfreien Kontakt mit dem TCM überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ist der Anschluss OK, den Widerstand zwischen der Klemme &#8220;E92-16&#8221; (Schaltmagnetventil&#8211;A) und der Klemme &#8220;E92-15&#8221; (Schaltmagnetventil&#8211;B) des abgezogenen kabelbaumseitigen TCM-Steckverbinders und Masse überprüfen.
+</ptxt>
+</test1>
+<question>
+Beträgt sie 0 &#8211; 2 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC P0974: Kurzschluss mit Versorgungskreis des Schaltmagnetventils-A.
+</ptxt>
+<ptxt>
+DTC P0977: Kurzschluss mit Versorgungskreis des Schaltmagnetventils-B.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreis des Magnetventils auf Unterbrechung prüfen.
+</title>
+<test1>
+<ptxt>
+Durchgang zwischen Anschlussklemme &#8220;E92-16&#8221; (Schaltmagnetventil-A) bzw. &#8220;E92-15&#8221; (Schaltmagnetventil-B) des abgezogenen kabelbaumseitigen TCM-Steckverbinders und Masse prüfen. 
+</ptxt>
+</test1>
+<question>
+Ist er unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+DTC P0974: Unterbrechung im Schaltkreis von Magnetventil-A.
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC P0977: Unterbrechung im Schaltkreis von Magnetventil-B.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls Schaltkreis OK ist, weiter mit Schritt 4.
+</ptxt>
+</item>
+</list1>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Magnetventils
+</title>
+<test1>
+<ptxt>
+Das Magnetventil überprüfen. Siehe hierzu 
+<intxref refid = "G5JB0E5106022">Überprüfung der Magnetventile (Schaltmagnetventil-A, Schaltmagnetventil-B, TCC-Magnetventil für die Arbeitsdruckregelung und Magnetventil für die Arbeitsdruckregelung)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind die Prüfergebnisse zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Wackelkontakt oder TCM defekt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G5JB0E0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Falls OK, ein funktionierendes TCM anschließen und die Überprüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Das defekte Magnetventil austauschen. Siehe hierzu 
+<intxref refid = "G5JB0E5106021">Aus- und Einbau der Magnetventile (Schaltmagnetventil-A, Schaltmagnetventil-B, TCC-Magnetventil für die Arbeitsdruckregelung und Magnetventil für die Arbeitsdruckregelung)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

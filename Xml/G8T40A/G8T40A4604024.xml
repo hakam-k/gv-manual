@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A4604024" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1039: Interne Störung der Gierraten-&#x002F;G-Sensor-Baugruppe
+</title>
+<servinfosub id = "G8T40A4604024001">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Interne Störung der Gierraten-&#x002F;G-Sensor-Baugruppe erfasst.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gierraten-&#x002F;G-Sensor-Baugruppe
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174;-Steuermodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A4604024002">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A4604024003">
+<testgroup id = "G8T40A4604024004">
+<question>
+Wurde die &#34;Überprüfung des elektronischen Stabilitätsprogramms&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A4604001">Überprüfung des elektronischen Stabilitätsprogramms</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A4604024005">
+<title>
+DTC-Überprüfung
+</title>
+<test1>
+<ptxt>
+Das Diagnosegerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die DTCs abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen DTC C1034 und&#x002F;oder C1073 vor?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A4604024006">
+<title>
+Sensorkalibrierung überprüfen
+</title>
+<test1>
+<ptxt>
+Die Gierraten-&#x002F;G-Sensor-Baugruppe kalibrieren. 
+<intxreftitleoff1 refid = "G8T40A4606002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Alle DTCs löschen und dann erneut abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC C1039 weiterhin erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Kalibrierung der Gierraten-&#x002F;G-Sensor-Baugruppe nicht abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A4604024007">
+<title>
+Die Gierraten-&#x002F;G-Sensor-Baugruppe überprüfen
+</title>
+<test1>
+<ptxt>
+Prüfung der Gierraten-&#x002F;G-Sensor-Baugruppe 
+<intxreftitleoff1 refid = "G8T40A4606016"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Probeweise intakte ESP&#174;-Hydraulikeinheit-&#x002F;Steuermodul-Baugruppe anschließen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Die Gierraten-&#x002F;G-Sensor-Baugruppe austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "G8T40A5111009" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Beschreibung des Borddiagnosesystems
+</title>
+<servinfosub id = "G8T40A5111009001">
+<title>
+Für E-OBD-Modelle
+</title>
+<ptxt>
+Das TCM besitzt im Steuersystem des Automatikgetriebes folgende Funktionen: Siehe 
+<intxref refid = "G8T40A5114049">Überprüfung des TCM und dessen Schaltkreise:4 A&#x002F;T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wenn der Zündschalter bei abgestelltem Motor auf ON gedreht wird, schaltet sich die Störungsleuchte (MIL) (1) ein, um die Betriebsbereitschaft der MIL-Glühbirne zu überprüfen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Hat das TCM in der Steuerung des Automatikgetriebes eine Störung erkannt, sendet es ein Signal, damit die Störungsleuchte (MIL) aktiviert und der Störungs-DTC im TCM gespeichert wird.
+</ptxt>
+<ptxt>
+(Stellt das TCM jedoch fest, dass der Motor nach einer Fehlfunktion kontinuierlich über 3 Fahrzyklen normal läuft, wird die MIL wieder ausgeschaltet, aber der DTC bleibt weiterhin im Speicher.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Eine Kommunikation über DLC (2) ist nicht nur über das SUZUKI-Diagnosegerät, sondern auch über ein Standard-OBD-Diagnosegerät möglich. (Mit dem Diagnosegerät können Diagnosedaten überprüft und gelöscht werden.)
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L5A101">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI-Testgerät (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure page = "2">
+<graphic graphicname = "I9T401511002.swf" width = "88.000mm" height = "102.309mm" ver = "01" gw = "189" gh = "273"/>
+</figure>
+</item>
+</list1>
+<topic id = "G8T40A5111009002">
+<title>
+2-Fahrten-Testlogik
+</title>
+<ptxt>
+Die im ersten Fahrzyklus erkannte Störung wird im TCM (in Form von vorgemerkten DTCs und Schnappschussdaten) gespeichert, wobei sich die Störungsleuchte zu diesem Zeitpunkt jedoch nicht einschaltet. Sie leuchtet bei der zweiten Erkennung desselben Fehlers, also während des nächsten Fahrzyklus auf.
+</ptxt>
+</topic>
+<topic id = "G8T40A5111009003">
+<title>
+Vorgemerkter DTC
+</title>
+<ptxt>
+Unter einem vorgemerkten DTC ist ein DTC zu verstehen, der erkannt und provisorisch während einem der beiden Fahrzyklen von der 2-Fahrten-Testlogik abgespeichert wird.
+</ptxt>
+</topic>
+<topic id = "G8T40A5111009004">
+<title>
+Schnappschussdaten
+</title>
+<ptxt>
+Das TCM speichert die Motor- und Fahrbedingungen zum Zeitpunkt der Feststellung einer Störung im Speicher. Diese Daten werden als &#34;Schnappschussdaten&#34; bezeichnet.
+</ptxt>
+<ptxt>
+Um die bei einer auftretenden Störung herrschenden Motor- und Fahrbedingungen (z. B. Motor warm oder kalt, Fahrzeug stehend oder fahrend) zu ermitteln, ist es somit lediglich erforderlich, die Schnappschussdaten abzufragen.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "G8T40A5111009005">
+<title>
+Für Nicht-E-OBD-Modelle
+</title>
+<ptxt>
+Das TCM besitzt im Steuersystem des Automatikgetriebes folgende Funktionen: Siehe 
+<intxref refid = "G8T40A5114049">Überprüfung des TCM und dessen Schaltkreise:4 A&#x002F;T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wenn der Zündschalter auf ON gestellt und keine Fehlfunktion im A&#x002F;T-Steuerungssystem erfasst wird, leuchtet die Getriebewarnleuchte (1) zur Lampenprüfung etwa 2 Sekunden (nachdem der Zündschalter auf ON geschaltet wurde) auf und geht dann aus.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wenn das TCM eine Störung im A&#x002F;T-Steuerungssystem erkennt, blinkt die Getriebewarnleuchte (1) und der Störungs-DTC wird im Speicher abgelegt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Kommunikation mit dem TCM ist über den Datenübertragungsanschluss (DLC) (2) mittels SUZUKI-Diagnosegerät möglich. Mit dem SUZUKI-Diagnosegerät können Diagnosedaten überprüft und gelöscht werden.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L5A102">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI-Testgerät (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure page = "2">
+<graphic graphicname = "I8T40A511002.swf" width = "88.000mm" height = "109.011mm" ver = "01" gw = "189" gh = "292"/>
+</figure>
+</item>
+</list1>
+<topic id = "G8T40A5111009006">
+<title>
+2-Fahrten-Testlogik
+</title>
+<ptxt>
+Die im ersten Fahrzyklus erkannte Störung wird im TCM (in Form von vorgemerkten DTCs und Schnappschussdaten) gespeichert, wobei sich die Störungsleuchte zu diesem Zeitpunkt jedoch nicht einschaltet. Sie leuchtet bei der zweiten Erkennung desselben Fehlers, also während des nächsten Fahrzyklus auf.
+</ptxt>
+</topic>
+<topic id = "G8T40A5111009007">
+<title>
+Vorgemerkter DTC
+</title>
+<ptxt>
+Unter einem vorgemerkten DTC ist ein DTC zu verstehen, der erkannt und provisorisch während einem der beiden Fahrzyklen von der 2-Fahrten-Testlogik abgespeichert wird.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

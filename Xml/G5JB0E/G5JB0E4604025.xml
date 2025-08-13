@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E4604025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC C1015 &#x002F; C1017 &#x002F; C1023: Störung des Längs-G-Sensors &#x002F; Seiten-G-Sensors &#x002F; Gierwinkelsensors in der Gierwinkel-&#x002F;G-Sensor-Baugruppe 
+</title>
+<servinfosub id = "G5JB0E4604025001">
+<title>
+DTC-Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+C1015:
+</emph>
+</ptxt>
+<ptxt>
+Längs-G-Sensorsignal liegt außerhalb des Sollbereichs. (für 4WD-Fahrzeuge)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+C1017:
+</emph>
+</ptxt>
+<ptxt>
+Seiten-G-Sensorsignal liegt außerhalb des Sollbereichs.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+C1023:
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Das Gierwinkel-Sensorsignal liegt nicht im Sollbereich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fahrzeugverhalten und Gierwinkelsignal stimmen nicht überein.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gierwinkel-&#x002F;G-Sensor-Baugruppe
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174;-Steuermodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0E4604025002">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0E4604025003">
+<testgroup>
+<question>
+Wurde die &#8220;Prüfung elektronisches Stabilitätsprogramm&#8221; vorgenommen?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E4604001">Prüfung elektronisches Stabilitätsprogramm</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC des ESP&#174;
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zündschalter auf ON stellen und DTC des ESP&#174; abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen DTC C1034 und&#x002F;oder C1073 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit dem entsprechenden DTC-Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung der Sensorkalibirerung
+</title>
+<test1>
+<ptxt>
+Die Gierwinkel-&#x002F;G-Sensor-Baugruppe gemäß 
+<intxref refid = "G5JB0E4606015">Sensorkalibrierung</intxref>
+ kalibrieren.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Alle DTC löschen und dann DTC des ESP&#174; abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen DTC C1015, C1017 und&#x002F;oder C1023 immer noch vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kalibrierung der Gierwinkel-&#x002F;G-Sensor-Baugruppe nicht abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung der Gierwinkel-&#x002F;G-Sensor-Baugruppe
+</title>
+<test1>
+<ptxt>
+Die Gierwinkel-&#x002F;G-Sensor-Baugruppe gemäß 
+<intxref refid = "G5JB0E4606017">Prüfung der Gierwinkel&#x002F;G-Sensor-Baugruppe am Fahrzeug</intxref>
+ prüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Probeweise ein funktionierendes ESP&#174;-Hydraulik-&#x002F;Steuermodul anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Gierwinkel-&#x002F;G-Sensor-Baugruppe austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

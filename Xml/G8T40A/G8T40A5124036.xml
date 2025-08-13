@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A5124036" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0974&#x002F;P0977&#x002F;P0986: Hohe Spannung im Steuerkreis der Schaltmagnetspule &#8220;A&#8221;&#x002F;Hohe Spannung im Steuerkreis der Schaltmagnetspule &#8220;B&#8221;&#x002F;Hohe Spannung im Steuerkreis der Schaltmagnetspule &#8220;E&#8221;
+</title>
+<servinfosub id = "G8T40A5124036001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A5124035">DTC P0973&#x002F;P0976&#x002F;P0985: Niedrige Spannung im Steuerkreis der Schaltmagnetspule &#8220;A&#8221;&#x002F;Niedrige Spannung im Steuerkreis der Schaltmagnetspule &#8220;B&#8221;&#x002F;Niedrige Spannung im Steuerkreis der Schaltmagnetspule &#8220;E&#8221;:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A5124036002">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Spannung an der TCM-Anschlussklemme des Schaltmagnetventils ist zu hoch, obwohl TCM das Ausschalten des Schaltmagnetventils angewiesen hat.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des Schaltmagnetventils ist unterbrochen oder hat Kurzschluss mit Hauptstromkreis.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schaltmagnetventil defekt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A5124036003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zur Durchführung der Probefahrt einen sicheren, verkehrsfreien Ort wählen, wo die Möglichkeit von Verkehrsunfällen praktisch ausgeschlossen ist. Vorsichtig vorgehen, um Unfälle zu vermeiden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Probefahrt sollte von 2 Personen, einem Fahrer und einem Prüfer, auf einer ebenen Straße ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Das Diagnosegerät bei Zündschalterstellung OFF an das DLC anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die in TCM und ECM gespeicherten DTCs mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Motor anlassen und Wählhebel auf Schaltstufe &#34;D&#34; stellen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug starten und die Fahrzeuggeschwindigkeit in Schaltstufe &#34;D&#34; auf mindestens 60 km&#x002F;h (37 mile&#x002F;h) erhöhen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mit dieser Geschwindigkeit für 20 Sekunden weiterfahren und die Fahrzeuggeschwindigkeit nach und nach verringern.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug anhalten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTCs, vorgemerkte DTCs und Schnappschussdaten abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A5124036004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A5124036005">
+<testgroup>
+<question>
+Wurde die &#34;A&#x002F;T-Systemüberprüfung&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A5124001">A&#x002F;T-Systemüberprüfung:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Stromversorgung des Schaltmagnetventils auf Kurzschluss prüfen.
+</title>
+<test1>
+<ptxt>
+Die TCM-Steckverbinder abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf korrekten Anschluss an das TCM an den Klemmen &#34;E92-16&#34; (für Schaltmagnetventil A), &#34;E92-15&#34; (für Schaltmagnetventil B) oder &#34;E92-14&#34; (für Schaltmagnetventil E) prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ist der Anschluss in Ordnung, den Zündschalter auf ON schalten und die Spannung zwischen Anschlussklemme &#34;E92-16&#34; (für Schaltmagnetventil A), &#34;E92-15&#34; (für Schaltmagnetventil B) oder &#34;E92-14&#34; (für Schaltmagnetventil E) des abgezogenen kabelbaumseitigen TCM-Steckverbinders und Masse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt sie 0 - 2 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Kurzschluss zwischen Steuerkreis des Schaltmagnetventils A, B oder E und Stromversorgungskreis.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreis des Schaltmagnetventils auf Unterbrechung prüfen
+</title>
+<test1>
+<ptxt>
+Auf Durchgang zwischen Anschlussklemme &#34;E92-16&#34; (für Schaltmagnetventil A), &#34;E92-15&#34; (für Schaltmagnetventil B) oder &#34;E92-14&#34; (für Schaltmagnetventil E) des abgezogenen kabelbaumseitigen TCM-Steckverbinders und Masse prüfen.
+</ptxt>
+</test1>
+<question>
+Ist er unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Unterbrechung im Steuerkreis des Schaltmagnetventils A, B oder E.
+</ptxt>
+<ptxt>
+Falls Schaltkreis OK ist, weiter mit Schritt 4.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltmagnetventil prüfen
+</title>
+<test1>
+<ptxt>
+Das Magnetventil überprüfen. Siehe hierzu 
+<intxref refid = "G8T40A5126021">Überprüfung der Magnetventile (Schaltmagnetspule A, Schaltmagnetspule B, Schaltmagnetspule E, TCC-Druckregelmagnetspule, Druckregelmagnetspule A, Druckregelmagnetspule B und Druckregelmagnetspule C):5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind die Prüfergebnisse zufriedenstellend?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Zeitweilige Störung oder fehlerhaftes TCM. Auf zeitweilige Störungen prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defektes Schaltmagnetventil austauschen. Siehe hierzu 
+<intxref refid = "G8T40A5126020">Aus- und Einbau der Magnetventile (Schaltmagnetspule A, Schaltmagnetspule B, Schaltmagnetspule E, TCC-Druckregelmagnetspule, Druckregelmagnetspule A, Druckregelmagnetspule B und Druckregelmagnetspule C):5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

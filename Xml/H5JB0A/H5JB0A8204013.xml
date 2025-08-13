@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A8204013" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1017: Áramforrás feszültsége alacsony
+</title>
+<servinfosub id = "H5JB0A8204013001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H5JB0A8204012">DTC B1016: Áramforrás feszültsége magas</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Mindenképpen olvassa el a VIGYÁZAT címszóval jelzett figyelmeztetéseket a következő fejezetben: &#8220;Légzsák diagnosztikai rendszerének ellenőrzési folyamata&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "H5JB0A8204013002">
+<title>
+DTC akkor jelenik meg, amikor
+</title>
+<ptxt>
+Az SDM-et működtető áramforrás feszültsége meghatározott ideig az előírt érték alá kerül.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A8204013003">
+<title>
+Áramlási teszt leírása
+</title>
+<ptxt>
+<emph etype = "bold">
+1. lépés:Ellenőrizze, hogy az akkumulátor feszültsége a normális tartományban van-e.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+2. lépés: Ellenőrizze, hogy az SDM-re adott feszültség a normális tartományban van-e.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+3. lépés: Ellenőrizze, hogy az &#8220;L04&#8221; csatlakozóra adott feszültség a normális tartományban van-e.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+4. lépés: Ellenőrizze, hogy a DTC B1017 hibakód érvényben van-e még.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A8204013004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H5JB0A8204013005">
+<testgroup>
+<test1>
+<ptxt>
+Mérje meg az akkumulátor feszültségét.
+</ptxt>
+</test1>
+<question>
+A feszültség legalább 11 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ellenőrizze a töltési rendszert és javítsa meg, ha szükséges, lásd: 
+<intxref refid = "H5JB0A1A04002">A generátor ellenőrzése (gyenge akkumulátor ellenőrzése)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást és vegye le az SDM csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e az SDM felé a kapcsolat a &#8220;G47-16&#8221; vagy &#8220;G46-11&#8221; érintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a kapcsolat rendben van, akkor bekapcsolt gyújtásnál mérje meg a feszültséget az SDM csatlakozó &#8220;G47-16&#8221; &#x005B;A&#x005D; vagy &#8220;G46-11&#8221; &#x005B;B&#x005D; érintkezője és a karosszéria testelése között.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B007">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820023.swf" width = "90.000mm" height = "62.797mm" ver = "01" gw = "145" gh = "161"/>
+</testfigure>
+</test1>
+<question>
+A feszültség legalább 8 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kikapcsolt gyújtásnál húzza szét a &#8220;G01&#8221; csatlakozót az elosztódoboz szerelvényen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozás a &#8220;G01-15&#8221; érintkezőnél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, kapcsolja be a gyújtást és mérje meg a &#8220;G01-15&#8221; érintkező és a karosszéria testelése közötti feszültséget.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A820024.swf" width = "90.000mm" height = "72.675mm" ver = "01" gw = "221" gh = "189"/>
+</testfigure>
+</test1>
+<question>
+A feszültség legalább 8 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ellenőrizze az áramkört az akkumulátortól a &#8220;G01&#8221; csatlakozóig és a töltő rendszerig.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást és csatlakoztassa újra az SDM csatlakozót.
+</ptxt>
+</test1>
+<question>
+Bekapcsolt gyújtásnál DTC B1017 hibakód jelenik meg?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó SDM-et és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ellenőrizze a töltési rendszert és javítsa meg, ha szükséges, lásd: 
+<intxref refid = "H5JB0A1A04002">A generátor ellenőrzése (gyenge akkumulátor ellenőrzése)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Az ellenőrzés és a javítás elvégzése után hajtsa végre a következőket:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Újból kösse be a légzsákrendszer összes elemét, és ellenőrizze, hogy minden elem jól van-e felerősítve.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Törölje a DTC-t, ha van, lásd: 
+<intxref refid = "H5JB0A8204005">DTC törlése</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A hiba kijavításának megerősítése érdekében ismételje meg a következő műveletet: 
+<intxref refid = "H5JB0A8204001">Légzsák diagnosztikai rendszerének ellenőrzése</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A5104026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0707: zu niedrige Spannung im Schaltkreis des Getriebestellungssensors
+</title>
+<servinfosub id = "G6JB0A5104026001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0A5104025">Fehlercode P0705: Störung im Schaltkreis des Getriebestellungssensors</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A5104026002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.089in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.116in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Getriebestellungsschalter-Signal (P, R, N, D, 2, L) wird unter folgenden Bedingungen für mindestens 2 Sekunden nicht empfangen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Geschwindigkeit beträgt über 30 km&#x002F;h
+</ptxt>
+</item>
+</list1>
+<ptxt>
+und
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motordrehzahl höher als 1500 U&#x002F;min.
+</ptxt>
+<ptxt>
+(2 Fahrten-Erfassungslogik)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wählzug falsch eingestellt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Getriebestellungssensor (Schalter) falsch eingestellt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Störung des Getriebestellungssensors (Schalters) oder des Schaltkreises.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A5104026003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Das Testgerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die im TCM und ECM gespeicherten DTC mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Motor starten und Wählhebel auf &#8220;D&#8221; stellen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Motor starten und Fahrzeug für 2 Minuten mit 50 km&#x002F;h fahren.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug anhalten und den Zündschalter auf OFF drehen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Schritte 3) bis 5) einmal wiederholen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug anhalten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC, vorgemerkte DTC und Schnappschussdaten abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G6JB0A5104026004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0A5104026005">
+<testgroup id = "G6JB0A5104026006">
+<question>
+Wurde die &#8220;Überprüfung des A&#x002F;T-Systems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0A5104001">Überprüfung des A&#x002F;T-Systems</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104026007">
+<question>
+Steht ein SUZUKI-Testgerät zur Verfügung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104026008">
+<title>
+Funktionsprüfung des Schaltkreises des Getriebestellungssensors (-schalters)
+</title>
+<ptxt>
+Überprüfung mit SUZUKI-Testgerät:
+</ptxt>
+<test1>
+<ptxt>
+Das SUZUKI-Testgerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen, den Wählhebel in die entsprechenden Positionen bringen und prüfen, ob das Display das entsprechende Getriebestellungs-Sensorsignal (&#8220;P&#8221;, &#8220;R&#8221;, &#8220;N&#8221;, &#8220;D&#8221;, &#8220;2&#8221; oder &#8220;L&#8221;) anzeigt.
+</ptxt>
+</test1>
+<question>
+Wird der zutreffende Wählbereich angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104026009">
+<title>
+Funktionsprüfung des Schaltkreises des Getriebestellungssensors (-schalters)
+</title>
+<ptxt>
+Überprüfung ohne SUZUKI-Testgerät:
+</ptxt>
+<test1>
+<ptxt>
+Die Zündung auf ON schalten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mit auf jeden Wählbereich gestelltem Wählhebel die Spannung an den Anschlussklemmen &#8220;E93-1&#8221;, &#8220;E93-7&#8221;, &#8220;E93-8&#8221;, &#8220;E93-18&#8221;, &#8220;E93-19&#8221; bzw. &#8220;E93-20&#8221; überprüfen.
+</ptxt>
+<ptxt>
+Zum Beispiel liegt an Klemme &#8220;E93-1&#8221; nur in Wählhebelstellung &#8220;R&#8221; Batteriespannung an, während in allen anderen Wählbereichen die Spannung 0 V beträgt. Spannung an allen anderen Anschlüssen gemäß der Tabelle prüfen.
+</ptxt>
+</test1>
+<question>
+Werden die Vorgaben erfüllt?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104026010">
+<title>
+Einbauposition des Getriebestellungssensors (Schalter) überprüfen.
+</title>
+<test1>
+<ptxt>
+Einbauposition des Getriebestellungssensors (Schalter) überprüfen. Siehe hierzu 
+<intxref refid = "G6JB0A5106011">Überprüfung und Einstellung des Getriebestellungssensors</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist er korrekt eingestellt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den Getriebestellungssensor (-schalter) einstellen und erneut prüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104026011">
+<title>
+Einstellung des Wählzugs prüfen
+</title>
+<test1>
+<ptxt>
+Die Einstellung des Wählzugs prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A5106009">Einstellung des Wählzugs</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist er korrekt eingestellt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wählzug einstellen und erneut prüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G6JB0A5104026012">
+<title>
+Getriebestellungssensor (-schalter) überprüfen
+</title>
+<test1>
+<ptxt>
+Den Getriebestellungssensor (-schalter) prüfen. Siehe hierzu 
+<intxref refid = "G6JB0A5106011">Überprüfung und Einstellung des Getriebestellungssensors</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Werden die Vorgaben erfüllt?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Unterbrechung oder Masseschluss im Schaltkreis des Getriebestellungssensors. Wenn Kabel und Anschlüsse OK sind, ein funktionierendes TCM einsetzen und die Prüfung wiederholen.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Getriebestellungssensor (-schalter) austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<table frame = "all" colsep = "1" rowsep = "1" page = "1">
+<tgroup cols = "8" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.220in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.787in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.866in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.866in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.866in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.866in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.866in"/>
+<colspec colnum = "8" colname = "8" colwidth = "0.866in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+</entry>
+<entry namest = "3" nameend = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+Anschluss
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-20
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-1
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-8
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-7
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-19
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-18
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Wählhebelstellung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+P
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+R
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+N
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+D oder 3
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+L
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

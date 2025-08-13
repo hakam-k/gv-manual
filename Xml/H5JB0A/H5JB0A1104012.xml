@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A1104012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+A hibajelző lámpa égve marad a motor beindulása után
+</title>
+<servinfosub id = "H5JB0A1104012001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104011">Hibajelző lámpa nem gyullad ki, amikor a gyújtáskapcsoló ON helyzetben van és a motor áll (de a motort lehet indítani)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A1104012002">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+Ha a gyújtáskapcsolót ON helyzetbe fordítja, az ECM bekapcsolja a főrelét (zárja az érintkezési pontot). Utána, mivel az ECM kapja a fő tápellátást, továbbítja a hibajelző lámpa (MIL) ON jelét a műszeregységhez a MIL bekapcsolásához. Ezután a műszeregység meggyújtja a MIL hibajelző lámpát. Amikor a motor beindul, és a rendszer nem észlel működési hibát, az ECM továbbítja a MIL OFF kijelzést a műszeregység felé, hogy kikapcsolja a MIL hibajelző lámpát. Ezután a műszeregység kikapcsolja a MIL hibajelző lámpát, de ha működési hiba került vagy kerül észlelésre a MIL égve marad miközben a motor jár.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A1104012003">
+<title>
+Hibaelhárítás
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Hibaelhárítás elvégzése előtt feltétlenül olvassa el 
+<intxref refid = "H5JB0A1100003">ECM-áramkör ellenőrzésével kapcsolatos óvintézkedések</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Amikor áramköri feszültséget, ellenállást és&#x002F;vagy impulzusjelet mér az ECM csatlakozónál, kösse a célszerszámot az ECM-re és&#x002F;vagy az ECM csatlakozókra, lásd 
+<intxref refid = "H5JB0A1104063">ECM és áramköreinek ellenőrzése</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "H5JB0A1104012004">
+<testgroup>
+<title>
+DTC ellenőrzés
+</title>
+<test1>
+<ptxt>
+Indítsa be a motort és ellenőrizze újra az ECM és TCM(automatikus sebességváltóval szerelt modellek esetén) DTC-ket járó motornál.
+</ptxt>
+</test1>
+<question>
+Található DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 
+<intxref refid = "H5JB0A1104001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése</intxref>
+ 2. lépésére és a 
+<intxref refid = "H5JB0A5104001">Automatikus sebességváltó rendszer ellenőrzése</intxref>
+ 2. lépésére.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 2. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs vezeték áramköri ellenőrzés
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs vezeték áramkörét a műszeregység és az ECM, TCM (automatikus sebességváltóval szerelt modellek esetén), az ABS-hidraulikaegység &#x002F; vezérlőmodul egység, a 4WD vezérlőmodul (J20 motorok esetén), a kulcsnélküli indításvezérlő modul (ha van) között, hivatkozva a 
+<intxref refid = "H5JB0A1104058">DTC P1674: CAN kommunikáció (busz ki hiba)</intxref>
+ 9 - 15 lépéseire.
+</ptxt>
+</test1>
+<question>
+Az áramkör rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó műszeregységet, és ismételje meg az ellenőrzést. Ha a MIL égve marad, a meglévő helyett tegyen be egy bizonyosan jó ECM-et és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg vagy cserélje ki a CAN kommunikációs áramkört.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

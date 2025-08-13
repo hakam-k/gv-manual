@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1114089" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0139: Zu langsames Ansprechen der (beheizten) Lambdasonde (Sonde 2)
+</title>
+<servinfosub id = "G8T40A1114089001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A1114034">DTC P0137 &#x002F; P0138 &#x002F; P2A01: Niedrige Spannung&#x002F;hohe Spannung&#x002F;Bereich&#x002F;Leistung im Schaltkreis der (beheizten) Lambdasonde (Sonde 2):M16A und J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1114089002">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.001in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.190in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Schaltzeit, mit der sich die Spannung des Signals der beheizten Lambdasonde von 0,5 V bis 0,3 V ändert, ist bei Kraftstoffabschaltung größer als 1,5 Sek..
+</ptxt>
+<ptxt>
+(2-Fahrten-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S-2
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schaltkreis der beheizten Lambdasonde Nr.2
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1114089003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zur Durchführung der Probefahrt einen sicheren, verkehrsfreien Ort wählen, wo die Möglichkeit von Verkehrsunfällen praktisch ausgeschlossen ist. Vorsichtig vorgehen, um Unfälle zu vermeiden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Probefahrt sollte von 2 Personen - Fahrer und Prüfer - auf einer ebenen Straße ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Wenn bei der Überprüfung der DTCs vorher ein anderer DTC als der erwartete DTC erfasst wird, die Fehlersuche für den vorher erfassten DTC durchführen.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Den Motor anlassen und auf Betriebstemperatur bringen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und den DTC mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fahrzeug mit 80 - 100 km&#x002F;h (50 - 62 mil&#x002F;h) für 6 min. fahren (Drosselklappenöffnung dabei konstant halten.)
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Gaspedal freigeben und das Fahrzeug 10 Sek. lang im Schiebebetrieb mit Motorbremswirkung (Kraftstoffabschaltung aktiviert) rollen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Aktuelle und vorgemerkte DTCs abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A1114089004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A1114089005">
+<testgroup id = "G8T40A1114089006">
+<question>
+Wurde die &#34;Überprüfung des Motor- und Abgassteuerungssystems&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:M16A und J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114089007">
+<title>
+Schaltkreis der beheizten Lambdasonde Nr.2 überprüfen
+</title>
+<test1>
+<ptxt>
+Masseschaltkreis der beheizten Lambdasonde Nr.2 gemäß Schritt 4 in 
+<intxref refid = "G8T40A1114034">DTC P0137 &#x002F; P0138 &#x002F; P2A01: Niedrige Spannung&#x002F;hohe Spannung&#x002F;Bereich&#x002F;Leistung im Schaltkreis der (beheizten) Lambdasonde (Sonde 2):M16A und J20A</intxref>
+ auf hohen Widerstand prüfen. 
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Signalschaltkreis der beheizten Lambdasonde Nr.2 gemäß Schritt 5 bis 7 in 
+<intxref refid = "G8T40A1114034">DTC P0137 &#x002F; P0138 &#x002F; P2A01: Niedrige Spannung&#x002F;hohe Spannung&#x002F;Bereich&#x002F;Leistung im Schaltkreis der (beheizten) Lambdasonde (Sonde 2):M16A und J20A</intxref>
+ auf hohen Widerstand prüfen.
+</ptxt>
+</test1>
+<question>
+Sind sie in einwandfreiem Zustand?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defekten Kabelbaum&#x002F;Steckverbinder reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114089008">
+<title>
+DTCs erneut abrufen
+</title>
+<test1>
+<ptxt>
+Beheizte Lambdasonde austauschen. (
+<intxref refid = "G8T40A1316012">Aus- und Einbau des Gemischsensors (Luft-&#x002F;Kraftstoff) und&#x002F;oder der beheizten Lambdasonde (HO2S-2):M16A und J20A</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfung von Diagnosecodes durchführen und DTCs überprüfen. 
+</ptxt>
+</test1>
+<question>
+Wird DTC P0139 weiterhin erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Ende.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

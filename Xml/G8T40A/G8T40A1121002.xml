@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "G8T40A1121002" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Beschreibung des Borddiagnosesystems (OBD-System)
+</title>
+<attention3>
+<ptxt>
+Zur Typendefinition für das OBD-System siehe 
+<intxref refid = "G8T40A1120010">Vorsichtsmaßnahmen für das Borddiagnosesystem (OBD):J24B</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "G8T40A1121002010">
+<title>
+Allgemeine Beschreibung (Typ A, B und C)
+</title>
+<ptxt>
+Das ECM dieses Fahrzeugs erfüllt folgende Aufgaben:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wenn der Zündschalter bei abgestelltem Motor auf ON gedreht wird, leuchtet die Störungsleuchte (MIL) (1) auf, um die Funktion der MIL (1) und ihres Schaltkreises zu prüfen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Erfasst das ECM eine Störung, die die Abgasemission über den angegebenen Fahrzyklus (D&#x002F;C) hinaus beeinträchtigt, steuert es die MIL im Kombiinstrument an. Dadurch schaltet sich diese ein oder blinkt (Letzteres nur, wenn durch Fehlzündungen Schäden am Katalysator drohen). Gleichzeitig speichert das ECM den betreffenden Diagnosecode (DTC) ab.
+</ptxt>
+<ptxt>
+(Wird jedoch festgestellt, dass der Motor nach Erfassen einer Fehlfunktion über 3 Fahrzyklen kontinuierlich normal läuft, wird die MIL wieder ausgeschaltet, aber der DTC bleibt weiterhin als Hinweis auf eine frühere Störung im Speicher.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bei einigen Störungen verwendet das ECM die 2-Fahrten-Testlogik zur Verhinderung einer fehlerhaften Erfassung. Bei dieser Logik wird MIL eingeschaltet, wenn die Störung in 2 aufeinander folgenden Fahrzyklen erfasst wird.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wird eine Störung erfasst, werden die jeweiligen Motor- und Fahrbedingungen in diesem Moment im ECM-Speicher als Schnappschussdaten gespeichert.
+</ptxt>
+<ptxt>
+Für Einzelheiten siehe Beschreibung unter 
+<intxref refid = "G8T40A1121002005">Schnappschussdaten (Typ A, B und C)</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Kommunikation mit dem ECM ist auch über den Datenübertragungsanschluss (DLC) (3) möglich. Dazu kann sowohl das SUZUKI-Diagnosegerät (2) als auch ein Standard-OBD-Diagnosegerät für die CAN-Kommunikation verwendet werden.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I9T401112002.swf" width = "88.000mm" height = "99.839mm" ver = "01" gw = "172" gh = "266"/>
+</figure>
+</servinfosub>
+<servinfosub id = "G8T40A1121002011">
+<title>
+Allgemeine Beschreibung (Type D)
+</title>
+<ptxt>
+ECM-Diagnoseprobleme, die im Bereich des Motorabgassystems auftreten können, wenn der Zündschalter auf ON gedreht ist und der Motor läuft. Das Ergebnis wird durch Einschalten der Störungsleuchte (MIL) (1) angezeigt.
+</ptxt>
+<ptxt>
+ECM und MIL arbeiten wie folgt.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+MIL leuchtet bei Zündschalter auf ON (aber abgestelltem Motor) ungeachtet des Status von Motor- und Abgassteuerungssystem. Dies dient nur zur Überprüfung der MIL im Kombiinstrument und der zugehörigen Schaltkreise.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls die obigen Bereiche des Motor- und Abgassteuerungssystems nach dem Anlassen des Motors frei von Störungen sind (bei laufendem Motor), schaltet sich die MIL wieder aus.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wenn des ECM eine Störung erfasst, die in den obigen Bereichen aufgetreten ist, schaltet es die MIL ein, während der Motor läuft, um den Fahrer vor einem Störungsauftritt zu warnen. Zugleich speichert das ECM den Störungsbereich im ECM-Sicherungsspeicher. (Gespeicherte Daten bleiben bestehen, auch wenn die Störung nur vorübergehend war und sofort verschwunden ist. Gespeicherte Daten werden erst gelöscht, wenn die Stromversorgung zum ECM für einen bestimmten Zeitraum unterbrochen wird oder wenn das Löschen mit dem SUZUKI-Diagnosegerät (SUZUKI-SDT) (2) erfolgt.)
+</ptxt>
+<ptxt>
+Weitere Informationen zum Prüf-&#x002F;Löschvorgang siehe &#34;DTC Prüfen&#34; oder &#34;DTC Löschen&#34;. 
+</ptxt>
+<figure>
+<graphic graphicname = "I9T401112002.swf" width = "88.000mm" height = "99.839mm" ver = "01" gw = "172" gh = "266"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.031in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "G8T40A1121002001">
+<title>
+Warmlaufphase
+</title>
+<ptxt>
+Als Warmlaufphase bezeichnet man die Zeitspanne nach dem Starten des Motors, bis die Kühlmitteltemperatur um mindestens 23 &#176;C (73 &#176;F) auf eine Mindesttemperatur von 70 &#176;C (158 &#176;F) angestiegen ist.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1121002002">
+<title>
+Fahrzyklus (D&#x002F;C)
+</title>
+<ptxt>
+Als &#34;Fahrzyklus&#34; bezeichnet man die Zeitspanne nach dem Anlassen des Motors bis zum folgenden Abschalten.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1121002003">
+<title>
+2-Fahrten-Testlogik
+</title>
+<ptxt>
+Die im ersten Fahrzyklus erkannte Störung wird im ECM-Speicher (in Form von vorgemerktem DTC und Schnappschussdaten) abgelegt, wobei die MIL zu diesem Zeitpunkt nicht aufleuchtet. Sie leuchtet auf, wenn derselbe Fehler im nächsten Fahrzyklus wieder erkannt wird.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1121002004">
+<title>
+Vorgemerkter DTC
+</title>
+<ptxt>
+Ein vorgemerkter DTC ist ein DTC, der von der 2-Fahrten-Testlogik beim ersten Auftreten einer bestimmten Störung vorgemerkt, d.h. zwischengespeichert wird.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1121002005" page = "2">
+<title>
+Schnappschussdaten (Typ A, B und C)
+</title>
+<ptxt>
+Das ECM speichert die zum Zeitpunkt einer Störungserkennung herrschenden Motor- und Fahrbedingungen (in der dargestellten Form) in seinem Speicher. Diese Daten werden als &#34;Schnappschussdaten&#34; bezeichnet.
+</ptxt>
+<ptxt>
+Um die bei einem auftretenden Fehler herrschenden Bedingungen (z. B. Motor warm oder kalt, Fahrzeug stehend oder fahrend, Luft&#x002F;Kraftstoff-Mischungsverhältnis fett oder mager) zu ermitteln, ist es somit lediglich erforderlich, die Schnappschussdaten abzufragen. Ferner kann das ECM Schnappschussdaten für drei verschiedene Störungen in der Reihenfolge ihres Auftretens abspeichern. Mit dieser Funktion ist es somit möglich, die Reihenfolge des Auftretens verschiedener Störungen zu ermitteln. Dies ist eine nützliche Funktion beim erneuten Überprüfen oder Diagnostizieren einer Störung.
+</ptxt>
+<ptxt>
+Einzelheiten zu den Schnappschussdaten, die vom ECM ausgelesen werden können, siehe Tabelle unten.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.458in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kraftstoffsystem
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kalkulierte Last
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECT
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kurzzeit-Gemischkorrektur
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Langzeit-Gemischkorrektur
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Motordrehzahl
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Fahrzeuggeschwindigkeit
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Zündverstellung
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ansauglufttemperatur
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MAF
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Absolute Drosselklappenstellung 1&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+EVAP-Aktivkohlebehälter Spül-Einschaltverhältnis
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Luftdruck
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Batteriespannung
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Relative Drosselklappenstellung&#x002A;&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Absolute Drosselklappenstellung 2&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Absolute Gaspedalstellung 1&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Absolute Gaspedalstellung 2&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Soll-Drosselklappenstellung
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bei mit einem Sternchen (&#x002A;) gekennzeichneten Schnappschussdaten wird das Verhältnis zwischen Stromversorgungsspannung und Ausgangsspannung des betreffenden Sensors angezeigt.
+</ptxt>
+<ptxt>
+Wenn die Stromversorgungsspannung 5,0 V und die Ausgangsspannung 4,0 V ist, werden folgende Schnappschussdaten angezeigt.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Bei Systemen, in denen die Ausgangsspannung proportional zur Eingangsspannung ist, wird 80 &#x0025; (&#x003D; Prozentsatz der maximalen Eingangs-Referenzspannung) angezeigt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bei Systemen, in denen die Ausgangsspannung umgekehrt proportional zur Eingangsspannung ist, wird 20 &#x0025; (&#x003D; 100 &#x0025; minus Prozentsatz der maximalen Eingangs-Referenzspannung) angezeigt.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Für die relative Drosselklappenstellung mit Sternchen (&#x002A;&#x002A;) der oben gezeigten Tabelle gilt folgende Formel: (Ausgangsspannung - Ausgangsspannung bei geschlossener Drosselklappe) &#x002F; Stromversorgungsspannung).
+</ptxt>
+<ptxt>
+Wenn die Stromversorgungsspannung 5,0 V und die Ausgangsspannung bei geschlossener Drosselklappe 1,0 V ist, werden folgende Schnappschussdaten angezeigt.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Bei geschlossener Drosselklappe (Ausgangsspannung &#x003D; 1,0 V) wird 0 &#x0025; angezeigt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bei weit geöffneter Drosselklappe (Ausgangsspannung &#x003D; 4,0 V) wird 60 &#x0025; angezeigt.
+</ptxt>
+<ptxt>
+ Bei Systemen, in denen die Ausgangsspannung umgekehrt proportional zur Eingangsspannung ist, wird jedoch 100 &#x0025; minus oben angegebene Formel angezeigt.
+</ptxt>
+</item>
+</list2>
+</list1>
+</attention3>
+<figure page = "2">
+<title>
+Schnappschussdaten (als Beispiel)
+</title>
+<graphic graphicname = "I7V10A111018.swf" width = "88.000mm" height = "76.556mm" ver = "01" gw = "148" gh = "200"/>
+</figure>
+<topic id = "G8T40A1121002006" page = "1">
+<title>
+Priorität von Schnappschussdaten
+</title>
+<ptxt>
+Das ECM verfügt über 4 Frames, in denen die Schnappschussdaten gespeichert werden können. Im ersten Frame werden die Schnappschussdaten der zuerst erfassten Störung gespeichert. Die Schnappschussdaten aus diesem Frame werden jedoch nach den folgenden Prioritätskriterien aktualisiert. (Wird ein wie im Kästchen &#34;1&#34; (siehe unten) beschriebener Fehler erkannt, während die im Kästchen &#34;2&#34; beschriebenen Schnappschussdaten gespeichert sind, werden die im Kästchen &#34;2&#34; gespeicherten Schnappschussdaten durch die im Kästchen &#34;1&#34; enthaltenen Schnappschussdaten aktualisiert.)
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.286in"/>
+<colspec colnum = "2" colname = "2" colwidth = "5.918in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Priorität
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Schnappschussdaten in Frame 1
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+Schnappschussdaten bei der ersten Erfassung von Störungen wie &#34;Fehlzündung erfasst&#34; (P0300-P0304), &#34;Kraftstoffsystem zu mager&#34; (P0171) und &#34;Kraftstoffsystem zu fett&#34; (P0172)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+Schnappschussdaten, wenn andere Störungen als die unter &#34;1&#34; aufgeführten erkannt werden.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<ptxt>
+Im 2. bis 4. Frame werden die Schnappschussdaten in der Reihenfolge des Auftretens der betreffenden Störungen gespeichert. Diese Daten werden nicht aktualisiert.
+</ptxt>
+<ptxt>
+Die nachfolgende Tabelle zeigt Beispiele, wie Schnappschussdaten beim Erkennen von zwei oder mehr DTCs abgelegt werden.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10A111002G.swf" width = "183.000mm" height = "49.392mm" ver = "01" gw = "506" gh = "123"/>
+</figure>
+<ptxt>
+&#8212;: Keine Schnappschussdaten
+</ptxt>
+</topic>
+<topic id = "G8T40A1121002007" page = "1">
+<title>
+Löschen von Schnappschussdaten
+</title>
+<ptxt>
+Die Schnappschussdaten werden gleichzeitig mit den DTCs gelöscht.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "G8T40A1121002008">
+<title>
+Systemfunktionsprüfung (Typ A, B und C)
+</title>
+<ptxt>
+Die Systemfunktionsprüfung dient zur Überprüfung, ob die Borddiagnose für alle Motorabgassysteme durchgeführt wurde oder ob kein Diagnosegerät (Suzuki SDT oder Standard-OBD-Diagnosegerät mit CAN-Kommunikation) verwendet wurde. Wenn die für jedes Gerät festgelegten Bedingungen zutreffen, führt das ECM eine Borddiagnose des entsprechenden Systems durch und ändert den Zustand der Systemfunktionsprüfung von &#34;Unvollständig&#34; auf &#34;Vollständig&#34;.
+</ptxt>
+<ptxt>
+Wenn der Zustand &#34;Vollständig&#34; angezeigt wird, wird er bis zur Durchführung von &#34;DTC Löschen&#34; mit dem Diagnosegerät beibehalten.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Der Zustand der Systemfunktionsprüfung kann auf &#34;Unvollständig&#34; wechseln, wenn folgende Wartungen durchgeführt werden.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Abklemmen des Minuskabels (-) von der Batterie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lösen der ECM-Steckverbinder
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entfernen des ECM-Massekabels
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entfernen der Sicherung &#34;ECM&#34;
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Mit der Systemfunktionsprüfung kann bestätigt werden, dass alle Überprüfungen von Diagnosecodes für jedes System vollständig oder unvollständig durchgeführt wurden. Alle DTCs zu den einzelnen Systemen sind in der Tabelle unten angegeben.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Systemfunktionsprüfung liefert NICHT das Ergebnis &#34;Normal&#34; oder &#34;Unzulässig&#34; der Borddiagnose sondern das Ergebnis &#34;Vollständig&#34; oder &#34;Unvollständig&#34;.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "G8T40A1121002009">
+<title>
+Tabelle der von der Systemfunktionsprüfung überwachten Elemente
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Typ A:
+</title>
+<tgroup cols = "7" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.771in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.446in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.446in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.446in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.446in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.446in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.467in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Überwachtes Element
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC zum überwachten Element
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Katalysator
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0420
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Lambdasonde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0133
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0139
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2195
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2196
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2A01
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Heizung der Lambdasonde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Typ B:
+</title>
+<tgroup cols = "7" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.771in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.446in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.446in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.446in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.446in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.446in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.467in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Überwachtes Element
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC zum überwachten Element
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Katalysator
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0420
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Lambdasonde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0133
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2195
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2196
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Heizung der Lambdasonde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Typ C:
+</title>
+<tgroup cols = "7" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.771in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.446in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.446in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.446in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.446in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.446in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.467in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Überwachtes Element
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC zum überwachten Element
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Katalysator
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0420
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Lambdasonde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0133
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0139
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Heizung der Lambdasonde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

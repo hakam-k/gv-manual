@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A8204024" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1052 &#x002F; B1056: Zu niedriger Widerstand im Auslöseschaltkreis des Fahrer- &#x002F; Beifahrer-Gurtstraffers
+</title>
+<servinfosub id = "G6JB0A8204024001" page = "1">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0A8204023">DTC B1051 &#x002F; B1055: Zu hoher Widerstand im Auslöseschaltkreis des Fahrer- &#x002F; Beifahrer-Gurtstraffers</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Unbedingt die Anweisungen unter VORSICHT in &#8220;Überprüfungsablauf des Airbag-Diagnosesystems&#8221; beachten.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "G6JB0A8204024002">
+<title>
+DTC wird durch Folgendes ausgelöst:
+</title>
+<ptxt>
+Der Widerstand im Auslöseschaltkreis des Fahrer- oder Beifahrer-Gurtstraffers liegt für einen vorgeschriebenen Zeitraum unter einem Sollwert.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A8204024003">
+<title>
+Beschreibung des Diagnoseablauftests
+</title>
+<ptxt>
+<emph etype = "bold">
+Schritt 1: Überprüfen, ob eine Störung im Gurtstraffer vorliegt.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 2: Auslöseschaltkreis des Gurtstraffers überprüfen. (Zwischen &#8220;L29&#8221; und &#8220;L12&#8221; oder &#8220;L29&#8221; und &#8220;L36&#8221;)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 3: Auslöseschaltkreis des Gurtstraffers überprüfen. (Zwischen &#8220;G55&#8221; und &#8220;G47&#8221;, &#8220;L12&#8221; und &#8220;L33&#8221; oder &#8220;L36&#8221; und &#8220;L33&#8221;)
+</emph>
+</ptxt>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G6JB0A8204024004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0A8204024005">
+<testgroup>
+<test1>
+<ptxt>
+Bei Zündschalter auf OFF die untere Innenverkleidung der B-Säule auf der Fahrer- bzw. Beifahrerseite ausbauen und den Steckverbinder &#8220;L12&#8221; bzw. &#8220;L36&#8221; (1) des Gurtstraffers lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Anschlussklemmen des Steckverbinders &#8220;L12&#8221; bzw. &#8220;L36&#8221; auf einwandfreie Verbindung zum Gurtstraffer überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, die Spezialwerkzeuge (A), (B) und (C) an den in Schritt 1) gelösten Steckverbinder &#8220;L12&#8221; bzw. &#8220;L36&#8221; anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B097">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B098">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B099">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820039.swf" width = "90.000mm" height = "59.622mm" ver = "01" gw = "171" gh = "152"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+DTC des SDM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1052 oder B1056 bei Zündschalter auf ON noch immer angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Ohne Seitenairbag und Kopf-&#x002F;Schulterairbag Weiter mit Schritt 2.
+</ptxt>
+<ptxt>
+Mit Seitenairbag und Kopf-&#x002F;Schulterairbag Weiter mit Schritt 3.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Den Zündschalter auf OFF drehen. Gurtstraffer austauschen. Siehe dazu 
+<intxref refid = "G6JB0A8106002">Aus- und Einbau der vorderen Sicherheitsgurte</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Mit Zündschalter auf OFF den in der Nähe des Konsolenkastens befindlichen Steckverbinder &#8220;G55&#8221; lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+An der Klemme des Steckverbinders &#8220;G55&#8221; auf korrekten Anschluss an den betreffenden Gurtstraffer prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, die Spezialwerkzeuge (B) und (D) an den Steckverbinder &#8220;G55&#8221; anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0100">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0101">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820040.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "150" gh = "128"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+DTC des SDM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1052 oder B1056 bei Zündschalter auf ON noch immer angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1052: &#8220;GRN&#x002F;ORN&#8221; kurzgeschlossen mit Stromkreis &#8220;GRN&#x002F;YEL&#8221;, Stromkreis &#8220;GRN&#x002F;ORN&#8221;, oder &#8220;GRN&#x002F;YEL&#8221; kurzgeschlossen mit einem anderen Stromkreis. (Zwischen den Steckverbindern &#8220;L29&#8221; und &#8220;L12&#8221;)
+</ptxt>
+<ptxt>
+DTC B1056: Schaltkreis &#8220;BLU&#x002F;ORN&#8221; mit Schaltkreis &#8220;BLU&#x002F;YEL&#8221; kurzgeschlossen bzw. Schaltkreis &#8220;BLU&#x002F;ORN&#8221; oder Schaltkreis &#8220;BLU&#x002F;YEL&#8221; mit einem anderem Schaltkreis kurzgeschlossen. (Zwischen den Steckverbindern &#8220;L29&#8221; und &#8220;L36&#8221;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Bei ausgeschalteter Zündung den SDM-Steckverbinder &#8220;G47&#8221; oder &#8220;L33&#8221; abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+An den Klemmen &#8220;G47-7&#8221; und &#8220;G47-8&#8221; oder &#8220;L33-5&#8221; und &#8220;L33-6&#8221; (bei DTC B1052) oder den Klemmen &#8220;G47-1&#8221; und &#8220;G47-2&#8221; oder &#8220;L33-7&#8221; und &#8220;L33-8&#8221; (bei DTC B1056) auf korrekten Anschluss an das SDM prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, den Kurzschlussbügel im SDM-Steckverbinder mit dem im Spezialwerkzeug (A) enthaltenen Lösewerkzeug (1) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Widerstand zwischen &#8220;G47-7&#8221; und &#8220;G47-8&#8221; (bei DTC B1052) oder &#8220;G47-1&#8221; und &#8220;G47-2&#8221; (bei DTC B1056) mit angeschlossenen Spezialwerkzeugen (B) und (D) &#x005B;A&#x005D; oder zwischen &#8220;L33-5&#8221; und &#8220;L33-6&#8221; (bei DTC B1052) oder &#8220;L33-7&#8221; und &#8220;L33-8&#8221; (bei DTC B1056) mit angeschlossenen Spezialwerkzeugen (A), (B) und (C) &#x005B;B&#x005D; messen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0102">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0103">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0104">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0105">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820041.swf" width = "90.000mm" height = "115.714mm" ver = "01" gw = "233" gh = "311"/>
+</testfigure>
+</test1>
+<question>
+Beträgt der Widerstand 0,65 &#937; oder mehr?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ein intaktes Ersatz-SDM einbauen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1052: &#8220;GRN&#x002F;ORN&#8221; kurzgeschlossen mit Stromkreis &#8220;GRN&#x002F;YEL&#8221;, Stromkreis &#8220;GRN&#x002F;ORN&#8221;, oder &#8220;GRN&#x002F;YEL&#8221; kurzgeschlossen mit einem anderen Stromkreis. (Zwischen den Steckverbindern &#8220;G55&#8221; und &#8220;G47&#8221; oder den Steckverbindern &#8220;L12&#8221; und &#8220;L33&#8221;)
+</ptxt>
+<ptxt>
+DTC B1056: Schaltkreis &#8220;BLU&#x002F;ORN&#8221; mit Schaltkreis &#8220;BLU&#x002F;YEL&#8221; kurzgeschlossen bzw. Schaltkreis &#8220;BLU&#x002F;ORN&#8221; oder Schaltkreis &#8220;BLU&#x002F;YEL&#8221; mit anderem Schaltkreis kurzgeschlossen. (Zwischen den Steckverbindern &#8220;G55&#8221; und &#8220;G47&#8221; oder den Steckverbindern &#8220;L36&#8221; und &#8220;L33&#8221;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<p-change/>
+<attention3>
+<ptxt>
+Nach Abschluss der Überprüfung und der Reparaturarbeiten die folgenden Punkte durchführen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle Bauteile des Airbagsystems wieder anschließen und sicherstellen, dass alle Bauteile einwandfrei montiert sind.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Eventuelle Fehlercodes löschen. Siehe dazu 
+<intxref refid = "G6JB0A8204005">Löschen von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<intxref refid = "G6JB0A8204001">Überprüfung des Airbag-Diagnosesystems</intxref>
+ wiederholen, um sicherzustellen, dass die Störung behoben wurde.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

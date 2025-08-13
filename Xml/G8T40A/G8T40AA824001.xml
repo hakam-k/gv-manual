@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA824001" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Prüfung des CAN-Kommunikationssystems
+</title>
+<diag type = "test" id = "G8T40AA824001001">
+<testgroup>
+<title>
+DTC-Überprüfung
+</title>
+<test1>
+<ptxt>
+Das SUZUKI-Diagnosegerät (SUZUKI SDT) an den DLC anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die über CAN kommunizierenden Steuermodule auf DTCs überprüfen.
+</ptxt>
+</test1>
+<question>
+Wurde bei einem der Steuermodule &#34;Steuermodulbus AUS&#34; erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung auf Wackelkontakte
+</title>
+<test1>
+<ptxt>
+Alle Steckverbinder der (über CAN kommunizierenden) Steuermodule&#x002F;Sensoren auf korrekten Klemmenanschluss zu jedem CAN-Kommunikationsschaltkreis überprüfen.
+</ptxt>
+</test1>
+<question>
+Sind sie in einwandfreiem Zustand?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40AA824004">Fehlersuche bei &#34;Kommunikationsbus Aus&#34;:J24B- und N32A-Modell</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Steckverbinder fest anschließen und DTCs erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC-Überprüfung
+</title>
+<question>
+Wurde bei einem der Steuermodule ein &#34;KommVerlust&#34; erfasst?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40AA824003">Fehlersuche bei Kommunikationsabbruch:J24B- und N32A-Modell</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kommunikationsprüfung aller Steuermodule
+</title>
+<question>
+Ist es mit dem SUZUKI-Diagnosegerät (SUZUKI SDT) möglich, mit allen Steuermodulen zu kommunizieren, die mittels CAN kommuniziert haben?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Das CAN-Kommunikationssystem ist in Ordnung.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des DLC-Schaltkreises
+</title>
+<test1>
+<ptxt>
+Das SUZUKI-Diagnosegerät (SUZUKI SDT) vom DLC abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Hauptstromkreis, Masseschaltkreis und seriellen Kommunikationsschaltkreis des DLC auf Unterbrechung, Kurzschluss und hohen Widerstand prüfen.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Schaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des SUZUKI-Diagnosegeräts (SUZUKI-SDT)
+</title>
+<test1>
+<ptxt>
+Durch Anschluss an ein anderes Fahrzeug prüfen, ob das SUZUKI-Diagnosegerät (SUZUKI SDT) eine Kommunikation herstellen kann.
+</ptxt>
+</test1>
+<question>
+Ist die Kommunikation des SUZUKI-Diagnosegeräts (SUZUKI-SDT) in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40AA824004">Fehlersuche bei &#34;Kommunikationsbus Aus&#34;:J24B- und N32A-Modell</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Das SUZUKI-Diagnosegerät (SUZUKI SDT) austauschen und die Prüfung erneut durchführen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

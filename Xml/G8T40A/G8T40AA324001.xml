@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA324001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Überprüfung des Wegfahrsperren-Steuersystems
+</title>
+<diag type = "test" id = "G8T40AA324001001">
+<testgroup>
+<title>
+Aufleuchtfunktionsprüfung der Einspritzanlagen-Warnleuchte
+</title>
+<test1>
+<ptxt>
+Zündschalter mit Zündschlüssel auf ON drehen.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I8T40AA33002.swf" width = "88.000mm" height = "53.625mm" ver = "01" gw = "216" gh = "135"/>
+</testfigure>
+</test1>
+<question>
+Wird die Einspritzanlagen-Warnleuchte eingeschaltet?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40AA324006">Einspritzanlagen-Warnleuchte schaltet bei Stellen des Zündschalters auf ON ohne Motorstart nicht ein:Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Blinkfunktionsprüfung der Einspritzanlagen-Warnleuchte
+</title>
+<question>
+Blinkt die Einspritzanlagen-Warnleuchte durchgehend in Schritt 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Gemäß 
+<intxref refid = "G8T40AA324002">DTC-Überprüfung:Dieselmotor-Modell</intxref>
+ DTC vom ICM abrufen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Anlassverhaltens des Motors
+</title>
+<test1>
+<ptxt>
+Motor mit Zündschlüssel starten.
+</ptxt>
+</test1>
+<question>
+Springt der Motor an?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1144004">Überprüfung der Motorsteuerung und Emissionsregelung:F9Q</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Leuchtfunktionsprüfung der Einspritzanlagen-Warnleuchte
+</title>
+<test1>
+<ptxt>
+Prüfen, ob die Einspritzanlagen-Warnleuchte nach dem Motorstart eingeschaltet bleibt.
+</ptxt>
+</test1>
+<question>
+Bleibt die Einspritzanlagen-Warnleuchte nach dem Motorstart eingeschaltet?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40AA324007">Einspritzanlagen-Warnleuchte bleibt nach dem Motorstart eingeschaltet.:Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Das Wegfahrsperren-Steuersystem funktioniert einwandfrei.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

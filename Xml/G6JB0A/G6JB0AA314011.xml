@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA314011" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1618: CAN-Kommunikationsfehler im schlüssellosen Anlassersteuermodul (für Fahrzeuge mit schlüssellosem Anlassersystem)
+</title>
+<servinfosub id = "G6JB0AA314011001" page = "1">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA312001">Schaltplan des Wegfahrsperren-Steuersystems:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA314011002">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Empfangsfehler der Kommunikationsdaten für schlüsselloses Anlassersteuermodul wird für einen längeren Zeitraum als den vorgeschriebenen kontinuierlich erfasst.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kabelschaltkreis der CAN-Kommunikation defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkwinkelsensor (falls vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselloses Anlassersteuermodul defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-Steuermodul (falls vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (wenn vorhanden) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM defekt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS &#x002F; ESP&#174;-Steuermodul defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kombinationsinstrument defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0AA314011003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA314011004">
+<testgroup>
+<title>
+Bestätigung von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Fehlercode(s) löschen. Siehe dazu 
+<intxref refid = "G6JB0AA314003">Löschen von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob ein Diagnosecode erfasst wird. Siehe hierzu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1618 noch immer erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeprüfung (DTC) beim ECM
+</title>
+<question>
+Wird irgendein anderer Störungscode außer P1618 in Schritt 1 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Fehlersuche entsprechend dem Ablaufschema durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung auf schlechte Verbindung an den Steckverbindern der Steuermodule ECM, ABS&#x002F;ESP&#174; und des schlüssellosen Anlassersteuerungsmoduls.
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung auf OFF alle Steckverbinder und Kabelanschlüsse am ECM, ABS&#x002F;ESP&#174; und schlüssellosen Steuermodul auf sichere Verbindung prüfen.
+</ptxt>
+</test1>
+<question>
+Sind alle Steckverbinder und Kabelanschlüssel sicher angeschossen?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schlechte Verbindung(en) reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreis der CAN-Kommunikation zwischen ABS&#x002F;ESP&#174; und schlüssellosem Anlassersteuermodul auf Unterbrechung und hohen Widerstand prüfen
+</title>
+<test1>
+<ptxt>
+Steckverbindung &#8220;E03&#8221; vom ABS-Steuermodul bzw. &#8220;E53&#8221; vom ESP&#174;-Steuermodul trennen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Steckverbinder &#8220;G42&#8221; vom schlüssellosen Anlassersteuermodul abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand an den folgenden Kabelanschlüssen messen.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Fahrzeug ohne ESP&#174;-Steuermodul
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E03-12&#8221; des ABS-Steckverbinders und Kabelanschluss &#8220;G42-19&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E03-6&#8221; des ABS-Steckverbinders und Kabelanschluss &#8220;G42-18&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Fahrzeug mit ESP&#174;-Steuermodul
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E53-13&#8221; des ESP&#174;-Steckverbinders und Kabelanschluss &#8220;G42-19&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E53-44&#8221; des ESP&#174;-Steckverbinders und Kabelanschluss &#8220;G42-18&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Beträgt der Widerstand maximal 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hohen Widerstand des fehlerhaften Kabelschaltkreises beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreise der CAN-Kommunikation zwischen ABS&#x002F;ESP&#174;-Steuermodul und schlüssellosem Anlassersteuermodul auf Kurzschluss prüfen
+</title>
+<test1>
+<ptxt>
+Steckverbinder &#8220;G31&#8221; vom BCM-Steckverbinder abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Steckverbinder &#8220;G28&#8221; vom Kombinationsinstrument abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand an den folgenden Kabelanschlüssen messen.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Fahrzeug ohne ESP&#174;-Steuermodul
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E03-12&#8221; des ABS-Steckverbinders und Kabelanschluss &#8220;G42-18&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Fahrzeug mit ESP &#174;-System
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E53-13&#8221; des ESP&#174;-Steckverbinders und Kabelanschluss &#8220;G42-18&#8221; des Steckverbinders des schlüssellosen Anlassersteuermoduls.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kurzschluss zwischen den Kabelschaltkreisen der CAN-Kommunikation beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreise der CAN-Kommunikation auf Masseschluss prüfen.
+</title>
+<test1>
+<ptxt>
+Den Widerstand an den folgenden Kabelanschlüssen messen.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Fahrzeug ohne ESP &#174;-System
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E03-6&#8221; des ABS-Steckverbinders und der Karosseriemasse
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E03-12&#8221; des ABS-Steckverbinders und der Karosseriemasse
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Fahrzeug mit ESP &#174;-System
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelklemme &#8220;E53-13&#8221; am Steckverbinder des ESP&#174;-Steuermoduls und der Karosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabelklemme &#8220;E53-44&#8221; am Steckverbinder des ESP&#174;-Steuermoduls und der Karosseriemasse.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Masseschluss der Kabelschaltkreise der CAN-Kommunikation beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreise der CAN-Kommunikation auf Kurzschluss zur Stromversorgung prüfen.
+</title>
+<test1>
+<ptxt>
+Widerstand an den folgenden Kabelanschlüssen bei Zündschalter auf ON messen.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Fahrzeug ohne ESP &#174;-System
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E03-6&#8221; des ABS-Steckverbinders und der Karosseriemasse
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabelanschluss &#8220;E03-12&#8221; des ABS-Steckverbinders und der Karosseriemasse
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Fahrzeug mit ESP &#174;-System
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabelklemme &#8220;E53-13&#8221; am Steckverbinder des ESP&#174;-Steuermoduls und der Karosseriemasse.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabelklemme &#8220;E53-44&#8221; am Steckverbinder des ESP&#174;-Steuermoduls und der Karosseriemasse.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kurzschluss zur Stromversorgung der Kabelschaltkreise der CAN-Kommunikation beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Stromversorgungs- und Masseschaltkreise des schlüssellosen Anlassersteuermoduls prüfen.
+</title>
+<test1>
+<ptxt>
+Versorgungsstromkreis und Masseverbindung des schlüssellosen Anlassersteuermoduls überprüfen. Siehe hierzu 
+<intxref refid = "G6JB0AA504016">Überprüfung von Stromversorgungsschaltkreis und Masseverbindung des schlüssellosen Anlassersteuermoduls</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind sie in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Schlüsselloses Anlassersteurmodul durch ein intaktes ersetzen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Defekten Kabelschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1114038" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0223: Hohe Spannung im Schaltkreis des Drosselklappenstellungssensors (Nebensensor)
+</title>
+<servinfosub id = "G8T40A1114038001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A1114037">DTC P0222: Niedrige Spannung im Schaltkreis des Drosselklappenstellungssensors (Nebensensor):M16A und J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1114038002">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.647in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.555in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Ausgangsspannung des Drosselklappenstellungssensors (Nebensensor) liegt während der vorgegebenen Zeit ständig über 4,7 V.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des Drosselklappenstellungssensors (Nebensensor)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Elektrische Drosselklappengehäuse-Baugruppe
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Wenn DTC P0123 und P0223 zusammen angezeigt werden, liegt möglicherweise ein Kurzschluss zwischen Kabel &#34;WHT&#34; und Stromversorgungskreis und&#x002F;oder eine Unterbrechung im Kabel &#34;GRN&#34; vor.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "G8T40A1114038003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Diagnosegerät anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und den DTC mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Gaspedal 2 Sekunden in Leerlaufstellung halten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Gaspedal 2 Sekunden lang vollständig durchtreten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Schritte 3) und 4) 3-mal wiederholen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die DTCs abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A1114038004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G8T40A1110003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche:M16A und J20A</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G8T40A1114038005">
+<testgroup id = "G8T40A1114038006">
+<question>
+Wurde die &#34;Überprüfung des Motor- und Abgassteuerungssystems&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:M16A und J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038007">
+<title>
+Überprüfung des Drosselklappenstellungssensors und seines Schaltkreises
+</title>
+<test1>
+<ptxt>
+Das Diagnosegerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zündschalter auf ON drehen und überprüfen, ob &#34;TP Sensor 2 Volt&#34; auf dem Diagnosegerät angezeigt wird, wenn das Gaspedal in Leerlaufstellung vollständig durchgetreten ist.
+</ptxt>
+</test1>
+<question>
+Entspricht der angezeigte TP-Sensorwert der in 
+<intxref refid = "G8T40A1114007">Ausgabewerte des Diagnosegeräts:M16A und J20A</intxref>
+ angegebenen Spannung?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Zeitweilige Störung.
+</ptxt>
+<ptxt>
+Auf zeitweilige Störung prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038008">
+<title>
+Überprüfung der ECM-Spannung
+</title>
+<test1>
+<ptxt>
+Den Steckverbinder bei Zündschalterstellung OFF von der elektrischen Drosselklappengehäuse-Baugruppe abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zur elektrischen Drosselklappengehäuse-Baugruppe an den Kabelanschlüssen &#34;RED&#34;, &#34;WHT&#34; und &#34;GRN&#34; prüfen.
+</ptxt>
+<testfigure>
+<title>
+Für J20A-Motor
+</title>
+<graphic graphicname = "I5JB0A110042.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "158" gh = "76"/>
+</testfigure>
+<testfigure>
+<title>
+Für M16A-Motor
+</title>
+<graphic graphicname = "I5JB0A110043.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "149" gh = "76"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, bei Zündschalterstellung ON die Spannung zwischen Kabelanschluss &#34;WHT&#34; des Steckverbinders der elektrischen Drosselklappengehäuse-Baugruppe und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038009">
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Anschlussklemme &#34;C37-53&#34; auf einwandfreien Anschluss am ECM-Steckverbinder prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen Anschlussklemme &#34;C37-53&#34; des ECM-Steckverbinders und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Kurzschluss des Kabels &#34;WHT&#34; mit Stromversorgungskreis.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038010">
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen Kabelanschluss &#34;RED&#34; des Steckverbinders der elektrischen Drosselklappengehäuse-Baugruppe und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038011">
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Das ECM aus der Halterung nehmen, ohne die Steckverbinder abzuklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung des ECM-Steckverbinders an den Anschlussklemmen &#34;C37-53&#34; und &#34;C37-40&#34; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, die Spannung zwischen Anschlussklemme &#34;C37-40&#34; des ECM-Steckverbinders und Motormasseanschluss bei Zündschalterstellung ON messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Schaltkreis des Kabels &#34;RED&#34;.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038012">
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen den Kabelklemmen &#34;WHT&#34; und &#34;RED&#34; des Steckverbinders der elektrischen Drosselklappengehäuse-Baugruppe messen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Kurzschluss zwischen Kabel &#34;RED&#34; und Kabel &#34;WHT&#34;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038013">
+<title>
+Überprüfung des Kabelbaums
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen Anschlussklemme &#34;C37-40&#34; des ECM-Steckverbinders und dem Motormasseanschluss messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Kurzschluss zwischen Kabel &#34;RED&#34; und Stromversorgungskreis.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038014">
+<title>
+Überprüfung der Masseverbindung
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen dem Kabelanschluss &#34;GRN&#34; des Steckverbinders der elektrischen Drosselklappengehäuse-Baugruppe und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Liegt der Widerstand unter 3 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038015">
+<title>
+Überprüfung der Masseverbindung
+</title>
+<test1>
+<ptxt>
+Das ECM aus der Halterung nehmen, ohne die Steckverbinder abzuklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Anschlussklemme &#34;C37-41&#34; auf einwandfreien Anschluss am ECM-Steckverbinder prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Widerstand zwischen Anschlussklemme &#34;C37-41&#34; des ECM-Steckverbinders und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Liegt der Widerstand unter 3 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Unterbrechung oder zu hoher Widerstand im Kabelschaltkreis &#34;GRN&#34;.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+ECM-Massekreis defekt. Falls der Schaltkreis OK ist, ein intaktes ECM anschließen und Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114038016">
+<title>
+Überprüfung der elektrischen Drosselklappengehäuse-Baugruppe
+</title>
+<test1>
+<ptxt>
+Den Drosselklappenstellungssensor gemäß &#34;Funktionsprüfung des Drosselklappenstellungssensors&#34; unter 
+<intxref refid = "G8T40A1316003">Überprüfung der elektrischen Drosselklappengehäuse-Baugruppe am Fahrzeug:M16A und J20A</intxref>
+ überprüfen.
+</ptxt>
+</test1>
+<question>
+Liegt die Ausgangsspannung innerhalb des Sollwerts?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Die elektrische Drosselklappengehäuse-Baugruppe austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

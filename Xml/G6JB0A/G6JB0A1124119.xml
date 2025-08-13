@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A1124119" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0560: Systemspannung
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler:
+</ptxt>
+<ptxt>
+Der Fehler wird nach einer Testfahrt oder mehreren Motorstartversuchen als vorhanden gemeldet.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM-Betriebsspannung: 9 V &lt; Betriebsspannung &lt; 16 V
+</ptxt>
+</item>
+<item>
+<ptxt>
+Eine zu niedrige Batteriespannung kann die Warnleuchte mit Fehlerwichtigkeit 1 einschalten, was zum Auftreten anderer Störungen führen kann.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Motor kann dann nicht gestartet werden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Für Anschlüsse an den ECM-Steckverbindern sind Wartungskabel zu verwenden.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "G6JB0A1124119001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Für Schaltkreise und Steckverbindernummern siehe 
+<intxref refid = "G6JB0A910E048">A-5 Schaltplan der Motor- und Klimaanlagensteuerung (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A1124119002">
+<title>
+Erfassungsbedingung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anzeige des SUZUKI-Testgeräts
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Überspannung
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Unterspannung
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1124119003">
+<title>
+Fehlersuche für D1: Überspannung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Ladekreise prüfen:
+</ptxt>
+<ptxt>
+Zustand der Batterie
+</ptxt>
+<ptxt>
+Zustand der Lichtmaschine (komplette Fehlersuche)
+</ptxt>
+<ptxt>
+Erforderliche Reparaturen ausführen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1124119004">
+<title>
+Fehlersuche für D2: Unterspannung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bei Zündschalterstellung OFF die Spannung zwischen Batterieklemmen messen.
+</ptxt>
+<ptxt>
+Falls Batteriespannung unter 11,5 V liegt, die Batterie testen.
+</ptxt>
+<ptxt>
+Falls die Batterie defekt ist, diese austauschen und dann den Ladekreis prüfen.
+</ptxt>
+<ptxt>
+Bei Zündschalterstellung ON und drehendem Starter die Spannung zwischen Batterieklemmen messen.
+</ptxt>
+<ptxt>
+Falls die Spannung unter 9,6 V sinkt, die Festigkeit und den Zustand der Batterieklemmen prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+<ptxt>
+Falls die Klemmen in Ordnung sind, die Batterie testen.
+</ptxt>
+<ptxt>
+Falls sie defekt sind, die Batterie austauschen.
+</ptxt>
+<ptxt>
+Falls der Starter den Motor korrekt dreht, der Fehler aber weiterhin vorliegt:
+</ptxt>
+<ptxt>
+Durchgang und Fehlen von Störwiderständen an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#8220;E33-6&#8221; des Hauptrelais-Steckverbinders und Klemme &#8220;C86-3&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;E33-6&#8221; des Hauptrelais-Steckverbinders und Klemme &#8220;E66-2&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Klemmen &#8220;E66-1&#8221;, &#8220;E66-7&#8221; und &#8220;E66-8&#8221; des ECM-Steckverbinders und Masseklemme der Batterie
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

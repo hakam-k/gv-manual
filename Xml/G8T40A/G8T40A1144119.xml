@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1144119" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0560: Systemspannung
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler:
+</ptxt>
+<ptxt>
+Der Fehler wird nach einer Testfahrt oder mehreren Motorstartversuchen als vorhanden gemeldet.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM-Betriebsspannung: 9 V &lt; Betriebsspannung &lt; 16 V.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Eine zu niedrige Batteriespannung kann die Warnleuchte mit Fehlerwichtigkeit 1 einschalten, was zum Auftreten anderer Störungen führen kann.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Motor kann dann nicht gestartet werden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Für Anschlüsse an den ECM-Steckverbindern sind Prüfkabel zu verwenden.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "G8T40A1144119001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Für Schaltkreis und Steckverbindernummer siehe 
+<intxref refid = "G8T40A910E013">A-5 Schaltplan der Motor- und Klimaanlagensteuerung (Dieselmotor-Modell)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1144119002">
+<title>
+Erfassungsbedingung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.596in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.596in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anzeige des SUZUKI-Diagnosegeräts
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Überspannung
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Unterspannung
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144119003">
+<title>
+Fehlersuche für D1: Überspannung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.192in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Überprüfen, ob DTC P1648 erfasst wird.
+</ptxt>
+<ptxt>
+Wenn DTC P1648 vorliegt, die entsprechende Fehlersuche durchführen. 
+<intxreftitleoff1 refid = "G8T40A1144176"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Die Ladekreise prüfen:
+</ptxt>
+<ptxt>
+Zustand der Batterie.
+</ptxt>
+<ptxt>
+Zustand des Generators (komplette Fehlersuche)
+</ptxt>
+<ptxt>
+Erforderliche Reparaturen ausführen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144119004">
+<title>
+Fehlersuche für D2: Unterspannung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.182in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Überprüfen, ob DTC P1648 erfasst wird.
+</ptxt>
+<ptxt>
+Wenn DTC P1648 vorliegt, die entsprechende Fehlersuche durchführen. 
+<intxreftitleoff1 refid = "G8T40A1144176"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Bei Zündschalterstellung OFF die Spannung zwischen den Batterieklemmen messen.
+</ptxt>
+<ptxt>
+Falls die Batteriespannung unter 11,5 V liegt, die Batterie testen.
+</ptxt>
+<ptxt>
+Falls die Batterie defekt ist, diese austauschen und dann den Ladekreis prüfen.
+</ptxt>
+<ptxt>
+Bei Zündschalterstellung ON und drehendem Anlassermotor die Spannung zwischen den Batterieklemmen messen.
+</ptxt>
+<ptxt>
+Falls die Spannung unter 9,6 V sinkt, die Festigkeit und den Zustand der Batterieklemmen prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+<ptxt>
+Falls die Klemmen in Ordnung sind, die Batterie testen.
+</ptxt>
+<ptxt>
+Falls sie defekt sind, die Batterie austauschen.
+</ptxt>
+<ptxt>
+Falls der Anlasser den Motor korrekt dreht, der Fehler aber weiterhin vorliegt:
+</ptxt>
+<ptxt>
+Auf Durchgang und Fehlen von Störwiderständen an folgenden Anschlüssen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#34;E33-6&#34; des Hauptrelais-Steckverbinders und Klemme &#34;C86-3&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#34;E33-6&#34; des Hauptrelais-Steckverbinders und Klemme &#34;E66-2&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Klemmen &#34;E66-1&#34;, &#34;E66-7&#34; und &#34;E66-8&#34; des ECM-Steckverbinders und der Masseklemme der Batterie
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

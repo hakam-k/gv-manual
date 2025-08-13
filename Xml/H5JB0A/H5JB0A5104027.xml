@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A5104027" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0707: A sebességváltó előválasztókar-helyzetérzékelő áramkörében alacsony a feszültség
+</title>
+<servinfosub id = "H5JB0A5104027001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H5JB0A5104026">DTC P0705: A sebességváltó előválasztókar-helyzetérzékelő áramkör hibás működése</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A5104027002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.089in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.116in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A sebességváltó helyzetkapcsoló jele (P, R, N, D, 2, L) több mint 2 másodpercen keresztül nem kerül betáplálásra a következő feltételek fennállása esetén.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A jármű sebessége legalább 30 km&#x002F;h (19 mérföld&#x002F;h).
+</ptxt>
+</item>
+</list1>
+<ptxt>
+és
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A motor-fordulatszám magasabb mint 1.500 f&#x002F;perc.
+</ptxt>
+<ptxt>
+(2 működési ciklusos észlelési logika)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A kapcsolókábel rosszul van beállítva.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A sebességváltó előválasztókar-helyzetérzékelő (kapcsoló) rosszul van beállítva.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A sebességváltó előválasztókar-helyzetérzékelő (kapcsoló) vagy az áramköre hibás.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H5JB0A5104027003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+A gyújtáskapcsoló OFF helyzetében csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+A vizsgálókészülék használatával törölje le a DTC-ket a TCM és az ECM memóriájából.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa be a motort és tegye az előválasztókart &#8220;D&#8221; helyzetbe.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa el a járművet és növelje a sebességét legalább 50 km&#x002F;h-ra (31 mérföld&#x002F;h), majd tartsa két percen keresztül.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Állítsa meg a járművet és kapcsolja ki a gyújtást.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Egyszer ismételje meg a 3-5. lépést.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Állítsa le a járművet.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t, a feltételes DTC-t és a befagyasztott adatokat.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H5JB0A5104027004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H5JB0A5104027005">
+<testgroup>
+<question>
+Az &#8220;A&#x002F;T rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H5JB0A5104001">Automatikus sebességváltó rendszer ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Van SUZUKI vizsgálókészüléke?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a sebességváltó előválasztókar-helyzetérzékelő (kapcsoló) áramkörének működését.
+</title>
+<ptxt>
+SUZUKI vizsgálókészülék használatával ellenőrizve:
+</ptxt>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a SUZUKI vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe és ellenőrizze a sebességváltó előválasztókar-helyzetérzékelő jelét (&#8220;P&#8221;, &#8220;R&#8221;, &#8220;N&#8221;, &#8220;D&#8221;, &#8220;2&#8221; vagy &#8220;L&#8221;) a kijelzőn, amikor az előválasztókart az egyes helyzetekbe kapcsolja.
+</ptxt>
+</test1>
+<question>
+Megtörténik az adott helyzet kijelzése?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Időszakos hiba. Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a sebességváltó előválasztókar-helyzetérzékelő (kapcsoló) áramkörének működését.
+</title>
+<ptxt>
+Ellenőrzés SUZUKI vizsgálókészülék használata nélkül:
+</ptxt>
+<test1>
+<ptxt>
+Kapcsolja a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a feszültséget az &#8220;E93-1&#8221;, &#8220;E93-7&#8221;, &#8220;E93-8&#8221;, &#8220;E93-18&#8221;, &#8220;E93-19&#8221; és &#8220;E93-20&#8221; érintkezőnél, az előválasztókart az egyes helyzetekbe kapcsolva.
+</ptxt>
+<ptxt>
+Például az &#8220;E93-1&#8221; érintkező esetében, az akkumulátor feszültsége csak akkor jelenik meg, amikor az előválasztókart az &#8220;R&#8221; helyzetbe kapcsolja, és minden más helyzetben 0 V a feszültség, ahogyan az ábrán látható. A többi érintkezőnél hasonló módon ellenőrizze a feszültséget a táblázat alapján.
+</ptxt>
+</test1>
+<question>
+A vizsgálat eredményei kielégítőek?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Időszakos hiba. Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a sebességváltó előválasztókar-helyzetérzékelő (kapcsoló) beállítási helyzetét
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a sebességváltó előválasztókar-helyzetérzékelő (kapcsoló) beállítási helyzetét, lásd: 
+<intxref refid = "H5JB0A5106050">Sebességváltó előválasztókar-helyzetérzékelő ellenőrzése és beállítása</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Jól van beállítva?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Állítsa be a sebességváltó előválasztókar-helyzetérzékelőt (kapcsolót) és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a kapcsolókábel beállítását
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a kapcsolókábel beállítását, lásd: 
+<intxref refid = "H5JB0A5106048">Kapcsolókábel beállítása</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Jól van beállítva?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Állítsa be a kapcsolókábelt, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a sebességváltó előválasztókar-helyzetérzékelőt (kapcsolót)
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a sebességváltó előválasztókar-helyzetérzékelőt (kapcsolót), lásd: 
+<intxref refid = "H5JB0A5106050">Sebességváltó előválasztókar-helyzetérzékelő ellenőrzése és beállítása</intxref>
+.
+</ptxt>
+</test1>
+<question>
+A vizsgálat eredményei kielégítőek?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+A sebességváltó előválasztókar-helyzetérzékelő áramkörében szakadás vagy testzárlat van. Ha a vezetékek és a csatlakozók rendben vannak, tegyen be egy bizonyosan jó TCM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki a sebességváltó előválasztókar-helyzetérzékelőt (kapcsolót).
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<table frame = "all" colsep = "1" rowsep = "1" page = "1">
+<tgroup cols = "8" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.105in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.871in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.871in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.871in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.871in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.871in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.871in"/>
+<colspec colnum = "8" colname = "8" colwidth = "0.871in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+</entry>
+<entry namest = "3" nameend = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+Érintkező
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-20
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-1
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-8
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-7
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-19
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-18
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az előválasztókar helyzete
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+P
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+R
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+N
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+D vagy 3
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+L
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

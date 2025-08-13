@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA324022" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1705: Transponderantwortfehler
+</title>
+<attention3>
+<ptxt>
+Das Wegfahrsperren-Steuermodul erfasst DTC B1705, wenn der Zündschlüssel durch Benutzung der Fernbedienung des schlüssellosen Anlassersteuersystems (also ohne Verwendung des Zündschlüssels) umgedreht wird. Das ist nicht abnormal.
+</ptxt>
+</attention3>
+<servinfosub id = "G6JB0AA324022001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA322001">Schaltplan des Wegfahrsperren-Steuersystems:Für Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA324022002">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Transponderdaten werden nicht empfangen
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Zündschlüssel wird mit Hilfe der Fernbedienung des schlüssellosen Anlassersystems auf Stellung ON gedreht.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Verwendung des Zündschlüssels ohne den Transponder
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verwendung des nicht registrierten Zündschlüssels
+</ptxt>
+</item>
+<item>
+<ptxt>
+Defekter Transponder im Zündschlüssel
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0AA324022003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA324022004">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung des Wegfahrsperren-Steuersystems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0AA324001">Überprüfung des Wegfahrsperren-Steuersystems:Für Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung
+</title>
+<question>
+Liegt außer B1705 auch DTC B1706 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Verfügt das Fahrzeug über ein schlüsselloses Anlassersystem?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung
+</title>
+<test1>
+<ptxt>
+Diagnosecodes löschen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+10 Sekunden lang warten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zündschalter (1) mit Zündschlüssel (2) auf ON drehen.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5RW0BA30010.swf" width = "90.000mm" height = "52.567mm" ver = "02" gw = "148" gh = "132"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Störungscode erneut abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1705 angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vorübergehende Störung im Lesevorgang. Das Wegfahrsperren-Steuersystem funktioniert einwandfrei.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registrierung des benutzten Zündschlüssels im ICM
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G6JB0AA326002">Registrierung des Zündschlüssels:Für Dieselmotor-Modell</intxref>
+ den benutzten Zündschlüssel registrieren. 
+</ptxt>
+</test1>
+<question>
+Ist der benutzte Zündschlüssel registriert?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sicherstellen, dass der Motor startet, und dann DTCs erneut abrufen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registrierung des Ersatzzündschlüssels im ICM
+</title>
+<test1>
+<ptxt>
+Den Ersatzzündschlüssel gemäß 
+<intxref refid = "G6JB0AA326002">Registrierung des Zündschlüssels:Für Dieselmotor-Modell</intxref>
+ im ICM registrieren.
+</ptxt>
+</test1>
+<question>
+Ist der Ersatzzündschlüssel registriert?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Sicherstellen, dass der Motor startet, und den Zündschlüssel, der nicht registrierbar ist, austauschen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des ICM-Steckverbinders
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den ICM-Steckverbinder lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Anschluss zu allen Klemmen und Kabeln des ICM-Steckverbinders in Ordnung ist. Siehe 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind alle Klemmen- und Kabelanschlüsse in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schlechte Verbindung(en) reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM-Prüfung
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G6JB0AA324018">Überprüfung des Wegfahrsperren-Steuermoduls (ICM) und seines Schaltkreises:Für Dieselmotor-Modell</intxref>
+ die ICM-Stromversorgungs- und -Massekreise prüfen.
+</ptxt>
+</test1>
+<question>
+Sind die ICM-Stromversorgungs- und -Massekreise in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ICM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Stromversorgungs- und -Massekreise ggf. reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

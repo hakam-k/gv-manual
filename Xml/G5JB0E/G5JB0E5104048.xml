@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E5104048" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P2764: zu niedrige Spannung im Schaltkreis des Drehmomentwandlers (TCC)
+</title>
+<servinfosub id = "G5JB0E5104048001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E5104047">DTC P2763: zu hohe Spannung im Schaltkreis des Drehmomentwandlers (TCC)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E5104048002">
+<title>
+Bedingung für DTC-Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.035in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für DTC-Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Spannung an der TCM-Klemme des TCC-Magnetventils für die Arbeitsdruckregelung ist zu niedrig, obwohl das TCM einen Befehl zum Schalten auf ON an das TCC-Magnetventil für die Arbeitsdruckregelung abgibt.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Erfassungslogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des TCC-Magnetventils für die Arbeitsdruckregelung ist unterbrochen oder hat Masseschluss.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Magnetventil für TCC Arbeitsdruckregelung defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0E5104048003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zur Durchführung der Probefahrt einen sicheren, verkehrsfreien Ort wählen, wo die Möglichkeit von Verkehrsunfällen praktisch ausgeschlossen ist. Vorsichtig vorgehen, um Unfälle zu vermeiden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Probefahrt sollte von zwei Personen - Fahrer und Prüfer - auf einer ebenen Straße ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Das Testgerät bei ausgeschalteter Zündung an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die im TCM und ECM gespeicherten DTC mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Motor mindestens 20 Sekunden lang im Leerlauf im Wählbereich &#8220;P&#8221; drehen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC, vorgemerkte DTC und Schnappschussdaten abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G5JB0E5104048004">
+<title>
+Fehlersuche anhand von DTC
+</title>
+<diag type = "test" id = "G5JB0E5104048005">
+<testgroup>
+<question>
+Wurde &#8220;Überprüfung des A&#x002F;T-Systems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0E5104001">Überprüfung des A&#x002F;T-Systems</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreis des TCC-Magnetventils für Arbeitsdruckregelung auf Masseschluss prüfen.
+</title>
+<test1>
+<ptxt>
+Die TCM-Steckverbinder abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreien Kontakt mit dem TCM an den Anschlussklemmen &#8220;E92-3&#8221; und &#8220;E92-5&#8221; überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ist der Anschluss in Ordnung, Durchgang zwischen der Anschlussklemme &#8220;E92-5&#8221; des abgezogenen kabelbaumseitigen TCM-Steckverbinders und Masse überprüfen.
+</ptxt>
+</test1>
+<question>
+Besteht Durchgang?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Schaltkreis des TCC-Magnetventils für die Arbeitsdruckregelung hat Masseschluss. Falls Schaltkreis OK ist, weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreis des TCC-Magnetventils für Arbeitsdruckregelung auf Unterbrechung prüfen.
+</title>
+<test1>
+<ptxt>
+Widerstand zwischen den Klemmen &#8220;E92-3&#8221; und &#8220;E92-5&#8221; des abgezogenen kabelbaumseitigen TCM-Steckverbinders überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist er unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung im Schaltkreis des TCC-Magnetventils für die Arbeitsdruckregelung. Falls Schaltkreis OK ist, weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des TCC-Magnetventils für Arbeitsdruckregelung
+</title>
+<test1>
+<ptxt>
+Das TCC-Magnetventil für Arbeitsdruckregelung überprüfen. Siehe hierzu 
+<intxref refid = "G5JB0E5106022">Überprüfung der Magnetventile (Schaltmagnetventil-A, Schaltmagnetventil-B, TCC-Magnetventil für die Arbeitsdruckregelung und Magnetventil für die Arbeitsdruckregelung)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind die Prüfergebnisse zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Wackelkontakt oder TCM defekt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G5JB0E0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Falls OK, ein funktionierendes TCM anschließen und die Überprüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Das TCC-Magnetventil für Arbeitsdruckregelung austauschen. Siehe hierzu 
+<intxref refid = "G5JB0E5106021">Aus- und Einbau der Magnetventile (Schaltmagnetventil-A, Schaltmagnetventil-B, TCC-Magnetventil für die Arbeitsdruckregelung und Magnetventil für die Arbeitsdruckregelung)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

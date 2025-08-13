@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0A1104076" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0223: Fojtószelep helyzetérzékelő (mellékérzékelő) áramkörének feszültsége magas
+</title>
+<servinfosub id = "H5JB0A1104076001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104075">DTC P0222: Fojtószelep helyzetérzékelő (mellékérzékelő) áramkörének feszültsége alacsony</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0A1104076002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.626in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.565in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+A fojtószelep helyzetérzékelő (mellékérzékelő) kimenő feszültsége magasabb az előírt értéknél egy megadott ideig folyamatosan.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fojtószelep helyzetérzékelő (mellékérzékelő) áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+Elektromos fojtószeleptest egység
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Amikor egyszerre kerül kijelzésre a DTC P0123 és P0223, lehet, hogy a &#8220;WHT&#8221; vezeték rövidre zárt a tápáramkörrel és&#x002F;vagy a &#8220;GRN&#8221; vezeték szakadt.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "H5JB0A1104076003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tartsa a gázpedált 2 másodpercig alapjárati helyzetben.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tartsa a gázpedált 2 másodpercig teljesen lenyomott helyzetben.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ismételje meg a 3) és 4) lépést háromszor.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H5JB0A1104076004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd 
+<intxref refid = "H5JB0A1100005">DTC hibaelhárítással kapcsolatos óvintézkedések</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H5JB0A1104076005">
+<testgroup>
+<question>
+A &#8220;Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 2. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd 
+<intxref refid = "H5JB0A1104001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep helyzetérzékelő és áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe, és ellenőrizze, hogy a &#8220;TP Sensor 2 Volt&#8221; kijelzés látható-e a vizsgálókészüléken, amikor a gázpedál alapjárati és amikor teljesen lenyomott helyzetben van.
+</ptxt>
+</test1>
+<question>
+A TP érzékelő feszültség értéke az, ami leírásra került a 
+<intxref refid = "H5JB0A1104007">A vizsgálókészülék adatai</intxref>
+ pontban?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Időszakos hiba.
+</ptxt>
+<ptxt>
+Ellenőrizze, hogy fennáll-e időszakos hiba, lásd 
+<intxref refid = "H5JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 3. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM feszültség ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le a fojtószeleptest egység csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e az elektromos fojtószeleptest egység érintkezése a &#8220;RED&#8221;, &#8220;WHT&#8221; és &#8220;GRN&#8221; vezetékérintkezőknél.
+</ptxt>
+<testfigure>
+<title>
+J20 motor esetén
+</title>
+<graphic graphicname = "I5JB0A110042.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "158" gh = "76"/>
+</testfigure>
+<testfigure>
+<title>
+M16 motor esetén
+</title>
+<graphic graphicname = "I5JB0A110043.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "149" gh = "76"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, kapcsolja a gyújtáskapcsolót ON helyzetbe, és mérje meg a feszültséget az elektromos fojtószeleptest egység csatlakozójának &#8220;WHT&#8221; vezetékérintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen az 5. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 4. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vezetékköteg ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e az érintkezés az ECM csatlakozó &#8220;C37-53&#8221; érintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bekapcsolt gyújtáskapcsolónál mérje meg a feszültséget az ECM csatlakozójának &#8220;C37-53&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;WHT&#8221; vezeték zárlatos a tápáramkör felé.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vezetékköteg ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja a gyújtáskapcsolót ON helyzetbe, és mérje meg a feszültséget az elektromos fojtószeleptest egység csatlakozójának &#8220;RED&#8221; vezetékérintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 9. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 6. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vezetékköteg ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Szedje ki az ECM-et a foglalatából bekapcsolt ECM csatlakozók mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a tökéletes csatlakozást az ECM csatlakozó &#8220;C37-53&#8221; és &#8220;C37-40&#8221; érintkezői között.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, bekapcsolt gyújtáskapcsolónál mérje meg a feszültséget az ECM csatlakozójának &#8220;C37-40&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A &#8220;RED&#8221; vezeték szakadt vagy az áramkör ellenállása nagy.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 7. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vezetékköteg ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az elektromos fojtószeleptest egység csatlakozó &#8220;WHT&#8221; és &#8220;RED&#8221; vezetékérintkezői között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 8. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;RED&#8221; vezeték rövidre zárt a &#8220;WHT&#8221; vezetékkel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vezetékköteg ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg a feszültséget az ECM csatlakozó &#8220;C37-40&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;RED&#8221; vezeték zárlatos a tápáramkör felé.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Testáramkör ellenőrzés
+</title>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az elektromos fojtószeleptest egység csatlakozó &#8220;GRN&#8221; vezetékérintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 11. lépésre.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Menjen a 10. lépésre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Testáramkör ellenőrzés
+</title>
+<test1>
+<ptxt>
+Szedje ki az ECM-et a foglalatából bekapcsolt ECM csatlakozók mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e az érintkezés az ECM csatlakozó &#8220;C37-41&#8221; érintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsolónál mérje meg az ellenállást az ECM csatlakozójának &#8220;C37-41&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A &#8220;GRN&#8221; vezeték szakadt vagy az áramkör ellenállása nagy.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+ECM testáramköre hibás. Ha az áramkör rendben van, a meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Elektromos fojtószeleptest egység ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep helyzetérzékelőt, lásd a &#8220;Fojtószelep helyzetérzékelő működésének ellenőrzése&#8221; pontot a 
+<intxref refid = "H5JB0A1306022">Elektromos fojtószeleptest egység ellenőrzése járműbe szerelt állapotban</intxref>
+.
+</ptxt>
+</test1>
+<question>
+A kimenő feszültség az előírt értéken belül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki az elektromos fojtószeleptest egységet.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

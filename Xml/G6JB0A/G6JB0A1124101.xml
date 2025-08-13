@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A1124101" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0225: Schaltkreis des APP-Sensors (Hauptsensor)
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Diese Störung kann erscheinen, wenn der Kabelbaum beschädigt ist. Die Schritte in 
+<intxref refid = "G6JB0A0006001">Vorgehensweise für die Überprüfung des elektrischen Schaltkreises</intxref>
+ befolgen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Dieser Test dient zum Prüfen des Motor-Kabelbaums.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Der Fehler wird nach einer Reihe von Aktionen bei Volllast&#x002F;ohne Last am Gaspedal als vorhanden gemeldet.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Turboaufladung, Einschalten des Innenraum-Heizwiderstands und Geschwindigkeitsregelung&#x002F;Drehzahlbegrenzung sind nicht gestattet.
+</ptxt>
+<ptxt>
+Falls CO0, CC1 oder D1 vorliegt, brennt die Einspritzanlagen-Warnleuchte (Fehlerwichtigkeit 1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls eine Störung der Haupt- und Nebenspannungen des Gaspedal-Stellungssensors (APP) vorliegt und die Motordrehzahl wird begrenzt, wird die Motordrehzahl auf 1400 U&#x002F;min festgelegt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Für Anschlüsse an den Steuermodul-Steckverbindern sind Wartungskabel zu verwenden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Reihenfolge bei der Behandlung mehrerer Fehler:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Störung 
+<intxref refid = "G6JB0A1124126">DTC P0641: Referenzspannung 1 des Sensorschaltkreises:Für Modelle mit Dieselmotor</intxref>
+ hat Vorrang, falls vorhanden oder gespeichert
+</ptxt>
+</item>
+</list2>
+</list1>
+</attention3>
+<servinfosub id = "G6JB0A1124101001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Für Schaltkreise und Steckverbindernummern siehe 
+<intxref refid = "G6JB0A910E048">A-5 Schaltplan der Motor- und Klimaanlagensteuerung (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A1124101002">
+<title>
+Erfassungsbedingung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anzeige des SUZUKI-Testgeräts
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Unterbrechung oder Kurzschluss zur Karosseriemasse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kurzschluss an &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signalinkonsistenz
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Gaspedal-Stellungssensor (APP) blockiert
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1124101003">
+<title>
+Fehlersuche für CO0: Unterbrechung oder Kurzschluss zur Karosseriemasse
+</title>
+<attention3>
+<ptxt>
+Reihenfolge bei der Behandlung mehrerer Fehler:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Falls Störung 
+<intxref refid = "G6JB0A1124137">DTC P2120: Schaltkreis des APP-Sensors (Nebensensor):Für Modelle mit Dieselmotor</intxref>
+ gleichzeitig vorliegt, sicherstellen, dass der Steckverbinder des Gaspedal-Stellungssensors (APP) richtig angeschlossen ist.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Gaspedal-Stellungssensors (APP) prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und die Isolierung der Karosseriemasse an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen &#8220;E68-3&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-3&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen &#8220;E68-2&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-4&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Widerstand des Gaspedal-Stellungssensors (APP) (Hauptspannung) messen zwischen &#8220;E68-4&#8221; und &#8220;E68-2&#8221;.
+</ptxt>
+<ptxt>
+Falls der Widerstand nicht ca. 0,8 &#8211; 2,6 k&#937; beträgt, den Gaspedal-Stellungssensor (APP) austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G6JB0A1124101004">
+<title>
+Fehlersuche für CC1: Kurzschluss an &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Gaspedal-Stellungssensors (APP) prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen. 
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und die Isolierung der &#x002B;12-V-Zufuhr an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen &#8220;E68-3&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-3&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen &#8220;E68-2&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-4&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen &#8220;E68-4&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-5&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Widerstand des Gaspedal-Stellungssensors (APP) (Hauptspannung) messen zwischen &#8220;E68-4&#8221; und &#8220;E68-2&#8221;.
+</ptxt>
+<ptxt>
+Falls der Widerstand nicht ca. 0,8 &#8211; 2,6 k&#937; beträgt, den Gaspedal-Stellungssensor (APP) austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1124101005">
+<title>
+Fehlersuche für D1: Signalinkonsistenz
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Gaspedal-Stellungssensors (APP) prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und das Fehlen von Störwiderständen an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen &#8220;E68-3&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-3&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen &#8220;E68-2&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-4&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen &#8220;E68-4&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-5&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen &#8220;E68-6&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-21&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen &#8220;E68-1&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-15&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen &#8220;E68-5&#8221;-Kabel am Steckverbinder des Gaspedal-Stellungssensors (APP) und Klemme &#8220;E66-27&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, den Gaspedal-Stellungssensor (APP) austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1124101006">
+<title>
+Fehlersuche für D2: Gaspedal-Stellungssensor (APP) blockiert
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Mechanismus des Gaspedals prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+In Volllaststellung blockiert.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Pedal durch ein Außenteil blockiert.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+<ptxt>
+Die Gaspedalstellung verändern und den Parameter &#8220;Pedal position&#8221; unter Data List am SUZUKI-Testgerät anzeigen.
+</ptxt>
+<ptxt>
+Falls die angezeigten Werte inkonsistent sind, den Gaspedal-Stellungssensor (APP) austauschen.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

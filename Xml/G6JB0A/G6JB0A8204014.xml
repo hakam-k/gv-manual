@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A8204014" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1021: Airbagmodul wurde ausgelöst
+</title>
+<servinfosub id = "G6JB0A8204014001">
+<title>
+DTC wird durch Folgendes ausgelöst:
+</title>
+<ptxt>
+Wenn das SDM einen ausreichend starken Aufprall erfasst, um die Auslösung des Airbagsystems zu rechtfertigen. (SDM gibt einen Auslösebefehl aus.)
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A8204014002">
+<title>
+Beschreibung des Diagnoseablauftests
+</title>
+<ptxt>
+<emph etype = "bold">
+Schritt 1: Überprüfen, ob DTC B1021 ausgegeben wurde, obwohl der Airbag nicht ausgelöst wurde.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 2: Überprüfen, ob der Störungscode (DTC) aufgrund einer SDM-Störung ausgegeben wurde.
+</emph>
+</ptxt>
+<attention3>
+<ptxt>
+Vor dem Ausführen der Punkte in diesem Ablauf unbedingt 
+<intxref refid = "G6JB0A8204001">Überprüfung des Airbag-Diagnosesystems</intxref>
+ durchführen.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "G6JB0A8204014003">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0A8204014004">
+<testgroup>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<question>
+Wurde der Airbag ausgelöst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Bauteile ersetzen und Überprüfungen wie unter 
+<intxref refid = "G6JB0A8204041">Erforderliche Reparatur und Überprüfung nach einem Unfall</intxref>
+ angewiesen durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Fahrzeugfront und -unterboden auf Kollisionsschäden überprüfen.
+</ptxt>
+</test1>
+<question>
+Sind Schäden zu sehen, die auf einen Aufprall zurückzuführen sind?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Bauteile ersetzen und Überprüfungen wie unter 
+<intxref refid = "G6JB0A8204041">Erforderliche Reparatur und Überprüfung nach einem Unfall</intxref>
+ angewiesen durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ein intaktes Ersatz-SDM einbauen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Nach Abschluss der Überprüfung und der Reparaturarbeiten die folgenden Punkte durchführen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle Bauteile des Airbagsystems wieder anschließen und sicherstellen, dass alle Bauteile einwandfrei montiert sind.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<intxref refid = "G6JB0A8204001">Überprüfung des Airbag-Diagnosesystems</intxref>
+ wiederholen, um sicherzustellen, dass die Störung behoben wurde.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fehlercodes des BCM löschen. Siehe dazu 
+<intxref refid = "G6JB0AA204006">Löschen von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

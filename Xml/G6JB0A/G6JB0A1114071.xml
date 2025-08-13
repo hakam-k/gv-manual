@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A1114071" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2111: Drosselklappenregler - klemmt in offenem Zustand
+</title>
+<servinfosub id = "G6JB0A1114071001">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Bei der Diagnose der Drosselklappe bei Zündschalterstellung OFF ist die Standardöffnung der Drosselklappe mehr als 7&#176; größer als die geschlossene Stellung.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Elektrische Drosselklappengehäuse-Baugruppe
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1114071002">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Testgerät anschließen. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zündschalter auf ON drehen und DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter für mindestens 20 Sek. auf OFF drehen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und DTCs abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G6JB0A1114071003">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G6JB0A1110003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche:Für Modelle mit Benzinmotor</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G6JB0A1114071004">
+<testgroup>
+<question>
+Wurde die &#8220;Prüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:Für Modelle mit Benzinmotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Sichtprüfung der Drosselklappe
+</title>
+<test1>
+<ptxt>
+Sicherstellen, dass zwischen der Drosselklappe und dem Drosselklappengehäuse keine Fremdkörper eingeklemmt sind. Siehe dazu &#8220;Sichtprüfung der Drosselklappe&#8221; unter 
+<intxref refid = "G6JB0A1316003">Überprüfung der elektrischen Drosselklappengehäuse-Baugruppe am Fahrzeug:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+In Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Nach Abnehmen des Drosselklappengehäuses Fremdkörper entfernen und das Innere des Drosselklappengehäuses gründlich reinigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Funktionsprüfung der Drosselklappe 
+</title>
+<test1>
+<ptxt>
+Die Funktion der Drosselklappe gemäß &#8220;Funktionsprüfung der Drosselklappe&#8221; unter 
+<intxref refid = "G6JB0A1316003">Überprüfung der elektrischen Drosselklappengehäuse-Baugruppe am Fahrzeug:Für Benzinmotor-Modell</intxref>
+ überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die elektrische Drosselklappengehäuse-Baugruppe austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Drosselklappenreglers (Drosselklappenmotors)
+</title>
+<test1>
+<ptxt>
+Die Funktion des Drosselklappenreglers gemäß &#8220;Überprüfung des Drosselklappenreglers (Drosselklappenmotors)&#8221; unter 
+<intxref refid = "G6JB0A1316003">Überprüfung der elektrischen Drosselklappengehäuse-Baugruppe am Fahrzeug:Für Benzinmotor-Modell</intxref>
+ überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die elektrische Drosselklappengehäuse-Baugruppe austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Funktionsprüfung des Drosselklappensensors
+</title>
+<test1>
+<ptxt>
+Die Funktion des Drosselklappensensors gemäß &#8220;Funktionsprüfung des Drosselklappensensors&#8221; unter 
+<intxref refid = "G6JB0A1316003">Überprüfung der elektrischen Drosselklappengehäuse-Baugruppe am Fahrzeug:Für Benzinmotor-Modell</intxref>
+ überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ECM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die elektrische Drosselklappengehäuse-Baugruppe austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

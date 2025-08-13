@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1144173" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Test 8: Einspritzventilstörung
+</title>
+<attention1>
+<ptxt>
+Bei Arbeiten an der Kraftstoffanlage den WARNHINWEIS in 
+<intxref refid = "G8T40A1740001">Vorsichtsmaßnahmen bei der Kraftstoffsystemwartung:F9Q</intxref>
+ beachten, um die Gefahr von Feuer oder Personenschäden zu minimieren.
+</ptxt>
+</attention1>
+<diag type = "test" id = "G8T40A1144173001">
+<testgroup id = "G8T40A1144173002">
+<ptxt>
+ÜBERPRÜFUNG DER KRAFTSTOFFREGULIERUNG FÜR DIE EINZELNEN EINSPRITZVENTILE
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bei Leerlaufdrehzahl und Kühlmitteltemperatur &gt; 80 &#176;C, 176 &#176;F mit der Funktion &#34;Zyl &#x0023; FF Korrektur &#34; unter Datenliste am SUZUKI-Diagnosegerät die Kraftstofffluss-Korrekturwerte der einzelnen Einspritzventile anzeigen.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Der normale Kraftstofffluss-Korrekturwert eines Einspritzventils beträgt &#177; 1,0 mm&#x00B3;&#x002F;Hub.
+</ptxt>
+<ptxt>
+Diese Toleranz kann mit der Zeit zunehmen; ein Wert über &#177; 5,0 mm&#x00B3;&#x002F;Hub weist auf eine Einspritzventil-&#x002F;Zylinder-Störung hin.
+</ptxt>
+<question>
+Liegt einer der Werte über &#177; 5,0 mm&#x00B3;&#x002F;Hub?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1144173003">
+<ptxt>
+ÜBERPRÜFUNG DER KRAFTSTOFFREGULIERUNG FÜR DIE EINZELNEN EINSPRITZVENTILE:
+</ptxt>
+<test1>
+<ptxt>
+Wenn mindestens einer der Werte &gt; &#x002B;5,0 mm&#x00B3;&#x002F;Hub beträgt
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Das Ventilspiel prüfen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gemäß 
+<intxref refid = "G8T40A1454001">Kompressionsprüfung:F9Q</intxref>
+ die Motorkompression prüfen.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Falls der Kompressionstest auf einen Zylinderdefekt hinweist, die notwendigen Reparaturen vornehmen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls der Kompressionsdruck in Ordnung ist, gemäß 
+<intxref refid = "G8T40A1746007">Aus- und Einbau des Einspritzventils:F9Q</intxref>
+ sicherstellen, dass das Einspritzventil korrekt montiert ist. Dann erneut die Kraftstoffregulierung für die einzelnen Einspritzventile prüfen. Falls die Kundenbeanstandung noch immer vorliegt, das Einspritzventil austauschen.
+</ptxt>
+</item>
+</list2>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Wenn mindestens einer der Werte &lt; -5,0 mm&#x00B3;&#x002F;Hub beträgt
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Das Ventilspiel prüfen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Stand und Zustand des Motoröls prüfen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Das Einspritzventil mit der größten Korrektur ausbauen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls Verschmutzung durch Kraftstoff vorliegt, den betreffenden Zylinder prüfen (Zylinder, Kolben, Ventile).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Das Einspritzventil austauschen.
+</ptxt>
+</item>
+</list1>
+<paragroup>
+<attention3>
+<ptxt>
+Vor dem Austausch eines Einspritzventils sicherstellen, dass dessen Dichtscheibe vorhanden und konform ist (siehe 
+<intxref refid = "G8T40A1144158">Tabelle 5: Geringe Leistung mit Rauch:F9Q</intxref>
+).
+</ptxt>
+</attention3>
+<ptxt>
+Nach dem Austausch eines Einspritzventils dessen Code, falls nicht programmiert, gemäß 
+<intxref refid = "G8T40A1346006">Registrierungsverfahren für den Einspritzdüsen-Kalibriercode:F9Q</intxref>
+ eingeben.
+</ptxt>
+</paragroup>
+</test1>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1144173004">
+<ptxt>
+BESTÄTIGUNG DER FEHLERSUCHE FÜR DIE FLUSSKORREKTUR DER EINZELNEN EINSPRITZVENTILE
+</ptxt>
+<ptxt>
+Etwaige Störungen löschen und bei Leerlaufdrehzahl und Kühlmitteltemperatur &gt; 80 &#176;C, 176 &#176;F sicherstellen, dass das Testgerät keine Störungen anzeigt und dass die Kraftstofffluss-Korrekturwerte &#177; 5,0 mm&#x00B3;&#x002F;Hub nicht erreichen, um die Reparatur zu bestätigen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Falls der Kraftstofffluss-Korrekturwert anderer Einspritzventile &gt; &#177; 5,0 mm&#x00B3;&#x002F;Hub beträgt, die Fehlersuche unter Schritt 2 dieses Tests ausführen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls die ausgeführten Reparaturen den Motor nicht instand setzen, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</item>
+</list1>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1144173005">
+<ptxt>
+ÜBERPRÜFUNG DER EINSPRITZVENTIL-RÜCKLAUFREGELUNG:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Den Motor aufwärmen, bis die Kühlmitteltemperatur &gt; 80 &#176;C, 176 &#176;F beträgt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die oberen Motorkanten (vornehmlich im Bereich der Einspritzventile) mit Lappen abdecken.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Einspritzventil-Rücklaufleitungen lösen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Das Spezialwerkzeug (09912 - 96540) an das Einspritzventil anschließen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Den Motor starten und im Leerlauf betreiben.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Den Kraftstoffdruckregler lösen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Zündung einschalten und den Motor starten (den Anlasser mindestens 5 Sekunden lang betätigen).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Kraftstoff-Rücklauffluss ist gewöhnlich sehr niedrig.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Anderenfalls das Einspritzventil austauschen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Die Ursache für das Lösen des Kraftstofffluss-Reglers beheben.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Prüfen, ob die Dichtungen und Leitungen in Ordnung sind und dann die Kraftstoff-Rücklaufleitungen wieder anschließen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Anderenfalls die Kraftstoff-Rücklaufleitungen austauschen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Reparaturen in einer Probefahrt bestätigen.
+</ptxt>
+</item>
+</list1>
+<servicetool>
+<servicetoolitem id = "L1A412">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09912-96540">
+09912-96540
+</s-number>
+</servicetoolitem>
+</servicetool>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1144173006">
+<ptxt>
+EINSPRITZVENTIL-DICHTIGKEITSTEST:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Stand und Zustand des Motoröls prüfen:
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls Verschmutzung durch Kraftstoff vorliegt, ist die Ventildüse mit dem Leck &#34;verölt&#34;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Das Vorglührelais abklemmen.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Sicherstellen, dass die Ursache nicht ein steigender Ölstand ist; dazu die Motor-Kompressionswerte prüfen.
+</ptxt>
+<ptxt>
+Den Zustand der Glühkerze prüfen: es darf keine Feuchtigkeit vorliegen. Anderenfalls das defekte Einspritzventil austauschen.
+</ptxt>
+<ptxt>
+Falls die Kompressionswerte in Ordnung sind, das defekte Einspritzventil ausfindig machen; dazu die Zylinder und Kolben durch die Glühkerzenbohrungen untersuchen (Verölung, Überhitzung, ansetzender Zerfall usw.).
+</ptxt>
+<ptxt>
+Falls die Prüfung von Zylinder und Kolben zu keinem Fehler führt, die Einspritzventile ausbauen und denjenigen mit &#34;verölter&#34; Düse austauschen.
+</ptxt>
+<paragroup>
+<attention3>
+<ptxt>
+Vor dem Austausch eines Einspritzventils sicherstellen, dass dessen Dichtscheibe vorhanden und konform ist (siehe 
+<intxref refid = "G8T40A1144158">Tabelle 5: Geringe Leistung mit Rauch:F9Q</intxref>
+).
+</ptxt>
+</attention3>
+</paragroup>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Einspritzventil in Ordnung.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

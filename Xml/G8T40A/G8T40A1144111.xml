@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1144111" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0380: Schaltkreis des Vorglüh-Steuermoduls
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler:
+</ptxt>
+<ptxt>
+Der Fehler wird nach dem Leistungstest &#34;Steuerung Relais Vor-&#x002F;Nachheizung&#34; am SUZUKI-Diagnosegerät oder nach einem Startversuch als vorhanden gemeldet.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls die Störung vorliegt, ist ein Kaltstart nahezu oder völlig unmöglich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls die Störung vorliegt, leuchtet die Einspritzwarnleuchte (Fehlerwichtigkeit 1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Für Anschlüsse an den ECM-Steckverbindern sind Prüfkabel zu verwenden.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "G8T40A1144111001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Für Schaltkreis und Steckverbindernummer siehe 
+<intxref refid = "G8T40A910E013">A-5 Schaltplan der Motor- und Klimaanlagensteuerung (Dieselmotor-Modell)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1144111002">
+<title>
+Erfassungsbedingung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.596in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.596in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anzeige des SUZUKI-Diagnosegeräts
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kurzschluss mit &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kurzschluss mit Karosseriemasse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Schaltkreisunterbrechung
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Interner elektronischer Fehler
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144111003">
+<title>
+Fehlersuche für CC1: Kurzschluss mit &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.202in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Vorglüh-Steuermoduls und die Glühkerzen-Versorgungskabel prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Zustand der 80 A-Sicherung am Batterie-Sicherungskasten prüfen.
+</ptxt>
+<ptxt>
+Den Durchgang und die Isolierung gegenüber der &#x002B;12 V-Zuleitung an folgenden Anschlüssen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#34;C74-3&#34; am Steckverbinder des Vorglüh-Steuermoduls und Klemme &#34;C85-1&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#34;C74-1&#34; am Steckverbinder des Vorglüh-Steuermoduls und Klemme &#34;C85-17&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, das Vorglüh-Steuermodul austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144111004">
+<title>
+Fehlersuche für CC0: Kurzschluss mit Karosseriemasse und CO: Schaltkreisunterbrechung
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Falls beim Vorglüh-Steuermodul ein Kurzschluss mit Karosseriemasse vorliegt, besteht die Möglichkeit, dass die Glühkerze kontinuierlich eingeschaltet bleibt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Dies könnte die Glühkerzen und den Motor beschädigen.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.192in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Vorglüh-Steuermoduls und die Glühkerzen-Versorgungskabel prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Zustand der 80 A-Sicherung am Batterie-Sicherungskasten prüfen.
+</ptxt>
+<ptxt>
+Den Durchgang und die Isolierung gegenüber Karosseriemasse an folgendem Anschluss prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#34;C74-3&#34; am Steckverbinder des Vorglüh-Steuermoduls und Klemme &#34;C85-1&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#34;C74-1&#34; am Steckverbinder des Vorglüh-Steuermoduls und Klemme &#34;C85-17&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, das Vorglüh-Steuermodul austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1144111005">
+<title>
+Fehlersuche für D1: Interner elektronischer Fehler
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.192in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Vorglüh-Steuermoduls und die Glühkerzen-Versorgungskabel prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Zustand der 80 A-Sicherung am Batterie-Sicherungskasten prüfen.
+</ptxt>
+<ptxt>
+Den Durchgang und die Isolierung gegenüber Karosseriemasse an folgendem Anschluss prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#34;C74-3&#34; am Steckverbinder des Vorglüh-Steuermoduls und Klemme &#34;C85-1&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#34;C74-1&#34; am Steckverbinder des Vorglüh-Steuermoduls und Klemme &#34;C85-17&#34; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, das Vorglüh-Steuermodul austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

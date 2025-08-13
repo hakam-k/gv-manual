@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA324032" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1717: Schlüsselloses Anlassersteuermodul
+</title>
+<servinfosub id = "G6JB0AA324032001">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+P1717 wird ausgegeben, wenn das ECM unterschiedlich registrierte ID-Codes im ECM und im schlüssellosen Anlassersteuermodul erfasst, nachdem der Motoranlasserknopf auf ON gedreht wurde. Normalerweise registriert das ECM, wenn das schlüssellose Anlassersteuermodul durch ein neues ersetzt wird, automatisch den betreffenden Code des schlüssellosen Steuermoduls, nachdem der Zündschalter auf ON gedreht wurde. Das ECM registriert jedoch, wenn das schlüssellose Anlassersteuermodul durch ein gebrauchtes ersetzt wird, nicht automatisch den betreffenden Code des schlüssellosen Steuermoduls, selbst wenn der Zündschalter auf ON gedreht wird.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA324032002">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM erfasst im ECM und im schlüssellosen Anlassersteuermodul unterschiedlich registrierte ID-Codes.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kabelschaltkreis des schlüssellosen Anlassersystems
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselloses Anlassersteuermodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0AA324032003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA324032004">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung des Wegfahrsperren-Steuersystems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0AA324001">Überprüfung des Wegfahrsperren-Steuersystems:Für Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registrierung von ECM
+</title>
+<test1>
+<ptxt>
+ECM am Wegfahrsperren-Steuersytem registrieren, siehe 
+<intxref refid = "G6JB0AA326003">Vorgehensweise nach dem Austausch des ECM:Für Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wurde die Registrierung von ECM am Wegfahrsperren-Steuersystem abgeschlossen?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+ECM erneut auf DTC prüfen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM auf Diagnosecodes prüfen.
+</title>
+<test1>
+<ptxt>
+Diagnosecode (DTC) im ECM abrufen. Siehe dazu 
+<intxref refid = "G6JB0AA324002">Abruf von Diagnosecodes (DTC):Für Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird außer DTC P1717 auch P1716 und&#x002F;oder P1718 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit DTC-Fehlersuche B1716.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit DTC-Fehlersuche B1718.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0EA304010" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "0" modify = "0">
+<title>
+DTC P1616: Unregistriertes Steuermodul für schlüsselloses Startsystem (falls vorhanden)
+</title>
+<servinfosub id = "G5JB0EA304010001" page = "1">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0EA302001">Schaltplan der Wegfahrsperre</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0EA304010002">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+P1616 wird erfasst, wenn das ECM nach Stellen des Motorstartknopfes auf ON in ECM und Steuermodul für schlüsselloses Startsystem verschiedene registrierte Codes entdeckt. Normalerweise registriert das ECM nach Stellen des Zündschalters auf ON nach dem Austausch des Steuermoduls für schlüsselloses Startsystem den entsprechenden Code automatisch im Steuermodul für schlüsselloses Startsystem. Nach dem Austausch des Steuermoduls für schlüsselloses Startsystem durch ein gebrauchtes Steuermodul registriert das ECM den entsprechenden Code nicht im Steuermodul für schlüsselloses Startsystem, wenn der Zündschalter auf ON gestellt wird.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0EA304010003">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Das ECM erkennt, dass die im ECM und Steuermodul für schlüsselloses Startsystem registrierten Codes nicht übereinstimmen.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Steuermodul für schlüsselloses Startsystem defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0EA304010004">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0EA304010005">
+<testgroup>
+<title>
+DTC-Bestätigung
+</title>
+<test1>
+<ptxt>
+DTC gemäß 
+<intxref refid = "G5JB0EA304003">Löschen von Diagnosecodes (DTC)</intxref>
+ löschen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0EA304004">Diagnosecodetabelle</intxref>
+ prüfen, ob DTC vorliegen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1616 immer noch vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist beendet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Zündschlüssel-Registrierung
+</title>
+<test1>
+<ptxt>
+DTC gemäß 
+<intxref refid = "G5JB0EA304003">Löschen von Diagnosecodes (DTC)</intxref>
+ löschen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0EA306002">Registrierung des Zündschlüssels</intxref>
+ den Transpondercode vom Zündschlüssel im ECM registrieren. 
+</ptxt>
+</test1>
+<question>
+Konnte der Zündschlüssel (Transpondercode) im ECM registriert werden?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Funktionsprüfung des schlüssellosen Startsystems
+</title>
+<test1>
+<ptxt>
+Den Motor mit dem schlüssellosen Startsystem anlassen.
+</ptxt>
+</test1>
+<question>
+Startet der Motor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist beendet.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Prüfen, ob DTC vorliegen. Gegebenenfalls die Fehlersuche gemäß dem entsprechenden Ablaufpan ausführen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0EA304002">Abruf von Diagnosecodes (DTC)</intxref>
+ DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen außer P1616 DTC P1618 und&#x002F;oder P1615 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Fehlersuche gemäß DTC P1618.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Fehlersuche gemäß DTC P1615.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

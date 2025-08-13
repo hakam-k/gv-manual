@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA324026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1709: ECM-Kommunikationsfehler 2
+</title>
+<servinfosub id = "G6JB0AA324026001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA322001">Schaltplan des Wegfahrsperren-Steuersystems:Für Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA324026002">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+OBD-Kommunikationsfehler zwischen ICM und ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN-Kommunikationsschaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lenkwinkelsensor (Modell mit ESP&#174;)
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-Steuermodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselloses Anlassersteuermodul (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS-&#x002F;ESP&#174;-Steuermodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kombinationsinstrument
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Falls DTC B1702 und B1709 gemeinsam erfasst werden, liegt eventuell Störung im CAN-Kommunikationsschaltkreis vor. Prüfen, ob vom ECM, BCM, schlüssellosen Anlassersteuermodul (Modell mit schlüssellosem Anlasser), 4WD-Steuermodul und&#x002F;oder ABS-&#x002F;ESP&#174;-Steuermodul DTC in Bezug auf einen Ausfall des CAN erfasst werden. Falls erfasst, weiter mit dem entsprechenden DTC-Diagnoseablaufplan.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "G6JB0AA324026003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA324026004">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung des Wegfahrsperren-Steuersystems&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0AA324001">Überprüfung des Wegfahrsperren-Steuersystems:Für Dieselmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Diagnosecode (DTC) im ECM abrufen. Siehe dazu 
+<intxref refid = "G6JB0A1124005">Diagnosecodeüberprüfung:Für Modelle mit Dieselmotor</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTCs für das ABS- oder ESP&#174;-Steuermodul abrufen. Für Modelle mit ESP&#174; siehe 
+<intxref refid = "G6JB0A4604006">DTC-Tabelle</intxref>
+. Für Modelle ohne ESP&#174; siehe 
+<intxref refid = "G6JB0A4504004">Diagnosecodeüberprüfung</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Diagnosecode (DTC) im BCM abrufen. Siehe hierzu 
+<intxref refid = "G6JB0AA204005">Diagnosecodeüberprüfung</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Liegen DTCs vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Sicherungen
+</title>
+<test1>
+<ptxt>
+Prüfen, ob Sicherungen durchgebrannt sind.
+</ptxt>
+</test1>
+<question>
+Ist irgendeine Sicherung durchgebrannt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Durchgebrannte Sicherung(en) austauschen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des ICM-Steckverbinders
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den ICM-Steckverbinder lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Anschluss zu den Klemmen und Kabeln des ICM-Steckverbinders in Ordnung ist. Siehe 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind alle Klemmen- und Kabelanschlüsse in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schlechte Verbindung(en) reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des ECM auf schlechte Verbindung
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die ECM-Steckverbinder lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Anschluss zu den Klemmen und Kabeln der ECM-Steckverbinder in Ordnung ist. Siehe 
+<intxref refid = "G6JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind alle Klemmen- und Kabelanschlüsse in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schlechte Verbindung(en) reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreisüberprüfung der CAN-Kommunikation
+</title>
+<test1>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis zwischen ICM und ECM auf Unterbrechung, Kurzschluss und hohen Widerstand untersuchen. Siehe 
+<intxref refid = "G6JB0A0006001">Vorgehensweise für die Überprüfung des elektrischen Schaltkreises</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist jeder Schaltkreis der CAN-Kommunikation einwandfrei?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM-Prüfung
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G6JB0AA324018">Überprüfung des Wegfahrsperren-Steuermoduls (ICM) und seines Schaltkreises:Für Dieselmotor-Modell</intxref>
+ die ICM-Stromversorgungs- und -Massekreise prüfen.
+</ptxt>
+</test1>
+<question>
+Sind die ICM-Stromversorgungs- und -Massekreise in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ICM einbauen und Prüfung wiederholen. Falls DTC B1709 immer noch vorliegt, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die ICM-Stromversorgungs- und -Massekreise ggf. reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

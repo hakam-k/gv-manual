@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA314001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Überprüfung des Wegfahrsperren-Steuersystems
+</title>
+<diag type = "test" id = "G6JB0AA314001001">
+<testgroup>
+<title>
+Überprüfung, ob Wegfahrsperren-Anzeigenleuchte aufleuchtet
+</title>
+<test1>
+<ptxt>
+Zündschalter mit Zündschlüssel auf ON drehen.
+</ptxt>
+</test1>
+<question>
+Leuchtet die Wegfahrsperren-Anzeigenleuchte (1) auf?
+</question>
+<testfigure>
+<graphic graphicname = "I5JB0AA30004.swf" width = "90.000mm" height = "48.686mm" ver = "01" gw = "153" gh = "121"/>
+</testfigure>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Prüfen, ob DTC P1636 und&#x002F;oder P1638 vom ECM erfasst werden. Siehe hierzu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+. Falls ja, die Fehlersuche entsprechend dem Ablaufschema in diesem Abschnitt durchführen. Falls nein, weiter mit 
+<intxref refid = "G6JB0AA314006">Wegfahrsperren-Anzeigenleuchte leuchtet bei Zündschalter auf ON und abgestelltem Motor nicht auf.:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung, ob Wegfahrsperren-Anzeigenleuchte blinkt.
+</title>
+<question>
+Blinkt die Wegfahrsperren-Anzeigenleuchte in Schritt 1 kontinuierlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Überprüfen, welcher DTC vom ECM erfasst wurde. Siehe dazu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+. Danach die Fehlersuche entsprechend dem Ablaufschema in diesem Abschnitt durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Anlassverhaltens des Motors
+</title>
+<test1>
+<ptxt>
+Motor mit Zündschlüssel starten.
+</ptxt>
+</test1>
+<question>
+Springt der Motor an?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+<intxref refid = "G6JB0A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:Für Modelle mit Benzinmotor</intxref>
+ durchführen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung, ob Wegfahrsperren-Anzeigenleuchte eingeschaltet bleibt
+</title>
+<test1>
+<ptxt>
+Überprüfen, ob Wegfahrsperren-Anzeigenleuchte nach dem Anlassen des Motors weiter leuchtet.
+</ptxt>
+</test1>
+<question>
+Bleibt Wegfahrsperren-Anzeigenleuchte nach dem Anlassen des Motors eingeschaltet?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G6JB0AA314007">Wegfahrsperren-Anzeigenleuchte bleibt nach Anlassen des Motors eingeschaltet.:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Das Wegfahrsperren-Steuersystem funktioniert einwandfrei. Anschließend weiter mit 
+<intxref refid = "G6JB0AA504004">Überprüfung des schlüssellosen Anlassersystems</intxref>
+ für Fahrzeuge mit schlüssellosem Anlassersystem.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

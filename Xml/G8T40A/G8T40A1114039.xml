@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1114039" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0300&#x002F;P0301&#x002F;P0302&#x002F;P0303&#x002F;P0304: Zufällige Fehlzündung erfasst&#x002F;Fehlzündung erfasst in Zylinder 1&#x002F;Zylinder 2&#x002F;Zylinder 3&#x002F;Zylinder 4
+</title>
+<servinfosub id = "G8T40A1114039001">
+<title>
+Systembeschreibung
+</title>
+<ptxt>
+Das ECM misst den Kurbelwinkel basierend auf den Impulssignalen von Kurbelwinkelsensor und Nockenwellensensor für jeden Zylinder. Falls eine große Änderung der Winkelgeschwindigkeit der Kurbelwelle festgestellt wird, schließt das ECM auf eine Fehlzündung. Wenn die vom ECM gezählte Anzahl Fehlzündungen die DTC-Erfassungsbedingung übersteigt, ermittelt es den Zylinder, in dem die Fehlzündung aufgetreten ist, und gibt diesen als DTC aus.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1114039002">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.392in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.813in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+DTC P0300:
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fehlzündungen, die eine Überhitzung des Katalysators während 200 Motorumdrehungen verursachen, werden bei 2 oder mehr Zylindern erfasst. (Die MIL blinkt, solange diese Fehlzündung ununterbrochen auftritt.)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+oder
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fehlzündungen, die während 1000 Motorumdrehungen die Motorabgase nachteilig beeinflussen, werden bei 2 oder mehr Zylindern erfasst. (2-Fahrten-Testlogik)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zündsystem
+</ptxt>
+</item>
+<item>
+<ptxt>
+Einspritzventil und zugehöriger Schaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kraftstoffdruck
+</ptxt>
+</item>
+<item>
+<ptxt>
+EGR-System
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ansaugen von Nebenluft
+</ptxt>
+</item>
+<item>
+<ptxt>
+Motorkompression
+</ptxt>
+</item>
+<item>
+<ptxt>
+Hydrostößel
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ventilsteuerung
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kraftstoffmangel
+</ptxt>
+</item>
+<item>
+<ptxt>
+Abgassystem
+</ptxt>
+</item>
+<item>
+<ptxt>
+Minderwertiger Kraftstoff
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0301, P0302, P0303, P0304:
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fehlzündungen, die eine Überhitzung des Katalysators während 200 Motorumdrehungen verursachen, werden bei 1 Zylinder erfasst. (Die MIL blinkt, solange diese Fehlzündung ununterbrochen auftritt.)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+oder
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fehlzündungen, die während 1000 Motorumdrehungen die Motorabgase nachteilig beeinflussen, werden bei 1 Zylinder erfasst. (2-Fahrten-Testlogik)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1114039003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zur Durchführung der Probefahrt einen sicheren, verkehrsfreien Ort wählen, wo die Möglichkeit von Verkehrsunfällen praktisch ausgeschlossen ist. Vorsichtig vorgehen, um Unfälle zu vermeiden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Probefahrt sollte von 2 Personen - Fahrer und Prüfer - auf einer ebenen Straße ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Sicherstellen, dass die folgenden Bedingungen erfüllt sind, wenn die &#34;Überprüfung von Diagnosecodes&#34; durchgeführt wird.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ansaugluft-Temperatursensor beim Motorstart: -10 &#176;C (14 &#176;F) bis 80 &#176;C (176 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ansauglufttemperatur: -10 &#176;C (14 &#176;F) bis 70 &#176;C (158 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kühlmitteltemperatur: -10 &#176;C (14 &#176;F) bis 150 &#176;C (302 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Einsatzhöhe (Umgebungsdruck): 2400 m, 8000 ft. oder weniger (560 mmHg, 75 kPa oder mehr)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Diagnosegerät anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und die Schnappschussdaten über das Diagnosegerät ausdrucken oder notieren.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die DTCs mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug mindestens 1 min. innerhalb der von den Schnappschussdaten vorgegebenen Parameter fahren.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug anhalten und aktuelle sowie vorgemerkte DTCs abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A1114039004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G8T40A1110003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche:M16A und J20A</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G8T40A1114039005">
+<testgroup id = "G8T40A1114039006">
+<question>
+Wurde die &#34;Überprüfung des Motor- und Abgassteuerungssystems&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:M16A und J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039007">
+<question>
+Zeigt die Kraftstoffanzeige &#34;E&#34; (leer) an?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Kraftstoff nachfüllen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039008">
+<title>
+Überprüfung der Kraftstoffqualität
+</title>
+<test1>
+<ptxt>
+Sicherstellen, dass hochwertiger Kraftstoff im Kraftstofftank ist.
+</ptxt>
+</test1>
+<question>
+Ist sie in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Das Kraftstoffsystem reinigen und den Kraftstoff wechseln.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039009">
+<title>
+Überprüfung des Zündsystems
+</title>
+<test1>
+<ptxt>
+Zündkerze und Zündfunken an dem Zylinder prüfen, an dem die Fehlzündung aufgetreten ist. Siehe dazu 
+<intxref refid = "G8T40A1816004">Überprüfung der Zündkerzen:M16A und J20A</intxref>
+ und 
+<intxref refid = "G8T40A1814004">Zündfunkentest:M16A und J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind sie in einwandfreiem Zustand?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Zündspule, Kabelbaum, Zündkerze oder sonstige Systemkomponenten defekt.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039010">
+<title>
+Überprüfung des Einspritzventil-Schaltkreises
+</title>
+<test1>
+<ptxt>
+Bei Motor im Leerlauf oder während des Anlassens mit einem Stethoskop das Betriebsgeräusch jedes Einspritzventils prüfen.
+</ptxt>
+</test1>
+<question>
+Ist bei allen Einspritzventilen ein Betriebsgeräusch zu hören?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den Steckverbinderanschluss und den Kabelbaum des Einspritzventils auf Betriebsgeräusch prüfen, sowie auch das Einspritzventil selbst. Wenn in Ordnung, ein intaktes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039011">
+<title>
+Überprüfung des Kraftstoffdrucks
+</title>
+<test1>
+<ptxt>
+Den Kraftstoffdruck überprüfen. Siehe dazu 
+<intxref refid = "G8T40A1714004">Überprüfung des Kraftstoffdrucks:M16A und J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Das Kraftstoffsystem reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039012">
+<title>
+Überprüfung der Einspritzventile
+</title>
+<test1>
+<ptxt>
+Einspritzventil(e) überprüfen. Siehe dazu 
+<intxref refid = "G8T40A1716009">Überprüfung des Einspritzventils:M16A und J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defektes Einspritzventil austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039013">
+<title>
+Überprüfung des Zündzeitpunkts
+</title>
+<test1>
+<ptxt>
+Den Zündzeitpunkt überprüfen. Siehe dazu 
+<intxref refid = "G8T40A1816007">Überprüfung des Zündzeitpunkts:M16A und J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Die betreffenden Sensoren überprüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039014">
+<title>
+Überprüfung des EGR-Systems
+</title>
+<test1>
+<ptxt>
+Das EGR-System überprüfen. Siehe dazu 
+<intxref refid = "G8T40A1214001">Überprüfung des EGR-Systems:M16A und J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Das EGR-System reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039015">
+<title>
+Überprüfung des Abgassystems
+</title>
+<test1>
+<ptxt>
+Das Abgassystem auf Abgasverstopfungen prüfen.
+</ptxt>
+</test1>
+<question>
+Ist es in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Verstopfungen des Abgassystems beheben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114039016">
+<title>
+Überprüfung der mechanischen Systeme des Motors
+</title>
+<test1>
+<ptxt>
+Die Komponenten oder das System der Motormechanik überprüfen, die unrunden Leerlauf oder mangelhafte Leistung verursachen können.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motorkompression (siehe 
+<intxref refid = "G8T40A1424001">Kompressionsprüfung:J20A</intxref>
+ oder 
+<intxref refid = "G8T40A1414001">Kompressionsprüfung:M16A</intxref>
+.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ventilspiel (siehe 
+<intxref refid = "G8T40A1424003">Überprüfung des Ventilspiels (Abstand):J20A</intxref>
+ oder 
+<intxref refid = "G8T40A1414003">Überprüfung des Ventilspiels (Abstand):M16A</intxref>
+.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ventilsteuerung (siehe 
+<intxref refid = "G8T40A1426016">Aus- und Einbau von 2. Steuerkette und Kettenspanner:J20A</intxref>
+ oder 
+<intxref refid = "G8T40A1416017">Aus- und Einbau von Steuerkette und Kettenspanner:M16A</intxref>
+.)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Sind sie in einwandfreiem Zustand?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Den Kabelbaum und den Anschluss der ECM-Masse, des Zündsystems und des Einspritzventils auf Wackelkontakt und Kurzschluss überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defekte Teile reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

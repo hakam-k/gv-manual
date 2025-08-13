@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0AA314012" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1621: Fehler in der Kommunikationsleitung der Wegfahrsperre
+</title>
+<servinfosub id = "G6JB0AA314012001" page = "1">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA312001">Schaltplan des Wegfahrsperren-Steuersystems:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0AA314012002">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kommunikationsfehler zwischen Wegfahrsperren-Steuermodul (ICM) und ECM wird durch ECM erfasst.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zugehörige Sicherung(en) durchgebrannt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlechte Verbindung am Steckverbinder des Wegfahrsperren-Steuermoduls (ICM)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Poor connection at ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unterbrechung im Stromversorgungsschaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unterbrechung im Massekabelschaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unterbrechung in Kommunikationskabelschaltkreise
+</ptxt>
+</item>
+<item>
+<ptxt>
+Masseschluss der Kabelschaltkreise der CAN-Kommunikation
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kurzschluss zur Stromversorgung der Kommunikationskabelschaltkreise
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kurzschluss in Kommunikationskabelschaltkreise
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wegfahrsperren-Steuermodul (ICM) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0AA314012003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G6JB0AA314012004">
+<testgroup>
+<title>
+Bestätigung von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Fehlercode(s) löschen. Siehe dazu 
+<intxref refid = "G6JB0AA314003">Löschen von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob ein Diagnosecode erfasst wird. Siehe hierzu 
+<intxref refid = "G6JB0AA314002">Abruf von Diagnosecodes (DTC):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1621 noch immer erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Sicherungen
+</title>
+<test1>
+<ptxt>
+Überprüfen, ob irgendeine der zugehörigen Sicherungen durchgebrannt ist.
+</ptxt>
+</test1>
+<question>
+Ist irgendeine Sicherung durchgebrannt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Durchgebrannte Sicherung(en) erneuern.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Wegfahrsperren-Steuermoduls (ICM) auf schlechte Verbindung
+</title>
+<test1>
+<ptxt>
+Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) abklemmenen. Siehe dazu 
+<intxref refid = "G6JB0AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob die Kabelverbindungen am Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) normal sind.
+</ptxt>
+</test1>
+<question>
+Ist jede Kabelverbindung normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schlechte Verbindung(en) reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des ECM auf schlechte Verbindung
+</title>
+<test1>
+<ptxt>
+Den ECM-Steckverbinder &#8220;E23&#8221; abklemmen. Siehe hierzu 
+<intxref refid = "G6JB0A1316001">Aus- und Einbau des Motorsteuermoduls (ECM):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob die Kabelverbindungen an den Kabelanschlüssen &#8220;E23-13&#8221; und &#8220;E23-28&#8221; normal sind.
+</ptxt>
+</test1>
+<question>
+Ist jede Kabelverbindung normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schlechte Verbindung(en) reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Unterbrechung im Stromversorgungsschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) anschließen. Siehe dazu 
+<intxref refid = "G6JB0AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalter auf ON die Spannung zwischen dem Kabelanschluss &#8220;G24-1&#8221; am Wegfahrsperren-Steuermodul (ICM) und Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung ca. 12 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrochenen Stromversorgungsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Unterbrechung im Massekabelschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+Bei Zündschalter auf ON die Spannung zwischen dem Kabelanschluss &#8220;G24-2&#8221; am Wegfahrsperren-Steuermodul (ICM) und Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Ist die Spannung 0?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung im Massekabelschaltkreis beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Unterbrechung im Kommunikationskabelschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) abklemmenen. Siehe dazu 
+<intxref refid = "G6JB0AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den ECM-Steckverbinder &#8220;E23&#8221; abklemmen. Siehe hierzu 
+<intxref refid = "G6JB0A1316001">Aus- und Einbau des Motorsteuermoduls (ECM):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen dem Kabelanschluss &#8220;G24-3&#8221; am Steckverbinder des Wegfahrsperren-Steuermoduls (ICM) und dem Kabelanschluss &#8220;E23-28&#8221; am ECM-Steckverbinder überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung im Kommunikationskabelschaltkreis beseitigen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kommunikationskabelschaltkreis auf Masseschluss prüfen.
+</title>
+<test1>
+<ptxt>
+Mit abgeklemmtem Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) und abgeklemmtem ECM-Steckverbinder &#8220;E23&#8221; den Widerstand zwischen Kabelanschluss &#8220;G24-3&#8221; am Steckverbinder des Wegfahrsperren-Steuermoduls (ICM) und der Karosseriemasse überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Masseschluss im Kommunikationskabelschaltkreis beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kommunikationskabelschaltkreis auf Kurzschluss zur Stromversorgung prüfen.
+</title>
+<test1>
+<ptxt>
+Mit abgeklemmtem Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) und abgeklemmtem ECM-Steckverbinder &#8220;E23&#8221; den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen dem Kabelanschluss &#8220;G24-3&#8221; am Steckverbinder des Wegfahrsperren-Steuermoduls (ICM) und der Karosseriemasse überprüfen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kurzschluss zur Stromversorgung im Kommunikationskabelschaltkreises beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Unterbrechung im Kommunikationskabelschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+Mit abgeklemmtem Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) und abgeklemmtem ECM-Steckverbinder &#8220;E23&#8221; den Widerstand zwischen Kabelanschluss &#8220;G24-4&#8221; am Steckverbinder des Wegfahrsperren-Steuermoduls (ICM) und Kabelanschluss &#8220;E23-13&#8221; am ECM-Steckverbinder überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung im Kommunikationskabelschaltkreis beseitigen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kommunikationskabelschaltkreis auf Masseschluss prüfen.
+</title>
+<test1>
+<ptxt>
+Mit abgeklemmtem Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) und abgeklemmtem ECM-Steckverbinder &#8220;E23&#8221; den Widerstand zwischen Kabelanschluss &#8220;G24-4&#8221; am Steckverbinder des Wegfahrsperren-Steuermoduls (ICM) und der Karosseriemasse überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Masseschluss im Kommunikationskabelschaltkreis beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kommunikationskabelschaltkreis auf Kurzschluss zur Stromversorgung prüfen.
+</title>
+<test1>
+<ptxt>
+Mit abgeklemmtem Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) und abgeklemmtem ECM-Steckverbinder &#8220;E23&#8221; den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen dem Kabelanschluss &#8220;G24-4&#8221; am Steckverbinder des Wegfahrsperren-Steuermoduls (ICM) und der Karosseriemasse überprüfen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kurzschluss zur Stromversorgung im Kommunikationskabelschaltkreises beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Auf Kurzschluss im Kommunikationskabelschaltkreis prüfen
+</title>
+<test1>
+<ptxt>
+Mit abgeklemmtem Steckverbinder &#8220;G24&#8221; des Wegfahrsperren-Steuermoduls (ICM) und abgeklemmtem ECM-Steckverbinder &#8220;E23&#8221; den Widerstand zwischen Kabelanschluss &#8220;G24-3&#8221; und Kabelanschluss &#8220;G24-4&#8221; am Steckverbinder des Wegfahrsperren-Steuermoduls (ICM) überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kurzschluss in Kommunikationskabelschaltkreisen beseitigen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Wegfahrsperren-Steuermoduls (ICM)
+</title>
+<test1>
+<ptxt>
+Wegfahrsperren-Steuermodul (ICM) überprüfen. Siehe dazu 
+<intxref refid = "G6JB0AA314018">Überprüfung des Wegfahrsperren-Steuermoduls (ICM) und seines Schaltkreises:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Funktioniert das Wegfahrsperren-Steuermodul (ICM) einwandfrei?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+ECM durch ein neues ersetzen. Siehe dazu 
+<intxref refid = "G6JB0A1316001">Aus- und Einbau des Motorsteuermoduls (ECM):Für Benzinmotor-Modell</intxref>
+, und danach 
+<intxref refid = "G6JB0AA316003">Vorgehensweise nach dem Austausch des ECM:Für Benzinmotor-Modell</intxref>
+ durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wegfahrsperren-Steuermodul (ICM) durch ein neues ersetzen. Siehe dazu 
+<intxref refid = "G6JB0AA316001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM):Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E4504009" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "0" modify = "0">
+<title>
+ABS-Warnleuchte bleibt eingeschaltet
+</title>
+<servinfosub id = "G5JB0E4504009001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E4504008">ABS-Warnleuchte wird bei Stellen des Zündschalters auf ON nicht eingeschaltet</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E4504009002">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+Das Ein-&#x002F;Ausschalten der ABS-Warnleuchte wird vom ABS (ESP&#174;)-Steuermodul über das Lampentreibermodul im Kombinationsinstrument gesteuert.
+</ptxt>
+<ptxt>
+Wenn das Antiblockiersystem in gutem Zustand ist, schaltet das ABS (ESP&#174;)-Steuermodul beim Stellen des Zündschalters auf ON die ABS-Warnleuchte 2 Sekunden lang ein und dann wieder aus. Wird eine Systemstörung festgestellt, schaltet das ABS (ESP&#174;)-Steuermodul die ABS-Warnleuchte durchgehend ein. Des weiteren wird die Warnleuchte vom Lampentreibermodul eingeschaltet, wenn der Steckverbinder des ABS (ESP&#174;)-Steuermoduls gelöst wird.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E4504009003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0E4504009004">
+<testgroup>
+<test1>
+<ptxt>
+DTC abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen DTC vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit dem entsprechenden DTC-Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Sind die Sicherungen für den ABS-Pumpenmotor und das ABS-Magnetventil in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Sicherung austauschen und den Schaltkreis auf Masseschluss untersuchen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Steckverbinder vom ABS (ESP&#174;)-Steuermodul lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Anschluss zum ABS (ESP&#174;)-Steuermodul an den Steckverbinderklemmen &#8220;E03-7&#8221; und &#8220;E03-13&#8221; (bzw. &#8220;E53-16&#8221;, &#8220;E53-35&#8221; und &#8220;E53-47&#8221;) in Ordnung ist.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, den Zündschalter auf ON stellen und die Spannung zwischen Klemme &#8220;E03-7&#8221; (bzw. &#8220;E53-35&#8221;) und der Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt sie 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung im Schaltkreis des Kabels &#8220;GRN&#x002F;ORN&#8221;
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Anschluss zum ABS (ESP&#174;)-Steuermodul an den Steckverbinderklemmen &#8220;E03-1&#8221; und &#8220;E03-14&#8221; (bzw. &#8220;E53-1&#8221; und &#8220;E53-32&#8221;) in Ordnung ist.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, den Zündschalter auf ON stellen und die Spannung zwischen Klemme &#8220;E03-1&#8221; sowie &#8220;E03-14&#8221; (bzw. &#8220;E53-1&#8221; sowie &#8220;E53-32&#8221;) und der Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt sie 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung im Schaltkreis der Kabel &#8220;WHT&#x002F;RED&#8221; und&#x002F;oder &#8220;WHT&#x002F;BLU&#8221;
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF stellen und die Spannung zwischen Klemme &#8220;E03-13&#8221; sowie &#8220;E03-26&#8221; (bzw. &#8220;E-53-1&#8221; sowie &#8220;E53-32&#8221;) und der Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Massekreis des ABS (ESP&#174;)-Hydraulik-&#x002F;Steuermoduls
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis zwischen Kombinationsinstrument und ABS (ESP&#174;)-Steuermodul gemäß 
+<intxref refid = "G5JB0E4504020">DTC U1073: Steuermodul-Kommunikationsbus aus</intxref>
+ prüfen.
+</ptxt>
+<question>
+Ist der CAN-Kommunikationsschaltkreis in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ein funktionierendes Kombinationsinstrument probeweise anschließen und die Prüfung wiederholen. Falls die ABS-Warnleuchte eingeschaltet bleibt, probeweise ein funktionierendes ABS (ESP&#174;)-Hydraulik-&#x002F;Steuermodul anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

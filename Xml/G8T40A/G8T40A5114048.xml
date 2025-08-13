@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A5114048" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2764: Niedrige Spannung im Steuerschaltkreis der Druckregelmagnetspule der Drehmomentwandlerkupplung
+</title>
+<servinfosub id = "G8T40A5114048001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A5114047">DTC P2763: Hohe Spannung im Druckregelmagnetspulen-Steuerschaltkreis der Drehmomentwandlerkupplung:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A5114048002">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.035in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Spannung an der TCM-Klemme des TCC-Druckregelmagnetventils ist zu niedrig, obwohl das TCM einen Befehl zum Einschalten an die TCC-Druckregelmagnetspule abgibt.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des TCC-Druckregelmagnetventils ist unterbrochen oder hat Masseschluss.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Störung des TCC-Druckregelmagnetventils
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A5114048003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zur Durchführung der Probefahrt einen sicheren, verkehrsfreien Ort wählen, wo die Möglichkeit von Verkehrsunfällen praktisch ausgeschlossen ist. Vorsichtig vorgehen, um Unfälle zu vermeiden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Probefahrt sollte von 2 Personen, einem Fahrer und einem Prüfer, auf einer ebenen Straße ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Das Diagnosegerät bei Zündschalterstellung OFF an das DLC anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die in TCM und ECM gespeicherten DTCs mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor mindestens 20 Sekunden lang im Leerlauf in Schaltstufe &#34;P&#34; drehen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTCs, vorgemerkte DTCs und Schnappschussdaten abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A5114048004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A5114048005">
+<testgroup>
+<question>
+Wurde die &#34;A&#x002F;T-Systemüberprüfung&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A5114001">A&#x002F;T-Systemüberprüfung:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreis des TCC-Druckregelmagnetventils auf Masseschluss prüfen
+</title>
+<test1>
+<ptxt>
+Die TCM-Steckverbinder abziehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreien Kontakt mit dem TCM an den Anschlussklemmen &#34;E92-3&#34; und &#34;E92-5&#34; überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ist der Anschluss in Ordnung, Durchgang zwischen der Anschlussklemme &#34;E92-5&#34; des abgezogenen kabelbaumseitigen TCM-Steckverbinders und Masse überprüfen.
+</ptxt>
+</test1>
+<question>
+Besteht Durchgang?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Schaltkreis des TCC-Druckregelmagnetventils hat Masseschluss. Falls der Schaltkreis OK ist, weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Schaltkreis des TCC-Druckregelmagnetventils auf Unterbrechung prüfen
+</title>
+<test1>
+<ptxt>
+Widerstand zwischen den Anschlussklemmen &#34;E92-3&#34; und &#34;E92-5&#34; des abgezogenen kabelbaumseitigen TCM-Steckverbinders überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist er unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Unterbrechung im Schaltkreis des TCC-Druckregelmagnetventils. Falls der Schaltkreis OK ist, weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+TCC-Druckregelmagnetventil prüfen
+</title>
+<test1>
+<ptxt>
+Das TCC-Druckregelmagnetventil überprüfen. Siehe hierzu 
+<intxref refid = "G8T40A5116022">Überprüfung der Magnetventile (Schaltmagnetspule A, Schaltmagnetspule B, TCC-Druckregelmagnetspule und Druckregelmagnetspule):4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind die Prüfergebnisse zufriedenstellend?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Zeitweilige Störung oder fehlerhaftes TCM. Auf zeitweilige Störungen prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Das TCC-Druckregelmagnetventil austauschen. Siehe hierzu 
+<intxref refid = "G8T40A5116021">Aus- und Einbau der Magnetventile (Schaltmagnetspule A, Schaltmagnetspule B, TCC-Druckregelmagnetspule und Druckregelmagnetspule):4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

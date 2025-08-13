@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1124049" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2101
+</title>
+<servinfosub id = "G8T40A1124049001">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2101: Bereich&#x002F;Leistung des Drosselklappenstellmotor-Schaltkreises
+</emph>
+</ptxt>
+<ptxt>
+Der Treiberschaltkreis des Drosselklappenstellmotors weist eine Störung auf (Unterbrechung oder Überhitzung des Geräts).
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Drosselklappenstellmotor und&#x002F;oder zugehöriger Schaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1124049002">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1124049003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Gaspedal 2 Sek. lang vollständig durchtreten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Gaspedal 2 Sek. lang in Leerlaufstellung halten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Schritt 2) bis 3) 3-mal wiederholen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A1124049004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A1124049005">
+<testgroup id = "G8T40A1124049006">
+<question>
+Wurde die &#34;Überprüfung des Motor- und Abgassteuerungssystems&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1124001">Überprüfung des Motor- und Abgassteuerungssystems:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1124049007">
+<title>
+Überprüfung des Treiberschaltkreises des Drosselklappenstellmotors
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen und die Steckverbinder von Drosselklappengehäuse-Baugruppe und ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf richtigen Klemmenanschluss an den Steckverbindern von Drosselklappengehäuse-Baugruppe und ECM prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn die Verbindungen in Ordnung sind, die Signalstromkreise (B1 &#8211; B2) des Drosselklappenstellmotors auf Folgendes überprüfen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kabelbaumwiderstand des jeweiligen Treiberschaltkreises des Drosselklappenstellmotors liegt unter 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Isolationswiderstand des jeweiligen Treiberschaltkreises des Drosselklappenstellmotors zwischen dem Steckverbinder der Drosselklappengehäuse-Baugruppe und Karosseriemasse ist unendlich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Kabelbaum-Isolationswiderstand zwischen den Anschlussklemmen des Treiberschaltkreises des Drosselklappenstellmotors und den Anschlussklemmen am Steckverbinder der Drosselklappengehäuse-Baugruppe ist unendlich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Spannung jedes Treiberschaltkreises des Drosselklappenstellmotors beträgt bei Zündschalter auf ON 0 - 1 V.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defekten Kabelbaum reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1124049008">
+<title>
+Überprüfung der Drosselklappengehäuse-Baugruppe
+</title>
+<test1>
+<ptxt>
+Leistung des Drosselklappengehäuses überprüfen. 
+<intxreftitleoff1 refid = "G8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes ECM einbauen und erneut überprüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Drosselklappengehäuse-Baugruppe austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

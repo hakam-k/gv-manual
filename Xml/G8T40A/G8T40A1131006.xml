@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "G8T40A1131006" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Beschreibung des elektrischen Drosselklappensystems
+</title>
+<ptxt>
+Das elektrische Drosselklappensystem besteht aus Folgendem.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Drosselklappengehäuse mit Drosselklappe, Drosselklappenstellmotor und den Sensoren für Drosselklappenstellung (TP) (Haupt-&#x002F;Nebensensor)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gaspedal-Baugruppe mit Sensoren für Gaspedal-Position (APP) (Haupt-&#x002F;Nebensensoren) 
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<servinfosub id = "G8T40A1131006001">
+<title>
+Funktionsbeschreibung
+</title>
+<ptxt>
+Das ECM (5) erkennt den durchgedrückten Bereich des Gaspedals auf Grundlage der Signalspannung des APP-Sensors (1). Das ECM berechnet anhand dieser Daten und der Motorbetriebsbedingung die Soll-Drosselklappenöffnung. Andererseits erkennt das ECM die Drosselklappenöffnung anhand der Signalspannung des TP-Sensors (3) im Drosselklappengehäuse (2) und vergleicht diese mit der oben errechneten Soll-Drosselklappenöffnung. Wenn eine Differenz zwischen den Werten vorliegt, regelt das ECM das Einschaltverhältnis (100 &#x0025; - 0 &#x0025;) des Drosselklappenstellglieds entsprechend dieser Differenz und steuert das Drosselklappenstellglied (4) im Drosselklappengehäuse damit an. Wenn keine Differenz vorliegt, regelt das ECM das Einschaltverhältnis des Drosselklappenstellglieds auf den Sollwert, um die Drosselklappenöffnung beizubehalten. So wird die Drosselklappe (8) geöffnet und geschlossen, um die optimale Drosselklappenöffnung zu erzielen.
+</ptxt>
+<ptxt>
+Da bei diesem System der TP-Sensor und der APP-Sensor jeweils aus zwei Sensoren (Haupt- und Nebensensor) bestehen, sind hochpräzise und äußerst zuverlässige Steuerung und Störungserkennung gewährleistet. Erkennt das ECM eine Systemstörung, schaltet es das Drosselklappenstellglied aus. Wenn das Drosselklappenstellglied ausgeschaltet ist, wird die Drosselklappe durch das Gleichgewicht von Rückstellfeder und Öffnungsfeder im Drosselklappengehäuse von der vollständig geschlossenen Position auf eine Öffnung von ca. 22 - 27&#176; (Standardöffnung) fixiert.
+</ptxt>
+<ptxt>
+Dieses Drosselklappengehäuse besitzt kein IAC-Ventil für die Leerlaufsteuerung. Die Leerlaufsteuerung erfolgt über das Drosselklappenstellglied.
+</ptxt>
+<figure>
+<graphic graphicname = "I9T401111005.swf" width = "183.000mm" height = "77.967mm" ver = "02" gw = "441" gh = "204"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.331in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.157in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.331in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.048in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.331in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.893in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+CPU
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signalkreis des APP-Sensors (Nebensensor)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+13.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Steuerkreis des Drosselklappenstellglieds
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Treiberschaltkreis des Drosselklappenstellglieds
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signalkreis des TP-Sensors (Hauptsensor)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+9.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signalkreis des APP-Sensors (Hauptsensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+12.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signalkreis des TP-Sensors (Nebensensor)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "G8T40A1131006002">
+<title>
+Beschreibung der Kalibrierung des elektrischen Drosselklappensystems
+</title>
+<ptxt>
+Das ECM errechnet die Drosselklappenposition basierend auf den Daten für die vollständig geschlossene Drosselklappenposition.
+</ptxt>
+<ptxt>
+Die vollständig geschlossene Position der Drosselklappe (Signalspannung des TP-Sensors) ist bei jedem System unterschiedlich und hängt von den individuellen Differenzen der Drosselklappe, des TP-Sensors und des APP-Sensors ab. Da diese Differenzen für die Steuerung der Drosselklappe berücksichtigt werden müssen, ist es notwendig, die vollständig geschlossene Drosselklappenposition im ECM zu kalibrieren.
+</ptxt>
+<ptxt>
+Nach Durchführung jeder der folgenden Wartungen muss die im ECM gespeicherte Position der vollständig geschlossenen Drosselklappe kalibriert werden. 
+<intxreftitleoff1 refid = "G8T40A1336005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ausfall der ECM-Ersatzstromversorgung (d.&#160;h. Abklemmen eines Batteriekabels, Austausch der Batterie oder Sicherung &#34;ECM&#34; durchgebrannt)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Austausch des ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Löschen der das elektrische Drosselklappensystem betreffenden DTCs: P0607, P0122, P0123, P0222, P0223, P2100, P2101, P2102, P2103, P2111, P2119, P2122, P2123, P2127, P2128, P2135 oder P2138)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Austausch des Drosselklappengehäuses 
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

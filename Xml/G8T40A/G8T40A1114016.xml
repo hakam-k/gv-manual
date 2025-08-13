@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A1114016" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0031&#x002F;P0032: Niedrige&#x002F;hohe Spannung im Steuerkreis des Lambdasonden-Heizelements (Sensor-1)
+</title>
+<servinfosub id = "G8T40A1114016001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A1114015">DTC P0030: Heizelement-Steuerkreis der beheizten Lambdasonde Nr. 1:M16A und J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1114016002">
+<title>
+Beschreibung des A&#x002F;F-Sensors
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A1111010">Beschreibung des A&#x002F;F-Sensors:M16A und J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A1114016003">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.416in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.782in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0031:
+</emph>
+</ptxt>
+<ptxt>
+Die Spannung im Heizungs-Steuerkreis des A&#x002F;F-Sensors liegt ständig und über einen längeren Zeitraum als vorgegeben unter dem Sollwert, obwohl das Einschaltverhältnis der A&#x002F;F-Sensorheizung bei laufendem Motor weniger als 90 &#x0025; beträgt. (Das ECM erkennt keine Impulse im Steuerkreis der Heizungssteuerung.)
+</ptxt>
+<ptxt>
+(2-Fahrten-Testlogik)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0032:
+</emph>
+</ptxt>
+<ptxt>
+Die Spannung im Heizungs-Steuerkreis des A&#x002F;F-Sensors liegt ständig und über einen längeren Zeitraum als vorgegeben über dem Sollwert, obwohl das Einschaltverhältnis der A&#x002F;F-Sensorheizung bei laufendem Motor mehr als 10 &#x0025; beträgt. (Das ECM erkennt keine Impulse im Steuerkreis der Heizungssteuerung.)
+</ptxt>
+<ptxt>
+(2-Fahrten-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis der A&#x002F;F-Sensorheizung
+</ptxt>
+</item>
+<item>
+<ptxt>
+A&#x002F;F-Sensorheizung
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A1114016004">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Diagnosegerät anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und den DTC mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und auf normale Betriebstemperatur bringen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Motor mindestens 1 min. lang im Leerlauf laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Aktuelle und vorgemerkte DTCs abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A1114016005">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G8T40A1110003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche:M16A und J20A</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G8T40A1114016006">
+<testgroup id = "G8T40A1114016007">
+<question>
+Wurde die &#34;Überprüfung des Motor- und Abgassteuerungssystems&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A1114001">Überprüfung der Motorsteuerung und Emissionsregelung:M16A und J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016008">
+<title>
+Überprüfung des Schaltkreises der A&#x002F;F-Sensorheizung
+</title>
+<test1>
+<ptxt>
+Den A&#x002F;F-Sensorstecker bei Zündschalterstellung OFF abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum A&#x002F;F-Sensorstecker prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn die Verbindung in Ordnung ist, bei Zündschalterstellung ON die Spannung zwischen der Heizung-Anschlussklemme des A&#x002F;F-Sensorsteckverbinders und Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die gemessene Spannung 10 - 14 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016009">
+<title>
+Überprüfung der Heizungssicherung der beheizten Lambdasonde.
+</title>
+<test1>
+<ptxt>
+Überprüfen, ob die Sicherung &#34;O2 HTR&#34; (1) durchgebrannt ist.
+</ptxt>
+<testfigure>
+<title>
+Für J20A-Motor
+</title>
+<graphic graphicname = "I5JB0A110028.swf" width = "90.000mm" height = "47.981mm" ver = "02" gw = "155" gh = "119"/>
+</testfigure>
+<testfigure>
+<title>
+Für M16A-Motor
+</title>
+<graphic graphicname = "I5JB0A110029.swf" width = "90.000mm" height = "47.628mm" ver = "02" gw = "156" gh = "118"/>
+</testfigure>
+</test1>
+<question>
+Ist die Sicherung &#34;O2 HTR&#34; in Ordnung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016010">
+<title>
+Widerstandprüfung der Heizung von A&#x002F;F-Sensor und beheizter Lambdasonde
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder der beheizten Lambdasonde Nr.2 abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Heizungswiderstand des A&#x002F;F-Sensors und der beheizten Lambdasonde gemäß 
+<intxref refid = "G8T40A1316010">Überprüfung des Luft-Kraftstoff-Gemischsensors (AF-Sensor) am Fahrzeug:M16A und J20A</intxref>
+ und 
+<intxref refid = "G8T40A1316011">Überprüfung des Heizelements der beheizten Lambdasonde (HO2S-2) am Fahrzeug:M16A und J20A</intxref>
+ messen.
+</ptxt>
+</test1>
+<question>
+Sind A&#x002F;F-Sensorheizung und Lambdasondenheizung in gutem Zustand?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den defekten Sensor austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016011">
+<title>
+Überprüfung des Stromversorgungskreises des Heizungsrelais für die Lambdasonde
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF das Einbaurelais Nr.2 (J20A-Motor) (1) bzw. das Heizungsrelais für die Lambdasonde (M16A-Motor) (2) ausbauen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum Relaissteckverbinder prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn die Verbindung in Ordnung ist, bei Zündschalterstellung ON die Spannung zwischen allen Stromversorgungs-Anschlussklemmen des Relaissteckverbinders und Karosseriemasse messen.
+</ptxt>
+<testfigure>
+<title>
+Für J20A-Motor
+</title>
+<graphic graphicname = "I5JB0A110030.swf" width = "90.000mm" height = "48.333mm" ver = "02" gw = "155" gh = "120"/>
+</testfigure>
+<testfigure>
+<title>
+Für M16A-Motor
+</title>
+<graphic graphicname = "I5JB0A110031.swf" width = "90.000mm" height = "52.214mm" ver = "03" gw = "156" gh = "131"/>
+</testfigure>
+</test1>
+<question>
+Beträgt die Spannung jeweils 10 - 14 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Unterbrechung im Stromversorgungskreis.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016012">
+<title>
+Das Heizungsrelais für die Lambdasonde überprüfen.
+</title>
+<test1>
+<ptxt>
+Das Einbaurelais Nr.2 (J20A-Motor) bzw. das Heizungsrelais für die Lambdasonde (M16A-Motor) gemäß 
+<intxref refid = "G8T40A1316018">Überprüfung des Steuerrelais:M16A und J20A</intxref>
+ überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Teil einwandfrei?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Relais austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016013">
+<title>
+Überprüfung des Schaltkreises der A&#x002F;F-Sensorheizung
+</title>
+<test1>
+<ptxt>
+Den Isolationswiderstand zwischen den Heizungsanschlussklemmen des A&#x002F;F-Sensorsteckers messen.
+</ptxt>
+</test1>
+<question>
+Ist der gemessene Widerstand unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Das Kabel mit dem Kurzschluss reparieren oder ersetzen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016014">
+<title>
+Überprüfung des Schaltkreises des Heizungsrelais für die Lambdasonde
+</title>
+<test1>
+<ptxt>
+Den Widerstand zwischen der Spulenmasseklemme des Relaissteckverbinders und der Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der gemessene Widerstand weniger als 1 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+In der Ausgangsleitung des Relaissteckverbinders liegt eine Unterbrechung oder ein Masseschluss vor.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den defekten Schaltkreis reparieren oder ersetzen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016015">
+<title>
+ Überprüfung der A&#x002F;F-Sensorheizung
+</title>
+<test1>
+<ptxt>
+Den Heizungswiderstand des A&#x002F;F-Sensors gemäß 
+<intxref refid = "G8T40A1316010">Überprüfung des Luft-Kraftstoff-Gemischsensors (AF-Sensor) am Fahrzeug:M16A und J20A</intxref>
+ messen.
+</ptxt>
+</test1>
+<question>
+Ist die A&#x002F;F-Sensorheizung in gutem Zustand?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den A&#x002F;F-Sensor austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016016">
+<title>
+Überprüfung des Steuerkreises der A&#x002F;F-Sensorheizung
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung der Anschlussklemme des Schaltkreises der A&#x002F;F-Sensorheizung zum ECM-Steckverbinder prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn die Verbindung in Ordnung ist, den Widerstand aller Drähte des Heizungs-Schaltkreises am ECM-Steckverbinder zwischen ECM und A&#x002F;F-Sensor sowie zwischen ECM und Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der gemessene Widerstand in allen Drähten weniger als 1 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Den defekten Schaltkreis reparieren oder ersetzen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "G8T40A1114016017">
+<title>
+Überprüfung des Schaltkreises der A&#x002F;F-Sensorheizung
+</title>
+<test1>
+<ptxt>
+Den Isolationswiderstand zwischen der Steuerungsanschlussklemme und der Masseklemme der A&#x002F;F-Sensorheizung am ECM-Steckverbinder messen.
+</ptxt>
+</test1>
+<question>
+Ist der gemessene Widerstand unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Intaktes Ersatz-ECM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Das Kabel mit dem Kurzschluss reparieren oder ersetzen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

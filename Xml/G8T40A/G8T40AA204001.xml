@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA204001" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Selbstdiagnosefunktion des BCM
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Das BCM überwacht den Zustand der Systembauteile und ihrer Schaltkreise, wenn der Zündschalter auf ON steht. Wenn im System eine Störung auftritt, wird der Bereich, in dem die Störung liegt, im EEPROM-Speicher im BCM gespeichert.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der DTC kann auf eine der folgenden Arten abgerufen werden.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Der DTC kann mit dem an den DLC (1) angeschlossen SUZUKI-Diagnosegerät (2) abgerufen werden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der DTC kann vom dem Blinkmuster der Diebstahlwarnleuchte (3) abgelesen werden. Zusätzlich wird beim Blinken der Diebstahlschutzleuchte für die Ausgabe der Diagnosecodes der DTC auf dem Kombiinstrument (4) gleichzeitig angezeigt.
+</ptxt>
+<figure>
+<graphic graphicname = "I9T401A20006.swf" width = "183.000mm" height = "69.500mm" ver = "01" gw = "380" gh = "180"/>
+</figure>
+</item>
+</list2>
+</list1>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Eingabe&#x002F;Ausgabe-Tabelle des BCM
+</title>
+<tgroup cols = "3" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.753in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.046in"/>
+<colspec colnum = "3" colname = "3" colwidth = "2.411in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Steuerung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Eingang
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ausgang
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zentralverriegelungssystem
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schlosszylinderschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schalter für manuelle Türverriegelung
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Jedes Türverriegelungs-Stellglied
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Türschloss-Fernbedienung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schlüsselwarnschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Empfänger der Türschloss-Fernbedienung
+</ptxt>
+</item>
+<item>
+<ptxt>
+Jeder Türschalter
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Jedes Türverriegelungs-Stellglied
+</ptxt>
+</item>
+<item>
+<ptxt>
+Blinker- und Warnblinkanlagenrelais
+</ptxt>
+</item>
+<item>
+<ptxt>
+Innenraumleuchte
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+System für schlüsselloses Starten
+</ptxt>
+<ptxt>
+(Türverriegelungsfunktion)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Steuermodul für schlüsselloses Starten
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Jedes Türverriegelungs-Stellglied
+</ptxt>
+</item>
+<item>
+<ptxt>
+Blinker- und Warnblinkanlagenrelais
+</ptxt>
+</item>
+<item>
+<ptxt>
+Innenraumleuchte
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Heckscheibenwischer 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Heckscheibenwischer-Schalter für Intervallbetrieb (INT)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Heckscheibenwischer-EIN-Schalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schalter für Heckscheiben-Waschanlage
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Heckscheibenwischerrelais
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kombiinstrument
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lichtschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Warnschalter für Bremsflüssigkeitsstand
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sicherheitsgurtschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generator
+</ptxt>
+</item>
+<item>
+<ptxt>
+Öldruckschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Feststellbremsschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+P&#x002F;N-Modusschalter (Modell mit Automatikgetriebe)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Abblendlichtschalter (Fernlicht)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Jeder Türschalter
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kombiinstrument
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Innenraumleuchte
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Jeder Türschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlüsselwarnschalter
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Innenraumleuchte
+</ptxt>
+</item>
+<item>
+<ptxt>
+Laderaumleuchte
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Warnsummer
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schlüsselwarnschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlusslichtschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Türschalter für Fahrertür
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (Fahrzeuggeschwindigkeitssignal)
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (Rückwärtssignal) (falls vorhanden)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Steuermodul für schlüsselloses Starten (Modell mit System für schlüsselloses Starten)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Warnsummer (im Kombiinstrument)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Tagfahrlicht-System
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lichtschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (Motor-EIN&#x002F;AUS-Signal)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generator
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Abblendlichtrelais
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schlusslichtrelais
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+System für die automatische Aktivierung der Scheinwerfer
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lichtschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Feststellbremsschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Scheinwerfersensor
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schlusslichtrelais
+</ptxt>
+</item>
+<item>
+<ptxt>
+Abblendlichtrelais oder Fernlichtrelais
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nebelscheinwerfer
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lichtschalter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Nebelscheinwerferschalter
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Nebelscheinwerferrelais
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Heizung für Heckklappenscheibe und Außenspiegelheizung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Heizungsschalter für Heckklappenscheibe (im HVAC-Steuermodul)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generator
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (Motor-EIN&#x002F;AUS-Signal)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relais der Heizung für die Heckklappenscheibe
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relais für Außenspiegelheizung (falls vorhanden)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schlusslicht
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lichtschalter
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schlusslichtrelais
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Türverriegelungs-Ausschalter
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+SDM (Signal zur Airbag-Auslösung)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Jedes Türverriegelungs-Stellglied
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Diebstahlwarnleuchte
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schlüsselwarnschalter
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Diebstahlwarnleuchte (im HVAC-Steuermodul)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

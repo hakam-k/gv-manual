@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A1124090" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0033: Steuerkreis des Magnetventils für Ladedrucksteuerung
+</title>
+<attention2>
+<ptxt>
+Diese Störung kann zu einer raschen und beträchtlichen Verschmutzung des Dieselpartikelfilters führen.
+</ptxt>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler:
+</ptxt>
+<ptxt>
+Der Fehler wird als vorhanden gemeldet nach:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Motorstart.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Probefahrt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Leistungstest &#8220;Boost pressure valve&#8221; mit dem SUZUKI-Testgerät.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Falls die Störung vorliegt:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Turboaufladung ist nicht mehr gestattet.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die EGR-Funktion wird verhindert.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Fahrzeugleistung ist geschwächt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Einspritzanlagen-Warnleuchte (Fehlerwichtigkeit 1) brennt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls CC0 vorliegt, brennt die Motorwarnleuchte (MIL) nach drei aufeinander folgenden Fahrzyklen (Starten &#x002B;5 Sekunden &#x002B; Zündschalter auf OFF stellen und 40 Sekunden warten) auf.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Für Anschlüsse an den ECM-Steckverbindern sind Wartungskabel zu verwenden.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "G6JB0A1124090001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Für Schaltkreise und Steckverbindernummern siehe 
+<intxref refid = "G6JB0A910E048">A-5 Schaltplan der Motor- und Klimaanlagensteuerung (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G6JB0A1124090002">
+<title>
+Erfassungsbedingung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anzeige des SUZUKI-Testgeräts
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kurzschluss an &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kurzschluss an Karosseriemasse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Schaltkreisunterbrechung
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Interner elektronischer Fehler
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1124090003">
+<title>
+Fehlersuche für CC1: Kurzschluss an &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Ladedruckregler-Magnetventils prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Widerstand des Ladedruckregler-Magnetventils zwischen den Klemmen &#8220;C90-1&#8221; und &#8220;C90-2&#8221; prüfen:
+</ptxt>
+<ptxt>
+Falls der angezeigte Widerstand bei 20 &#176;C, 68 &#176;F nicht 14,7 &#8211; 16,1 &#937; beträgt, das Ladedruckregler-Magnetventil austauschen.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und die Isolierung der &#x002B;12-V-Zufuhr an folgender Verbindung prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C90-1&#8221; des Ladedruckregler-Magnetventils und Klemme &#8220;C85-23&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, das Ladedruckregler-Magnetventil austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1124090004">
+<title>
+Fehlersuche für CC0: Kurzschluss an Karosseriemasse und CO: Schaltkreisunterbrechung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Ladedruckregler-Magnetventils prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Widerstand des Ladedruckregler-Magnetventils zwischen den Klemmen &#8220;C90-1&#8221; und &#8220;C90-2&#8221; prüfen:
+</ptxt>
+<ptxt>
+Falls der angezeigte Widerstand bei 20 &#176;C, 68 &#176;F nicht 14,7 &#8211; 16,1 &#937; beträgt, das Ladedruckregler-Magnetventil austauschen.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und die Isolierung der Karosseriemasse an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C90-1&#8221; des Ladedruckregler-Magnetventils und Klemme &#8220;C85-23&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C90-2&#8221; des Ladedruckregler-Magnetventils und Kabel &#8220;E33-6&#8221; des Hauptrelais-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, das Ladedruckregler-Magnetventil austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G6JB0A1124090005">
+<title>
+Fehlersuche für D1: Interner elektronischer Fehler
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse des Ladedruckregler-Magnetventils prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Widerstand des Ladedruckregler-Magnetventils zwischen den Klemmen &#8220;C90-1&#8221; und &#8220;C90-2&#8221; prüfen:
+</ptxt>
+<ptxt>
+Falls der angezeigte Widerstand bei 20 &#176;C, 68 &#176;F nicht 14,7 &#8211; 16,1 &#937; beträgt, das Ladedruckregler-Magnetventil austauschen.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und die Isolierung der Karosseriemasse an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C90-1&#8221; des Ladedruckregler-Magnetventils und Klemme &#8220;C85-23&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C90-2&#8221; des Ladedruckregler-Magnetventils und Kabel &#8220;E33-6&#8221; des Hauptrelais-Steckverbinders
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, die Funktion der ECM-Ausgangsstufe prüfen. Bei angeschlossenem Ladedruckregler-Magnetventil:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Mit einem Voltmeter:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Die negative Prüfspitze des Voltmeters mit Kabel &#8220;C90-1&#8221; des Ladedruckregler-Magnetventils und positive Prüfspitze mit Kabel &#8220;C90-2&#8221; verbinden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Etwaige Magnetventil-Störungen löschen und den Leistungstest &#8220;Boost pressure valve&#8221; mit dem SUZUKI-Testgerät ausführen.
+</ptxt>
+<ptxt>
+Das Voltmeter sollte fünf Zyklen von zwei aufeinander folgenden Spannungen anzeigen: ~ 2,5 V (zyklisches Öffnungsverhältnis von 20&#x0025;), dann ~ 8,75 V (zyklisches Öffnungsverhältnis von 70&#x0025;).
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Mit einem Oszilloskop (5 V Bereich&#x002F;Einteilung und 1 ms&#x002F;div Zeitbasis):
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Die negative Prüfspitze des Oszilloskops mit Kabel &#8220;C90-1&#8221; des Ladedruckregler-Magnetventils und positive Prüfspitze mit Kabel &#8220;C90-2&#8221; verbinden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Etwaige Magnetventil-Störungen löschen und den Leistungstest &#8220;Boost pressure valve&#8221; mit dem SUZUKI-Testgerät ausführen.
+</ptxt>
+<ptxt>
+Das Oszilloskop sollte ein Rechteckwellensignal anzeigen mit einer Amplitude von 12,5 V (Batteriespannung) bei einer Frequenz von 140 Hz (mit einem zyklischen Öffnungsverhältnis, das von ~ 20 auf ~ 70&#x0025; aufeinander folgt).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls die Messung korrekt ist, das Magnetventil austauschen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls die Messung keine Steuer- oder kontinuierliche Spannung ergibt, ein funktionierendes ECM probeweise einbauen und die Prüfung wiederholen.
+</ptxt>
+</item>
+</list2>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

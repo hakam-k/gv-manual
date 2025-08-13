@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10A">
+<servcat sctnbr = "10" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40AA124003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Überprüfung des Tempomatsystems
+</title>
+<diag type = "test" id = "G8T40AA124003001">
+<testgroup>
+<test1>
+<ptxt>
+Einzelheiten der Störung notieren. Ein Fragebogen hilft Ihnen beim Sammeln der Informationen für eine einwandfreie Analyse und Diagnose.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob das in 
+<intxref refid = "G8T40AA124004">Diagnosefragebogen (Beispiel):J24B- und N32A-Modell</intxref>
+ beschriebene Problem tatsächlich im Fahrzeug auftritt. (Diesen Schritt möglichst im Beisein des Kunden ausführen.)
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf DTCs für ECM, ABS&#x002F;ESP&#174;-Steuermodul, 4WD-Steuermodul (Motor-Schalttyp mit Allradantrieb) und TCM (Modell mit Automatikgetriebe) prüfen und DTC(s) aufzeichnen.
+</ptxt>
+</test1>
+<question>
+Liegen DTCs vor, die keinen Bezug zum Tempomat haben (andere als DTC P0504 und P0575)?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Liegen DTCs für das Tempomatsystem vor?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Überprüfen und reparieren. Siehe dazu betreffende 
+<intxref refid = "G8T40AA124007">Diagnosestörungscodetabelle:J24B- und N32A-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind Überprüfung und Reparatur abgeschlossen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Defekte(s) Bauteil(e) überprüfen und reparieren, dann weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Grundkomponenten überprüfen und reparieren. Siehe dazu 
+<intxref refid = "G8T40AA124008">Symptomdiagnose des Tempomatsystems:J24B- und N32A-Modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Liegt ein Defekt vor?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Defekte(s) Bauteil(e) reparieren oder auswechseln, dann weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Auf zeitweilige Störungen überprüfen. Siehe dazu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Liegt ein Defekt vor?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Defekte(s) Bauteil(e) reparieren oder auswechseln, dann weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Sicherstellen, dass die Störung behoben ist und das Tempomatsystem einwandfrei funktioniert. Falls die erfolgte Reparatur mit einem DTC in Beziehung stand, den betreffenden DTC einmal löschen und sicherstellen, dass kein DTC mehr angezeigt wird.
+</ptxt>
+</test1>
+<question>
+Treten irgendwelche Störungssymptome, DTCs oder fehlerhaften Zustände auf?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit 2) von Schritt 1, und danach Störungsdiagnose erneut durchführen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Ende.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

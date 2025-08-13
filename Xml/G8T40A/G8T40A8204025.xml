@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A8204025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1053&#x002F;B1057: Masseschluss im Auslöseschaltkreis des Fahrer-&#x002F;Beifahrer-Gurtstraffers
+</title>
+<servinfosub id = "G8T40A8204025001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G8T40A8204023">DTC B1051 &#x002F; B1055: Zu hoher Widerstand im Auslöseschaltkreis des Fahrer- &#x002F; Beifahrer-Gurtstraffers</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Unbedingt die Anweisungen unter VORSICHT in &#34;Überprüfungsablauf des Airbag-Diagnosesystems&#34; beachten.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "G8T40A8204025002">
+<title>
+DTC wird durch Folgendes ausgelöst
+</title>
+<ptxt>
+Die am Auslöseschaltkreis des Fahrer- bzw. Beifahrersitz-Gurtstraffers gemessene Spannung liegt für einen festgelegten Zeitraum unter einem Sollwert.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A8204025003">
+<title>
+Beschreibung des Diagnoseablauftests
+</title>
+<ptxt>
+<emph etype = "bold">
+Schritt 1: Überprüfen, ob eine Störung im Gurtstraffer vorliegt.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 2: Auslöseschaltkreis des Gurtstraffers überprüfen. (Zwischen &#34;L29&#34; und &#34;L12&#34; bzw. &#34;L29&#34; und &#34;L36&#34;)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 3: Auslöseschaltkreis des Gurtstraffers überprüfen. (Zwischen &#34;G55&#34; und &#34;G47&#34;, &#34;L12&#34; und &#34;L33&#34; oder &#34;L36&#34; und &#34;L33&#34;)
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "G8T40A8204025004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A8204025005">
+<testgroup id = "G8T40A8204025006">
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die untere B-Säulenverkleidung auf der Fahrer- bzw. Beifahrerseite ausbauen und den Steckverbinder &#34;L12&#34; bzw. &#34;L36&#34; (1) des Gurtstraffers lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Klemmen des Steckverbinders &#34;L12&#34; bzw. &#34;L36&#34; auf einwandfreien Anschluss am Gurtstraffer überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, die Spezialwerkzeuge (A), (B) und (C) an den in Schritt 1) gelösten Steckverbinder &#34;L12&#34; bzw. &#34;L36&#34; anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0105">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0106">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0107">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820039.swf" width = "90.000mm" height = "59.622mm" ver = "01" gw = "171" gh = "152"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Die DTCs des SDM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1053 oder B1057 bei Zündschalterstellung ON noch immer angezeigt?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Ohne Seitenairbag und Kopf-&#x002F;Schulterairbag Weiter mit Schritt 2.
+</ptxt>
+<ptxt>
+Mit Seitenairbag und Kopf-&#x002F;Schulterairbag Weiter mit Schritt 3.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Den Zündschalter auf OFF drehen. Den Gurtstraffer austauschen. Siehe dazu 
+<intxref refid = "G8T40A8106002">Aus- und Einbau der vorderen Sicherheitsgurte</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "G8T40A8204025007">
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder &#34;G55&#34; in der Nähe des Konsolenfachs abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum entsprechenden Gurtstraffer an den Klemmen des Steckverbinders &#34;G55&#34; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn in Ordnung, die Spezialwerkzeuge (B) und (D) an den Steckverbinder &#34;G55&#34; anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0108">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0109">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820040.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "150" gh = "128"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Die DTCs des SDM abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1053 oder B1057 bei Zündschalterstellung ON noch immer angezeigt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1053: Masseschluss im Schaltkreis &#34;GRN&#x002F;ORN&#34; bzw. &#34;GRN&#x002F;YEL&#34;. (Zwischen den Steckverbindern &#34;L29&#34; und &#34;L12&#34;)
+</ptxt>
+<ptxt>
+DTC B1057: Masseschluss im Schaltkreis &#34;BLU&#x002F;ORN&#34; oder &#34;BLU&#x002F;YEL&#34;. (Zwischen den Steckverbindern &#34;L29&#34; und &#34;L36&#34;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "G8T40A8204025008">
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Spezialwerkzeuge (A), (B) und (C) oder (D) lösen und den SDM-Steckverbinder &#34;G47&#34; oder &#34;L33&#34; abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Kurzschlussbügel im SDM-Steckverbinder mit dem im Spezialwerkzeug (A) enthaltenen Lösewerkzeug (1) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen &#34;G47-7&#34; und Karosseriemasse, &#34;G47-8&#34; und Karosseriemasse (bei DTC B1053) oder &#34;G47-1&#34; und Karosseriemasse, &#34;G47-2&#34; und Karosseriemasse (bei DTC B1057) &#x005B;A&#x005D; oder zwischen &#34;L33-5&#34; und Karosseriemasse, &#34;L33-6&#34; und Karosseriemasse (bei DTC B1053) oder &#34;L33-7&#34; und Karosseriemasse, &#34;L33-8&#34; und Karosseriemasse (bei DTC B1057) &#x005B;B&#x005D; messen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0110">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0111">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0112">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0113">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820042.swf" width = "90.000mm" height = "117.478mm" ver = "01" gw = "235" gh = "316"/>
+</testfigure>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ein intaktes SDM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1053: Masseschluss im Schaltkreis &#34;GRN&#x002F;ORN&#34; oder &#34;GRN&#x002F;YEL&#34;. (Zwischen den Steckverbindern &#34;G55&#34; und &#34;G47&#34; oder den Steckverbindern &#34;L12&#34; und &#34;L33&#34;)
+</ptxt>
+<ptxt>
+DTC B1057: Masseschluss im Schaltkreis &#34;BLU&#x002F;ORN&#34; oder &#34;BLU&#x002F;YEL&#34;. (Zwischen den Steckverbindern &#34;G55&#34; und &#34;G47&#34; oder den Steckverbindern &#34;L36&#34; und &#34;L33&#34;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Nach Abschluss der Überprüfung und der Reparaturarbeiten die folgenden Arbeiten durchführen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle Bauteile des Airbagsystems wieder anschließen und sicherstellen, dass alle Bauteile einwandfrei montiert sind.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Eventuelle DTCs löschen. Siehe dazu 
+<intxref refid = "G8T40A8204005">Löschen von DTCs</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<intxref refid = "G8T40A8204001">Überprüfung des Airbag-Diagnosesystems</intxref>
+ wiederholen, um sicherzustellen, dass die Störung behoben wurde.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

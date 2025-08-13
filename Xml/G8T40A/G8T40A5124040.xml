@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G8T40A5124040" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1874: Störung im Schaltkreis des 4WD-Low-Schalters (Kurzschluss)
+</title>
+<servinfosub id = "G8T40A5124040001">
+<title>
+Schaltplan
+</title>
+<figure>
+<graphic graphicname = "I9T401511007.swf" width = "183.000mm" height = "66.325mm" ver = "01" gw = "252" gh = "171"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.167in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.278in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.167in"/>
+<colspec colnum = "4" colname = "4" colwidth = "5.584in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+4L&#x002F;N-Schalter
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+4WD-Steuermodul
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Anschlussbelegung des TCM-Steckverbinders (Ansicht von der Kabelbaumseite)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "G8T40A5124040002">
+<title>
+Bedingung für DTC-Erfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.799in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.411in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für DTC-Erfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Tatsächliche Verteilergetriebestellung ist 4H, obwohl TCM festgestellt hat, dass 4L&#x002F;N-Schalter auf eingeschaltet ist, wobei die Fahrzeuggeschwindigkeit zwischen 29 km&#x002F;h (18 mile&#x002F;h) und 88 km&#x002F;h (55 mile&#x002F;h) beträgt.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+4L&#x002F;N-Schalter oder dessen Schaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G8T40A5124040003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Das Diagnosegerät bei Zündschalterstellung OFF an das DLC anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die in TCM und ECM gespeicherten DTCs mit dem Diagnosegerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Motor starten und Verteilergetriebeschalter auf &#34;4H&#34; schalten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Motor mit Wählhebel in Schaltstufe &#34;D&#34; für mindestens 10 Sekunden im Leerlauf laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fahrzeug starten und mindestens 2 Minuten lang mit ca. 60 km&#x002F;h (37 mile&#x002F;h) fahren.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Fahrzeug anhalten.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTCs, vorgemerkte DTCs und Schnappschussdaten prüfen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G8T40A5124040004">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G8T40A5124040005">
+<testgroup>
+<title>
+Überprüfung des Fahrzeuggeschwindigkeitssignals
+</title>
+<test1>
+<ptxt>
+DTCs in ECM, ABS-Hydraulikeinheit&#x002F;Steuermodul und ESP&#174;-Hydraulikeinheit&#x002F;Steuermodul prüfen. Siehe hierzu 
+<intxref refid = "G8T40A1134003">DTC-Überprüfung:N32A</intxref>
+, 
+<intxref refid = "G8T40A4504004">DTC-Überprüfung</intxref>
+ und 
+<intxref refid = "G8T40A4604005">DTC-Überprüfung</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P0500 vor: Störung des Fahrzeug-Geschwindigkeitssensors (VSS) im ECM und&#x002F;oder DTC C1021, C1022, C1025, C1026, C1031, C1032, C1035 und&#x002F;oder C1036 in ABS-Hydraulikeinheit&#x002F;Steuermodul und ESP&#174;-Hydraulikeinheit&#x002F;Steuermodul?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Wurde die &#34;A&#x002F;T-Systemüberprüfung&#34; durchgeführt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G8T40A5124001">A&#x002F;T-Systemüberprüfung:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Steht ein SUZUKI-Diagnosegerät zur Verfügung?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des 4L&#x002F;N-Schalters und seines Schaltkreises
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF das SUZUKI-Diagnosegerät an den DLC anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+&#34;DATENLISTE&#34;-Modus auf dem Diagnosegerät wählen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+4L&#x002F;N-Schaltersignal (EIN oder AUS) auf der Anzeige prüfen, während der Verteilergetriebeschalthebel durch alle Stellungen geschaltet wird.
+</ptxt>
+<spec>
+<title>
+Vorgaben für 4L&#x002F;N-Schalter (Diagnosegerät)
+</title>
+<ptxt>
+&#34;4H&#34;-Stellung: AUS
+</ptxt>
+<ptxt>
+&#34;4L&#34;-Stellung: EIN
+</ptxt>
+</spec>
+</test1>
+<question>
+Wird wie oben beschrieben AUS&#x002F;EIN angezeigt?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Zeitweilige Störung oder TCM defekt. Auf zeitweilige Störungen prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des 4L&#x002F;N-Schalters und seines Schaltkreises
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Spannung an Anschlussklemme &#34;E93-4&#34; des angeschlossenen TCM-Steckverbinders prüfen, während der Verteilergetriebeschalthebel durch alle Stellungen geschaltet wird.
+</ptxt>
+<spec>
+<title>
+Vorgaben für 4L&#x002F;N-Schalter
+</title>
+<ptxt>
+&#34;4H&#34;-Stellung: 10 - 14 V
+</ptxt>
+<ptxt>
+&#34;4L&#34;-Stellung: 0 - 1 V
+</ptxt>
+</spec>
+</test1>
+<question>
+Entspricht die Spannung der Vorgabe?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Zeitweilige Störung oder fehlerhaftes TCM. Auf zeitweilige Störungen prüfen. Siehe hierzu 
+<intxref refid = "G8T40A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+. Wenn in Ordnung, intaktes TCM ersetzen und erneut prüfen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des 4L&#x002F;N-Schalters
+</title>
+<test1>
+<ptxt>
+Funktion des 4L&#x002F;N-Schalters überprüfen. Siehe dazu 
+<intxref refid = "G8T40A3316010">Prüfung der Verteilergetriebe-Baugruppe:Motor-Schalttyp (Verteilergetriebe mit Schaltstellmotor)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Masseschluss des 4L&#x002F;N-Schaltkreises. Falls Kabel und Anschlüsse OK sind, ein intaktes TCM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NEIN
+</result>
+<action>
+<ptxt>
+4L&#x002F;N-Schalter austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

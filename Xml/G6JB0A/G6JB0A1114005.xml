@@ -1,0 +1,2708 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G6JB0A1114005" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Diagnosecodetabelle (DTC)
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bei Nicht-Euro OBD-Modell en oder Fahrzeugen mit Diagnosesteckverbinder können einige der DTC-Nummern, die in der folgenden Tabelle mit einem Dreieck (<symbol name='utri' type='chara'/>) gekennzeichnet sind, je nach Fahrzeugausführung und geltenden Vorschriften vom ECM nicht erfasst werden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mit herkömmlichen Testgeräten können nur die in der Tabelle mit einem Stern (&#x002A;) gekennzeichneten DTC-Nummern abgerufen werden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+1 Fahrzyklus: Wenn während eines Fahrzyklus ein DTC erfasst wird, leucht die MIL auf.
+</ptxt>
+</item>
+<item>
+<ptxt>
+2 Fahrzyklen: Wenn der DTC, der während des ersten Fahrzyklus erfasst und vorübergehend gespeichert wurde, auch während des nächsten Fahrzyklus erfasst wird, leuchtet die MIL ebenfalls auf.
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#x002A;2 Fahrzyklen:
+</ptxt>
+<ptxt>
+Die MIL blinkt oder leuchtet. Siehe 
+<intxref refid = "G6JB0A1114039">DTC P0300&#x002F;P0301&#x002F;P0302&#x002F;P0303&#x002F;P0304: Fehlzündungen in verschiedenen Zylindern&#x002F;Zylinder 1&#x002F;Zylinder 2&#x002F;Zylinder 3&#x002F;Zylinder 4 Fehlzündungen in Zylinder:Für Modelle mit Benzinmotor</intxref>
+ für Einzelheiten.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.709in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.008in"/>
+<colspec colnum = "3" colname = "3" colwidth = "3.583in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.905in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-Nr.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfasste Störung
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+<ptxt>
+(DTC wird bei Erfassung registriert:)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MIL
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0010
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schaltkreis des Nockenwellenstellers (M16A-Motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Überwachungsspannung des Steuerimpulses des Nockenwellen-Stellventils stimmt nicht mit seinem Steuersignal überein. (Unterbrechung oder Kurzschluss)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114014"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0011
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nockenwellenposition &#8211; zu starke Frühverstellung oder Systemfunktion (M16A-Motor)
+</ptxt>
+</entry>
+<entry colname = "3" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Die Ist-Frühverstellung des Zündwinkels beträgt länger als 13 Sekunden weniger als 2,1&#176; Kurbelwinkel, obwohl die Soll-Frühverstellung des Zündwinkels bei Beschleunigung und einer Motordrehzahl von mehr als 1600 U&#x002F;min länger als 30 Sekunden mehr als 5,6&#176; Kurbelwinkel beträgt.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+oder
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Die Ist-Ventilsteuerung wird um mehr als 11,25&#176; Kurbelwinkel vorgestellt, obwohl der ECM-Befehl auf Spätverstellung schaltet. (2 Fahrten-Erfassungslogik)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114014"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0012
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nockenwellenposition &#8211; zu starke Spätverstellung (M16A-Motor)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0030
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Heizelement-Steuerkreis der beheizten Lambda-Sonde Nr. 1
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Impedanz des A&#x002F;F-Sensorelements liegt für mehr als 200 Sek. über 44 &#937;, obwohl das Heizelement des A&#937;F-Sensors bei laufendem Motor länger als vorgegeben eingeschaltet wurde. (A&#x002F;F-Sensor nicht aktiv)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114016"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0031
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Heizelement-Steuerkreis der beheizten Lambdasonde Nr. 1
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Spannung im Heizelement-Schaltkreis des A&#x002F;F-Sensors liegt ständig und über einen längeren Zeitraum als vorgegeben unter dem Sollwert, obwohl das Einschaltverhältnis des A&#x002F;F-Sensorheizelements bei laufendem Motor weniger als 90 &#x0025; beträgt. (Das ECM erkennt keine Impulse im Schaltkreis der Heizelementsteuerung.)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114016"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0032
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Heizelement-Steuerkreis der beheizten Lambda-Sonde Nr. 1
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Spannung im Heizelement-Schaltkreis des A&#x002F;F-Sensors liegt ständig und über einen längeren Zeitraum als vorgegeben über dem Sollwert, obwohl das Einschaltverhältnis des A&#x002F;F-Sensorheizelements bei laufendem Motor mehr als 10 &#x0025; beträgt. (Das ECM erkennt keine Impulse im Schaltkreis der Heizelementsteuerung.)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114017"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0037
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Heizelement-Steuerkreis der beheizten Lambdasonde Nr. 2
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Spannung im Schaltkreis der beheizten Lambdasonde Nr. 2 liegt ständig 5 Sek. lang unter dem vorgegebenen Wert, obwohl das Einschaltverhältnis des Heizelements der beheizten Lambdasonde Nr. 2 bei laufendem Motor weniger als 75 &#x0025; beträgt. (Im Überwachungssignal der Heizelementsteuerung werden keine Impulse erkannt.)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114017"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0038
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Heizelement-Steuerkreis der beheizten Lambdasonde Nr. 2
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Spannung im Schaltkreis der beheizten Lambdasonde Nr. 2 liegt ständig 5 Sek. lang über dem vorgegebenen Wert, obwohl das Einschaltverhältnis des Heizelements der beheizten Lambdasonde Nr. 2 bei laufendem Motor weniger als 25 &#x0025; beträgt. (Im Überwachungssignal der Heizelementsteuerung werden keine Impulse erkannt.)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114018"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0101
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bereich&#x002F;Leistung des Luftmengenmesser-Schaltkreises
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Das MAF-Volumen beträgt mehr als 25 g&#x002F;Sek., auch wenn die Motordrehzahl unter 900 U&#x002F;min liegt, und der Ansaugkrümmerdruck liegt bei einem Drosselklappenwinkel (TP) von unter 3,0&#176; unter 45 kPa (6,35 psi).
+</ptxt>
+</item>
+</list1>
+<ptxt>
+oder
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Das MAF-Volumen beträgt weniger als 4 g&#x002F;Sek., auch wenn die Motordrehzahl über 2500 U&#x002F;min liegt, und der Ansaugkrümmerdruck liegt bei einem Drosselklappenwinkel (TP) von über 15&#176; über 50 kPa (7,25 psi).
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114019"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0102
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Eingangsspannung im Luftmengenmesser-Schaltkreis
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des MAF-Sensors liegt ständig 0,5 Sek. unter 0,15 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114020"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0103
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Eingangsspannung im Luftmengenmesser-Schaltkreis
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des MAF-Sensors liegt ständig 0,5 Sek. über 5 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114021"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0106
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bereich&#x002F;Leistung des Ansaugkrümmer-Unterdruck-Schaltkreises
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Der Unterschied zwischen max. Ansaugkrümmer-Unterdruck und min. Ansaugkrümmerdruck liegt bei Leerlaufdrehzahl unter 1,3 kPa (0,19 psi).
+</ptxt>
+</item>
+</list1>
+<ptxt>
+oder
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Unterschied zwischen Außenluftdruck und Ansaugkrümmerdruck liegt bei 2000 U&#x002F;min mindestens 5 Sekunden lang unter 33,3 kPa (4,83 psi).
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0107
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Eingangsspannung im Schaltkreis des Ansaugkrümmer-Unterdruckfühlers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung am Ansaugkrümmer-Unterdruckfühler liegt ständig 0,5 Sek. lang unter 0,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114023"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0108
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Eingangsspannung im Schaltkreis des Ansaugkrümmer-Unterdruckfühlers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung am Ansaugkrümmer-Unterdruckfühler liegt ständig 0,5 Sek. lang über 4,5 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114024"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0111
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bereich&#x002F;Leistung des Schaltkreises des Ansaugluft-Temperaturfühlers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Unterschied zwischen dem maximalen und dem minimalen IAT-Wert beträgt weniger als 0,3 &#176;C (32,5 &#176;F), während der ECT-Wert 10 Min. nach einem Kaltstart mehr als 70 &#176;C (158 &#176;F) beträgt. (ECT unter 30 &#176;C (86 &#176;F) beim Motorstart)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114025"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0112
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Ansaugluft-Temperaturfühlers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des IAT-Fühlers liegt ständig 0,5 Sek. unter 0,2 V. (Zu hohe Ansauglufttemperatur (zu niedrige Spannung&#x002F;zu niedriger Widerstand))
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114026"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0113
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Ansaugluft-Temperaturfühlers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des IAT-Fühlers liegt ständig 0,5 Sek. über 4,8 V. (Zu niedrige Ansauglufttemperatur (zu hohe Spannung&#x002F;zu hoher Widerstand))
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114027"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0116
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bereich&#x002F;Leistung des Kühlwassertemperatur-Schaltkreises
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Wert des ECT-Fühlers liegt seit dem Motorstart bei laufendem Motor und einer Motorlast über dem vorgegebenen Wert (mehr als 1000 U&#x002F;min) für 2 bis 1116 min. (je nach ECT beim Motorstart) ständig unter &#8211;10 &#176;C, 14 &#176;F (M16-Motor) bzw. &#8211;5 &#176;C, 23 &#176;F (J20-Motor).
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114028"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0117
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Kühlwassertemperaturfühlers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des ECT-Sensors liegt ständig 0,5 Sek. unter 0,2 V. (Zu hohe Kühlmitteltemperatur (zu niedrige Spannung&#x002F;zu niedriger Widerstand))
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114029"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0118
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Kühlwassertemperaturfühlers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des ECT-Sensors liegt ständig 0,5 Sek. über 4,8 V. (Zu niedrige Kühlmitteltemperatur (zu hohe Spannung&#x002F;zu hoher Widerstand))
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114030"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0122
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Drosselklappensensors (Hauptsensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des Drosselklappensensors (Hauptsensor) liegt während der vorgegebenen Zeit ständig unter 0,3 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0123
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Drosselklappensensors (Hauptsensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des Drosselklappensensors (Hauptsensor) liegt während der vorgegebenen Zeit ständig über 4,7 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0131
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis der Lambdasonde (HO2S) Nr. 1
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die A&#x002F;F-Sensor-Anschlussspannung (LF&#x002B;) liegt unter 1,8 V oder der A&#x002F;F-Sensor-Ausgangsstrom liegt unter &#8211;5 mA.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0132
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis der Lambdasonde (HO2S) Nr. 1
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die A&#x002F;F-Sensor-Anschlussspannung (LF&#x002B;) liegt über 3,8 V oder der A&#x002F;F-Sensor-Ausgangsstrom liegt über &#8211;5 mA.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114033"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0133
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu langsames Ansprechen der beheizten Lambdasonde (HO2S) Nr. 1
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Das Verhältnis zwischen dem Integralwert der Ausgangsspannungsveränderung des A&#x002F;F-Sensors und dem Integralwert der Veränderung der kurzfristigen Gemischkorrektur liegt nach der Warmlaufphase bei konstanter Drehzahl und geringer Motorlast über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0134
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kein Ansprechen der beheizten Lambdasonde (HO2S) Nr. 1
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Impedanz des A&#x002F;F-Sensorelements liegt für mehr als 2 Sek. über 500 &#937;, obwohl das Heizelement des A&#937;F-Sensors bei laufendem Motor länger als 160 Sek. eingeschaltet war. (Unterbrechung des A&#x002F;F-Sensors oder des Sensorschaltkreises)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114034"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0137
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis der beheizten Lambdasonde (HO2S) Nr. 2
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bei hoher Motorlast (hoher Drehzahl) liegt die Spannung der beheizten Lambda-Sonde Nr. 2 für einen längeren Zeitraum als vorgegeben ständig unter 0,4 V. Außerdem liegt der Wert aus der Maximalspannung minus der Mindestspannung der beheizten Lambda-Sonde Nr. 2 während eines vorgegebenen Zeitraums ständig unter 0,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114034"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0138
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis der beheizten Lambdasonde (HO2S) Nr. 2
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bei hoher Motorlast (hoher Drehzahl) liegt die Spannung der beheizten Lambda-Sonde Nr. 2 für einen längeren Zeitraum als vorgegeben ständig über 0,85 V. Außerdem liegt der Wert aus der Maximalspannung minus der Mindestspannung der beheizten Lambda-Sonde Nr. 2 während eines vorgegebenen Zeitraums ständig unter 0,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114035"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0140
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kein Ansprechen der beheizten Lambdasonde (HO2S) Nr. 2
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Spannung der Lambdasonde 2 liegt nach dem Warmlaufen des Motors ständig 0,5 Sek. lang über 4,5 V (Unterbrechung).
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0171
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Magergemischstörung
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Gesamtwert für die Gemischkorrektur (kurzfristige Gemischkorrektur &#x002B; langfristige Gemischkorrektur) liegt ständig 30 bis 90 Sek. (je nach ECT-Wert) über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0172
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fettgemischstörung
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Gesamtwert für die Gemischkorrektur (kurzfristige Gemischkorrektur &#x002B; langfristige Gemischkorrektur) liegt ständig 30 bis 90 Sek. (je nach ECT-Wert) unter dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114037"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0222
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Drosselklappensensors (Nebensensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des Drosselklappensensors (Nebensensor) liegt während der vorgegebenen Zeit ständig unter 0,3 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114038"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0223
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Drosselklappensensors (Nebensensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des Drosselklappensensors (Nebensensor) liegt während der vorgegebenen Zeit ständig über 4,7 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114039"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0300
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fehlzündung in verschiedenen Zylindern
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fehlzündungen, die eine Überhitzung des Katalysators während 200 Motorumdrehungen verursachen, werden bei 2 oder mehr Zylindern erfasst. (Die MIL blinkt, solange diese Fehlzündung ständig auftritt.)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+oder
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fehlzündungen, die während 1000 Motorumdrehungen die Motorabgase nachteilig beeinflussen, werden bei 2 oder mehr Zylindern erfasst.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114039"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0301 &#x002F; <symbol name='utri' type='chara'/>&#x002A;P0302 &#x002F; <symbol name='utri' type='chara'/>&#x002A;P0303 &#x002F; <symbol name='utri' type='chara'/>&#x002A;P0304
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fehlzündung in Zylinder 1
+</ptxt>
+<ptxt>
+Fehlzündung in Zylinder 2
+</ptxt>
+<ptxt>
+Fehlzündung in Zylinder 3
+</ptxt>
+<ptxt>
+Fehlzündung in Zylinder 4
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fehlzündungen, die eine Überhitzung des Katalysators während 200 Motorumdrehungen verursachen, werden bei 1 Zylinder erfasst. (Die MIL blinkt, solange diese Fehlzündung ständig auftritt.)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+oder
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fehlzündungen, die während 1000 Motorumdrehungen die Motorabgase nachteilig beeinflussen, werden bei 1 Zylinder erfasst.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114040"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0327
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Klopfsensors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Klopfsensor-Spannung liegt ständig 0,5 Sek. lang unter 1,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114040"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0328
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Klopfsensors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Klopfsensor-Spannung liegt ständig 0,5 Sek. lang über 3,9 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114041"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+</ptxt>
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114042"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0335
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schaltkreis des Kurbelwinkelsensors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Für 2 Sek. kein Signal des CKP-Sensors, obwohl bei Anlasserbetätigung ein Anlassersignal eingeht.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114043"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0340
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schaltkreis des Nockenwellensensors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CMP-Fühlerimpuls liegt unter 20 Impulsen je 8 Kurbelwellenumdrehungen
+</ptxt>
+</item>
+<item>
+<ptxt>
+CMP-Fühlerimpuls liegt über 28 Impulsen je 8 Kurbelwellenumdrehungen
+</ptxt>
+</item>
+<item>
+<ptxt>
+Nockenwellensensorimpuls liegt unter 20 Impulsen zwischen 155&#176; Kurbelwinkel BTDC (M16A-Motor) bzw. 75&#176; Kurbelwinkel BTDC (J20A-Motor) und 5&#176; Kurbelwinkel BTDC bei 8 Kurbelwellenumdrehungen seit Motorstart.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114044"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0401
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Abgasrückführung als unzureichend erfasst
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Unterschied zwischen dem Ansaugkrümmer-Unterdruck bei geöffnetem EGR-Ventil und bei geschlossenem EGR-Ventil liegt unter dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114044"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0402
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Abgasrückführung als zu hoch erfasst
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Unterschied zwischen dem Ansaugkrümmer-Unterdruck bei geöffnetem EGR-Ventil und bei geschlossenem EGR-Ventil liegt über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114045"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0403
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schaltkreis der Abgasrückführung
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Überwachungsspannung des Steuerimpulses des EGR-Ventils stimmt in mehr als einem von 4 Polen nicht mit dem Ausgabebefehl überein.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114046"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0420
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Katalysatorwirkung unter Schwellenwert
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Das Verhältnis zwischen dem Integralwert der Ausgangsspannungsveränderung der Lambdasonde Nr. 2 und dem Integralwert der Ausgangsspannungsveränderung des A&#x002F;F-Sensors liegt nach der Warmlaufphase bei konstanter Drehzahl und geringer Motorlast über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114047"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0443
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Steuerschaltkreis des Tankdunst-Spülventils
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Überwachungsspannung des Steuerimpulses des Aktivkohlebehälter-Spülventils stimmt nicht mit seinem Steuersignal überein. (Unterbrechung oder Kurzschluss)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114048"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0462
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Kraftstoffstandgebers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Spannung am Kraftstoffstandgeber liegt ständig 3 Sek. lang unter 0,5 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114049"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0463
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Kraftstoffstandgebers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Spannung am Kraftstoffstandgeber liegt für 3 Sekunden ununterbrochen über 4,9 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114050"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0480
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schaltkreis von Lüfter Nr. 1 (Kühlerlüfter)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Überwachungsspannung des Kühlerlüfterrelaisausgangs stimmt nicht mit seinem Steuersignal überein.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114051"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0500
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Störung des Geschwindigkeitssensors (VSS)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ständig 4 Sek. lang kein Geschwindigkeitssignal-Eingang während Unterbrechung der Kraftstoffzufuhr bei einer Verzögerung auf 3600 U&#x002F;min oder weniger.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114052"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0504
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bremsschalter, &#8220;A&#8221;&#x002F;&#8220;B&#8221;-Korrelation
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Das Signal des Bremspedalschalters stimmt nicht mit dem Signal des Bremslichtschalters überein.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114053"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0532
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Kältemitteldrucksensor der Klimaanlage
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Signalspannung des A&#x002F;C-Kältemitteldrucksensors liegt ständig 0,5 Sek. lang unter 0,15 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114054"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0533
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Kältemitteldrucksensor der Klimaanlage (A&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Signalspannung des A&#x002F;C-Kältemitteldrucksensors liegt ständig 0,5 Sek. lang über 4,9 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114055"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0601
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Prüfsummenfehler im internen Speicher
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Datenschreibfehler oder Prüfsummenfehler
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114055"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0602
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Steuermodul-Programmierungsfehler
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Daten-Programmierungsfehler
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114055"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0607
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Leistung des Steuermoduls
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Daten-Programmierungsfehler
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114056"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0616
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Anlasserrelais
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Motor startet, obwohl das Fahrzeug steht und das Anlassersignal eine zu niedrige Spannung aufweist.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114057"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0617
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Anlasserrelais
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Das Anlassersignal weist bei laufendem Motor ständig 180 Sek. lang eine zu hohe Spannung auf.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114058"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0620
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lichtmaschinen-Schaltkreis
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Die Batteriespannung liegt über 14 V, obwohl die Lichtmaschinensteuerung auf maximal geschaltet ist (Einschaltverhältnis 100 &#x0025;).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Batteriespannung liegt unter 12,5 V, obwohl die Lichtmaschinensteuerung auf minimal geschaltet ist (Einschaltverhältnis 50 &#x0025;) und die elektrische Last weniger als 20 A beträgt.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114059"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0625
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Niedrige Spannung im Schaltkreis der Lichtmaschinenfeldklemme
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Das Einschaltverhältnis der Lichtmaschinenfeldspule beträgt länger als vorgegeben 100 &#x0025; (niedrige Spannung), obwohl die Lichtmaschinensteuerung auf maximal geschaltet ist (Einschaltverhältnis 100 &#x0025;), oder das Einschaltverhältnis der Lichtmaschinenfeldspule beträgt beim Anlassen des Motors 100 &#x0025; (niedrige Spannung).
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114059"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0626
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hohe Spannung im Schaltkreis der Lichtmaschinenfeldklemme
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Das Einschaltverhältnis der Lichtmaschinenfeldspule beträgt länger als vorgegeben 0 &#x0025; (hohe Spannung), obwohl die Lichtmaschinensteuerung auf minimal geschaltet ist (Einschaltverhältnis 0 &#x0025;).
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114060"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0660
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schaltkreis des Ansaugkrümmer-Tuningventils &#x002F; Unterbrechung (J20A-Motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Überwachungsspannung des IMT-Unterdruckmagnetventils stimmt nicht mit dem Steuersignal überein. (Unterbrechung oder Kurzschluss)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114061"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1501
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Niedrige Spannung im Schaltkreis des Stromsensors für elektrische Last (J20A-Motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Schaltkreisspannung des Stromsensors für elektrische Last liegt unter dem Sollwert. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114061"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1502
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hohe Spannung im Schaltkreis des Stromsensors für elektrische Last (J20A-Motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Schaltkreisspannung des Stromsensors für elektrische Last liegt über dem Sollwert. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114062"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P1510
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Störung in der ECM-Speicherstromversorgung
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bei laufendem Motor geht ständig 5 Sek. lang keine Speicherstromversorgungsspannung ein.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114063"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1603
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+TCM-Störungscode erfasst (J20A-Motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Wenn das ECM einen Störungscode von TCM empfängt, der ein Problem der Sensorschaltkreise und der berechneten Werte für Funktionen des TCM wie Leerlaufsteuerung, Motorleistungssteuerung usw. anzeigt, wird vom ECM DTC P1603 gesetzt. (Das TCM gibt den Störungscode an das ECM aus, wenn das TCM das Motorsteuersignal aufgrund von Störungen in Sensorschaltkreisen, die für die Getriebesteuerung verwendet werden, nicht berechnen kann.)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1674
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN-Kommunikation (Bus-Aus-Fehler)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Übertragungsfehler, der zwischen den Übertragungsdaten und Übertragungsmonitordaten (CAN-Busmonitor) inkonsistent ist, wurde mehr als siebenmal nacheinander erfasst. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114065"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P1676
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN-Kommunikation (TCM-Empfangsfehler)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ein Empfangsfehler in den Kommunikationsdaten des TCM wird ständig länger als vorgegeben festgestellt. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114066"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1678
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN-Kommunikation (Empfangsfehler für BCM)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Empfangsfehler der Kommunikationsdaten für das BCM wird ständig über die vorgegebene Zeit hinaus festgestellt. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114067"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P1685
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN-Kommunikation (Empfangsfehler für ABS&#x002F; ESP&#174;-Steuermodul)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Empfangsfehler der Kommunikationsdaten für das ABS- oder ESP&#174;-Steuermodul wird ständig für einen längeren Zeitraum als vorgegeben erfasst. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114068"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2101
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bereich&#x002F;Leistung des Schaltkreises des Drossenklappenmotors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Überwachungsspannung des Drosselklappenregler-Ausgangs (Einschaltverhältnisausgabe) stimmt nicht mit dem Steuerbefehl des Drosselklappenreglers überein. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114069"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2102
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Drosselklappenmotors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Versorgungsspannung im Schaltkreis des Drosselklappenreglers liegt selbst bei eingeschaltetem Drosselklappenregler-Steuerrelais für eine vorgeschriebene Zeit unter 5 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114070"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2103
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Drosselklappenmotors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Versorgungsspannung im Schaltkreis des Drosselklappenreglers liegt selbst bei ausgeschaltetem Drosselklappenregler-Steuerrelais für eine vorgeschriebene Zeit über 5 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114071"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2111
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Drosselklappenregler &#8211; klemmt in offenem Zustand
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bei der Diagnose der Drosselklappe bei Zündschalterstellung OFF ist die Standardöffnung der Drosselklappe mehr als 7&#176; größer als die geschlossene Stellung. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114072"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2119
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bereich&#x002F;Leistung des Drosselklappenreglers
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Unterschied zwischen dem gemessenen (Ist-) Drosselklappenwinkel und dem Soll-Drosselklappenwinkel, der anhand von Gaspedalöffnung und Motorzustand berechnet wird, liegt während der vorgegebenen Zeit ständig über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114073"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2122
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Eingangsspannung im Schaltkreis des Pedalpositionssensors (Hauptsensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des Gaspedalpositionssensors (Hauptsensor) liegt ständig 0,5 Sek. lang unter 0,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114074"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2123
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Eingangsspannung im Schaltkreis des Pedalpositionssensors (Hauptsensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des Gaspedalpositionssensors (Hauptsensor) liegt ständig 0,5 Sek. lang über 4,8 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114075"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2127
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Eingangsspannung im Schaltkreis des Pedalpositionssensors (Nebensensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des Gaspedalpositionssensors (Nebensensor) liegt ständig 0,5 Sek. lang unter 0,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114076"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2128
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Eingangsspannung im Schaltkreis des Pedalpositionssensors (Nebensensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des Gaspedalpositionssensors (Nebensensor) liegt ständig 0,5 Sek. lang über 4,8 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114077"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2135
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Spannungskorrelation der Drosselklappensensoren (Haupt- &#x002F; Nebensensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Unterschied zwischen dem vom Haupt-Drosselklappensensor und dem vom Neben-Drosselklappensensor vorgegebenen Öffnungswinkel liegt während der vorgegebenen Zeit kontinuierlich über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114078"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2138
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Spannungskorrelation der Pedalpositionssensoren (Haupt- &#x002F; Nebensensor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Unterschied zwischen dem vom Haupt-Gaspedalpositionssensor und dem vom Neben-Gaspedalpositionssensor vorgegebenen Öffnungswinkel liegt während der vorgegebenen Zeit kontinuierlich über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P2195
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lambda-Sondensignal hängt bei Magerstellung fest (Sonde Nr. 1)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des A&#x002F;F-Sensors liegt über 0,7 V, wenn das Fahrzeug nach der Warmlaufphase mit konstanter Geschwindigkeit und konstanter Motorlast gefahren wird. (2 Fahrten-Erfassungslogik)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P2196
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lambda-Sondensignal hängt bei Fettstellung fest (Sonde Nr. 1)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Die Ausgangsspannung des A&#x002F;F-Sensors liegt unter 0,2 V, wenn das Fahrzeug nach der Warmlaufphase mit konstanter Geschwindigkeit und konstanter Motorlast gefahren wird. (2 Fahrten-Erfassungslogik)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114079"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2227
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bereich&#x002F;Leistung des Umgebungsdrucksensor-Schaltkreises
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Der Unterschied zwischen dem Umgebungsdruckwert und dem Ansaugkrümmerdruckwert liegt beim Starten des Motors über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 Fahrzyklen
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114079"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P2228
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Schaltkreis des Umgebungsdrucksensors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Das Umgebungsdrucksignal liegt unter dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "G6JB0A1114079"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2229
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Schaltkreis des Umgebungsdrucksensors
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Das Umgebungsdrucksignal liegt über dem Sollwert.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 Fahrzyklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1614
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Transponderantwortfehler
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1615
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ID-Code nicht registriert (nur Fahrzeuge mit Fernbedienungs-Startsystem)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1616
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Unterschiedliche ID-Codes registriert (nur bei Fahrzeugen mit schlüssellosem Anlassersystem)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1618
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN-Kommunikationsfehler (Empfangsfehler des schlüssellosen Anlassersteuermoduls) (nur bei Fahrzeugen mit schlüssellosem Anlassersystem)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1621
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fehler in der Kommunikationsleitung der Wegfahrsperre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1622
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+EEPROM-Fehler
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1623
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nicht registrierter Transponder
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1625
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fehler der Wegfahrsperren-Antenne
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P1636
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Registrierungsfehler der Wegfahrsperrendaten
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P1638
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nicht übereinstimmende Wegfahrsperrendaten
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0AA314004">Diagnosecode (DTC)-Tabelle:Für Benzinmotor-Modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<p-change/>
+<servinfosub id = "G6JB0A1114005001">
+<title>
+Bei A&#x002F;T-Modellen
+</title>
+<ptxt>
+Bei Verwendung des herkömmlichen OBD-Testgeräts werden nicht nur die vorherigen mit einem Sternchen (&#x002A;) gekennzeichneten ECM-DTC, sondern auch die folgenden DTC auf dem OBD-Testgerät angezeigt.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "3" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.627in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.213in"/>
+<colspec colnum = "3" colname = "3" colwidth = "2.362in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+DTC-Nr.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfasste Störung
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bedingung für Erfassung
+</ptxt>
+<ptxt>
+(Code wird bei Erfassung registriert)
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0705
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Störung im Schaltkreis des Getriebestellungssensors (PRNDL-Eingangssignal)
+</ptxt>
+</entry>
+<entry colname = "3" morerows = "24" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Siehe 
+<intxref refid = "G6JB0A5104005">Diagnosecodetabelle (DTC)</intxref>
+.
+</ptxt>
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0707
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Niedrige Spannung im Schaltkreis des Getriebestellungssensors
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0712
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Niedrige Spannung im Schaltkreis des Getriebeöl-Temperaturfühlers
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0713
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hohe Spannung im Schaltkreis des Getriebeöl-Temperaturfühlers
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0717
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kein Eingangssignal vom Turbinenrad-Drehzahlsensorschaltkreis
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0722
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kein Signal vom Schaltkreis des Ausgangswellen-Drehzahlsensors
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0741
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Signal des Schaltkreises der Wandlerkupplung außerhalb des zulässigen Bereichs bzw. Wanderkupplung sperrt im ausgeschalteten Zustand
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0742
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Drehmomentwandler-Schaltkreis sperrt im eingeschalteten Zustand
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0751
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Leistung des Schaltmagnetventils A (Nr. 1) bzw. Ventil klemmt im ausgeschalteten Zustand
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0752
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schaltmagnetventil A (Nr. 1) klemmt im eingeschalteten Zustand
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0756
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Funktionsstörung des Schaltmagnetventils B (Nr. 2) bzw. Ventil klemmt im OFF Zustand.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0757
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Schaltmagnetventil B (Nr. 2) klemmt im eingeschalteten Zustand.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0962
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Niedrige Spannung im Steuerschaltkreis des Druckregelmagnetventils
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0963
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hohe Spannung im Steuerschaltkreis des Druckregelmagnetventils
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0973
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Niedrige Spannung im Steuerschaltkreis des Schaltmagnetventils A (Nr. 1)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0974
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hohe Spannung im Steuerschaltkreis des Schaltmagnetventils A (Nr. 1)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0976
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Steuerkreis des Schaltmagnetventils B (Nr. 2)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0977
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu hohe Spannung im Steuerkreis des Schaltmagnetventils B (Nr. 2)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1702
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Prüfsummenfehler im internen Speicher
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1774
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Steuermodul des Datenbusses ausgeschaltet
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1777
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kommunikationsverlust zwischen TCM und ECM (Empfangsfehler)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1874
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Störung im Schaltkreis des 4L-Schalters (Kurzschluss)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1875
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Störung im Schaltkreis des 4L-Schalters (Unterbrechung)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P2763
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hohe Spannung im Steuerschaltkreis des Drehmomentwandler-Druckregelmagnetventils
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P2764
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Zu niedrige Spannung im Steuerkreis des Drehmomentwandler-Druckregelmagnetventils
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>
