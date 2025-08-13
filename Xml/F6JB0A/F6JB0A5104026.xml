@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A5104026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0707: Basse tension dans le circuit du détecteur de rapport de boîte
+</title>
+<servinfosub id = "F6JB0A5104026001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0A5104025">DTC P0705: Dysfonctionnement du circuit du détecteur de rapport de boîte</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A5104026002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.089in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.116in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Le signal de contacteur de rapport de boîte de vitesses (P, R, N, D, 2, L) n&#8217;est pas émis pendant plus de 2 secondes dans les conditions suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La vitesse du véhicule est supérieure à 30 km&#x002F;h.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Et
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Le régime du moteur est supérieur à 1500 tr&#x002F;min.
+</ptxt>
+<ptxt>
+(Logique de détection à 2 cycle de conduite)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Câble de sélection mal réglé
+</ptxt>
+</item>
+<item>
+<ptxt>
+Détecteur de rapport de boîte (contacteur) mal réglé
+</ptxt>
+</item>
+<item>
+<ptxt>
+Dysfonctionnement du détecteur de rapport de boîte (contacteur) ou de son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A5104026003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Supprimer les DTC de la mémoire du TCM et de celle de l&apos;ECM à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et placer le levier de sélection en position &#8220;D&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le véhicule et augmenter sa vitesse jusqu&apos;à 50&#160;km&#x002F;h minimum pendant 2 minute.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule et mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Répéter une fois les étapes 3) à 5).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC, les DTC en attente et les données d&apos;arrêt sur image.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F6JB0A5104026004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F6JB0A5104026005">
+<testgroup id = "F6JB0A5104026006">
+<question>
+La &#8220;Vérification du système de boîte automatique (A&#x002F;T)&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A5104001">Vérification du système d&apos;A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104026007">
+<question>
+Le dispositif de balayage SUZUKI est-il disponible?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104026008">
+<title>
+Vérifier le fonctionnement du circuit du capteur de rapport de boîte (contacteur).
+</title>
+<ptxt>
+Vérifier à l&#8217;aide du dispositif de balayage SUZUKI:
+</ptxt>
+<test1>
+<ptxt>
+Raccorder le dispositif de balayage SUZUKI au DLC, avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contact et vérifier le signal du capteur de gamme de transmission (&#8220;P&#8221;, &#8220;R&#8221;, &#8220;N&#8221;, &#8220;D&#8221;, &#8220;2&#8221; ou &#8220;L&#8221;) sur l&apos;écran en plaçant le sélecteur sur chaque gamme.
+</ptxt>
+</test1>
+<question>
+La position adéquate est-elle affichée?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problème intermittent. Vérifier le problème intermittent en se reportant à 
+<intxref refid = "F6JB0A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104026009">
+<title>
+Vérifier le fonctionnement du circuit du capteur de rapport de boîte (contacteur).
+</title>
+<ptxt>
+Contrôle sans dispositif de balayage SUZUKI:
+</ptxt>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la tension des bornes &#8220;E93-1&#8221;, &#8220;E93-7&#8221;, &#8220;E93-8&#8221;, &#8220;E93-18&#8221;, &#8220;E93-19&#8221; et &#8220;E93-20&#8221; respectivement, le levier sélecteur dans chaque position.
+</ptxt>
+<ptxt>
+En prenant comme exemple la borne &#8220;E93-1&#8221;, la tension de batterie n&#8217;est-elle indiqué que lorsque le levier de sélection est déplacé sur la gamme &#8220;R&#8221; et lit-on 0 V pour les autres gammes comme indiqué dans le tableau? Vérifier de la même façon la tension sur les autres bornes, en se référant au tableau.
+</ptxt>
+</test1>
+<question>
+Les résultats de la vérification sont-ils satisfaisants?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problème intermittent. Vérifier le problème intermittent en se reportant à 
+<intxref refid = "F6JB0A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104026010">
+<title>
+Vérification de la position de montage du capteur (contacteur) de gamme de transmission
+</title>
+<test1>
+<ptxt>
+Contrôler la position de montage du capteur (contacteur) de gamme de transmission en se référant à 
+<intxref refid = "F6JB0A5106011">Inspection et réglage du capteur de gamme de transmission</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Est-il réglé correctement?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Régler le capteur (contacteur) de gamme de transmission et revérifier.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104026011">
+<title>
+Vérification du réglage du câble de sélection
+</title>
+<test1>
+<ptxt>
+Vérifier le réglage du câble de sélection en se reportant au point 
+<intxref refid = "F6JB0A5106009">Réglage du câble de sélection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Est-il réglé correctement?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Régler le câble de sélection et revérifier.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104026012">
+<title>
+Vérification du capteur (contacteur) de gamme de transmission
+</title>
+<test1>
+<ptxt>
+Vérifier le capteur de rapport de boîte (contacteur) en se reportant au point 
+<intxref refid = "F6JB0A5106011">Inspection et réglage du capteur de gamme de transmission</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Les résultats de la vérification sont-ils satisfaisants?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Coupure ou court-circuit à la masse dans le circuit du capteur de gamme de transmission. Si les câbles et les connexions sont corrects, remplacer le TCM par un PCM en bon état, et vérifier à nouveau.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le capteur (contacteur) de gamme de transmission.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<table frame = "all" colsep = "1" rowsep = "1" page = "1">
+<tgroup cols = "8" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.105in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.871in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.871in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.871in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.871in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.871in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.871in"/>
+<colspec colnum = "8" colname = "8" colwidth = "0.871in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+</entry>
+<entry namest = "3" nameend = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+Borne
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-20
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-1
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-8
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-7
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-19
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+E93-18
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Position du levier de sélection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+P
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+R
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+N
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+D ou 3
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom">
+<ptxt>
+L
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "bottom" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

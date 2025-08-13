@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0AA314012" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1621: Erreur de ligne de communication du système antidémarrage
+</title>
+<servinfosub id = "F6JB0AA314012001" page = "1">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0AA312001">Schéma du circuit de câblage du système antidémarrage:Pour modèle à moteur à essence</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0AA314012002">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+L&apos;ECM détecte une erreur de communication entre le module de gestion du système antidémarrage (ICM) et l&apos;ECM.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fusible(s) associé(s) grillé(s)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mauvaise connexion du connecteur du module de gestion du système antidémarrage (ICM)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mauvais raccordement du connecteur de l&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ouverture dans le circuit filaire d&apos;alimentation.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ouverture dans le circuit filaire de mise à la masse
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ouverture dans les circuits filaires de communication
+</ptxt>
+</item>
+<item>
+<ptxt>
+Réparer les courts-circuits du circuit filaire de mise à la masse dans les circuits filaires de communication
+</ptxt>
+</item>
+<item>
+<ptxt>
+Réparer les courts-circuits du circuit filaire d&apos;alimentation dans les circuits filaires de communication
+</ptxt>
+</item>
+<item>
+<ptxt>
+Courts-circuits dans les circuits filaires de communication
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de gestion du système antidémarrage (ICM) défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM défectueux
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0AA314012003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F6JB0AA314012004">
+<testgroup>
+<title>
+Confirmation du code de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Effacer les DTC en se reportant au point 
+<intxref refid = "F6JB0AA314003">Suppression des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si un éventuel DTC est détecté en se reportant au point 
+<intxref refid = "F6JB0AA314002">Vérification des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1621 est-il toujours détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du fusible
+</title>
+<test1>
+<ptxt>
+Vérifier si les fusibles concernés sont grillés.
+</ptxt>
+</test1>
+<question>
+Un fusible est-il grillé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le(s) fusible(s) grillé(s) par un&#x002F;des fusible(s) neuf(s).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la qualité de la connexion du module de gestion du système antidémarrage (ICM)
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de gestion du système antidémarrage (ICM) &#8220;G24&#8221; en se reportant à 
+<intxref refid = "F6JB0AA316001">Dépose et repose du module de commande du système antidémarrage (ICM):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si les branchements filaires sont normaux au connecteur &#8220;G24&#8221; du module de gestion du système antidémarrage.
+</ptxt>
+</test1>
+<question>
+Chaque connexion câblée est-elle normale?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les connexionx défectueuses.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la qualité de la connection de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur de l&apos;ECM &#8220;E23&#8221; en se reportant à 
+<intxref refid = "F6JB0A1316001">Dépose et repose du module de gestion du moteur (ECM):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si les raccords filaires aux bornes filaires &#8220;E23-13&#8221; et &#8220;E23-28&#8221; sont normaux.
+</ptxt>
+</test1>
+<question>
+Chaque connexion câblée est-elle normale?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les connexionx défectueuses.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier l&apos;ouverture dans le circuit filaire d&apos;alimentation
+</title>
+<test1>
+<ptxt>
+Brancher le connecteur du module de gestion du système antidémarrage (ICM) &#8220;G24&#8221; en se reportant à 
+<intxref refid = "F6JB0AA316001">Dépose et repose du module de commande du système antidémarrage (ICM):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Avec le contacteur d&apos;allumage sur ON, vérifier la tension entre la borne filaire &#8220;G24-1&#8221; au niveau du module de gestion du système antidémarrage (ICM) et la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La tension est-elle d&apos;environ 12 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture dans le circuit filaire d&apos;alimentation.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier l&apos;ouverture dans le circuit filaire de mise à la masse
+</title>
+<test1>
+<ptxt>
+Avec le contacteur d&apos;allumage sur ON, vérifier la tension entre la borne filaire &#8220;G24-2&#8221; au niveau du module de gestion du système antidémarrage (ICM) et la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture dans le circuit filaire de mise à la masse
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier l&apos;ouverture dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de gestion du système antidémarrage (ICM) &#8220;G24&#8221; en se reportant à 
+<intxref refid = "F6JB0AA316001">Dépose et repose du module de commande du système antidémarrage (ICM):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur de l&apos;ECM &#8220;E23&#8221; en se reportant à 
+<intxref refid = "F6JB0A1316001">Dépose et repose du module de gestion du moteur (ECM):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la résistance entre la borne filaire &#8220;G24-3&#8221; au niveau du connecteur du module de gestion du système antidémarrage (ICM) et la borne filaire &#8220;E83-28&#8221; du connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture dans le circuit filaire de communication.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier s&apos;il y a un court-circuit dans le circuit de mise à la masse dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+Avec le connecteur du module de gestion du système antidémarrage &#8220;G24&#8221; et le connecteur ECM &#8220;E23&#8221; débranché, vérifier la résistance entre la borne filaire &#8220;G24-3&#8221; au connecteur du module de gestion du système antidémarrage (ICM) et à la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans le circuit filaire de mise à la masse dans le circuit filaire de communication.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier s&apos;il y a un court-circuit dans le circuit d&apos;alimentation dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+Avec le connecteur du module de gestion du système antidémarrage (ICM) &#8220;G24&#8221; et le connecteur de l&apos;ECM &#8220;E23&#8221; débranchés, mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la tension entre la borne filaire &#8220;G24-3&#8221; au niveau du connecteur du module de gestion du système antidémarrage (ICM) et de la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans le circuit filaire d&apos;alimentation dans le circuit filaire de communication.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier l&apos;ouverture dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+Avec le connecteur du module de gestion du système antidémarrage (ICM) &#8220;G24&#8221; et le connecteur ECM &#8220;E23&#8221; débranchés, vérifier la résistance entre la borne filaire &#8220;G24-4&#8221; au connecteur du module de gestion du système antidémarrage (ICM) et à la borne filaire &#8220;E23-13&#8221; du connecteur ECM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture dans le circuit filaire de communication.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier s&apos;il y a un court-circuit dans le circuit filaire de mise à la masse dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+Avec le connecteur du module de gestion du système antidémarrage &#8220;G24&#8221; et le connecteur ECM &#8220;E23&#8221; débranché, vérifier la résistance entre la borne filaire &#8220;G24-4&#8221; au connecteur du module de gestion du système antidémarrage (ICM) et à la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans le circuit filaire de mise à la masse dans le circuit filaire de communication.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier s&apos;il y a un court-circuit dans le circuit d&apos;alimentation dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+Avec le connecteur du module de gestion du système antidémarrage (ICM) &#8220;G24&#8221; et le connecteur de l&apos;ECM &#8220;E23&#8221; débranchés, mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la tension entre la borne filaire &#8220;G24-4&#8221; au niveau du connecteur du module de gestion du système antidémarrage (ICM) et de la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans le circuit filaire d&apos;alimentation dans le circuit filaire de communication.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier s&apos;il y a un court-circuit dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+Avec le connecteur du module de gestion du système antidémarrage &#8220;G24&#8221; et le connecteur ECM &#8220;E23&#8221; débranchés, vérifier la résistance entre la borne filaire &#8220;G24-3&#8221; et à la borne filaire &#8220;G24-4&#8221; au connecteur du module de gestion du système antidémarrage (ICM).
+</ptxt>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans les circuits filaires de communication
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du module de gestion du système antidémarrage (ICM)
+</title>
+<test1>
+<ptxt>
+Vérifier le module de gestion du système antidémarrage (ICM) en se reportant au point 
+<intxref refid = "F6JB0AA314018">Vérification du module de commande du système antidémarrage (ICM) et de ses circuits:Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le module de gestion du système antidémarrage (ICM) est-il normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un élément neuf en se reportant au point 
+<intxref refid = "F6JB0A1316001">Dépose et repose du module de gestion du moteur (ECM):Pour modèle à moteur à essence</intxref>
+ puis, procéder au 
+<intxref refid = "F6JB0AA316003">Procédure à suivre après le remplacement de l&apos;ECM:Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le module de gestion du système antidémarrage (ICM) par un élément neuf en se reportant au point 
+<intxref refid = "F6JB0AA316001">Dépose et repose du module de commande du système antidémarrage (ICM):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0AA304012" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Wegfahrsperren-Anzeigenleuchte leuchtet bei Zündschalter auf ON und abgestelltem Motor nicht auf
+</title>
+<servinfosub id = "G5JB0AA304012001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0AA302001">Schaltplan des Wegfahrsperren-Steuersystems</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA304012002">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+Wenn der Zündschalter auf ON geschaltet wird, überträgt das ECM das Anzeige-ON-Signal an das Kombinationsinstrument, um die Wegfahrsperren-Anzeigenleuchte einzuschalten, falls kein Problem mit dem Wegfahrsperren-Steuersystem vorliegt. Dann schaltet das Kombinationsinstrument die Leuchte ein. Nach Starten des Motors überträgt das ECM das Anzeige-OFF-Signal an das Kombinationsinstrument, um die Leuchte auszuschalten. Dann schaltet das Kombinationsinstrument die Wegfahrsperren-Anzeigenleuchte aus. Falls jedoch eine Störung des Wegfahrsperren-Steuersystems vorliegt, blinkt die Wegfahrsperren-Anzeigenleuchte bei Einschalten des Zündschalters.
+</ptxt>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G5JB0AA304012003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0AA304012004">
+<testgroup>
+<title>
+Überprüfung der Stromversorgung der Wegfahrsperren-Anzeigenleuchte
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<question>
+Schalten andere Warnleuchten&#x002F;Kontrollleuchten auf ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Prüfen, ob DTC P1674, P1675, P1678 und&#x002F;oder P1685 vom ECM ausgegeben wird. Siehe hierzu 
+<intxref refid = "G5JB0AA304002">Abruf von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird einer dieser Störungscodes erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Fehlersuche entsprechend dem Ablaufschema im Abschnitt 1A durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Das Kombinationsinstrument durch ein intaktes austauschen und die Prüfung wiederholen. Bleibt die Wegfahrsperren-Anzeigenleuchte noch immer ausgeschaltet, ein intaktes ECM einbauen und DTC erneut abrufen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Sicherungen
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob irgendeine der zugehörigen Sicherungen durchgebrannt ist.
+</ptxt>
+</test1>
+<question>
+Ist irgendeine Sicherung durchgebrannt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Durchgebrannte Sicherung austauschen und anschließend auf Kurzschluss prüfen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Stromversorgungsschaltkreises des Kombinationsinstruments
+</title>
+<test1>
+<ptxt>
+Kombinationsinstrument ausbauen. Siehe dazu 
+<intxref refid = "G5JB0A9306003">Aus- und Einbau des Kombinationsinstruments</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+An Anschlussklemmen &#8220;G28-13&#8221; und &#8220;G28-15&#8221; auf korrekte Verbindung zum Steckverbinder des Kombinationsinstruments überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls einwandfrei, den Zündschalter auf ON drehen und die Spannung zwischen Anschlussklemme &#34;G28-13&#34; des Kombinationsinstruments und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt sie 10 bis 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrochenen Stromversorgungsschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Massekabelschaltkreises des Kombinationsinstruments
+</title>
+<test1>
+<ptxt>
+Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Widerstand zwischen Anschluss &#34;G28-15&#34; des Steckverbinders vom Kombinationsinstrument und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand 1 &#937; oder weniger?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Das Kombinationsinstrument durch ein intaktes austauschen und die Prüfung wiederholen. Bleibt die Wegfahrsperren-Anzeigenleuchte noch immer ausgeschaltet, ein intaktes ECM einbauen und DTC erneut abrufen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hohen Widerstand des Massekabelschaltkreises beseitigen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

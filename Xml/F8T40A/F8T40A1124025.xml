@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1124025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0133
+</title>
+<servinfosub id = "F8T40A1124025001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.410in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.815in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+P0133: Réponse lente du circuit de capteur O2
+</emph>
+</ptxt>
+<ptxt>
+Le rapport entre la valeur intégrée de variation de sortie de capteur A&#x002F;F et valeur intégrée de variation de régulation lambda à court terme est supérieur à la valeur spécifiée dans les conditions de conduite.
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Capteur A&#x002F;F et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1124025002">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1124013">DTC P0031 &#x002F; P0032:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1124025003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lors d&apos;un essai sur route, choisir un endroit où il n&apos;y a ni trafic ni risque d&apos;accident et rester très prudent pendant l&apos;essai pour éviter tout accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;essai sur route doit être effectué sur une route plane et par 2 personnes: un conducteur et un technicien qui procédera aux essais.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Si des DTC autres que ceux recherchés sont détectés précédemment au cours de la procédure de confirmation des DTC, veiller à solutionner les DTC détectés auparavant.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire monter à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire le véhicule à 60 - 100 km&#x002F;h (37 - 62 mile&#x002F;h) pendant 6 min. (maintenir une ouverture constate du papillon au cours de cette étape).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1124025004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1124025005">
+<testgroup id = "F8T40A1124025006">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124001">Vérification du système de régulation des émissions et de commande du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124025007">
+<title>
+Vérification de DTC
+</title>
+<question>
+Un ou plusieurs DTC autres que P0133 sont-ils signalés?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC correspondant.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124025008">
+<title>
+Vérification du circuit de signal de capteur A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Vérifier le circuit de signal de capteur A&#x002F;F en se reportant à l&apos;étape 3 du point 
+<intxref refid = "F8T40A1124024">DTC P0131 &#x002F; P0132 &#x002F; P0134 &#x002F; P2195 &#x002F; P2196 &#x002F; P2237:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le faisceau de câbles défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124025009">
+<title>
+Nouvelle vérification de DTC
+</title>
+<test1>
+<ptxt>
+Remplacer le capteur A&#x002F;F. 
+<intxreftitleoff1 refid = "F8T40A1326013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Effectuer la procédure de confirmation des DTC et vérifier les DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC P0133 est-il toujours détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Fin.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA324032" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1717: Module de commande du système de démarrage par télécommande non enregistré
+</title>
+<servinfosub id = "F8T40AA324032001">
+<title>
+Description du circuit
+</title>
+<ptxt>
+Le DTC B1717 est détecté lorsque le module de commande du moteur détecte les différents codes d&apos;identification enregistrés dans le module de commande du moteur et le module de commande du système de démarrage par télécommande lorsque le bouton de démarrage du moteur est en position ON. Normalement, lorsque le module de commande de démarrage par télécommande est remplacé par un élément neuf, le module de commande du moteur enregistre automatiquement le code d&apos;identification dans le module de commande de démarrage par télécommande après avoir mis le contacteur d&apos;allumage en position ON. Toutefois, lorsque le module de commande de démarrage par télécommande est remplacé par un élément neuf, le module de commande du moteur n&apos;enregistre pas automatiquement le code d&apos;identification dans le module de commande de démarrage par télécommande même si le contacteur d&apos;allumage en position ON.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA324032002">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.071in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.133in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Le module de commande du moteur détecte différents codes d&apos;identification enregistrés dans le module de commande du moteur et le module de commande de démarrage par télécommande.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de câblage du système de démarrage par télécommande
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande de démarrage par télécommande
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40AA324032003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40AA324032004">
+<testgroup>
+<question>
+La procédure de &#8220;vérification du système antidémarrage&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA324001">Vérification du système antidémarrage:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Enregistrement de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Enregistrer l&apos;ECM sur le système antidémarrage en se reportant au point 
+<intxref refid = "F8T40AA326003">Procédure à suivre après le remplacement de l&apos;ECM:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</test1>
+<question>
+L&apos;enregistrement de l&apos;ECM sur le système antidémarrage a-t-il été effectué?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vérifier à nouveau l&apos;ECM et le DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Vérifier le(s) DTC de l&apos;ECM en se reportant au point 
+<intxref refid = "F8T40AA324002">Vérification des DTC:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Les DTC B1716 et&#x002F;ou B1718 sont-ils détectés outre le B1717?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC B1716.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC B1718.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

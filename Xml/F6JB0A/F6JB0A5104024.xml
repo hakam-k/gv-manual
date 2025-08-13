@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A5104024" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Vérification de circuit de témoin &#8220;POWER&#8221; &#8211; Le témoin ne s&apos;allume pas quand le contacteur d&apos;allumage est mis en position &#8220;ON&#8221;
+</title>
+<servinfosub id = "F6JB0A5104024001">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F6JB0A5104024002">
+<testgroup id = "F6JB0A5104024003">
+<title>
+Contrôle de l&apos;alimentation du combiné des instruments
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+D&#8217;autres témoins&#x002F;indicateurs s&#8217;allument-ils dans le combiné des instruments?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit d&apos;alimentation d&apos;électrique du combiné d&apos;instruments en se reportant à 
+<intxref refid = "F6JB0A9302001">Schéma du circuit du combiné d&apos;instruments</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104024004">
+<test1>
+<ptxt>
+Vérification des circuits d&#8217;alimentation et de masse du TCM en se reportant à 
+<intxref refid = "F6JB0A5104050">Vérification du circuit d&apos;alimentation et du circuit de masse du TCM</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Est-elle en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104024005">
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Vérifier le DTC en se reportant au point 
+<intxref refid = "F6JB0A5104006">Vérification des DTC</intxref>
+ .
+</ptxt>
+</test1>
+<question>
+Le DTC P1774 ou P1775 est-il signalé?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Passer au schéma fonctionnel de diagnostic du DTC concerné.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F6JB0A5104024006">
+<title>
+Contrôle du fonctionnement du combiné des instruments
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+Le témoin de position du sélecteur A&#x002F;T indique-t-il la position correcte du levier du sélecteur?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Remplacer le combiné d&apos;instruments.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le TCM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

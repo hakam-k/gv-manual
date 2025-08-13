@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0B1104092" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0100: Störung im Luftmassen-Schaltkreis
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler:
+</ptxt>
+<ptxt>
+Der Fehler wird nach einer Testfahrt als vorhanden gemeldet.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Falls die Störung vorliegt, brennt die Einspritzanlagen-Warnleuchte (Fehlerwichtigkeit 1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Für Anschlüsse an den ECM-Steckverbindern sind Wartungskabel zu verwenden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Reihenfolge bei der Behandlung mehrerer Fehler:
+</ptxt>
+<ptxt>
+Störung 
+<intxref refid = "G5JB0B1104130">DTC P0697: Unterbrechung im Sensorreferenzspannungs-Schaltkreis &#8220;C&#8221;</intxref>
+ hat Vorrang, falls vorhanden oder gespeichert 
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "G5JB0B1104092001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Für Schaltkreise und Steckverbindernummern siehe 
+<intxref refid = "G5JB0B910E048">A-5 Schaltkreisdiagramm des Motor- und A&#x002F;C-Steuersystems (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0B1104092002">
+<title>
+Erfassungsbedingung
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Anzeige des SUZUKI-Testgeräts
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC.1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kurzschluss an &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO.0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Unterbrechung oder Kurzschluss zur Karosseriemasse
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+1.DEF
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ausgleich bei maximalem Schwellenwert
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+2.DEF
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ausgleich bei minimalem Schwellenwert
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0B1104092003">
+<title>
+Fehlersuche für CC.1: Kurzschluss an &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse der MAF-Sensor-Baugruppe mit IAT-Fühler prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und die Isolierung zu &#x002B;12 V an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-2&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-24&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-6&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-12&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-5&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-47&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, die MAF-Sensor-Baugruppe mit IAT-Fühler austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0B1104092004">
+<title>
+Fehlersuche für CO.0: Unterbrechung oder Kurzschluss zur Karosseriemasse
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Sicherstellen, dass eine &#x002B;5-V-Zufuhr am Kabel &#8220;C13-5&#8221; des Steckverbinders der MAF-Sensor-Baugruppe mit IAT-Fühler besteht.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+<ptxt>
+Die Anschlüsse der MAF-Sensor-Baugruppe mit IAT-Fühler prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und die Isolierung der Karosseriemasse an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-2&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-24&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-5&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-47&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-6&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-12&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-4&#8221; am Steckverbinder der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;E33-6&#8221; des Hauptrelais-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, die MAF-Sensor-Baugruppe mit IAT-Fühler austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G5JB0B1104092005">
+<title>
+Fehlersuche für 1.DEF: Ausgleich bei maximalem Schwellenwert; und 2.DEF: Ausgleich bei minimalem Schwellenwert
+</title>
+<attention3>
+<ptxt>
+Anwendungsbedingungen zur Fehlersuchprozedur für gespeicherte Fehler: Der Fehler wird als vorhanden gemeldet, nachdem der Zündschalter 40 Sekunden lang in der OFF-Stellung geblieben ist.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Die Anschlüsse der MAF-Sensor-Baugruppe mit IAT-Fühler prüfen.
+</ptxt>
+<ptxt>
+Die ECM-Anschlüsse prüfen.
+</ptxt>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Den Durchgang und das Fehlen von Störwiderständen an folgenden Verbindungen prüfen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-5&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-47&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-6&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-12&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-2&#8221; der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;C86-24&#8221; des ECM-Steckverbinders
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Kabel &#8220;C13-4&#8221; am Steckverbinder der MAF-Sensor-Baugruppe mit IAT-Fühler und Klemme &#8220;E33-6&#8221; des Hauptrelais-Steckverbinders
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Bei Bedarf reparieren.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Falls die Störung noch immer vorliegt, die Fehlersuchtests 3 und 4 gemäß 
+<intxref refid = "G5JB0B1104168">Test 3: Prüfung des Turbolader-Lufteinlasskreises</intxref>
+ und 
+<intxref refid = "G5JB0B1104169">Test 4: MAF-Sensor</intxref>
+ ausführen
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sicherstellen, dass die Drosselklappe geöffnet ist.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bei angeschlossener MAF-Sensor-Baugruppe mit IAT-Fühler den Zündschalter auf ON drehen, aber den Motor nicht starten:
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Spannung messen zwischen den Kabeln &#8220;C13-2&#8221; und &#8220;C13-6&#8221; am Steckverbinder der MAF-Sensor-Baugruppe mit IAT-Fühler.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Falls der Wert nicht 0,5 &#8211; 0,7 V beträgt, die MAF-Sensor-Baugruppe mit IAT-Fühler austauschen.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Sicherstellen, dass das EGR-Ventil nicht in geöffneter Stellung festsitzt:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Etwaige Fehler beheben.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Den Fehlersuchtest 7 gemäß 
+<intxref refid = "G5JB0B1104172">Test 7: Abgasrückführungsventil (EGR)</intxref>
+ ausführen.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Falls das Testresultat auf ein festsitzendes oder festgefressenes Ventil hinweist, das EGR-Ventil austauschen.
+</ptxt>
+<ptxt>
+Falls keine Fehler auftreten, aber die Störung noch immer vorliegt, die MAF-Sensor-Baugruppe mit IAT-Fühler austauschen.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1124020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0112 &#x002F; P0113
+</title>
+<servinfosub id = "F8T40A1124020001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.301in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.904in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0112: Entrée faible du circuit de capteur de température d&apos;air d&apos;admission 1
+</emph>
+</ptxt>
+<ptxt>
+La tension de sortie du circuit de signal de capteur IAT est inférieure à 0,15 V pendant 5 s
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Capteur IAT et &#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0113: Entrée élevée du circuit de capteur de température d&apos;air d&apos;admission 1
+</emph>
+</ptxt>
+<ptxt>
+La tension de sortie du circuit de signal de capteur IAT est supérieure à 4,85 V pendant 5 s
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1124020002">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1124073">DTC P0101:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1124020003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage sur ON pendant 10 s
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1124020004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1124020005">
+<testgroup id = "F8T40A1124020006">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124001">Vérification du système de régulation des émissions et de commande du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124020007">
+<title>
+Vérification du circuit de capteur IAT
+</title>
+<test1>
+<ptxt>
+Vérifier le circuit de capteur IAT en se reportant à l&apos;étape 3 du point 
+<intxref refid = "F8T40A1124019">DTC P0111:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le faisceau de câbles défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124020008">
+<title>
+Vérification du capteur IAT
+</title>
+<test1>
+<ptxt>
+Vérifier le capteur IAT. 
+<intxreftitleoff1 refid = "F8T40A1326022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer le capteur MAF &#38; IAT.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

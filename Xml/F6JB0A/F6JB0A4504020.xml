@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A4504020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC U1100: Perte de communication avec l&apos;ECM (erreur de réception) (modèle à moteur à essence)
+</title>
+<servinfosub id = "F6JB0A4504020001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0A4504019">DTC U1073: Bus de communication du module de commande désactivé (modèle à moteur à essence)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A4504020002">
+<title>
+Condition de détection du DTC
+</title>
+<ptxt>
+Une erreur de réception des données de communication de l&apos;ECM est détectée en continu pendant plus longtemps que le temps déterminé.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A4504020003">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F6JB0A4504020004">
+<testgroup>
+<question>
+La &#8220;Vérification de l&apos;ABS &#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A4504001">Vérification des ABS</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Vérifier les DTC de l&apos;ABS (ESP&#174;).
+</ptxt>
+</test1>
+<question>
+Le DTC U1073 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A4504019">DTC U1073: Bus de communication du module de commande désactivé (modèle à moteur à essence)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Rechercher un éventuel DTC dans l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Le DTC P1674 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A1114064">DTC P1674: Problème de communication CAN (erreur bus éteint):Pour les modèles de moteurs essence</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Vérifier le raccordement des connecteurs de tous les modules de commande communiquant via le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier les DTC de l&apos;ABS (ESP&#174;).
+</ptxt>
+</test1>
+<question>
+Le DTC U1100 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuels problèmes intermittents en se reportant au point 
+<intxref refid = "F6JB0A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher les connecteurs du module de commande de l&apos;ABS (ESP&#174;) et du BCM communiquant par le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher une coupure, un court-circuit ou une résistance élevée dans le circuit de communication CAN entre le module de commande de l&apos;ABS (ESP&#174;) et l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Tous les circuits de communication CAN sont-ils en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la ligne de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Débrancher les connecteurs de tous les modules de commande communiquant via le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le circuit de communication CAN entre les modules de commande autre que celui concerné par l&apos;étape 5 présentent éventuellement un court-circuit, une coupure ou une résistance élevée.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état&#160;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la ligne de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Brancher les connecteurs de tous les modules de commande déconnectés communiquant par le biais du réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher chaque connecteur.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (véhicules à boîte de vitesses automatique)
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande 4WD (si le véhicule en est équipé)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande du système de démarrage par télécommande (si le véhicule en est équipé)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur d&apos;angle de braquage (modèle ESP&#174;)
+</ptxt>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Vérifier les DTC de l&apos;ABS (ESP&#174;).
+</ptxt>
+</test1>
+<question>
+Le DTC U1140 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Contrôler le circuit d&apos;alimentation et de la masse du module de commande ABS (ESP&#174;). Si les circuits sont en ordre, substituer l&apos;ensemble modulateur de pression&#x002F;module de commande ABS (ESP&#174;) par une pièce réputée en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier l&#8217;alimentation du module de commande concernée et le circuit de masse. Si le circuit est en bon état, remplacer l&apos;unité par un module de commande correspondant en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

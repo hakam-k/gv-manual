@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1124088" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0625 &#x002F; P0626
+</title>
+<servinfosub id = "F8T40A1124088001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.960in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.213in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P0625: Tension faible du circuit de borne de bobine d&apos;induction de générateur
+</emph>
+</ptxt>
+<ptxt>
+Le signal de taux de service de la bobine d&apos;induction de générateur est supérieur à 99,9 &#x0025; (tension faible) pendant 10 s, même si le signal de contrôle de taux de service de la commande de générateur est maximum (100 &#x0025;).
+</ptxt>
+<ptxt>
+(logique de détection à 1 D&#x002F;C mais le MIL ne s&apos;allume pas)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Générateur et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+DTC P0626: Tension élevée du circuit de borne de bobine d&apos;induction de générateur
+</emph>
+</ptxt>
+<ptxt>
+Le signal de contrôle de taux de service de la bobine d&apos;induction de générateur est inférieur à 1 &#x0025; (tension élevée) pendant 10 s, même si le signal de contrôle de taux de service de la commande de générateur est minimum (0 &#x0025;).
+</ptxt>
+<ptxt>
+(logique de détection à 1 D&#x002F;C mais le MIL ne s&apos;allume pas)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1124088002">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1124087">DTC P0620:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1124088003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire monter à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier que les conditions suivantes sont remplies.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ventilateur de soufflante: ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Contacteur de phare: ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Contacteur de dégivrage arrière: ON
+</ptxt>
+</item>
+</list1>
+</s1>
+<s1>
+<ptxt>
+Faire tourner le moteur au ralenti pendant 5 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1124088004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1124088005">
+<testgroup id = "F8T40A1124088006">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124001">Vérification du système de régulation des émissions et de commande du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124088007">
+<title>
+Vérification du circuit de signal de commande de bobine d&apos;induction de générateur
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF et débrancher les connecteurs du générateur et de l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier que la borne correcte est branchée sur les connecteurs de générateur et d&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si les branchements sont corrects, vérifier que le circuit de signal de commande de bobine d&apos;induction de générateur (B1) présente les conditions suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La résistance du faisceau de câbles du circuit de signal de commande de bobine d&apos;induction de générateur est inférieure à 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance d&apos;isolement entre le circuit de signal de commande de bobine d&apos;induction de générateur et la masse de carrosserie du véhicule est infinie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance d&apos;isolement du faisceau de câbles est infinie entre la borne du circuit de signal de commande de bobine d&apos;induction de générateur et chaque autre borne du connecteur de générateur.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tension du circuit de signal de commande de bobine d&apos;induction de générateur est de 0 - 1 V, contacteur d&apos;allumage en position ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le faisceau de câbles défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124088008">
+<test1>
+<ptxt>
+Remplacer le générateur. 
+<intxreftitleoff1 refid = "F8T40A1A26005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC P0625 ou P0626 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Fin.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

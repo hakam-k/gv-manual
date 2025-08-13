@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA324008" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1701 &#x002F; B1710: Erreur 1 &#x002F; erreur 3 de code de transpondeur
+</title>
+<servinfosub id = "F8T40AA324008001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40AA322001">Schéma du circuit de câblage du système antidémarrage:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA324008002">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Données de transpondeur incompatibles pendant l&apos;enregistrement de la clé de contact
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Transpondeur de clé de contact défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM défectueux.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40AA324008003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40AA324008004">
+<testgroup>
+<question>
+La &#34;Vérification du système de commande de dispositif antidémarrage&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA324001">Vérification du système antidémarrage:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des codes de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC de l&apos;ICM en se reportant au point 
+<intxref refid = "F8T40AA324002">Vérification des DTC:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Un autre DTC que B1701 et B1710 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel du ou des DTC, autres que B1701 et B1710, concernés.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Enregistrement de la clé de contact de rechange
+</title>
+<test1>
+<ptxt>
+Enregistrer la clé de contact de rechange en se reportant au point 
+<intxref refid = "F8T40AA326002">Enregistrement de la clé de contact:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</test1>
+<question>
+La clé de contact a-t-elle été enregistrée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer la clé de contact qui ne peut pas être enregistrée.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ICM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0A1104036" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0140: Keine Ansprechung der beheizten Lambdasonde (HO2S) Nr. 2
+</title>
+<servinfosub id = "G5JB0A1104036001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0A1104035">DTC P0137 &#x002F; P0138: Niedrige Spannung&#x002F;hohe Spannung im Schaltkreis der Lambdasonde (HO2S) Nr. 2</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0A1104036002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.626in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.565in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Spannung der Lambdasonde Nr. 2 liegt nach Warmlaufen des Motors über dem vorgegebenen Wert (Unterbrechung des Schaltkreises).
+</ptxt>
+<ptxt>
+(2-Fahrten-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lambdasonde Nr. 2
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schaltkreis der Lambdasonde Nr. 2
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Abgasundichtigkeit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luftansaugsystem
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0A1104036003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zur Durchführung der Probefahrt einen sicheren, verkehrsfreien Ort wählen, wo die Möglichkeit von Verkehrsunfällen praktisch ausgeschlossen ist. Vorsichtig vorgehen, um Unfälle zu vermeiden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Probefahrt sollte von zwei Personen - Fahrer und Prüfer - auf einer ebenen Straße ausgeführt werden.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Testgerät anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und die DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und auf normale Betriebstemperatur bringen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Die Geschwindigkeit im 5. Gang bzw. im Wählbereich D auf 60 &#8211; 80 km&#x002F;h (37 &#8211; 50 Meilen&#x002F;h) erhöhen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Das Gaspedal freigeben und das Fahrzeug durch Motorbremswirkung verzögern lassen; Fahrzeug in Schiebebetrieb lassen (Schubabschaltung für mindestens 4 Sek.) und dann anhalten und den Motor weitere 60 Sek. (oder länger) im Leerlauf laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Aktuelle und vorgemerkte Störungscodes abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G5JB0A1104036004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G5JB0A1100005">Vorsichtsmaßnahmen bei der DTC-Fehlersuche</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G5JB0A1104036005">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104001">Überprüfung der Motorsteuerung und Emissionsregelung</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Masseverbindung der Lambdasonde Nr. 2
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder von der beheizten Lambdasonde Nr. 2 abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zum Steckverbinder der Lambdasonde Nr. 2 an den Kabelanschlüssen &#8220;PNK&#8221;, &#8220;BLK&#x002F;RED&#8221;, &#8220;GRN&#8221; und &#8220;RED&#8221; prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Wenn die Verbindungen in Ordnung sind, den Widerstand zwischen dem Kabelanschluss &#8220;GRN&#8221; des Steckverbinders der Lambdasonde Nr. 2 und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Kabel &#8220;GRN&#8221; und&#x002F;oder &#8220;GRY&#x002F;GRN&#8221;. Schlechter Anschluss der Klemme &#8220;C37-57&#8221;. ECM-Masseanschluss defekt.
+</ptxt>
+<ptxt>
+Falls OK, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Kabelschaltkreises
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen dem Kabelanschluss &#8220;RED&#8221; des Steckverbinders der Lambdasonde Nr. 2 und Anschlussklemme &#8220;C37-11&#8221; des ECM-Steckverbinders messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Schaltkreis des Kabels &#8220;RED&#8221;. Schlechter Anschluss der Klemme &#8220;C37-11&#8221;.
+</ptxt>
+<ptxt>
+Falls OK, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Signalkreises der Lambdasonde Nr. 2
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen den Kabelanschluss &#8220;RED&#8221; des Steckverbinders der Lambdasonde Nr. 2 und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kurzschluss des Kabels &#8220;RED&#8221; an anderem Schaltkreis.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Heizelement-Schaltkreises der Lambdasonde Nr. 2
+</title>
+<test1>
+<ptxt>
+Den Heizelement-Schaltkreis der Lambdasonde Nr. 2 überprüfen. Siehe 
+<intxref refid = "G5JB0A1104016">DTC P0037 &#x002F; P0038: Niedrige&#x002F;hohe Spannung im Heizelement-Schaltkreis der beheizten Lambdasonde Nr. 2</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist der Schaltkreis in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den Schaltkreis der Lambdasonde Nr. 2 reparieren. Falls der Schaltkreis OK ist, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Lambdasonde Nr. 2
+</title>
+<test1>
+<ptxt>
+Die Lambdasonde Nr. 2 überprüfen. Siehe hierzu 
+<intxref refid = "G5JB0A1306010">Überprüfung des Heizelements der beheizten Lambdasonde (HO2S-2) am Fahrzeug</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist der Schaltkreis in gutem Zustand?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die beheizte Lambdasonde Nr. 2 austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

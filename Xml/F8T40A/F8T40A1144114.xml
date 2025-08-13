@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1144114" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0470: Circuit de capteur différentiel
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions d&apos;application de la procédure de découverte des défauts pour le défaut enregistré:
+</ptxt>
+<ptxt>
+Le défaut se déclare après la mise en marche du moteur ou après un essai sur route.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Si le défaut est déclaré:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Le témoin d&apos;injection (témoin de gravité 1) est allumé.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le diagnostic du filtre à particules diesel est empêché.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Toute régénération du filtre à particules diesel est empêchée.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+SI COI ou D4 est toujours présent, le témoin de panne (MIL) s&apos;allume après trois cycles de conduite consécutifs (démarrer &#x002B;5 secondes &#x002B;, couper le contact et attendre 40 secondes).
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "F8T40A1144114001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Pour les numéros des connecteurs et du circuit de câblage, se référer à 
+<intxref refid = "F8T40A910E013">A-5 Schéma du circuit de système de commande A&#x002F;C (modèle diesel)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1144114002">
+<title>
+Condition de détection
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.632in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.560in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Affichage à l&apos;outil de balayage SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuit ouvert dans le circuit de signal et le circuit d&apos;alimentation électrique
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuit ouvert ou court-circuit à la masse de la carrosserie du véhicule
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Court-circuit à &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Incohérence du signal
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signal hors limite inférieure
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Signal hors la limite supérieure
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuit ouvert dans le circuit de mise à la masse
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1144114003">
+<title>
+Recherche des pannes du CO: Circuit ouvert dans le circuit de signal et le circuit d&apos;alimentation électrique, D4, circuit ouvert dans le circuit de mise à la masse et CC1: Court-circuit à &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.202in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier l&apos;état des connecteurs du capteur de pression de différentielle et de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité et l&apos;isolation des connexions suivantes et s&apos;assurer qu&apos;il n&apos;y a pas de résistance aux interférences:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#34;C89-2&#34; du connecteur de capteur de pression de différentielle et la borne &#34;C85-12&#34; du connecteur d&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#34;C89-3&#34; du connecteur de capteur de pression de différentielle et la borne &#34;C85-14&#34; du connecteur d&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#34;C89-1&#34; du connecteur de capteur de pression de différentielle et la borne &#34;C86-42&#34; du connecteur d&apos;ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la présence de la masse à &#34;C89-2&#34; du connecteur de capteur de pression de différentielle.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, remplacer le capteur de pression de différentielle et revérifier.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, remplacer l&apos;ECM par un élément en bon état de marche et revérifier.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1144114004">
+<title>
+Recherche de CO0: Circuit ouvert ou court-circuit à la masse de la carrosserie du véhicule
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.202in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité, l&apos;absence de résistance aux interférences et l&apos;isolation de la masse de carrosserie du véhicule au niveau des connexions suivantes:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#34;C89-3&#34; du connecteur de capteur de pression de différentielle et la borne &#34;C85-14&#34; du connecteur d&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#34;C89-1&#34; du connecteur de capteur de pression de différentielle et la borne &#34;C86-42&#34; du connecteur d&apos;ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, remplacer le capteur de pression de différentielle et revérifier.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, remplacer l&apos;ECM par un élément en bon état de marche et revérifier.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1144114005">
+<title>
+Recherche des pannes de D1: Incohérence du signal, D2: Signal hors limite inférieure et D3: Signal hors la limite supérieure
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "7.192in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier l&apos;état des tuyaux de pression du capteur de pression de différentielle.
+</ptxt>
+<ptxt>
+S&apos;assurer de leur étanchéité et vérifier leur position.
+</ptxt>
+<ptxt>
+Remplacer si nécessaire.
+</ptxt>
+<ptxt>
+Vérifier l&apos;état des connecteurs du capteur de pression de différentielle et de l&apos;ECM.
+</ptxt>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vérifier la continuité et l&apos;absence de résistance aux interférences au niveau des connexions suivantes:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre le fil &#34;C89-3&#34; du connecteur de capteur de pression de différentielle et la borne &#34;C85-14&#34; du connecteur d&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre le fil &#34;C89-1&#34; du connecteur de capteur de pression de différentielle et la borne &#34;C86-42&#34; du connecteur d&apos;ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Réparer si nécessaire.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, remplacer le capteur de pression de différentielle et revérifier.
+</ptxt>
+<ptxt>
+Si le défaut est toujours présent, remplacer l&apos;ECM par un élément en bon état de marche et revérifier.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

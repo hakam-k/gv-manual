@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A8204025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1053 &#x002F; B1057: Court-circuit à la masse du circuit du dispositif d&apos;actionnement du prétensionneur côté conducteur  &#x002F; passager
+</title>
+<servinfosub id = "F8T40A8204025001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A8204023">DTC B1051 &#x002F; B1055: Résistance élevée du circuit du dispositif d&apos;actionnement du prétensionneur côté conducteur &#x002F; passager</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Veiller à respecter les instructions indiquées au point &#34;Schéma fonctionnel du système de diagnostic d&apos;airbag&#34;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "F8T40A8204025002">
+<title>
+Le DTC est émis lorsque
+</title>
+<ptxt>
+La tension mesurée dans le circuit du dispositif d&apos;actionnement du prétensionneur de ceinture de sécurité du passager ou du conducteur est inférieure à la valeur prescrite pendant une durée déterminée.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A8204025003">
+<title>
+Description du schéma de vérification
+</title>
+<ptxt>
+<emph etype = "bold">
+Etape 1: Vérifier si le prétensionneur de ceinture de sécurité présente un dysfonctionnement.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 2: Vérifier le circuit du dispositif d&apos;actionnement du prétensionneur de ceinture de sécurité. (entre &#34;L29&#34; et &#34;L12&#34; ou &#34;L29&#34; et &#34;L36&#34;)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 3: Vérifier le circuit du dispositif d&apos;actionnement du prétensionneur de ceinture de sécurité. (entre &#34;G55&#34; et &#34;G47&#34;, &#34;L12&#34; et &#34;L33&#34; ou &#34;L36&#34; et &#34;L33&#34;)
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A8204025004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A8204025005">
+<testgroup id = "F8T40A8204025006">
+<test1>
+<ptxt>
+Avec le contacteur d&apos;allumage en position OFF, déposer l&apos;habillage inférieur de montant central du côté conducteur ou passager et débrancher le connecteur du prétensionneur de ceinture de sécurité &#34;L12&#34; ou &#34;L36&#34; (1).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+S&apos;assurer que le raccordement au prétensionneur de ceinture de sécurité au niveau des bornes du connecteur &#34;L12&#34; ou &#34;L36&#34; est correct.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si c&apos;est correct, brancher alors les outils spéciaux (A), (B) et (C) sur le connecteur &#34;L12&#34; ou &#34;L36&#34; débranché à l&apos;étape 1).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0105">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0106">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0107">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820039.swf" width = "90.000mm" height = "59.622mm" ver = "01" gw = "171" gh = "152"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Vérifier le DTC du SDM.
+</ptxt>
+</test1>
+<question>
+Le DTC B1053 ou B1057 s&apos;affiche-t-il toujours lorsque le contacteur d&apos;allumage est en position ON?
+</question>
+<result>
+OUI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Sans airbag latéral ni airbag rideau: passer à l&apos;étape 2.
+</ptxt>
+<ptxt>
+Avec airbag latéral et airbag rideau: passer à l&apos;étape 3.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NON
+</result>
+<action>
+<paragroup>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF. Remplacer le prétensionneur de ceinture de sécurité en se reportant au point 
+<intxref refid = "F8T40A8106002">Dépose et repose de la ceinture de sécurité avant</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "F8T40A8204025007">
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher le connecteur &#34;G55&#34; situé proche du boîtier de console.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le raccordement des bornes du prétensionneur de ceinture de sécurité concerné dans le connecteur &#34;G55&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est en ordre, raccorder les outils spéciaux (B) et (D) au connecteur &#34;G55&#34;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0108">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0109">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820040.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "150" gh = "128"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Vérifier le DTC du SDM.
+</ptxt>
+</test1>
+<question>
+Le DTC B1053 ou B1057 s&apos;affiche-t-il toujours lorsque le contacteur d&apos;allumage est en position ON?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1053: Câble &#34;GRN&#x002F;ORN&#34; ou &#34;GRN&#x002F;YEL&#34; en court-circuit à la masse. (entre les connecteurs &#34;L29&#34; et &#34;L12&#34;)
+</ptxt>
+<ptxt>
+DTC B1057: Court-circuit à la masse du circuit &#34;BLU&#x002F;ORN&#34; ou &#34;BLU&#x002F;YEL&#34;. (entre les connecteurs &#34;L29&#34; et &#34;L36&#34;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "F8T40A8204025008">
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher les outils spéciaux (A), (B) et (C) ou (D) et le connecteur SDM &#34;G47&#34; ou &#34;L33&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Relâcher la barre de court-circuit du connecteur du SDM à l&apos;aide de l&apos;outil de relâchement (1) inclus dans l&apos;outillage spécial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre &#34;G47-7&#34; et la masse de carrosserie, entre &#34;G47-8&#34; et la masse de carrosserie (pour DTC B1053) ou entre &#34;G47-1&#34; et la masse de carrosserie, &#34;G47-2&#34; et la masse de carrosserie (pour DTC B1057) &#x005B;A&#x005D; ou entre &#34;L33-5&#34; et la masse de carrosserie, &#34;L33-6&#34; et la masse de carrosserie (pour DTC B1053) ou &#34;L33-7&#34; et la masse de carrosserie, &#34;L33-8&#34; et la masse de carrosserie (pour DTC B1057) &#x005B;B&#x005D;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0110">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0111">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0112">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B0113">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820042.swf" width = "90.000mm" height = "117.478mm" ver = "01" gw = "235" gh = "316"/>
+</testfigure>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le SDM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1053: Court-circuit à la masse du circuit &#34;GRN&#x002F;ORN&#34; ou &#34;GRN&#x002F;YEL&#34;. (entre les connecteurs &#34;G55&#34; et &#34;G47&#34; ou entre les connecteurs &#34;L12&#34; et &#34;L33&#34;)
+</ptxt>
+<ptxt>
+DTC B1057: Court-circuit à la masse du circuit &#34;BLU&#x002F;ORN&#34; ou &#34;BLU&#x002F;YEL&#34;. (entre les connecteurs &#34;G55&#34; et &#34;G47&#34; ou entre les connecteurs &#34;L36&#34; et &#34;L33&#34;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Une fois la vérification et les réparations terminées, effectuer les opérations suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Raccorder toutes les pièces constitutives du système d&apos;airbag et s&apos;assurer qu&apos;elles sont toutes correctement montées.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Supprimer les DTC éventuels en se reportant au point 
+<intxref refid = "F8T40A8204005">Suppression des DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Effectuer à nouveau la procédure 
+<intxref refid = "F8T40A8204001">Vérification du système de diagnostic de coussin de sécurité</intxref>
+ pour confirmer que la panne a été réparée.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

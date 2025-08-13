@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "F8T40A5121008" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Description du système de diagnostic embarqué
+</title>
+<servinfosub id = "F8T40A5121008004">
+<title>
+Pour le modèle E-OBD
+</title>
+<ptxt>
+Le TCM prend en charge les fonctions suivantes pour le système de commande de la boîte de vitesses automatique. Se reporter au point 
+<intxref refid = "F8T40A5124048">Vérification du TCM et de ses circuits:5 A&#x002F;T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lorsque le contacteur d&apos;allumage est mis en position ON, moteur coupé, le témoin de panne (MIL) (1) s&apos;allume pour vérifier la condition de l&apos;ampoule MIL.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quand le TCM détecte un défaut dans le système de commande de l&apos;A&#x002F;T (et&#x002F;ou un défaut qui affecte défavorablement les émissions du véhicule) lorsque le moteur tourne, il demande à l&apos;ECM d&apos;allumer le témoin de panne du combiné d&apos;instruments du tableau de bord. Le TCM mémorise la zone dysfonctionnelle.
+</ptxt>
+<ptxt>
+(s&apos;il détecte cependant que la situation est redevenue normale au cours de 3 cycles de conduite consécutifs à la détection d&apos;un dysfonctionnement, il provoque l&apos;extinction du MIL mais le DTC reste quant à lui enregistré dans sa mémoire).
+</ptxt>
+</item>
+<item>
+<ptxt>
+La communication via le DLC (2) est non seulement possible via l&apos;outil de balayage SUZUKI, mais également via l&apos;outil de balayage générique OBD. (les informations de diagnostic sont accessibles à l&apos;aide d&apos;un outil de balayage).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L5A228">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+Dispositif de balayage SUZUKI (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I9T401511002.swf" width = "88.000mm" height = "102.309mm" ver = "01" gw = "189" gh = "273"/>
+</figure>
+</item>
+</list1>
+<topic id = "F8T40A5121008005">
+<title>
+Logique de détection à 2 cycle(s) de conduite
+</title>
+<ptxt>
+Le dysfonctionnement détecté lors du premier cycle de conduite est enregistré dans la mémoire du TCM (sous forme d&apos;un DTC en attente et de données d&apos;image figée) mais le témoin de panne ne s&apos;allume pas à ce stade. Il s&apos;allume à la seconde détection du dysfonctionnement en question, lors du cycle de conduite suivant.
+</ptxt>
+</topic>
+<topic id = "F8T40A5121008001">
+<title>
+DTC en attente
+</title>
+<ptxt>
+Un DTC en attente est un DTC qui a été détecté et enregistré temporairement dans la mémoire de l&apos;ECM lors d&apos;un 1er cycle de conduite dans le cadre de la logique de détection à 2 cycle(s) de conduite.
+</ptxt>
+</topic>
+<topic id = "F8T40A5121008002">
+<title>
+Données d&apos;arrêt sur image
+</title>
+<ptxt>
+Le TCM mémorise les conditions du moteur et de conduite au moment de la détection d&apos;un dysfonctionnement. Ces données sont appelées &#34;Données d&apos;arrêt sur image&#34;.
+</ptxt>
+<ptxt>
+Dans ces conditions, il est possible de connaître l&apos;état du moteur et les conditions de circulation (ex. si le moteur était chaud ou non, si le véhicule roulait ou non) au moment de la détection d&apos;un dysfonctionnement, grâce aux données d&apos;arrêt sur image.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "F8T40A5121008003">
+<title>
+Pour les modèles non-E-OBD
+</title>
+<ptxt>
+Le TCM prend en charge les fonctions suivantes pour le système de commande de la boîte de vitesses automatique. Se reporter au point 
+<intxref refid = "F8T40A5124048">Vérification du TCM et de ses circuits:5 A&#x002F;T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quand le contacteur d&apos;allumage est en position ON sans dysfonctionnement détecté dans le système de commande A&#x002F;T, le témoin de boîte de vitesses (1) s&apos;allume pendant environ 2 secondes après que le contacteur d&apos;allumage est mis en position ON et s&apos;éteint ensuite pour la vérification de l&apos;ampoule.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lorsque le TCM détecte un dysfonctionnement dans le système de commande A&#x002F;T, il allume le témoin de boîte de vitesses (1) et mémorise le DTC du dysfonctionnement.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il est possible de communiquer avec le TCM via le connecteur de liaison des données (DLC) (2) au moyen de l&apos;outil de balayage SUZUKI. Les informations de diagnostic peuvent être vérifiées et supprimées à l&apos;aide de l&apos;outil de balayage SUZUKI.
+</ptxt>
+</item>
+</list1>
+<servicetool>
+<servicetoolitem id = "L5A229">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+Dispositif de balayage SUZUKI (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I8T40A511002.swf" width = "88.000mm" height = "109.011mm" ver = "01" gw = "189" gh = "292"/>
+</figure>
+<topic id = "F8T40A5121008006">
+<title>
+Logique de détection à 2 cycle(s) de conduite
+</title>
+<ptxt>
+Le dysfonctionnement détecté lors du premier cycle de conduite est enregistré dans la mémoire du TCM (sous forme d&apos;un DTC en attente et de données d&apos;image figée) mais le témoin de panne ne s&apos;allume pas à ce stade. Il s&apos;allume à la seconde détection du dysfonctionnement en question, lors du cycle de conduite suivant.
+</ptxt>
+</topic>
+<topic id = "F8T40A5121008007">
+<title>
+DTC en attente
+</title>
+<ptxt>
+Un DTC en attente est un DTC qui a été détecté et enregistré temporairement dans la mémoire de l&apos;ECM lors d&apos;un 1er cycle de conduite dans le cadre de la logique de détection à 2 cycle(s) de conduite.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

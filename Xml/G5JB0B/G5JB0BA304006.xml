@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0BA304006" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "0" modify = "0">
+<title>
+Einspritzanlagen-Warnleuchte schaltet bei Stellen des Zündschalters auf ON ohne Motorstart nicht ein
+</title>
+<servinfosub id = "G5JB0BA304006001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0BA302001">Schaltplan der Wegfahrsperre</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0BA304006002">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+Wenn der Zündschalter auf ON gestellt wird, übertragt das ECM einen Einschaltbefehl für die Einspritzanlagen-Warnleuchte an das Kombinationsinstrument vorausgesetzt es liegt keine Störung im Wegfahrsperren-Steuersystem vor. Daraufhin schaltet das Kombinationsinstrument die Leuchte ein. Wenn der Motor startet, übertragt das ECM einen Ausschaltbefehl für die Einspritzanlagen-Warnleuchte an das Kombinationsinstrument. Daraufhin schaltet das Kombinationsinstrument die Einspritzanlagen-Warnleuchte aus. Falls jedoch eine Störung im Wegfahrsperren-Steuersystem vorliegt, blinkt die Einspritzanlagen-Warnleuchte, wenn der Zündschalter auf ON gestellt wird.
+</ptxt>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G5JB0BA304006003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0BA304006004">
+<testgroup>
+<title>
+Prüfung der Stromversorgung der Einspritzanlagen-Warnleuchte
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf ON stellen.
+</ptxt>
+</test1>
+<question>
+Brennen andere Warnleuchten?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0B1104005">Abruf von DTC</intxref>
+ DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC für das ABS- oder ESP&#174;-Steuermodul abrufen. Für Fahrzeuge mit ESP&#174; siehe 
+<intxref refid = "G5JB0B4604050">Abruf von DTC</intxref>
+. Für Fahrzeuge ohne ESP&#174; siehe 
+<intxref refid = "G5JB0B4504004">Abruf von DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0BA204005">Diagnosecodeüberprüfung</intxref>
+ DTC vom BCM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen DTC vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit dem entsprechenden DTC-Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Probeweise ein funktionierendes Kombinationsinstrument anschließen und die Prüfung wiederholen. Falls die Einspritzanlagen-Warnleuchte weiterhin ausgeschaltet bleibt, ein funktionierendes ECM probeweise anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Sicherungsprüfung
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Prüfen, ob zugehörige Sicherungen durchgebrannt sind.
+</ptxt>
+</test1>
+<question>
+Ist eine Sicherung durchgebrannt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die durchgebrannte Sicherung austauschen und den Schaltkreis auf Kurzschluss untersuchen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des Stromversorgungskabel-Schaltkreises des Kombinationsinstruments
+</title>
+<test1>
+<ptxt>
+Das Kombinationsinstrument gemäß 
+<intxref refid = "G5JB0B9306003">Aus- und Einbau des Kombinationsinstruments</intxref>
+ ausbauen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Anschluss an den Steckverbinderklemmen &#8220;G28-13&#8221; und &#8220;G28-15&#8221; des Kombinationsinstruments in Ordnung ist.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls in Ordnung, den Zündschalter auf ON stellen und die Spannung zwischen der Klemme &#8220;G28-13&#8221; des Kombinationsinstruments und der Karosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt sie 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung in Stromversorgungskabel-Schaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des Massekabel-Schaltkreises des Kombinationsinstruments
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand messen zwischen der Klemme &#8220;G28-15&#8221; am Steckverbinder des Kombinationsinstruments und der Karosseriemasse.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand höchstens 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Probeweise ein funktionierendes Kombinationsinstrument anschließen und die Prüfung wiederholen. Falls die Einspritzanlagen-Warnleuchte weiterhin ausgeschaltet bleibt, ein funktionierendes ECM probeweise anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Den hohen Widerstand oder die Unterbrechung im Schaltkreis des Massekabels reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

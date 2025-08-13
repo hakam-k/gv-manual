@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0A8204020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1033: Masseschluss im Auslöseschaltkreis des Fahrer-Airbagmoduls
+</title>
+<servinfosub id = "G5JB0A8204020001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0A8204018">DTC B1031: Hoher Widerstand im Auslöseschaltkreis des Fahrer-Airbagmoduls</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Unbedingt die Anweisungen unter VORSICHT in &#8220;Überprüfungsablauf des Airbag-Diagnosesystems&#8221; beachten.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "G5JB0A8204020002">
+<title>
+DTC wird durch Folgendes ausgelöst:
+</title>
+<ptxt>
+Die Spannung im Auslöseschaltkreis des Fahrer-Airbagmoduls liegt für einen gewissen Zeitraum unter einem bestimmten Wert.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0A8204020003">
+<title>
+Beschreibung des Diagnoseablauftests
+</title>
+<ptxt>
+<emph etype = "bold">
+Schritt 1: Überprüfen, ob eine Störung in der Kontaktspule, im Fahrer-Airbagmodul (Gasgenerator) oder woanders vorliegt.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 2: Auslöseschaltkreis des Fahrer-Airbagmoduls (Gasgenerators) überprüfen.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 3: Überprüfen, ob die Störung in der Kontaktspule oder im Fahrer-Airbagmodul (Gasgenerator) vorliegt.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0A8204020004">
+<title>
+Fehlersuche anhand von DTC
+</title>
+<diag type = "test" id = "G5JB0A8204020005">
+<testgroup>
+<test1>
+<ptxt>
+Bei Zündschalter auf ON den im unteren Bereich der Lenksäule befindlichen Kontaktspulen-Steckverbinder lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+An den Klemmen des Steckverbinders &#8220;G26&#8221; oder &#8220;G27&#8221; auf korrekten Anschluss an die Kontaktspule prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, die Spezialwerkzeuge (B) und (C) an den in Schritt 1) gelösten Steckverbinder &#8220;G26&#8221; (bei Fahrzeugen ohne automatische Geschwindigkeitsregelung &#x005B;A&#x005D;) oder Spezialwerkzeuge (B) und (D) an den Steckverbinder &#8220;G27&#8221; (bei Fahrzeugen mit automatischer Geschwindigkeitsregelung &#x005B;B&#x005D;) anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B032">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B033">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B034">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820026.swf" width = "90.000mm" height = "51.508mm" ver = "02" gw = "235" gh = "129"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+DTC des SDM überprüfen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1033 bei Zündschalter auf ON angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Mit Zündschalter auf OFF die Spezialwerkzeuge (B) und (C) oder (D) vom Steckverbinder &#8220;G26&#8221; oder &#8220;G27&#8221; und SDM-Steckverbinder &#8220;G47&#8221; oder &#8220;G46&#8221; vom SDM abnehmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Kurzschlussbügel im SDM-Steckverbinder mit dem Lösewerkzeug (1) des Spezialwerkzeugs (A) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Widerstand zwischen Klemme &#8220;G47-5&#8221; und Karosseriemasse sowie zwischen Klemme &#8220;G47-6&#8221; und Karosseriemasse &#x005B;A&#x005D; oder zwischen Klemme &#8220;G46-1&#8221; und Karosseriemasse und zwischen Klemme &#8220;G46-2&#8221; und Karosseriemasse &#x005B;B&#x005D; messen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B035">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B036">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B037">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B038">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820030.swf" width = "90.000mm" height = "102.661mm" ver = "01" gw = "171" gh = "274"/>
+</testfigure>
+</test1>
+<question>
+Sind die Widerstände unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ein intaktes Ersatz-SDM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Masseschluss im Schaltkreis &#8220;GRN&#x002F;RED&#8221; oder &#8220;GRN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Mit Zündschalter auf OFF die Spezialwerkzeuge (B) und (C) oder (D) vom Steckverbinder &#8220;G26&#8221; oder &#8220;G27&#8221; abnehmen. Anschließend den Kontaktspulen-Steckverbinder wieder im unteren Bereich der Lenksäule anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fahrer-Airbagmodul (Gasgenerator) aus der Lenksäule ausbauen. Siehe dazu 
+<intxref refid = "G5JB0A8206005">Aus- und Einbau des Fahrer-Airbagmoduls (Gasgenerator)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Einwandfreie Verbindung zum Steckverbinder des Fahrer-Airbagmoduls (Gasgenerator) überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, dann die Spezialwerkzeuge (A), (B) und (E) an den Steckverbinder des Fahrer-Airbagmoduls (Gasgenerator) anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B039">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B040">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B041">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B042">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B043">
+<s-part>
+(E)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820028.swf" width = "90.000mm" height = "62.797mm" ver = "01" gw = "191" gh = "161"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+DTC des SDM überprüfen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1033 bei Zündschalter auf ON angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Den Zündschalter auf OFF drehen. Kontaktspulen-Baugruppe austauschen. Siehe dazu 
+<intxref refid = "G5JB0A6206013">Aus- und Einbau der Kontaktspulen-Baugruppe</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Den Zündschalter auf OFF drehen. Fahrer-Airbagmodul (Gasgenerator) austauschen. Siehe dazu 
+<intxref refid = "G5JB0A8206005">Aus- und Einbau des Fahrer-Airbagmoduls (Gasgenerator)</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Nach Abschluss der Überprüfung und der Reparaturarbeiten die folgenden Punkte durchführen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle Bauteile des Airbagsystems wieder anschließen und sicherstellen, dass alle Bauteile einwandfrei montiert sind.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fehlercodes löschen. Siehe dazu 
+<intxref refid = "G5JB0A8204005">Löschen von Diagnosecodes (DTC)</intxref>
+, falls vorhanden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<intxref refid = "G5JB0A8204001">Überprüfung des Airbag-Diagnosesystems</intxref>
+ wiederholen, um sicherzustellen, dass die Störung behoben wurde.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "G5JB0A3311002" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Beschreibung der 4WD-Steuerung
+</title>
+<servinfosub id = "G5JB0A3311002001">
+<title>
+Verteilergetriebe-Schaltsteuerung
+</title>
+<ptxt>
+Die 4WD-Steuerung steuert den Verteilergetriebe-Schaltregler anhand des Signals von dem Verteilergetriebeschalter, so dass das Verteilergetriebe auf die gewählte Position (4H, 4H-Lock, N oder 4L-Lock) geschaltet wird. (Für das Umschalten auf die N-Position muss der Schalter für ca. 10 Sekunden auf die &#8220;&#x25A1;&#8221;-Position (1) geschaltet sein und anschließend auf die &#8220;N&#8221;-Position geschaltet werden.)
+</ptxt>
+<ptxt>
+Der Verteilergetrieberegler besteht aus einem Reglermotor und einem Reglermotor-Positionsschalter. Das 4WD-Steuermodul erfasst die Position des Reglermotors mithilfe des Positionsschalters und steuert den Lauf- &#38; Stoppbetrieb des Reglermotors.
+</ptxt>
+<ptxt>
+Der 4L&#x002F;N-Schalter und der Sperrschalter des Zentraldifferenzials, die die Positionen der Hoch- &#38; Niedrig-Schaltgabel erfassen, sowie die Schaltgabel der Differenzialsperre sind in dem Verteilergetriebe integriert. Das 4WD-Steuermodul erfasst die Ist-Schaltposition des Verteilergetriebes (4H, 4H-Lock, N oder 4L-Lock) mithilfe der Signale von dem 4L&#x002F;N-Schalter und dem Sperrschalter des Zentraldifferenzials wie folgt.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A332002.swf" width = "88.000mm" height = "42.689mm" ver = "01" gw = "117" gh = "104"/>
+</figure>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Verhältnis zwischen Schaltposition des Verteilergetriebes und der Schalter
+</title>
+<tgroup cols = "5" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.165in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.872in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.872in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.872in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.872in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Schalter
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Verteilergetriebe-Schaltposition
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4H
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4H-Lock
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+N
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4L-Lock
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4L&#x002F;N-Schalter
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Zentraldifferenzial-Sperrschalter
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+ON
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<ptxt>
+Wenn die Reglermotorposition des Verteilergetriebes, die von dem Motorpositionsschalter erfasst wird, und Ist-Schaltposition des Verteilergetriebes, die von den oben genannten Schaltern erfasst wird, übereinstimmen, dann beurteilt das 4WD-Steuermodul die Verteilergetriebeumschaltung als abgeschlossen. 
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0A3311002002">
+<title>
+Wiederholungssteuerung
+</title>
+<ptxt>
+Wenn das 4WD-Steuermodul die Umschaltung nicht als Zielposition bewerten kann, wird die Umschaltung bis zu dreimal wiederholt. Wenn keine Wiederholungsumschaltung möglich ist, wird die vorherige Schaltposition wieder hergestellt und die fehlerhafte Schaltung anhand der Anzeige und des Warnsummers angegeben.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0A3311002003">
+<title>
+Betrieb von Anzeige und Warnsummer
+</title>
+<ptxt>
+Das 4WD-Steuermodul gibt das Betriebssignal der Differenzialsperren-Anzeige, 4L-Anzeige, N-Anzeige und des Warnsummers an das BCM aus. Anzeigen und Warnsummer sind wie folgt und geben an, in welchem Zustand sich die Verteilergetriebe-Steuerung befindet. 
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1" page = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.672in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.296in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.473in"/>
+<colspec colnum = "4" colname = "4" colwidth = "3.774in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Betrieb
+</ptxt>
+</entry>
+<entry colname = "4" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Prüfbedingung
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Anzeige
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Warnsummer
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Differenzialsperren-Anzeige
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zündschalter auf OFF
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe auf 4H&#x002F;N-Position.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Innerhalb von 2 Sekunden nach Einschalten des Zündschalters (Überprüfung der Anzeigefunktion)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe auf 4H-Lock&#x002F;4L-Lock-Position.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt jeweils im Abstand von 20 Sekunden dreimal für 0,25 Sekunden.  
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ertönt im Abstand von 20 Sekunden für 1 Sekunde. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Die Schaltposition des Verteilergetriebes unterscheidet sich von dem Verteilergetriebeschalter.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt im Abstand von 0,25 Sekunden fortlaufend.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+4WD-Steuermodul erfasst DTC der 4WD-Steuerung.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt im Abstand von 0,5 Sekunden fortlaufend.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Verteilergetriebe schaltet von 4H auf 4H-Sperre.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe schaltet von 4H-Lock auf 4H.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe konnte die Umschaltung auf 4H-Lock nicht abschließen.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+4L-Anzeige
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zündschalter auf OFF
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe auf 4H-Lock&#x002F;N-Position.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Innerhalb von 2 Sekunden nach Einschalten des Zündschalters (Überprüfung der Anzeigefunktion)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe auf 4L-Lock-Position.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt jeweils im Abstand von 20 Sekunden dreimal für 0,25 Sekunden.  
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ertönt im Abstand von 20 Sekunden für 1 Sekunde. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Die Schaltposition des Verteilergetriebes unterscheidet sich von dem Verteilergetriebeschalter.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt im Abstand von 0,25 Sekunden fortlaufend.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+4WD-Steuermodul erfasst DTC der 4WD-Steuerung.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt im Abstand von 0,5 Sekunden fortlaufend.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Verteilergetriebe schaltet von 4H-Lock auf 4L-Lock.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe schaltet von 4L-Lock auf 4H-Lock.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe konnte die Umschaltung auf 4L-Lock nicht abschließen.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+N-Anzeige
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zündschalter auf OFF
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe auf &#x002F;4H-Lock&#x002F;4L-Lock-Position.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ON
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Innerhalb von 2 Sekunden nach Einschalten des Zündschalters (Überprüfung der Anzeigefunktion)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Verteilergetriebe auf N-Position.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt jeweils im Abstand von 20 Sekunden dreimal für 0,25 Sekunden.  
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ertönt im Abstand von 20 Sekunden für 1 Sekunde. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Die Schaltposition des Verteilergetriebes unterscheidet sich von dem Verteilergetriebeschalter.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt im Abstand von 0,2 Sekunden fortlaufend.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+4WD-Steuermodul erfasst DTC der 4WD-Steuerung.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Blinkt im Abstand von 0,5 Sekunden fortlaufend.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Verteilergetriebe konnte die Umschaltung auf N nicht abschließen.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ertönt jeweils im Abstand von 3 Sekunden zweimal für 0,2 Sekunden.  
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Verteilergetriebe auf N-Position.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

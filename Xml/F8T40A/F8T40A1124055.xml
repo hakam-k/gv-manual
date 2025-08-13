@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1124055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2135
+</title>
+<servinfosub id = "F8T40A1124055001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2135: Corrélation de tension &#34;A&#34; &#x002F; &#34;B&#34; du capteur&#x002F;contacteur de position de papillon&#x002F;pédale
+</emph>
+</ptxt>
+<ptxt>
+La différence entre TP principale et TP secondaire est supérieure à la valeur spécifiée.
+</ptxt>
+<ptxt>
+(logique de détection sur 1 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Capteur TP et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ensemble de corps de papillon
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1124055002">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1124055003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention3>
+<ptxt>
+Si des DTC autres que ceux recherchés sont détectés précédemment au cours de la procédure de confirmation des DTC, veiller à solutionner les DTC détectés auparavant.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Maintenir la pédale d&apos;accélérateur en position complètement enfoncée pendant 2 s
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Maintenir la pédale d&apos;accélérateur en position relâchée pendant 2 s
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Répéter les étapes 2) à 3) à 3 reprises.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1124055004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1124055005">
+<testgroup id = "F8T40A1124055006">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124001">Vérification du système de régulation des émissions et de commande du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124055007">
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</test1>
+<question>
+Un ou plusieurs DTC autres que P2135 sont-ils signalés?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au(x) DTC concerné(s).
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124055008">
+<title>
+Vérification du faisceau de câbles
+</title>
+<test1>
+<ptxt>
+Vérifier si le circuit de capteur TP (principal et secondaire) présente les conditions suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de capteur TP (principal): Se reporter aux étapes 2 à 5 du point 
+<intxref refid = "F8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit de capteur TP (secondaire): Se reporter aux étapes 2 à 5 du point 
+<intxref refid = "F8T40A1124028">DTC P0222 &#x002F; P0223:J24B</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le faisceau de câbles défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124055009">
+<title>
+Vérification du capteur TP
+</title>
+<test1>
+<ptxt>
+Vérifier les performances du capteur TP en se reportant à la section &#34;Vérification des performances du capteur de position de papillon (TP)&#34; du point 
+<intxref refid = "F8T40A1326004">Vérification sur véhicule de l&apos;ensemble de corps de papillon:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble de corps de papillon.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

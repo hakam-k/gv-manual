@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A4604011" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Le témoin ESP&#174; s&#8217;allume en permanence.
+</title>
+<servinfosub id = "F6JB0A4604011001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se référer à 
+<intxref refid = "F6JB0A4604010">Le témoin ESP&#174; ne s&#8217;allume pas lorsque le contacteur d&#8217;allumage est placé en position ON</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A4604011002">
+<title>
+Description du circuit
+</title>
+<ptxt>
+Le fonctionnement (ON&#x002F;OFF) du témoin ESP&#174; est contrôlé par le module de commande ESP&#174; via le module de pilotage des témoins dans le combiné des instruments.
+</ptxt>
+<ptxt>
+Si le système ESP&#174; fonctionne bien, le module de commande ESP&#174; allume le témoin ESP&#174; lorsque le contacteur d&#8217;allumage est mis en position ON, le laisse allumé pendant 2 secondes, puis l&#8217;éteint. Si une anomalie est décelée dans le système, le module de commande ESP&#174; maintient le témoin ESP&#174; allumé en permanence. De même, ce dernier est maintenu allumé en permanence par le module de pilotage des témoins lorsque le module de commande ESP&#174; est débranché.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A4604011003">
+<title>
+Diagnostic de panne
+</title>
+<diag type = "test" id = "F6JB0A4604011004">
+<testgroup>
+<test1>
+<ptxt>
+Effectuer une vérification des codes d&#8217;anomalie.
+</ptxt>
+</test1>
+<question>
+Y a-t-il présence de DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel du DTC concerné.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Les fusibles principaux du moteur de pompe ABS et d&#8217;électrovanne d&#8217;ABS sont-ils en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le fusible et rechercher un éventuel court-circuit à la masse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Couper le contact.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande de l&#8217;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+S&#8217;assurer de la bonne connexion au connecteur du module de commande ESP&#174; des bornes &#8220;E53-35&#8221;, &#8220;E53-16&#8221; et &#8220;E53-47&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si en ordre, mettre le contact et mesurer la tension entre la borne &#8220;E53-35&#8221; et la masse de la caisse.
+</ptxt>
+</test1>
+<question>
+La tension se situe-t-elle entre 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure du circuit &#8220;GRN&#x002F;ORN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Tourner la clé de contact à la position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+S&#8217;assurer de la bonne connexion au connecteur du module de commande ESP&#174; des bornes &#8220;E53-1&#8221; et &#8220;E53-32&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si en ordre, mettre le contact et mesurer la tension entre chaque borne de &#8220;E53-1&#8221; et &#8220;E53-32&#8221; et la masse de la caisse.
+</ptxt>
+</test1>
+<question>
+La tension mesurée est-elle de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure du circuit &#8220;WHT&#x002F;RED&#8221; et&#x002F;ou &#8220;WHT&#x002F;BLU&#8221;
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Si en ordre, couper le contact et mesurer la résistance entre chaque borne de &#8220;E53-16&#8221; et &#8220;E53-47&#8221; et la masse de la caisse.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée dans le circuit de la masse pour le module de commande ESP&#174;
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Vérifier le circuit de communication CAN entre le combiné d&#8217;instruments et le module de commande ESP&#174; en se reportant à 
+<intxref refid = "F6JB0A4604036">DTC U1073: Bus de communication de module de commande hors fonction</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le circuit de communication CAN est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le combiné des instruments par un combiné des instruments en bon état, et vérifier à nouveau. Si le témoin ABS reste allumé, substituer l&#8217;ensemble modulateur de pression&#x002F;module de commande ESP&#174; par un réputé en bon état, puis revérifier.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

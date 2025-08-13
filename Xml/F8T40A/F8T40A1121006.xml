@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "F8T40A1121006" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Description du système de commande de papillon électrique
+</title>
+<ptxt>
+Le système de commande de papillon électrique comprend les éléments suivants.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ensemble de corps de papillon incorporé au papillon, moteur de papillon et capteurs (principal&#x002F;secondaire) de position de papillon (TP)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ensemble de pédale d&apos;accélérateur incorporé aux capteurs (principal&#x002F;secondaire) de position de pédale d&apos;accélérateur (APP)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relais de commande de moteur de papillon
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<servinfosub id = "F8T40A1121006001">
+<title>
+Description du fonctionnement
+</title>
+<ptxt>
+L&apos;ECM (5) détecte l&apos;extension d&apos;enfoncement de la pédale d&apos;accélérateur en se basant sur la tension du signal du capteur APP (1). A l&apos;aide de ces données et des conditions de fonctionnement du moteur, l&apos;ECM calcule l&apos;ouverture optimale du papillon. D&apos;autre part, il détecte l&apos;ouverture du papillon en se basant sur la tension de signal du capteur TP (3) inclus dans l&apos;ensemble de corps de papillon (2) et la compare avec l&apos;ouverture optimale du papillon calculée ci-dessus. Lorsqu&apos;une différence est constatée, l&apos;ECM règle le taux de service (100 &#x0025; - 0 &#x0025;) de la commande de moteur de papillon en fonction de cette différence pour diriger le moteur de papillon (4) intégré dans le corps de papillon. Lorsqu&apos;aucune différence n&apos;est constatée, l&apos;ECM règle le taux de service de la commande de moteur de papillon à environ 15 &#x0025; pour maintenir l&apos;ouverture de papillon. C&apos;est ainsi que le papillon (17) est ouvert et fermé pour obtenir l&apos;ouverture optimale du papillon.
+</ptxt>
+<ptxt>
+Dans ce système, étant donné que le capteur TP et le capteur APP possèdent chacun 2 capteurs (principal et secondaire), une commande et une détection des anomalies d&apos;une grande précision et d&apos;une grande fiabilité sont garanties. En outre, lorsque l&apos;ECM détecte une anomalie dans le système, il coupe le relais de commande du moteur de papillon (8) pour cesser de commander le moteur de papillon. Lorsque le relais de commande de moteur de papillon est désactivé, le papillon est calé à un angle d&apos;ouverture d&apos;environ 7&#176; (ouverture par défaut) par rapport à sa position complètement fermée par l&apos;équilibrage du ressort de rappel et du ressort d&apos;ouverture inclus dans le corps de papillon.
+</ptxt>
+<ptxt>
+Ce corps de papillon n&apos;est pas équipé d&apos;une soupape IAC pour la commande de régime de ralenti. La commande de régime de ralenti est activée par le moteur de papillon en ajustant l&apos;ouverture du papillon. 
+</ptxt>
+<figure>
+<graphic graphicname = "I4RS0B110007.swf" width = "183.000mm" height = "92.078mm" ver = "02" gw = "441" gh = "244"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.276in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.741in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.276in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.089in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.276in"/>
+<colspec colnum = "6" colname = "6" colwidth = "2.403in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+CPU
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuit de signal de capteur APP (principal)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+15.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuit d&apos;entraînement de moteur de papillon
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Pilote de moteur de papillon
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+12.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuit de signal de capteur APP (secondaire)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+16.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuit d&apos;alimentation électrique de moteur de papillon
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+9.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+En provenance du fusible &#34;THR MOT&#34;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+13.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuit de signal de capteur TP (principal)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+18.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuit de commande du relais de commande de moteur de papillon
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+En provenance du relais principal
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+14.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuit de signal de capteur TP (secondaire)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

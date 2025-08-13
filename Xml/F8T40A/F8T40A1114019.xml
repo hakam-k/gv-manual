@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1114019" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0102: Tension d&apos;entrée faible du circuit de débit d&apos;air
+</title>
+<servinfosub id = "F8T40A1114019001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1114018">DTC P0101: Problème de performance &#x002F; plage de fonctionnemet du circuit de débit d&apos;air massique:M16A et J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1114019002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.035in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.156in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La tension du capteur MAF est inférieure à 0,15 V pendant 0,5 s.
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit du capteur MAF ouvert ou court-circuité.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur MAF
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1114019003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, raccorder le dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et effacer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le laisser tourner pendant 10 secondes.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC et les DTC en attente.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1114019004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, s&apos;assurer d&apos;avoir lu les précautions relatives à la recherche de pannes sur la base des DTC au point 
+<intxref refid = "F8T40A1110003">Précautions relatives à la recherche de pannes sur la base des DTC:M16A et J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "F8T40A1114019005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de régulation du moteur et des émissions&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1114001">Vérification du système de régulation du moteur et des émissions:M16A et J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du capteur MAF et de son circuit
+</title>
+<test1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Démarrer le moteur et vérifier la valeur MAF affichée sur le dispositif de balayage. (Se reporter au point 
+<intxref refid = "F8T40A1114007">Données de l&apos;outil de balayage:M16A et J20A</intxref>
+ pour la valeur normale).
+</ptxt>
+</test1>
+<question>
+La valeur indiquée est-elle normale?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuels problèmes intermittents en se reportant au point 
+<intxref refid = "F8T40A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la tension de l&apos;alimentation électrique du capteur MAF
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur du capteur MAF et IAT, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et mesurer la tension entre la masse du moteur et la borne du câble &#8220;BLK&#x002F;BLK&#8221; du connecteur du capteur MAF et IAT.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure du circuit &#8220;BLU&#x002F;BLK&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de mise à la masse du capteur MAF
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF et mesurer la résistance entre la borne du câble &#8220;BLU&#8221; du connecteur du capteur MAF et IAT et la masse du moteur.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de mise à la masse
+</title>
+<test1>
+<ptxt>
+Déposer l&apos;ECM de son support, en gardant ses connecteurs branchés.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne &#8220;C37-27&#8221; du connecteur de l&apos;ECM et la masse de moteur.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée du circuit du câble &#8220;BLU&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuit ouvert ou résistance élevée de &#8220;C37-58&#8221;, &#8220;C37-48&#8221;, &#8220;C37-30&#8221;, &#8220;C37-29&#8221; et&#x002F;ou &#8220;C37-15&#8221; dans le circuit de masse de l&apos;ECM.
+</ptxt>
+<ptxt>
+Si les câbles sont conformes, remplacer l&apos;ECM par un élément en bon état, et vérifier à nouveau.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de signal du capteur MAF
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la tension entre la borne du câble &#8220;RED&#8221; du connecteur du détecteur MAF et IAT et la masse du moteur, contacteur d&#8217;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Câble &#8220;RED&#8221; en court-circuit avec un autre circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de signal du capteur MAF
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne du câble &#8220;RED&#8221; du connecteur de détecteur MAF et IAT et la masse du moteur, contacteur d&#8217;allumage en position OFF.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Le câble &#8220;RED&#8221; est court-circuité à la masse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de signal du capteur MAF
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne du câble &#8220;RED&#8221; du connecteur du détecteur MAF et IAT et la borne &#8220;C37-26&#8221; du connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle inférieure à 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Coupure ou résistance élevée du circuit du câble &#8220;RED&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du signal de sortie du capteur MAF
+</title>
+<test1>
+<ptxt>
+Raccorder les connecteurs au capteur MAF et IAT et à l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la tension entre les bornes &#8220;C37-26&#8221; et &#8220;C37-27&#8221; du connecteur de l&apos;ECM en se reportant au point 
+<intxref refid = "F8T40A1316019">Vérification sur véhicule du capteur de débit d&apos;air massique (MAF) et de température d&apos;air d&apos;admission (IAT):M16A et J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Chaque valeur est-elle conforme à la plage de valeurs prescrite?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Capteur MAF et IAT défectueux.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

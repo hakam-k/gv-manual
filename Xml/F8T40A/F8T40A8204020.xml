@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A8204020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1042: Faible résistance du circuit du dispositif d&apos;actionnement de l&apos;airbag du passager
+</title>
+<servinfosub id = "F8T40A8204020001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A8204019">DTC B1041: Résistance élevée du circuit du dispositif d&apos;actionnement de l&apos;airbag du passager</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Veiller à respecter les instructions indiquées au point &#34;Schéma fonctionnel du système de diagnostic d&apos;airbag&#34;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "F8T40A8204020002">
+<title>
+Le DTC est émis lorsque
+</title>
+<ptxt>
+La résistance combinée du module (dispositif de gonflage) d&apos;airbag du passager, du faisceau de câbles et du contact de la borne du connecteur est inférieure à la valeur prescrite pendant une durée déterminée.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A8204020003">
+<title>
+Description du schéma de vérification
+</title>
+<ptxt>
+<emph etype = "bold">
+Etape 1: Vérifier si le module (dispositif de gonflage) d&apos;airbag du passager présente un dysfonctionnement.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 2: Vérifier le circuit du dispositif de déclenchement du module (dispositif de gonflage) d&apos;airbag du passager (Entre &#34;Q01&#34; et &#34;Q02&#34;)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 3: Vérifier le circuit du dispositif de déclenchement du module (dispositif de gonflage) d&apos;airbag du passager (entre &#34;G67&#34; et &#34;G47&#34; ou &#34;G67&#34; et &#34;G46&#34;)
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A8204020004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A8204020005">
+<testgroup id = "F8T40A8204020006">
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher le connecteur du module (dispositif de gonflage) d&apos;airbag du passager.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement du module (dispositif de gonflage) d&apos;airbag du passager aux bornes du connecteur &#34;Q02&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est correct, brancher les outils spéciaux (A), (B) et (D) sur le connecteur &#34;Q02&#34;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B063">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B064">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B065">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-78310">
+09932-78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I9T401822011.swf" width = "90.000mm" height = "54.683mm" ver = "01" gw = "173" gh = "138"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Vérifier le DTC du SDM.
+</ptxt>
+</test1>
+<question>
+Contacteur d&apos;allumage en position ON, le DTC B1042 est-il indiqué?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF. Remplacer le module (dispositif de gonflage) d&apos;airbag du passager en se reportant au point 
+<intxref refid = "F8T40A8206007">Dépose et repose du module (dispositif de gonflage) du coussin de sécurité du passager</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A8204020007">
+<test1>
+<ptxt>
+Avec le contacteur d&apos;allumage en position OFF, débrancher le connecteur &#34;G67&#34; situé près de la boîte à gants.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+S&apos;assurer que le connecteur du faisceau de câbles du tableau de bord est correctement raccordé aux bornes &#34;G67-1&#34; et &#34;G67-2&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si c&apos;est correct, brancher alors les outils spéciaux (B) et (C) sur le connecteur &#34;G67&#34; débranché à l&apos;étape 1).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B066">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B067">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820034.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "169" gh = "128"/>
+</testfigure>
+</test1>
+<test1>
+<paragroup>
+<ptxt>
+Vérifier le DTC du SDM.
+</ptxt>
+</paragroup>
+</test1>
+<question>
+Contacteur d&apos;allumage en position ON, le DTC B1042 est-il indiqué?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<paragroup>
+<ptxt>
+Court-circuit du circuit &#34;BLU&#x002F;RED&#34; avec le circuit &#34;YEL&#x002F;RED&#34;, court-circuit du circuit &#34;BLU&#x002F;RED&#34; ou &#34;YEL&#x002F;RED&#34; avec un autre circuit. (Entre les connecteurs &#34;Q01&#34; et &#34;Q02&#34;)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "F8T40A8204020008">
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position OFF, débrancher les connecteurs &#34;G47&#34; ou &#34;G46&#34; du SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement sur le SDM aux bornes &#34;G47-3&#34; et &#34;G47-4&#34; ou &#34;G46-5&#34; et &#34;G46-6&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est en ordre, relâcher la barre de court-circuit du connecteur du SDM à l&apos;aide de l&apos;outil de relâchement (1) inclus dans l&apos;outillage spécial (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre les bornes &#34;G47-3&#34; et &#34;G47-4&#34; &#x005B;A&#x005D; ou &#x005B;G46-5&#x005D; et &#34;G46-6&#34; &#x005B;B&#x005D; à l&apos;aide des outils spéciaux raccordés (B) et (C).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B068">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B069">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932-75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B070">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932-77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820035.swf" width = "90.000mm" height = "107.247mm" ver = "01" gw = "186" gh = "287"/>
+</testfigure>
+</test1>
+<question>
+La résistance est-elle de 0,65 &#937; minimum?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le SDM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Court-circuit du circuit &#34;BLU&#x002F;RED&#34; avec le circuit &#34;YEL&#x002F;RED&#34;, court-circuit du circuit &#34;BLU&#x002F;RED&#34; ou &#34;YEL&#x002F;RED&#34; avec un autre circuit. (entre les connecteurs &#34;G67&#34; et &#34;G47&#34; ou entre les connecteurs &#34;G67&#34; et &#34;G46&#34;).
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Une fois la vérification et les réparations terminées, effectuer les opérations suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Raccorder toutes les pièces constitutives du système d&apos;airbag et s&apos;assurer qu&apos;elles sont toutes correctement montées.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Supprimer les DTC éventuels en se reportant au point 
+<intxref refid = "F8T40A8204005">Suppression des DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Effectuer à nouveau la procédure 
+<intxref refid = "F8T40A8204001">Vérification du système de diagnostic de coussin de sécurité</intxref>
+ pour confirmer que la panne a été réparée.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

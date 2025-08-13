@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0A1104009" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Grundlegende Motorüberprüfung
+</title>
+<ptxt>
+Diese Überprüfung ist ausschlaggebend, wenn das ECM keinen DTC ausgibt und in 
+<intxref refid = "G5JB0A1104008">Sichtprüfung</intxref>
+ keine Mängel festgestellt werden.
+</ptxt>
+<ptxt>
+Den Ablaufplan sorgfältig einhalten.
+</ptxt>
+<diag type = "test" id = "G5JB0A1104009001">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104001">Überprüfung der Motorsteuerung und Emissionsregelung</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Die Batteriespannung prüfen
+</title>
+<question>
+Beträgt sie 11 V oder mehr?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Batterie laden oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Verfügt das Fahrzeug über ein Fernbedienungs-Startsteuersystem?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Das Fernbedienungs-Startsteuersystem (falls vorhanden) auf Störungen überprüfen.
+</title>
+<test1>
+<ptxt>
+Das Fernbedienungs-Startsteuersystem gemäß 
+<intxref refid = "G5JB0AA504011">Funktionsüberprüfung des schlüssellosen Anlassersystems</intxref>
+ überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Störung des Fernbedienungs-Startsteuersystems.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Dreht der Anlasser?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1904001">Symptomdiagnose für das Anlassersystem</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Springt der Motor an?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Leerlaufdrehzahl überprüfen
+</title>
+<test1>
+<ptxt>
+Den Motor auf normale Betriebstemperatur bringen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Das Getriebe in den Leerlauf (bei M&#x002F;T-Modellen) bzw. auf &#8220;P&#8221; schalten (bei A&#x002F;T-Modellen).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Alle elektrischen Nebenverbraucher ausschalten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Motordrehzahl mit dem Testgerät messen.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I2RH01110005G.swf" width = "90.000mm" height = "46.767mm" ver = "01" gw = "124" gh = "116"/>
+</testfigure>
+</test1>
+<question>
+Beträgt die Drehzahl 600 &#8211; 700 (J20-Motor) bzw. 610 &#8211; 710 (M16-Motor) U&#x002F;min?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104010">Motorsymptomdiagnose</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Zündzeitpunkt überprüfen
+</title>
+<test1>
+<ptxt>
+Bei Verwendung des SUZUKI-Testgeräts den Modus &#8220;Diverser Test&#8221; wählen und den Zündzeitpunkt auf den Ausgangswinkel fixieren.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I2RH01110006G.swf" width = "90.000mm" height = "47.021mm" ver = "01" gw = "123" gh = "116"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Mit einer Zündlichtpistole (1) den Zündzeitpunkt einstellen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L1A002">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09930-76420">
+09930&#8211;76420
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<title>
+J20-Motor
+</title>
+<graphic graphicname = "I5JB0A110021.swf" width = "90.000mm" height = "52.567mm" ver = "01" gw = "134" gh = "132"/>
+</testfigure>
+<testfigure>
+<title>
+M16-Motor
+</title>
+<graphic graphicname = "I5JB0A110022.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "165" gh = "128"/>
+</testfigure>
+</test1>
+<question>
+Liegt der Zündzeitpunkt bei 5&#176; &#8211; 15&#176; (J20-Motor) bzw. 7&#176; &#8211; 17&#176; (M16-Motor) BTDC bei der vorgegebenen Leerlaufdrehzahl?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104010">Motorsymptomdiagnose</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Komponenten der Zündsteuerung überprüfen. Siehe hierzu 
+<intxref refid = "G5JB0A1806007">Überprüfung des Zündzeitpunkts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Die Wegfahrsperre (falls vorhanden) auf Störungen überprüfen
+</title>
+<test1>
+<ptxt>
+Das Wegfahrsperren-Steuersystem überprüfen. Siehe 
+<intxref refid = "G5JB0AA304001">Überprüfung des Wegfahrsperren-Steuersystems</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das System in gutem Zustand?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Störung der Wegfahrsperre.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kraftstoffversorgung überprüfen
+</title>
+<test1>
+<ptxt>
+Sicherstellen, dass ausreichend Benzin im Kraftstofftank ist.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter 2 Sekunden auf ON und dann auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Schritt 2) mehrmals wiederholen.
+</ptxt>
+</test1>
+<question>
+Ist der Kraftstoffdruck im Kraftstoff-Förderschlauch fühlbar, während der Zündschalter auf ON gedreht ist?
+</question>
+<testfigure>
+<title>
+J20-Motor
+</title>
+<graphic graphicname = "I5JB0A110023.swf" width = "90.000mm" height = "46.570mm" ver = "01" gw = "130" gh = "115"/>
+</testfigure>
+<testfigure>
+<title>
+M16-Motor
+</title>
+<graphic graphicname = "I5JB0A110024.swf" width = "90.000mm" height = "46.922mm" ver = "01" gw = "138" gh = "116"/>
+</testfigure>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Die Funktion der Kraftstoffpumpe prüfen.
+</title>
+<question>
+War das Arbeitsgeräusch der Kraftstoffpumpe für ca. 2 Sekunden nach Einschalten der Zündung hörbar, ehe es stoppte?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104067">Überprüfung des Kraftstoffdrucks</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104066">Überprüfung der Kraftstoffpumpe und deren Schaltkreis</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Zündfunken überprüfen
+</title>
+<test1>
+<ptxt>
+Die Steckverbinder der Einspritzventile abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Zündkerzen herausschrauben und mit den Zündkabeln oder Zündspulen verbinden.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Zündkerzen an Masse halten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Anlasser betätigen und prüfen, ob jede Zündkerze einen Funken abgibt.
+</ptxt>
+</test1>
+<question>
+Ist das System in gutem Zustand?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1804004">Zündfunkentest</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Die Funktion des Einspritzventils prüfen.
+</title>
+<test1>
+<ptxt>
+Die Zündkerzen hineinschrauben und die Steckverbinder der Einspritzventile anklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Beim Betätigen des Anlassers das Arbeitsgeräusch jedes Einspritzventils (2) mit einem Stethoskop (1) o. Ä. prüfen.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I3RM0A110015.swf" width = "90.000mm" height = "49.095mm" ver = "01" gw = "145" gh = "122"/>
+</testfigure>
+</test1>
+<question>
+Ist das Betriebsgeräusch aller Einspritzventile hörbar?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104010">Motorsymptomdiagnose</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104065">Überprüfung des Einspritzventil-Schaltkreises</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

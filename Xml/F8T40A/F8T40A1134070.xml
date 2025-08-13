@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1134070" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0008 &#x002F; P0009
+</title>
+<attention3>
+<ptxt>
+Pour l&apos;identification de chaque cylindre et banc, se reporter au point 
+<intxref refid = "F8T40A1130007">Précautions pour l&apos;identification du cylindre et du banc:N32A</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "F8T40A1134070001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.937in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.273in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0008: Performance du système de position de moteur - banc 1
+</emph>
+</ptxt>
+<ptxt>
+La différence entre le CMP côté admission et côté échappement sur le banc 1 est hors plage spécifiée.
+</ptxt>
+<ptxt>
+(logique de détection à 2 D&#x002F;C mais le MIL ne s&apos;allume pas)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Chaîne de distribution
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tendeur de chaîne de distribution
+</ptxt>
+</item>
+<item>
+<ptxt>
+Pignon tendeur
+</ptxt>
+</item>
+<item>
+<ptxt>
+Actionneur CMP
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0009: Performance du système de position de moteur - banc 2
+</emph>
+</ptxt>
+<ptxt>
+La différence entre le CMP côté admission et côté échappement sur le banc 2 est hors plage spécifiée. 
+</ptxt>
+<ptxt>
+(logique de détection à 2 D&#x002F;C mais le MIL ne s&apos;allume pas)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1134070002">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Si des DTC autres que ceux recherchés sont détectés précédemment au cours de la procédure de confirmation des DTC, veiller à solutionner les DTC détectés auparavant.
+</ptxt>
+</item>
+<item>
+<ptxt>
+S&apos;assurer que les conditions suivantes sont respectées dans le cadre de cette procédure.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+-10 &#176;C (14 &#176;F) &lt; ECT &lt; 110,3 &#176;C (230,5 &#176;F)
+</ptxt>
+</item>
+</list2>
+</list1>
+</attention3>
+<s1 page = "1">
+<ptxt>
+Démarrer le moteur et le faire monter à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1 page = "1">
+<ptxt>
+Faire tourner le moteur au ralenti pendant 3 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1134070003">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1134070004">
+<testgroup id = "F8T40A1134070005">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1134001">Vérification du système de régulation des émissions et de commande du moteur:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134070006">
+<title>
+Vérification du système de bloc-moteur
+</title>
+<test1>
+<ptxt>
+Déposer le carter de chaîne de distribution.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Pour le banc associé au DTC, vérifier les éléments suivants.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+1ère chaîne de distribution, pignon tendeur n&#176; 1 et dispositif de réglage de tendeur de chaîne de distribution n&#176; 2: 
+<intxreftitleoff1 refid = "F8T40A1446052"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+2ème chaîne de distribution (banc 1) et dispositif de réglage de tendeur de chaîne de distribution n&#176; 1: 
+<intxreftitleoff1 refid = "F8T40A1446019"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+2ème chaîne de distribution (banc 2), pignon tendeur n&#176; 2 et dispositif de réglage de tendeur de chaîne de distribution n&#176; 3: 
+<intxreftitleoff1 refid = "F8T40A1446055"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Actionneur CMP: 
+<intxreftitleoff1 refid = "F8T40A1446022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134070007">
+<title>
+Vérification de position de repose de chaîne de distribution
+</title>
+<test1>
+<ptxt>
+Vérifier la position de repose de chaîne de distribution comme suit.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+1ère chaîne de distribution: 
+<intxreftitleoff1 refid = "F8T40A1446051"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+2ème chaîne de distribution (banc 1): 
+<intxreftitleoff1 refid = "F8T40A1446018"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+2ème chaîne de distribution (banc 2): 
+<intxreftitleoff1 refid = "F8T40A1446054"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Les chaînes de distribution sont-elles reposées dans la position spécifiée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Reposer les chaînes de distribution dans la position spécifiée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134070008">
+<title>
+Nouvelle vérification de DTC
+</title>
+<test1>
+<ptxt>
+Reposer le carter de chaîne de distribution, puis effectuer la procédure de confirmation des DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC P0008 ou P0009 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Fin.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134070009">
+<title>
+Recherche de pannes d&apos;autres DTC détectés simultanément
+</title>
+<question>
+Y a-t-il un&#x002F;des DTC détecté(s) simultanément?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC correspondant.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

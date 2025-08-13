@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10A">
+<servcat sctnbr = "10" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA124009" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0575: Circuit d&apos;entrée du régulateur de vitesse
+</title>
+<servinfosub id = "F8T40AA124009001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40AA124011">DTC P0504: Corrélation entre contacteurs de freins &#34;A&#34; &#x002F; &#34;B&#34;:Modèles J24B et N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA124009002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.646in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.559in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tension du signal de contacteur MAIN (ON&#x002F;OFF) demeure élevée de façon continue, pendant le temps spécifié.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La tension du signal de contacteur de commande de régulateur de vitesse (contacteur CANCEL, contacteur RES&#x002F;ACC et&#x002F;ou contacteur SET&#x002F;COAST) demeure faible de façon continue, pendant le temps spécifié.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Contacteur de régulateur de vitesse et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40AA124009003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Avec le contacteur d&apos;allumage mis en position OFF, brancher l&apos;outil de balayage sur le DLC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire monter à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Presser une fois le contacteur MAIN (ON&#x002F;OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire le véhicule à 40 km&#x002F;h (25 mph) minimum pendant 3 min. minimum.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40AA124009004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<attention3>
+<ptxt>
+Avant d&apos;effectuer cette recherche de pannes, lire et observer le point 
+<intxref refid = "F8T40A1120003">Précautions relatives à la recherche de pannes sur la base des DTC:J24B</intxref>
+ ou 
+<intxref refid = "F8T40A1130003">Précautions relatives à la recherche de pannes sur la base des DTC:N32A</intxref>
+</ptxt>
+</attention3>
+<diag type = "test" id = "F8T40AA124009005">
+<testgroup>
+<title>
+Vérification du contacteur de régulateur de vitesse
+</title>
+<test1>
+<ptxt>
+Vérifier le contacteur de régulateur de vitesse en se reportant au point 
+<intxref refid = "F8T40AA126002">Vérification du contacteur de régulation de vitesse:Modèles J24B et N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer le contacteur de régulateur de vitesse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du contacteur MAIN (ON&#x002F;OFF) de régulateur de vitesse et du circuit de commande
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de l&apos;ECM, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement entre la borne de circuit de contacteur de régulateur de vitesse et le connecteur de l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est en ordre, vérifier les points suivants au niveau du contacteur MAIN (ON&#x002F;OFF) de régulateur de vitesse et du circuit de commande.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La tension entre la borne de câble &#34;BLK&#x002F;WHT&#34; du connecteur de contacteur de régulateur de vitesse et la masse de carrosserie du véhicule est de 0 V, contacteur d&apos;allumage en position ON (vérification de court-circuit à l&apos;alimentation)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance entre la borne de câble &#34;LT GRN&#34; et la borne de câble &#34;BLK&#x002F;YEL&#34; du connecteur de contacteur de régulateur de vitesse est infinie (vérification d&apos;absence de continuité)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance entre la borne de câble &#34;LT GRN&#34; du connecteur de contacteur de régulateur de vitesse et la masse de carrosserie du véhicule est infinie (vérification de court-circuit à la masse)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le faisceau de câbles.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

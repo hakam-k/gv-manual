@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A8204002" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Schéma de vérification du système de diagnostic d&apos;airbag
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Veiller à effectuer le point 
+<intxref refid = "F8T40A8204001">Vérification du système de diagnostic de coussin de sécurité</intxref>
+ avant de commencer le diagnostic selon le schéma fonctionnel.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lorsque le schéma recommande de mesurer la résistance ou la tension, utiliser un tester équipé de l&apos;adaptateur de borne adéquat de l&apos;outil spécial (jeu d&apos;adaptateurs d&apos;essai de connecteur).
+</ptxt>
+</item>
+<item>
+<ptxt>
+En cas de vérification de la qualité d&apos;un raccordement, se reporter au point 
+<intxref refid = "F8T40A8204040">Vérification des connexions intermittentes et mauvais contacts</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+En cas de coupure de circuit du faisceau de câbles d&apos;airbag ou si le connecteur ou la borne sont endommagés, remplacer ensemble le faisceau de câbles, les connecteurs et les bornes.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<servinfosub id = "F8T40A8204002001">
+<title>
+Description du schéma de vérification
+</title>
+<ptxt>
+<emph etype = "bold">
+Etape 1: vérifier le circuit et le témoin &#34;AIR BAG&#34;.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 2: vérifier si le témoin &#34;AIR BAG&#34; s&apos;allume.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 3: Vérifier si le témoin &#34;AIR BAG&#34; clignote 6 fois après mise en position ON du contacteur d&apos;allumage.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 4: vérifier si un ou plusieurs anciens codes sont enregistrés dans la mémoire du SDM. 
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 5: Vérifier si un code actuel est enregistré dans la mémoire du SDM 
+</emph>
+</ptxt>
+<diag type = "test" id = "F8T40A8204002002">
+<testgroup id = "F8T40A8204002003">
+<test1>
+<ptxt>
+S&apos;assurer que la tension de batterie est d&apos;environ 11 V minimum.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Observer le témoin &#34;AIR BAG&#34; lorsque le contacteur d&apos;allumage est mis en position ON.
+</ptxt>
+</test1>
+<question>
+Le témoin &#34;AIR BAG&#34; s&apos;allume-t-il lorsque le contacteur d&apos;allumage est mis en position ON?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A8204008">Le témoin &#8220;AIR BAG&#8221; ne s&apos;allume pas</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A8204002004">
+<question>
+Le témoin &#34;AIR BAG&#34; reste-t-il allumé?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A8204007">Le témoin &#34;AIR BAG&#34; s&apos;allume en permanence</intxref>
+.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A8204002005">
+<question>
+Le témoin &#34;AIR BAG&#34; s&apos;éteint-il après avoir clignoté 6 fois?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Le circuit de témoin &#34;AIR BAG&#34; est en bon état. Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Le circuit de témoin &#34;AIR BAG&#34; est en bon état. Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A8204002006">
+<ptxt>
+Vérifier les DTC en se reportant au point 
+<intxref refid = "F8T40A8204004">Vérification des DTC</intxref>
+.
+</ptxt>
+<question>
+&#34;AUCUN CODE&#34; s&apos;affiche-t-il sur l&apos;outil de balayage SUZUKI?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Le système d&apos;airbag est en bon état.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<paragroup>
+<ptxt>
+Une problème intermittent se présente dans le système.
+</ptxt>
+<ptxt>
+Vérifier le faisceau de câbles de connecteur, etc. correspondant au DTC détecté.
+</ptxt>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A8204040">Vérification des connexions intermittentes et mauvais contacts</intxref>
+.
+</ptxt>
+<ptxt>
+Ensuite, effacer les DTC (en se reportant au point 
+<intxref refid = "F8T40A8204005">Suppression des DTC</intxref>
+) puis répéter ce schéma.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "F8T40A8204002007">
+<ptxt>
+Vérifier les DTC en se reportant au point 
+<intxref refid = "F8T40A8204004">Vérification des DTC</intxref>
+.
+</ptxt>
+<question>
+&#34;AUCUN CODE&#34; s&apos;affiche-t-il sur l&apos;outil de balayage SUZUKI?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le SDM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Vérifier et réparer conformément au schéma fonctionnel correspondant à ce DTC.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

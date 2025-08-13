@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A4604018" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+Code C1024: Défaillance du circuit du capteur d&#8217;angle de braquage
+</title>
+<servinfosub id = "F6JB0A4604018001">
+<title>
+Condition de détection de DTC et zone de défaut
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.710in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.497in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du code
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Zone de défaut
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Le CPU a détecté un défaut interne dans le capteur d&#8217;angle de braquage.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Signal du capteur d&#8217;angle de braquage hors limites spécifiées
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Capteur d&#8217;angle de braquage
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande de l&#8217;ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0A4604018002">
+<title>
+Diagnostic de panne des DTC
+</title>
+<diag type = "test" id = "F6JB0A4604018003">
+<testgroup>
+<question>
+La &#8220;Vérification de l&#8217;électro-stabilisateur programmé&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à 
+<intxref refid = "F6JB0A4604001">Vérification de l&#8217;électro-stabilisateur programmé</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC de l&#8217;ESP&#174;
+</title>
+<test1>
+<ptxt>
+Contact coupé, raccorder l&#8217;analyseur-contrôleur au DLC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contact et vérifier les DTC de l&#8217;ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Les DTC C1037, U1073 et&#x002F;ou U1126 sont-ils détectés?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel du DTC concerné.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Contrôle de l&#8217;étalonnage de capteur
+</title>
+<test1>
+<ptxt>
+Etalonner le capteur d&#8217;angle de braquage en se référant à 
+<intxref refid = "F6JB0A4606002">Etalonnage des capteurs</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Supprimer tous les DTC et vérifier les DTC du ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Le DTC C1024 est-il toujours détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&#8217;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Etalonnage du capteur d&#8217;angle de braquage incomplet
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier le capteur d&#8217;angle de braquage.
+</title>
+<test1>
+<ptxt>
+Vérifier le capteur d&#8217;angle de braquage en se référant à 
+<intxref refid = "F6JB0A4606019">Vérification sur le véhicule du capteur d&#8217;angle de braquage</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le circuit est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&#8217;ensemble modulateur de pression&#x002F;module de commande ESP&#174; par une pièce réputée en bon état, puis vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le capteur d&#8217;angle de braquage.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

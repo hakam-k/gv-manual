@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A5114021" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Aucun blocage ne se produit
+</title>
+<servinfosub id = "F8T40A5114021001">
+<title>
+Description des symptômes
+</title>
+<ptxt>
+Le TCM éteint l&apos;électrovanne de commande de pression TCC dans l&apos;une des conditions suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La température du liquide de refroidissement du moteur est inférieure à 60 &#176;C (140 &#176;F).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le contacteur 4L&#x002F;N est en position ON (si le véhicule en est équipé) (mode 4L ou N)
+</ptxt>
+</item>
+<item>
+<ptxt>
+le contacteur de feu stop est en position ON (la pédale de frein est enfoncée),
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le TCM détecte les DTC suivants.
+</ptxt>
+<ptxt>
+DTC P0602, P0712, P0713, P0717, P0722, P0962, P0963, P0973, P0974, P0976, P0977, P1702, P1703, P1706, P1774, P1777, P2763, P2764, U0073 et&#x002F;ou U0100
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "F8T40A5114021002">
+<title>
+Recherche de pannes
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lors d&apos;un essai sur route, choisir un endroit où il n&apos;y a ni trafic ni risque d&apos;accident et rester très prudent pendant l&apos;essai pour éviter tout accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;essai sur route doit être effectué par 2 personnes, un conducteur et un technicien, sur une route plane.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<diag type = "test" id = "F8T40A5114021003">
+<testgroup>
+<question>
+La &#34;Vérification du système A&#x002F;T&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A5114001">Vérification du système A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les DTC
+</title>
+<question>
+Les DTC P0602, P0712, P0713, P0717, P0722, P0962, P0963, P0973, P0974, P0976, P0977, P1702, P1703, P1706, P1774, P1777, P2763, P2764, U0073 et&#x002F;ou U0100 sont-ils détectés?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Suivre le schéma fonctionnel de DTC pour réparer et réessayer.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;ECT
+</title>
+<test1>
+<ptxt>
+Faire monter le moteur en température jusqu&apos;à sa température normale de fonctionnement.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier l&apos;ECT à l&apos;aide de l&apos;outil de balayage SUZUKI.
+</ptxt>
+</test1>
+<question>
+L&apos;ECT est-elle supérieure à 60 &#176;C (140 &#176;F)?
+</question>
+<result>
+OUI
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Pour les véhicule équipés du contacteur 4L&#x002F;N, passer à l&apos;Etape 4.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Pour les véhicule non équipés du contacteur 4L&#x002F;N, passer à l&apos;Etape 5.
+</ptxt>
+</item>
+</list1>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Le capteur ECT, le circuit de ce détecteur ou le système de refroidissement du moteur est défectueux. Si c&apos;est correct, remplacer le TCM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du signal du contacteur 4L&#x002F;N
+</title>
+<test1>
+<ptxt>
+Le contacteur d&apos;allumage en position ON, vérifier la tension entre la borne &#34;E93-4&#34; du coupleur TCM et la masse.
+</ptxt>
+<spec>
+<title>
+Spécification du contacteur 4L&#x002F;N
+</title>
+<ptxt>
+La position de boîte de vitesse ou &#34;4H&#34;: Tension de batterie
+</ptxt>
+<ptxt>
+Rapport de transfert en position &#34;4L&#34; ou &#34;N&#34;: 0 - 2 V
+</ptxt>
+</spec>
+</test1>
+<question>
+Le résultat est-il conforme aux spécifications?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Défectuosité du contacteur 4L&#x002F;N ou de son circuit. Si c&apos;est correct, remplacer le TCM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du signal du contacteur de feux stop
+</title>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position ON, vérifier la tension entre la borne du connecteur d&apos;ECM et la masse.
+</ptxt>
+<spec>
+<title>
+Spécifications du contacteur de feu stop
+</title>
+<ptxt>
+Pédale de frein relâchée: 0 - 1 V
+</ptxt>
+<ptxt>
+Pédale de frein enfoncée: Tension de batterie
+</ptxt>
+</spec>
+</test1>
+<question>
+Le résultat est-il conforme aux spécifications?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le TCM par un TCM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Contacteur de feu stop mal réglé, contacteur de feu stop ou son circuit défectueux. Si c&apos;est correct, remplacer le TCM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

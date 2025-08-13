@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0BA304025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1708: ECM Code Error
+</title>
+<servinfosub id = "G5JB0BA304025010">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0BA302001">Schaltplan der Wegfahrsperre</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0BA304025001">
+<title>
+Erfassungsbedingung und Fehlerbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Verifizierungsfehler zwischen ICM und ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM nicht im Wegfahrsperren-Steuersystem registriert
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G5JB0BA304025002">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0BA304025004">
+<testgroup>
+<title>
+Prüfung ECM
+</title>
+<question>
+Wurde DTC B1708 sofort nach dem Austausch des ECM erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM-Registrierung
+</title>
+<test1>
+<ptxt>
+Das ECM gemäß 
+<intxref refid = "G5JB0BA306003">Vorgehensweise nach Austausch des ECM</intxref>
+ registrieren.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC erneut abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC B1707 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sicherstellen, dass der Motor startet, und dann DTC erneut abrufen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0B1104005">Abruf von DTC</intxref>
+ DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC für das ABS- oder ESP&#174;-Steuermodul abrufen. Für Fahrzeuge mit ESP&#174; siehe 
+<intxref refid = "G5JB0B4604050">Abruf von DTC</intxref>
+. Für Fahrzeuge ohne ESP&#174; siehe 
+<intxref refid = "G5JB0B4504004">Abruf von DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0BA204005">Diagnosecodeüberprüfung</intxref>
+ DTC vom BCM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen DTC vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit dem entsprechenden DTC-Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM-Steckverbinderprüfung
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den ICM-Steckverbinder lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Anschluss zu den Klemmen und Kabeln des ICM-Steckverbinders in Ordnung ist. Siehe 
+<intxref refid = "G5JB0B0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind alle Klemmen- und Kabelanschlüsse in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schlechte Verbindungen reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM-Steckverbinderprüfung
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die ECM-Steckverbinder lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der Anschluss zu den Klemmen und Kabeln des ECM-Steckverbinders in Ordnung ist. Siehe 
+<intxref refid = "G5JB0B0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind alle Klemmen- und Kabelanschlüsse in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schlechte Verbindungen reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung der ICM-Stromversorgungs- und -Massekreise
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0BA304018">Prüfung des Wegfahrsperren-Steuermoduls (ICM) und dessen Schaltkreises</intxref>
+ die ICM-Stromversorgungs- und -Massekreise prüfen.
+</ptxt>
+</test1>
+<question>
+Sind die ICM-Stromversorgungs- und -Massekreise in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Probeweise ein funktionierendes ICM anschließen und die Prüfung wiederholen. Falls DTC B1708 immer noch vorliegt, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Stromversorgungs- und -Massekreise ggf. reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0B8204035" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1324 &#x002F; B1328: Auslöseschaltkreis des linken&#x002F;rechten Seitenairbags mit Stromversorgungsschaltkreis kurzgeschlossen
+</title>
+<servinfosub id = "G5JB0B8204035001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0B8204032">DTC B1321 &#x002F; B1325: Hoher Widerstand im Auslöseschaltkreis des linken&#x002F;rechten Seitenairbags</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Unbedingt die Anweisungen unter VORSICHT in &#8220;Überprüfungsablauf des Airbag-Diagnosesystems&#8221; beachten.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "G5JB0B8204035002">
+<title>
+DTC wird durch Folgendes ausgelöst:
+</title>
+<ptxt>
+Wenn die am Auslöseschaltkreis des Seitenairbags (links oder rechts) gemessene Spannung für einen vorgeschriebenen Zeitraum über einem Sollwert liegt.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0B8204035003">
+<title>
+Beschreibung des Diagnoseablauftests
+</title>
+<ptxt>
+<emph etype = "bold">
+Schritt 1: Prüfen, ob im Seitenairbagmodul (Gasgenerator) eine Störung vorliegt.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 2: Auslöseschaltkreis im Kabelbaum der Bodengruppe des Seitenairbags überprüfen.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Schritt 3: Auslöseschaltkreis im Sitz-Kabelbaum des Seitenairbags überprüfen.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0B8204035004">
+<title>
+Fehlersuche anhand von DTC
+</title>
+<diag type = "test" id = "G5JB0B8204035005">
+<testgroup>
+<test1>
+<ptxt>
+Bei Zündschalter auf OFF den Steckverbinder des Seitenairbagmoduls (Gasgenerator) unter dem Vordersitzpolster lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Einwandfreie Verbindung zum linken oder rechten Seitenairbagmodul (Gasgenerator) an den Anschlüssen im Steckverbinder &#8220;L25&#8221; oder &#8220;L30&#8221; überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, die Spezialwerkzeuge (B) und (C) an den in Schritt 1 gelösten Steckverbinder des Seitenairbagmoduls (Gasgenerator) anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0153">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0154">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I4RS0A820032.swf" width = "90.000mm" height = "52.920mm" ver = "01" gw = "149" gh = "133"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+DTC des SDM überprüfen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1324 oder B1328 bei Zündschalter auf ON noch immer angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Die Spezialwerkzeuge (B), (C) und den SDM-Steckverbinder &#8220;L33&#8221; lösen, während der Zündschalter in Stellung OFF steht.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Kurzschlussbügel im SDM-Steckverbinder mit dem Lösewerkzeug (1) des Spezialwerkzeugs (A) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Spannung zwischen &#8220;L33-1&#8221; und Karosseriemasse und zwischen &#8220;L33-2&#8221; und Karosseriemasse (bei DTC B1324) oder zwischen &#8220;L33-3&#8221; und Karosseriemasse und zwischen &#8220;L33-4&#8221; und Karosseriemasse (bei DTC B1328) mit angeschlossenen Spezialwerkzeugen (B) und (C) messen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0155">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0156">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0157">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820048.swf" width = "90.000mm" height = "61.739mm" ver = "01" gw = "216" gh = "158"/>
+</testfigure>
+</test1>
+<question>
+Beträgt die Spannung bei Zündschalterstellung ON 1 V oder weniger?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ein intaktes Ersatz-SDM einbauen und Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1324: Kurzschluss vom Kabelschaltkreis &#8220;GRY&#x002F;RED&#8221; oder &#8220;GRY&#8221; zum Stromversorgungsschaltkreis im Kabelbaum der Bodengruppe reparieren.
+</ptxt>
+<ptxt>
+DTC B1328: Kurzschluss vom Kabelschaltkreis &#8220;BRN&#x002F;WHT&#8221; oder &#8220;BRN&#8221; zum Stromversorgungsschaltkreis im Kabelbaum der Bodengruppe reparieren.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Bei Zündschalter auf OFF die Spezialwerkzeuge (B) und (C) lösen und dann den Steckverbinder &#8220;L25&#8221; bzw. &#8220;L30&#8221; wieder anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Steckverbinder des Seitenairbagmoduls (Gasgenerator) &#8220;Q02&#8221; oder &#8220;Q03&#8221; vom Seitenairbagmodul (Gasgenerator) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Einwandfreie Verbindung zum Seitenairbagmodul (Gasgenerator) am Anschluss im Steckverbinder überprüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, die Spezialwerkzeuge (A), (B) und (C) am Steckverbinder des Seitenairbags (Gasgenerator) anschließen.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0158">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0159">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0160">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820046.swf" width = "90.000mm" height = "52.214mm" ver = "02" gw = "196" gh = "131"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+DTC des SDM überprüfen.
+</ptxt>
+</test1>
+<question>
+Wird DTC B1064 oder B1068 bei Zündschalter auf ON noch immer angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1324: Kurzschluss vom Kabelschaltkreis &#8220;GRY&#x002F;RED&#8221; oder &#8220;GRY&#8221; zum Stromversorgungsschaltkreis im Sitz-Kabelbaum reparieren.
+</ptxt>
+<ptxt>
+DTC B1328: Kurzschluss vom Kabelschaltkreis &#8220;BRN&#x002F;WHT&#8221; oder &#8220;BRN&#8221; zum Stromversorgungsschaltkreis im Sitz-Kabelbaum reparieren.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Seitenairbagmodul (Gasgenerator) austauschen. Siehe dazu 
+<intxref refid = "G5JB0B8206009">Aus- und Einbau des Seitenairbagmoduls (Gasgenerator)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Nach Abschluss der Überprüfung und der Reparaturarbeiten die folgenden Punkte durchführen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle Bauteile des Airbagsystems wieder anschließen. Sicherstellen, dass alle Bauteile einwandfrei befestigt sind.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fehlercodes löschen. Siehe dazu 
+<intxref refid = "G5JB0B8204005">Löschen von Diagnosecodes (DTC)</intxref>
+, falls vorhanden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+<intxref refid = "G5JB0B8204001">Überprüfung des Airbag-Diagnosesystems</intxref>
+ wiederholen, um sicherzustellen, dass die Störung behoben wurde.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

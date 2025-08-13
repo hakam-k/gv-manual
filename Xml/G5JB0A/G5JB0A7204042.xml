@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0A7204042" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1546: Störung beim Klimaanlagen-Kältemitteldruck
+</title>
+<servinfosub id = "G5JB0A7204042001">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.768in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.436in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Außentemperatur ist höher als der angegebene Wert. Der Kältemitteldruck ist jedoch geringer als der angegebene Wert.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schaltkreis des Kältemitteldrucksensors
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kältemitteldrucksensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schaltkreis des Außentemperatursensors
+</ptxt>
+</item>
+<item>
+<ptxt>
+Außentemperatursensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+HVAC-Steuermodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0A7204042002">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Das Testgerät bei ausgeschalteter Zündung an den Datenübertragungsanschluss (DLC) anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zündschalter auf ON drehen und Diagnosecodes mit Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und auf normale Betriebstemperatur bringen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Klimaanlage für eine Minute oder länger in Betrieb nehmen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC überprüfen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G5JB0A7204042003">
+<title>
+DTC-Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0A7204042004">
+<testgroup>
+<title>
+Diagnosecodeüberprüfung
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei ausgeschalteter Zündung an den Datenübertragungsanschluss (DLC) anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die DTC löschen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF stellen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die DTC abrufen.
+</ptxt>
+</test1>
+<question>
+Wird der Diagnosecode (DTC) B1546 ausgegeben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Zustand der Klimaanlage bestätigen, siehe 
+<intxref refid = "G5JB0A7204027">Funktionsüberprüfung der Klimaanlage</intxref>
+, und DTC erneut überprüfen. 
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Kältemitteldrucks
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei ausgeschalteter Zündung an den Datenübertragungsanschluss (DLC) anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zündschalter in Position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den vom Testgerät angezeigten Kältemitteldruck überprüfen.
+</ptxt>
+</test1>
+<question>
+Beträgt er 340 kPa oder mehr?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kältemittel nachfüllen und Zustand der Klimaanlage bestätigen, siehe 
+<intxref refid = "G5JB0A7204027">Funktionsüberprüfung der Klimaanlage</intxref>
+.  DTC erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Klimaanlage
+</title>
+<test1>
+<ptxt>
+Zustand der Klimaanlage bestätigen, siehe 
+<intxref refid = "G5JB0A7204027">Funktionsüberprüfung der Klimaanlage</intxref>
+. 
+</ptxt>
+</test1>
+<question>
+Kilmaanlage in einwandfreiem Zustand?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reparieren und&#x002F;oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Kältemitteldrucksensors
+</title>
+<test1>
+<ptxt>
+Kältemitteldrucksensor der Klimaanlage überprüfen. Siehe dazu 
+<intxref refid = "G5JB0A7206051">Überprüfung des Kältemitteldrucksensors und seines Schaltkreises</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Kältemitteldrucksensor und&#x002F;oder zugehöriger Schaltkreis in einwandfreiem Zustand?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Schaltkreis reparieren und&#x002F;oder Kältemitteldrucksensor austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Außentemperatursensors
+</title>
+<test1>
+<ptxt>
+Außentemperatursensor überprüfen. Siehe dazu 
+<intxref refid = "G5JB0A9306016">Überprüfung des Außenlufttemperaturfühlers (falls vorhanden)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist der Sensor in gutem Zustand?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+HVAC-Steuermodul austauschen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Außentemperatursensor austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

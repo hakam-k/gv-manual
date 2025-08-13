@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0AA304013" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Wegfahrsperren-Anzeigenleuchte bleibt nach Anlassen des Motors eingeschaltet
+</title>
+<servinfosub id = "G5JB0AA304013001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0AA302001">Schaltplan des Wegfahrsperren-Steuersystems</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA304013002">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+Wenn der Zündschalter auf ON geschaltet wird, überträgt das ECM das Anzeige-ON-Signal an das Kombinationsinstrument, um die Wegfahrsperren-Anzeigenleuchte einzuschalten, falls kein Problem mit dem Wegfahrsperren-Steuersystem vorliegt. Dann schaltet das Kombinationsinstrument die Leuchte ein. Nach Starten des Motors überträgt das ECM das Anzeige-OFF-Signal an das Kombinationsinstrument, um die Leuchte auszuschalten. Dann schaltet das Kombinationsinstrument die Wegfahrsperren-Anzeigenleuchte aus. Falls jedoch eine Störung des Wegfahrsperren-Steuersystems vorliegt, blinkt die Wegfahrsperren-Anzeigenleuchte bei Einschalten des Zündschalters.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA304013003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0AA304013004">
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Den Motor anlassen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob ein DTC vom ECM erfasst wurde. Siehe dazu 
+<intxref refid = "G5JB0AA304002">Abruf von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird irgendein Störungscode erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0AA304001">Überprüfung des Wegfahrsperren-Steuersystems</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kabelschaltkreisüberprüfung der CAN-Kommunikation
+</title>
+<test1>
+<ptxt>
+Die Kabelschaltkreise der CAN-Kommunikation zwischen dem Kombinationsinstrument und dem ECM prüfen. Siehe hierzu 
+<intxref refid = "G5JB0A1104058">DTC P1674: CAN-Kommunikation (Bus-Aus-Fehler)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind die Kabelschaltkreise in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Das Kombinationsinstrument durch ein intaktes austauschen und die Prüfung wiederholen. Bleibt die Wegfahrsperren-Anzeigenleuchte ausgeschaltet, ein intaktes ECM einbauen und DTC erneut abrufen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Defekten Kabelschaltkreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

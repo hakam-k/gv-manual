@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E1104019" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0102: Niedrige Eingangsspannung im Luftmengenmesser-Schaltkreis
+</title>
+<servinfosub id = "G5JB0E1104019001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E1104018">DTC P0101: Bereich&#x002F;Leistung des Luftmengenmesser-Schaltkreises</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E1104019002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.650in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.541in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Der DTC wird registriert, wenn alle folgenden Bedingungen ununterbrochen für 0,5 Sekunden auftreten.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motor läuft
+</ptxt>
+</item>
+<item>
+<ptxt>
+Die Spannung am MAF-Sensorausgang liegt während der festgelegten Zeit ununterbrochen unter dem Sollwert.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Unterbrechung oder Kurzschluss im MAF-Sensorschaltkreis
+</ptxt>
+</item>
+<item>
+<ptxt>
+MAF-Sensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0E1104019003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Testgerät anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und die DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und 10 Sek. laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Aktuelle und vorgemerkte Störungscodes abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G5JB0E1104019004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G5JB0E1100003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G5JB0E1104019005">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0E1104001">Überprüfung der Motorsteuerung und Emissionsregelung</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des MAF-Sensors und des zugehörigen Schaltkreises
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei Zündschalterstellung OFF an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Motor starten und den am Testgerät angezeigten MAF-Wert überprüfen. (Für den Normalwert siehe 
+<intxref refid = "G5JB0E1104007">Testgerät-Ausgabeparameter</intxref>
+.)
+</ptxt>
+</test1>
+<question>
+Wird der Normalwert angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G5JB0E0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der MAF-Sensor-Versorgungsspannung
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder des MAF-Sensors und des IAT-Fühlers abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen Motormasse und dem Kabelanschluss &#8220;BLU&#x002F;BLK&#8221; am Steckverbinder des MAF-Sensors und des IAT-Fühlers messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung im Kabel &#8220;BLU&#x002F;BLK&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Masseverbindung des MAF-Sensors
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Widerstand zwischen dem Kabelanschluss &#8220;BLU&#8221; am Steckverbinder des MAF-Sensors und des IAT-Fühlers und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Masseverbindung
+</title>
+<test1>
+<ptxt>
+Das ECM aus der Halterung nehmen, ohne die Steckverbinder abzuklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen Anschlussklemme &#8220;C37-27&#8221; des ECM-Steckverbinders und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Kabel &#8220;BLU&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Unterbrechung oder hoher Widerstand in den ECM-Masseleitungen &#8220;C37-58&#8221;, &#8220;C37-48&#8221;, &#8220;C37-30&#8221;, &#8220;C37-29&#8221; und&#x002F;oder &#8220;C37-15&#8221;.
+</ptxt>
+<ptxt>
+Falls die Leitungen in Ordnung sind, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Signalkreises des MAF-Sensors
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen dem Kabelanschluss &#8220;RED&#8221; am Steckverbinder des MAF-Sensors und des IAT-Fühlers und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kurzschluss des Kabels &#8220;RED&#8221; an anderem Schaltkreis.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Signalkreises des MAF-Sensors
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Widerstand zwischen dem Kabelanschluss &#8220;RED&#8221; am Steckverbinder des MAF-Sensors und des IAT-Fühlers und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Ist der Widerstand unendlich?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Masseschluss des Kabels &#8220;RED&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Signalkreises des MAF-Sensors
+</title>
+<test1>
+<ptxt>
+Den Widerstand zwischen dem Kabelanschluss &#8220;RED&#8221; des MAF-Sensor- und IAT-Fühler-Steckverbinders und Anschlussklemme &#8220;C37-26&#8221; des ECM-Steckverbinders messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Kabel &#8220;RED&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des MAF-Sensorausgangssignals
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder an den MAF-Sensor und IAT-Fühler und an das ECM anklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Spannung zwischen Anschlussklemme &#8220;C37-26&#8221; und &#8220;C37-27&#8221; des ECM-Steckverbinders messen. Siehe 
+<intxref refid = "G5JB0E1306019">Überprüfung des Luftmengenmesser-Sensors (MAF-Sensor) und des Ansaugluft-Temperaturfühlers (IAT-Fühler) am Fahrzeug</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Entsprechen die Werte den Vorgaben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+MAF-Sensor und IAT-Fühler defekt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

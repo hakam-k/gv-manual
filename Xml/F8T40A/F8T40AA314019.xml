@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA314019" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1646: Code ID incorrect
+</title>
+<servinfosub id = "F8T40AA314019001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+<intxrefpoff refid = "F8T40AA312001">Schéma du circuit de câblage du système antidémarrage:Modèle à moteur à essence</intxrefpoff>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA314019002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Erreur de communication de l&apos;ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de communication CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40AA314019003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40AA314019004">
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de tous les modules de commande communiquant via le CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le circuit de communication CAN entre les modules de commande présente un éventuel court-circuit, une coupure ou une résistance élevée.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

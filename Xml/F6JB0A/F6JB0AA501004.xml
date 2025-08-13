@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10E">
+<servcat sctnbr = "10" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "F6JB0AA501004" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Fonction de verrouillage des portes du système de démarrage par télécommande
+</title>
+<ptxt>
+Lorsque le contacteur de demande (1) intégré à la poignée extérieure de la porte côté conducteur, de la porte côté passager ou du hayon est enfoncé, le module de commande de démarrage par télécommande (2) donne l&apos;ordre à l&apos;antenne centrale (3) et l&apos;antenne du compartiment à bagages (4) d&apos;émettre une onde radio dans l&apos;habitacle dans le but de vérifier si la télécommande (5) se trouve ou non dans l&apos;habitacle. Si le module de commande de démarrage par télécommande ne reçoit aucun signal de la télécommande (c.-à-d. que la télécommande ne se trouve pas dans l&apos;habitacle), il donne l&apos;ordre à l&apos;antenne (6) de la porte dont le contacteur de demande a été enfoncé d&apos;émettre le signal de requête hors de l&apos;habitacle. Si la télécommande se trouve dans la zone de portée du verrouillage des portes, elle reçoit le signal de demande émis par l&apos;antenne susmentionnée, transmet son code d&apos;identification et le signal de demande au module de commande de démarrage par télécommande et allume le témoin (7) de la télécommande. Si le témoin de fonctionnement s&apos;allume, cela signifie que la télécommande a envoyé le code d&apos;identification et le signal de demande.
+</ptxt>
+<ptxt>
+Le module de commande de démarrage par télécommande compare le code d&apos;identification émis par la télécommande au code d&apos;identification enregistré dans le module de commande de démarrage par télécommande. Si les deux codes concordent, le module de commande de démarrage par télécommande envoie le signal de demande de verrouillage ou de déverrouillage (en fonction de l&apos;état du contacteur de verrouillage de porte (8) à ce moment) au BCM (9). Lorsque le BCM reçoit, via le CAN, ce signal du module de commande de démarrage par télécommande, il donne l&apos;ordre à l&apos;actionneur de verrouillage des portes de verrouiller ou déverrouiller celles-ci.
+</ptxt>
+<ptxt>
+Lorsque le module de commande de démarrage par télécommande reçoit un signal de la télécommande (c.-à-d. que la télécommande se trouve dans l&apos;habitacle), la fonction du système de démarrage par télécommande qui permet d&apos;éviter que la télécommande ne soit enfermée dans le véhicule s&apos;enclenche et le module de commande transmet au BCM un signal de demande de déverrouillage des portes. Les portes restent ainsi déverrouillées.
+</ptxt>
+<ptxt>
+De même, si le conducteur ou le passager oublie la télécommande à l&apos;intérieur de l&apos;habitacle et verrouille les portes à l&apos;aide du bouton de verrouillage de porte ou du contacteur de verrouillage manuel des portes, la fonction empêchant la télécommande d&apos;être enfermée dans le véhicule s&apos;enclenche afin de déverrouiller les portes.
+</ptxt>
+<figure>
+<graphic graphicname = "I6JB0AA50003.swf" width = "183.000mm" height = "115.009mm" ver = "01" gw = "431" gh = "309"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.327in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.275in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.327in"/>
+<colspec colnum = "4" colname = "4" colwidth = "3.275in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Flux du signal
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;C&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Modèle 3 portes
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Modèle 5 portes
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<ptxt>
+De plus, si les codes d&apos;identification de la télécommande et du module de commande de verrouillage par télécommande ne concordent pas ou si la télécommande se trouve en dehors de la zone de portée, les portes ne sont ni verrouillées, ni déverrouillées même si le contacteur de demande de la poignée extérieure est actionné.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

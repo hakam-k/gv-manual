@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0A1104095" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0463: Hohe Spannung im Schaltkreis des Kraftstoffstandgebers
+</title>
+<servinfosub id = "G5JB0A1104095001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0A1104047">DTC P0462: Niedrige Spannung im Schaltkreis des Kraftstoffstandgebers</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0A1104095002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.156in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.048in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Die Spannung am Kraftstoffstandgeber liegt für 3 Sekunden ununterbrochen über dem vorgegebenen Wert.
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik, aber MIL leuchtet nicht)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Störung in der ECM-Stromversorgungsleitung und&#x002F;oder Masseleitung
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+Störung des Kraftstoffstandgebers und&#x002F;oder seines Schaltkreises
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0A1104095003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Bei Zündschalterstellung OFF das Testgerät anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und die DTCs mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und 30 Sek. oder länger laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Aktuelle und vorgemerkte Störungscodes abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G5JB0A1104095004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G5JB0A1100005">Vorsichtsmaßnahmen bei der DTC-Fehlersuche</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G5JB0A1104095005">
+<testgroup>
+<question>
+Wurde die &#8220;Überprüfung der Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0A1104001">Überprüfung der Motorsteuerung und Emissionsregelung</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Steht die Tankanzeige im Kombinationsinstrument auf &#8220;E&#8221; (leer)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Kraftstofftank auffüllen und weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Steht ein SUZUKI-Testgerät zur Verfügung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Ausgangssignals des Kraftstoffstandgebers mit dem SUZUKI-Testgerät
+</title>
+<test1>
+<ptxt>
+Das SUZUKI-Testgerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und den vom SUZUKI-Testgerät angezeigten Kraftstoffstand prüfen.
+</ptxt>
+</test1>
+<question>
+Wird 3 &#x0025; oder weniger angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G5JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Ausgangssignals des Kraftstoffstandgebers
+</title>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Das ECM aus der Halterung nehmen, ohne die Steckverbinder abzuklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen Anschlussklemme &#8220;E23-24&#8221; des ECM-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung ca. 3,5 V oder mehr?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wackelkontakt. Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G5JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Widerstandsprüfung des Kraftstoffstandgeber-Schaltkreises
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Anschlussklemme &#8220;E23-24&#8221; des ECM-Steckverbinders auf einwandfreie Verbindung prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, den Widerstand zwischen Anschlussklemme &#8220;E23-24&#8221; des ECM-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 280 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kurzschlussprüfung des Ausgangssignalkreises des Kraftstoffstandgebers
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen Anschlussklemme &#8220;E23-24&#8221; des ECM-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kabel &#8220;YEL&#x002F;RED&#8221; an anderen Schaltkreis kurzgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung auf Unterbrechung des Ausgangssignalkreises des Kraftstoffstandgebers
+</title>
+<test1>
+<ptxt>
+Den Steckverbinder der Kraftstoffpumpe abklemmen. Siehe 
+<intxref refid = "G5JB0A1706012">Aus- und Einbau des Kraftstofftanks</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Auf einwandfreie Verbindung zu den Kabelanschlüssen &#8220;YEL&#x002F;RED	&#8221; und &#8220;YEL&#x002F;GRN&#8221; des Kraftstoffpumpen-Steckverbinders prüfen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder an das ECM anklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Spannung zwischen dem Kabelanschluss &#8220;YEL&#x002F;RED&#8221; des abgeklemmten Kraftstoffpumpen-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung auf Unterbrechung des Ausgangssignalkreises des Kraftstoffstandgebers
+</title>
+<test1>
+<ptxt>
+Die Spannung zwischen Anschlussklemme &#8220;E23-24&#8221; des ECM-Steckverbinders und Motormasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt die Spannung 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung im Kabel &#8220;YEL&#x002F;RED&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Masseverbindung des Kraftstoffstandgebers
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom Neben-Kraftstoffstandgeber abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen dem Kabelanschluss &#8220;BLK&#x002F;YEL&#8221; des Kraftstoffpumpen-Steckverbinders und Fahrzeugkarosseriemasse messen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Kabel &#8220;BLK&#x002F;YEL&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung auf hohen Widerstand im Schaltkreis des Kraftstoffstandgebers
+</title>
+<test1>
+<ptxt>
+Die Steckverbinder vom ECM abklemmen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Widerstand zwischen dem Kabelanschluss &#8220;YEL&#x002F;RED&#8221; des Kraftstoffpumpen-Steckverbinders und dem Kabelanschluss &#8220;E23-24&#8221; des ECM-Steckverbinders abklemmen.
+</ptxt>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Hoher Widerstand im Kabel &#8220;YEL&#x002F;RED&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Kraftstoffstandgebers
+</title>
+<test1>
+<ptxt>
+Den Kraftstoffstandgeber (Haupt- und Neben-Kraftstoffstandgeber) überprüfen. Siehe 
+<intxref refid = "G5JB0A9306005">Überprüfung des Kraftstoffstandgebers</intxref>
+.
+</ptxt>
+</test1>
+<question>
+In Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand im Kabel &#8220;YEL&#x002F;GRN&#8221; zwischen Haupt- und Neben-Kraftstoffstandgeber. Falls das Kabel OK ist, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kraftstoffstandgeber defekt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

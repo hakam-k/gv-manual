@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA324001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Vérification du système antidémarrage
+</title>
+<diag type = "test" id = "F8T40AA324001001">
+<testgroup>
+<title>
+Vérification de l&apos;allumage du témoin d&apos;injection
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON à l&apos;aide de la clé de contact.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I8T40AA33002.swf" width = "88.000mm" height = "53.625mm" ver = "01" gw = "216" gh = "135"/>
+</testfigure>
+</test1>
+<question>
+Le témoin d&apos;injection (1) s&apos;allume-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA324006">Le témoin d&apos;injection ne s&apos;allume pas alors que le commutateur d&apos;allumage est sur ON et le moteur est coupé.:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du clignotement du témoin d&apos;injection
+</title>
+<question>
+Le témoin d&apos;injection clignote-t-il de façon continue à l&apos;étape 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Rechercher le(s) DTC dans le ICM en se reportant au point 
+<intxref refid = "F8T40AA324002">Vérification des DTC:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du démarrage du moteur
+</title>
+<test1>
+<ptxt>
+Faire démarrer le moteur à l&apos;aide de la clé de contact.
+</ptxt>
+</test1>
+<question>
+Le moteur démarre-t-il?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1144004">Vérification du système de régulation du moteur et des émissions:F9Q</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification que le témoin d&apos;injection reste allumé
+</title>
+<test1>
+<ptxt>
+Vérifier si le témoin d&apos;injection reste allumé après la mise en marche du moteur.
+</ptxt>
+</test1>
+<question>
+Le témoin d&apos;injection reste-t-il allumé après la mise en marche du moteur?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA324007">Le témoin d&apos;injection reste allumé après la mise en marche du moteur.:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Le système antidémarrage est en bon état.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

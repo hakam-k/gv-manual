@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0AA204019" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC U1100 (N° 1100): Perte de communication avec l&apos;ECM (modèle à moteur diesel)
+</title>
+<servinfosub id = "F6JB0AA204019001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0AA204018">DTC U0155 (Nº 0155): Perte de communication avec le module de commande du bloc de tableau de bord (IPC)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0AA204019002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.954in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.251in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Le BCM ne peut recevoir les données CAN de l&apos;ECM de façon continue, pendant une durée supérieure à celle spécifiée.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de communication CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM 
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0AA204019003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Raccorder le dispositif de balayage au DLC avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et effacer les DTC à l&apos;aide du dispositif de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le laisser tourner pendant au moins 1 minute.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F6JB0AA204019004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F6JB0AA204019005">
+<testgroup>
+<title>
+Vérification des DTC du BCM
+</title>
+<question>
+Le DTC U1100 (N° 1100) et le DTC U1073 (N° 1073) sont-ils détectés simultanément?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0AA204013">DTC U1073 (N° 1073): Bus de communication du module de commande désactivé</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC du module de commande ABS ou ESP&#174;.
+</title>
+<question>
+Le DTC U1073 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0A4504021">DTC U1073: Bus de communication du module de commande désactivé (modèle à moteur diesel)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du connecteur du module de commande
+</title>
+<test1>
+<ptxt>
+Vérifier le raccordement des connecteurs de tous les modules de commande communiquant via le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier à nouveau les BCM du DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC U1100 (N° 1100) est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuels problèmes intermittents en se reportant au point 
+<intxref refid = "F6JB0A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC du module de commande ABS ou ESP&#174;.
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC du module de commande ABS ou ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Le DTC U1100 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de l&apos;ECM et des modules de commande d&apos;ABS ou d&apos;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher un court-circuit, une coupure ou une résistance élevée du circuit de communication CAN, entre l&apos;ECM et le module de commande ABS ou ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Vérifier le circuit de masse et d&apos;alimentation de l&apos;ECM. Si le circuit est en bon état, remplacer l&apos;ECM par un ECM en bon état, et revérifier.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs du BCM et des modules de commande d&apos;ABS ou d&apos;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher un court-circuit, une coupure ou une résistance élevée du circuit de communication CAN, entre le BCM et le module de commande ABS ou ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs de tous les modules de commande communiquant via le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le circuit de communication CAN entre les modules de commande autre que celui concerné par l&apos;étape 6 présentent éventuellement un court-circuit, une coupure ou une résistance élevée.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC du BCM
+</title>
+<test1>
+<ptxt>
+Brancher les connecteurs de tous les modules de commande déconnectés communiquant par le biais du réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur d&apos;un module de commande autre que le BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier à nouveau les BCM du DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC U1100 (N&#176; 1100) est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Débrancher, un à un, les connecteurs des modules de commande autres que celui dont le connecteur a été déconnecté à l&apos;étape 2) et vérifier si le DTC U1100 est détecté par le BCM à chaque déconnexion de connecteur. Lorsque le DTC U1100 n&apos;est pas détecté par le BCM en vérifiant de cette manière, se reporter à la description fournie dans &#8220;NON&#8221; ci-dessous. Si le DTC U1100 est détecté par le BCM bien que les connecteurs de tous les modules de commande recourant à la communication CAN par le biais du BCM sont débranchés, substituer le BCM par une pièce réputée en bon état et revérifier.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier le circuit d&apos;alimentation et de mise à la masse du module de commande débranché à l&apos;étape 2). Si le circuit est en bon état, remplacer le module de commande débranché à l&apos;étape 2) par un autre module en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

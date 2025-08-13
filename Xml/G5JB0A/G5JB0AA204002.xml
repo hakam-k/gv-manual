@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0AA204002" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Überprüfung der Fahrzeugelektriksteuerung
+</title>
+<diag type = "test" id = "G5JB0AA204002001">
+<testgroup>
+<title>
+<intxreftitleoff refid = "G5JB0AA204002002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Analyse des Diagnosefragebogens
+</title>
+<test1>
+<ptxt>
+Auswertung von Kundenangaben durchführen.
+</ptxt>
+</test1>
+<question>
+Wurde die Auswertung von Kundenangaben durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Auswertung von Kundenangaben durchführen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "G5JB0AA204002003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Überprüfung der Störungssymptome
+</title>
+<test1>
+<ptxt>
+Überprüfung der Störungssymptome durchführen.
+</ptxt>
+</test1>
+<question>
+Tritt die Störung erneut auf?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "G5JB0AA204002004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Diagnosecodeüberprüfung (DTC)
+</title>
+<test1>
+<ptxt>
+DTC überprüfen.
+</ptxt>
+</test1>
+<question>
+Liegt ein Störungscode vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "G5JB0AA204002005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Fehlersuche anhand von DTC
+</title>
+<test1>
+<ptxt>
+Anhand des Diagnoseablaufplans überprüfen und reparieren.
+</ptxt>
+</test1>
+<question>
+Sind Überprüfung und Reparatur abgeschlossen?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Defekte(s) Teil(e) überprüfen und reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "G5JB0AA204002006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Symptomdiagnose der Fahrzeugelektriksteuerung
+</title>
+<test1>
+<ptxt>
+Überprüfung und Reparatur durchführen. Siehe dazu &#8220;Symptomdiagnose&#8221; des Systems, in dem eine Störung vorliegt.
+</ptxt>
+</test1>
+<question>
+Liegt ein Defekt vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Defekte(s) Teil(e) reparieren oder austauschen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "G5JB0AA204002007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Auf Wackelkontakte überprüfen.
+</title>
+<test1>
+<ptxt>
+Auf Wackelkontakte überprüfen.
+</ptxt>
+</test1>
+<question>
+Liegt ein Defekt vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Defekte(s) Teil(e) reparieren oder austauschen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "G5JB0AA204002008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Endkontrolle
+</title>
+<test1>
+<ptxt>
+DTC löschen. Siehe hierzu 
+<intxref refid = "G5JB0AA204006">Löschen von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Diagnosecode abrufen. Siehe dazu 
+<intxref refid = "G5JB0AA204005">Diagnosecodeüberprüfung</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Werden Diagnosecodes angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ende.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<servinfosub id = "G5JB0AA204002002">
+<title>
+Auswertung von Kundenangaben
+</title>
+<ptxt>
+Die Einzelheiten zur Störung und deren Auftreten (Defekt, Beanstandung) notieren, wie sie vom Kunden beschrieben werden.
+</ptxt>
+<ptxt>
+Der unten abgebildete Fragebogen erleichtert das Sammeln von Informationen, die für eine einwandfreie Analyse und Diagnose unbedingt erforderlich sind.
+</ptxt>
+<figure>
+<title>
+Diagnosefragebogen (Beispiel)
+</title>
+<graphic graphicname = "I4RS0AA20013G.swf" width = "183.000mm" height = "104.256mm" ver = "01" gw = "496" gh = "279"/>
+</figure>
+</servinfosub>
+<servinfosub id = "G5JB0AA204002003">
+<title>
+Überprüfung der Störungssymptome
+</title>
+<ptxt>
+Überprüfen, ob das, was der Kunde im &#8220;Diagnosefragebogen&#8221; beanstandet, genau so im Fahrzeug aufgespürt wird. Wird dieses Symptom aufgespürt, überprüfen, ob das Symptom als Defekt erkannt wird. (Diese Schritte möglichst im Beisein des Kunden ausführen.)
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA204002004">
+<title>
+Diagnosecodeüberprüfung
+</title>
+<ptxt>
+Den im BCM gespeicherten Diagnosecode abrufen. Siehe dazu 
+<intxref refid = "G5JB0AA204005">Diagnosecodeüberprüfung</intxref>
+. Den Code notieren und dann löschen. Siehe dazu 
+<intxref refid = "G5JB0AA204006">Löschen von Diagnosecodes (DTC)</intxref>
+. Ein DTC weist auf eine Störung hin, die im System aufgetreten ist, zeigt aber nicht an, ob diese Störung aktuell existiert oder ob sie in der Vergangenheit aufgetreten ist und nun der Normalzustand wieder eingetreten ist. Um zu überprüfen, welcher Fall zutrifft, den Störungscode einmal löschen und überprüfen, ob eine Störung vorhanden ist oder nicht.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA204002005">
+<title>
+DTC-Fehlersuche
+</title>
+<ptxt>
+Mit Hilfe der unter Schritt 3 ausgegebenen Codes und unter Bezug auf den betreffenden Diagnosecodeablauf die Störungsursache wie Defekte in Sensoren, Kabelbäumen, Steckverbindern, BCM oder anderen Teilen ermitteln und die Störung durch Reparatur oder Austausch der defekten Teile beheben.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA204002006">
+<title>
+Symptomdiagnose der Fahrzeugelektriksteuerung
+</title>
+<ptxt>
+Die als mögliche Ursache verdächtigen Komponenten oder Systeme unter Bezug auf die Symptomdiagnose jedes Systems überprüfen.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA204002007">
+<title>
+Überprüfung auf Wackelkontakte
+</title>
+<ptxt>
+Die Komponenten (z.B. Kabelbäume, Steckverbinder usw.), bei denen ein Wackelkontakt leicht auftreten kann, überprüfen. Siehe dazu 
+<intxref refid = "G5JB0A0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA204002008">
+<title>
+Endkontrolle
+</title>
+<ptxt>
+Sicherstellen, dass die Störung behoben ist und dass die Fahrzeugelektriksteuerung frei von jeglichen Störungssymptomen ist. Falls das, was repariert wurde, mit einem Störungscode in Bezug stand, den betreffenden Code erneut abrufen und sicherstellen, dass kein Störungscode mehr angezeigt wird.
+</ptxt>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

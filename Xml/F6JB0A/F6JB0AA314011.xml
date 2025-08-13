@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0AA314011" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1618: Erreur de communication CAN du module de commande de démarrage par télécommande (pour les véhicules équipés d&apos;un système de démarrage par télécommande)
+</title>
+<servinfosub id = "F6JB0AA314011001" page = "1">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0AA312001">Schéma du circuit de câblage du système antidémarrage:Pour modèle à moteur à essence</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0AA314011002">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Une erreur de réception des données de communication pour le module de commande du système de démarrage par télécommande est détecté en continu pendant une période supérieure au temps déterminé.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuits filaires de communication CAN défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur d&apos;angle de braquage (si le véhicule en est équipé) défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande de démarrage par télécommande défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande 4WD (si le véhicule en est équipé) défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (si le véhicule en est équipé) défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande ABS&#x002F;ESP&#174; défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combiné d&apos;instruments défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM défectueux
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0AA314011003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F6JB0AA314011004">
+<testgroup>
+<title>
+Confirmation du code de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Effacer les DTC en se reportant au point 
+<intxref refid = "F6JB0AA314003">Suppression des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si un éventuel DTC est détecté en se reportant au point 
+<intxref refid = "F6JB0AA314002">Vérification des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1618 est-il toujours détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des codes de diagnostic (DTC) dans l&apos;ECM
+</title>
+<question>
+Un DTC autre que P1618 a-t-il été détecté à l&apos;Etape 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Effectuer la recherche de pannes en se reportant au graphique correspondant.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la mauvaise connexion aux connecteurs de l&apos;ECM, du module de commande de l&apos;ABS&#x002F;ESP&#174; et du module de commande de démarrage sans clé
+</title>
+<test1>
+<ptxt>
+Avec la clé de contact en position OFF, vérifier chaque connecteur et borne filaire de l&apos;ECM, du module de commande de l&apos;ABS&#x002F;ESP&#174; et du module de commande de démarrage sans clé pour s&apos;assurer d&apos;une bonne connexion.
+</ptxt>
+</test1>
+<question>
+Chaque connecteur et chaque borne filaire sont-ils connectés correctement?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les connexionx défectueuses.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les ouvertures et la résistance élevée dans les circuits filaires de la communication CAN entre le module de commande de l&apos;ABS&#x002F;ESP&#174; et le module de commande de démarrage sans clé
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur &#8220;E03&#8221; du module de commande de l&apos;ABS ou &#8220;E53&#8221; du module de commande de l&apos;ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur &#8220;G42&#8221; du module de commande de démarrage par télécommande.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes filaires suivantes.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Véhicule non équipé de module de commande de l&apos;ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E03-12&#8221; au connecteur ABS et la borne filaire &#8220;G42-19&#8221; au connecteur du module de commande de démarrage sans clé
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E03-6&#8221; au connecteur ABS et la borne filaire &#8220;G42-18&#8221; au connecteur du module de commande de démarrage sans clé
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Véhicule équipé de module de commande de l&apos;ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E53-13&#8221; au connecteur du module de commande de l&apos;ESP&#174; et la borne filaire &#174;G42-19&#8220; au connecteur du module de commande de démarrage sans clé
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E53-44&#8221; au connecteur du module de commande de l&apos;ESP&#174; et la borne filaire &#174;G42-18&#8220; au connecteur du module de commande de démarrage sans clé
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Chaque résistance est-elle de 1 &#937; maximum?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture ou la résistance élevée dans le circuit filaire qui présente un dysfonctionnement.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les courts-circuits entre les circuits filaires de communication CAN entre le module de commande del&apos;ABS&#x002F;ESP&#174; et le module de commande de démarrage sans clé
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur &#8220;G31&#8221; du connecteur BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur &#8220;G28&#8221; du combiné d&apos;instruments.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes filaires suivantes.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Véhicule non équipé de module de commande de l&apos;ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E03-12&#8221; au connecteur du module de commande de l&apos;ABS et la borne filaire &#174;G42-18&#8220; au connecteur du module de commande de démarrage sans clé.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Véhicules équipés du système ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E53-13&#8221; au connecteur du module de commande de l&apos;ESP&#174; et la borne filaire &#174;G42-18&#8220; au connecteur du module de commande de démarrage sans clé
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits entre les circuits filaires de la communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les courts-circuits du circuit filaire de mise à la masse dans les circuits filaires de communication CAN
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes filaires suivantes.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Véhicules non équipés du système ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E03-6&#8221; au niveau du connecteur du module de commande de l&apos;ABS et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E03-12&#8221; au niveau du connecteur du module de commande de l&apos;ABS et la masse de carrosserie.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Véhicules équipés du système ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E53-13&#8221; au niveau du connecteur du module de commande de l&apos;ESP&#174; et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E53-44&#8221; au niveau du connecteur du module de commande de l&apos;ESP&#174; et la masse de carrosserie.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La résistance est-elle égale à l&apos;infini?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits du circuit filaire de mise à la masse dans les circuits filaires de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier les courts-circuits du circuit filaire d&apos;alimentation dans les circuits filaires de communication CAN
+</title>
+<test1>
+<ptxt>
+Mesurer la résistance aux bornes filaires suivantes avec le contacteur d&apos;allumage en position ON.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Véhicules non équipés du système ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E03-6&#8221; au niveau du connecteur du module de commande de l&apos;ABS et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E03-12&#8221; au niveau du connecteur du module de commande de l&apos;ABS et la masse de carrosserie.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+<emph etype = "bold">
+Véhicules équipés du système ESP&#174;
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E53-13&#8221; au niveau du connecteur du module de commande de l&apos;ESP&#174; et la masse de carrosserie.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Entre la borne filaire &#8220;E53-44&#8221; au niveau du connecteur du module de commande de l&apos;ESP&#174; et la masse de carrosserie.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La tension est-elle de 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits du circuit filaire d&apos;alimentation dans les circuits filaires de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier le module de commande de démarrage par télécommande et les circuits de câble de mise à la masse.
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;alimentation du module de commande de démarrage sans clé et les circuits de câble de mise à la masse en se reportant à 
+<intxref refid = "F6JB0AA504016">Vérification du circuit d&apos;alimentation et de mise à la masse du module de commande de démarrage par télécommande</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sont-ils normaux?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande de démarrage sans clé par un module en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit de câble qui ne fonctionne pas correctement.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

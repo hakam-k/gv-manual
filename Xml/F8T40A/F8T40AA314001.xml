@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA314001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Vérification du système de commande de dispositif antidémarrage
+</title>
+<diag type = "test" id = "F8T40AA314001001">
+<testgroup>
+<title>
+Vérification du témoin ON de système antidémarrage
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON à l&apos;aide de la clé de contact.
+</ptxt>
+</test1>
+<question>
+Le témoin de système antidémarrage s&apos;allume-t-il?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA314006">Le témoin de système antidémarrage ne s&apos;allume pas lorsque le contacteur d&apos;allumage est en position ON et que le moteur est à l&apos;arrêt:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Vérifier le DTC de l&apos;ECM en se reportant au point 
+<intxref refid = "F8T40AA314002">Vérification des DTC:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1636 ou P1638 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel du DTC concerné.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de clignotement du témoin de système antidémarrage
+</title>
+<question>
+Le témoin du système antidémarrage clignote-t-il en permanence au cours de l&apos;étape 1?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Vérifier quel  DTC est détecté par l&apos;ECM en se reportant au point 
+<intxref refid = "F8T40AA314002">Vérification des DTC:Modèle à moteur à essence</intxref>
+. Effectuer ensuite la recherche de pannes en se reportant au graphique correspondant dans cette section.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du démarrage du moteur
+</title>
+<test1>
+<ptxt>
+Faire démarrer le moteur à l&apos;aide de la clé de contact.
+</ptxt>
+</test1>
+<question>
+Le moteur démarre-t-il?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<paragroup>
+<ptxt>
+Effectuer la vérification du moteur et système de régulation des émissions
+</ptxt>
+<ptxt>
+- Modèles M16A et J20A: Se reporter au point 
+<intxreftitleoff1 refid = "F8T40A1114001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle J24B: Se reporter au point 
+<intxreftitleoff1 refid = "F8T40A1124001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle N32A: Se reporter au point 
+<intxreftitleoff1 refid = "F8T40A1134001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du témoin ON (demeure en position ON) de système antidémarrage
+</title>
+<test1>
+<ptxt>
+Vérifier si le témoin de système antidémarrage reste allumé après le démarrage du moteur.
+</ptxt>
+</test1>
+<question>
+Le témoin du système antidémarrage reste-t-il en position ON après le démarrage du moteur?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA314007">Le témoin de système antidémarrage reste allumé après le démarrage du moteur:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Le système de commande de dispositif antidémarrage est en bon état. Ensuite, aller au point 
+<intxref refid = "F8T40AA504003">Vérification du système de démarrage par télécommande</intxref>
+ pour le véhicule équipé du système de démarrage sans clé.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A5114022" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Vérification de circuit de témoin d&apos;avertissement de transmission - Le témoin n&apos;est pas mis sur &#34;ON&#34; à la mise en position ON du contacteur d&apos;allumage (modèles Non-E-OBD)
+</title>
+<servinfosub id = "F8T40A5114022001">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40A5114022002">
+<testgroup>
+<title>
+Vérification du circuit d&apos;alimentation électrique du combiné d&apos;instruments
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+D&apos;autres témoins s&apos;allument-ils dans le combiné d&apos;instruments?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit d&apos;alimentation d&apos;électrique du combiné d&apos;instruments en se reportant au point 
+<intxref refid = "F8T40A9302001">Schéma du circuit du combiné d&apos;instruments</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Vérification des circuits d&apos;alimentation et de masse du TCM en se reportant au point 
+<intxref refid = "F8T40A5114050">Vérification du circuit de mise à la masse et d&apos;alimentation électrique du TCM:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC en se reportant au point 
+<intxref refid = "F8T40A5114006">Vérification des DTC:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1774 s&apos;affiche-t-il?
+</question>
+<result>
+OUI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Passer au schéma fonctionnel du DTC concerné.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du fonctionnement du combiné d&apos;instruments
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+Le témoin de position du sélecteur A&#x002F;T indique-t-il la position correcte du levier de sélection sur l&apos;écran d&apos;information?
+</question>
+<result>
+OUI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Remplacer le combiné d&apos;instruments.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer le TCM par un TCM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

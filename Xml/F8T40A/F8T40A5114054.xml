@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A5114054" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1706
+</title>
+<servinfosub id = "F8T40A5114054001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.807in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.397in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P1706: Erreur de communication de demande de couple en provenance du TCM
+</emph>
+</ptxt>
+<ptxt>
+L&apos;ECM détecte une anomalie au niveau des données de communication CAN transmises par le TCM
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite, mais le MIL (modèle E-OBD) ou le témoin de transmission (modèle non-E-OBD) ne s&apos;allume pas)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A5114054002">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A5114054003">
+<testgroup id = "F8T40A5114054004">
+<title>
+Vérifier les DTC
+</title>
+<question>
+Un ou plusieurs DTC autres que P1706 sont-ils signalés?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC correspondant.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A5114054005">
+<title>
+Vérifier les DTC de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC de l&apos;ECM en se reportant au point 
+<intxref refid = "F8T40A1114003">Vérification des DTC:M16A et J20A</intxref>
+ ou 
+<intxref refid = "F8T40A1124003">Vérification des DTC:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Un ou plusieurs DTC sont-ils signalés?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC correspondant.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer le TCM par un TCM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

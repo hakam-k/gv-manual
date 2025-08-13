@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1124009" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Vérification de base du moteur
+</title>
+<ptxt>
+Cette vérification est très importante pour la recherche de pannes lorsque l&apos;ECM n&apos;a détecté aucun DTC et qu&apos;aucune anomalie n&apos;a pu être constatée au point 
+<intxref refid = "F8T40A1124008">Vérification visuelle:J24B</intxref>
+.
+</ptxt>
+<ptxt>
+Respecter soigneusement le schéma fonctionnel.
+</ptxt>
+<diag type = "test" id = "F8T40A1124009001">
+<testgroup id = "F8T40A1124009002">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124001">Vérification du système de régulation des émissions et de commande du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124009003">
+<title>
+Vérifier la tension de la batterie
+</title>
+<question>
+Est-ce 11 V minimum?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Recharger ou remplacer la batterie.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124009004">
+<question>
+Le moteur peut-il est lancé?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1924001">Diagnostic des symptômes du système de lancement du moteur:J24B et N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124009005">
+<question>
+Le moteur démarre-t-il?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124009006">
+<title>
+Vérifier le régime de ralenti
+</title>
+<test1>
+<ptxt>
+Vérifier le régime de ralenti du moteur. 
+<intxreftitleoff1 refid = "F8T40A1126001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il conforme aux spécifications?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124010">Diagnostic des symptômes du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124009007">
+<title>
+Vérifier le système d&apos;allumage
+</title>
+<test1>
+<ptxt>
+Vérifier le système d&apos;allumage. 
+<intxreftitleoff1 refid = "F8T40A1824003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Le résultat de la vérification est-il conforme aux spécifications?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124010">Diagnostic des symptômes du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer les pièces défectueuses.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124009008">
+<title>
+Vérifier le fonctionnement du dispositif antidémarrage
+</title>
+<test1>
+<ptxt>
+Vérifier le système de commande de dispositif antidémarrage. 
+<intxref refid = "F8T40AA314001">Vérification du système de commande de dispositif antidémarrage:Modèle à moteur à essence</intxref>
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Dysfonctionnement du système de commande de dispositif antidémarrage
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124009009">
+<title>
+Vérifier le système de carburant
+</title>
+<test1>
+<ptxt>
+Vérifier le système de carburant. 
+<intxref refid = "F8T40A1724003">Vérification du système de carburant:J24B</intxref>
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124010">Diagnostic des symptômes du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer les pièces défectueuses.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

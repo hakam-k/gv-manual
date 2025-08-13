@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0A8204014" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1021: Module du coussin de sécurité déployé
+</title>
+<servinfosub id = "F6JB0A8204014001">
+<title>
+Le DTC est émis lorsque
+</title>
+<ptxt>
+Le SDM détecte un choc d&apos;une force suffisante pour déclencher l&apos;activation du système de coussin de sécurité. (Le SDM émet la commande de déploiement).
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0A8204014002">
+<title>
+Description du schéma de vérification
+</title>
+<ptxt>
+<emph etype = "bold">
+Etape 1: Vérifier si le DTC B1021 a été indiqué alors que le coussin de sécurité ne s&apos;est pas déployé.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Etape 2: Vérifier si le DTC a été affiché suite à un dysfonctionnement du SDM.
+</emph>
+</ptxt>
+<attention3>
+<ptxt>
+Avant de suivre les étapes de ce schéma, veiller à effectuer la 
+<intxref refid = "F6JB0A8204001">Vérification du système de diagnostic de coussin de sécurité</intxref>
+.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "F6JB0A8204014003">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F6JB0A8204014004">
+<testgroup>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<question>
+Le coussin de sécurité s&apos;est-il déployé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer les pièces constitutives et procéder aux vérifications comme indiqué au point 
+<intxref refid = "F6JB0A8204041">Réparation et vérification requises après un accident</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Vérifier l&apos;avant du véhicule ainsi que le dessous du châssis à la recherche d&apos;éventuelles traces d&apos;impact.
+</ptxt>
+</test1>
+<question>
+Des traces d&apos;impact sont-elles présentes?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer les pièces constitutives et procéder aux vérifications comme indiqué au point 
+<intxref refid = "F6JB0A8204041">Réparation et vérification requises après un accident</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le SDM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Une fois la vérification et les réparations terminées, effectuer les opérations suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Raccorder toutes les pièces constitutives du système de coussin de sécurité et s&apos;assurer qu&apos;elles sont toutes correctement montées.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Effectuer à nouveau la 
+<intxref refid = "F6JB0A8204001">Vérification du système de diagnostic de coussin de sécurité</intxref>
+ pour confirmer que la panne a été réparée.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Supprimer les DTC du BCM en se reportant au point 
+<intxref refid = "F6JB0AA204006">Suppression des DTC</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA314014" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1623: Transpondeur non enregistré
+</title>
+<servinfosub id = "F8T40AA314014001">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Le code de transpondeur du transpondeur intégré à la clé de contact n&apos;est pas valable.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Utilisation d&apos;une clé de contact non enregistrée
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM défectueux.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM défectueux
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40AA314014002">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40AA314014003">
+<testgroup>
+<title>
+Confirmation du code de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Supprimer les DTC en se reportant au point 
+<intxref refid = "F8T40AA314003">Suppression des DTC:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si un éventuel DTC est détecté en se reportant au point 
+<intxref refid = "F8T40AA314002">Vérification des DTC:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1623 est-il toujours détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des codes de diagnostic (DTC)
+</title>
+<question>
+Un DTC autre que P1623 a-t-il été détecté à l&apos;Etape 1?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Effectuer la recherche de pannes en se reportant au graphique correspondant et passer ensuite à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Enregistrement de la clé de contact non enregistrée dans l&apos;ECM et vérification du code de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Enregistrer le code du transpondeur dans la clé de contact non enrgistrée dans l&apos;ECM en se reportant au point 
+<intxref refid = "F8T40AA316002">Enregistrement de la clé de contact:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le DTC P1623 est détecté en se reportant au point 
+<intxref refid = "F8T40AA314002">Vérification des DTC:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1623 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;ICM
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;ICM en se reportant au point 
+<intxref refid = "F8T40AA314020">Vérification du module de commande du dispositif antidémarrage (ICM) et de ses circuits:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+L&apos;ensemble du module de commande du dispositif antidémarrage est-il normal?
+</question>
+<result>
+OUI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Remplacer l&apos;ECM par un élément neuf.
+</ptxt>
+<ptxt>
+- Modèles M16A et J20A: 
+<intxreftitleoff1 refid = "F8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle J24B: 
+<intxreftitleoff1 refid = "F8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle N32A: 
+<intxreftitleoff1 refid = "F8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Ensuite, suivre les instructions du point 
+<intxref refid = "F8T40AA316003">Procédure à suivre après le remplacement de l&apos;ECM:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ICM par un élément neuf en se reportant au point 
+<intxref refid = "F8T40AA316001">Dépose et repose du module de commande du dispositif antidémarrage (ICM):Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

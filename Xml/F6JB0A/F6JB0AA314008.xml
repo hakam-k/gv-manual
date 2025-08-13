@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0AA314008" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1614: Erreur de réponse du transpondeur
+</title>
+<servinfosub id = "F6JB0AA314008001" page = "1">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0AA312001">Schéma du circuit de câblage du système antidémarrage:Pour modèle à moteur à essence</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0AA314008002">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Le code de transpondeur intégré dans la clé de contact ne peut être lu par le module de gestion du système antidémarrage (ICM).
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Utilisation d&apos;une clé de contact sans transpondeur
+</ptxt>
+</item>
+<item>
+<ptxt>
+Utilisation d&apos;une clé de contact non enregistrée
+</ptxt>
+</item>
+<item>
+<ptxt>
+Corruption du transpondeur dans la clé de contact
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de gestion du système antidémarrage (ICM) défectueux
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM défectueux
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F6JB0AA314008003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F6JB0AA314008004">
+<testgroup>
+<title>
+Confirmation du code de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Effacer les DTC en se reportant au point 
+<intxref refid = "F6JB0AA314003">Suppression des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si un éventuel DTC est détecté en se reportant au point 
+<intxref refid = "F6JB0AA314002">Vérification des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1614 est-il toujours détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des codes de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Vérifier la présence d&apos;un autre DTC que P1614 en se reportant au point 
+<intxref refid = "F6JB0AA314002">Vérification des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Un DTC autre que P1614 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Réaliser la recherche de pannes en se reportant au graphique correspondant dans cette section puis, passer à l&apos;Etape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;enregistrement de la clé de contact utilisée avec l&apos;ECM et le code de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Il existe une possibilité que la clé de contact non enregistrée soit utilisée. Dès lors, enregistrer le 		code de transpondeur dans le transpondeur de la clé de contact avec l&apos;ECM en se reportant à 
+<intxref refid = "F6JB0AA316002">Enregistrement de la clé de contact:Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le DTC P1614 est détecté en se reportant à 
+<intxref refid = "F6JB0AA314002">Vérification des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1614 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Enregistrement d&apos;une nouvelle clé de contact dans l&apos;ECM et vérification des codes de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Le transpondeur de la clé de contact est corrompu ou la clé de contact sans transpondeur est utilisée. Par conséquent, préparer la nouvelle clé de contact.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Enregistrer le code de transpondeur du transpondeur de la nouvelle clé de contact dans l&apos;ECM en se reportant au point 
+<intxref refid = "F6JB0AA316002">Enregistrement de la clé de contact:Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le DTC P1614 est détecté en se reportant à 
+<intxref refid = "F6JB0AA314002">Vérification des codes de diagnostic (DTC):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1614 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du module de gestion du système antidémarrage (ICM)
+</title>
+<test1>
+<ptxt>
+Vérifier le module de gestion du système antidémarrage (ICM) en se reportant au point 
+<intxref refid = "F6JB0AA314018">Vérification du module de commande du système antidémarrage (ICM) et de ses circuits:Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le module de gestion du système antidémarrage (ICM) est-il normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ECM par un élément neuf en se reportant au point 
+<intxref refid = "F6JB0A1316001">Dépose et repose du module de gestion du moteur (ECM):Pour modèle à moteur à essence</intxref>
+ puis, procéder au 
+<intxref refid = "F6JB0AA316003">Procédure à suivre après le remplacement de l&apos;ECM:Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le module de gestion du système antidémarrage (ICM) par un élément neuf en se reportant au point 
+<intxref refid = "F6JB0AA316001">Dépose et repose du module de commande du système antidémarrage (ICM):Pour modèle à moteur à essence</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

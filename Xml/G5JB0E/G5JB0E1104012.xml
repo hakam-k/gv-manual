@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E1104012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "0" modify = "0">
+<title>
+Motorwarnleuchte (MIL) geht nach Motorstart nicht aus
+</title>
+<servinfosub id = "G5JB0E1104012001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E1104011">Motorwarnleuchte (MIL) brennt nicht, wenn Zündschlüssel auf ON gestellt wird, ohne Motor zu starten (obschon Motor angelassen werden kann)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E1104012002">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+Wenn der Zündschalter auf ON gestellt wird, schließt das ECM den Kontakt des Hauptrelais, sodass es einschaltet. Das ECM wird dadurch von der Hauptstromversorgung gespeist und weist daraufhin das Kombinationsinstrument dazu an, die Motorwarnleuchte (MIL) einzuschalten. Das Kombinationsinstrument schaltet die MIL ein. Wenn der Motor zu laufen beginnt und im System keine Störung erkannt wird, weist das ECM das Kombinationsinstrument dazu an, die Motorwarnleuchte (MIL) auszuschalten. Das Kombinationsinstrument schaltet die MIL aus. Wenn jedoch eine Störung vorliegt, bleibt die MIL eingeschaltet, solange der Motor läuft.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E1104012003">
+<title>
+Fehlersuche
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vor der Fehlersuche die Angaben unter 
+<intxref refid = "G5JB0E1100004">Vorsichtsmaßnahmen bei der Überprüfung des ECM-Schaltkreises</intxref>
+ lesen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zur Messung von Schaltkreisspannungen oder -widerständen sowie Impulssignalen an ECM-Steckverbindern, das Spezialwerkzeug gemäß 
+<intxref refid = "G5JB0E1104080">Prüfung des ECM und dessen Schaltkreise</intxref>
+ am ECM bzw. an den ECM-Steckverbindern anschließen.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "G5JB0E1104012004">
+<testgroup>
+<title>
+Abruf von DTC
+</title>
+<test1>
+<ptxt>
+Den Motor starten und bei laufendem Motor DTC in ECM und TCM (A&#x002F;T-Modell) abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen DTC vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2 unter 
+<intxref refid = "G5JB0E1104001">Überprüfung der Motorsteuerung und Emissionsregelung</intxref>
+ bzw. Schritt 2 unter 
+<intxref refid = "G5JB0E5104001">Überprüfung des A&#x002F;T-Systems</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Den CAN-Kommunikationsschaltkreis zwischen Kombinationsinstrument und ECM, TCM (A&#x002F;T-Modell), ABS-&#x002F;ESP-Steuermodul, 4WD-Steuermodul (falls vorhanden) sowie Steuermodul für schlüsselloses Startsystem (falls vorhanden) gemäß Schritten 9 bis 15 unter 
+<intxref refid = "G5JB0E1104064">DTC P1674: CAN-Kommunikation (Bus-aus-Fehler)</intxref>
+ prüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Schaltkreis in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ein funktionierendes Kombinationsinstrument probeweise anschließen und die Prüfung wiederholen. Falls MIL eingeschaltet bleibt, probeweise ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN-Kommunikationsschaltkreis reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

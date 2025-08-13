@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E1104055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0601&#x002F;P0602&#x002F;P0607: Prüfsummenfehler im internen Speicher&#x002F;Steuermodul-Programmierungsfehler&#x002F;Leistung des Steuermoduls
+</title>
+<servinfosub id = "G5JB0E1104055001">
+<title>
+Systembeschreibung
+</title>
+<ptxt>
+Der interne Speicher befindet sich im ECM.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E1104055002">
+<title>
+Bedingung für Störungserfassung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.685in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.512in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Bedingung für Störungserfassung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+DTC P0601:
+</emph>
+</ptxt>
+<ptxt>
+Datenschreibfehler oder Prüfsummenfehler
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+DTC P0602:
+</emph>
+</ptxt>
+<ptxt>
+Daten-Programmierungsfehler
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+DTC P0607:
+</emph>
+</ptxt>
+<ptxt>
+Daten-Programmierungsfehler
+</ptxt>
+<ptxt>
+(Einzelfahrt-Testlogik)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0E1104055003">
+<title>
+Überprüfung von Diagnosecodes
+</title>
+<s1>
+<ptxt>
+Das Testgerät bei Zündschalterstellung OFF an den Datenübertragungsanschluss anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON drehen und mit dem Testgerät DTCs sowie vorgemerkte DTCs und Schnappschussdaten löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor starten und wenn möglich im Leerlauf laufen lassen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTCs und vorgemerkte DTCs mit dem Testgerät abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "G5JB0E1104055004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Durchführung dieser Fehlersuche die Vorsichtsmaßnahmen bei der DTC-Fehlersuche unter 
+<intxref refid = "G5JB0E1100003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G5JB0E1104055005">
+<testgroup>
+<title>
+Erneute Prüfung der DTC
+</title>
+<test1>
+<ptxt>
+DTCs löschen. Siehe hierzu 
+<intxref refid = "G5JB0E1104004">Löschen von Diagnosecodes</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf ON drehen und die DTCs abrufen.
+</ptxt>
+</test1>
+<question>
+Wird DTC P0601 oder P0607 immer noch angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Wackelkontakt.
+</ptxt>
+<ptxt>
+Auf Wackelkontakte prüfen. Siehe hierzu 
+<intxref refid = "G5JB0E0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Stromversorgungsleitung und Masseverbindung des ECM
+</title>
+<test1>
+<ptxt>
+Prüfen, ob die Stromversorgungsleitung und die Masseverbindung des ECM in Ordnung sind. Siehe 
+<intxref refid = "G5JB0E1104081">Überprüfung der ECM-Stromversorgungsleitung und -Masseverbindung</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Werden die Vorgaben erfüllt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ein funktionierendes ECM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Stromversorgungsleitung oder die Masseverbindung des ECM reparieren.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

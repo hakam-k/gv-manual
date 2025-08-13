@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E1104066" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P1678: CAN-Kommunikation (BCM-Empfangsfehler)
+</title>
+<servinfosub id = "G5JB0E1104066001">
+<title>
+Schaltplan
+</title>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E1104064">DTC P1674: CAN-Kommunikation (Bus-aus-Fehler)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0E1104066002">
+<title>
+DTC-Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ein Empfangsfehler in den Kommunikationsdaten des BCM wird länger als die vorgeschriebene Zeitdauer erfasst.
+</ptxt>
+<ptxt>
+(1-Fahrzyklus-Testlogik, aber MIL brennt nicht)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+CAN-Kommunikationsschaltkreis
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0E1104066003">
+<title>
+DTC-Bestätigungsverfahren
+</title>
+<s1>
+<ptxt>
+Das Testgerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Zündschalter auf ON stellen und die DTC mit dem Testgerät löschen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Den Motor anlassen und mindestens 1 Minute lang betreiben.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+DTC abrufen.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "G5JB0E1104066004">
+<title>
+DTC-Fehlersuche
+</title>
+<attention3>
+<ptxt>
+Vor der Fehlersuche die Vorsichtsmaßnahmen zur Fehlersuche gemäß DTC unter 
+<intxref refid = "G5JB0E1100003">Vorsichtsmaßnahmen bei der DTC-Fehlersuche</intxref>
+ lesen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "G5JB0E1104066005">
+<testgroup>
+<question>
+Wurde die &#8220;Systemprüfung Motorsteuerung und Emissionsregelung&#8221; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E1104001">Überprüfung der Motorsteuerung und Emissionsregelung</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC
+</title>
+<test1>
+<ptxt>
+Das Testgerät bei Zündschalterstellung OFF an den DLC anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC von ECM, TCM (A&#x002F;T-Modell), ABS-&#x002F;ESP&#174;-Steuermodul, 4WD-Steuermodul (falls vorhanden), Steuermodul für schlüsselloses Startsystem (falls vorhanden) und BCM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegen an den Steuermodulen andere als CAN-Kommunikations-DTC vor (im ECM andere als DTC P1618, P1674, P1676, P1678, P1685; im TCM &#x005B;A&#x002F;T-Modell&#x005D; andere als DTC P1774, P1777, P1778; im BCM, ABS-&#x002F;ESP&#174;-Steuermodul und 4WD-Steuermodul &#x005B;falls vorhanden&#x005D; andere als DTC U1073, U1100, U1101, U1121, U1126, U1139, U1140, U1144; und im Steuermodul für schlüsselloses Startsystem &#x005B;falls vorhanden&#x005D; andere als DTC Nr.31&#x002F;33)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit dem entsprechenden DTC-Diagnoseablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Untersuchung des ECM auf CAN-Kommunikationsfehler
+</title>
+<test1>
+<ptxt>
+DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1674 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0E1104064">DTC P1674: CAN-Kommunikation (Bus-aus-Fehler)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung der Steckverbinder von ECM, ABS-&#x002F;ESP&#174;-Steuermodul und BCM
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF sicherstellen, dass der Anschluss zum ECM, ABS-&#x002F;ESP&#174;-Steuermodul und BCM in Ordnung ist.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls die Anschlüsse in Ordnung sind, erneut bei laufendem Motor DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1678 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wackelkontakt Gemäß 
+<intxref refid = "G5JB0E0006002">Überprüfung auf Wackelkontakte und schlechte Verbindungen</intxref>
+ auf Wackelkontakte untersuchen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung der ECM-Stromversorgungs- und -Massekreise
+</title>
+<test1>
+<ptxt>
+Gemäß 
+<intxref refid = "G5JB0E1104081">Überprüfung der ECM-Stromversorgungsleitung und -Masseverbindung</intxref>
+ Stromversorgungs- und Massekreise des ECM prüfen.
+</ptxt>
+</test1>
+<question>
+Sind sie in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+ECM-Stromversorgungs- und&#x002F;oder -Massekreis reparieren.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC im BCM
+</title>
+<test1>
+<ptxt>
+BCM auf DTC U1073 prüfen.
+</ptxt>
+</test1>
+<question>
+Angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Siehe 
+<intxref refid = "G5JB0EA204013">DTC U1073 (Nr. 1073): Steuermodul-Kommunikationsbus aus</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Steckverbinder vom BCM und ECM lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der CAN-Kommunikationsschaltkreis folgenden Anforderungen entspricht: 
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Der Widerstand des CAN-Kommunikationsschaltkreises zwischen der Klemme &#8220;WHT&#x002F;RED&#8221; des ECM-Steckverbinders und der Klemme &#8220;RED&#8221; des BCM-Steckverbinders beträgt weniger als 1 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Widerstand des CAN-Kommunikationsschaltkreises zwischen der Klemme &#8220;WHT&#x002F;BLU&#8221; des ECM-Steckverbinders und der Klemme &#8220;WHT&#8221; des BCM-Steckverbinders beträgt weniger als 1 &#937;.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ist der Zustand in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des ABS-&#x002F;ESP&#174;-Steuermoduls
+</title>
+<test1>
+<ptxt>
+Den Widerstand an folgenden Steckverbinderklemmen messen:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Zwischen Klemmen &#8220;WHT&#x002F;BLU&#8221; und &#8220;WHT&#8221; am Steckverbinder des ABS- oder ESP&#174;-Steuermoduls
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zwischen Klemmen &#8220;WHT&#x002F;RED&#8221; und &#8220;RED&#8221; am Steckverbinder des ABS- oder ESP&#174;-Steuermoduls
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Beträgt der Widerstand weniger als 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand in der Verkabelung des CAN-Kommunikationsschaltkreises zwischen BCM und ECM-Steckverbinder
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ein funktionierendes ABS- oder ESP&#174;Steuermodul anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF Steckverbinder am BCM und ECM anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Die Steckverbinder bei Zündschalterstellung OFF vom TCM (A&#x002F;T-Modell) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1678 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand in der Verkabelung des CAN-Kommunikationsschaltkreises zwischen TCM und CAN-Schaltkreis-Abzweigsteckverbinder Falls die Kabel in Ordnung sind, die Stromversorgungs- und Masseschaltkreise des TCM prüfen. Falls die Kabel in Ordnung sind, probeweise ein funktionierendes TCM (A&#x002F;T-Modell) anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom Steuermodul für schlüsselloses Startsystem (falls vorhanden) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1678 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand in der Verkabelung des CAN-Kommunikationsschaltkreises zwischen Steuermodul für schlüsselloses Startsystem und CAN-Schaltkreis-Abzweigsteckverbinder Falls die Kabel in Ordnung sind, die Stromversorgungs- und Masseschaltkreise des Steuermoduls für schlüsselloses Startsystem prüfen. Falls die Schaltkreise in Ordnung sind, probeweise ein funktionierendes Steuermodul für schlüsselloses Startsystem anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom Kombinationsinstrument lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1678 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand in der Verkabelung des CAN-Kommunikationsschaltkreises zwischen Kombinationsinstrument und CAN-Schaltkreis-Abzweigsteckverbinder Falls die Kabel in Ordnung sind, die Stromversorgungs- und Masseschaltkreise des Kombinationsinstruments prüfen. Falls die Schaltkreise in Ordnung sind, probeweise ein funktionierendes Kombinationsinstrument anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom 4WD-Steuermodul (falls vorhanden) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1678 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand in der Verkabelung des CAN-Kommunikationsschaltkreises zwischen 4WD-Steuermodul und CAN-Schaltkreis-Abzweigsteckverbinder Falls die Kabel in Ordnung sind, die Stromversorgungs- und Masseschaltkreise des 4WD-Steuermoduls prüfen. Falls die Schaltkreise in Ordnung sind, probeweise ein funktionierendes 4WD-Steuermodul anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF den Steckverbinder vom Lenkwinkelsensor (Fahrzeuge mit ESP&#174;) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+DTC vom ECM abrufen.
+</ptxt>
+</test1>
+<question>
+Liegt DTC P1678 vor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Unterbrechung oder hoher Widerstand in der Verkabelung des CAN-Kommunikationsschaltkreises zwischen Lenkwinkelsensor und CAN-Schaltkreis-Abzweigsteckverbinder Falls die Kabel in Ordnung sind, die Stromversorgungs- und Masseschaltkreise des Lenkwinkelsensors prüfen. Falls die Schaltkreise in Ordnung sind, probeweise einen funktionierenden Lenkwinkelsensor anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung des CAN-Kommunikationsschaltkreises
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF die Steckverbinder von sämtlichen Steuermodulen (ECM, TCM &#x005B;falls vorhanden&#x005D;, ABS- oder ESP&#174;-Steuermodul, 4WD-Steuermodul &#x005B;falls vorhanden&#x005D;, Steuermodul für schlüsselloses Startsystem &#x005B;falls vorhanden&#x005D;), Kombinationsinstrument und Lenkwinkelsensor (Fahrzeuge mit ESP&#174;) lösen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sicherstellen, dass der CAN-Kommunikationsschaltkreis folgenden Anforderungen entspricht: 
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Der Widerstand aller Kabelbäume des CAN-Kommunikationsschaltkreises zwischen Steuermodulen liegt unter 1 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Isolationswiderstand der Verkabelung des CAN-Kommunikationsschaltkreises an den Steuermodul-Steckverbindern ist unendlich.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Der Isolationswiderstand zwischen der Verkabelung des CAN-Kommunikationsschaltkreises und der Karosseriemasse ist unendlich an den Steuermodul-Steckverbindern.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bei Zündschalterstellung ON beträgt die Spannung des CAN-Kommunikationsschaltkreises 0 V.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Sind sie in Ordnung?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 15.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Defekten CAN-Kommunikationsschaltkreis reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung der Fahrzeugspezifikation
+</title>
+<question>
+Ist Fahrzeug mit einem A&#x002F;T ausgestattet?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 16.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 17.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von DTC im TCM (A&#x002F;T-Modell)
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung OFF Steckverbinder an sämtliche Steuermodule anschließen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+TCM (A&#x002F;T-Modell) auf DTC P1778 prüfen.
+</ptxt>
+</test1>
+<question>
+Angezeigt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 17.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ein funktionierendes ECM probeweise anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Funktionsprüfung des Kombinationsinstruments
+</title>
+<test1>
+<ptxt>
+Bei Zündschalterstellung ON die Funktion der Fahrergurt-Warnanzeige im Kombinationsinstrument durch Anschnallen und Lösen des Fahrergurts prüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfergebnis zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ein funktionierendes ECM probeweise anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+BCM-Stromversorgungs- und -Masseschaltkreise prüfen. Falls die Schaltkreise in Ordnung sind, probeweise ein funktionierendes BCM anschließen und die Prüfung wiederholen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

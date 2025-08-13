@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A5114046" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1878: Vibrations de l&apos;embrayage de convertisseur de couple
+</title>
+<servinfosub id = "F8T40A5114046001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.433in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.772in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La fonction de commande de patinage en accélération s&apos;arrête lorsqu&apos;une variation de la vitesse de rotation de sortie de l&apos;amplitude et du cycle spécifiés est détectée sur un période de temps spécifiée. Si la variation spécifiée n&apos;est pas détectée après l&apos;accélération, la commande de patinage s&apos;arrête.
+</ptxt>
+<ptxt>
+(Logique de détection à 20 cycle de conduite, mais le MIL (modèle E-OBD) ou le témoin de transmission (modèle non-E-OBD) ne s&apos;allume pas)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ATF inadapté(e)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Dysfonctionnement de l&apos;embrayage de convertisseur de couple
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A5114046002">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Raccorder l&apos;outil de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Supprimer les DTC des mémoires du TCM et de l&apos;ECM à l&apos;aide de l&apos;outil de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire monter en température jusqu&apos;à la température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire le véhicule en 3ème ou 4ème en plage &#34;D&#34; et blocage à commande de patinage en position ON pendant 20 secondes minimum en se reportant à la section &#34;Tableau des changements de vitesse automatiques&#34; du point 
+<intxref refid = "F8T40A5114012">Essai sur route:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrêter le véhicule.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC, les DTC en attente et les données d&apos;arrêt sur image.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A5114046003">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A5114046004">
+<testgroup>
+<question>
+La &#34;Vérification du système A&#x002F;T&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A5114001">Vérification du système A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Changer le liquide A&#x002F;T en se reportant au point 
+<intxref refid = "F8T40A5116002">Changement du liquide d&apos;A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier les DTC après l&apos;exécution du point 
+<intxref refid = "F8T40A5114046002">Procédure de confirmation de DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1878 est-il toujours indiqué?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Embrayage de convertisseur de couple défectueux. Remplacer le convertisseur de couple.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Le système est en bon état.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

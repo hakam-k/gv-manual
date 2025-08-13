@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A3314013" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Le témoin de position de transfert reste allumé avec le contacteur d&apos;allumage sur ON
+</title>
+<servinfosub id = "F8T40A3314013001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au &#34;Schéma de câblage&#34; au point 
+<intxref refid = "F8T40A3314012">Le témoin de position de transfert ne s&apos;allume pas lorsque le contacteur d&apos;allumage est mis sur ON, mais le moteur s&apos;arrête:Type sélection à moteur (boîte de transfert avec actionneur de commande)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A3314013002">
+<title>
+Description du circuit
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A3314012">Le témoin de position de transfert ne s&apos;allume pas lorsque le contacteur d&apos;allumage est mis sur ON, mais le moteur s&apos;arrête:Type sélection à moteur (boîte de transfert avec actionneur de commande)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A3314013003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40A3314013004">
+<testgroup id = "F8T40A3314013005">
+<title>
+Vérifier les DTC
+</title>
+<test1>
+<ptxt>
+Vérifier les DTC en se reportant au point 
+<intxref refid = "F8T40A3314005">Vérification des DTC:Type sélection à moteur (boîte de transfert avec actionneur de commande)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Un ou plusieurs DTC sont-ils signalés?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Suivre le schéma fonctionnel de DTC pour réparer et réessayer.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A3314013006">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Vérifier le circuit de communication CAN entre le combiné d&apos;instruments et le module de commande 4WD en se reportant au point 
+<intxref refid = "F8T40A3314032">DTC U0073: Bus de communication de module de commande désactivé:Type sélection à moteur (boîte de transfert avec actionneur de commande)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Tous les circuits de communication CAN sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le combiné d&apos;instruments par un élément en bon état et vérifier à nouveau. Si le témoin de position de transfert ne s&apos;allume toujours pas, remplacer le module de commande 4WD par un module en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

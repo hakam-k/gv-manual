@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0AA304015" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1616: Nicht registriertes schlüsselloses Anlassersteuermodul (für Fahrzeuge mit schlüssellosem Anlassersystem)
+</title>
+<servinfosub id = "G5JB0AA304015001">
+<title>
+Schaltkreisbeschreibung
+</title>
+<ptxt>
+P1616 wird ausgegeben, wenn das ECM unterschiedlich registrierte ID-Codes im ECM und im schlüssellosen Anlassersteuermodul erfasst, nachdem der Motoranlasserknopf auf ON gedreht wurde. Normalerweise registriert das ECM, wenn das schlüssellose Anlassersteuermodul durch ein neues ersetzt wird, automatisch den betreffenden Code des schlüssellosen Steuermoduls, nachdem der Zündschalter auf ON gedreht wurde. Trotzdem registriert das ECM, wenn das schlüssellose Anlassersteuermodul durch ein gebrauchtes ersetzt wird, nicht automatisch den betreffenden Code des schlüssellosen Steuermoduls, selbst wenn der Zündschalter auf ON gedreht wird.
+</ptxt>
+</servinfosub>
+<servinfosub id = "G5JB0AA304015002">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM erfasst im ECM und im schlüssellosen Steuermodul unterschiedlich registrierte ID-Codes.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Schlüssellose Anlassersteuereinheit defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0AA304015004">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0AA304015005">
+<testgroup>
+<title>
+Überprüfung von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Fehlercode(s) löschen. Siehe dazu 
+<intxref refid = "G5JB0AA304003">Löschen von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob irgendein Störungscode erfasst wird. Siehe hierzu 
+<intxref refid = "G5JB0AA304004">Diagnosecodetabelle (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1616 noch immer erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registrierung des Zündschlüssels
+</title>
+<test1>
+<ptxt>
+DTC löschen. Siehe hierzu 
+<intxref refid = "G5JB0AA304003">Löschen von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Transpondercode im Transponder im Zündschlüssel im ECM registrieren. Siehe dazu 
+<intxref refid = "G5JB0AA306002">Registrierung des Zündschlüssels</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Konnte der Zündschlüssel (Transpondercode) im ECM registriert werden?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Funktionsprüfung des schlüssellosen Anlassersystems
+</title>
+<test1>
+<ptxt>
+Motor mit schlüssellosem Anlassersystem starten.
+</ptxt>
+</test1>
+<question>
+Startet der Motor?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Überprüfen, ob irgendein Störungscode vom ECM erfasst wird. Falls ja, Fehlersuche entsprechend dem Ablaufschema durchführen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Diagnosecode im ECM abrufen. Siehe dazu 
+<intxref refid = "G5JB0AA304002">Abruf von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird außer P1616 DTC P1618 und&#x002F;oder P1615 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit der Fehlersuche für DTC P1618.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit der Fehlersuche für DTC P1615.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

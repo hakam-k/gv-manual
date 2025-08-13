@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA814001" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Vérification du système de communication CAN
+</title>
+<diag type = "test" id = "F8T40AA814001001">
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Brancher l&apos;outil de balayage SUZUKI (SUZUKI SDT) sur le DLC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier les DTC des modules de commande en communication via le CAN.
+</ptxt>
+</test1>
+<question>
+Est-ce que &#34;Bus de module de commande OFF&#34; est détecté au niveau d&apos;un module de commande?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des problèmes intermittents
+</title>
+<test1>
+<ptxt>
+Vérifier le branchement de borne sur chaque circuit de communication CAN au niveau de tous les connecteurs de capteur &#x002F; module de commande (en communication via le CAN).
+</ptxt>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA814004">Recherche de pannes pour le bus de communication OFF:Modèles M16A et J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Brancher correctement le connecteur et vérifier à nouveau les DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<question>
+Est-ce que &#34;Perte de communication&#34; est détecté au niveau d&apos;un module de commande?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA814003">Recherche de pannes pour la perte de communication:Modèles M16A et J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de la communication de chaque module de commande
+</title>
+<question>
+Est-il possible de communiquer avec chaque module de commande communiquant via le réseau CAN à l&apos;aide de l&apos;outil de balayage SUZUKI (SUZUKI SDT)?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Le système de communication CAN est en bon état.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit DLC
+</title>
+<test1>
+<ptxt>
+Débrancher l&apos;outil de balayage SUZUKI (SUZUKI SDT) du DLC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher une éventuelle rupture, court-circuit et résistance élevée au niveau du circuit d&apos;alimentation électrique, de mise à la masse et de communication sérielle du DLC.
+</ptxt>
+</test1>
+<question>
+Chaque circuit est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;outil de balayage SUZUKI (SUZUKI SDT)
+</title>
+<test1>
+<ptxt>
+Vérifier s&apos;il est possible de communiquer avec l&apos;outil de balayage SUZUKI (SUZUKI SDT) en le branchant sur un autre véhicule.
+</ptxt>
+</test1>
+<question>
+L&apos;outil de balayage SUZUKI (SUZUKI-SDT) peut-il communiquer correctement?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA814004">Recherche de pannes pour le bus de communication OFF:Modèles M16A et J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;outil de balayage SUZUKI (SUZUKI SDT) et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

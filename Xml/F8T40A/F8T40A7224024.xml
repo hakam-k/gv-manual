@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A7224024" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1546: Dysfonctionnement de la pression de réfrigérant A&#x002F;C
+</title>
+<servinfosub id = "F8T40A7224024001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.768in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.436in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La température extérieure dépasse la valeur spécifiée. Cependant, la pression de réfrigérant est inférieure à la valeur spécifiée.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de capteur de pression de réfrigérant
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur de pression de réfrigérant
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit de capteur de température d&apos;air extérieur
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur de température d&apos;air extérieur
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande HVAC
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A7224024002">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Brancher l&apos;outil de balayage sur le DLC avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC à l&apos;aide de l&apos;outil de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire monter à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire fonctionner la climatisation pendant 1 min. ou plus.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A7224024003">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A7224024004">
+<testgroup>
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Brancher l&apos;outil de balayage sur le DLC avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et supprimer les DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et vérifier les DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC B1546 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Vérifier l&apos;état du système de climatisation en se reportant au point 
+<intxref refid = "F8T40A7224009">Vérification des performances du système A&#x002F;C:Modèles J24B et N32A</intxref>
+ et revérifier les DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de pression de réfrigérant
+</title>
+<test1>
+<ptxt>
+Raccorder l&apos;outil de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la pression de réfrigérant affichée sur l&apos;outil de balayage.
+</ptxt>
+</test1>
+<question>
+Est-ce 340 kPa minimum?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Recharger le réfrigérant et vérifier l&apos;état du système de climatisation en se reportant au point 
+<intxref refid = "F8T40A7224009">Vérification des performances du système A&#x002F;C:Modèles J24B et N32A</intxref>
+. Et revérifier ensuite le DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du système A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;état du système de climatisation en se reportant au point 
+<intxref refid = "F8T40A7224009">Vérification des performances du système A&#x002F;C:Modèles J24B et N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le système A&#x002F;C est en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer et&#x002F;ou remplacer.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de capteur de pression de réfrigérant
+</title>
+<test1>
+<ptxt>
+Vérifier le capteur de pression de réfrigérant en se reportant au point 
+<intxref refid = "F8T40A7226015">Vérification du capteur de pression de réfrigérant A&#x002F;C et de son circuit:Modèles J24B et N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le capteur de pression de réfrigérant et&#x002F;ou son circuit sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit et&#x002F;ou remplacer le capteur de pression de réfrigérant.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de capteur de température extérieure
+</title>
+<test1>
+<ptxt>
+Vérifier le capteur de température extérieure en se reportant au point 
+<intxref refid = "F8T40A9306013">Vérification du capteur de température d&#8217;air extérieur (si le véhicule en est équipé)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le capteur de température extérieure est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande HVAC.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer le capteur de température extérieure.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

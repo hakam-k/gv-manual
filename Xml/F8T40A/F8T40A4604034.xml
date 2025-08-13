@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A4604034" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1090: Détection par l&apos;ECM d&apos;une défaillance du compteur de rotation du module de commande ESP&#174;
+</title>
+<servinfosub id = "F8T40A4604034001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Le module de commande ECM&#174; a détecté une défaillance du compteur de rotation du module de commande d&apos;ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de communication CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A4604034002">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A4604034003">
+<testgroup id = "F8T40A4604034004">
+<question>
+La &#34;Vérification du programme de stabilité électronique&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A4604001">Vérification du programme de stabilité électronique</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A4604034005">
+<title>
+Vérification des DTC de l&apos;ESP&#174;
+</title>
+<test1>
+<ptxt>
+Brancher l&apos;outil de balayage sur le DLC avec le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et vérifier les DTC de l&apos;ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Y a-t-il d&apos;autres DTC que C1038 et C1090?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel du DTC concerné.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A4604034006">
+<title>
+Vérification des DTC de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Rechercher un éventuel DTC dans l&apos;ECM.
+</ptxt>
+</test1>
+<question>
+Les DTC U0073 et&#x002F;ou U0121 sont-ils détectés?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel du DTC concerné.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ensemble de groupe hydraulique &#x002F; module de commande ESP&#174; par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

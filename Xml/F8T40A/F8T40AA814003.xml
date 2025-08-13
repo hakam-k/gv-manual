@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA814003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Recherche de pannes pour la perte de communication
+</title>
+<servinfosub id = "F8T40AA814003001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40AA812001">Schéma du circuit du système de communication CAN:Modèles M16A et J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA814003002">
+<title>
+Procédure de diagnostic
+</title>
+<attention3>
+<ptxt>
+Avant de suivre les étapes de ce schéma, veiller à effectuer le point 
+<intxref refid = "F8T40AA814001">Vérification du système de communication CAN:Modèles M16A et J20A</intxref>
+.
+</ptxt>
+</attention3>
+<ptxt>
+Lorsqu&apos;une &#34;Perte de communication&#34; est détectée au niveau d&apos;un module de commande, effectuer la vérification en suivant la procédure suivante.
+</ptxt>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Brancher l&apos;outil de balayage SUZUKI sur le DLC (1) et mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L10H101">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+Dispositif de balayage SUZUKI (SUZUKI-SDT)
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I9T401720004.swf" width = "88.000mm" height = "58.917mm" ver = "01" gw = "138" gh = "150"/>
+</figure>
+</s1>
+<s1>
+<ptxt>
+A l&apos;aide de la Vérification de bus de communication&#34; sous &#34;Vérification du bus&#34; de l&apos;outil de balayage SUZUKI (SUZUKI-SDT), vérifier la communication du module de commande désactivé (non affiché à l&apos;écran).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Sur la base des résultats de la vérification ci-dessus, sélectionner le code de procédure de diagnostic concerné (A à K) à partir de 
+<intxref refid = "F8T40AA814003003">Tableau de sélection des procédures de diagnostic</intxref>
+ et effectuer la recherche de pannes en se reportant à la procédure de diagnostic sélectionnée.
+</ptxt>
+<attention3>
+<ptxt>
+S&apos;il est impossible de sélectionner le code de procédure de diagnostic approprié en se reportant au &#34;Tableau de sélection des procédures de diagnostic&#34; du point 
+<intxref refid = "F8T40AA814003003">Tableau de sélection des procédures de diagnostic</intxref>
+ ou au point &#34;au moins deux procédures de diagnostic peuvent être sélectionnées&#34;, suivre le point 
+<intxref refid = "F8T40AA814004">Recherche de pannes pour le bus de communication OFF:Modèles M16A et J20A</intxref>
+.
+</ptxt>
+</attention3>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40AA814003003">
+<title>
+Tableau de sélection des procédures de diagnostic
+</title>
+<attention3>
+<ptxt>
+Les codes de procédure de diagnostic A à J sont en relation avec les lignes de communication CAN &#x005B;a&#x005D; à &#x005B;j&#x005D; du point 
+<intxref refid = "F8T40AA812001">Schéma du circuit du système de communication CAN:Modèles M16A et J20A</intxref>
+.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.689in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.520in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Communication du module &#x002F; capteur de commande désactivée
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Code de procédure de diagnostic
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM et module de commande ABS &#x002F; ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+B
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Combiné d&apos;instruments
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+C
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Capteur d&apos;angle de braquage
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+D
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Module de commande de démarrage sans clé
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+E
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Module de commande 4WD
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+F
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Autre que le BCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+G
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+H
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Module de commande HVAC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+I
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Tous les modules de commande en communication via le CAN
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+J
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+K
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Module de commande ABS &#x002F; ESP&#174;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40AA814003004">
+<title>
+Recherche de pannes
+</title>
+<topic id = "F8T40AA814003007">
+<title>
+Code de procédure de diagnostic: A
+</title>
+<diag type = "test" id = "F8T40AA814003008">
+<testgroup id = "F8T40AA814003005">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur de l&apos;ECM et du module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement sur le circuit de communication CAN au niveau des connecteurs d&apos;ECM et de module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si c&apos;est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur d&apos;ECM et le connecteur de module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003006">
+<title>
+Vérification du circuit d&apos;alimentation électrique et de mise à la masse de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de mise à la masse de l&apos;ECM. 
+<intxreftitleoff1 refid = "F8T40A1114081"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003019">
+<title>
+Vérification de la résistance d&apos;extrémité CAN de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Brancher le connecteur sur l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérification de la résistance d&apos;extrémité CAN de l&apos;ECM comme suit.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modèle ESP&#174;:
+</ptxt>
+<ptxt>
+Mesurer la résistance entre les bornes &#34;E53-43&#34; et &#34;E53-44&#34; du connecteur de module de commande ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modèle non-ESP&#174;:
+</ptxt>
+<ptxt>
+Mesurer la résistance entre les bornes &#34;E03-10&#34; et &#34;E03-8&#34; du connecteur de module de commande ABS.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La résistance est-elle de 114 - 134 &#937;?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande ABS &#x002F; ESP&#174; par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003009">
+<title>
+Code de procédure de diagnostic: B
+</title>
+<diag type = "test" id = "F8T40AA814003010">
+<testgroup id = "F8T40AA814003020">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du BCM et du module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement sur le circuit de communication CAN au niveau des connecteurs de BCM et de module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si c&apos;est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur de BCM et le connecteur de module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande ABS &#x002F; ESP&#174; par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003011">
+<title>
+Code de procédure de diagnostic: C
+</title>
+<diag type = "test" id = "F8T40AA814003012">
+<testgroup id = "F8T40AA814003021">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du BCM et du combiné d&apos;instruments.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement de borne sur le circuit de communication CAN au niveau des connecteurs de BCM et de combiné d&apos;instruments.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si c&apos;est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur de BCM et le connecteur de combiné d&apos;instruments.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003022">
+<title>
+Vérification du circuit d&apos;alimentation électrique et de mise à la masse du combiné d&apos;instruments
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de mise à la masse du combiné d&apos;instruments.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le combiné d&apos;instruments par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003013">
+<title>
+Code de procédure de diagnostic: D
+</title>
+<diag type = "test" id = "F8T40AA814003014">
+<testgroup id = "F8T40AA814003023">
+<title>
+Vérification du circuit d&apos;alimentation électrique et de mise à la masse du capteur d&apos;angle de braquage
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de mise à la masse de capteur d&apos;angle de braquage.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003024">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du capteur d&apos;angle de braquage et du module de commande ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement de borne correct du circuit de communication CAN au niveau des connecteurs de capteur d&apos;angle de braquage et de module de commande ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur de de capteur d&apos;angle de braquage et le connecteur de module de commande ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le capteur d&apos;angle de braquage.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003015">
+<title>
+Code de procédure de diagnostic: E
+</title>
+<diag type = "test" id = "F8T40AA814003016">
+<testgroup id = "F8T40AA814003025">
+<title>
+Vérification du circuit d&apos;alimentation électrique et de mise à la masse du module de commande de démarrage sans clé
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de masse du module de commande de démarrage sans clé. 
+<intxreftitleoff1 refid = "F8T40AA504015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003026">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande de démarrage sans clé et du BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement de borne correct du circuit de communication CAN au niveau des connecteurs de BCM et de module de commande de démarrage sans clé.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur de module de commande de démarrage sans clé et le connecteur de BCM.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande de démarrage sans clé par un module en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003017">
+<title>
+Code de procédure de diagnostic: F
+</title>
+<diag type = "test" id = "F8T40AA814003018">
+<testgroup id = "F8T40AA814003027">
+<title>
+Vérification du circuit d&apos;alimentation électrique et de mise à la masse du module de commande 4WD
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de mise à la masse du module de commande 4WD.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003028">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande 4WD et du module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement de borne correct du circuit de communication CAN au niveau des connecteurs de module de commande 4WD et de module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur de module de commande 4WD et le connecteur de module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande 4WD par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003029">
+<title>
+Code de procédure de diagnostic: G
+</title>
+<diag type = "test" id = "F8T40AA814003030">
+<testgroup id = "F8T40AA814003031">
+<title>
+Vérification des circuits d&apos;alimentation électrique et de mise à la masse du BCM
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de mise à la masse du BCM. 
+<intxreftitleoff1 refid = "F8T40AA204007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003032">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du BCM et du module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement sur le circuit de communication CAN au niveau des connecteurs de BCM et de module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si c&apos;est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur de BCM et le connecteur de module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le BCM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003033">
+<title>
+Code de procédure de diagnostic: H
+</title>
+<diag type = "test" id = "F8T40AA814003034">
+<testgroup id = "F8T40AA814003035">
+<title>
+Vérification du circuit d&apos;alimentation électrique et de mise à la masse du TCM
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de mise à la masse du TCM. 
+<intxreftitleoff1 refid = "F8T40A5114050"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003036">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du TCM et du BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement de borne correct du circuit de communication CAN au niveau du TCM et du BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur de TCM et le connecteur de BCM.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le TCM par un TCM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003037">
+<title>
+Code de procédure de diagnostic: I
+</title>
+<diag type = "test" id = "F8T40AA814003038">
+<testgroup id = "F8T40AA814003039">
+<title>
+Vérification du circuit d&apos;alimentation électrique et de mise à la masse du module de commande HVAC
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de mise à la masse du module de commande HVAC.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003040">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande HVAC et du BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement de borne correct du circuit de communication CAN au niveau des connecteurs de BCM et de module de commande HVAC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si tout est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur de module de commande HVAC et le connecteur de BCM.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande HVAC par un élément en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003041">
+<title>
+Code de procédure de diagnostic: J
+</title>
+<diag type = "test" id = "F8T40AA814003043">
+<testgroup id = "F8T40AA814003044">
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur &#34;G31&#34; du BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement de borne sur le circuit de communication CAN au niveau du connecteurs de BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si c&apos;est correct, vérifier la présence de rupture au niveau des circuits de communication CAN entre le connecteur DLC et de BCM.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de communication CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40AA814003046">
+<title>
+Vérification de la résistance d&apos;extrémité CAN du combiné d&apos;instruments
+</title>
+<test1>
+<ptxt>
+Brancher le connecteur &#34;G31&#34; sur le BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur du module de commande ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne CAN élevé et la borne CAN faible du DLC.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle de 114 - 134 &#937;?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA814004">Recherche de pannes pour le bus de communication OFF:Modèles M16A et J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer le BCM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "F8T40AA814003045">
+<title>
+Code de procédure de diagnostic: K
+</title>
+<diag type = "test" id = "F8T40AA814003047">
+<testgroup id = "F8T40AA814003048">
+<title>
+Vérification du circuit d&apos;alimentation électrique et de mise à la masse du module de commande qui ne parvient pas à communiquer.
+</title>
+<test1>
+<ptxt>
+Vérifier les circuits d&apos;alimentation électrique et de mise à la masse du module de commande qui ne parvient pas à communiquer (BCM ou module de commande ABS &#x002F; ESP&#174;).
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande (BCM ou module de commande ABS &#x002F; ESP&#174;) par un élément en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le circuit de masse et&#x002F;ou d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

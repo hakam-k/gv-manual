@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0AA304009" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1623: Nicht registrierter Transponder
+</title>
+<servinfosub id = "G5JB0AA304009001">
+<title>
+Erfassungsbedingung und Störungsbereich
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Erfassungsbedingung
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Störungsbereich
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Der Code des in den Zündschlüssel eingebauten Transponders ist ungültig.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Verwendung des nicht registrierten Zündschlüssels
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wegfahrsperren-Steuermodul (ICM) defekt
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defekt
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "G5JB0AA304009003">
+<title>
+Fehlersuche
+</title>
+<diag type = "test" id = "G5JB0AA304009004">
+<testgroup>
+<title>
+Überprüfung von Diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Fehlercode(s) löschen. Siehe dazu 
+<intxref refid = "G5JB0AA304003">Löschen von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Den Zündschalter auf OFF drehen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob irgendein Störungscode erfasst wird. Siehe hierzu 
+<intxref refid = "G5JB0AA304002">Abruf von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1623 noch immer erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Abruf von Diagnosecodes (DTC)
+</title>
+<question>
+Wird irgendein anderer Störungscode außer P1623 in Schritt 1 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Die Fehlersuche entsprechend dem Ablaufschema durchführen und dann weiter mit Schritt 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registrierung des nicht registrierten Zündschlüssels im ECM und Abruf von Diagnosecodes (DTC).
+</title>
+<test1>
+<ptxt>
+Den Transpondercode im Transponder im nicht registrierten Zündschlüssel im ECM registrieren. Siehe dazu 
+<intxref refid = "G5JB0AA306002">Registrierung des Zündschlüssels</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Überprüfen, ob DTC P1623 erfasst wird. Siehe hierzu 
+<intxref refid = "G5JB0AA304002">Abruf von Diagnosecodes (DTC)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wird DTC P1623 erfasst?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Die Fehlersuche ist abgeschlossen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Wegfahrsperren-Steuermoduls (ICM)
+</title>
+<test1>
+<ptxt>
+Wegfahrsperren-Steuermodul (ICM) überprüfen. Siehe dazu 
+<intxref refid = "G5JB0AA304011">Überprüfung des Wegfahrsperren-Steuermoduls (ICM) und seines Schaltkreises</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Funktioniert die Baugruppe der Wegfahrsperrensteuerung einwandfrei?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+ECM durch ein neues ersetzen. Siehe dazu 
+<intxref refid = "G5JB0A1306004">Aus- und Einbau des Motorsteuermoduls (ECM)</intxref>
+, und danach 
+<intxref refid = "G5JB0AA306003">Vorgehensweise nach dem Austausch des ECM</intxref>
+ durchführen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Wegfahrsperren-Steuermodul (ICM) durch ein neues ersetzen. Siehe dazu 
+<intxref refid = "G5JB0AA306001">Aus- und Einbau des Wegfahrsperren-Steuermoduls (ICM)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

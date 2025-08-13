@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1134095" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0697 &#x002F; P0698 &#x002F; P0699
+</title>
+<servinfosub id = "F8T40A1134095001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.194in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0697: Circuit de tension de référence de capteur &#34;C&#34; &#x002F; ouvert
+</emph>
+</ptxt>
+<ptxt>
+Le circuit d&apos;alimentation électrique 5 V du capteur TP ou APP (secondaire) est en circuit ouvert.
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Capteur TP et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur APP (secondaire) et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0698: Tension faible du circuit de tension de référence de capteur &#34;C&#34;
+</emph>
+</ptxt>
+<ptxt>
+Le circuit d&apos;alimentation électrique 5 V du capteur TP et du capteur APP (secondaire) est en court-circuit à la masse.
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0699: Tension élevée du circuit de tension de référence de capteur &#34;C&#34;
+</emph>
+</ptxt>
+<ptxt>
+Le circuit d&apos;alimentation électrique 5 V du capteur TP et du capteur APP (secondaire) est en court-circuit à l&apos;alimentation.
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1134095002">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1134064">Vérification du circuit de mise à la masse et d&apos;alimentation électrique de l&apos;ECM:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1134095003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Mettre le contacteur d&apos;allumage sur ON pendant 1 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1134095004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1134095005">
+<testgroup id = "F8T40A1134095006">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1134001">Vérification du système de régulation des émissions et de commande du moteur:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134095007">
+<title>
+Vérification du capteur TP et de son circuit
+</title>
+<test1>
+<ptxt>
+Vérifier si le circuit de capteur TP (principal et secondaire) présente les conditions suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Capteur TP (principal) et son circuit: Se reporter aux étapes 2 à 6 du point 
+<intxref refid = "F8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur TP (secondaire) et son circuit: Se reporter aux étapes 2 à 6 du point 
+<intxref refid = "F8T40A1134028">DTC P0222 &#x002F; P0223:N32A</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134095008">
+<title>
+Vérification du capteur APP (secondaire) et de son circuit
+</title>
+<test1>
+<ptxt>
+Vérifier le capteur APP (secondaire) et son circuit en se reportant aux étapes 2 à 7 du point 
+<intxref refid = "F8T40A1134054">DTC P2127 &#x002F; P2128:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134095009">
+<title>
+Vérification du circuit de mise à la masse et d&apos;alimentation électrique de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Vérifier le circuit de masse et d&apos;alimentation électrique de l&apos;ECM. 
+<intxreftitleoff1 refid = "F8T40A1134064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le faisceau de câbles défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134095010">
+<title>
+Recherche de pannes d&apos;autres DTC détectés simultanément
+</title>
+<question>
+Y a-t-il un&#x002F;des DTC détecté(s) simultanément?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC correspondant.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA324031" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1716: Erreur de communication CAN du module de commande du démarrage sans clé
+</title>
+<attention3>
+<ptxt>
+Si un DTC lié au dysfonctionnement de la communication CAN est détecté par le module de commande du moteur et le BCM, passer d&apos;abord au schéma fonctionnel de diagnostic du DTC concerné.
+</ptxt>
+</attention3>
+<servinfosub id = "F8T40AA324031001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40AA322001">Schéma du circuit de câblage du système antidémarrage:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA324031002">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Une erreur de réception des données de communication pour le module de commande du système de démarrage par télécommande est détecté en continu pendant une période supérieure au temps déterminé.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de communication CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur d&apos;angle de braquage (modèle ESP&#174;)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande du système de démarrage par télécommande (si le véhicule en est équipé)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unité de commande ABS&#x002F;ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combiné d&apos;instruments
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F8T40AA324031003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40AA324031004">
+<testgroup>
+<question>
+La procédure de &#8220;vérification du système antidémarrage&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40AA324001">Vérification du système antidémarrage:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC de l&apos;ECM
+</title>
+<question>
+Un DTC autre que B1716 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel de diagnostic du DTC concerné.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du connecteur du module de commande
+</title>
+<test1>
+<ptxt>
+Tandis que le contacteur d&apos;allumage est en position OFF, vérifier la connexion intermittente et les mauvais contacts de chacun des connecteurs suivants en se reportant au point
+<intxref refid = "F8T40A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Unité de commande ABS&#x002F;ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande de démarrage par télécommande
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combiné d&apos;instruments
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Tous les connecteurs sont-ils en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Vérifier les court-circuits, coupures et la résistance élevée dans le circuit de communication CAN entre l&apos;ECM et le module de commande de démarrage par télécommande.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier le module de commande de démarrage par télécommande et les circuits de câble de mise à la masse.
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;alimentation du module de commande de démarrage sans clé et les circuits de câble de mise à la masse en se reportant à 
+<intxref refid = "F8T40AA504015">Vérification du circuit d&apos;alimentation et de mise à la masse du module de commande de démarrage par télécommande</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sont-ils normaux?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le module de commande de démarrage par télécommande par un module en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit de câble qui ne fonctionne pas correctement.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

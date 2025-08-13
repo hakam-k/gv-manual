@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A5114051" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0602 &#x002F; P1702
+</title>
+<servinfosub id = "F8T40A5114051001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.037in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.167in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P0602: Erreur de programmation du module de commande
+</emph>
+</ptxt>
+<ptxt>
+Erreur de programmation des données.
+</ptxt>
+<ptxt>
+(Logique de détection à 1 cycle de conduite, mais le MIL (modèle E-OBD) ou le témoin de transmission (modèle non-E-OBD) ne s&apos;allume pas)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P1702: Erreur de somme de vérification de mémoire du module de commande interne
+</emph>
+</ptxt>
+<ptxt>
+Le calcul des données relatives au courant mémorisées dans le TCM est incorrect par rapport aux données de vérification préenregistrées dans le TCM.
+</ptxt>
+<ptxt>
+(logique de détection à 1 cycle(s) de conduite)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A5114051002">
+<title>
+Description du système
+</title>
+<ptxt>
+Le module de commande interne est situé dans l&apos;ECM.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A5114051003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+ Effacer le DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire tourner au ralenti si possible.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A5114051004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A5114051005">
+<testgroup id = "F8T40A5114051006">
+<title>
+Vérification de DTC
+</title>
+<test1>
+<ptxt>
+Supprimer les DTC en se reportant au point 
+<intxref refid = "F8T40A5114007">Suppression des DTC:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON et revérifier les DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC P0602 ou P1702 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le TCM par un TCM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuels problèmes intermittents en se reportant au point 
+<intxref refid = "F8T40A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

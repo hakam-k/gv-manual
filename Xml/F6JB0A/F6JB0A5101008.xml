@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "F6JB0A5101008" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Description du système de diagnostic embarqué
+</title>
+<servinfosub id = "F6JB0A5101008001">
+<title>
+Pour le modèle E-OBD
+</title>
+<ptxt>
+Le TCM prend en charge les fonctions suivantes pour le système de commande de la boîte de vitesses automatique. Se reporter au point 
+<intxref refid = "F6JB0A5104049">Vérification du TCM et de ses circuits</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lorsque le contacteur d&apos;allumage est mis en position ON, moteur coupé, le témoin de panne (MIL) (1) s&apos;allume pour vérifier la condition de l&apos;ampoule&#160;MIL.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lorsque le TCM détecte un dysfonctionnement du système de commande de boîte de vitesses automatique, il envoie le signal d&apos;allumage du témoin de panne (MIL) et enregistre le DTC de dysfonctionnement dans sa mémoire.
+</ptxt>
+<ptxt>
+(S&apos;il détecte cependant que la situation est redevenue normale au cours de 3 cycles de conduite consécutifs à la détection d&apos;un dysfonctionnement, il provoque l&apos;extinction du témoin MIL mais le DTC reste quant à lui enregistré dans sa mémoire).
+</ptxt>
+</item>
+<item>
+<ptxt>
+La communication via le DLC (3) est non seulement possible avec le dispositif de balayage SUZUKI (2) mais aussi avec un dispositif de balayage générique OBD. (Les informations du diagnostic peuvent être vérifiées et supprimées à l&apos;aide du dispositif de balayage).
+</ptxt>
+<figure page = "2">
+<graphic graphicname = "I5JB0A510011.swf" width = "88.000mm" height = "107.247mm" ver = "01" gw = "192" gh = "287"/>
+</figure>
+</item>
+</list1>
+<c-change/>
+<topic id = "F6JB0A5101008002">
+<title>
+Logique de détection à 2 trajets
+</title>
+<ptxt>
+Le dysfonctionnement détecté lors du premier cycle de conduite est enregistré dans la mémoire du TCM (sous forme d&apos;un DTC en attente et de données d&apos;image figée) mais le témoin de panne ne s&#8217;allume pas à ce stade. Il s&apos;allume à la seconde détection du dysfonctionnement en question, lors du cycle de conduite suivant.
+</ptxt>
+</topic>
+<topic id = "F6JB0A5101008003">
+<title>
+DTC en attente
+</title>
+<ptxt>
+Un DTC en attente est un DTC qui a été détecté et enregistré temporairement dans la mémoire de l&apos;ECM lors d&apos;un 1er cycle de conduite dans le cadre de la logique de détection à 2 cycles de conduite.
+</ptxt>
+</topic>
+<topic id = "F6JB0A5101008004">
+<title>
+Données d&apos;arrêt sur image
+</title>
+<ptxt>
+Le TCM mémorise les conditions du moteur et de conduite au moment de la détection d&apos;un dysfonctionnement. Ces données sont appelées &#8220;Données d&apos;arrêt sur image&#8221;.
+</ptxt>
+<ptxt>
+Dans ces conditions, il est possible de connaître l&apos;état du moteur et les conditions de circulation (ex. si le moteur était chaud ou non, si le véhicule roulait ou non) au moment de la détection d&apos;un dysfonctionnement, grâce aux données d&apos;arrêt sur image.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "F6JB0A5101008005">
+<title>
+Pour les modèles non-E-OBD
+</title>
+<ptxt>
+Le TCM prend en charge les fonctions suivantes pour le système de commande de la boîte de vitesses automatique. Se reporter au point 
+<intxref refid = "F6JB0A5104049">Vérification du TCM et de ses circuits</intxref>
+.
+</ptxt>
+<c-change/>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quand le contacteur d&apos;allumage est en position ON sans dysfonctionnement détecté dans le système de commande A&#x002F;T, le témoin d&apos;avertissement de transmission (1) s&apos;allume pendant environ 2 secondes après que le contacteur d&apos;allumage soit mis en position ON et se met ensuite en position OFF pour la vérification de l&apos;ampoule.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lorsque le TCM détecte une anomalie dans le système de commande de boîte de vitesses automatique, il allume le témoin d&apos;avertissement (1) et mémorise le code d&apos;anomalie correspondant.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il est possible de communiquer avec le TCM via le connecteur de liaison des données (DLC) (3) au moyen du dispositif de balayage SUZUKI (2). (Les informations du diagnostic peuvent être vérifiées et supprimées à l&apos;aide du dispositif de balayage SUZUKI).
+</ptxt>
+<figure page = "2">
+<graphic graphicname = "I6JB0A510002.swf" width = "88.000mm" height = "107.247mm" ver = "01" gw = "192" gh = "287"/>
+</figure>
+</item>
+</list1>
+<topic id = "F6JB0A5101008006">
+<title>
+Logique de détection à 2 trajets
+</title>
+<ptxt>
+Le dysfonctionnement détecté lors du premier cycle de conduite est enregistré dans la mémoire du TCM (sous forme d&apos;un DTC en attente et de données d&apos;image figée) mais le témoin de panne ne s&#8217;allume pas à ce stade. Il s&apos;allume à la seconde détection du dysfonctionnement en question, lors du cycle de conduite suivant.
+</ptxt>
+</topic>
+<topic id = "F6JB0A5101008007">
+<title>
+DTC en attente
+</title>
+<ptxt>
+Un DTC en attente est un DTC qui a été détecté et enregistré temporairement dans la mémoire de l&apos;ECM lors d&apos;un 1er cycle de conduite dans le cadre de la logique de détection à 2 cycles de conduite.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

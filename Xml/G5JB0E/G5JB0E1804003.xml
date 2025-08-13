@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1H">
+<servcat sctnbr = "01" scnbr = "08">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "G5JB0E1804003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Überprüfung des Zündsystems
+</title>
+<diag type = "test" id = "G5JB0E1804003001">
+<testgroup>
+<question>
+Wurde die &#34;Überprüfung der Motorsteuerung und Emissionsregelung&#34; durchgeführt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit 
+<intxref refid = "G5JB0E1104001">Überprüfung der Motorsteuerung und Emissionsregelung</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Zündfunkentest
+</title>
+<test1>
+<ptxt>
+Zustand und Typ aller Zündkerzen überprüfen. Siehe dazu 
+<intxref refid = "G5JB0E1806004">Überprüfung der Zündkerzen</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Falls OK, Zündfunkentest durchführen. Siehe dazu 
+<intxref refid = "G5JB0E1804004">Zündfunkentest</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Geben alle Zündkerzen einen Funken ab?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodeüberprüfung
+</title>
+<test1>
+<ptxt>
+Diagnosecodeüberprüfung durchführen. Siehe dazu 
+<intxref refid = "G5JB0E1104003">Diagnosecodeüberprüfung</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sind DTC im ECM gespeichert?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit entsprechendem DTC-Ablaufplan.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der elektrischen Anschlüsse
+</title>
+<test1>
+<ptxt>
+Zündspulen-Baugruppen und Zündkabel (für M16-Motor) auf einwandfreie elektrische Anschlüsse überprüfen.
+</ptxt>
+</test1>
+<question>
+Sind sie fest angeschlossen?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 5 für M16-Motor oder weiter mit Schritt 6 für J20-Motor.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Fest anschließen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Zündkabel (für M16-Motor)
+</title>
+<test1>
+<ptxt>
+Den Widerstand der Zündkabel überprüfen. Siehe dazu 
+<intxref refid = "G5JB0E1806002">Überprüfung der Zündkabel (Für M16-Motor)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Zündkabel austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Stromversorgung und Masseverbindung der Zündspulen-Baugruppe
+</title>
+<test1>
+<ptxt>
+Die Stromversorgungskreise und die Masseverbindung der Zündspulen-Baugruppe auf Unterbrechung und Kurzschluss überprüfen.
+</ptxt>
+</test1>
+<question>
+Sind die Schaltkreise einwandfrei?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung der Zündspulen-Baugruppe
+</title>
+<test1>
+<ptxt>
+Den Widerstand der Zündspule überprüfen. Siehe dazu 
+<intxref refid = "G5JB0E1806006">Überprüfung der Zündspulen-Baugruppe (einschließlich Zündschaltgerät)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Zündspulen-Baugruppe austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des CKP-Sensors
+</title>
+<test1>
+<ptxt>
+Den CKP-Sensor überprüfen. Siehe dazu 
+<intxref refid = "G5JB0E1306016">Überprüfung des Kurbelwinkelsensors (CKP-Sensor)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Schraube des CKP-Sensors festziehen bzw. CKP-Sensor oder CKP-Sensorplatte austauschen.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des CMP-Fühlers
+</title>
+<test1>
+<ptxt>
+Den CMP-Fühler überprüfen. Siehe dazu 
+<intxref refid = "G5JB0E1306014">Überprüfung des Nockenwellensensors (CMP-Fühler)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CMP-Fühlerschraube festziehen bzw. CMP-Fühler oder Einlassnockenwelle austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Zündsignalgeber-Schaltkreises
+</title>
+<test1>
+<ptxt>
+Kabel des Zündsignalgeber-Schaltkreises auf Unterbrechung, Kurzschluss und Lockerheit prüfen.
+</ptxt>
+</test1>
+<question>
+Ist der Schaltkreis einwandfrei?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reparieren oder austauschen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Prüfung mit funktionierender Zündspulen-Baugruppe
+</title>
+<test1>
+<ptxt>
+Eine funktionierende Zündspulen-Ersatzbaugruppe anschließen und Schritt 2 wiederholen.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat für Schritt 2 zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ein funktionierendes Ersatz-ECM anschließen und dann Schritt 2 wiederholen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Zündzeitpunkts
+</title>
+<test1>
+<ptxt>
+Den anfänglichen Zündzeitpunkt und die Zündverstellung der Zylinder überprüfen. Siehe dazu 
+<intxref refid = "G5JB0E1806007">Überprüfung des Zündzeitpunkts</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Das System ist einwandfrei.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Weiter mit Schritt 13.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Überprüfung des Klopfsensors
+</title>
+<test1>
+<ptxt>
+Sicherstellen, dass der Schaltkreis des Klopfsensors einwandfrei ist. Siehe dazu 
+<intxref refid = "G5JB0E1104040">DTC P0327 &#x002F; P0328: Niedrige&#x002F;hohe Spannung im Schaltkreis des Klopfsensors</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Das Oszillogramm der Wellenform des Klopfsensorsignals gemäß &#34;Bezugswellenform Nr. 26&#34; und &#34;Bezugswellenform Nr. 27&#34; unter 
+<intxref refid = "G5JB0E1104080">Prüfung des ECM und dessen Schaltkreise</intxref>
+ überprüfen.
+</ptxt>
+</test1>
+<question>
+Ist das Prüfresultat zufriedenstellend?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+CMP-Fühler, CMP-Fühler-Impulsgeberzahn der Nockenwelle, CKP-Sensor, CKP-Sensorplatte und&#x002F;oder Eingangssignale zu diesem System überprüfen.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Einen funktionierenden Ersatz-Klopfsensor probeweise anschließen und erneut überprüfen.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

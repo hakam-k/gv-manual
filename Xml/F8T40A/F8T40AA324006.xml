@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA324006" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Le témoin d&apos;injection ne s&apos;allume pas alors que le commutateur d&apos;allumage est sur ON et le moteur est coupé.
+</title>
+<servinfosub id = "F8T40AA324006001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40AA322001">Schéma du circuit de câblage du système antidémarrage:Modèle à moteur diesel</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA324006002">
+<title>
+Description du circuit
+</title>
+<ptxt>
+Lorsque le contact est mis, l&apos;ECM transmet l&apos;information au combiné d&apos;instruments d&apos;allumer le témoin d&apos;injection au cas où aucun problème n&apos;est détecté au niveau du système antidémarrage. Ensuite, le combiné d&apos;instruments allume le témoin. Lorsque le moteur est lancé, le module de commande du moteur transmet le signal OFF au combiné d&apos;instruments pour éteindre le témoin. Le combiné d&apos;instruments éteint alors le témoin. Toutefois, si un problème est détecté au niveau du système antidémarrage, le témoin d&apos;injection clignote lorsque le contact est mis.
+</ptxt>
+</servinfosub>
+<p-change/>
+<servinfosub id = "F8T40AA324006003">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40AA324006004">
+<testgroup>
+<title>
+Vérification de l&apos;alimentation du témoin d&apos;injection
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<question>
+D&apos;autres témoins s&apos;allument-ils?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des codes de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Vérifier le(s) DTC de l&apos;ECM en se reportant au point 
+<intxref refid = "F8T40A1144005">Vérification des DTC:F9Q</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher les DTC dans le module de commande ABS ou le module de commande ESP&#174;. Pour les modèles ESP&#174;, se reporter au point 
+<intxref refid = "F8T40A4604005">Vérification des DTC</intxref>
+. Pour les modèles sans ESP&#174;, se reporter au point 
+<intxref refid = "F8T40A4504004">Vérification des DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rechercher le(s) DTC dans le BCM en se reportant au point 
+<intxref refid = "F8T40AA204005">Vérification des DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Y a-t-il des DTC décelés?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer au schéma fonctionnel de diagnostic du DTC concerné.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Remplacer le combiné d&apos;instruments par un élément en bon état et vérifier à nouveau. Si le témoin d&apos;injection ne s&apos;allume toujours pas, remplacer l&apos;ECM par un en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du fusible
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si les fusibles concernés sont grillés.
+</ptxt>
+</test1>
+<question>
+Un fusible est-il grillé?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le fusible grillé et rechercher un éventuel court-circuit.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de câble d&apos;alimentation du combiné d&apos;instruments
+</title>
+<test1>
+<ptxt>
+Déposer le combiné d&apos;instruments en se reportant au point 
+<intxref refid = "F8T40A9306003">Dépose et repose du combiné d&apos;instruments</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le bon raccordement des bornes filaires du connecteur du combiné d&apos;instruments.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, mettre le contacteur d&apos;allumage en position ON et mesurer la tension entre la borne d&apos;alimentation électrique du combiné d&apos;instruments et la masse de carrosserie du véhicule en se reportant au point 
+<intxref refid = "F8T40A9302001">Schéma du circuit du combiné d&apos;instruments</intxref>
+.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture dans le circuit filaire d&apos;alimentation.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de câble de mise à la masse du combiné d&apos;instruments
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mesurer la résistance entre la borne de masse du connecteur du combiné d&apos;instruments et la masse de carrosserie du véhicule en se reportant au point 
+<intxref refid = "F8T40A9302001">Schéma du circuit du combiné d&apos;instruments</intxref>
+.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle de 1 &#937; maximum?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Remplacer le combiné d&apos;instruments par un élément en bon état et vérifier à nouveau. Si le témoin d&apos;injection ne s&apos;allume toujours pas, remplacer l&apos;ECM par un en bon état, et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture ou la résistance élevée dans le circuit filaire de mise à la masse.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

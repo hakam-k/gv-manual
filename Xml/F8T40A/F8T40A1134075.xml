@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1134075" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0131 &#x002F; P0151
+</title>
+<attention3>
+<ptxt>
+Pour l&apos;identification de chaque cylindre et banc, se reporter au point 
+<intxref refid = "F8T40A1130007">Précautions pour l&apos;identification du cylindre et du banc:N32A</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "F8T40A1134075001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.409in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.815in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0131: Tension faible de circuit de capteur O2 (banc 1, capteur 1)
+</emph>
+</ptxt>
+<ptxt>
+Ce DTC est détecté si n&apos;importe laquelle des conditions suivantes est remplie au niveau du banc 1.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Même si la tension du signal HO2S-2 est à l&apos;état riche, la tension du signal HO2S-1 est inférieure à 0,02 V pendant 5 s, après montée en température.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tension de signal HO2S-1 est inférieure à 0,02 V pendant 5 s, démarrage à froid.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S-1 et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+HO2S-2 et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0151: Tension faible de circuit de capteur O2 (banc 2, capteur 1)
+</emph>
+</ptxt>
+<ptxt>
+Ce DTC est détecté si n&apos;importe laquelle des conditions suivantes est remplie au niveau du banc 2.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Même si la tension du signal HO2S-2 est à l&apos;état riche, la tension du signal HO2S-1 est inférieure à 0,02 V pendant 5 s, après montée en température.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tension de signal HO2S-1 est inférieure à 0,02 V pendant 5 s, démarrage à froid.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1134075002">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1134013">DTC P0030 &#x002F; P0031 &#x002F; P0032 &#x002F; P0036 &#x002F; P0037 &#x002F; P0038 &#x002F; P0050 &#x002F; P0051 &#x002F; P0052 &#x002F; P0056 &#x002F; P0057 &#x002F; P0058:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1134075003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention3>
+<ptxt>
+S&apos;assurer que les conditions suivantes sont respectées dans le cadre de cette procédure.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tension de batterie &gt; 10,5 V
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire monter à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire le véhicule à 60 - 80 km&#x002F;h (37 - 50 mile&#x002F;h) pendant 3 min. minimum. (Maintenir l&apos;ouverture du papillon constante pendant cette étape)
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire tourner le moteur au ralenti pendant 1 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1134075004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1134075005">
+<testgroup id = "F8T40A1134075006">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1134001">Vérification du système de régulation des émissions et de commande du moteur:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134075007">
+<title>
+Vérification du circuit de capteur O2
+</title>
+<test1>
+<ptxt>
+Pour le banc associé au DTC, vérifier les éléments suivants.
+</ptxt>
+<ptxt>
+Circuit de signal et de mise à la masse d&apos;HO2S-1 ou d&apos;HO2S-2: Se reporter à l&apos;étape 3 du point 
+<intxref refid = "F8T40A1134076">DTC P0132 &#x002F; P0137 &#x002F; P0138 &#x002F; P0152 &#x002F; P0157 &#x002F; P0158:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le faisceau de câbles défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134075008">
+<title>
+Nouvelle vérification de DTC
+</title>
+<test1>
+<ptxt>
+Remplacer l&apos;HO2S-1 du banc associé au DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Effectuer la procédure de confirmation des DTC et vérifier les DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC P0131 ou P0151 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Fin.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134075009">
+<title>
+Nouvelle vérification de DTC
+</title>
+<test1>
+<ptxt>
+Remplacer l&apos;HO2S-2 du banc associé au DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Effectuer la procédure de confirmation des DTC et vérifier les DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC P0130 ou P0150 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Fin.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134075010">
+<title>
+Recherche de pannes d&apos;autres DTC détectés simultanément
+</title>
+<question>
+Y a-t-il un&#x002F;des DTC détecté(s) simultanément?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC correspondant.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

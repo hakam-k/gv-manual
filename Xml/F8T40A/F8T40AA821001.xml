@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "F8T40AA821001" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Description du système de communication CAN
+</title>
+<servinfosub id = "F8T40AA821001001">
+<title>
+Description du système
+</title>
+<ptxt>
+La communication avec l&apos;ECM, le TCM (modèle A&#x002F;T), le module de commande ABS ou ESP&#174;, le BCM, le module de commande 4WD (modèle 4WD de type sélection moteur), le module de commande HVAC, le module de commande de démarrage sans clé et le capteur d&apos;angle de braquage (modèle ESP&#174;) est assurée par le CAN (réseau de commande local).
+</ptxt>
+<ptxt>
+La communication entre chaque module de commande est établie via un système de communication CAN (réseau de commande local). Le système de communication CAN utilise la communication sérielle qui transmet les données à grande vitesse. Une paire torsadée de lignes de communication (CAN élevé &#x002F; CAN faible) sert à la transmission de données à grande vitesse. Ainsi, plusieurs modules de commande peuvent communiquer simultanément. De plus, il possède une fonction de détection automatique des erreurs de communication. Chaque module lit les données nécessaires parmi les données reçues et assure le transfert des données.
+</ptxt>
+<ptxt>
+Le système est structuré de façon à ce que les autres modules &#x002F; capteurs de commande soient branchés (accrochés) sur le bus principal CAN (circuit principal CAN) entre l&apos;ECM et le combiné d&apos;instruments. L&apos;ECM et le combiné d&apos;instruments sont dotés d&apos;une résistance d&apos;extrémité intégrée qui stabilise la totalité du bus CAN (circuit CAN). Si l&apos;un ou l&apos;autre module est débranché ou fonctionne anormalement (coupure ou court-circuit du circuit CAN), l&apos;ensemble du bus CAN devient instable et provoque un dysfonctionnement de la communication CAN entre les modules.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA821001002">
+<title>
+Schéma d&apos;ensemble du système
+</title>
+<figure>
+<graphic graphicname = "I8T40AA82001.swf" width = "183.000mm" height = "64.914mm" ver = "02" gw = "460" gh = "167"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.654in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.953in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.315in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.654in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Ligne de communication CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Module de commande HVAC
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Diagnostic de communication de ligne-K
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Capteur d&apos;angle de braquage (modèle ESP&#174;)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Outil de balayage SUZUKI (SUZUKI-SDT)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;C&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Diagnostic de communication CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Combiné d&apos;instruments
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+12.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Emetteur-récepteur CAN
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Module de commande de démarrage sans clé (modèle de démarrage sans clé)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+13.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Résistance d&apos;extrémité CAN
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Module de commande ABS &#x002F; ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+8.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+TCM (modèle A&#x002F;T)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+9.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Module de commande 4WD (modèle 4WD de type sélection moteur)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "F8T40AA821001003">
+<title>
+Communication avec l&apos;outil de balayage
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La ligne-K ou la ligne CAN est utilisée pour la communication entre chaque module de commande et l&apos;outil de balayage.
+</ptxt>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40AA821001005">Tableau de communication CAN</intxref>
+ pour déterminer quelle ligne est utilisée pour la communication entre chaque module de commande et l&apos;outil de balayage.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;ECM, le TCM (modèle A&#x002F;T), le module de commande ABS &#x002F; ESP&#174;, le BCM et le module de commande HVAC utilisent la ligne CAN pour communiquer avec l&apos;outil de balayage. Même si la ligne CAN est défectueuse ailleurs qu&apos;entre le DLC et le BCM, il est possible que la communication échoue également entre l&apos;outil de balayage et ces modules de commande.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le module de commande 4WD (modèle 4WD de type sélection moteur) utilise la ligne K pour communiquer avec l&apos;outil de balayage. Même si la ligne CAN est défectueuse, il est possible de communiquer entre l&apos;outil de balayage et ce module de commande.
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "F8T40AA821001004">
+<title>
+Fonction de vérification de bus de l&apos;outil de balayage SUZUKI (SUZUKI-SDT)
+</title>
+<ptxt>
+L&apos;outil de balayage SUZUKI (SUZUKI-SDT) diagnostique de façon efficace un dysfonctionnement dans le bus CAN au moyen de la &#34;Vérification du bus de communication&#34; et des &#34;DTC de dysfonctionnement de communication&#34; sous &#34;Vérification du bus&#34;.
+</ptxt>
+<ptxt>
+La &#34;Vérification du bus de communication&#34; peut afficher tous les noms des capteurs&#x002F;modules de commande communiqués par le CAN.
+</ptxt>
+<ptxt>
+De même, le &#34;DTC de dysfonctionnement de communication&#34; ne peut afficher que les DTC associés au CAN, détectés par les modules de commande en communication avec l&apos;outil de balayage via la ligne de communication CAN.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40AA821001005">
+<title>
+Tableau de communication CAN
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.150in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.378in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.319in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.378in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Module &#x002F; capteur de commande
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Communication avec l&apos;outil de balayage
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Contrôle du DTC CAN
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Fonction de vérification de bus
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Combiné d&apos;instruments
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Non disponible(s)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Non disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Capteur d&apos;angle de braquage (modèle ESP&#174;)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Non disponible(s)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Non disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Module de commande ABS &#x002F; ESP&#174;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Module de commande HVAC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+TCM (modèle A&#x002F;T)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Module de commande 4WD (modèle 4WD de type sélection moteur)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Ligne-K
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Module de commande de démarrage sans clé (modèle de démarrage sans clé)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Non disponible(s)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disponible(s)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Connecteur de jonction CAN
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40AA821001006">
+<title>
+Signal de communication CAN
+</title>
+<ptxt>
+Le système de communication CAN est un système de communication en série qui transmet un ensemble de données (valeurs des capteurs, données de commande et signaux de commande) sous forme de signaux numériques ON-OFF via la ligne de communication. Ce système utilise deux lignes de communication (CAN élevé et CAN faible) pour le circuit de communication afin de maintenir un niveau de fiabilité élevé même lors de l&apos;utilisation de la communication sérielle à haute vitesse. 
+</ptxt>
+<ptxt>
+La communication sérielle se produit comme indiqué ci-dessous,avec 2,5 V comme niveau de référence tant pour le signal CAN élevé (1) que le signal CAN faible (2). La plage du signal CAN élevé se situe entre 2,5 V et environ 3,5 V, et la plage de signal CAN faible entre 2,5 V et environ 1,5 V. Lorsque les deux signaux indiquent 2,5 V, le signal est considéré comme OFF, et lorsque le signal CAN élevé indique 3,5 V et le signal CAN faible indique 1,5 V (c&apos;est à dire que la différence de tension élevée et faible est supérieure à 2 V environ), le signal est considéré comme ON. Pour cette raison, une fonction du signal de communication CAN consiste à vérifier si la forme d&apos;onde de signal est symétrique entre les signaux CAN élevé et CAN faible en ce qui concerne le niveau 2,5 V. La communication CAN échoue lorsqu&apos;une telle forme de signal disparaît.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81002F.swf" width = "183.000mm" height = "47.981mm" ver = "01" gw = "338" gh = "119"/>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

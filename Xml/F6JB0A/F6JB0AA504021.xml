@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10E">
+<servcat sctnbr = "10" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F6JB0AA504021" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC Nº 33: Bus de communication du module de commande désactivé
+</title>
+<servinfosub id = "F6JB0AA504021001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F6JB0AA504020">DTC Nº 31: Perte de la communication avec le BCM</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F6JB0AA504021002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.355in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.824in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Pas de communication disponible avec tous les modules de commande connectés par CAN.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit de communication CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combiné d&apos;instruments
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande de démarrage par télécommande
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande 4WD (si le véhicule en est équipé)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Module de commande d&apos;ABS ou d&apos;ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (véhicules à boîte de vitesses automatique)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Capteur d&apos;angle de braquage (si le véhicule en est équipé)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F6JB0AA504021003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<s1>
+<ptxt>
+Effacer les DTC en se reportant au point 
+<intxref refid = "F6JB0AA504009">Suppression des DTC</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Démarrer le moteur et le laisser tourner pendant au moins 1 minute.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier le DTC en se reportant au point 
+<intxref refid = "F6JB0AA504007">Vérification des DTC</intxref>
+ .
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F6JB0AA504021004">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F6JB0AA504021005">
+<testgroup>
+<question>
+La procédure de &#8220;Vérification du système de démarrage par télécommande&#8221; a-t-elle été effectuée?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F6JB0AA504004">Vérification du système de démarrage par télécommande</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du connecteur du module de commande
+</title>
+<test1>
+<ptxt>
+Vérifier le raccordement des connecteurs de tous les modules de commande communiquant via le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier à nouveau les DTC du module de commande de démarrage par télécommande.
+</ptxt>
+</test1>
+<question>
+Le DTC nº 33 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Problème intermittent. Rechercher d&apos;éventuels problèmes intermittents en se reportant au point 
+<intxref refid = "F6JB0A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du circuit de communication CAN
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher les connecteurs de tous les modules de commande communiquant via le réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si le circuit de communication CAN entre les modules de commande présente un éventuel court-circuit, une coupure ou une résistance élevée.
+</ptxt>
+</test1>
+<question>
+Chaque circuit de communication CAN est-il en bon état?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Réparer le circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification des DTC du module de commande de démarrage par télécommande
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Brancher les connecteurs de tous les modules de commande déconnectés communiquant par le biais du réseau CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur d&apos;&apos;un module de commande autre que le module de commande de démarrage par télécommande.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier à nouveau les DTC du module de commande de démarrage par télécommande.
+</ptxt>
+</test1>
+<question>
+Le DTC N° 33 est-il détecté?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+A l&apos;aide de la même méthode, débrancher les connecteurs du module de commande autre que le module de commande de démarrage sans clé et le combiné d&apos;instruments un par un pour vérifier si le DTC N° 33 est détecté.
+</ptxt>
+<ptxt>
+Si le DTC N° 33 est détecté même si le connecteur du module de commande autre que le module de commande de démarrage sans clé est débranché, remplacer le module par un module de commande de démarrage sans clé en bon état et vérifier à nouveau.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vérifier l&apos;alimentation et le circuit de mise à la masse du module de commande déconnecté. Si le circuit est en bon état, remplacer le module de commande de démarrage par télécommande par un module en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

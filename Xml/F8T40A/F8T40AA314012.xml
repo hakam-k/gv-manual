@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40AA314012" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1621: Erreur de ligne de communication du dispositif antidémarrage
+</title>
+<ptxt>
+<intxrefpoff refid = "F8T40AA312001">Schéma du circuit de câblage du système antidémarrage:Modèle à moteur à essence</intxrefpoff>
+</ptxt>
+<servinfosub id = "F8T40AA314012001">
+<title>
+Condition de détection et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.123in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.071in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Une erreur de communication entre l&apos;ICM et l&apos;ECM est détectée par l&apos;ECM.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fusible(s) associé(s) grillé(s)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mauvais branchement du connecteur de l&apos;ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Mauvais raccordement du connecteur d&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ouverture dans le circuit filaire d&apos;alimentation.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ouverture dans le circuit filaire de mise à la masse
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ouverture dans les circuits filaires de communication
+</ptxt>
+</item>
+<item>
+<ptxt>
+Réparer les courts-circuits du circuit filaire de mise à la masse dans les circuits filaires de communication
+</ptxt>
+</item>
+<item>
+<ptxt>
+Réparer les courts-circuits du circuit filaire d&apos;alimentation dans les circuits filaires de communication
+</ptxt>
+</item>
+<item>
+<ptxt>
+Courts-circuits dans les circuits filaires de communication
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM défectueux.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM défectueux
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40AA314012002">
+<title>
+Recherche de pannes
+</title>
+<diag type = "test" id = "F8T40AA314012003">
+<testgroup>
+<title>
+Confirmation du code de diagnostic (DTC)
+</title>
+<test1>
+<ptxt>
+Supprimer les DTC en se reportant au point 
+<intxref refid = "F8T40AA314003">Suppression des DTC:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si un éventuel DTC est détecté en se reportant au point 
+<intxref refid = "F8T40AA314002">Vérification des DTC:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le DTC P1621 est-il toujours détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+La recherche de pannes est terminée.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification du fusible
+</title>
+<test1>
+<ptxt>
+Vérifier si les fusibles concernés sont grillés.
+</ptxt>
+</test1>
+<question>
+Un fusible est-il grillé?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer le(s) fusible(s) grillé(s) par un&#x002F;des fusible(s) neuf(s).
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de mauvais branchements de l&apos;ICM
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur &#34;G24&#34; de l&apos;ICM en se reportant au point 
+<intxref refid = "F8T40AA316001">Dépose et repose du module de commande du dispositif antidémarrage (ICM):Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si les branchements de câbles sont normaux au niveau du connecteur &#34;G24&#34; de l&apos;ICM.
+</ptxt>
+</test1>
+<question>
+Chaque branchement de câble est-it normal?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le(s) mauvais branchement(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de mauvais branchements de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur &#34;E23&#34; de l&apos;ECM.
+</ptxt>
+<ptxt>
+- Modèles M16A et J20A: 
+<intxreftitleoff1 refid = "F8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle J24B: 
+<intxreftitleoff1 refid = "F8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle N32A: 
+<intxreftitleoff1 refid = "F8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier que le bon raccordement des bornes suivantes au connecteur d&apos;ECM.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modèles M16A, J20A et J24B: &#34;E23-13&#34; et &#34;E23-28&#34;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modèle N32A: &#34;E23-1&#34; et &#34;E23-3&#34;
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Chaque branchement de câble est-it normal?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer le(s) mauvais branchement(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier l&apos;ouverture dans le circuit filaire d&apos;alimentation
+</title>
+<test1>
+<ptxt>
+Brancher le connecteur &#34;G24&#34; de l&apos;ICM en se reportant au point 
+<intxref refid = "F8T40AA316001">Dépose et repose du module de commande du dispositif antidémarrage (ICM):Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position ON, vérifier la tension entre la borne de câble &#34;G24-1&#34; de l&apos;ICM et la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La tension est-elle d&apos;environ 12 V?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture dans le circuit de câble d&apos;alimentation électrique.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier l&apos;ouverture dans le circuit filaire de mise à la masse
+</title>
+<test1>
+<ptxt>
+Contacteur d&apos;allumage en position ON, vérifier la tension entre la borne de câble &#34;G24-2&#34; de l&apos;ICM et la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0 V?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 7.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture dans le circuit filaire de mise à la masse
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier s&apos;il y a un court-circuit dans le circuit de mise à la masse dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+En débranchant le connecteur &#34;G24&#34; de l&apos;ICM et le connecteur &#34;E23&#34; de l&apos;ECM, vérifier la résistance entre la borne de câble &#34;G24-4&#34; &#x002F; &#34;G24-3&#34; du connecteur d&apos;ICM et la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle infinie?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 8.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans le circuit filaire de mise à la masse dans le circuit filaire de communication.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier s&apos;il y a un court-circuit dans le circuit d&apos;alimentation dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+En débranchant le connecteur &#34;G24&#34; de l&apos;ICM et le connecteur &#34;E23&#34; de l&apos;ECM, mettre le contacteur d&apos;allumage en position ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la tension entre la borne de câble &#34;G24-4&#34; &#x002F; &#34;G24-3&#34; du connecteur d&apos;ICM et la masse de carrosserie.
+</ptxt>
+</test1>
+<question>
+La tension est-elle de 0 V?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 9.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans le circuit filaire d&apos;alimentation dans le circuit filaire de communication.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier s&apos;il y a un court-circuit dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+En débranchant le connecteur &#34;G24&#34; de l&apos;ICM et le connecteur &#34;E23&#34; de l&apos;ECM, vérifier la résistance entre la borne de câble &#34;G24-3&#34;et la borne de câble &#34;G24-4&#34; du connecteur d&apos;ICM.
+</ptxt>
+</test1>
+<question>
+La résistance est-elle infinie?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 10.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer les courts-circuits dans les circuits filaires de communication
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier l&apos;ouverture dans le circuit filaire de communication
+</title>
+<test1>
+<ptxt>
+Débrancher le connecteur &#34;G24&#34; de l&apos;ICM en se reportant au point 
+<intxref refid = "F8T40AA316001">Dépose et repose du module de commande du dispositif antidémarrage (ICM):Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Débrancher le connecteur &#34;E23&#34; de l&apos;ECM.
+</ptxt>
+<ptxt>
+- Modèles M16A et J20A: 
+<intxreftitleoff1 refid = "F8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle J24B: 
+<intxreftitleoff1 refid = "F8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle N32A: 
+<intxreftitleoff1 refid = "F8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier la résistance entre la borne suivante du connecteur d&apos;ICM et le connecteur d&apos;ECM, contacteur d&apos;allumage en position ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modèles M16A, J20A et J24B: borne de câble &#34;G24-4&#34; et &#34;E23-13&#34; (&#34;PNK&#x002F;BLU&#34;) &#x002F; 
+</ptxt>
+<ptxt>
+borne de câble &#34;G24-3&#34; et &#34;E23-28&#34; (&#34;GRY&#x002F;BLU&#34;) &#x002F; 
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modèle N32A: borne de câble &#34;G24-4&#34; et &#34;E23-1&#34; (&#34;PNK&#x002F;BLU&#34;) &#x002F; 
+</ptxt>
+<ptxt>
+ borne de câble &#34;G24-3&#34; et &#34;E23-3&#34; (&#34;GRY&#x002F;BLU&#34;) &#x002F; 
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La résistance est-elle infinie?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Réparer l&apos;ouverture dans le circuit filaire de communication.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérification de l&apos;ICM
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;ICM en se reportant au point 
+<intxref refid = "F8T40AA314020">Vérification du module de commande du dispositif antidémarrage (ICM) et de ses circuits:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</test1>
+<question>
+L&apos;ICM est-il normal?
+</question>
+<result>
+OUI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Remplacer l&apos;ECM par un élément neuf.
+</ptxt>
+<ptxt>
+- Modèles M16A et J20A: 
+<intxreftitleoff1 refid = "F8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle J24B: 
+<intxreftitleoff1 refid = "F8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modèle N32A: 
+<intxreftitleoff1 refid = "F8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Ensuite, suivre les instructions du point 
+<intxref refid = "F8T40AA316003">Procédure à suivre après le remplacement de l&apos;ECM:Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;ICM par un élément neuf en se reportant au point 
+<intxref refid = "F8T40AA316001">Dépose et repose du module de commande du dispositif antidémarrage (ICM):Modèle à moteur à essence</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

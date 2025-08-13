@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A5114048" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2764: Circuit de commande d&apos;électrovanne de commande de pression d&apos;embrayage de convertisseur de couple faible
+</title>
+<servinfosub id = "F8T40A5114048001">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A5114047">DTC P2763: Circuit de commande d&apos;électrovanne de commande de pression d&apos;embrayage de convertisseur de couple élevé:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A5114048002">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.035in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tension de la borne d&apos;électrovanne de commande de pression TCC au TCM est basse, bien que le TCM commande l&apos;activation de l&apos;électrovanne de commande de pression TCC.
+</ptxt>
+<ptxt>
+(logique de détection à 1 cycle(s) de conduite)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Coupure ou court-circuit à la masse du circuit de l&apos;électrovanne régulatrice de pression TCC
+</ptxt>
+</item>
+<item>
+<ptxt>
+Dysfonctionnement de l&apos;électrovanne de commande de pression TCC
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A5114048003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lors d&apos;un essai sur route, choisir un endroit où il n&apos;y a ni trafic ni risque d&apos;accident et rester très prudent pendant l&apos;essai pour éviter tout accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;essai sur route doit être effectué par 2 personnes, un conducteur et un technicien, sur une route plane.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Raccorder l&apos;outil de balayage au DLC, contacteur d&apos;allumage en position OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Supprimer les DTC des mémoires du TCM et de l&apos;ECM à l&apos;aide de l&apos;outil de balayage.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire démarrer le moteur.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Faire tourner le moteur au ralenti en plage &#34;P&#34; pendant 20 secondes minimum.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vérifier les DTC, les DTC en attente et les données d&apos;arrêt sur image.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A5114048004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A5114048005">
+<testgroup>
+<question>
+La &#34;Vérification du système A&#x002F;T&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A5114001">Vérification du système A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Rechercher un court-circuit à la masse dans le circuit de l&apos;électrovanne régulatrice de pression TCC
+</title>
+<test1>
+<ptxt>
+Débrancher les connecteurs du TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier le branchement correct du TCM aux bornes &#34;E92-3&#34; et &#34;E92-5&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si le raccordement est correct, vérifier la continuité entre la borne  &#34;E92-5&#34; du connecteur de TCM débranché (côté faisceau de câbles) et la masse.
+</ptxt>
+</test1>
+<question>
+Une continuité est-elle indiquée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Court-circuit à la masse du circuit de l&apos;électrovanne régulatrice de pression TCC Si le circuit est en ordre, passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Rechercher une éventuelle coupure dans le circuit d&apos;électrovanne de commande de pression TCC
+</title>
+<test1>
+<ptxt>
+Vérifier la résistance entre les bornes &#34;E92-3&#34; et &#34;E92-5&#34; du connecteur du TCM débranché (côté faisceau de câbles).
+</ptxt>
+</test1>
+<question>
+Est-elle infinie?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Coupure dans le circuit de l&apos;électrovanne régulatrice de pression TCC Si le circuit est en ordre, passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vérifier l&apos;électrovanne de commande de pression TCC
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;électrovanne de commande de pression TCC en se reportant au point 
+<intxref refid = "F8T40A5116022">Vérification des électrovannes (électrovanne-A de sélection, électrovanne-B de sélection, électrovanne de commande de pression TCC et électrovanne de commande de pression):4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Les résultats de la vérification sont-ils satisfaisants?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Problème intermittent ou TCM défectueux. Vérifier le problème intermittent en se reportant au point 
+<intxref refid = "F8T40A0006002">Vérification de connexion intermittente et de mauvais contacts</intxref>
+. Si c&apos;est correct, remplacer le TCM par un élément en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer l&apos;électrovanne régulatrice de pression TCC en se reportant au point 
+<intxref refid = "F8T40A5116021">Dépose et repose des électrovannes (électrovanne-A de sélection, électrovanne-B de sélection, électrovanne de commande de pression TCC et électrovanne de commande de pression):4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

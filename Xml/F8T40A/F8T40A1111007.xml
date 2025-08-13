@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "F8T40A1111007" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Description du système de corps de papillon électrique
+</title>
+<ptxt>
+Le système de corps de papillon électrique se compose d&apos;un ensemble de corps de papillon électrique, d&apos;un ensemble de capteur de position de pédale d&apos;accélérateur (APP), de l&apos;ECM et d&apos;un relais de commande pour l&apos;actionneur du papillon.
+</ptxt>
+<ptxt>
+Les différentes pièces constitutives des ensembles sont les suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ensemble de corps de papillon électrique: papillon d&apos;accélération, actionneur du papillon, 2 capteurs de position de papillon
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ensemble de détecteur de position de pédale d&apos;accélérateur (APP): Pédale d&apos;accélérateur, 2 capteurs de position d&apos;accélérateur
+</ptxt>
+</item>
+</list1>
+<servinfosub id = "F8T40A1111007001">
+<title>
+Description du fonctionnement
+</title>
+<ptxt>
+L&apos;ECM (5) détecte l&apos;ouverture (enfoncement de la pédale) de la pédale d&apos;accélérateur en se basant sur la tension du signal du détecteur de position de pédale d&apos;accélérateur (APP) (1), puis, en utilisant cette donnée et les conditions de fonctionnement du moteur, il calcule l&apos;angle optimal d&apos;ouverture du papillon d&apos;accélération. D&apos;autre part, il détecte l&apos;ouverture du papillon d&apos;accélération en se basant sur la tension du signal du capteur de position du papillon (3) inclus dans le corps de papillon (2) et la compare avec l&apos;ouverture optimale du papillon d&apos;accélération calculée ci-dessus. Lorsqu&apos;une différence est constatée, l&apos;ECM règle le taux de service (100&#x0025;  &#8211; 0&#x0025;) de la commande de l&apos;actionneur du papillon en fonction de cette différence pour mouvoir l&apos;actionneur du papillon (moteur) (4) inclus dans le corps de papillon. Lorsqu&apos;aucune différence n&apos;est constatée, l&apos;ECM règle le taux de service de l&apos;actionneur du papillon à environ 15&#x0025; pour maintenir l&apos;ouverture du papillon d&apos;accélération. C&apos;est ainsi que le papillon d&apos;accélération (17) est ouvert et fermé pour obtenir l&apos;ouverture optimale du papillon d&apos;accélération.
+</ptxt>
+<ptxt>
+Dans ce système, étant donné que le détecteur de position du papillon et le détecteur de position de pédale d&apos;accélérateur (APP) possèdent chacun 2 détecteurs (principal et secondaire), un contrôle et une détection des anomalies d&apos;une grande précision et d&apos;une grande fiabilité sont garantis. En outre, lorsque l&apos;ECM détecte une anomalie dans le système, il coupe le relais de commande de l&apos;actionneur du papillon (8) pour cesser de commander l&apos;actionneur du papillon. Lorsque le relais de commande de l&apos;actionneur du papillon est coupé, le papillon d&apos;accélération est calé à un angle d&apos;ouverture d&apos;environ 7&#176; par rapport à sa position complètement fermée (angle d&apos;ouverture par défaut) par la force du ressort de rappel et du ressort d&apos;ouverture inclus dans le corps de papillon.
+</ptxt>
+<ptxt>
+Ce corps de papillon n&apos;est pas équipé d&apos;une soupape IAC pour la commande du régime de ralenti. Le contrôle du régime de ralenti est exercé par l&apos;actionneur du papillon qui ouvre&#x002F;ferme le papillon d&apos;accélération.
+</ptxt>
+<figure>
+<graphic graphicname = "I4RS0B110007.swf" width = "183.000mm" height = "92.078mm" ver = "02" gw = "441" gh = "244"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.331in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.070in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.331in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.070in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.331in"/>
+<colspec colnum = "6" colname = "6" colwidth = "2.070in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6. 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+CPU
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signal du détecteur (principal) de position de pédale d&apos;accélérateur (APP)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+15.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signal d&apos;entraînement de l&apos;actionneur du papillon
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuit d&apos;entraînement de l&apos;actionneur du papillon
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+12.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signal du détecteur (secondaire) de position de pédale d&apos;accélérateur (APP)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+16.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Alimentation électrique de l&apos;actionneur du papillon
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+9. 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Depuis le fusible &#8220;THR MOT&#8221;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+13.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signal du capteur (principal) de position du papillon
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+18.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signal de commande du relais de commande de l&apos;actionneur du papillon
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+En provenance du relais principal
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+14.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Signal du capteur (secondaire) de position du papillon
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "bottom">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

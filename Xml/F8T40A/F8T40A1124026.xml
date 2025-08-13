@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1124026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0137 &#x002F; P0138
+</title>
+<servinfosub id = "F8T40A1124026001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.178in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.002in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0137: Tension faible du circuit de capteur O2 (banc 1, capteur 2)
+</emph>
+</ptxt>
+<ptxt>
+La tension de sortie du circuit de signal de capteur HO2S est inférieure à 0,02 V pendant 25 s
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S et&#x002F;ou son circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Système d&apos;échappement
+</ptxt>
+</item>
+<item>
+<ptxt>
+Système d&apos;admission d&apos;air
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0138: Tension élevée du circuit de capteur O2 (banc 1, capteur 2)
+</emph>
+</ptxt>
+<ptxt>
+La tension de sortie du circuit de signal de capteur HO2S est supérieure à 4,5 V pendant 5 s, même si le réchauffeur HO2S est activé pendant les durées spécifiées.
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1124026002">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1124014">DTC P0037 &#x002F; P0038:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1124026003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lors d&apos;un essai sur route, choisir un endroit où il n&apos;y a ni trafic ni risque d&apos;accident et rester très prudent pendant l&apos;essai pour éviter tout accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;essai sur route doit être effectué sur une route plane et par 2 personnes: un conducteur et un technicien qui procédera aux essais.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Si des DTC autres que ceux recherchés sont détectés précédemment au cours de la procédure de confirmation des DTC, veiller à solutionner les DTC détectés auparavant.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire monter à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire le véhicule à 50 - 60 km&#x002F;h (31 - 37 mile&#x002F;h) pendant 3 min. (maintenir une ouverture constate du papillon au cours de cette étape).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1124026004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1124026005">
+<testgroup id = "F8T40A1124026006">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1124001">Vérification du système de régulation des émissions et de commande du moteur:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124026007">
+<title>
+Vérification des DTC
+</title>
+<question>
+Y a-t-il d&apos;autres DTC que P0137 et P0138?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC correspondant.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124026008">
+<title>
+Vérification du circuit de signal et de mise à la masse du HO2S
+</title>
+<test1>
+<ptxt>
+Mettre le contacteur d&apos;allumage en position OFF et débrancher les connecteurs de l&apos;HO2S et de l&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vérifier si la borne correcte est raccordée aux connecteurs d&apos;HO2S et d&apos;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Si les branchements sont corrects, vérifier que les circuits de signal (A3) et de mise à la masse (A4) de l&apos;HO2S présentent les conditions suivantes.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La résistance du faisceau de câbles de chaque circuit de signal et de mise à la masse de l&apos;HO2S est inférieure à 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance d&apos;isolation des circuits de signal et de mise à la masse de l&apos;HO2S est infinie entre le connecteur d&apos;HO2S et la masse de carrosserie du véhicule.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance d&apos;isolement du faisceau de câbles est infinie entre la borne du circuit de signal HO2S et chaque autre borne du connecteur HO2S.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La résistance d&apos;isolement du faisceau de câbles est infinie entre la borne du circuit de mise à la masse d&apos;HO2S et chaque autre borne.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tension du circuit de signal et de mise à la masse d&apos;HO2S est de 0 - 1 V, contacteur d&apos;allumage en position ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Sont-ils en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 4.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer le faisceau de câbles défectueux.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124026009">
+<title>
+Vérification du système d&apos;échappement et du système d&apos;admission d&apos;air
+</title>
+<test1>
+<ptxt>
+Vérifier l&apos;absence d&apos;obstruction ou de fuite au niveau du système d&apos;échappement et du système d&apos;admission d&apos;air.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 5.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124026010">
+<title>
+Vérification du circuit de réchauffeur HO2S
+</title>
+<test1>
+<ptxt>
+Vérifier le circuit de réchauffeur HO2S en se reportant aux étapes 2 à 3 du point 
+<intxref refid = "F8T40A1124014">DTC P0037 &#x002F; P0038:J24B</intxref>
+. 
+</ptxt>
+</test1>
+<question>
+Le circuit est-il en bon état?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 6.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1124026011">
+<title>
+Nouvelle vérification de DTC
+</title>
+<test1>
+<ptxt>
+Remplacer le réchauffeur HO2S. 
+<intxreftitleoff1 refid = "F8T40A1326013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Effectuer la procédure de confirmation des DTC et vérifier les DTC.
+</ptxt>
+</test1>
+<question>
+Le DTC P0137 ou P0138 est-il détecté?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Fin.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "F8T40A1134048" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0560 &#x002F; P0562 &#x002F; P0563
+</title>
+<servinfosub id = "F8T40A1134048001">
+<title>
+Condition de détection du DTC et organe incriminé
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.228in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.968in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condition de détection du DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Organe incriminé
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0560: Tension du système
+</emph>
+</ptxt>
+<ptxt>
+La tension du circuit d&apos;alimentation électrique d&apos;ECM est inférieure à 2,5 V pendant 2 s
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit d&apos;alimentation électrique de l&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Système de charge
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0562: Tension faible du système
+</emph>
+</ptxt>
+<ptxt>
+La tension du circuit d&apos;alimentation électrique d&apos;ECM est inférieure à 10 V pendant 2 s, au démarrage du moteur.
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0563: Tension élevée du système
+</emph>
+</ptxt>
+<ptxt>
+La tension du circuit d&apos;alimentation électrique d&apos;ECM est supérieure à 18 V pendant 2 s, lorsque le moteur tourne.
+</ptxt>
+<ptxt>
+(logique de détection sur 2 D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "F8T40A1134048002">
+<title>
+Schéma de câblage
+</title>
+<ptxt>
+Se reporter au point 
+<intxref refid = "F8T40A1134064">Vérification du circuit de mise à la masse et d&apos;alimentation électrique de l&apos;ECM:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "F8T40A1134048003">
+<title>
+Procédure de confirmation de DTC
+</title>
+<attention3>
+<ptxt>
+Si des DTC autres que ceux recherchés sont détectés précédemment au cours de la procédure de confirmation des DTC, veiller à solutionner les DTC détectés auparavant.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Démarrer le moteur et le faire monter à température normale de fonctionnement.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Conduire le véhicule à 10 km&#x002F;h (6 mile&#x002F;h) minimum pendant 5 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "F8T40A1134048004">
+<title>
+Recherche de pannes à partir de DTC
+</title>
+<diag type = "test" id = "F8T40A1134048005">
+<testgroup id = "F8T40A1134048006">
+<question>
+La procédure de &#34;Vérification du système de commande du moteur et des émissions&#34; a-t-elle été effectuée?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à l&apos;étape 2.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Passer au point 
+<intxref refid = "F8T40A1134001">Vérification du système de régulation des émissions et de commande du moteur:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134048007">
+<title>
+Vérification du circuit d&apos;alimentation électrique de l&apos;ECM
+</title>
+<test1>
+<ptxt>
+Vérifier le circuit d&apos;alimentation électrique d&apos;ECM (H4) en se reportant aux étapes 1) à 2) du point 
+<intxref refid = "F8T40A1134064">Vérification du circuit de mise à la masse et d&apos;alimentation électrique de l&apos;ECM:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Son état est-il correct?
+</question>
+<result>
+OUI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Vérifier les pannes intermittentes. 
+<intxreftitleoff1 refid = "F8T40A0006002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Si c&apos;est en ordre, passer à l&apos;étape 3.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Réparer ou remplacer la pièce défectueuse.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "F8T40A1134048008">
+<title>
+Recherche de pannes d&apos;autres DTC détectés simultanément
+</title>
+<question>
+Y a-t-il un&#x002F;des DTC détecté(s) simultanément?
+</question>
+<result>
+OUI
+</result>
+<action>
+<ptxt>
+Passer à la recherche de pannes pour le DTC correspondant.
+</ptxt>
+</action>
+<result>
+NON
+</result>
+<action>
+<ptxt>
+Remplacer par un ECM en bon état et vérifier à nouveau.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>
