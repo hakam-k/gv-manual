@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0A1104070" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Electric Load Signal Circuit Check
+</title>
+<servinfosub id = "S5JB0A1104070001">
+<title>
+Wiring Diagram
+</title>
+<figure>
+<graphic graphicname = "I5JB0A110104.swf" width = "183.000mm" height = "106.542mm" ver = "02" gw = "446" gh = "285"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.441in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.765in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.315in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.765in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ABS hydraulic unit &#x002F; control module assembly
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Electric load signal (blower motor signal, rear defogger signal, headlight signal and A&#x002F;C switch signal), etc.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+PSP switch
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<p-change/>
+<servinfosub id = "S5JB0A1104070002">
+<title>
+Troubleshooting
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Before performed troubleshooting, be sure to read the 
+<intxref refid = "S5JB0A1100003">Precautions of ECM Circuit Inspection</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When measuring circuit voltage, resistance and&#x002F;or pulse signal at ECM connector, connect the special tool to ECM and&#x002F;or the ECM connectors referring to 
+<intxref refid = "S5JB0A1104063">Inspection of ECM and Its Circuits</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "S5JB0A1104070003">
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and check DTC.
+</ptxt>
+</test1>
+<question>
+Is there DTC P1674 and&#x002F;or P1678?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Electric load signal circuit check
+</title>
+<test1>
+<ptxt>
+Start engine and select &#8220;DATA LIST&#8221; mode on scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check electric load signal under following conditions respectively.
+</ptxt>
+<spec>
+<title>
+A&#x002F;C switch signal
+</title>
+<ptxt>
+Engine running, A&#x002F;C switch OFF: OFF
+</ptxt>
+<ptxt>
+Engine running, A&#x002F;C switch ON and blower speed selector turned 1st position or more: ON
+</ptxt>
+</spec>
+<spec>
+<title>
+Blower fan signal
+</title>
+<ptxt>
+Engine running, blower speed selector OFF: OFF
+</ptxt>
+<ptxt>
+Engine running, blower speed selector 5th position or more: ON
+</ptxt>
+</spec>
+<spec>
+<title>
+PSP signal
+</title>
+<ptxt>
+Engine running, steering wheel to neutral position: OFF
+</ptxt>
+<ptxt>
+Engine running, turning steering wheel to the right or left as far as it stops: ON
+</ptxt>
+</spec>
+<spec>
+<title>
+Electric load signal
+</title>
+<ptxt>
+Engine running, rear defogger switch or headlight switch OFF: OFF
+</ptxt>
+<ptxt>
+Engine running, rear defogger switch or headlight switch ON: ON
+</ptxt>
+</spec>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Electric load signal circuit is in good condition
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check defective signal circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

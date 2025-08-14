@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "0">
+<servinfo servinfosgmlid = "S8T40A1130002" svcinfotypenbr = "01" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Precautions in Diagnosing Trouble 
+</title>
+<attention3>
+<ptxt>
+For type definition of OBD system, refer to 
+<intxref refid = "S8T40A1130008">Precaution on On-Board Diagnostic (OBD) System:N32A</intxref>
+.
+</ptxt>
+</attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Don&#8217;t disconnect ECM connectors from ECM, battery cable from battery, ECM ground wire harness from engine or main fuse before confirming diagnostic information (DTC, freeze frame data, etc.) stored in ECM memory. Such disconnection will erase memorized information in ECM memory.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Diagnostic information stored in ECM memory can be cleared as well as checked by using SUZUKI scan tool or CAN communication OBD generic scan tool. Before using scan tool, read its Operator&#8217;s (Instruction) Manual carefully to have good understanding as to what functions are available and how to use it.
+</ptxt>
+</item>
+<item>
+<ptxt>
+For type A and type B OBD system, it is unable to distinguish which module, ECM or TCM, turns on MIL. (For details of on-board diagnostic system for A&#x002F;T model, refer to 
+<intxref refid = "S8T40A1130008">Precaution on On-Board Diagnostic (OBD) System:N32A</intxref>
+). Therefore, check both ECM and TCM for DTC when MIL turns on.
+</ptxt>
+</item>
+</list1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When checking ECM for DTC, keep in mind that DTC is displayed on the scan tool as follows depending on the scan tool.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+SUZUKI scan tool displays DTC detected by ECM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+CAN communication OBD generic scan tool displays DTC detected by both ECM and TCM simultaneously.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Priorities for diagnosing troubles
+</ptxt>
+<ptxt>
+If two or more DTCs are stored, proceed to the flow of the DTC which has detected earliest in the order and follow the instruction in that table.
+</ptxt>
+<ptxt>
+If no instructions are given, troubleshoot DTCs according to the following priorities.
+</ptxt>
+</item>
+<list2 type = "ordered">
+<item>
+<ptxt>
+DTCs other than DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306 (Misfire detected)
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306 (Misfire detected)
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Be sure to read 
+<intxref refid = "S8T40A0000007">Precaution for CAN Communication System</intxref>
+ before inspection and observe what is written there.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM Replacement
+</ptxt>
+<ptxt>
+When ECM is replaced with new one or substituted one, check for the following conditions. Neglecting this check may cause damage to ECM.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Resistance value of all relays and actuators are as specified respectively.
+</ptxt>
+</item>
+<item>
+<ptxt>
+APP sensor, TP sensor, CMP sensor, CKP sensor and A&#x002F;C refrigerant pressure sensor are in good condition and none of power circuits of these sensors is shorted to ground.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Communication of ECUs (included in ECM) is established by CAN (Controller Area Network).
+</ptxt>
+<ptxt>
+Therefore, handle CAN communication line with care. 
+<intxreftitleoff1 refid = "S8T40A0000007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+For details, refer to 
+<intxref refid = "S8T40AA821001">CAN Communication System Description:J24B and N32A Model</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Immobilizer transponder code registration after replacing ECM
+</ptxt>
+<ptxt>
+When ECM is replaced with new one or substituted one, make sure to register immobilizer transponder code. 
+<intxreftitleoff1 refid = "S8T40AA316003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

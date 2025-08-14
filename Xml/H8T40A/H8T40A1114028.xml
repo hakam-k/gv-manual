@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1114028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0117: Hűtőfolyadék hőmérséklete áramkörének feszültsége alacsony
+</title>
+<servinfosub id = "H8T40A1114028001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114027">DTC P0116: Hűtőfolyadék hőmérséklet áramkörének tartománya &#x002F; működése:M16A és J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1114028002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.110in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.090in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Az ECT-érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan alacsonyabb mint 0,2 V
+</ptxt>
+<ptxt>
+(Magas hűtőfolyadék-hőmérséklet(alacsony feszültség &#x002F; kis ellenállás))
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT-érzékelő áramkör
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECT-érzékelő
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1114028003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa el a motort és járassa legalább 10 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t és a feltételes DTC-t.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1114028004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd: 
+<intxref refid = "H8T40A1110003">DTC hibaelhárítással kapcsolatos óvintézkedések:M16A és J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H8T40A1114028005">
+<testgroup>
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő és áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a vizsgálókészüléken kijelzett hűtőfolyadék-hőmérsékletet.
+</ptxt>
+</test1>
+<question>
+A kijelzett érték 130 &#176;C (266 &#176;F)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Időszakos hiba.
+</ptxt>
+<ptxt>
+Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H8T40A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM feszültség ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECT-érzékelő csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECT-érzékelő megfelelő csatlakozását a &#8220;PPL&#x002F;YEL&#8221; és &#8220;GRY&#x002F;GRN&#8221; vezetékérintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Amennyiben rendben vannak, akkor bekapcsolt gyújtáskapcsolónál mérje meg a feszültséget az ECT-érzékelő csatlakozójának &#8220;PPL&#x002F;YEL&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110040.swf" width = "90.000mm" height = "33.220mm" ver = "01" gw = "109" gh = "77"/>
+</testfigure>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V körül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő rövidre zárt áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az ECT-érzékelő csatlakozó &#8220;PPL&#x002F;YEL&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+A &#8220;PPL&#x002F;YEL&#8221; vezeték rövidre zárt a testelő áramkör felé.
+</ptxt>
+<ptxt>
+Ha a vezeték rendben van, a meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő rövidre zárt áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg a feszültséget az ECT-érzékelő csatlakozó &#8220;PPL&#x002F;YEL&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V körül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+A &#8220;PPL&#x002F;YEL&#8221; vezeték rövidre zárt más áramkör felé.
+</ptxt>
+<ptxt>
+Ha a vezeték rendben van, a meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő működésének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECT-érzékelőt, lásd: 
+<intxref refid = "H8T40A1316009">Hűtőfolyadék-hőmérséklet-(ETC) érzékelő ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki az ECT-érzékelőt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

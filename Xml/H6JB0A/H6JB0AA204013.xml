@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0AA204013" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC U1073 (1073. sz.): Vezérlőmodul kommunikációs busza kikapcsolva
+</title>
+<servinfosub id = "H6JB0AA204013001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0AA204018">DTC U0155 (0155. sz.): Megszakadt kommunikáció a műszerfal (IPC) vezérlőmoduljával</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0AA204013002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.296in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.908in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Adatátviteli hiba, azaz nincs egyezés az átvitt adatok és az adatátviteli monitor (CAN adatbusz monitor) adatai között folyamatosan, hétnél több alkalommal.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN kommunikációs áramkör
+</ptxt>
+</item>
+<item>
+<ptxt>
+Műszeregység
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-vezérlőmodul (ha van)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS vagy ESP&#174; vezérlőmodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (A&#x002F;T-vel szerelt modell esetén)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kulcsnélküli indításvezérlő modul (ha van)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kományelfordulásiszög-érzékelő (ha van)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H6JB0AA204013003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa el a motort és járassa legalább 1 percig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "H6JB0AA204013004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0AA204013005">
+<testgroup>
+<title>
+Vezérlőmodul csatlakozójának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CAN útján kommunikáló összes vezérlőmodul csatlakozójának csatlakozását, és csatlakoztassa vissza őket.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze újra a DTC-t, és csatlakoztassa vissza a csatlakozókat.
+</ptxt>
+</test1>
+<question>
+Észlelte az U1073 DTC-t?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Időszakos hiba. Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H6JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Válassza le a CAN útján kommunikáló összes vezérlőmodul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört a vezérlőmodulok között szakadás, rövidzárlat és nagy ellenállás szempontjából.
+</ptxt>
+</test1>
+<question>
+Rendben vannak a CAN kommunikációs áramkörök?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa ki az áramkört.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés a BCM-ben
+</title>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Csatlakoztassa a CAN útján kommunikáló összes vezérlőmodul leválasztott csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kösse le a BCM-en kívül az összes vezérlőmodul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze újra, van-e DTC a BCM-ben.
+</ptxt>
+</test1>
+<question>
+Észlelte az U1073 DTC-t?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Kösse le egyenként azoknak a vezérlőmoduloknak a csatlakozóit, amelyek nem lettek lekötve a 3. lépésben, és ellenőrizze, minden lekötés alkalmával, hogy a BCM észlel-e U1073 DTC-t. Ha U1073 DTC-t nem észlel a BCM az ilyen ellenőrzés során, olvassa el a &#8220;NO&#8221; alatt leírtakat a következőkben. Ha még akkor is észlel U1073 DTC-t , ha a CAN kommunikációt felhasználó összes vezérlőmodul csatlakozója lekötésre került, a meglévő helyett tegyen be egy bizonyosan jó BCM-t, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ellenőrizze a 3. lépésben lekötött vezérlőmodulok táp- és testáramköreit. Ha az áramkörök rendben vannak, a mostani helyére szereljen be egy bizonyosan jó, a 3. lépésben eltávolított vezérlőmodult, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

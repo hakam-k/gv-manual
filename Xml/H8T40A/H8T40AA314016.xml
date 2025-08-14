@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40AA314016" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1636: Indításgátló információ-regisztrációs hiba
+</title>
+<ptxt>
+<intxrefpoff refid = "H8T40AA312001">Indításgátló vezérlőrendszer kapcsolási rajza:Benzinmotoros modell</intxrefpoff>
+</ptxt>
+<servinfosub id = "H8T40AA314016001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Észlelési körülmények
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az ECM kommunikációs hibát észlelt az ECM és a BCM között.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A CAN kommunikációs áramkör hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+A BCM hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS vezérlőmodul, vagy ESP&#174; vezérlőmodul hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM hibás
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40AA314016002">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40AA314016003">
+<testgroup>
+<title>
+Diagnosztikai hibakód (DTC) megerősítése
+</title>
+<test1>
+<ptxt>
+Törölje a DTC-(ke)t, lásd: 
+<intxref refid = "H8T40AA314003">DTC törlése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le, észlelt-e hibakódot az ECM, lásd: 
+<intxref refid = "H8T40AA314002">DTC ellenőrzése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a P1636 számú hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A diagnosztikai hibakód (DTC) lekérdezése az ECM-ben
+</title>
+<question>
+Észlelt más hibakódot az ECM a P1636 mellett az 1. lépésben?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Végezze el a hibaelhárítást, lásd a vonatkozó folyamat-táblázatot.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosztikai hibakód (DTC) lekérdezése a BCM-ben
+</title>
+<test1>
+<ptxt>
+Kérdezze le a BCM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H8T40AA204005">DTC ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Észlelt hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Végezze el a hibaelhárítást, lásd az 10B fejezetben található vonatkozó folyamat-táblázatot.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+BCM cseréje
+</title>
+<test1>
+<ptxt>
+Cserélje ki a BCM-et új BCM-re, lásd: 
+<intxref refid = "H8T40AA206001">BCM leszerelése és felszerelése</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le az ECM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H8T40AA314002">DTC ellenőrzése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a P1636 számú hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM cseréje
+</title>
+<test1>
+<ptxt>
+Cserélje ki az ECM-et egy újra.
+</ptxt>
+<ptxt>
+- M16A és J20A modellek: 
+<intxreftitleoff1 refid = "H8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B modell: 
+<intxreftitleoff1 refid = "H8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A modell: 
+<intxreftitleoff1 refid = "H8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le az ECM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H8T40AA314002">DTC ellenőrzése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a P1636 számú hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Újból ellenőrizze a CAN kommunikációs áramkört és hogy vannak-e rossz csatlakozások az ECM, ABS vezérlőmodul és BCM csatlakozóinál.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

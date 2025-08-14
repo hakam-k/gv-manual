@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B1104019" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0102 &#x002F; P0103: Mass Air Flow Circuit Low &#x002F; High Input
+</title>
+<servinfosub id = "S6JB0B1104019001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B1104018">DTC P0101: Mass Air Flow Circuit Range &#x002F; Performance</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1104019002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.420in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.788in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0102: Mass Air Flow Circuit Low Input
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of MAF sensor is less than 0.3 V for 1 second or longer.
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+MAF sensor and its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0103: Mass Air Flow Circuit High Input
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of MAF sensor is more than 0.5 V for 1 second or longer.
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B1104019003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC by using scan tool if any.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and run it for 10 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC by using scan tool.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B1104019004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0B1104019005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+MAF sensor and its circuit check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Start engine and check MAF value displayed on scan tool. (Refer to 
+<intxref refid = "S6JB0B1104010">Scan Tool Data</intxref>
+ for normal value.)
+</ptxt>
+</test1>
+<question>
+Is normal value indicated?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble. Check for intermittent referring to 
+<intxref refid = "S6JB0B0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+MAF sensor power supply voltage check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from MAF sensor with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to MAF sensor and ECM connectors
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, turn ignition switch to ON position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that MAF sensor power supply voltage is battery voltage.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I6JB01110028.swf" width = "90.000mm" height = "49.745mm" ver = "01" gw = "155" gh = "124"/>
+</testfigure>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace MAF sensor power supply circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire harness check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that MAF sensor circuit is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of each MAF sensor signal circuit and ground circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between MAF sensor signal circuit and vehicle body ground is Infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between MAF sensor signal terminal and each other terminal at MAF and IAT sensor connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of each MAF sensor signal circuit and ground circuit is 0 &#8211; 1 V with ignition switch turned ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+MAF sensor signal check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connect connectors to MAF sensor and ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check MAF sensor signal voltage referring to 
+<intxref refid = "S6JB0B1306002">Mass Air Flow (MAF) and Intake Air Temperature (IAT) Sensor On-Vehicle Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is each value within specified range?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace MAF and IAT sensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA324023" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1706: Antennefout in de startblokkering
+</title>
+<servinfosub id = "U8T40AA324023001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA322001">Bedradingsschakelschema van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA324023002">
+<title>
+Waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Startblokkeringsantenne defect
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ICM defect
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40AA324023003">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40AA324023004">
+<testgroup>
+<question>
+Is &#34;Controle van het regelsysteem van de startblokkering&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA324001">Controle van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de ICM
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de ICM volgens 
+<intxref refid = "U8T40AA324018">Onderzoek van het regelapparaat van het startblokkeersysteem (ICM) en het bijbehorende circuit:Model met dieselmotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn het voedings- en massacircuit van de ICM in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ICM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en massacircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

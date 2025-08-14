@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0601 &#x002F; P0602 &#x002F; P0607: Errore checksum memoria del modulo di controllo interno &#x002F; errore programmazione modulo di controllo &#x002F; rendimento modulo di controllo
+</title>
+<servinfosub id = "L8T40A1114055001">
+<title>
+Descrizione del sistema
+</title>
+<ptxt>
+Il modulo di controllo interno e installato in ECM.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1114055002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.685in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.512in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+DTC P0601:
+</emph>
+</ptxt>
+<ptxt>
+Errore nella trascrizione dei dati o errore nella somma di verifica
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 1)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+DTC P0602:
+</emph>
+</ptxt>
+<ptxt>
+Errore nella programmazione dei dati
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 1)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+DTC P0607:
+</emph>
+</ptxt>
+<ptxt>
+Errore nella programmazione dei dati
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 1)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1114055003">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare la chiavetta di accensione in posizione ON ed eliminare DTC, DTC in corso e dati presenti al momento, usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Se possibile, avviare il motore e azionarlo al minimo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllare DTC e DTC in corso usando lo scanner.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1114055004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<attention3>
+<ptxt>
+Prima di eseguire questa procedura di individuazione guasto, leggere le precauzioni per l&#8217;individuazione DTC facendo riferimento a 
+<intxref refid = "L8T40A1110003">Precauzione per la risoluzione dei problemi DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "L8T40A1114055005">
+<testgroup id = "L8T40A1114055006">
+<title>
+Ricontrollare il DTC
+</title>
+<test1>
+<ptxt>
+Eliminare il DTC facendo riferimento a 
+<intxref refid = "L8T40A1114004">Spazio libero DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Girare il commutatore di accensione nella posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e controllare il DTC.
+</ptxt>
+</test1>
+<question>
+I DTC P0601 o P0607 sono ancora indicati?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Guasto intermittente.
+</ptxt>
+<ptxt>
+Controllare intermittenze facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114055007">
+<title>
+Controllo dei circuiti di alimentazione e massa dell&apos;ECM
+</title>
+<test1>
+<ptxt>
+Controllare che il circuito di alimentazione ECM e circuito di massa CM siano in buone condizioni facendo riferimento a 
+<intxref refid = "L8T40A1114081">Controllo energia ECM e circuito di massa:M16A e J20A</intxref>
+</ptxt>
+</test1>
+<question>
+I risultati del controllo sono positivi?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare i circuiti di alimentazione o massa ECM.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

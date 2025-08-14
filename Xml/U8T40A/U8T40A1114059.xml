@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114059" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0625 &#x002F; P0626: Lage &#x002F; hoge spanning in circuit van dynamoveldaansluiting
+</title>
+<servinfosub id = "U8T40A1114059001">
+<title>
+Systeem- en bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1114058">DTC P0620: Regelcircuit van dynamo:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114059002">
+<title>
+Beschrijving van het dynamoregelsysteem
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1111009">Beschrijving van het dynamoregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114059003">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.116in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.086in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0625:
+</emph>
+</ptxt>
+<ptxt>
+De arbeid van de dynamoveldspoel is langer dan de voorgeschreven tijd 100 &#x0025; (lage spanning) hoewel de dynamoregeling maximaal is (regelarbeid) 100 &#x0025;) of de arbeid van de dynamoveldspoel is 100 &#x0025; (lage spanning) wanneer de motor wordt gestart.
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0626:
+</emph>
+</ptxt>
+<ptxt>
+De arbeid van de dynamoveldspoel is langer dan de voorgeschreven tijd 0 &#x0025; (hoge spanning) hoewel de dynamoregeling minimaal is (regelarbeid 0 &#x0025;).
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dynamo en&#x002F;of bijbehorend circuit
+</ptxt>
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1114059004">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer of alle accessoireschakelaars zijn uitgeschakeld.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start de motor en laat hem op de normale bedrijfstemperatuur komen (ECT ong. 90 - 95 &#176;C, 193 - 203 &#176;F).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Schakel de volgende accessoireschakelaar AAN.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Koplampschakelaar.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schakelaar van aanjagermotor (max. positie).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Schakelaar van achterruitverwarming
+</ptxt>
+</item>
+</list1>
+</s1>
+<s1>
+<ptxt>
+Verhoog het motortoerental tot 4000 omw&#x002F;min en houd het zo gedurende 10 sec of langer.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Verlaag het motortoerental tot stationair toerental.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer op DTC&apos;s en voorlopige DTC&apos;s.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1114059005">
+<title>
+DTC-storingzoeken
+</title>
+<attention3>
+<ptxt>
+Lees de voorzorgsmaatregelen voor DTC-storingzoeken zoals beschreven in 
+<intxref refid = "U8T40A1110003">Voorzorgsmaatregelen bij DTC-storingzoeken:M16A and J20A</intxref>
+ alvorens deze procedure te volgen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "U8T40A1114059006">
+<testgroup id = "U8T40A1114059007">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114059008">
+<title>
+Controle van dynamoregelcircuit
+</title>
+<test1>
+<ptxt>
+Maak de stekkerverbindingen van de dynamo en de ECM los met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de draadaansluiting goed is verbonden met de stekkerverbindingen van de dynamo en de ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien de verbindingen in orde zijn, controleer dan het dynamoregelcircuit (aansluiting &#34;C&#34; van de dynamo) en het veldspoelregelcircuit (&#34;FR&#34;-aansluiting van dynamo) op het volgende.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De weerstand van elke dynamoregeldraad en veldspoelcontroledraad tussen de stekkerverbinding van de dynamo en de stekkerverbinding van de ECM is lager dan 1 &#937; (continuïteitscontrole)
+</ptxt>
+</item>
+<item>
+<ptxt>
+De weerstand tussen de dynamoregeldraad en de veldspoelcontroledraad van de stekkerverbinding van de dynamo is oneindig (controle van isolatie)
+</ptxt>
+</item>
+<item>
+<ptxt>
+De weerstand tussen elke dynamoregeldraad en veldspoelcontroledraad van de dynamostekkerverbinding en de carrosseriemassa is oneindig (controle op kortsluiting met massacircuit)
+</ptxt>
+</item>
+<item>
+<ptxt>
+De spanning tussen elke dynamoregeldraad en veldspoelcontroledraad van de dynamostekkerverbinding en de carrosseriemassa is 0 V met het contactslot op ON (controle op kortsluiting met voedingscircuit)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte draad.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114059009">
+<title>
+Controle van dynamo
+</title>
+<test1>
+<ptxt>
+Controleer dynamo-uitgang zoals beschreven in 
+<intxref refid = "U8T40A1A14003">Dynamo testen (gebrekkige acculading controleren):M16A and J20A</intxref>
+ en 
+<intxref refid = "U8T40A1A16009">Onderzoek van dynamo:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de dynamo.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0BA304001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Immobilizer Control System Check
+</title>
+<diag type = "test" id = "S5JB0BA304001001">
+<testgroup>
+<title>
+Injection warning light ON check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to ON position.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0BA30002.swf" width = "90.000mm" height = "55.742mm" ver = "02" gw = "195" gh = "141"/>
+</testfigure>
+</test1>
+<question>
+Does injection warning light (1) come on?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S5JB0BA304006">Injection Warning Light Does Not Come ON with Ignition Switch ON and Engine Stop</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Injection warning light flash check
+</title>
+<question>
+Does injection warning light flash on and off continuously in Step 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM communication check
+</title>
+<test1>
+<ptxt>
+Connect SUZUKI scan tool with turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check ICM for DTC referring to 
+<intxref refid = "S5JB0BA304002">Diagnostic Trouble Code (DTC) Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is communication between ICM and SUZUKI scan tool available?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM connector terminal voltage check
+</title>
+<test1>
+<ptxt>
+Check the following terminal voltage on ICM connector referring to 
+<intxref refid = "S5JB0BA304018">Inspection of Immobilizer Control Module (ICM) and Its Circuit</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Power circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ground circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Serial communication line of data link connector
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is each terminal voltage normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ICM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Injection warning light remain ON check
+</title>
+<test1>
+<ptxt>
+Check if injection warning light remains ON after engine start.
+</ptxt>
+</test1>
+<question>
+Does injection warning light remain ON after engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S5JB0BA304007">Injection Warning Light Remains ON after Engine Start</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Immobilizer control system is in good condition.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

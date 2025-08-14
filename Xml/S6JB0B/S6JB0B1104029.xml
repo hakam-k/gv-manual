@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B1104029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0140: O2 Sensor Circuit No Activity Detected (Sensor-2, Bank-1)
+</title>
+<servinfosub id = "S6JB0B1104029001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B1104028">DTC P0137 &#x002F; P0138: O2 Sensor Circuit Low Voltage &#x002F; High Voltage (Sensor-2, Bank-1)</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1104029002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.257in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.948in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Circuit voltage of HO2S (bank-1) is within 0.27 V &#8211; 0.35 V for more than 120 sec. continuously while A&#x002F;F (fuel trim) is shifted rich to lean and lean to rich with specified diagnosis frequency under specified running, or circuit voltage of HO2S (bank-1) is out of specified range (0.2 V &#8211; 0.45 V) while engine is running with warmed it up from cold start (ECT is less than 40 &#176;C).
+</ptxt>
+<ptxt>
+(2 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S sensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+HO2S
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When performing a road test, select a place where there is no traffic or possibility of a traffic accident and be very careful during testing to avoid occurrence of an accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Road test should be carried out by 2 persons, a driver and a tester, on a level road.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Check to make sure that following conditions are satisfied when using this &#8220;DTC Confirmation Procedure&#8221;.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Engine coolant temperature: 70 &#176;C (158 &#176;F) or more.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Engine coolant temperature at engine start: &#8211;10 &#176;C (14 &#176;F) or more.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Intake air temperature: &#8211;10 &#176;C (14 &#176;F) or more.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Atmospheric pressure: higher than 75 kPa (560 mmHg) (Altitude: lower than 2790 m (9150 ft)).
+</ptxt>
+</item>
+<item>
+<ptxt>
+The following DTCs are not detected: MAF sensor, ECT sensor, IAT sensor, Fuel system, A&#x002F;F sensor, TP sensor, HO2S sensor heater and HO2S sensor (other than DTC P0140).
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Drive vehicle at 40 mph (60 km&#x002F;h) or higher. (engine speed: 2500 &#8211; 3000 r&#x002F;min.)
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep above vehicle speed for 4 min. or more. (Throttle valve opening is kept constant in this step.)
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check if DTC and pending DTC exist by using scan tool. If not, check if oxygen sensor monitoring test has been completed by using scan tool. If not in both of above checks (i.e., no DTC and pending DTC and oxygen sensor monitoring test not completed), check vehicle condition (environmental) and repeat Step 3) through 6).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B1104029003">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S6JB0B1100003">Precautions for DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S6JB0B1104029004">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+HO2S signal check
+</title>
+<test1>
+<ptxt>
+Connect scan tool with ignition switch turned OFF
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Warm up engine to normal operating temperature and keep it at 2000 r&#x002F;min. for 60 sec.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Repeat racing engine (Repeat depressing accelerator pedal 5 to 6 times continuously to enrich A&#x002F;F mixture and take foot off from pedal to enlean it).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for HO2S (bank-1) output voltage displayed on scan tool.
+</ptxt>
+</test1>
+<question>
+Does HO2S output voltage between 0.5 V and 0.8 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Intermittent trouble.
+</ptxt>
+<ptxt>
+Check for intermittent referring to 
+<intxref refid = "S6JB0B0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+HO2S circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from HO2S (bank-1) and ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to HO2S (bank-1) connector and ECM connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that HO2S (bank-1) circuit is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of each &#8220;Signal circuit of HO2S (bank-1)&#8221;, &#8220;Ground circuit of HO2S (bank-1)&#8221; and &#8220;Control circuit of HO2S (bank-1) heater&#8221; is less than 1 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between &#8220;Signal circuit of HO2S (bank-1)&#8221; and vehicle body ground is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between &#8220;Signal circuit of HO2S (bank-1)&#8221; terminal and each other terminal at HO2S (bank-1) connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage between &#8220;Signal circuit of HO2S (bank-1)&#8221; and vehicle body ground is 0 V with ignition switch turned ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+repair or replace defective wiring harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+HO2S heater check
+</title>
+<test1>
+<ptxt>
+Check heater resistance of HO2S (bank-1) referring to 
+<intxref refid = "S6JB0B1306014">Heated Oxygen Sensor (HO2S-2) Heater On-Vehicle Inspection (If Equipped)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is HO2S heater in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck. If ECM OK, replace HO2S (bank-1).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace HO2S (bank-1).
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

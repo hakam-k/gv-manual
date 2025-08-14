@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA324001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Controle van het regelsysteem van de startblokkering
+</title>
+<diag type = "test" id = "U8T40AA324001001">
+<testgroup>
+<title>
+Controle of het inspuitingswaarschuwingslampje brandt
+</title>
+<test1>
+<ptxt>
+Zet het contactslot met de contactsleutel op ON.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I8T40AA33002.swf" width = "90.000mm" height = "53.625mm" ver = "01" gw = "216" gh = "135"/>
+</testfigure>
+</test1>
+<question>
+Gaat het inspuitingswaarschuwingslampje (1) branden?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA324006">Het inspuitingswaarschuwingslampje gaat niet branden met het contactslot op ON en de motor uit.:Model met dieselmotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het knippersignaal van het inspuitingswaarschuwingslampje
+</title>
+<question>
+Knippert het inspuitingswaarschuwingslampje voortdurend in stap 1?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Controleer de ICM op DTC&apos;s volgens 
+<intxref refid = "U8T40AA324002">DTC-controle:Model met dieselmotor</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het starten van de motor
+</title>
+<test1>
+<ptxt>
+Start de motor met de contactsleutel.
+</ptxt>
+</test1>
+<question>
+Start de motor?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1144004">Controle van het motor- en emissieregelsysteem:F9Q</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle of het inspuitingswaarschuwingslampje blijft branden
+</title>
+<test1>
+<ptxt>
+Controleer of het inspuitingswaarschuwingslampje blijft branden na het starten van de motor.
+</ptxt>
+</test1>
+<question>
+Blijft het inspuitingswaarschuwingslampje branden na het starten van de motor?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA324007">Het inspuitingswaarschuwingslampje blijft branden na het starten van de motor:Model met dieselmotor</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Het regelsysteem van de startblokkering is in orde.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

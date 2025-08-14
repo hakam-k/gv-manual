@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0E8204039" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1334 &#x002F; B1338: Left &#x002F; Right Side Curtain-Air Bag Initiator Circuit Short to Power Circuit
+</title>
+<servinfosub id = "S5JB0E8204039001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0E8204036">DTC B1331 &#x002F; B1335: Left &#x002F; Right Side Curtain-Air Bag Initiator Circuit Resistance High</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Be sure to observe instructions under CAUTION in &#8220;Air Bag Diagnostic System Check Flow&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "S5JB0E8204039002">
+<title>
+DTC Will Set when
+</title>
+<ptxt>
+The voltage measured at side curtain-air bag (left or right) initiator circuit is above a specified value for specified time.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0E8204039003">
+<title>
+Flow Test Description
+</title>
+<ptxt>
+<emph etype = "bold">
+Step 1: Check whether malfunction is in side curtain-air bag (inflator) module.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 2: Check side curtain-air bag initiator circuit.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0E8204039004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S5JB0E8204039005">
+<testgroup>
+<test1>
+<ptxt>
+With ignition switch OFF, remove rear side upper trim of left or right side and disconnect side curtain-air bag (inflator) module connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check proper connection to side curtain-air bag (inflator) module at terminals in &#8220;G18&#8221; or &#8220;G41&#8221; connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, then connect special tools (A), (B) and (C) to side curtain-air bag (inflator) module connector.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0179">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0180">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0181">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820057.swf" width = "90.000mm" height = "53.625mm" ver = "01" gw = "124" gh = "135"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Check SDM DTC.
+</ptxt>
+</test1>
+<question>
+With ignition switch ON, is DTC B1334 or B1338 still indicated?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Replace side curtain-air bag (inflator) module referring to 
+<intxref refid = "S5JB0E8206011">Side Curtain-Air Bag (Inflator) Module Removal and Installation</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+With ignition switch OFF, disconnect SDM connector &#8220;L32&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Release shorting bar in SDM connector inserting release tool (1) included in special tool (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between &#8220;L32-1&#8221; and body ground, and between &#8220;L32-2&#8221; and ground (for DTC B1334) or &#8220;L32-3&#8221; and body ground, and between &#8220;L32-4&#8221; and body ground (for DTC B1338) with connected special tools (A), (B) and (C).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0182">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0183">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0184">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820060.swf" width = "90.000mm" height = "55.742mm" ver = "01" gw = "229" gh = "141"/>
+</testfigure>
+</test1>
+<question>
+With ignition switch ON, is voltage 4 V or less?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good SDM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1034: Repair short from &#8220;YEL&#x002F;GRN&#8221; or &#8220;YEL&#x002F;BLU&#8221; wire circuit to power circuit.
+</ptxt>
+<ptxt>
+DTC B1038: Repair short from &#8220;BLK&#x002F;YEL&#8221; or &#8220;BRN&#x002F;YEL&#8221; wire circuit to power circuit.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Upon completion of inspection and repair work, perform the following items.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Reconnect all air bag system components, ensure all components are properly mounted.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Clear DTCs referring to 
+<intxref refid = "S5JB0E8204005">DTC Clearance</intxref>
+, if any.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repeat 
+<intxref refid = "S5JB0E8204001">Air Bag Diagnostic System Check</intxref>
+ to confirm that the trouble has been corrected.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A5124054" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Controle van het circuit van het &#34;POWER&#34;-lampje - Lampje gaat niet branden wanneer het contactslot op ON wordt gezet
+</title>
+<servinfosub id = "U8T40A5124054001">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "S9T4015114024002">
+<testgroup>
+<title>
+Controle van de combimetervoeding
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Gaan de andere controle-&#x002F;waarschuwingslampjes in de combimeter branden?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedingscircuit van de combimeter volgens 
+<intxref refid = "U8T40A9302001">Schakelschema combimeter</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de TCM volgens 
+<intxref refid = "U8T40A5124049">Controle van het TCM-voedings- en -massacircuit:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is het in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Lees de DTC&apos;s af volgens 
+<intxref refid = "U8T40A5124004">DTC-controle:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wordt DTC U0073 weergegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A5124045">DTC U0073: Communicatiebus van regelapparaat uitgeschakeld:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de werking van de combimeter
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Geeft de A&#x002F;T-keuzehendelstandindicator in het informatiedisplay de juiste hendelstand weer?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Vervang de combimeter.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden TCM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

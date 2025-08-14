@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A5114028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0713: Hoge spanning in het circuit van de transmissievloeistoftemperatuursensor &#34;A&#34;
+</title>
+<servinfosub id = "U8T40A5114028001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A5114027">DTC P0712: Lage spanning in het circuit van de transmissievloeistoftemperatuursensor &#34;A&#34;:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A5114028002">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.067in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.099in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+De spanning bij de aansluiting van de transmissievloeistoftemperatuursensor is lager dan 4,89 V onder de volgende voertuigomstandigheden.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Het contactslot wordt 1 minuut of langer aangezet.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Transmissievloeistoftemperatuursensor of bijbehorend circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A5114028003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Wis de DTC&apos;s in het TCM- en ECM-geheugen met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start de motor.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laat de motor minstens 1 minuut stationair draaien.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 3) t&#x002F;m 5) eenmaal.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer de DTC, voorlopige DTC en freeze-framegegevens.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A5114028004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A5114028005">
+<testgroup>
+<question>
+Werd de &#34;A&#x002F;T-systeemcontrole&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A5114001">Controle van het A&#x002F;T-systeem:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controleer of het circuit van de transmissievloeistoftemperatuursensor onderbroken is
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de TCM-stekkers los van de TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de aansluitingen &#34;E92-11&#34; en &#34;E92-12&#34; op een goede verbinding met de transmissievloeistoftemperatuursensor.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de continuïteit tussen aansluiting &#34;E92-11&#34; en &#34;E92-12&#34; van de losgemaakte TCM-stekker aan bedradingsbundelzijde.
+</ptxt>
+</test1>
+<question>
+Wordt er continuïteit aangegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Het circuit van de transmissievloeistoftemperatuursensor is onderbroken.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controleer het circuit van de transmissievloeistoftemperatuursensor op kortsluiting aan de voeding
+</title>
+<test1>
+<ptxt>
+Koel de A&#x002F;T-vloeistoftemperatuur af tot onder de omgevingstemperatuur.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sluit de TCM-stekkers aan op de TCM met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de spanning tussen aansluiting &#34;E92-11&#34; van de TCM-stekker en de massa.
+</ptxt>
+</test1>
+<question>
+Is de spanning 4,89 V of meer?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Het circuit van de transmissievloeistoftemperatuursensor is kortgesloten aan het voedingscircuit. Ga naar stap 4 als het circuit in orde is.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sporadische storing of defect in TCM. Controleer op sporadische storingen volgens 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+. Indien OK, sluit dan een goed bevonden TCM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controleer de transmissievloeistoftemperatuursensor
+</title>
+<test1>
+<ptxt>
+Controleer de transmissievloeistoftemperatuursensor volgens 
+<intxref refid = "U8T40A5116024">Onderzoek van de transmissievloeistoftemperatuursensor:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sporadische storing of defect in TCM. Controleer op sporadische storingen volgens 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+. Indien OK, sluit dan een goed bevonden TCM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de solenoïdebedradingsbundel inclusief de transmissievloeistoftemperatuursensor volgens 
+<intxref refid = "U8T40A5116023">Uitbouw en inbouw van de transmissievloeistoftemperatuursensor:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

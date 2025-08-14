@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0A4604034" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1090: Az ECM körbefordulás számlálási hibát észlel az ESP&#174; vezérlőmodulból
+</title>
+<servinfosub id = "H6JB0A4604034001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az ESP&#174;-vezérlőmodul körbefordulás számlálási hibáját az ECM észlelte.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN kommunikációs áramkör
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174; vezérlőmodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H6JB0A4604034002">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0A4604034003">
+<testgroup>
+<question>
+Elvégezte az &#8220;elektronikus menetstabilizáló program ellenőrzését&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A4604001">Elektronikus menetstabilizáló program ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC-ellenőrzés az ESP&#174;-ben
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe és ellenőrizze a DTC-t ESP&#174; esetén.
+</ptxt>
+</test1>
+<question>
+Található a C1038-on és a C1090-en kívül más DTC is?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a vonatkozó DTC diagnosztikai folyamat táblázatra.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a DTC-t az ECM-ben
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t az ECM-ben.
+</ptxt>
+</test1>
+<question>
+Észlelt U0073 és&#x002F;vagy U0121 DTC-t?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a vonatkozó DTC diagnosztikai folyamat táblázatra.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ESP&#174;-hidraulikaegységet &#x002F; vezérlőmodul egységet, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

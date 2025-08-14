@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40AA314001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Controllo del sistema di controllo dell&apos;immobilizzatore
+</title>
+<diag type = "test" id = "L8T40AA314001001">
+<testgroup>
+<title>
+La spia dell&apos;immobilizzatore si accende (ON):
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione sulla posizione ON usando la chiave di accensione.
+</ptxt>
+</test1>
+<question>
+La spia dell&apos;immobilizzatore si accende?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40AA314006">La spia dell&apos;immobilizzatore non si accende con l&apos;interruttore di accensione nella posizione ON e il motore spento.:Modello con motore a benzina</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo DTC
+</title>
+<test1>
+<ptxt>
+Controllare il modulo ECM per la presenza di DTC facendo riferimento a 
+<intxref refid = "L8T40AA314002">Controllo DTC:Modello con motore a benzina</intxref>
+</ptxt>
+</test1>
+<question>
+Viene rilevato DTC P1636 o P1638?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare alla tabella del diagramma di flusso diagnostico applicabile.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo lampeggiamento spia dell&apos;immobilizzatore
+</title>
+<question>
+Al punto 1 la spia dell&apos;immobilizzatore lampeggia accendendosi e spegnendosi continuamente?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Controllare quale DTC è stato rilevato dall&apos;ECM facendo riferimento a 
+<intxref refid = "L8T40AA314002">Controllo DTC:Modello con motore a benzina</intxref>
+. Poi, eseguire la procedura di risoluzione dei problemi facendo riferimento alla corrispondente tabella di flusso in questa sezione.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo avviamento motore
+</title>
+<test1>
+<ptxt>
+Avviare il motore usando la chiave di accensione.
+</ptxt>
+</test1>
+<question>
+Il motore si avvia?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Eseguire il controllo del motore e delle emissioni.
+</ptxt>
+<ptxt>
+- Modelli M16A e J20A: Vedere 
+<intxreftitleoff1 refid = "L8T40A1114001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- modello J24B: Vedere 
+<intxreftitleoff1 refid = "L8T40A1124001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modello N32A: Vedere 
+<intxreftitleoff1 refid = "L8T40A1134001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo se la spia dell&apos;immobilizzatore rimane accesa
+</title>
+<test1>
+<ptxt>
+Controllare se la spia dell&apos;immobilizzatore rimane accesa dopo l&apos;avvio del motore.
+</ptxt>
+</test1>
+<question>
+La spia dell&apos;immobilizzatore rimane accesa dopo l&apos;avvio del motore?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40AA314007">La spia dell&apos;immobilizzatore rimane accesa dopo l&apos;avvio del motore.:Modello con motore a benzina</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il sistema di controllo immobilizzatore e in buone condizioni. Allora andare a 
+<intxref refid = "L8T40AA504003">Controllo del sistema di avvio senza chiave</intxref>
+ per il veicolo con il sistema di avviamento senza chiave.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

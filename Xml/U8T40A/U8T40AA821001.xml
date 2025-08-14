@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "U8T40AA821001" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Beschrijving CAN-communicatiesysteem
+</title>
+<servinfosub id = "U8T40AA821001001">
+<title>
+Beschrijving van het systeem
+</title>
+<ptxt>
+De ECM, de TCM (A&#x002F;T-model), het ABS&#x002F;ESP&#174;-regelapparaat, de BCM, de combimeter, het 4WD-regelapparaat (4WD-model van het motorgeschakelde type), het HVAC-regelapparaat, het regelapparaat van het startsysteem met afstandsbediening (model met startsysteem met afstandsbediening) en de stuurhoeksensor (ESP&#174;-model) van dit voertuig wisselen regelgegevens uit tussen elk regelapparaat.
+</ptxt>
+<ptxt>
+De communicatie tussen de regelapparaten gebeurt via het CAN-communicatiesysteem (Controller Area Network). Het CAN-communicatiesysteem gebruikt seriële communicatie waarbij gegevens op hoge snelheid worden overgedragen. Het gebruikt een verdraaid paar van twee gegevenstransmissielijnen (CAN Hoog &#x002F; CAN Laag) voor de gegevensoverdracht met hoge snelheid. Een van de eigenschappen is dat meerdere regelapparaten tegelijkertijd kunnen communiceren. Bovendien kunnen communicatiefouten automatisch gedetecteerd worden. Elke module leest de benodigde gegevens van de ontvangen gegevens en verzendt gegevens.
+</ptxt>
+<ptxt>
+Het systeem is dusdanig opgesteld dat andere regelapparaten &#x002F; sensoren op de CAN-hoofdbus (CAN-hoofdcircuit) tussen de ECM en de combimeter worden aangesloten (vastgehaakt). De ECM en de combimeter hebben een ingebouwde eindweerstand om de hele CAN-bus (CAN-circuit) te stabiliseren. Als een van de modules wordt losgemaakt of als er sprake is van een abnormale toestand (onderbroken of kortgesloten CAN-circuit), wordt de hele CAN-bus onstabiel. Dat leidt tot CAN-communicatiestoringen tussen de regelapparaten.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA821001002">
+<title>
+Blokschema van het systeem
+</title>
+<figure>
+<graphic graphicname = "I8T40AA82001.swf" width = "183.000mm" height = "64.914mm" ver = "02" gw = "460" gh = "167"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.654in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.953in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.315in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.654in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN-gegevenstransmissielijn
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+HVAC-regelapparaat
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Diagnose van de K-leidingcommunicatie
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Stuurhoeksensor (ESP&#174;-model)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+SUZUKI-uitleesapparaat (SUZUKI-SDT)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;C&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Diagnose van de CAN-communicatie
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Combimeter
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+12.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN-zendontvanger
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Regelapparaat van het startsysteem met afstandsbediening (model met startsysteem met afstandsbediening)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+13.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN-eindweerstand
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+ABS &#x002F; ESP&#174;-regelapparaat
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+8.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+TCM (A&#x002F;T-model)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+9.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+4WD-regelapparaat (4WD-model van het motorgeschakelde type)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "U8T40AA821001003">
+<title>
+Communicatie met het uitleesapparaat
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De K-leiding of de CAN-lijn wordt gebruikt voor communicatie tussen de regelapparaten en het uitleesapparaat.
+</ptxt>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA821001005">Communicatiediagnosetabel</intxref>
+ om te bepalen welke lijn wordt gebruikt voor de communicatie tussen de regelapparaten en het uitleesapparaat.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De ECM, de TCM (A&#x002F;T-model), het ABS &#x002F; ESP&#174;-regelapparaat, de BCM en het HVAC-regelapparaat communiceren via de CAN-lijn met het uitleesapparaat. Zelfs als de CAN-lijn storingen bevat die zich niet tussen de DLC en de BCM bevinden, kan de communicatie tussen het uitleesapparaat en deze regelapparaten toch mislukken.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Het 4WD-regelapparaat (4WD-model van het motorgeschakelde type) gebruikt de K-lijn voor communicatie met het uitleesapparaat. Zelfs als er een storing is aan de CAN-lijn, is communicatie tussen het uitleesapparaat en dit regelapparaat mogelijk.
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "U8T40AA821001004">
+<title>
+Buscontrolefunctie van het SUZUKI-uitleesapparaat (SUZUKI-SDT)
+</title>
+<ptxt>
+Het SUZUKI-uitleesapparaat (SUZUKI-SDT) onderzoekt op een efficiënte manier een storing van de CAN-bus door middel van de &#34;Communicatiebuscontr&#34; en &#34;Comm.storing-DTC&#34; onder &#34;Buscontrole&#34;.
+</ptxt>
+<ptxt>
+De &#34;Communicatiebuscontr&#34; kan de namen van alle regelapparaten &#x002F; sensoren weergeven die door het CAN worden doorgegeven.
+</ptxt>
+<ptxt>
+&#34;Comm.storing-DTC&#34; kan daarnaast alleen maar DTC&apos;s weergeven die betrekking hebben op CAN. Die worden waargenomen door de regelapparaten die via de CAN-gegevenstransmissielijn met het uitleesapparaat communiceren.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA821001005">
+<title>
+Communicatiediagnosetabel
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.150in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.378in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.319in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.378in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Regelapparaat &#x002F; sensor
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Communicatie met het uitleesapparaat
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beeldscherm van de CAN-DTC
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Controle van de buswerking
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Combimeter
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Niet beschikbaar
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Niet beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Stuurhoeksensor (ESP&#174;-model)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Niet beschikbaar
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Niet beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+ABS &#x002F; ESP&#174;-regelapparaat
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+HVAC-regelapparaat
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+TCM (A&#x002F;T-model)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CAN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+4WD-regelapparaat (4WD-model van het motorgeschakelde type)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+K-leiding
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Regelapparaat van het startsysteem met afstandsbediening (model met startsysteem met afstandsbediening)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Niet beschikbaar
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beschikbaar
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CAN-aftakstekker
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40AA821001006">
+<title>
+CAN-communicatiesignaal
+</title>
+<ptxt>
+Het CAN-communicatiesysteem is een serieel systeem om via de gegevenstransmissielijn meerdere gegevens (sensorwaarden, regelgegevens en regelsignalen)  door te geven als digitale AAN-UIT-signalen. Dit systeem gebruikt twee gegevenstransmissielijnen (CAN Hoog en CAN Laag) voor het communicatiecircuit om een hoge betrouwbaarheid te garanderen, zelfs bij seriële communicatie met een hoge snelheid. 
+</ptxt>
+<ptxt>
+De seriële communicatie vindt plaats zoals hieronder weergegeven, met 2,5 V als referentieniveau voor zowel het CAN Hoog-signaal (1) als het CAN Laag-signaal (2). Het bereik van het CAN Hoog-signaal ligt tussen 2,5 V en ongeveer 3,5 V en dat van het CAN Laag-signaal tussen 2,5 V en ongeveer 1,5 V. Wanneer beide signalen 2,5 V bedragen, wordt het signaal als UIT-signaal beschouwd en wanneer het CAN Hoog-signaal 3,5 V bedraagt en het CAN Laag-signaal 1,5 V (dit is het geval wanneer het spanningsverschil tussen Hoog en Laag groter is dan ongeveer 2 V), wordt het signaal beschouwd als een AAN-signaal. Daarom is het kenmerkend voor het CAN-communicatiesignaal dat de golfvorm van het signaal symmetrisch is tussen CAN Hoog- en CAN Laag-signalen ten opzichte van het 2,5 V-niveau. De CAN-communicatie mislukt wanneer de vorm van dit signaal uit balans geraakt.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81002D.swf" width = "183.000mm" height = "47.981mm" ver = "01" gw = "338" gh = "119"/>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

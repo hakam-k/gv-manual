@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40AA314001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Έλεγχος Συστήματος Ελέγχου Ακινητοποίησης Κινητήρα (Immobilizer)
+</title>
+<diag type = "test" id = "K8T40AA314001001">
+<testgroup>
+<title>
+Έλεγχος ενεργοποίησης ενδεικτικής λυχνίας Immobilizer
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση ON χρησιμοποιώντας το κλειδί της ανά&#248;λεξης.
+</ptxt>
+</test1>
+<question>
+Ανάβει η ενδεικτική λυχνία immobilizer;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40AA314006">Η Ενδεικτική λυχνία Immobilizer δεν ανάβει με το διακόπτη ανά&#248;λεξης ανοικτό και τον κινητήρα σβηστό:Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος Κωδικού Βλάβης DTC
+</title>
+<test1>
+<ptxt>
+Ελέγξτε τον εγκέ&#248;αλο ECM για DTC ανατρέχοντας στο 
+<intxref refid = "K8T40AA314002">Έλεγχος Κωδικού DTC:Μοντέλο με Βενζινοκινητήρα</intxref>
+</ptxt>
+</test1>
+<question>
+Ανιχνεύεται ο κωδικός βλάβης P1636 ή P1638;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο ισχύον διάγραμμα ροής του Κωδικού DTC.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος ότι η ενδεικτική λυχνία Immobilizer αναβοσβήνει
+</title>
+<question>
+Αναβοσβήνει συνεχώς η προειδοποιητική λυχνία immobilizer στο Βήμα 1;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Ελέγξτε ποιος DTC ανιχνεύεται από τον εγκέ&#248;αλο ECM ανατρέχοντας στο 
+<intxref refid = "K8T40AA314002">Έλεγχος Κωδικού DTC:Μοντέλο με Βενζινοκινητήρα</intxref>
+. Στη συνέχεια, εκτελέστε τη διάγνωση βλαβών ανατρέχοντας στον αντίστοιχο πίνακα ροής σε αυτό το κε&#248;άλαιο.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος εκκίνησης του κινητήρα
+</title>
+<test1>
+<ptxt>
+Βάλτε μπροστά χρησιμοποιώντας το κλειδί ανά&#248;λεξης.
+</ptxt>
+</test1>
+<question>
+Ξεκινά ο κινητήρας;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 5.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Τελέστε έλεγχο του κινητήρα και του συστήματος ελέγχου εκπομπής καυσαερίων.
+</ptxt>
+<ptxt>
+- Μοντέλα M16A και J20A: Ανατρέξτε στο 
+<intxreftitleoff1 refid = "K8T40A1114001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+.
+</ptxt>
+<ptxt>
+- Μοντέλο J24B: Ανατρέξτε στο 
+<intxreftitleoff1 refid = "K8T40A1124001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+.
+</ptxt>
+<ptxt>
+- Μοντέλο N32A: Ανατρέξτε στο 
+<intxreftitleoff1 refid = "K8T40A1134001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος ότι η ενδεικτική λυχνία Immobilizer παραμένει αναμμένη
+</title>
+<test1>
+<ptxt>
+Ελέγξτε εάν η ενδεικτική λυχνία immobilizer παραμένει αναμμένη ΟΝ μετά την εκκίνηση του κινητήρα.
+</ptxt>
+</test1>
+<question>
+Η ενδεικτική λυχνία immobilizer παραμένει αναμμένη μετά την εκκίνηση του κινητήρα;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40AA314007">Η ενδεικτική λυχνία Immobilizer παραμένει αναμμένη μετά την εκκίνηση του κινητήρα:Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Το σύστημα ελέγχου του immobilizer είναι σε καλή κατάσταση. Ακολούθως, πηγαίνετε στο 
+<intxref refid = "K8T40AA504003">Έλεγχος Συστήματος Εκκίνησης Χωρίς Κλειδί</intxref>
+ για το αυτοκίνητο με σύστημα εκκίνησης χωρίς κλειδί.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

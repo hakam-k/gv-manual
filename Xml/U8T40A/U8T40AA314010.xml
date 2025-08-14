@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA314010" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1616: Niet-geregistreerd regelapparaat van het startsysteem met afstandsbediening (voor voertuig met startsysteem met afstandsbediening)
+</title>
+<servinfosub id = "U8T40AA314010001">
+<title>
+Beschrijving van het circuit
+</title>
+<ptxt>
+P1616 wordt vastgesteld wanneer de ECM vaststelt dat er verschillende ID-codes geregistreerd zijn in de ECM en het regelapparaat van het startsysteem met afstandsbediening nadat de motorstartknop op ON wordt gezet. Als het regelapparaat van het startsysteem met afstandsbediening door een nieuw wordt vervangen, registreert de ECM automatisch de code van toepassing in het regelapparaat van het startsysteem met afstandsbediening nadat het contactslot op ON werd gezet. Als het regelapparaat van het startsysteem met afstandsbediening echter door een gebruikt exemplaar wordt vervangen, registreert de ECM niet automatisch de code van toepassing in het regelapparaat van het startsysteem met afstandsbediening nadat het contactslot op ON werd gezet.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA314010002">
+<title>
+Waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+De ECM neemt verschillende ID-codes waar die geregistreerd zijn in de ECM en het regelapparaat van het startsysteem met afstandsbediening.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Regelapparaat van het startsysteem met afstandsbediening defect
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defect
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40AA314010003">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40AA314010004">
+<testgroup>
+<title>
+Bevestiging van de diagnosecode (DTC)
+</title>
+<test1>
+<ptxt>
+Wis de DTC(&apos;s) volgens 
+<intxref refid = "U8T40AA314003">Wissen van DTC:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of er DTC&apos;s worden waargenomen volgens 
+<intxref refid = "U8T40AA314004">DTC-tabel:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wordt DTC P1616 nog steeds waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Het storingzoeken is voltooid.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registratie van de contactsleutel
+</title>
+<test1>
+<ptxt>
+Wis de DTC volgens 
+<intxref refid = "U8T40AA314003">Wissen van DTC:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Registreer de transpondercode met de ECM in de transponder van de contactsleutel volgens 
+<intxref refid = "U8T40AA316002">Registratie van de contactsleutel:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Was het mogelijk om de contactsleutel (transpondercode) in de ECM te registreren?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle werking van het startsysteem met afstandsbediening
+</title>
+<test1>
+<ptxt>
+Start de motor met het startsysteem met afstandsbediening.
+</ptxt>
+</test1>
+<question>
+Start de motor?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Het storingzoeken is voltooid.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Controleer of de ECM DTC&apos;s waarneemt. Als dat zo is, onderzoek dan de storing volgens het overeenkomstige stroomschema.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Controleer de ECM op DTC&apos;s volgens 
+<intxref refid = "U8T40AA314002">DTC-controle:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wordt naast P1616 DTC P1618 en&#x002F;of P1615 waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar storingzoeken voor de betrokken DTC.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40AA324032" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1717: Unregistered Keyless Start Control Module
+</title>
+<servinfosub id = "S8T40AA324032001">
+<title>
+Circuit Description
+</title>
+<ptxt>
+B1717 is detected when ECM detects different ID codes registered in ECM and keyless control module after turning engine start knob to ON position. Normally, when keyless start control module is replaced with new one, ECM automatically registers the ID code in keyless start control module after turning ignition switch to ON position. However, when keyless start control module is replaced with used one, ECM does not automatically register the ID code in keyless start control module even if ignition switch is turned to ON position.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40AA324032002">
+<title>
+Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM detects different ID codes registered in ECM and keyless start control module.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Keyless start system wiring circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Keyless start control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40AA324032003">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S8T40AA324032004">
+<testgroup>
+<question>
+Was &#8220;Immobilizer Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40AA324001">Immobilizer Control System Check:Diesel Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registration of ECM
+</title>
+<test1>
+<ptxt>
+Register ECM to immobilizer control system referring to 
+<intxref refid = "S8T40AA326003">Procedure after ECM Replacement:Diesel Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Was registration of ECM to immobilizer control system completed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Recheck ECM for DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check for ECM
+</title>
+<test1>
+<ptxt>
+Check ECM for DTC referring to 
+<intxref refid = "S8T40AA324002">DTC Check:Diesel Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is DTC B1716 and&#x002F;or B1718 detected other than B1717?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to DTC B1716 troubleshooting.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to DTC B1718 troubleshooting.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

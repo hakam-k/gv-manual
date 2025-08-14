@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0B4504009" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "0" modify = "0">
+<title>
+ABS figyelmeztető lámpa állandóan világít
+</title>
+<servinfosub id = "H5JB0B4504009001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H5JB0B4504008">ABS figyelmeztető lámpa nem gyullad ki, amikor a gyújtáskapcsoló ON helyzetben van</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0B4504009002">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+Az ABS figyelmeztető lámpa működését (BE&#x002F;KI) az ABS- (ESP&#174;-) vezérlőmodul vezérli a műszeregységben lévő lámpavezérlő modul útján.
+</ptxt>
+<ptxt>
+Ha a blokkolásgátló fékrendszer működőképes, akkor a gyújtáskapcsoló bekapcsolásakor az ABS- (ESP&#174;-) vezérlőmodul bekapcsolja az ABS figyelmeztető lámpát, kb. két másodpercig égve hagyja, majd utána kikapcsolja. Ha a rendszer bármiféle hibát észlel, az ABS- (ESP&#174;-) vezérlőmodul folyamatosan bekapcsolva tartja az ABS figyelmeztető lámpát. A lámpavezérlő modul akkor is folyamatosan égve tartja az ABS figyelmeztető lámpát, ha az ABS- (ESP&#174;-) vezérlőmodul csatlakozója nincs csatlakoztatva.
+</ptxt>
+</servinfosub>
+<p-change/>
+<servinfosub id = "H5JB0B4504009003">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H5JB0B4504009004">
+<testgroup>
+<test1>
+<ptxt>
+Kérdezze le a diagnosztikai hibakódokat.
+</ptxt>
+</test1>
+<question>
+Megjelenik valamilyen hibakód?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a vonatkozó DTC diagnosztikai folyamat táblázatra.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Az ABS-szivattyúmotor és az ABS-mágnesszelep főbiztosítéka jó állapotban van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki a biztosítékot és ellenőrizze, nincs-e letestelve.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Válassza le az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozójának csatlakozása az &#8220;E03-7&#8221;, &#8220;E03-13&#8221; and &#8220;E03-26&#8221; (vagy &#8220;E53-16&#8221;, &#8220;E53-35&#8221; és &#8220;E53-47&#8221;) érintkezőnél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, kapcsolja be a gyújtást és mérje meg az &#8220;E03-7&#8221; (vagy &#8220;E53-35&#8221;) érintkező és a karosszériatest közötti feszültséget.
+</ptxt>
+</test1>
+<question>
+A feszültség 10 &#8211;14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;GRN&#x002F;ORN&#8221; áramkörben szakadás van.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e az ABS-hidraulikaegység &#x002F; vezérlőmodul csatlakozójának csatlakozása az &#8220;E03-1&#8221; és &#8220;E03-14&#8221; (vagy &#8220;E53-1&#8221; és &#8220;E53-32&#8221;) érintkezőnél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, kapcsolja be a gyújtást és mérje meg az &#8220;E03-1&#8221;, &#8220;E03-14&#8221; (vagy &#8220;E53-1&#8221;, &#8220;E53-32&#8221;) érintkező, valamint a karosszériatest közötti feszültséget.
+</ptxt>
+</test1>
+<question>
+Az érték 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;WHT&#x002F;RED&#8221; és&#x002F;vagy &#8220;WHT&#x002F;BLU&#8221; áramkörben szakadás van.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ha rendben van, kapcsolja be a gyújtást és mérje meg az &#8220;E03-13&#8221;, &#8220;E03-26&#8221; (vagy &#8220;E53-16&#8221;, &#8220;E53-47&#8221;) érintkező és a karosszériatest közötti feszültséget.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kevesebb mint 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Az ABS- (ESP&#174;-) hidraulikaegység &#x002F; vezérlőmodul testelőáramkörében szakadás van vagy nagy az ellenállás.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört a műszeregység és az ABS- (ESP&#174;-) hidraulikaegység &#x002F; vezérlőmodul között, lásd: 
+<intxref refid = "H5JB0B4504020">DTC U1073: Vezérlőmodul kommunikációs busza kikapcsolva</intxref>
+.
+</ptxt>
+<question>
+Rendben van a CAN kommunikációs áramkör?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó műszeregységet, és újból ellenőrizze. Ha az ABS figyelmeztető lámpa égve marad, tegyen be egy bizonyosan jó ABS- (ESP&#174;-) hidraulikaegység &#x002F; vezérlőmodul egységet és újból ellenőrizze.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

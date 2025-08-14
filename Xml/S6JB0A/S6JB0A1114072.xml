@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A1114072" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119: Throttle Actuator Control Throttle Body Range &#x002F; Performance
+</title>
+<servinfosub id = "S6JB0A1114072001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0A1114068">DTC P2101: Throttle Actuator Control Motor Circuit Range &#x002F; Performance:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A1114072002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Difference between the measured (actual) throttle valve opening angle and the target throttle valve opening angle which is calculated based on accelerator pedal opening angle and engine condition is more than specification for specified time continuously.
+</ptxt>
+<ptxt>
+(1 driving detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Throttle actuator circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Electric throttle body assembly
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0A1114072003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep the accelerator pedal at idle position for 2 seconds.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep the accelerator pedal at fully depressed position for 2 seconds.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 3) and 4) for 3 times.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0A1114072004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S6JB0A1110003">Precautions for DTC Troubleshooting:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S6JB0A1114072005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0A1114001">Engine and Emission Control System Check:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Electric throttle body assembly system check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch, check each voltage of &#8220;TP Sensor 1 Volt&#8221; and &#8220;TP Sensor 2 Volt&#8221; displayed on scan tool when accelerator pedal is idle position and fully depressed.
+</ptxt>
+</test1>
+<question>
+Is displayed each TP sensor value as described voltage in 
+<intxref refid = "S6JB0A1114007">Scan Tool Data:For Petrol Engine Model</intxref>
+?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble. Check for intermittent referring to 
+<intxref refid = "S6JB0A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle actuator circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from electric throttle body assembly with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to electric throttle body assembly at &#8220;BLU&#x002F;YEL&#8221; and &#8220;BLU&#x002F;RED&#8221; wire terminals.
+</ptxt>
+<testfigure>
+<title>
+For J20 engine
+</title>
+<graphic graphicname = "I5JB0A110042.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "158" gh = "76"/>
+</testfigure>
+<testfigure>
+<title>
+For M16 engine
+</title>
+<graphic graphicname = "I5JB0A110043.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "149" gh = "76"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to ECM at &#8220;C37-45&#8221; and &#8220;C37-44&#8221; terminals.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance at following connector terminals.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;BLU&#x002F;YEL&#8221; wire terminal of electric throttle body assembly connector and &#8220;C37-45&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;BLU&#x002F;RED&#8221; wire terminal of electric throttle body assembly connector and &#8220;C37-44&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is each resistance below 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;BLU&#x002F;YEL&#8221; wire and&#x002F;or &#8220;BLU&#x002F;RED&#8221; wire is open or high resistance.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Electric throttle body assembly check
+</title>
+<test1>
+<ptxt>
+Check electric throttle body assembly referring to &#8220;Electric Throttle Body Assembly and Its Circuit Check&#8221; under 
+<intxref refid = "S6JB0A1316003">Electric Throttle Body Assembly On-Vehicle Inspection:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace electric throttle body assembly.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

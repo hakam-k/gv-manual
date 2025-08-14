@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B1104024" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0117 &#x002F; P0118: Engine Coolant Temperature Circuit Low &#x002F; High Input
+</title>
+<servinfosub id = "S6JB0B1104024001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B1104023">DTC P0116: Engine Coolant Temperature Circuit Range &#x002F; Performance</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1104024002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.570in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.635in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0117: Engine Coolant Temperature Circuit Low Input
+</emph>
+</ptxt>
+<ptxt>
+Circuit voltage of ECT sensor is less than 0.16 V for 5 seconds or longer. (1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT sensor and its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0118: Engine Coolant Temperature Circuit High Input
+</emph>
+</ptxt>
+<ptxt>
+Circuit voltage of ECT sensor is more than 5.0 V for 5 seconds or longer. (1 driving cycle detection logic)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B1104024003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC by using scan tool if any.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and run it for 10 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC by using scan tool.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B1104024004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S6JB0B1100003">Precautions for DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S6JB0B1104024005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire harness check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connectors from ECT sensor and ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to ECT sensor and ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that ECT sensor circuit is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of each ECT sensor signal and ground circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of ECT sensor signal circuit is infinity between ECT sensor connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between ECT sensor signal terminal and each other terminal at ECT sensor connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of each ECT sensor signal and ground circuit is 0 &#8211; 1 V with ignition switch turned ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT sensor reference voltage check
+</title>
+<test1>
+<ptxt>
+Connect connectors to ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch to ON position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that ECT sensor signal voltage is 5 V between ECT sensor connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT sensor check
+</title>
+<test1>
+<ptxt>
+Check ECT sensor for performance referring to 
+<intxref refid = "S6JB0B1306010">Engine Coolant Temperature (ECT) Sensor Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace ECT sensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

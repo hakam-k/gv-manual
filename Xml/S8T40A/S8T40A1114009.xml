@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1114009" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Engine Basic Inspection
+</title>
+<ptxt>
+This check is very important for troubleshooting when ECM has detected no DTC and no abnormality has been found in 
+<intxref refid = "S8T40A1114008">Visual Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+<ptxt>
+Follow the flow carefully.
+</ptxt>
+<diag type = "test" id = "S8T40A1114009001">
+<testgroup id = "S8T40A1114009002">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114001">Engine and Emission Control System Check:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009003">
+<title>
+Check battery voltage
+</title>
+<question>
+Is it 11 V or more?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Charge or replace battery.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009004">
+<question>
+Is vehicle equipped with keyless start control system?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009005">
+<title>
+Check keyless start control system malfunction (if equipped keyless start control system)
+</title>
+<test1>
+<ptxt>
+Check keyless start control system referring to 
+<intxref refid = "S8T40AA504010">Keyless Start System Operation Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Keyless start control system malfunction.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009006">
+<question>
+Is engine cranked?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1914001">Cranking System Symptom Diagnosis:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009007">
+<question>
+Does engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009008">
+<title>
+Check idle speed
+</title>
+<test1>
+<ptxt>
+Warm up engine to normal operating temperature.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Shift transmission to neutral position for M&#x002F;T model (&#8220;P&#8221; position for A&#x002F;T).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Make sure that all electrical loads are switched off.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check engine idle speed with scan tool.
+</ptxt>
+</test1>
+<question>
+Is it 600 &#8211; 700 (for J20A engine), 610 &#8211; 710 (for M16A engine) r&#x002F;min.?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114010">Engine Symptom Diagnosis:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009009">
+<title>
+Check ignition timing
+</title>
+<test1>
+<ptxt>
+Using SUZUKI scan tool, select &#8220;Active test&#8221; mode on SUZUKI scan tool and fix ignition timing to initial one.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Using timing light (1), check initial ignition timing.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L1A102">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09930-76420">
+09930&#8211;76420
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<title>
+For J20A engine
+</title>
+<graphic graphicname = "I5JB0A110021.swf" width = "90.000mm" height = "52.567mm" ver = "01" gw = "134" gh = "132"/>
+</testfigure>
+<testfigure>
+<title>
+For M16A engine
+</title>
+<graphic graphicname = "I5JB0A110022.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "165" gh = "128"/>
+</testfigure>
+</test1>
+<question>
+Is it 5&#176; &#8211; 15&#176; (for J20A engine), 7&#176; &#8211; 17&#176; (for M16A engine) BTDC at specified idle speed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114010">Engine Symptom Diagnosis:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check ignition control related parts referring to 
+<intxref refid = "S8T40A1816007">Ignition Timing Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009010">
+<title>
+Check immobilizer system malfunction (if equipped immobilizer control system)
+</title>
+<test1>
+<ptxt>
+Check immobilizer control system referring to 
+<intxref refid = "S8T40AA314001">Immobilizer Control System Check:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Immobilizer control system malfunction.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009011">
+<title>
+Check fuel supply
+</title>
+<test1>
+<ptxt>
+Check to make sure that enough fuel is filled in fuel tank.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch for 2 seconds and then OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Repeat Step 2) a few times.
+</ptxt>
+</test1>
+<question>
+Is fuel pressure felt from fuel feed hose when ignition switch is turned ON?
+</question>
+<testfigure>
+<title>
+For J20A engine
+</title>
+<graphic graphicname = "I5JB0A110023.swf" width = "90.000mm" height = "46.570mm" ver = "01" gw = "130" gh = "115"/>
+</testfigure>
+<testfigure>
+<title>
+For M16A engine
+</title>
+<graphic graphicname = "I5JB0A110024.swf" width = "90.000mm" height = "46.922mm" ver = "01" gw = "138" gh = "116"/>
+</testfigure>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009012">
+<title>
+Check fuel pump for operation
+</title>
+<question>
+Was fuel pump operating sound heard from fuel filler for about 2 seconds after ignition switch ON and stop?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1714004">Fuel Pressure Check:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114083">Fuel Pump and Its Circuit Check:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009013">
+<title>
+Check ignition spark
+</title>
+<test1>
+<ptxt>
+Disconnect injector couplers.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Remove spark plugs and connect them to high-tension cords or ignition coil assemblies.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ground spark plugs.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Crank engine and check if each spark plug sparks.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1814004">Ignition Spark Test:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114009014">
+<title>
+Check fuel injector for operation
+</title>
+<test1>
+<ptxt>
+Install spark plugs and connect injector connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Using sound scope (1), check operating sound of each injector (2) when cranking engine.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I3RM0A110015.swf" width = "90.000mm" height = "49.095mm" ver = "01" gw = "145" gh = "122"/>
+</testfigure>
+</test1>
+<question>
+Was injector operating sound heard from all injectors?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114010">Engine Symptom Diagnosis:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114082">Fuel Injector Circuit Check:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

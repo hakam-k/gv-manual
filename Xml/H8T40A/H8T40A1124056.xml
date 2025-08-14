@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124056" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2138
+</title>
+<servinfosub id = "H8T40A1124056001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2138: Fojtószelep&#x002F;pedálhelyzet-érzékelő&#x002F;kapcsoló &#8220;D&#8221; &#x002F; &#8220;E&#8221; feszültség korrelációja
+</emph>
+</ptxt>
+<ptxt>
+A különbség az APP (főérzékelő) és az APP (segédérzékelő) között nagyobb, mint a meghatározott érték.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP-érzékelő és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124056002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124053">DTC P2122 &#x002F; P2123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124056003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention3>
+<ptxt>
+Amennyiben a DTC-t, mely más, mint a cél DTC, észlelt előzőleg a DTC megerősítési eljárásban, győződjön meg róla, hogy hibakeresést végez az előzőleg észlelt DTC ügyében.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tartsa a gázpedált 2 másodpercig teljesen lenyomott helyzetben.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tartsa a gázpedált 2 másodpercig alapjárati helyzetben.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ismételje meg a 2) - 3) lépéseket 3 alkalommal.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124056004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124056005">
+<testgroup id = "H8T40A1124056006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124056007">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t.
+</ptxt>
+</test1>
+<question>
+Található a P2138-on kívül más DTC is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC-kkel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124056008">
+<title>
+Vezetékköteg ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az APP-érzékelő (a fő- és segédérzékelő) áramkörét a következők szerint.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP-érzékelő (főérzékelő) áramköre: Lásd: 
+<intxref refid = "H8T40A1124053">DTC P2122 &#x002F; P2123:J24B</intxref>
+, 3. - 6. lépés.
+</ptxt>
+</item>
+<item>
+<ptxt>
+APP-érzékelő (segédérzékelő) áramköre: Lásd: 
+<intxref refid = "H8T40A1124054">DTC P2127 &#x002F; P2128:J24B</intxref>
+, 3. - 6. lépés.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124056009">
+<title>
+APP-érzékelő ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az APP-érzékelőt. 
+<intxreftitleoff1 refid = "H8T40A1326008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a gázpedálegységet (egybeépítve az APP-érzékelővel).
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

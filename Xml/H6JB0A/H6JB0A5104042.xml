@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0A5104042" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1777: TCM nem tud kommunikálni az ECM-mel (vételi hiba)
+</title>
+<servinfosub id = "H6JB0A5104042001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A5104041">DTC P1774: CAN kommunikációs busza kikapcsolva</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0A5104042002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az ECM számára küldött kommunikációs adatok vételi hibája észlelhető az előírtnál hosszabb ideig, folyamatosan.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS &#x002F; ESP&#174; vezérlőmodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+CAN kommunikációs vezeték áramköre
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H6JB0A5104042003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa el a motort és járassa legalább 1 percig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t és a feltételes DTC-t.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H6JB0A5104042004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Az ellenőrzés és a javítás befejezése után hajtsa végre a 
+<intxref refid = "H6JB0A5104042003">DTC megerősítési eljárás</intxref>
+ utasításait és ellenőrizze, hogy a hiba ki van-e javítva.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H6JB0A5104042005">
+<testgroup id = "H6JB0A5104042006">
+<question>
+Az &#8220;A&#x002F;T rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A5104001">Automatikus sebességváltó rendszer ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H6JB0A5104042007">
+<title>
+Vezérlőmodul csatlakozójának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CAN útján kommunikáló összes vezérlőmodul csatlakozójának csatlakozását.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ismételten ellenőrizze a TCM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H6JB0A5104006">DTC ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Megjelenik P1777 hibakód?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Időszakos hiba. Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H6JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H6JB0A5104042008">
+<title>
+DTC ellenőrzés az ABS- &#x002F; ESP&#174;-vezérlőmodulban
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t az ABS- &#x002F; ESP&#174;-vezérlőmodulban
+</ptxt>
+</test1>
+<question>
+Megjelenik az U1100 hibakód?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H6JB0A5104042009">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H6JB0A1114003">DTC ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Megjelenik P1674 hibakód?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A1114064">DTC P1674: CAN kommunikáció (busz ki hiba):Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ellenőrizze az ECM áramellátó és testelő áramkörét. Ha az áramkör rendben van, akkor szakadás van a CAN kommunikációs áramkörben az ECM és az ABS- &#x002F; ESP&#174;-vezérlőmodul között.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H6JB0A5104042010">
+<title>
+CAN kommunikációs áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Válassza le a CAN útján kommunikáló összes vezérlőmodul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört a vezérlőmodulok között szakadás, rövidzárlat és nagy ellenállás szempontjából.
+</ptxt>
+</test1>
+<question>
+Rendben vannak a CAN kommunikációs áramkörök?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ellenőrizze a TCM áramellátó és testelő áramkörét. Ha az áramkör rendben van, tegyen be egy bizonyosan jó TCM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa ki az áramkört.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

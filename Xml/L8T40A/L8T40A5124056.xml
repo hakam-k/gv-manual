@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A5124056" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0961 &#x002F; P0965 &#x002F; P0969
+</title>
+<servinfosub id = "L8T40A5124056001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.236in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condizione rilevamento DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P0961: Circuito di controllo elettrovalvola di controllo pressione &#8220;A&#8221; Campo di variazione &#x002F; Rendimento
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+P0965: Elettrovalvola di controllo pressione &#8220;B&#8221; Circuito di controllo Range &#x002F; Rendimento
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+P0969: Elettrovalvola di controllo pressione &#8220;C&#8221; Circuito di controllo Range &#x002F; Rendimento
+</emph>
+</ptxt>
+<ptxt>
+La differenza tra la corrente desiderata e la corrente monitorata del circuito elettrovalvola di controllo è superiore a quanto specificato.
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 1)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Malfunzionamento dell&apos;elettrovalvola di controllo pressione o del suo circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A5124056002">
+<title>
+Cablaggio del sistema
+</title>
+<ptxt>
+Vedere 
+<intxref refid = "L8T40A5124033">DTC P0962 &#x002F; P0966 &#x002F; P0970: Elettrovalvola di controllo pressione &#8220;A&#8221; Circuito di controllo basso &#x002F; Elettrovalvola di controllo pressione &#8220;B&#8221; Circuito di controllo basso &#x002F; Elettrovalvola di controllo pressione &#8220;C&#8221; Circuito di controllo basso:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A5124056003">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Resettare i DTC nella memoria TCM e ECM usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Continuare a far andare il motore al minimo per 30 secondi o più.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllo DTC, DTC in attesa e dati freeze-frame.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A5124056004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A5124056005">
+<testgroup id = "L8T40A5124056006">
+<question>
+È stato effettuato il &#8220;controllo del sistema A&#x002F;T&#8221;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A5124001">Controllo sistema A&#x002F;T:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A5124056007">
+<title>
+Controllare il circuito elettrovalvola di controllo della pressione
+</title>
+<test1>
+<ptxt>
+Portare il commutatore di avviamento in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Scollegare i connettori TCM dal TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Scollegare il connettore dell&apos;elettrovalvola e i connettori TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la correttezza del collegamento sui rispettivi terminali del TCM e relativo(i) connettore(i).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se corretti, controllare la resistenza del circuito dell&apos;elettrovalvola di controllo pressione.
+</ptxt>
+</test1>
+<question>
+È in buone condizioni?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Elettrovalvola di controllo pressione A: Riparare il circuito &#8220;YEL&#x002F;RED&#8221; e&#x002F;o &#8220;BRN&#x002F;RED&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Elettrovalvola di controllo pressione B: Riparare il circuito &#8220;LT GRN&#x002F;BLK&#8221; e&#x002F;o &#8220;LT GRN&#x002F;RED&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Elettrovalvola di controllo pressione C: Riparare il circuito &#8220;LT GRN&#8221; e&#x002F;o &#8220;BRN&#x002F;BLU&#8221;.
+</ptxt>
+</item>
+</list1>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllare la resistenza dell&#8217;elettrovalvola di controllo della pressione
+</title>
+<test1>
+<ptxt>
+Portare il commutatore di avviamento in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnettere il connettore dell&apos;elettrovalvola su A&#x002F;T.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la correttezza della connessione del connettore elettrovalvola sui rispettivi terminali.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la resistenza del circuito dell&apos;elettrovalvola solenoide di controllo della pressione facendo riferimento a 
+<intxref refid = "L8T40A5126021">Ispezione elettrovalvole (elettrovalvola del cambio A, elettrovalvola del cambio B, elettrovalvola del cambio E, elettrovalvola di controllo pressione TCC, elettrovalvola di controllo pressione A, elettrovalvola di controllo pressione B ed elettrovalvola di controllo pressione C):5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+I risultati del controllo sono soddisfacenti?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Guasto intermittente o TCM difettoso. Controllare l&apos;eventuale presenza di un guasto intermittente facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+. Se OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire l&apos;elettrovalvola di controllo della pressione o il connettore dell&apos;elettrovalvola.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

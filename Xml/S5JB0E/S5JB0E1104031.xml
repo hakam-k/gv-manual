@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0E1104031" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P0123: Throttle Position Sensor (Main) Circuit High
+</title>
+<servinfosub id = "S5JB0E1104031001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0E1104030">DTC P0122: Throttle Position Sensor (Main) Circuit Low</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0E1104031002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.867in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.324in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Output voltage of throttle position sensor (main) is more than specified value for specified time continuously.
+</ptxt>
+<ptxt>
+(1 driving detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Throttle position sensor (main) circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Electric throttle body assembly
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<attention3>
+<ptxt>
+When DTC P0123 and P0223 are indicated together, it is possible that &#8220;WHT&#8221; wire shorted to power circuit and&#x002F;or &#8220;GRN&#8221; wire open.
+</ptxt>
+</attention3>
+<servinfosub id = "S5JB0E1104031003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep the accelerator pedal at idle position for 2 seconds.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep the accelerator pedal at fully depressed position for 2 seconds.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 3) and 4) for 3 times.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S5JB0E1104031004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S5JB0E1100003">Precautions For DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S5JB0E1104031005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S5JB0E1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle position sensor and its circuit check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch, check &#8220;TP Sensor 1 Volt&#8221; displayed on scan tool when accelerator pedal is idle position and fully depressed.
+</ptxt>
+</test1>
+<question>
+Is displayed TP sensor value as described voltage in 
+<intxref refid = "S5JB0E1104007">Scan Tool Data</intxref>
+?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Intermittent trouble.
+</ptxt>
+<ptxt>
+Check for intermittent referring to 
+<intxref refid = "S5JB0E0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM voltage check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from electric throttle body assembly with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to electric throttle body assembly at &#8220;WHT&#8221;, &#8220;GRN&#8221; and &#8220;BLK&#8221; wire terminals.
+</ptxt>
+<testfigure>
+<title>
+For J20 engine
+</title>
+<graphic graphicname = "I5JB0A110042.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "158" gh = "76"/>
+</testfigure>
+<testfigure>
+<title>
+For M16 engine
+</title>
+<graphic graphicname = "I5JB0A110043.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "149" gh = "76"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+If OK, measure voltage between &#8220;WHT&#8221; wire terminal of electric throttle body assembly connector and engine ground with ignition switch turned ON.
+</ptxt>
+</test1>
+<question>
+Is voltage 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire harness check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection of ECM connector at &#8220;C37-53&#8221; terminal.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between &#8220;C37-53&#8221; terminal of ECM connector and engine ground with ignition switch turned ON.
+</ptxt>
+</test1>
+<question>
+Is voltage 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+ &#8220;WHT&#8221; wire is shorted to power circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire harness check
+</title>
+<test1>
+<ptxt>
+Measure voltage between &#8220;BLK&#8221; wire terminal of electric throttle body assembly connector and engine ground with ignition switch turned ON.
+</ptxt>
+</test1>
+<question>
+Is voltage 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire harness check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Remove ECM from its bracket with ECM connectors connected.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection of ECM connector at &#8220;C37-53&#8221; and &#8220;C37-54&#8221; terminals.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, measure voltage between &#8220;C37-54&#8221; terminal of ECM connector and engine ground with ignition switch turned ON.
+</ptxt>
+</test1>
+<question>
+Is voltage 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+&#8220;BLK&#8221; wire is open or high resistance circuit.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire harness check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between &#8220;BLK&#8221; and &#8220;WHT&#8221; wire terminals of electric throttle body assembly connector.
+</ptxt>
+</test1>
+<question>
+Is resistance infinity?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;BLK&#8221; wire is shorted to &#8220;WHT&#8221; wire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire harness check
+</title>
+<test1>
+<ptxt>
+Turn ON ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between &#8220;C37-54&#8221; terminal of ECM connector and engine ground.
+</ptxt>
+</test1>
+<question>
+Is voltage 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;BLK&#8221; wire is shorted to power circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ground circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between &#8220;GRN&#8221; wire terminal of electric throttle body assembly connector and engine ground.
+</ptxt>
+</test1>
+<question>
+Is resistance below 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ground circuit check
+</title>
+<test1>
+<ptxt>
+Remove ECM from its bracket with ECM connectors connected.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection of ECM connector at &#8220;C37-41&#8221; terminal.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between &#8220;C37-41&#8221; terminal of ECM connector and engine ground with ignition switch turned OFF.
+</ptxt>
+</test1>
+<question>
+Is resistance below 5 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+&#8220;GRN&#8221; wire is open or high resistance circuit.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Faulty ECM ground circuit. If circuit is OK, substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Electric throttle body assembly check
+</title>
+<test1>
+<ptxt>
+Check throttle pedal position sensor referring to &#8220;Throttle Position Sensor Performance Check&#8221; under 
+<intxref refid = "S5JB0E1306003">Electric Throttle Body Assembly On-Vehicle Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is output voltage within specified value?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace electric throttle body assembly.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

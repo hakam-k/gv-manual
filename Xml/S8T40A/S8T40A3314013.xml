@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A3314013" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Transfer Position Indicator Remains ON Steady at Ignition Switch ON
+</title>
+<servinfosub id = "S8T40A3314013001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to &#8220;Wiring Diagram&#8221; under 
+<intxref refid = "S8T40A3314012">Transfer Position Indicator Does Not Come ON at Ignition Switch ON but Engine Stops:Motor-Shift Type (Transfer with Shift Actuator)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A3314013002">
+<title>
+Circuit Description
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A3314012">Transfer Position Indicator Does Not Come ON at Ignition Switch ON but Engine Stops:Motor-Shift Type (Transfer with Shift Actuator)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A3314013003">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A3314013004">
+<testgroup id = "S8T40A3314013005">
+<title>
+Check DTC
+</title>
+<test1>
+<ptxt>
+Check DTC referring to 
+<intxref refid = "S8T40A3314005">DTC Check:Motor-Shift Type (Transfer with Shift Actuator)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is there any DTC(s)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Perform DTC flow to repair and retry.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A3314013006">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Check CAN communication circuit between combination meter and 4WD control module referring to 
+<intxref refid = "S8T40A3314032">DTC U0073: Control Module Communication Bus Off:Motor-Shift Type (Transfer with Shift Actuator)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good combination meter and recheck. If transfer position indicator still remains off, substitute a known-good 4WD control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

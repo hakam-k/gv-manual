@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40AA324029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1713: Immobilizer Code Error
+</title>
+<servinfosub id = "S8T40AA324029001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40AA322001">Immobilizer Control System Wiring Circuit Diagram:Diesel Engine Model</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40AA324029002">
+<title>
+Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Verification error between ICM and ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Troubleshoot DTC B1704 first if both B1704 and B1713 are detected at the same time.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "S8T40AA324029003">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S8T40AA324029004">
+<testgroup>
+<question>
+Was &#8220;Immobilizer Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40AA324001">Immobilizer Control System Check:Diesel Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnostic Trouble Code (DTC) check
+</title>
+<test1>
+<ptxt>
+Check ECM for DTC referring to 
+<intxref refid = "S8T40A1144005">DTC Check:F9Q</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check ABS control module or ESP&#174; control module for DTC. For ESP&#174; model, refer to 
+<intxref refid = "S8T40A4604005">DTC Check</intxref>
+. For non-ESP&#174; model, refer to 
+<intxref refid = "S8T40A4504004">DTC Check</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check BCM for DTC referring to 
+<intxref refid = "S8T40AA204005">DTC Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is any DTC(s) detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM connector check
+</title>
+<test1>
+<ptxt>
+With the ignition key at OFF position, disconnect ICM connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection at terminals and wires of ICM connector. Refer to 
+<intxref refid = "S8T40A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is each terminal and wire connection normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair poor connection(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM connector check 
+</title>
+<test1>
+<ptxt>
+With the ignition key at OFF position, disconnect ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection at terminals and wires of ECM connector. Refer to 
+<intxref refid = "S8T40A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is each terminal and wire connection normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair poor connection(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM power and ground circuit check
+</title>
+<test1>
+<ptxt>
+Check power and ground circuit of ICM referring to 
+<intxref refid = "S8T40AA324018">Inspection of Immobilizer Control Module (ICM) and Its Circuit:Diesel Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is power and ground circuit of ICM normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ICM and recheck. If DTC B1702 is still detected, substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and ground circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

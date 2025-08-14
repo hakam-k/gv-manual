@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA324026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1709: Communicatiefout 2 van de ECM
+</title>
+<servinfosub id = "U8T40AA324026001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA322001">Bedradingsschakelschema van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA324026002">
+<title>
+Waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Communicatiefout voor het OBD tussen de ICM en de ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN-communicatiecircuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Stuurhoeksensor (ESP&#174;-model)
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-regelapparaat
+</ptxt>
+</item>
+<item>
+<ptxt>
+Regelapparaat van het startsysteem met afstandsbediening (indien uitgerust)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS &#x002F; ESP&#174;-regelapparaat
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combimeter
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Wanneer DTC B1702 en B1709 tegelijkertijd worden waargenomen, kan het CAN-communicatiecircuit defect zijn. Controleer of de ECM, de BCM, het regelapparaat van het startsysteem met afstandsbediening (model met startsysteem met afstandsbediening), het 4WD-regelapparaat en&#x002F;of het ABS &#x002F; ESP&#174;-regelapparaat een DTC waarnemen die verband houdt met een CAN-defect. Als deze wordt waargenomen, volg dan het DTC-stroomschema van toepassing.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "U8T40AA324026003">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40AA324026004">
+<testgroup>
+<question>
+Is &#34;Controle van het regelsysteem van de startblokkering&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA324001">Controle van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodecontrole (DTC)
+</title>
+<test1>
+<ptxt>
+Controleer de ECM op DTC&apos;s volgens 
+<intxref refid = "U8T40A1144005">DTC-controle:F9Q</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer het ABS- of ESP&#174;-regelapparaat op DTC&apos;s. Zie 
+<intxref refid = "U8T40A4604005">DTC-controle</intxref>
+ voor het ESP&#174;-model. Zie 
+<intxref refid = "U8T40A4504004">DTC-controle</intxref>
+ voor een model zonder ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de BCM op DTC&apos;s volgens 
+<intxref refid = "U8T40AA204005">DTC-controle</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn er DTC&apos;s?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de DTC-diagnosetabel van toepassing.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de zekering
+</title>
+<test1>
+<ptxt>
+Controleer of er een zekering is gesprongen.
+</ptxt>
+</test1>
+<question>
+Is er een zekering gesprongen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang gesprongen zekering(en).
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de ICM-stekkerverbinding
+</title>
+<test1>
+<ptxt>
+Zet de contactsleutel op OFF en maak de ICM-stekkerverbinding los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen en draden van de ICM-stekker goed aangesloten zijn. Zie 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is elke aansluitklem en draadaansluiting in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer slechte aansluitingen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle op slechte aansluitingen van de ECM
+</title>
+<test1>
+<ptxt>
+Zet de contactsleutel op OFF en maak de ECM-stekkerverbindingen los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen en de draden van de ECM-stekkers goed aangesloten zijn. Zie 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is elke aansluitklem en draadaansluiting in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer slechte aansluitingen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Controleer het CAN-communicatiecircuit tussen de ICM en ECM op stroomonderbreking, kortsluiting en hoge weerstand. Zie 
+<intxref refid = "U8T40A0006001">Procedure voor het onderzoeken van het elektrische circuit</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 7.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de ICM
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de ICM volgens 
+<intxref refid = "U8T40AA324018">Onderzoek van het regelapparaat van het startblokkeersysteem (ICM) en het bijbehorende circuit:Model met dieselmotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn het voedings- en massacircuit van de ICM in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ICM aan en controleer opnieuw. Als DTC B1709 nog steeds wordt waargenomen, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en massacircuit van de ICM.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

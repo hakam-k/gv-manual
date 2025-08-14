@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A4604018" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1024: Kormányszög-érzékelő áramkörének hibája
+</title>
+<servinfosub id = "H8T40A4604018001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A CPU belső hibát észlel a kormányszög-érzékelőben.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kormányszög-érzékelő jele az előírt tartományon kívül van.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kormányszög-érzékelő
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174; vezérlőmodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A4604018002">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A4604018003">
+<testgroup id = "H8T40A4604018004">
+<question>
+Elvégezte az &#8220;elektronikus menetstabilizáló program ellenőrzését&#8221;?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A4604001">Elektronikus menetstabilizáló program ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A4604018005">
+<title>
+DTC-ellenőrzés az ESP&#174;-ben
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe és ellenőrizze az ESP&#174;-re vonatkozó DTC-t.
+</ptxt>
+</test1>
+<question>
+A DTC C1037, U0073 és&#x002F;vagy U0126 észlelhető?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Lépjen a vonatkozó DTC-diagnosztikai folyamattáblázathoz.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A4604018006">
+<title>
+Ellenőrizze az érzékelő kalibrálását.
+</title>
+<test1>
+<ptxt>
+Kalibrálja a kormányszög-érzékelőt. 
+<intxreftitleoff1 refid = "H8T40A4606002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Törölje az összes DTC-t és ellenőrizze, hogy van-e további DTC az ESP&#174;-vel kapcsolatban.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a C1024 számú hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A kormányszög-érzékelő kalibrálása nem történt meg.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A4604018007">
+<title>
+Ellenőrizze a kormányszög-érzékelőt
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a kormányszög-érzékelőt. 
+<intxreftitleoff1 refid = "H8T40A4606019"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+A rendszer rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ESP&#174; hidraulikaegységet &#x002F; vezérlőmodul egységet, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a kormányszög-érzékelőt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

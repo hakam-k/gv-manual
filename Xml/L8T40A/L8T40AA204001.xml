@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40AA204001" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Funzione autodiagnostica BCM
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Il BMC effettua un monitoraggio delle condizioni dei componenti del sistema e dei loro circuiti con la chiave di accensione nella posizione di ON. Quando si verifica un&apos;anomalia nel sistema, la zona in cui si è verificata l&apos;anomalia viene registrata nella memoria del EEPROM del BCM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il DTC può essere controllato in uno dei seguenti modi.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Il DTC può essere controllato con lo scanner SUZUKI (2) connesso al DLC (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il DTC può essere letto dalla sequenza luminosa della luce del modulo antifurto (3). Inoltre, quando la luce del sistema antifurto sta lampeggiando per un DTC, ilo DTC emesso viene visualizzato sul quadro strumenti (4) contemporaneamente.
+</ptxt>
+<figure>
+<graphic graphicname = "I9T401A20006.swf" width = "183.000mm" height = "69.500mm" ver = "01" gw = "380" gh = "180"/>
+</figure>
+</item>
+</list2>
+</list1>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Tabella Ingresso &#x002F; Uscita BCM
+</title>
+<tgroup cols = "3" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.732in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.994in"/>
+<colspec colnum = "3" colname = "3" colwidth = "2.484in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECU
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ingresso
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Uscita
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sistema chiusura centralizzata
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore blocchetto serratura
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore serratura manuale portiera
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Attuatore serratura ciascuna portiera
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Apertura con telecomando
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore promemoria chiave
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ricevitore apertura telecomando
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore ciascuna porta
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Attuatore serratura ciascuna portiera
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relè indicatore di direzione e luci di emergenza
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luce interna
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Avviamento senza chiave
+</ptxt>
+<ptxt>
+(Funzione chiusura porta)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Controllo avviamento senza chiave
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Attuatore serratura ciascuna portiera
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relè indicatore di direzione e luci di emergenza
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luce interna
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Tergilunotto 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore INT tergilunotto
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore tergilunotto ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore lava lunotto
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relè tergilunotto
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Quadro strumenti
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore luci
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore livello liquido freni
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore cinture di sicurezza
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generatore
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore della pressione dell&apos;olio
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore freno di stazionamento
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore modo P&#x002F;N difettoso (modello A&#x002F;T)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore smorzatore (abbaglianti)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore ciascuna porta
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quadro strumenti
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Luce interna
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore ciascuna porta
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore promemoria chiave
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Luce interna
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luce bagagliaio
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Cicalino avvertenza
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore promemoria chiave
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore luci di coda
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore portiera lato conducente
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (segnale velocità veicolo)
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (segnale inverso) (se in dotazione)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modulo di controllo avviamento senza chiave (modello con avviamento senza chiave)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cicalino di avvertenza (nel quadro strumenti)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sistema DRL
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore luci
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (segnale motore ACCESO, SPENTO)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generatore
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relè anabbagliante
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relè luci di coda
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sistema di accensione automatica fari
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore luci
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore freno di stazionamento
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore di accensione automatica fari
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relè luci di coda
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relè fari anabbaglianti o fari abbaglianti
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fendinebbia anteriore.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore luci
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore di accensione dei fari antinebbia anteriori
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relè faro antinebbia anteriore
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Snebbiatore finestrino portellone e riscaldatore specchietto
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore sbrinatore finestrino portellone (incluso nel modulo di controllo HVAC)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Generatore
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM (segnale motore ACCESO, SPENTO)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relè snebbiatore finestrino portellone
+</ptxt>
+</item>
+<item>
+<ptxt>
+Relè riscaldatore specchio retrovisore esterno (se presente)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Luci di coda
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore luci
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Relè luci di coda
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Dispositivo annullamento blocco portiera
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modulo SDM (segnale attivazione air bag )
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Attuatore serratura ciascuna portiera
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Luce antifurto
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore promemoria chiave
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Luce deterrente antifurto (localizzata nel modulo di controllo HVAC)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

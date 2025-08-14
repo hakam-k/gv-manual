@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B1104071" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2238 &#x002F; P2239: O2 Sensor Positive Current Control Circuit Low &#x002F; High (Sensor-1, Bank-1)
+</title>
+<servinfosub id = "S6JB0B1104071001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B1104070">DTC P2237: O2 Sensor Positive Current Control Circuit &#x002F; Open (Sensor-1, Bank-1)</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1104071002">
+<title>
+A&#x002F;F Sensor Description
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B1101008">A&#x002F;F Sensor Description</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1104071003">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.981in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.216in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+DTC P2238 O2 Sensor Positive Current Control Circuit Low (Sensor-1, Bank-1):
+</emph>
+</ptxt>
+<ptxt>
+Circuit voltage of A&#x002F;F sensor (&#x002B;) terminal is lower than 0.4 V or A&#x002F;F sensor circuit is short between (&#x002B;) terminal wire and (&#8211;) terminal wire with engine running.
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+DTC P2239 O2 Sensor Positive Current Control Circuit High (Sensor-1, Bank-1):
+</emph>
+</ptxt>
+<ptxt>
+Circuit voltage of A&#x002F;F sensor (&#x002B;) terminal is higher than 3.5 V with engine running
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A&#x002F;F sensor circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+A&#x002F;F sensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B1104071004">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention3>
+<ptxt>
+Check to make sure that following conditions are satisfied when using this &#8220;DTC Confirmation Procedure&#8221;.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+The following DTC is not detected: A&#x002F;F sensor heater
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool to DLC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Run engine at idle speed for 1 min. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC and pending DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B1104071005">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S6JB0B1100003">Precautions for DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S6JB0B1104071006">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A&#x002F;F sensor signal check
+</title>
+<test1>
+<ptxt>
+Connect scan tool with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Warm up engine to normal operating temperature and keep it at 2000 r&#x002F;min. for 60 sec.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Repeat racing engine (Repeat depressing accelerator pedal 5 to 6 times continuously to enrich A&#x002F;F mixture and take foot off from pedal to enlean it).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for A&#x002F;F sensor (bank-1) output current displayed on scan tool.
+</ptxt>
+</test1>
+<question>
+Does A&#x002F;F sensor output current between &#8211;0.2 mA and 0.2 mA?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Intermittent trouble.
+</ptxt>
+<ptxt>
+Check for intermittent referring to 
+<intxref refid = "S6JB0B0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A&#x002F;F sensor circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from A&#x002F;F sensor (bank-1) and ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to A&#x002F;F sensor (bank-1) connector and ECM connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that A&#x002F;F sensor (bank-1) circuit is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of each &#8220;Signal (&#x002B;) circuit of A&#x002F;F sensor (bank-1)&#8221;, &#8220;Signal (&#8211;) circuit of A&#x002F;F sensor (bank-1)&#8221; is less than 1 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between &#8220;Signal (&#x002B;) circuit of A&#x002F;F sensor (bank-1)&#8221; and vehicle body ground is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between &#8220;Signal (&#x002B;) circuit of A&#x002F;F sensor (bank-1)&#8221; and &#8220;Signal (&#8211;) circuit of A&#x002F;F sensor (bank-1)&#8221; is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between &#8220;Signal (&#x002B;) circuit of A&#x002F;F sensor (bank-1)&#8221; terminal and each other terminal at A&#x002F;F sensor (bank-1) connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between &#8220;Signal (&#8211;) circuit of A&#x002F;F sensor (bank-1)&#8221; terminal and each other terminal at A&#x002F;F sensor (bank-1) connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage between &#8220;Signal (&#x002B;) circuit of A&#x002F;F sensor (bank-1)&#8221; and vehicle body ground is 0 V with ignition switch tuned ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wiring harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A&#x002F;F sensor heater check
+</title>
+<test1>
+<ptxt>
+Check A&#x002F;F sensor (bank-1) referring to 
+<intxref refid = "S6JB0B1306013">Air Fuel Ratio (A&#x002F;F) Sensor On-Vehicle Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is A&#x002F;F sensor in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck. If ECM OK, replace A&#x002F;F sensor (bank-1).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace A&#x002F;F sensor (bank-1).
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

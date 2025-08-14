@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0AA304001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Immobilizer Control System Check
+</title>
+<diag type = "test" id = "S5JB0AA304001001">
+<testgroup>
+<title>
+Immobilizer indicator lamp ON check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to ON position using ignition key.
+</ptxt>
+</test1>
+<question>
+Does immobilizer indicator lamp (1) come on?
+</question>
+<testfigure>
+<graphic graphicname = "I5JB0AA30004.swf" width = "90.000mm" height = "48.686mm" ver = "01" gw = "153" gh = "121"/>
+</testfigure>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check if DTC P1636 and&#x002F;or P1638 are detected by ECM referring to 
+<intxref refid = "S5JB0AA304002">Diagnostic Trouble Code (DTC) Check</intxref>
+. If detected, perform the troubleshooting referring to the corresponding flowchart in this section. If not detected, go to 
+<intxref refid = "S5JB0AA304012">Immobilizer Indicator Lamp Does Not Come ON with Ignition Switch ON and Engine Stop</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Immobilizer indicator lamp flash check
+</title>
+<question>
+Does immobilizer indicator lamp flash on and off continuously in Step 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Check what DTC is detected by ECM referring to 
+<intxref refid = "S5JB0AA304002">Diagnostic Trouble Code (DTC) Check</intxref>
+. Then, perform the troubleshooting referring to the corresponding flowchart in this section.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Engine start check
+</title>
+<test1>
+<ptxt>
+Start engine using ignition key.
+</ptxt>
+</test1>
+<question>
+Does engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Perform 
+<intxref refid = "S5JB0A1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Immobilizer indicator lamp remain ON check
+</title>
+<test1>
+<ptxt>
+Check if immobilizer indicator lamp remains ON after engine start.
+</ptxt>
+</test1>
+<question>
+Does immobilizer indicator lamp remain ON after engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S5JB0AA304013">Immobilizer Indicator Lamp Remains ON after Engine Start</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Immobilizer control system is in good condition. Then, go to 
+<intxref refid = "S5JB0AA504004">Keyless Start System Check</intxref>
+ for the vehicle with keyless start system.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

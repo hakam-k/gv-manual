@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124076" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0139
+</title>
+<servinfosub id = "H8T40A1124076001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.285in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.919in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P0139: Lambdaszonda áramkörének visszajelzése lassú (1. hengersor, 2. érzékelő)
+</emph>
+</ptxt>
+<ptxt>
+A kapcsolási idő, amikor a HO2S jeláramkör feszültsége 0,6 V-ról 0,3 V-ra változik hosszabb, mint 0,75 másodperc az üzemanyag-lezárásnál.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S és&#x002F;vagy annak áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124076002">
+<title>
+Kapcsolási rajz 
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124014">DTC P0037 &#x002F; P0038:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124076003">
+<title>
+DTC megerősítési eljárás 
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Közúti próba végzéséhez olyan helyet válasszon, ahol nincs forgalom, illetve nem áll fenn a közúti baleset veszélye. A próbát a balesetek elkerülése érdekében igen óvatosan végezze.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A közúti próbát vízszintes úton két személy végezze, a vezető és a vizsgálatot végző személy.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Amennyiben a DTC-t, mely más, mint a cél DTC, észlelt előzőleg a DTC megerősítési eljárásban, győződjön meg róla, hogy hibakeresést végez az előzőleg észlelt DTC ügyében.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Indítsa be a motort, és melegítse fel normál működési hőmérsékletre.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vezesse a járművet 80 &#8211; 100 km&#x002F;h (50 &#8211; 62 mérföld&#x002F;h) sebességgel 6 percig (tartsa a fojtószelep nyitást állandó értéken ennél a lépésnél.)
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Engedje fel a gázpedált és hagyja szabadon futni a járművet 10 másodpercig motorfék üzemmódban. (Üzemanyag lezárás állapota).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124076004">
+<title>
+DTC hibaelhárítás 
+</title>
+<diag type = "test" id = "H8T40A1124076005">
+<testgroup id = "H8T40A1124076006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124076007">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t.
+</ptxt>
+</test1>
+<question>
+Található a P0139-en kívül más DTC is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC-kkel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124076008">
+<title>
+HO2S jeláramkör és testáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a HO2S jeláramkört és a testáramkört, lásd: 
+<intxref refid = "H8T40A1124026">DTC P0137 &#x002F; P0138:J24B</intxref>
+, 3. lépés.
+</ptxt>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetéket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124076009">
+<title>
+DTC újraellenőrzése
+</title>
+<test1>
+<ptxt>
+Cserélje ki a HO2S érzékelőt. 
+<intxreftitleoff1 refid = "H8T40A1326013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Végezze el a DTC megerősítési eljárást és ellenőrizze a DTC-ket.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a P0139 számú hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Vége.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

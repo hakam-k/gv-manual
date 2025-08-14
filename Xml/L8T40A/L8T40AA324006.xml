@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40AA324006" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+La spia di avviso iniezione non si accende con l&apos;interruttore di accensione nella posizione ON e il motore spento.
+</title>
+<servinfosub id = "L8T40AA324006001">
+<title>
+Diagramma di cablaggio
+</title>
+<ptxt>
+Vedere 
+<intxref refid = "L8T40AA322001">Diagramma circuito cablaggio del sistema di controllo dell&apos;immobilizzatore:Modello con motore diesel</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40AA324006002">
+<title>
+Descrizione del circuito
+</title>
+<ptxt>
+Quando l&apos;interruttore di accensione è in posizione ON, l&apos;ECM trasmette il segnale di accensione al quadro strumenti per accendere la spia dell&apos;avviso iniezione e nel caso non vi siano problemi con il sistema di controllo dell&apos;immobilizzatore. Quindi il quadro strumenti accende la spia. Quando il motore viene avviato l&apos; ECM trasmette il segnale di spegnimento della spia al quadro strumenti per spegnere la spia. Quindi il quadro strumenti SPEGNE la spia dell&apos;avviso iniezione. Tuttavia, nel caso in cui ci sono problemi con il sistema di controllo dell&apos;immobilizzatore, la spia dell&apos;avviso iniezione lampeggia quando l&apos;interruttore di accensione viene portato nella posizione ON.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40AA324006003">
+<title>
+Risoluzione dei problemi
+</title>
+<diag type = "test" id = "L8T40AA324006004">
+<testgroup>
+<title>
+Controllo dell&apos;alimentazione della spia avviso iniezione
+</title>
+<test1>
+<ptxt>
+Spostare l&apos;interruttore di accensione sulla posizione ON.
+</ptxt>
+</test1>
+<question>
+Si accendono altre spie di avvertimento?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo del codice diagnostico guasti (DTC)
+</title>
+<test1>
+<ptxt>
+Controllare il modulo ECM per la presenza di DTC facendo riferimento a 
+<intxref refid = "L8T40A1144005">Controllo DTC:F9Q</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare il modulo di controllo ABS o ESP&#174; per la presenza di DTC. Per il modello ESP&#174;, fare riferimento a 
+<intxref refid = "L8T40A4604005">Controllo DTC</intxref>
+. Per il modello non-ESP&#174;, fare riferimento a 
+<intxref refid = "L8T40A4504004">Controllo DTC</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare il modulo BCM per la presenza di DTC facendo riferimento a 
+<intxref refid = "L8T40AA204005">Controllo DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sono stati rilevati DTC?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare alla tabella del diagramma di flusso diagnostico applicabile.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il quadro strumenti con uno si è certi che funzioni e ricontrollare. Se la spia dell&apos;avviso iniezione rimane spenta, sostituire l&apos;ECM con uno si è certi che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo fusibili
+</title>
+<test1>
+<ptxt>
+Spostare l&apos;interruttore di accensione sulla posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare se ci sono fusibili corrispondenti bruciati.
+</ptxt>
+</test1>
+<question>
+Ci sono fusibili bruciati?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Sostituire il fusibile bruciato e controllare la presenza di un cortocircuito.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo del circuito del filo di alimentazione della tensione del quadro strumenti
+</title>
+<test1>
+<ptxt>
+Rimuovere il quadro strumenti facendo riferimento a 
+<intxref refid = "L8T40A9306003">Rimozione e Installazione Quadro Strumenti</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare che il collegamento sia corretto ai terminali e fili del connettore quadro strumenti.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se in ordine, portare la chiavetta di accensione in posizione ON e misurare la tensione tra il terminale di alimentazione del quadro strumenti e la massa del veicolo facendo riferimento a 
+<intxref refid = "L8T40A9302001">Schema circuito quadro strumenti</intxref>
+.
+</ptxt>
+</test1>
+<question>
+È 10 &#8211; 14 V?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare l&apos;interruzione nel circuito del filo di tensione di alimentazione.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo del circuito del filo di massa del quadro strumenti
+</title>
+<test1>
+<ptxt>
+Spegnere il commutatore di avviamento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra terminale di massa del connettore misuratore multifunzione e la massa della carrozzeria del veicolo 
+<intxref refid = "L8T40A9302001">Schema circuito quadro strumenti</intxref>
+.
+</ptxt>
+</test1>
+<question>
+La resistenza è 1 &#937; o inferiore?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Sostituire il quadro strumenti con uno si è certi che funzioni e ricontrollare. Se la spia dell&apos;avviso iniezione rimane spenta, sostituire l&apos;ECM con uno si è certi che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare l&apos;interruzione o l&apos;alta resistenza alta nel circuito di massa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

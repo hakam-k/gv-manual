@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1H">
+<servcat sctnbr = "01" scnbr = "08">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1824003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Ignition System Check
+</title>
+<diag type = "test" id = "S8T40A1824003001">
+<testgroup id = "S8T40A1824003002">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1824003003">
+<title>
+Ignition spark test 1
+</title>
+<test1>
+<ptxt>
+Perform ignition spark test. 
+<intxreftitleoff1 refid = "S8T40A1824004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is test result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1824003004">
+<title>
+Ignition timing check
+</title>
+<test1>
+<ptxt>
+Check ignition timing. 
+<intxreftitleoff1 refid = "S8T40A1826005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ignition system is in good condition.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace malfunctioning part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1824003005">
+<title>
+Confirmation of malfunction-detected cylinder
+</title>
+<test1>
+<ptxt>
+Confirm any cylinder that the malfunction is detected on ignition spark test.
+</ptxt>
+</test1>
+<question>
+Are there malfunctions in all cylinders?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1824003006">
+<title>
+Ignition spark test 2
+</title>
+<test1>
+<ptxt>
+Replace spark plug in malfunction-detected cylinder with spark plug of normal cylinder.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Perform ignition spark test on spark plug newly installed in malfunction-detected cylinder. 
+<intxreftitleoff1 refid = "S8T40A1824004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is test result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace spark plug in malfunction-detected cylinder. 
+<intxreftitleoff1 refid = "S8T40A1826001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1824003007">
+<title>
+Ignition spark test 3
+</title>
+<test1>
+<ptxt>
+Replace ignition coil assembly of malfunction-detected cylinder with the ignition coil assembly of normal cylinder.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Perform ignition spark test on spark plug in malfunction-detected cylinder. 
+<intxreftitleoff1 refid = "S8T40A1824004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is test result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace ignition coil in malfunction-detected cylinder. 
+<intxreftitleoff1 refid = "S8T40A1826003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1824003008">
+<title>
+Ignition coil assembly drive circuit check
+</title>
+<test1>
+<ptxt>
+Check drive circuits of each ignition coil assembly for open, short and poor connection.
+</ptxt>
+</test1>
+<question>
+Are circuits in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace malfunctioning part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1824003009">
+<title>
+Ignition coil assembly power supply and ground circuit check
+</title>
+<test1>
+<ptxt>
+Check power supply and ground circuits of ignition coil assembly for open, short and poor connection.
+</ptxt>
+</test1>
+<question>
+Are circuits in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace malfunctioning part.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

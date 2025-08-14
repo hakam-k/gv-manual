@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A3314013" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Osztómű helyzetjelzője állandóan világít, amikor a gyújtáskapcsoló ON helyzetben van
+</title>
+<servinfosub id = "H8T40A3314013001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A3314012">Osztómű helyzetjelzője nem világít, amikor a gyújtáskapcsoló ON helyzetben van, de a motor áll:Motorosan kapcsolható típus (Osztómű kapcsolóaktuátorral)</intxref>
+, &#8220;Kapcsolási rajz&#8221;.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A3314013002">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A3314012">Osztómű helyzetjelzője nem világít, amikor a gyújtáskapcsoló ON helyzetben van, de a motor áll:Motorosan kapcsolható típus (Osztómű kapcsolóaktuátorral)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A3314013003">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A3314013004">
+<testgroup id = "H8T40A3314013005">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t, lásd: 
+<intxref refid = "H8T40A3314005">DTC ellenőrzése:Motorosan kapcsolható típus (Osztómű kapcsolóaktuátorral)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Megjelenik valamilyen hibakód?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A javításhoz hajtsa végre a DTC folyamatot, és próbálja meg újra.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A3314013006">
+<title>
+CAN kommunikációs áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört a műszeregység és a 4WD vezérlőmodul között, lásd: 
+<intxref refid = "H8T40A3314032">DTC U0073: Vezérlőmodul kommunikációs busza kikapcsolva:Motorosan kapcsolható típus (Osztómű kapcsolóaktuátorral)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van a CAN kommunikációs áramkör?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó műszeregységet, és újból ellenőrizze. Ha az osztómű helyzetjelzője még mindig nem világít, szereljen be egy bizonyosan jó 4WD vezérlőmodult, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

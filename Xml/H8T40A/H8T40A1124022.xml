@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124022" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0117 &#x002F; P0118
+</title>
+<servinfosub id = "H8T40A1124022001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.440in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.765in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0117: Hűtőfolyadék hőmérséklet érzékelő áramkörének feszültsége alacsony
+</emph>
+</ptxt>
+<ptxt>
+Az ECT-érzékelő jeláramkör kimeneti feszültsége kisebb, mint 0,15 V 5 másodpercig.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT-érzékelő és&#x002F;vagy annak áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0118: Hűtőfolyadék hőmérséklet érzékelő áramkörének feszültsége magas
+</emph>
+</ptxt>
+<ptxt>
+Az ECT-érzékelő jeláramkör kimeneti feszültsége nagyobb, mint 4,85 V 5 másodpercig.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124022002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124074">DTC P0116:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124022003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe 10 másodpercig.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124022004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124022005">
+<testgroup id = "H8T40A1124022006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124022007">
+<title>
+ECT-érzékelő áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECT-érzékelő áramkörét, lásd: 
+<intxref refid = "H8T40A1124074">DTC P0116:J24B</intxref>
+, 3. lépés.
+</ptxt>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124022008">
+<title>
+ECT-érzékelő ellenőrzés
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECT-érzékelőt. 
+<intxreftitleoff1 refid = "H8T40A1326010"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki az ECT-érzékelőt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

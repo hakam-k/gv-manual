@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1124054" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2127 &#x002F; P2128
+</title>
+<servinfosub id = "S8T40A1124054001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2127: Throttle&#x002F;Pedal Position Sensor&#x002F;Switch &#8220;E&#8221; Circuit Low Input
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of APP sensor (sub) signal circuit is lower than 0.23 V.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP sensor (sub) and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2128: Throttle&#x002F;Pedal Position Sensor&#x002F;Switch &#8220;E&#8221; Circuit High Input
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of APP sensor (sub) signal circuit is higher than 2.4 V.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1124054002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1124053">DTC P2122 &#x002F; P2123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1124054003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Turn ignition switch to ON position.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep accelerator pedal at fully depressed position for 2 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep accelerator pedal at release position for 2 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 2) through 3) for 3 times.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1124054004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1124054005">
+<testgroup id = "S8T40A1124054006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124054007">
+<title>
+Accelerator pedal assembly (with APP sensor) mounting check
+</title>
+<test1>
+<ptxt>
+Check that accelerator pedal assembly (with APP sensor) has been mounted to vehicle body properly (no pinched floor carpet, etc.).
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Reinstall accelerator pedal assembly (with APP sensor) properly. 
+<intxreftitleoff1 refid = "S8T40A1326007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124054008">
+<title>
+APP sensor (sub) power supply circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connector from accelerator pedal assembly (with APP sensor).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to electric accelerator pedal assembly (with APP sensor) connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, turn ignition switch to ON position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that voltage between APP sensor (sub) power supply circuit (B1) and ground circuit (B3) is 5 V.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124054009">
+<title>
+APP sensor (sub) power supply circuit check
+</title>
+<test1>
+<ptxt>
+Check that voltage between APP sensor (sub) power supply circuit (B1) and vehicle body ground is 5 V.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+<ptxt>
+If this DTC is detected again, substitute a known-good ECM and recheck.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124054010">
+<title>
+APP sensor (sub) power supply circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that APP sensor (sub) power supply circuit (B1) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of APP sensor (sub) power supply circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of APP sensor (sub) power supply circuit is infinity between accelerator pedal assembly (incorporated with APP sensor) connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between APP sensor (sub) power supply circuit terminal and each terminal at APP sensor connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of APP sensor (sub) power supply circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124054011">
+<title>
+APP sensor (sub) signal circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that APP sensor (sub) signal circuit (B2) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of APP sensor (sub) signal circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of APP sensor (sub) signal circuit is infinity between accelerator pedal assembly (with APP sensor) connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between APP sensor (sub) signal circuit terminal and each terminal at accelerator pedal assembly (with APP sensor) connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of APP sensor (sub) signal circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124054012">
+<title>
+APP sensor check
+</title>
+<test1>
+<ptxt>
+Check APP sensor. 
+<intxreftitleoff1 refid = "S8T40A1326008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace accelerator pedal assembly (with APP sensor).
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

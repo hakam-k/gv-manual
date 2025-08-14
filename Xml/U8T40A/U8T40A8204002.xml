@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A8204002" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Schema voor de controle van het airbagdiagnosesysteem
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Voer de 
+<intxref refid = "U8T40A8204001">Controle van het airbagdiagnosesysteem</intxref>
+ uit alvorens de diagnose volgens elk schema te beginnen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Als het meten van weerstand of spanning vereist is in dit schema, gebruik dan een testapparaat samen met een juiste aansluitingsadapter van het speciaal gereedschap (stekkerverbinding-testadapterset).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Als een controle voor een goede aansluiting is vereist, zie 
+<intxref refid = "U8T40A8204040">Onderzoek naar intermitterende contacten en slechte aansluitingen</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Bij een stroomonderbreking in de airbagbedradingsbundel of beschadiging aan de stekkerverbinding of aansluitklem, moeten de bedradingsbundel, stekkerverbindingen en aansluitklemmen als een samenstel worden vervangen.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<servinfosub id = "U8T40A8204002001">
+<title>
+Beschrijving van het stroomschema
+</title>
+<ptxt>
+<emph etype = "bold">
+Stap 1: Controleer het &#34;AIR BAG&#34;-waarschuwingslampje en de circuits.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 2: Controleer of het &#34;AIR BAG&#34;-waarschuwingslampje oplicht.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 3: Controleer of het &#34;AIR BAG&#34;-waarschuwingslampje 6 maal knippert nadat het contactslot op ON is gezet.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 4: Controleer of vroegere codes in het SDM-geheugen zijn opgeslagen. 
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 5: Controleer of huidige codes in het SDM-geheugen zijn opgeslagen. 
+</emph>
+</ptxt>
+<diag type = "test" id = "U8T40A8204002002">
+<testgroup id = "U8T40A8204002003">
+<test1>
+<ptxt>
+Controleer of de accuspanning ongeveer 11 V of meer is.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Let op het &#34;AIR BAG&#34;-waarschuwingslampje wanneer het contactslot op ON wordt gezet.
+</ptxt>
+</test1>
+<question>
+Gaat het &#34;AIR BAG&#34;-waarschuwingslampje branden wanneer het contactslot op ON wordt gezet?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A8204008">Het &#34;AIR BAG&#34;-waarschuwingslampje brandt niet.</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204002004">
+<question>
+Blijft het AIR BAG-waarschuwingslampje branden?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A8204007">Het &#34;AIR BAG&#34;-waarschuwingslampje blijft branden</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204002005">
+<question>
+Gaat het &#34;AIR BAG&#34;-waarschuwingslampje uit nadat het 6 maal geknipperd heeft?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Het circuit van het &#34;AIR BAG&#34;-waarschuwingslampje is in orde. Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Het circuit van het &#34;AIR BAG&#34;-waarschuwingslampje is in orde. Ga naar stap 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204002006">
+<ptxt>
+Lees de DTC&apos;s af volgens 
+<intxref refid = "U8T40A8204004">DTC-controle</intxref>
+.
+</ptxt>
+<question>
+Wordt &#34;GEEN CODES&#34; weergegeven op het SUZUKI-uitleesapparaat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Het airbagsysteem is in goede staat.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Er is ergens in het systeem een sporadische storing opgetreden.
+</ptxt>
+<ptxt>
+Controleer de bedradingsbundelstekker enz. die betrokken zijn bij de weergegeven DTC.
+</ptxt>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A8204040">Onderzoek naar intermitterende contacten en slechte aansluitingen</intxref>
+.
+</ptxt>
+<ptxt>
+Wis daarna de DTC&apos;s (volgens 
+<intxref refid = "U8T40A8204005">Wissen van DTC</intxref>
+.) en herhaal dit stroomschema.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204002007">
+<ptxt>
+Lees de DTC&apos;s af volgens 
+<intxref refid = "U8T40A8204004">DTC-controle</intxref>
+.
+</ptxt>
+<question>
+Wordt &#34;GEEN CODES&#34; weergegeven op het SUZUKI-uitleesapparaat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden SDM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Controleer en repareer volgens het stroomschema voor die DTC.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

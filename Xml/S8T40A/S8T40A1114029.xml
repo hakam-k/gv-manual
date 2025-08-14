@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1114029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0118: Engine Coolant Temperature Circuit High
+</title>
+<servinfosub id = "S8T40A1114029001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1114027">DTC P0116: Engine Coolant Temperature Circuit Range &#x002F; Performance:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1114029002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.205in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.985in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Voltage of ECT sensor output is more than 4.8 V for 0.5 sec continuously
+</ptxt>
+<ptxt>
+(Low engine coolant temperature (high voltage &#x002F; high resistance))		
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT sensor circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECT sensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+When DTC P0108, P0113 and P0533 are indicated together, it is possible that &#8220;GRY&#x002F;GRN&#8221; wire circuit open.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "S8T40A1114029003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and run it for 10 sec. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC and pending DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1114029004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S8T40A1110003">Precautions for DTC Troubleshooting:M16A and J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S8T40A1114029005">
+<testgroup id = "S8T40A1114029006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114001">Engine and Emission Control System Check:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114029007">
+<title>
+ECT sensor and its circuit check
+</title>
+<test1>
+<ptxt>
+Connect scan tool with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check engine coolant temp. displayed on scan tool.
+</ptxt>
+</test1>
+<question>
+Is &#8211;40 &#176;C (&#8211;40 &#176;F) indicated?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Intermittent trouble.
+</ptxt>
+<ptxt>
+Check for intermittent referring to 
+<intxref refid = "S8T40A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114029008">
+<title>
+ECT voltage check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from ECT sensor with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to ECT sensor at &#8220;PPL&#x002F;YEL&#8221; and &#8220;GRY&#x002F;GRN&#8221; wire terminals.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, then turn ON ignition switch, measure voltage between &#8220;PPL&#x002F;YEL&#8221; wire terminal of ECT sensor connector and vehicle body ground.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110040.swf" width = "90.000mm" height = "33.220mm" ver = "01" gw = "109" gh = "77"/>
+</testfigure>
+</test1>
+<question>
+Is voltage about 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114029009">
+<title>
+ECM voltage check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Remove ECM from its bracket with ECM connectors connected.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection of ECM connector at &#8220;C37-24&#8221; terminal.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, then turn ON ignition switch, measure voltage between &#8220;C37-24&#8221; wire terminal of ECM connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is voltage about 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+&#8220;PPL&#x002F;YEL&#8221; wire is open circuit. If wire and connection are OK, go to Step 5.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114029010">
+<title>
+ECT sensor harness voltage check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between &#8220;PPL&#x002F;YEL&#8221; wire terminal of ECT sensor connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is voltage about 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+&#8220;PPL&#x002F;YEL&#8221; wire is shorted to other circuit.
+</ptxt>
+<ptxt>
+If wire is OK, substitute a known-good ECM and recheck.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114029011">
+<title>
+ECT sensor harness resistance check
+</title>
+<test1>
+<ptxt>
+Measure resistance between &#8220;C37-24&#8221; terminal of ECM connector and &#8220;PPL&#x002F;YEL&#8221; wire terminal of ECT sensor connector with ignition switch turn OFF.
+</ptxt>
+</test1>
+<question>
+Is resistance below 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;PPL&#x002F;YEL&#8221; wire is high resistance circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114029012">
+<title>
+ECT sensor ground circuit check
+</title>
+<test1>
+<ptxt>
+Connect connectors to ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection of ECT sensor connector at &#8220;GRY&#x002F;GRN&#8221; wire terminal.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between &#8220;GRY&#x002F;GRN&#8221; wire terminal of ECT sensor connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is resistance below 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114029013">
+<title>
+ECT sensor ground circuit check
+</title>
+<test1>
+<ptxt>
+Measure resistance between &#8220;C37-57&#8221; terminal of ECM connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is resistance below 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+&#8220;GRY&#x002F;GRN&#8221; wire is open circuit or high resistance circuit. Poor &#8220;C37-57&#8221; connection.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Faulty ECM ground circuit. If circuit is OK, substitute a known-good ECM and recheck.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114029014">
+<title>
+ECT sensor for performance check
+</title>
+<test1>
+<ptxt>
+Check ECT sensor according to 
+<intxref refid = "S8T40A1316009">Engine Coolant Temperature (ECT) Sensor Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace ECT sensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

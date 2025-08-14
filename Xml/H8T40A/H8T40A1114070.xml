@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1114070" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2103: Fojtószelep működtető vezérlő motor áramkörének feszültsége magas
+</title>
+<servinfosub id = "H8T40A1114070001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114068">DTC P2101: Fojtószelep aktuátor vezérlőmotor áramkör tartománya &#x002F; működése:M16A és J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1114070002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+A fojtószelep működtető tápellátásának vezérlő áramköri feszültsége az előírt 5 V-nál nagyobb még akkor is, amikor a működtető vezérlőreléje kikapcsolt állapotban van.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fojtószelep működtető vezérlőrelé áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fojtószelep működtető vezérlőrelé
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1114070003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+A gyújtáskapcsoló OFF helyzetben van legalább 20 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe és ellenőrizze, van-e DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1114070004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd: 
+<intxref refid = "H8T40A1110003">DTC hibaelhárítással kapcsolatos óvintézkedések:M16A és J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H8T40A1114070005">
+<testgroup>
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működtető vezérlőrelé áramköri ellenőrzés
+</title>
+<test1>
+<ptxt>
+A gyújtáskapcsoló OFF helyzetében vegye ki a fojtószelep működtető vezérlőrelét a relétáblából.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozás a fojtószelep működtető vezérlőrelé felé a &#8220;BLU&#x002F;BLK&#8221;, &#8220;BLU&#x002F;RED&#8221;, &#8220;BLU&#x002F;ORN&#8221;és &#8220;GRN&#8221; vezetékérintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg a feszültséget az ECM csatlakozó &#8220;E23-17&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;GRN&#8221; vezeték zárlatos más áramkörrel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működtető vezérlőrelé áramköri ellenőrzés
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az ECM csatlakozó &#8220;E23-50&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;BLU&#x002F;ORN&#8221; vezeték testzárlatos.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fojtószelep működtető vezérlőrelé ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep működtető vezérlőrelét, lásd: 
+<intxref refid = "H8T40A1316018">A vezérlőrelé ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószelep működtető vezérlőrelét.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

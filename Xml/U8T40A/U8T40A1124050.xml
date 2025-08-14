@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124050" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2102 &#x002F; P2103
+</title>
+<servinfosub id = "U8T40A1124050001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2102: Lage spanning in gasklepstelregelmotorcircuit
+</emph>
+</ptxt>
+<ptxt>
+Controlespanning van het voedingscircuit van de gasklepmotor is minder dan 5 V zelfs als gasklepmotorregelrelais op ON staat (contactslot staat op ON).
+</ptxt>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gasklepmotorregelrelais en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#34;THR MOT&#34;-zekering
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2103: Hoge spanning in gasklepstelregelmotorcircuit
+</emph>
+</ptxt>
+<ptxt>
+De uitgangsspanning van het voedingscircuit van de gasklepmotor is meer dan 5 V zelfs als het gasklepmotorregelrelais op OFF staat (contactslot op OFF).
+</ptxt>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gasklepmotorregelrelais en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124050002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124050003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Zet het contactslot gedurende 10 sec op ON.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op OFF gedurende 10 sec.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124050004">
+<title>
+DTC-storingzoeken (P2102)
+</title>
+<diag type = "test" id = "U8T40A1124050005">
+<testgroup id = "U8T40A1124050006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124050007">
+<title>
+Controle circuit van het gasklepmotorregelrelais
+</title>
+<test1>
+<ptxt>
+Controleer het gasklepmotorregelrelais. 
+<intxreftitleoff1 refid = "U8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het gasklepmotorregelrelais.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124050008">
+<title>
+Controle voedingscircuit van het gasklepmotorregelrelais
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en verwijder het gasklepmotorregelrelais.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de stekker van het gasklepmotorregelrelais zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Als de verbindingen in orde zijn, controleer dan of de spanning tussen het voedingscircuit (A1 - A2) van het gasklepmotorregelrelais en de carrosseriemassa accuspanning is.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Defecte bedradingsbundel vervangen of terugplaatsen.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124050009">
+<title>
+Controle van de stuurkring van het gasklepmotorregelrelais en van het voedingscircuit van de gasklepmotor
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen los van de ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de stuurkring (A3) van het gasklepmotorregelrelais en het voedingscircuit (A4) van de gasklepmotor aan het volgende voldoen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van de stuurkring van het gasklepmotorregelrelais en gasklepvoedingscircuit is kleiner dan 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand tussen de stuurkring van het gasklepmotorregelrelais en het gaslklepvoedingscircuit en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de stuurkringaansluitklem van het gasklepmotorregelrelais en elke aansluitklem op de stekkerverbinding van het gasklepmotorregelrelais is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de aansluitklem van het gasklepmotorvoedingscircuit en elke aansluitklem op de stekkerverbinding van het gasklepmotorregelrelais is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De stuurkringspanning van het gasklepmotorregelrelais en de voedingscircuitspanning van de gasklepmotor is 0 - 1 V met het contactslot in de stand ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+<servinfosub id = "U8T40A1124050010">
+<title>
+DTC-storingzoeken (P2103)
+</title>
+<diag type = "test" id = "U8T40A1124050011">
+<testgroup id = "U8T40A1124050012">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124050013">
+<title>
+Controle gasklepmotorrregelrelais
+</title>
+<test1>
+<ptxt>
+Controleer het gasklepmotorregelrelais. 
+<intxreftitleoff1 refid = "U8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het gasklepmotorregelrelais.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124050014">
+<title>
+Controle voedingscircuit van de gasklepmotor
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of het voedingscircuit (A4) van de gasklepmotor 0 - 1 V is met het contactslot op OFF.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

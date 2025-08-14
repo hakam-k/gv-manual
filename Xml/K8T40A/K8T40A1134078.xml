@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40A1134078" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0324
+</title>
+<servinfosub id = "K8T40A1134078001">
+<title>
+Κατάσταση Ανίχνευσης Κωδικού Βλάβης και  Περιοχή Προβλήματος
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.090in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.115in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Συνθήκη ανίχνευσης κωδικού
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Περιοχή Προβλήματος
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0324: Αστοχία Συστήματος Ελέγχου Προανά&#248;λεξης
+</emph>
+</ptxt>
+<ptxt>
+Εντοπίζεται αστοχία του IC επεξεργασίας σήματος αισθητήρα προανά&#248;λεξης στον ECM.
+</ptxt>
+<ptxt>
+(λογική ανίχνευσης 2 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Αισθητήρας προανά&#248;λεξης ή και το κύκλωμά του
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40A1134078002">
+<title>
+Ηλεκτρικό Διάγραμμα
+</title>
+<ptxt>
+Ανατρέξτε στο 
+<intxref refid = "K8T40A1134030">DTC P0326 &#x002F; P0327 &#x002F; P0328 &#x002F; P0331 &#x002F; P0332 &#x002F; P0333:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40A1134078003">
+<title>
+Διαδικασία Επιβεβαίωσης Κωδικού Βλάβης DTC
+</title>
+<attention3>
+<ptxt>
+Ελέγξτε για να βεβαιωθείτε ότι οι παρακάτω συνθήκες ικανοποιούνται όταν χρησιμοποιείτε αυτή τη διαδικασία.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT &gt; 40 &#176;C (104 &#176;F)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Λειτουργήστε τον κινητήρα για 3 min. στο ρελαντί.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "K8T40A1134078004">
+<title>
+Διάγνωση Κωδικού DTC
+</title>
+<diag type = "test" id = "K8T40A1134078005">
+<testgroup id = "K8T40A1134078006">
+<question>
+Έγινε &#34;Έλεγχος του Κινητήρα και του Συστήματος Ελέγχου Εκπομπής Ρύπων&#34;;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40A1134001">Έλεγχος του Κινητήρα και του Συστήματος Ελέγχου Εκπομπής Ρύπων:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1134078007">
+<title>
+Επανέλεγχος κωδικών DTC
+</title>
+<test1>
+<ptxt>
+Διαγράψτε τον Κωδικό DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Πραγματοποιήστε την διαδικασία επιβεβαίωσης και ελέγξτε τον DTC.
+</ptxt>
+</test1>
+<question>
+Εξακολουθεί να ανιχνεύεται ο DTC P0324;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Ελέγξτε για διακοπτόμενο πρόβλημα.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1134078008">
+<title>
+Έλεγχος αισθητήρα προανά&#248;λεξης και του κυκλώματός του 
+</title>
+<test1>
+<ptxt>
+Ελέγξτε τον αισθητήρα αισθητήρα προανά&#248;λεξης και το κύκλωμά του ανατρέχοντας Βήματα 2 και 3 του 
+<intxref refid = "K8T40A1134030">DTC P0326 &#x002F; P0327 &#x002F; P0328 &#x002F; P0331 &#x002F; P0332 &#x002F; P0333:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 4.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε ή αντικαταστήστε το ελαττωματικό εξάρτημα.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1134078009">
+<title>
+Έλεγχος του κυκλώματος τρο&#248;οδοσίας και γείωσης του εγκε&#248;άλου ECM
+</title>
+<test1>
+<ptxt>
+Ελέγξτε το κύκλωμα τρο&#248;οδοσίας και το κύκλωμα γείωσης του ECM. 
+<intxreftitleoff1 refid = "K8T40A1134064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 5.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε ή αντικαταστήστε το ελαττωματικό εξάρτημα.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1134078010">
+<title>
+Επίλυση προβλημάτων των άλλων DTC εντοπίζεται την ίδια στιγμή.
+</title>
+<question>
+Ανιχνεύεται άλλος DTC;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στην διάγνωση του αντίστοιχου Κωδικού DTC.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα ECM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

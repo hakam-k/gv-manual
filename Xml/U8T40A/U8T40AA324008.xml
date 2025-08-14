@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA324008" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1701 &#x002F; B1710: Transpondercodefout 1 &#x002F; 3
+</title>
+<servinfosub id = "U8T40AA324008001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA322001">Bedradingsschakelschema van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA324008002">
+<title>
+Waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Onjuiste transpondergegevens van de transponder bij het registreren van de contactsleutel.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Transponder in het contactslot defect
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM defect
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40AA324008003">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40AA324008004">
+<testgroup>
+<question>
+Is &#34;Controle van het regelsysteem van de startblokkering&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA324001">Controle van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosecodecontrole (DTC)
+</title>
+<test1>
+<ptxt>
+Controleer de ICM op DTC&apos;s volgens 
+<intxref refid = "U8T40AA324002">DTC-controle:Model met dieselmotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wordt er een andere DTC dan B1701 en B1710 waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar het overeenkomstige stroomschema voor andere DTC&apos;s dan B1701 en B1710.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registratie van de reservecontactsleutel
+</title>
+<test1>
+<ptxt>
+Registreer de reservecontactsleutel volgens 
+<intxref refid = "U8T40AA326002">Registratie van de contactsleutel:Model met dieselmotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de contactsleutel geregistreerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang de contactsleutel die niet kan worden geregistreerd.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ICM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

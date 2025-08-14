@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40AA314001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Indításgátló vezérlőrendszer ellenőrzése
+</title>
+<diag type = "test" id = "H8T40AA314001001">
+<testgroup>
+<title>
+Indításgátló visszajelző lámpa bekapcsolásának ellenőrzés
+</title>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe a gyújtáskulccsal.
+</ptxt>
+</test1>
+<question>
+Kigyullad az indításgátló visszajelző lámpa?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314006">Indításgátló visszajelző lámpa nem gyullad ki, amikor a gyújtáskapcsoló ON helyzetben van, és a motor áll:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H8T40AA314002">DTC ellenőrzése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+P1636 vagy P1638 számú DTC-t észlelt?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Lépjen a vonatkozó DTC-diagnosztikai folyamattáblázathoz.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Indításgátló visszajelző lámpa villogásának ellenőrzés
+</title>
+<question>
+Folyamatosan villog-e az indításgátló visszajelző lámpa az 1. lépésben?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Ellenőrizze, milyen DTC-t észlelt az ECM, lásd: 
+<intxref refid = "H8T40AA314002">DTC ellenőrzése:Benzinmotoros modell</intxref>
+. Utána végezze el a hibaelhárítást, lásd a jelen fejezetben található vonatkozó folyamat-táblázatot.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Motorindítás ellenőrzése
+</title>
+<test1>
+<ptxt>
+A gyújtáskulccsal indítsa be a motort.
+</ptxt>
+</test1>
+<question>
+Elindul a motor?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<paragroup>
+<ptxt>
+Végezzen motor és emisszó szabályozó rendszer ellenőrzést.
+</ptxt>
+<ptxt>
+- M16A és J20A modellek: Lásd: 
+<intxreftitleoff1 refid = "H8T40A1114001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B modell: Lásd: 
+<intxreftitleoff1 refid = "H8T40A1124001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A modell: Lásd: 
+<intxreftitleoff1 refid = "H8T40A1134001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Indításgátló visszajelző lámpa bekapcsolva maradt ellenőrzés
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, hogy az indításgátló visszajelző lámpa égve marad-e, miután a motor beindult.
+</ptxt>
+</test1>
+<question>
+Égve marad az indításgátló visszajelző lámpa, miután a motor beindult?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314007">Indításgátló visszajelző lámpa égve marad a motor elindulása után is:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Az indításgátló vezérlőrendszer rendben van. Ezután kulcsnélküli indítórendszerrel ellátott jármű esetén lásd: 
+<intxref refid = "H8T40AA504003">Kulcsnélküli indítórendszer ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

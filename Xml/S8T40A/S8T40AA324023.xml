@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40AA324023" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1706: Immobilizer Antenna Error
+</title>
+<servinfosub id = "S8T40AA324023001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40AA322001">Immobilizer Control System Wiring Circuit Diagram:Diesel Engine Model</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40AA324023002">
+<title>
+Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Immobilizer antenna faulty
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ICM faulty
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40AA324023003">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S8T40AA324023004">
+<testgroup>
+<question>
+Was &#8220;Immobilizer Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40AA324001">Immobilizer Control System Check:Diesel Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM check
+</title>
+<test1>
+<ptxt>
+Check power and ground circuit of ICM referring to 
+<intxref refid = "S8T40AA324018">Inspection of Immobilizer Control Module (ICM) and Its Circuit:Diesel Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is power and ground circuit of ICM normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ICM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and ground circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

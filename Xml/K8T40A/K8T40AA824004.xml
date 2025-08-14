@@ -1,0 +1,1128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40AA824004" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Διάγνωση για Δίαυλο Επικοινωνίας Εκτός Λειτουργίας
+</title>
+<servinfosub id = "K8T40AA824004001">
+<title>
+Ηλεκτρικό Διάγραμμα
+</title>
+<ptxt>
+Ανατρέξτε στο 
+<intxref refid = "K8T40AA822001">Διάγραμμα Κυκλώματος Συστήματος Επικοινωνίας CAN:Μοντέλο J24B και N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40AA824004002">
+<title>
+Διαδικασία Διάγνωσης
+</title>
+<attention3>
+<ptxt>
+Πριν την εκτέλεση των βημάτων αυτής της ροής, πρέπει να εκτελέσετε το 
+<intxref refid = "K8T40AA824001">Έλεγχος Συστήματος Επικοινωνίας CAN:Μοντέλο J24B και N32A</intxref>
+.
+</ptxt>
+</attention3>
+<ptxt>
+Όταν ανιχνευτεί &#34;Δίαυλος Επικοινωνίας CAN Off&#34; σε οποιαδήποτε μονάδα ελέγχου, ή όταν δεν είναι δυνατή η επικοινωνία με οποιαδήποτε μονάδα ελέγχου χρησιμοποιώντας το διαγνωστικό εργαλείο SUZUKI (SUZUKI SDT), εκτελέστε επιθεώρηση χρησιμοποιώντας την παρακάτω διαδικασία.
+</ptxt>
+<s1>
+<ptxt>
+Συνδέστε το διαγνωστικό εργαλείο SUZUKI (SUZUKI SDT) και εμ&#248;ανίστε τον κωδικό DTC του ECM για να ελέγξετε την επικοινωνία με τον εγκέ&#248;αλο ECM. Εάν το διαγνωστικό εργαλείο αποτύχει στην επικοινωνία με τον εγκέ&#248;αλο ECM, ελέγξτε το διαγνωστικό εργαλείο SUZUKI και το καλώδιο επικοινωνίας, το κύκλωμα τρο&#248;οδοσία και γείωσης DLC.
+</ptxt>
+<ptxt>
+Εάν η επικοινωνία είναι σε καλή κατάσταση, συνεχίστε το επόμενο Βήμα.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Χρησιμοποιώντας παλμογρά&#248;ο ή τη λειτουργία παλμογρά&#248;ου του διαγνωστικού εργαλείου SUZUKI (SUZUKI SDT), παρατηρήστε και τον ακροδέκτη CAN Υψηλό (1) και τον ακροδέκτη CAN Χαμηλό (2) για την κυματομορ&#248;ή του σήματος επικοινωνίας CAN στο DLC υπό την παρακάτω συνθήκη όταν ο διακόπτης ανά&#248;λεξης βρίσκεται στη θέση ON.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Συνθήκη μέτρησης
+</title>
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ακροδέκτης μέτρησης
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: Ακροδέκτης CAN Υψηλό (1) στον ακροδέκτη γείωσης DLC (3)
+</ptxt>
+<ptxt>
+CH2: Ακροδέκτης CAN Χαμηλό (2) στον ακροδέκτη γείωσης DLC (3)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ρύθμιση παλμογρά&#248;ου
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: 1 V&#x002F;DIV., CH2: 1 V&#x002F;DIV.
+</ptxt>
+<ptxt>
+ΧΡΟΝΟΣ: 5 ms.&#x002F;DIV.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Συνθήκη μέτρησης
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Διακόπτης ανά&#248;λεξης ανοικτός
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<figure>
+<graphic graphicname = "I7V10AA81005.swf" width = "88.000mm" height = "32.106mm" ver = "02" gw = "223" gh = "74"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.703in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+[A]:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC (Όψη: [a])
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Συγκρίνετε τη κυματομορ&#248;ή σήματος που εμ&#248;ανίζεται και την κυματομορ&#248;ή που δίνεται ως 
+<intxref refid = "K8T40AA824004003">Κυματομορ&#248;ή Ανα&#248;οράς</intxref>
+. Βρείτε την πλέον παρόμοια κυματομορ&#248;ή σήματος και αναγνωρίστε το προβληματικό σύστημα και τη &#248;ύση του προβλήματος της αντίστοιχης &#34;Κυματομορ&#248;ής Ανα&#248;οράς&#34;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Με βάση το προβληματικό σύστημα που αναγνωρίστηκε και τη &#248;ύση του προβλήματος, εκτελέστε διάγνωση σύμ&#248;ωνα με 
+<intxref refid = "K8T40AA824004011">Διάγνωση βλαβών</intxref>
+.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "K8T40AA824004003">
+<title>
+Κυματομορ&#248;ή Ανα&#248;οράς
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Παρακάτω &#248;αίνονται οι κυματομορ&#248;ές που παρατηρούνται με τη λειτουργία παλμογρά&#248;ου του διαγνωστικού εργαλείου SUZUKI (SUZUKI-SDT) ως παραδείγματα για ανα&#248;ορά.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Οι κυματομορ&#248;ές στα &#34;Παραδείγματα μη κανονικών κυματομορ&#248;ών&#34; συλλέγονται ως δείγματα μεταξύ των κυματομορ&#248;ών επικοινωνίας CAN κατά την ανάκυψη της ανωμαλίας. Όμως, δεν είναι αναγκαίο να εμ&#248;ανιστεί η ίδια κυματομορ&#248;ή. Για το λόγο αυτό, για να αναγνωρίσετε το περιεχόμενο της ανωμαλίας, επιλέξτε μια κυματομορ&#248;ή που είναι η πλέον παρόμοια με την κυματομορ&#248;ή που εμ&#248;ανίζεται από το 
+<intxref refid = "K8T40AA824004005">Παραδείγματα μη κανονικών κυματομορ&#248;ών</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<topic id = "K8T40AA824004004">
+<title>
+Κανονική κυματομορ&#248;ή
+</title>
+<ptxt>
+Η τάση ανα&#248;οράς είναι 2,5 V (1) και για το σήμα CAN Υψηλό (2) και το σήμα CAN Χαμηλό (3).
+</ptxt>
+<ptxt>
+Η κυματομορ&#248;ή του σήματος CAN Υψηλό είναι 2,5 - 3,5 V και αυτή για το σήμα CAN Χαμηλό είναι 2,5 - 1,5 V.
+</ptxt>
+<ptxt>
+Για λεπτομέρειες, ανατρέξτε στο &#34;Σήμα Επικοινωνίας CAN&#34; στο 
+<intxref refid = "K8T40AA821001">Περιγρα&#248;ή Συστήματος Επικοινωνίας CAN:Μοντέλο J24B και N32A</intxref>
+.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81006.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "162" gh = "188"/>
+</figure>
+<figure>
+<title>
+Ανα&#248;ορά (διαίρεση χρόνου 50 us)
+</title>
+<graphic graphicname = "I7V10AA81007.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "158" gh = "188"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.752in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.752in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Τάση ανα&#248;οράς (2,5 V)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Σήμα CAN Χαμηλό
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Σήμα CAN Υψηλό
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</topic>
+<topic id = "K8T40AA824004005">
+<title>
+Παραδείγματα μη κανονικών κυματομορ&#248;ών
+</title>
+<subtopic id = "K8T40AA824004006">
+<title>
+Σε περίπτωση που το καλώδιο του σήματος CAN Υψηλό ή και του σήματος CAN Χαμηλό είναι βραχυκυκλωμένο με το κύκλωμα γείωσης
+</title>
+<ptxt>
+<emph etype = "bold">
+Χαρακτηριστική κυματομορ&#248;ή
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Όταν το καλώδιο σήματος CAN Υψηλό είναι βραχυκυκλωμένο με το κύκλωμα γείωσης: [A]
+</ptxt>
+<ptxt>
+Και το σήμα CAN Υψηλό και το σήμα CAN Χαμηλό είναι σταθεροποιημένα στο επίπεδο GND (0 V) (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Όταν το καλώδιο σήματος CAN Χαμηλό είναι βραχυκυκλωμένο με το κύκλωμα γείωσης: [B]
+</ptxt>
+<ptxt>
+Το επίπεδο ανα&#248;οράς και για το σήμα CAN Υψηλό και για το σήμα CAN Χαμηλό είναι το επίπεδο GND (0 V).
+</ptxt>
+<ptxt>
+Η κυματομορ&#248;ή του σήματος CAN Υψηλό ταλαντώνεται ακανόνιστα (4) μεταξύ 0 V και 3 V και αυτή του σήματος CAN Χαμηλό είναι σταθεροποιημένη στα 0 V (3).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81008.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "376" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Τάση ανα&#248;οράς (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "K8T40AA824004007">
+<title>
+Σε περίπτωση που το καλώδιο του σήματος CAN Υψηλό ή και του σήματος CAN Χαμηλό έχουν υποστεί διακοπή
+</title>
+<ptxt>
+<emph etype = "bold">
+Χαρακτηριστική κυματομορ&#248;ή
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Όταν το καλώδιο του σήματος CAN Υψηλό έχει υποστεί διακοπή: [A]
+</ptxt>
+<ptxt>
+Το επίπεδο τάσης ανα&#248;οράς του σήματος CAN Υψηλό και του σήματος CAN Χαμηλό είναι ασταθές και τείνει να δείχνει μια χαμηλότερη τιμή από αυτήν της κανονικής κατάστασης (2,5 V) (1). Επίσης, η κυματομορ&#248;ή του σήματος CAN Υψηλό ταλαντώνεται ακανόνιστα (3) αλλά αυτή του σήματος CAN Χαμηλό είναι σχεδόν σταθερή (2).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Όταν το καλώδιο του σήματος CAN Χαμηλό έχει υποστεί διακοπή: [B]
+</ptxt>
+<ptxt>
+Το επίπεδο τάσης ανα&#248;οράς του σήματος CAN Υψηλό και του σήματος CAN Χαμηλό είναι ασταθές και τείνει να δείχνει μια υψηλότερη τιμή από αυτήν της κανονικής κατάστασης (2,5 V) (4). Επίσης, η κυματομορ&#248;ή του σήματος CAN Υψηλό είναι σχεδόν σταθερή (5) αλλά αυτή του σήματος CAN Χαμηλό ταλαντώνεται ακανόνιστα (6).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81009.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+</figure>
+</subtopic>
+<subtopic id = "K8T40AA824004008">
+<title>
+Σε περίπτωση που το καλώδιο του σήματος CAN Υψηλό ή και του σήματος CAN Χαμηλό είναι βραχυκυκλωμένο με το κύκλωμα (12 V) τρο&#248;οδοσίας
+</title>
+<ptxt>
+<emph etype = "bold">
+Χαρακτηριστική κυματομορ&#248;ή
+</emph>
+</ptxt>
+<ptxt>
+Και το σήμα CAN Υψηλό και το σήμα CAN Χαμηλό είναι σταθεροποιημένα στα 12 V (2). 
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81010.swf" width = "88.000mm" height = "71.278mm" ver = "01" gw = "149" gh = "185"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.598in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Τάση ανα&#248;οράς (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "K8T40AA824004009">
+<title>
+Σε περίπτωση που το καλώδιο του σήματος CAN Υψηλό ή και του σήματος CAN Χαμηλό είναι βραχυκυκλωμένο με το κύκλωμα (5 V) τρο&#248;οδοσίας
+</title>
+<ptxt>
+<emph etype = "bold">
+Χαρακτηριστική κυματομορ&#248;ή
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Όταν το καλώδιο σήματος CAN Υψηλό είναι βραχυκυκλωμένο με το κύκλωμα (5 V) τρο&#248;οδοσίας: [A]
+</ptxt>
+<ptxt>
+Η τάση ανα&#248;οράς (1) είναι 5 V και για το σήμα CAN Υψηλό και το σήμα CAN Χαμηλό.
+</ptxt>
+<ptxt>
+Η κυματομορ&#248;ή του σήματος CAN Υψηλό ταλαντώνεται ακανόνιστα κοντά στα 5 V (3) και αυτή του σήματος CAN Χαμηλό είναι ανάμεσα στα 5 V και 2 V (4).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Όταν το καλώδιο σήματος CAN Χαμηλό είναι βραχυκυκλωμένο με το κύκλωμα (5 V) τρο&#248;οδοσίας: [B]
+</ptxt>
+<ptxt>
+Η τάση ανα&#248;οράς (5) είναι 5 V και της ίδιας &#248;άσης και για το σήμα CAN Υψηλό και για το σήμα CAN Χαμηλό και η κυματομορ&#248;ή τους ταλαντώνεται ακανόνιστα (6) μεταξύ 5 V και 2,5 V.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81011.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.673in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Τάση ανα&#248;οράς (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "K8T40AA824004010">
+<title>
+Σε περίπτωση που το καλώδιο του σήματος CAN Υψηλό και του σήματος CAN Χαμηλό είναι βραχυκυκλωμένα μεταξύ τους
+</title>
+<ptxt>
+<emph etype = "bold">
+Χαρακτηριστική κυματομορ&#248;ή
+</emph>
+</ptxt>
+<ptxt>
+Και το σήμα CAN Υψηλό και το σήμα CAN Χαμηλό είναι σταθεροποιημένα κοντά στα 2,5 V (1).
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81012.swf" width = "88.000mm" height = "70.770mm" ver = "01" gw = "149" gh = "184"/>
+</figure>
+</subtopic>
+</topic>
+</servinfosub>
+<servinfosub id = "K8T40AA824004011">
+<title>
+Διάγνωση βλαβών
+</title>
+<ptxt>
+Εκτελέστε επιθεώρηση σύμ&#248;ωνα με την παρακάτω διαδικασία διάγνωσης.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατά την εκτέλεση του &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; χρησιμοποιώντας το διαγνωστικό εργαλείο SUZUKI (SUZUKI-SDT) σε κάθε βήμα αυτής της αντιμετώπισης προβλημάτων, χρησιμοποιήστε τον παρακάτω πίνακα για να προσδιορίσετε εάν η μονάδα ελέγχου είναι σε καλή κατάσταση ή όχι.
+</ptxt>
+<ptxt>
+Επίσης, κατά την εκτέλεση του &#34;Έλεγχος Διαύλου Επικοινωνίας&#34;, μην εκτελέσετε κάποια άλλη εργασία εκτός αυτής που ανα&#248;έρεται σε αυτή την αντιμετώπιση προβλημάτων. Δια&#248;ορά, μπορεί να συμβεί το &#248;αινόμενο της αλλαγής της ένδειξης της μονάδας ελέγχου &#x002F; αισθητήρα στην οθόνη του SUZUKI-SDT ή και του χρώματος του παρασκηνίου.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.303in"/>
+<colspec colnum = "2" colname = "2" colwidth = "5.787in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Κρίση
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ένδειξη του Ελέγχου Διαύλου Επικοινωνίας
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Κανονικό
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Όλες οι συνδεδεμένες μονάδες ελέγχου &#x002F; αισθητήρες (που επικοινωνούν μέσω CAN) εμ&#248;ανίζονται και το χρώμα &#248;όντου είναι &#34;Λευκό&#34;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η παραπάνω κατάσταση παραμένει χωρίς αλλαγή κατά την παρακολούθηση για περισσότερο από 1 min..
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Αντικανονικό
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ακόμη και μια από τις συνδεδεμένες μονάδες ελέγχου &#x002F; αισθητήρες (που επικοινωνούν με το CAN) δεν εμ&#248;ανίζεται.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η ένδειξη ακόμη και μιας από τις συνδεδεμένες μονάδες ελέγχου &#x002F; αισθητήρες (που επικοινωνούν με το CAN) αλλάζει.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Το χρώμα &#248;όντου ακόμη και μιας από τις συνδεδεμένες μονάδες ελέγχου &#x002F; αισθητήρες (που επικοινωνούν μέσω CAN) γίνεται &#34;Γκρίζο&#34; ή &#34;Ανοικτό πράσινο&#34;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Το χρώμα παρασκηνίου ακόμη και μιας από τις συνδεδεμένες μονάδες ελέγχου &#x002F; αισθητήρες (που επικοινωνούν με το CAN) αλλάζει.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ο &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; δεν μπορεί να εκτελεστεί.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</item>
+<item>
+<ptxt>
+Ελέγξτε τις προδιαγρα&#248;ές του αυτοκινήτου και κατανοήστε τις μονάδες που έχουν τοποθετηθεί πριν την επιθεώρηση. Ακολούθως, εκτελέστε τη διαδικασία αντιμετώπισης προβλημάτων.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "K8T40AA824004012">
+<testgroup id = "K8T40AA824004013">
+<title>
+Έλεγχος γραμμής επικοινωνίας CAN
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Αποσυνδέστε τις &#248;ίσες όλων των μονάδων ελέγχου &#x002F; αισθητήρων που επικοινωνούν μέσω CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε για κατάλληλη σύνδεση ακροδεκτών σε κάθε ένα κύκλωμα επικοινωνίας CAN σε όλα τα &#248;ις μονάδων ελέγχου &#x002F; αισθητήρων (που επικοινωνούν με το CAN).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Εάν είναι OK, ελέγξτε κάθε ένα από τα κυκλώματα επικοινωνίας CAN για διακοπή, βραχυκύκλωμα με το κύκλωμα τρο&#248;οδοσίας, βραχυκύκλωμα με το κύκλωμα γείωσης, βραχυκύκλωμα με άλλα καλώδια επικοινωνίας CAN ή υψηλή αντίσταση, με βάση τα αποτελέσματα που λαμβάνετε από τις μετρήσεις και την αναγνώριση της &#248;ύσης του προβλήματος στα Βήματα 2) και 3) του 
+<intxref refid = "K8T40AA824004002">Διαδικασία Διάγνωσης</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση όλα τα κυκλώματα επικοινωνίας CAN;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε τη γραμμή επικοινωνίας CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40AA824004014">
+<title>
+Έλεγχος τερματικής αντίστασης CAN στο ECM
+</title>
+<test1>
+<ptxt>
+Συνδέστε το &#248;ις στον ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε την τερματική αντίσταση CAN στο ECM σύμ&#248;ωνα με τα παρακάτω.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Μοντέλο με ESP&#174;:
+</ptxt>
+<ptxt>
+Μετρήστε την αντίσταση μεταξύ των ακροδεκτών &#34;E53-43&#34; και &#34;E53-44&#34; του &#248;ις της μονάδας ελέγχου ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Μοντέλο χωρίς ESP&#174;:
+</ptxt>
+<ptxt>
+Μετρήστε την αντίσταση μεταξύ των ακροδεκτών &#34;E03-10&#34; και &#34;E03-8&#34; του &#248;ις της μονάδας ελέγχου ABS.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Είναι η αντίσταση 114 - 134 Ω;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα ECM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40AA824004015">
+<title>
+Έλεγχος τερματικής αντίστασης CAN στον πίνακα οργάνων 
+</title>
+<test1>
+<ptxt>
+Συνδέστε το &#248;ις στον πίνακα οργάνων.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Μετρήστε την αντίσταση μεταξύ των ακροδεκτών &#34;G31-1&#34; και &#34;G31-3&#34; της &#248;ίσας του ΒCM.
+</ptxt>
+</test1>
+<question>
+Είναι η αντίσταση 114 - 134 Ω;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 4.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε έναν πίνακα οργάνων που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40AA824004016">
+<title>
+Έλεγχος ECM, πίνακα οργάνων και BCM
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Συνδέστε το &#248;ις στον ΒCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Χρησιμοποιώντας ένα καλώδιο γέ&#248;υρα (1), συνδέστε τους ακροδέκτες της μονάδας ελέγχου ABS &#x002F; ESP&#174; σύμ&#248;ωνα με τα παρακάτω.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Μοντέλο με ESP&#174; [A]:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Συνδέστε το καλώδιο συντήρησης μεταξύ των ακροδεκτών &#34;E53-43&#34; και &#34;E53-42&#34; του &#248;ις μονάδας ελέγχου ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Συνδέστε το καλώδιο συντήρησης μεταξύ των ακροδεκτών &#34;E53-44&#34; και &#34;E53-45&#34; του &#248;ις μονάδας ελέγχου ESP&#174;.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Μοντέλο χωρίς ESP&#174; [B]:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Συνδέστε το καλώδιο συντήρησης μεταξύ των ακροδεκτών &#34;E03-12&#34; και &#34;E03-10&#34; της &#248;ίσας της μονάδας ελέγχου ABS.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Συνδέστε το καλώδιο συντήρησης μεταξύ των ακροδεκτών &#34;E03-6&#34; και &#34;E03-8&#34; της &#248;ίσας της μονάδας ελέγχου ABS.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80006.swf" width = "88.000mm" height = "69.147mm" ver = "01" gw = "228" gh = "179"/>
+</testfigure>
+</item>
+</list2>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Ανοίξτε το διακόπτη ανά&#248;λεξης και επιλέξτε &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; στο &#34;Έλεγχος Διαύλου&#34; για το διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε ότι η επικοινωνία CAN είναι σε κανονική κατάσταση για το ECM, τον πίνακα οργάνων και το BCM.
+</ptxt>
+</test1>
+<question>
+Είναι επικοινωνία είναι κανονική;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Μοντέλο 4WD με ενεργοποιητή σχέσης: Πηγαίνετε στο Βήμα 5.
+</ptxt>
+<ptxt>
+Μοντέλο 4WD τύπου χωρίς ενεργοποιητή σχέσης ή μοντέλο 2WD: Πηγαίνετε στο Βήμα 8.
+</ptxt>
+</paragroup>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40AA824004017">
+<title>
+Έλεγχος μονάδας ελέγχου 4WD
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Συνδέστε τη &#248;ίσα στην μονάδα ελέγχου 4WD.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ανοίξτε το διακόπτη ανά&#248;λεξης και επιλέξτε &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; στο &#34;Έλεγχος Διαύλου&#34; για το διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε ότι η επικοινωνία CAN είναι σε κανονική κατάσταση για το ECM, τον πίνακα οργάνων, το BCM, και την μονάδα ελέγχου 4WD.
+</ptxt>
+</test1>
+<question>
+Είναι επικοινωνία είναι κανονική;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Μοντέλο εκκίνησης χωρίς κλειδί: Πηγαίνετε στο Βήμα 6.
+</ptxt>
+<ptxt>
+Μοντέλο μη εκκίνησης χωρίς κλειδί με ESP&#174;: Πηγαίνετε στο Βήμα 7.
+</ptxt>
+<ptxt>
+Μοντέλο μη εκκίνησης χωρίς κλειδί χωρίς ESP&#174;: Πηγαίνετε στο Βήμα 8.
+</ptxt>
+</paragroup>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε μια μονάδα ελέγχου 4WD που γνωρίζετε ότι λειτουργεί καλά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος μονάδας ελέγχου εκκίνησης χωρίς κλειδί
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Συνδέστε τη &#248;ίσα στον εγκέ&#248;αλο εκκίνησης χωρίς κλειδί.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ανοίξτε το διακόπτη ανά&#248;λεξης και επιλέξτε &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; στο &#34;Έλεγχος Διαύλου&#34; για το διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε ότι η επικοινωνία CAN είναι σε κανονική κατάσταση για το ECM, τον πίνακα οργάνων, το BCM, την μονάδα ελέγχου 4WD και την μονάδα ελέγχου εκκίνησης χωρίς κλειδί.
+</ptxt>
+</test1>
+<question>
+Είναι επικοινωνία είναι κανονική;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Μοντέλο με ESP&#174;: Πηγαίνετε στο Βήμα 7.
+</ptxt>
+<ptxt>
+Μοντέλο χωρίς ESP&#174;: Πηγαίνετε στο Βήμα 8.
+</ptxt>
+</paragroup>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε έναν εγκέ&#248;αλο εκκίνησης χωρίς κλειδί που γνωρίζετε ότι λειτουργεί καλά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος αισθητήρα γωνίας στρο&#248;ής
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Συνδέστε τη &#248;ίσα στον αισθητήρα γωνίας στρο&#248;ής.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ανοίξτε το διακόπτη ανά&#248;λεξης και επιλέξτε &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; στο &#34;Έλεγχος Διαύλου&#34; για το διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε ότι η επικοινωνία CAN είναι σε κανονική κατάσταση για την μονάδα ελέγχου ECM, τον πίνακα οργάνων, το BCM, την μονάδα ελέγχου 4WD, την μονάδα ελέγχου εκκίνησης χωρίς κλειδί (μοντέλο εκκίνησης χωρίς κλειδί) και τον αισθητήρα γωνίας στρο&#248;ής.
+</ptxt>
+</test1>
+<question>
+Είναι επικοινωνία είναι κανονική;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 8.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Αντικαταστήστε τον αισθητήρα γωνίας στρο&#248;ής.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος μονάδας ελέγχου HVAC
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Συνδέστε τη &#248;ίσα στην μονάδα ελέγχου HVAC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ανοίξτε το διακόπτη ανά&#248;λεξης και επιλέξτε &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; στο &#34;Έλεγχος Διαύλου&#34; για το διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε ότι οι επικοινωνία CAN είναι σε κανονική κατάσταση για το ECM, τον πίνακα οργάνων, το BCM, την μονάδα ελέγχου 4WD (μοντέλο 4WD τύπου μηχανικής αλλαγής σχέσεων), την μονάδα ελέγχου εκκίνησης χωρίς κλειδί (μοντέλο εκκίνησης χωρίς κλειδί), τον αισθητήρα γωνίας στρο&#248;ής (μοντέλο με ESP&#174;) και την μονάδα ελέγχου HVAC.
+</ptxt>
+</test1>
+<question>
+Είναι επικοινωνία είναι κανονική;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Μοντέλο με Α&#x002F;Τ: Πηγαίνετε στο Βήμα 9.
+</ptxt>
+<ptxt>
+Μοντέλο με Μ&#x002F;Τ: Τοποθετήστε έναν εγκέ&#248;αλο ABS &#x002F; ESP&#174; που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</paragroup>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε έναν εγκέ&#248;αλο εκκίνησης HVAC που γνωρίζετε ότι λειτουργεί καλά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος TCM
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Συνδέστε τη &#248;ίσα στο ΤCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ανοίξτε το διακόπτη ανά&#248;λεξης και επιλέξτε &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; στο &#34;Έλεγχος Διαύλου&#34; για το διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε ότι οι επικοινωνία CAN είναι σε κανονική κατάσταση για το ECM, τον πίνακα οργάνων, το BCM, την μονάδα ελέγχου 4WD (μοντέλο 4WD τύπου μηχανικής αλλαγής σχέσεων), την μονάδα ελέγχου εκκίνησης χωρίς κλειδί (μοντέλο εκκίνησης χωρίς κλειδί), τον αισθητήρα γωνίας στρο&#248;ής (μοντέλο με ESP&#174;), μονάδα ελέγχου HVAC και το TCM.
+</ptxt>
+</test1>
+<question>
+Είναι επικοινωνία είναι κανονική;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε έναν εγκέ&#248;αλο ABS &#x002F; ESP&#174; που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα TCM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40AA824004018">
+<title>
+Έλεγχος BCM
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Αποσυνδέστε το &#248;ις από το ΒCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Χρησιμοποιώντας ένα καλώδιο γέ&#248;υρα (1), συνδέστε τους ακροδέκτες του &#248;ις BCM σύμ&#248;ωνα με τα παρακάτω.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Συνδέστε καλώδιο συντήρησης μεταξύ του ακροδέκτη &#34;G31-3&#34; και &#34;G31-4&#34; στις &#248;ίσες του BCM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Συνδέστε καλώδιο συντήρησης μεταξύ του ακροδέκτη &#34;G31-2&#34; και &#34;G31-1&#34; στις &#248;ίσες του BCM.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80005.swf" width = "88.000mm" height = "55.389mm" ver = "01" gw = "214" gh = "140"/>
+</testfigure>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Ανοίξτε το διακόπτη ανά&#248;λεξης και επιλέξτε &#34;Έλεγχος Διαύλου Επικοινωνίας&#34; στο &#34;Έλεγχος Διαύλου&#34; για το διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε ότι η επικοινωνία CAN είναι σε κανονική κατάσταση για το ECM και τον πίνακα οργάνων.
+</ptxt>
+</test1>
+<question>
+Είναι επικοινωνία είναι κανονική;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα BCM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40AA824004019">
+<title>
+Έλεγχος πίνακα οργάνων
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Αποσυνδέστε τα καλώδια συντήρησης που συνδέθηκαν στο Βήμα 4 από τη &#248;ίσα της μονάδας ελέγχου ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Αποσυνδέστε τα καλώδια γέ&#248;υρες που έχουν συνδεθεί στο Βήμα 10 από το &#248;ις BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση ΟΝ.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Παρατηρήστε την κυματομορ&#248;ή που λαμβάνεται στους ακροδέκτες &#34;G31-1&#34; και &#34;G31-3&#34; της &#248;ίσας του ΒCM.
+</ptxt>
+</test1>
+<question>
+Παρατηρείται κανονική κυματομορ&#248;ή;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα ECM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε έναν πίνακα οργάνων που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A5114052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0711: Campo di variazione &#x002F; Rendimento del circuito sensore di temperatura liquido del cambio &#8220;A&#8221;
+</title>
+<servinfosub id = "L8T40A5114052001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.089in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.116in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condizione rilevamento DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La variazione del sensore della temperatura liquido del cambio e inferiore al parametro specificato anche se il motore e stato tenuto in funzione per il periodo specificato dopo l&apos;avviamento del motore.
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 2)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensore della temperatura del liquido del cambio o del suo circuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A5114052002">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Resettare i DTC nella memoria TCM e ECM usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mettere la leva di selezione cambio su &#8220;D&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il veicolo ed aumentare la velocita a 50 km&#x002F;h (31 miglia&#x002F;h) o piu con posizione valvola a farfalla 10&#x0025;, per 30 minuti.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fermare il veicolo e spegnere l&#8217;interruttore di accensione (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ripetere una volta i punti da 3) a 5).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fermare il veicolo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllo DTC, DTC in attesa e dati freeze-frame.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A5114052003">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test">
+<testgroup>
+<question>
+E stato effettuato il &#8220;controllo del sistema A&#x002F;T&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vai a 
+<intxref refid = "L8T40A5114001">Controllo sistema A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllare il sensore temperatura liquido cambio
+</title>
+<test1>
+<ptxt>
+Controllare il sensore temperatura liquido cambio facendo riferimento a 
+<intxref refid = "L8T40A5116024">Ispezione sensore temperatura liquido trasmissione:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il risultato del controllo e soddisfacente?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Guasto intermittente o TCM difettoso. Controllare l&apos;eventuale presenza di un guasto intermittente facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+. Se OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il cablaggio dell&apos;elettrovalvola compreso il sensore di temperatura del liquido del cambio facendo riferimento a 
+<intxref refid = "L8T40A5116023">Rimozione ed installazione del sensore di temperatura del liquido di trasmissione:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

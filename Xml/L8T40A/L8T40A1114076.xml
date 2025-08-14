@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114076" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2128: Circuito input alto sensore posizione pedale (secondario)
+</title>
+<servinfosub id = "L8T40A1114076001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1114073">DTC P2122: Circuito input basso sensore posizione pedale (principale):M16A e J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1114076002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Tensione di uscita del sensore posizione pedale acceleratore (secondario) e superiore costantemente a 4,8 V per 0,5 secondi.
+</ptxt>
+<ptxt>
+(1 logica di rilevamento ciclo di guida)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito sensore (secondario) di posizione pedale acceleratore (APP)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gruppo sensore di posizione pedale acceleratore (APP)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Montaggio scorretto del gruppo sensore acceleratore (APP)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1114076003">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner controllando che il commutatore di avviamento sia in posizione OFF. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e cancellare il DTC usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tenere il pedale dell&#8217;acceleratore in posizione di minimo per 2 secondi.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tenere il pedale dell&#8217;acceleratore in posizione completamente premuta per 2 secondi.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ripetere i punti 3) e 4) per 3 volte.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllare DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1114076004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<attention3>
+<ptxt>
+Prima di eseguire questa procedura di individuazione guasto, leggere le precauzioni per l&#8217;individuazione DTC facendo riferimento a 
+<intxref refid = "L8T40A1110003">Precauzione per la risoluzione dei problemi DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "L8T40A1114076005">
+<testgroup id = "L8T40A1114076006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114001">Verifica del sistema di controllo motore e emissioni:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114076007">
+<title>
+Controllo del supporto gruppo sensore posizione pedale acceleratore (APP)
+</title>
+<test1>
+<ptxt>
+Controllare che il gruppo sensore posizione pedale acceleratore (APP) sia montato i modo corretto sul corpo del veicolo (tappetino in posizione corretta senza pizzicature, ecc.).
+</ptxt>
+</test1>
+<question>
+Va bene?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Installare nuovamente in modo corretto il gruppo sensore posizione pedale acceleratore(APP) facendo riferimento a 
+<intxref refid = "L8T40A1316006">Rimozione e installazione del sensore posizione del pedale (APP):M16A e J20A</intxref>
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114076008">
+<title>
+Controllo del sensore di posizione del pedale dell&apos;acceleratore (secondario) e del suo circuito
+</title>
+<test1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione ON, verificare che &#8220;APP&#8221; Sensore 2 Volt sia visualizzato sullo scanner.
+</ptxt>
+</test1>
+<question>
+La tensione visualizzata e 4,8 V o piu?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Guasto intermittente.
+</ptxt>
+<ptxt>
+Controllare intermittenze facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114076009">
+<title>
+Controllo della tensione ECM.
+</title>
+<test1>
+<ptxt>
+Scollegare il connettore dal gruppo sensore posizione pedale acceleratore (APP) con la chiavetta di accensione in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare che la connessione sia corretta al gruppo sensore posizione del pedale acceleratore (APP) in prossimita dei terminali dei fili &#8220;ORN&#x002F;BLU&#8221;, &#8220;BLU&#x002F;GRN&#8221; e &#8220;BLU&#x002F;YEL&#8221;.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110071.swf" width = "90.000mm" height = "33.517mm" ver = "01" gw = "168" gh = "78"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Se il risultato e corretto, misurare la tensione tra il morsetto filo &#8220;ORN&#x002F;BLU&#8221; del connettore gruppo sensore posizione pedale dell&apos;acceleratore (APP) e la massa carrozzeria veicolo, controllando che il commutatore di avviamento sia posizionato su ON.
+</ptxt>
+</test1>
+<question>
+La tensione e 4 &#8211; 6 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114076010">
+<title>
+Controllo cablaggio preassemblato
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori dal modulo ECM controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare l&#8217;esatto collegamento del connettore ECM al terminale &#8220;E23-53&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se OK, misurare la tensione tra il terminale connettore &#8220;E23-53&#8221; del connettore ECM e la massa carrozzeria veicolo con il commutatore di avviamento su ON.
+</ptxt>
+</test1>
+<question>
+La tensione e 0 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Corto a tensione sul filo &#8220;ORN&#x002F;BLU&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114076011">
+<title>
+Controllo cablaggio preassemblato
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori dal modulo ECM controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare che il collegamento del connettore ECM ai morsetti &#8220;E23-56&#8221;, &#8220;E23-53&#8221; e &#8220;E23-52&#8221; sia corretto.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se il risultato e corretto, misurare la resistenza tra il morsetto filo &#8220;BLU&#x002F;GRN&#8221; e ciascun terminale filo &#8220;WHT&#8221;, &#8220;ORN&#x002F;BLU&#8221; del connettore gruppo sensore posizione pedale dell&apos;acceleratore (APP).
+</ptxt>
+</test1>
+<question>
+Ciascuna resistenza e infinita?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il filo &#8220;BLU&#x002F;GRN&#8221; e in corto sul filo &#8220;WHT&#8221; e&#x002F;o il filo &#8220;ORN&#x002F;BLU&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114076012">
+<title>
+Controllo cablaggio preassemblato
+</title>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la tensione tra il terminale &#8220;E23-52&#8221; del connettore ECM e la massa del motore.
+</ptxt>
+</test1>
+<question>
+La tensione e 0 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Corto a tensione sul filo &#8220;BLU&#x002F;GRN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114076013">
+<title>
+Controllo del gruppo sensore posizione pedale acceleratore (APP)
+</title>
+<test1>
+<ptxt>
+Controllare ilo sensore di posizione del pedale dell&apos;acceleratore (secondario) facendo riferimento a 
+<intxref refid = "L8T40A1316007">Ispezione gruppo sensore di posizione pedale acceleratore (APP):M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+La tensione di uscita rientra nei parametri specificati?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il gruppo sensore posizione pedale acceleratore(APP)
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "9C">
+<servcat sctnbr = "09" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H8T40A9301001" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Műszeregység leírása
+</title>
+<ptxt>
+A műszeregység(1) a CAN kommunikációs rendszer vezérlőmoduljai által küldött jelek (adatok) alapján vezérlik a sebességmérő, a fordulatszámmérő, a ECT műszer figyelmeztető lámpát és a visszajelző lámpákat (az automata fényszórómagasság állító figyelmeztető lámpán (ha van), a légzsák figyelmeztető lámpán, az alacsony üzemanyagszint figyelmeztető lámpán, a ködzárófény és az irányjelző lámpán kívüli figyelmeztető lámpák) működését.
+</ptxt>
+<ptxt>
+További információért a műszeregység által fogadott CAN kommunikációs adatokról, lásd: 
+<intxref refid = "H8T40AA821001">CAN kommunikációs rendszer leírása:J24B és N32A modellek</intxref>
+, 
+<intxref refid = "H8T40AA811001">CAN kommunikációs rendszer leírása:M16A és J20A modellek</intxref>
+ vagy 
+<intxref refid = "H8T40AA831001">CAN kommunikációs rendszer leírása:F9Q modell</intxref>
+.
+</ptxt>
+<figure>
+<graphic graphicname = "I8T40A930001.swf" width = "183.000mm" height = "70.911mm" ver = "02" gw = "342" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "8" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.496in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.496in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.315in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.496in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.315in"/>
+<colspec colnum = "8" colname = "8" colwidth = "1.457in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Információs kijelző
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Mester figyelmeztető visszajelző
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+TRIP gomb
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+MODE&#x002F;ILL gomb
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<servinfosub id = "H8T40A9301001001">
+<title>
+Sebességmérő
+</title>
+<ptxt>
+Az ECM kiszámolja a jármű sebességét a kerékfordulatszám-érzékelő jele alapján és továbbítja a járműsebesség-jelet a CAN kommunikáción keresztül a műszeregységhez. Ezután a műszeregység meghajtja a sebességmérőt a járműsebesség-jel alapján.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A9301001002">
+<title>
+Fordulatszámmérő
+</title>
+<ptxt>
+Az ECM kiszámolja a motor fordulatszámát a CKP-érzékelő jele alapján és továbbítja a motorfordulatszám-jelet a CAN kommunikáción keresztül a műszeregységhez. Ezután a műszeregység meghajtja a fordulatszámmérőt a motorfordulatszám-jel alapján.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A9301001003">
+<title>
+ECT-mérő
+</title>
+<ptxt>
+Az ECM kiszámolja a hűtőfolyadék hőmérsékletet az ECT-érzékelő jele alapján és továbbítja a hűtőfolyadék hőmérséklet-jelet a CAN kommunikáción keresztül a műszeregységhez. Ezután a műszeregység meghajtja az ECT-mérőt a hűtőfolyadék hőmérséklet-jel alapján.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A9301001004">
+<title>
+Üzemanyag-szintmérő
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az üzemanyagszint-érzékelő továbbítja az üzemanyagszint-jelet a műszeregységhez. Ezen üzamanyag-szintjel felhasználásával a műszeregység kicszámolja a pillanatnyi üzemanyagszintet és megjahtja az üzemanyag-szintmérőt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ha a fennmaradó üzemanyag mennyisége kevesebb, mint 9,9 liter (20,92&#x002F;17,42 US&#x002F;Imp. pt.) (5 ajtós modell), vagy 8,3 liter (17,44&#x002F;14,52 US&#x002F;Imp. pt.) (3 ajtós modell), bekapcsol az alacsony üzemanyagszint figyelmeztető lámpa.
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "H8T40A9301001005">
+<title>
+Mester figyelmeztető visszajelző
+</title>
+<ptxt>
+A mester figyelmeztető visszajelző villog, miközben állapot üzenet jelenik meg az információs kijelzőn, hogy felhívja erre a vezető figyelmét. További részleteket lásd: 
+<intxref refid = "H8T40A9301001012">Információs kijelző üzenet táblázat</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A9301001006">
+<title>
+Információs kijelző
+</title>
+<ptxt>
+Az információs kijelző az alábbi információkat jeleníti meg az egyes képernyő területeken.
+</ptxt>
+<figure>
+<graphic graphicname = "I8T40A930002.swf" width = "88.000mm" height = "30.807mm" ver = "01" gw = "217" gh = "70"/>
+</figure>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.885in"/>
+<colspec colnum = "2" colname = "2" colwidth = "6.323in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Helyzet
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Leírás
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x005B;A&#x005D;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kapcsolási helyzet megjelenik. (A&#x002F;T esetén)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x005B;B&#x005D;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+&#8220;Pillanatnyi üzemanyagfogyasztás&#8221;, &#8220;Átlag üzemanyagfogyasztás&#8221;, &#8220;Hatótávolság&#8221;, &#8220;Átlagsebesség&#8221; vagy &#8220;Nincs kijelzés&#8221; jelenik meg minden alkalommal, ha a MODE&#x002F;ILL gombot röviden megnyomja.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Különböző állapot üzenetek jelenhetnek meg a jármű állapotaitól függően. További részleteket lásd: 
+<intxref refid = "H8T40A9301001012">Információs kijelző üzenet táblázat</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x005B;C&#x005D;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Óra modell: Óra megjelenik.
+</ptxt>
+<ptxt>
+Óra nélküli modell: &#8220;Napi-számláló A&#8221;, &#8220;Napi-számláló B&#8221; vagy &#8220;Külső levegő hőmérséklet&#8221; jelenik meg minden alkalommal, ha a TRIP gombot röviden megnyomja.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x005B;D&#x005D;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Óra modell: &#8220;Napi-számláló A&#8221;, &#8220;Napi-számláló B&#8221;, &#8220;Kilométer-számláló&#8221; vagy &#8220;Külső levegő hőmérséklet&#8221; jelenik meg minden alkalommal, a TRIP gombot röviden megnyomja.
+</ptxt>
+<ptxt>
+Óra nélküli modell: Kilométer-számláló megjelenik.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<topic id = "H8T40A9301001014">
+<title>
+Sebességváltó helyzet (A&#x002F;T modell)
+</title>
+<ptxt>
+A TCM elküldi az A&#x002F;T sebességváltó helyzet jelet a CAN kommunikáción keresztül a műszeregységnek. Ezután a műszeregység kijelzi az LCD (sebességváltó helyzet) kijelzőn a fokozatot az A&#x002F;T sebességváltó helyzet jel alapján.
+</ptxt>
+</topic>
+<topic id = "H8T40A9301001007">
+<title>
+Üzemanyagfogyasztás
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A műszeregység kiszámolja az üzemanyagfogyasztást a bizonyos idő alatt megtett futásteljesítmény és az ECM által CAN kommunikációval a műszeregységhez küldött üzemanyagfogyasztás-jel használatával és kijelzi azt az LCD (üzemanyagfogyasztás) kijelzőn.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az üzemanyagfogyasztás kijelzése választható: &#8220;pillanatnyi üzemanyagfogyasztás kijelzés&#8221; és &#8220;átlagfogyasztás kijelzés&#8221;.
+</ptxt>
+</item>
+</list1>
+</topic>
+<topic id = "H8T40A9301001009">
+<title>
+Még megtehető távolság
+</title>
+<ptxt>
+A műszeregység kiszámolja az hatótávolságot a fennmaradt üzemanyag segítségével, a bizonyos idő alatt megtett futásteljesítmény és az ECM által CAN kommunikációval a műszeregységhez küldött üzemanyagfogyasztás-jel használatával és kijelzi azt az LCD (hatótávolság) kijelzőn.
+</ptxt>
+</topic>
+<topic id = "H8T40A9301001010">
+<title>
+Átlagsebesség
+</title>
+<ptxt>
+A műszeregység kiszámolja az átlagsebességet a bizonyos idő alatt megtett futásteljesítmény és az ECM által CAN kommunikációval a műszeregységhez küldött járműsebesség-jel használatával és kijelzi azt az LCD (átlagsebesség) kijelzőn.
+</ptxt>
+</topic>
+<topic id = "H8T40A9301001008">
+<title>
+Külső levegő hőmérséklete
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A BCM kiszámolja a külső levegő hőmérsékletét a külső levegő hőmérséklet-érzékelő jelének segítségével és a külső levegő hőmérséklet jelet CAN kommunikáción keresztül a műszeregységhez küldi. Majd a műszeregység megjeleníti az LCD (külső levegő hőmérséklet) kijelzőn a pillanatnyi külső levegő hőmérsékletet a külső levegő hőmérséklet jel alapján.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A külső levegő hőmérséklet kijelzési tartománya &#8211;30 &#176;C (&#8211;22 &#176;F) - 50 &#176;C (122 &#176;F). Ha a gyújtáskapcsoló be van kapcsolva, akkor a &#8220;-- &#176;C&#8221; jelenik nem az LCD kijelzőn, amíg nem fogadja a külső levegő hőmérséklet jelet. Ha a külső levegő hőmérséklete 3 &#176;C (37,4 &#176;F), vagy ez alá esik az LCD kijelzőn megjelenik az üzenet, hogy a vezetőt figyelmeztesse a lefagyott útfelületre.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Mivel az LCD kijelzőn kijelzett érték a külső levegő hőmérséklet-érzékelő által érzékelt hőmérséklet, a pillanatnyi külső levegő hőmérséklet, amikor a fagyás jel bekapcsol feltételezhetően 0 &#176;C (32 &#176;F).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Miközben a jármű áll, vagy 30 km&#x002F;h (19 mérföld&#x002F;h) sebességnél lassabban halad, még ha a külső levegő hőmérséklete emelkedik is, a kijelzett érték nem változik.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</item>
+</list1>
+</topic>
+</servinfosub>
+<servinfosub id = "H8T40A9301001012">
+<title>
+Információs kijelző üzenet táblázat
+</title>
+<ptxt>
+Az alábbi táblázatban találhatók az információs kijelzőn megjelenő állapot üzenetek.
+</ptxt>
+<ptxt>
+A csillaggal (&#x002A;1 és &#x002A;2) ellátott üzenetek kétszer találhatók meg, a prioritásuk és a kijelzett színük változik a kijelzés állapotának függvényében.
+</ptxt>
+<ptxt>
+Ha két, vagy több üzenet érhető el, a magasabb prioritású üzenet jelenik meg először, sorrendben. Ha új üzenet érhető el, miközben üzenetek jelennek meg, egy megszakító üzenet jelentkezik és ezután a magasabb prioritású üzenet jelenik meg, sorrendben.
+</ptxt>
+<ptxt>
+A narancssárga színű üzenet folyamatosan megtalálható a kijelzőn amíg a kapcsolódó kijelző állapot fennáll és ezzel egyidőben a mester figyelmeztető visszajelző villog. Másrészről a fehér színű üzenetek 5 -7 másodpercig láthatók folyamatosan, majd eltűnnek.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.569in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.306in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.629in"/>
+<colspec colnum = "4" colname = "4" colwidth = "3.700in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Prioritás
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Üzenet
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kijelző színe
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kijelzési állapot
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+SERVICE ESP SYSTEM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+narancssárga
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ESP&#174; vezérlőmodul DTC-t érzékelt (&#x002A;3) 
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+SERVICE 4WD SYSTEM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+narancssárga
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4WD vezérlőmodul DTC-t érzékelt (kivéve C1237, C1238 és C1243)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4WD MODE-N VEHICLE CAN ROLL
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+narancssárga
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Osztómű kapcsolási helyzete &#8220;N&#8221; helyzetben
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TRANSMISSION OVERLOAD USE 4HL MODE
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+narancssárga
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az osztómű 4H helyzetben van és a forgási különbség az első és a hátsó kerekek között a meghatározott érték felett van (amikor kerék kipörgést észlel)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+5
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+BRAKE ON&#x002F;ACCEL OFF GEARSHIFT N
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Miközben az osztóműkapcsolót működteti, vagy az osztómű helyzetét kapcsolja, ha az alábbi állapotok közül bármelyik is bekövetkezik (kivéve 4H &#8596; 4HL)
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A&#x002F;T előválasztókar nem &#8220;N&#8221; helyzetben (A&#x002F;T modell)
+</ptxt>
+</item>
+<item>
+<ptxt>
+A féklámpakapcsoló ki van kapcsolva (a fékpedál nincs lenyomva).
+</ptxt>
+</item>
+<item>
+<ptxt>
+A motor jár, de nem alapjárati fordulatszámon (gázpedál lenyomva)
+</ptxt>
+</item>
+<item>
+<ptxt>
+A tengelykapcsoló-kapcsoló kikapcsolva (a tengelykapcsoló pedál nincs kinyomva) (M&#x002F;T modell)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+6
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+BRAKE ON&#x002F;ACCEL OFF CLUTCH IN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+7
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CHECK TRANSFER SWITCH POSITION (&#x002A;1)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az osztóműkapcsolót működtette vezetés közben (kivéve 4H &#8596; 4HL)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+8
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TRANSFER CASE SWITCHING
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az osztómű nem tud kapcsolni
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+9
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+PLEASE WAIT TRANSFER CASE SWITCHING
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az osztóműkapcsolót működtette vezetés közben (kivéve 4H &#8596; 4HL)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+10
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CHECK TRANSFER SWITCH POSITION (&#x002A;1)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Osztómű nem tud kapcsolni (kivéve 4H &#8596; 4HL)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Osztóműkapcsoló helyzete és az osztómű kapcsolási helyzet különbözik
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+11
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ESP OFF SWITCH WORKS ONLY IN 4HL
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ESP OFF kapcsoló megnyomva, miközben az osztómű kapcsolási helyzete &#8220;4H&#8221;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+12
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+LOW FUEL
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A fennmaradó üzemanyag mennyisége kevesebb, mint 9,9 liter (20,92&#x002F;17,42 US&#x002F;Imp&#x002F; pt.) (5 ajtós modell), vagy 8,3 liter (17,44&#x002F;14,52 US&#x002F;Imp&#x002F; pt.) (3 ajtós modell) (ezzel összefüggésben bekapcsol az alacsony üzemanyagszint figyelmeztető lámpa)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+13
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ICE POSSIBLE DRIVE WITH CARE
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A külső levegő hőmérséklete 3 &#176;C (37,4 &#176;F) alá csökkent
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+14
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DOOR OPEN (&#x002A;2)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+narancssárga
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A jármű úgy közlekedik, hogy valamelyik ajtó nyitva van
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+15
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DOOR OPEN (&#x002A;2)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+fehér
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A jármű úgy áll, hogy valamelyik ajtó nyitva van
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+16
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+LIGHTS ON
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+narancssárga
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Gyújtáskapcsoló kikapcsolt helyzetben, a világításkapcsoló HEAD, vagy CLEARANCE helyzetben és a vezető oldali ajtó nyitva van
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+17
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MAINTENANCE MODE ACTIVE
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+narancssárga
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ESP&#174; karbantartási üzemmód aktiválódott
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+18
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+HILL HOLD DISABLED
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+narancssárga
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Valamilyen meghibásodás az emelkedő tartás funkcióval
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+&#x002A;3: Kivéve C1016, C1027, C1037, C1065, C1066, C1067, C1075, C1076, C1077 és C1078.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "H8T40A9301001013">
+<title>
+Önfigyelmeztető funkció
+</title>
+<ptxt>
+A műszeregységnek önfigyelmeztető funkciója van, hogy figyelmeztessen az alábbi hibák esetén, ha ilyen hibát észlel.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.577in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.627in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Figyelmeztető funkció
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Üzemanyag-szintmérő nem jelzi az üzemanyag szintet és az alacsony üzemanyagszintre figyelmeztető lámpa villog
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Üzemanyagszint-érzékelő áramköre szakadt vagy zárlatos
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sebességmérő és fordulatszámmérő nulla helyzetet mutat
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECT-mérő nem mutatja a hűtőfolyadék hőmérsékletet
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az információs kijelző nem jelez ki
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CAN kommunikációs áramköre szakadt vagy zárlatos
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

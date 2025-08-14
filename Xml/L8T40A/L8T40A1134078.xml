@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1134078" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0324
+</title>
+<servinfosub id = "L8T40A1134078001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.090in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.115in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0324: Errore sistema controllo battito
+</emph>
+</ptxt>
+<ptxt>
+È stato rilevato un errore del IC di elaborazione segnale sensore di battito nell&apos;ECM.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C logica di rilevamento)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensore di battito e&#x002F;o il suo circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1134078002">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1134030">DTC P0326 &#x002F; P0327 &#x002F; P0328 &#x002F; P0331 &#x002F; P0332 &#x002F; P0333:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1134078003">
+<title>
+Procedura di conferma DTC
+</title>
+<attention3>
+<ptxt>
+Quando si usa questa procedura assicurarsi che le seguenti condizioni vengano soddisfatte.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT &gt; 40 &#176;C (104 &#176;F)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Far andare il motore al minimo per 3 minuti.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1134078004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A1134078005">
+<testgroup id = "L8T40A1134078006">
+<question>
+È stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1134001">Verifica del sistema di controllo motore e emissioni:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134078007">
+<title>
+Ricontrollare il DTC
+</title>
+<test1>
+<ptxt>
+Eliminare i DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Eseguire la procedura di conferma DTC e controllare il DTC.
+</ptxt>
+</test1>
+<question>
+Il DTC P0324 viene ancora rilevato?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Controllo per la presenza di un problema di intermittenza
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134078008">
+<title>
+Controllo del sensore di battito e del suo circuito.
+</title>
+<test1>
+<ptxt>
+Controllare il sensore di battito e il suo circuito in base ai punti da 2 a 3 di 
+<intxref refid = "L8T40A1134030">DTC P0326 &#x002F; P0327 &#x002F; P0328 &#x002F; P0331 &#x002F; P0332 &#x002F; P0333:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le condizioni sono buone?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire la parte difettosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134078009">
+<title>
+Controllo dei circuiti di alimentazione e massa dell&apos;ECM
+</title>
+<test1>
+<ptxt>
+Controllare il circuito di alimentazione e di massa del modulo ECM. 
+<intxreftitleoff1 refid = "L8T40A1134064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Le condizioni sono buone?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire la parte difettosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134078010">
+<title>
+Contemporaneamente è stata rilevata l&#8217;attività di individuazione guasti di altri DTC
+</title>
+<question>
+Sono stati rilevati contemporaneamente dei DTC?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare alla risoluzione dei problemi per il DTC corrispondente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

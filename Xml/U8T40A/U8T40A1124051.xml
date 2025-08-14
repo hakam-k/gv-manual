@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124051" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2111
+</title>
+<servinfosub id = "U8T40A1124051001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+P2111: Regelsysteem van de gasklepstelmotor - open geblokkeerd
+</emph>
+</ptxt>
+<ptxt>
+Bij het onderzoeken van de gasklep met contactslot op OFF sluit de gasklep NIET, zelfs als de gasklep is geopend op de voorgeschreven waarde.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gasklep
+</ptxt>
+</item>
+<item>
+<ptxt>
+TP-sensor (hoofd)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124051002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124051003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention3>
+<ptxt>
+Indien er eerder in de DTC-bevestigingsprocedure andere dan de beoogde DTC&apos;s werden waargenomen, los dan ook de eerder waargenomen DTC&apos;s op.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op OFF gedurende 20 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 1) en 2) 3 keer.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124051004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1124051005">
+<testgroup id = "U8T40A1124051006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124051007">
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</test1>
+<question>
+Worden er behalve P2111 nog andere DTC&apos;s weergegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de betrokken DTC&apos;s.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124051008">
+<title>
+Controle van het gasklephuissamenstel
+</title>
+<test1>
+<ptxt>
+Controleer de werking en de toestand van het gasklephuis. 
+<intxreftitleoff1 refid = "U8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het klephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

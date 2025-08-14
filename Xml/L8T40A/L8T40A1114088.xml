@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114088" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Controllo sistema di controllo velocita bassa ventola raffreddamento radiatore
+</title>
+<servinfosub id = "L8T40A1114088001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1114087">Controllo sistema di controllo velocita bassa ventola raffreddamento radiatore:M16A e J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1114088002">
+<title>
+Risoluzione dei problemi
+</title>
+<attention1>
+<ptxt>
+Tenere mani, attrezzi e abiti lontani dalla ventola di raffreddamento del motore per evitare il rischio di lesioni personali. La ventola e elettrica e potrebbe azionarsi indipendentemente dalla messa o meno in funzione del motore. La ventola potrebbe avviarsi automaticamente per rispondere al sensore ECT con l&apos;interruttore di accensione nella posizione &#8220;ON&#8221;.
+</ptxt>
+</attention1>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Prima di eseguire la procedura di risoluzione dei problemi, leggere 
+<intxref refid = "L8T40A1110004">Precauzioni nell&apos;ispezione del circuito ECM:M16A e J20A</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando si misura la tensione di un circuito, di una resistenza e&#x002F;o di un impulso di segnale in prossimita del connettore ECM, collegare lo speciale strumento all&apos;ECM e&#x002F;o ai connettori EM facendo riferimento a 
+<intxref refid = "L8T40A1114080">Ispezione di ECM e dei suoi circuiti:M16A e J20A</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "L8T40A1114088003">
+<testgroup id = "L8T40A1114088004">
+<question>
+Sono presenti DTC del circuito sensore ECT (DTC P0116 &#x002F; P0117 &#x002F; P0118) e&#x002F;o del circuito ventola di raffreddamento radiatore (DTC P0480)?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Andare al flusso DTC corrispondente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114088005">
+<title>
+Controllo circuito di controllo ventola raffreddamento radiatore bassa velocita
+</title>
+<test1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Avviare il motore e selezionare la modalita &#8220;DATA LIST&#8221; sullo scanner.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Riscaldare il motore fino a che la temperatura del liquido di raffreddamento e 97,5 &#176;C, 207,5 &#176;F o superiore e l&apos;interruttore A&#x002F;C si spegne (se dotato di A&#x002F;C). (Se la temperatura del liquido di raffreddamento motore non sale, controllare il sistema di raffreddamento motore o il sensore ECT.)
+</ptxt>
+</test1>
+<question>
+La ventola di raffreddamento radiatore si avvia a bassa velocita se la temperatura del liquido di raffreddamento motore ha raggiunto la temperatura sopra indicata?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Eseguire i punti da 2 a 5 di 
+<intxref refid = "L8T40A1114087">Controllo sistema di controllo velocita bassa ventola raffreddamento radiatore:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114088006">
+<title>
+Controllo circuito di controllo ventola raffreddamento radiatore alta velocita
+</title>
+<test1>
+<ptxt>
+Avviare il motore e selezionare la modalita &#8220;DATA LIST&#8221; sullo scanner.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Riscaldare il motore fino a che la temperatura del liquido di raffreddamento e 102,5 &#176;C, 216,5 &#176;F o superiore e l&apos;interruttore A&#x002F;C si spegne. (se dotato di A&#x002F;C). (Se la temperatura del liquido di raffreddamento motore non sale, controllare il sistema di raffreddamento motore o il sensore ECT.)
+</ptxt>
+</test1>
+<question>
+La ventola di raffreddamento radiatore si avvia a alta velocita se la temperatura del liquido di raffreddamento motore ha raggiunto la temperatura sopra indicata?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Il sistema di controllo velocita alta ventola raffreddamento radiatore e in buone condizioni.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Eseguire i punti da 8 a 19 nel diagramma di flusso DTC P0480.
+</ptxt>
+<ptxt>
+Se e OK, passare al punto 4.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114088007">
+<title>
+Verifica del circuito
+</title>
+<test1>
+<ptxt>
+Scollegare il rele n. 3 della ventola di raffreddamento del radiatore dalla scatola rele, con l&#8217;interruttore di accensione spento.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la tensione tra il terminale del filo &#8220;BLU&#x002F;BLK&#8221; del connettore rele n. 3 della ventola di raffreddamento radiatore e massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La tensione e 10 &#8211; 14 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il filo &#8220;BLU&#x002F;BLK&#8221; e un circuito aperto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114088008">
+<title>
+Controllo della ventola di raffreddamento radiatore
+</title>
+<test1>
+<ptxt>
+Scollegare il connettore n. 2 del motorino della ventola di raffreddamento radiatore con l&#8217;interruttore di accensione in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di avviamento su ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la tensione tra il terminale del filo &#8220;BLU&#8221; del connettore rele n. 3 della ventola di raffreddamento radiatore e massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La tensione e 0 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il filo &#8220;BLU&#8221; e in corto su un altro circuito.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114088009">
+<title>
+Verifica del circuito
+</title>
+<test1>
+<ptxt>
+Misurare la resistenza tra i terminali del filo &#8220;BLU&#8221; del connettore rele n. 3 della ventola raffreddamento radiatore e connettore n. 2 del motore ventola di raffreddamento del radiatore, con l&apos;interruttore di accensione in posizione OFF
+</ptxt>
+</test1>
+<question>
+La resistenza e inferiore a 3 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Interruzione o circuito di resistenza alta sul cavo &#8220;BLU&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114088010">
+<title>
+Verifica del circuito
+</title>
+<test1>
+<ptxt>
+Staccare il rele ventola raffreddamento radiatore n. 2 dalla scatola dei rele.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra il terminale del filo &#8220;BLK&#8221; del connettore rele n. 2 della ventola di raffreddamento radiatore e massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La resistenza e inferiore a 3 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il filo &#8220;BLK&#8221; e un circuito aperto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114088011">
+<title>
+Controllo rele ventola raffreddamento radiatore
+</title>
+<test1>
+<ptxt>
+Controllare rele ventola raffreddamento radiatore facendo riferimento a 
+<intxref refid = "L8T40A1616011">Ispezione del rele della ventola di raffreddamento del radiatore:M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il rele della ventola di raffreddamento del radiatore
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114088012">
+<title>
+Controllo ventola raffreddamento radiatore
+</title>
+<test1>
+<ptxt>
+Controllare il motorino della ventola di raffreddamento del radiatore facendo riferimento a 
+<intxref refid = "L8T40A1616010">Controllo eseguito su veicolo del motorino ventola di raffreddamento radiatore:M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire ventola raffreddamento radiatore
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

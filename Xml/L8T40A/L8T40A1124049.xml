@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1124049" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2101
+</title>
+<servinfosub id = "L8T40A1124049001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2101: Circuito controllo motore motorino farfalla Range &#x002F; Rendimento
+</emph>
+</ptxt>
+<ptxt>
+Il circuito conduttore del motorino della farfalla e in condizione di cattivo funzionamento (aperto, corto a massa o temperatura eccessiva del dispositivo).
+</ptxt>
+<ptxt>
+(1 logica di rilevamento D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motorino della farfalla e&#x002F;o il suo circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1124049002">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1124049003">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Accendere l&apos;interruttore di accensione (ON).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tenere il pedale dell&#8217;acceleratore in posizione completamente premuta per 2 secondi.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tenere il pedale dell&#8217;acceleratore in posizione completamente premuta per 2 secondi.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ripetere i punti da 2) a 3) per 3 volte.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1124049004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A1124049005">
+<testgroup id = "L8T40A1124049006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1124001">Verifica del sistema di controllo motore e emissioni:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124049007">
+<title>
+Controllo del circuito conduttore del motorino della farfalla
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione OFF e staccare i connettori dal gruppo corpo farfallato e connettori ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la connessione con il terminale del connettore al gruppo del corpo farfallato e connettori ECM sia corretta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se le connessioni sono OK, controllare che il circuito conduttore motorino farfalla (B1, B2) sia come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistenza cablaggio conduttori di ciascun circuito conduttore del motorino farfalla sia inferiore a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistenza di isolamento di ciascun circuito conduttore motorino farfalla sia infinita tra connettore gruppo corpo farfallato e la massa della carrozzeria del veicolo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistenza del cablaggio conduttori e infinita tra ciascun terminale circuito conduttore motore farfalla e ciascun terminale del connettore del gruppo corpo farfallato.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensione di circuito di ciascun circuito conduttore motorino farfalla e 0 &#8211; 1 V con il commutatore di accensione in posizione ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire il cablaggio preassemblato difettoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124049008">
+<title>
+Controllo del gruppo corpo farfallato 
+</title>
+<test1>
+<ptxt>
+Controllare il rendimento del corpo farfallato. 
+<intxreftitleoff1 refid = "L8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire l&apos;assieme corpo farfallato.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

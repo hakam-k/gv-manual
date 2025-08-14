@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A5114039" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1703: Ongeldige CAN-gegevens - TCM
+</title>
+<servinfosub id = "U8T40A5114039001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.071in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Wanneer de TCM een abnormale toestand waarneemt in het schakelhendelsignaal van de ECM, registreert de TCM DTC P1703.
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motorregelsysteem
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A5114039002">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A5114039003">
+<testgroup>
+<question>
+Werd de &#34;A&#x002F;T-systeemcontrole&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A5114001">Controle van het A&#x002F;T-systeem:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Controleer de DTC&apos;s van de ECM volgens 
+<intxref refid = "U8T40A1114003">DTC-controle:M16A and J20A</intxref>
+ of 
+<intxref refid = "U8T40A1124003">DTC-controle:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn er DTC&apos;s?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar DTC-storingzoeken van de desbetreffende DTC.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden TCM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

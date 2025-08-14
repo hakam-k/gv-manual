@@ -1,0 +1,2772 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1114005" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+DTC-táblázat
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A nem Euro OBD modell esetén néhány DTC szám, amelyeket a következő táblázatban delta (<symbol name='utri' type='chara'/>) jelzés mutat nem észlelhető az ECM-mel a jármű műszaki adataitól és a helyi rendelkezésektől függően.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Általános vizsgálókészülékkel csak az alábbi táblázatban csillag (&#x002A;) jellel feltüntetett DTC számok olvashatók.
+</ptxt>
+</item>
+<item>
+<ptxt>
+1 működési ciklus: A MIL kigyullad, amikor 1 működési ciklus közben DTC kerül észlelésre.
+</ptxt>
+</item>
+<item>
+<ptxt>
+2 működési ciklus: A MIL kigyullad, amikor ugyanolyan DTC kerül észlelésre a következő működési ciklus során is, miután a DTC már észlelésre és ideiglenesen tárolásra került az első működési ciklusban.
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#x002A;2 működési ciklus:
+</ptxt>
+<ptxt>
+A MIL felvillan vagy kigyullad. A részleteket lásd: 
+<intxref refid = "H8T40A1114039">DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304: Véletlenszerű gyújtáskimaradás észlelése &#x002F; 1. henger &#x002F; 2. henger &#x002F; 3. henger &#x002F; 4. henger gyújtáskimaradás észlelése:M16A és J20A</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.709in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.008in"/>
+<colspec colnum = "3" colname = "3" colwidth = "3.583in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.905in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC száma
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Észlelt elem
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Észlelési körülmények
+</ptxt>
+<ptxt>
+(A DTC az alábbiak észlelésekor jelenik meg)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MIL
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0010
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Vezérműtengely-helyzet aktuátor áramköre (M16A motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az olajnyomás-szabályozó szelep vezérlőjelének feszültsége a mérés szerint eltér a parancsjeltől. (Az áramkör megszakadt vagy zárlatos)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114014"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0011
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Vezérműtengely-helyzet &#8211; túl korai szelepnyitás vagy a rendszer működése (M16A motor)
+</ptxt>
+</entry>
+<entry colname = "3" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A korai szelepnyitás tényleges értéke legalább 13 másodpercig kevesebb, mint 2,1&#176; forgattyúszög, holott a korai szelepnyitás kitűzött értéke több, mint 5,6&#176; forgattyúszög, legalább 30 másodperces, 1600 ford&#x002F;perces motorfordulatszám fölötti gyorsításkor.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+vagy
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A korai szelepnyitás tényleges értéke több, mint 11,25&#176; forgattyúszög, holott az ECM késleltetésre utasít. (2 működési ciklusos észlelési logika)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114014"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0012
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Vezérműtengely-helyzet &#8211; túl késői szelepnyitás (M16A motor)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0030
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+HO2S fűtésvezérlő áramkör (1. érzékelő)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Járó motornál az A&#x002F;F-érzékelő elem ellenállása 200 másodpercen keresztül több, mint 44 &#937; annak ellenére, hogy az A&#x002F;F-érzékelő fűtőeleme az előírt időnél hosszabb ideig van bekapcsolva. Az A&#x002F;F-érzékelő nem aktív)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114016"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0031
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lambdaszonda fűtésvezérlő áramkör feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az A&#x002F;F-érzékelő fűtésvezérlő áramkörének feszültsége alacsonyabb az előírtnál az előírt időnél hosszabb ideig folyamatosan, bár az A&#x002F;F-érzékelő fűtőelem kitöltési tényezője kisebb, mint 90&#x0025; járó motor mellett. (A fűtőelem kitöltési tényező impulzusát nem érzékeli az ECM áramköre)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114016"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0032
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lambdaszonda fűtésvezérlő áramköri feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az A&#x002F;F-érzékelő fűtésvezérlő áramkörének feszültsége magasabb az előírtnál az előírt időnél hosszabb ideig folyamatosan, bár az A&#x002F;F-érzékelő fűtőelem kitöltési tényezője nagyobb, mint 10&#x0025; járó motor mellett. (A fűtőelem kitöltési tényező impulzusát nem érzékeli az ECM áramköre)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114017"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0037
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Másodlagos lambdaszonda fűtésvezérlő áramkör feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Járó motornál a HO2S-2 áramköri feszültsége 5 másodpercig folyamatosan alacsonyabb az előírtnál annak ellenére, hogy a HO2S-2 fűtőelem kitöltési tényezője kisebb, mint 75&#x0025;. (A fűtőelem kitöltési tényező impulzusát nem érzékeli a monitor jel)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114017"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0038
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Másodlagos lambdaszonda fűtésvezérlő áramkör feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Járó motornál a HO2S-2 áramköri feszültsége 5 másodpercig folyamatosan magasabb az előírtnál annak ellenére, hogy a HO2S-2 fűtőelem kitöltési tényezője nagyobb, mint 25&#x0025;. (A fűtőelem kitöltési tényező impulzusát nem érzékeli a monitor jel)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114018"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0101
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Légtömegmérő áramkör tartománya&#x002F;működése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A MAF tömege nagyobb, mint 25 g&#x002F;sec, még akkor is, ha a motor fordulatszáma kisebb, mint 900 ford&#x002F;perc, és a szívócső nyomása kisebb, mint 45 KPa (6,35 psi), illetve a TP kisebb, mint 3,0&#176;.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+vagy
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A MAF tömege kisebb, mint 4 g&#x002F;sec, még akkor is, ha a motor fordulatszáma nagyobb, mint 2500 ford&#x002F;perc, és a szívócső nyomása nagyobb, mint 50 KPa (7,25 psi), illetve a TP nagyobb, mint 15&#176;.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114019"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0102
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Légtömegmérő áramkör bemenetén a feszültség alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A MAF-érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan alacsonyabb, mint 0,15 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114020"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0103
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Légtömegmérő áramkör bemenetén a feszültség magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A MAF-érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan magasabb, mint 5 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114021"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0106
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Szívócsőbeli abszolút nyomás áramkör tartománya&#x002F;működése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A szívócsőbeli abszolút nyomás maximális és minimális értéke között kevesebb, mint 1,3 kPa (0,19 psi) a különbség, amikor a motor alapjáraton üzemel.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+vagy
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A légköri nyomás és a gyűjtőcső nyomás értéke között a különbség kevesebb, mint 33,3 kPa (4,83 psi) legalább 5 másodpercig 2000 f&#x002F;min fordulatszámon.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0107
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Szívócsőbeli abszolút nyomás áramkör alacsony bemeneti feszültség
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A szívócsőbeli abszolút nyomás érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan alacsonyabb, mint 0,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114023"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0108
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Szívócsőbeli abszolút nyomás áramkör magas bemeneti feszültség
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A szívócsőbeli abszolút nyomás érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan magasabb, mint 4,5 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114024"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0111
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Beszívott levegő hőmérséklet-érzékelő áramkör tartománya&#x002F;működése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+10 perccel a hideg motor beindítása után az IAT maximális és minimális értéke közötti különbség kevesebb, mint 0,3 &#176;C (32,5 &#176;F), miközben az ECT értéke nagyobb, mint 70 &#176;C (158 &#176;F). (az ECT értéke kisebb, mint 30 &#176;C (86 &#176;F) a motor beindításakor)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114025"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0112
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Beszívott levegő hőmérséklet-érzékelő áramkör feszültség alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az IAT-érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan alacsonyabb mint 0,2 V. (Magas beszívott levegő-hőmérséklet (alacsony feszültség &#x002F; kis ellenállás))
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114026"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0113
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Beszívott levegő hőmérséklet-érzékelő áramkör feszültség magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az IAT-érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan magasabb mint 4,8 V. (alacsony beszívott levegő-hőmérséklet (magas feszültség &#x002F; nagy ellenállás))
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114027"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0116
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hűtőfolyadék hőmérséklet áramkör tartománya&#x002F;működése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az ECT-érzékelő értéke kisebb, mint &#8211;10 &#176;C, 14 &#176;F (M16A motor esetén) vagy &#8211;5 &#176;C, 23 &#176;F (J20A motor esetén) az előírt motorterhelésnél nagyobb értéken járó motornál (fordulatszáma több, mint 1000 ford&#x002F;perc) 2 - 1116 percen keresztül (a motor indításakor fennálló ECT-től függően) a motor indításától kezdve folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114028"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0117
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hűtőfolyadék-hőmérséklet áramkör feszültség alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az ECT-érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan alacsonyabb mint 0,2 V. (Magas hűtőfolyadék-hőmérséklet (alacsony feszültség &#x002F; kis ellenállás))
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114029"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0118
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Hűtőfolyadék-hőmérséklet áramkör feszültség magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az ECT-érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan magasabb mint 4,8 V. (alacsony hűtőfolyadék-hőmérséklet (magas feszültség &#x002F; nagy ellenállás))
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114030"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0122
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelep helyzetérzékelő (főérzékelő) áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (főérzékelő) kimenő feszültsége folyamatosan alacsonyabb, mint 0,3 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0123
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelep helyzetérzékelő (főérzékelő) áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (főérzékelő) kimenő feszültsége folyamatosan magasabb, mint 4,7 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0131
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lambdaszonda áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az A&#x002F;F-érzékelő (LF&#x002B;) érintkező feszültsége alacsonyabb, mint 1,8 V vagy az A&#x002F;F-érzékelő kimenő áramerőssége alacsonyabb, mint &#8211;5 mA.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0132
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A lambdaszonda áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az A&#x002F;F-érzékelő (LF&#x002B;) érintkező feszültsége magasabb, mint 3,8 V vagy az A&#x002F;F-érzékelő kimenő áramerőssége több, mint 5 mA.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114033"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0133
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A lambdaszonda áramkörének visszajelzése lassú
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A felmelegedés után, amikor a jármű egyenletes sebességgel és alacsony motorterheléssel halad, az A&#x002F;F-érzékelő kimenet eltéréseinek integrált értéke és a rövid idejű üzemanyag-szabályozás eltérés integrált értéke közötti arány nagyobb az előírtnál.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0134
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A lambdaszonda áramköre nem működik
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+<emph>
+J20A motor:
+</emph>
+</ptxt>
+<ptxt>
+Járó motornál az A&#x002F;F-érzékelő elem ellenállása 2 másodpercen keresztül több, mint 500 &#937; annak ellenére, hogy az A&#x002F;F-érzékelő fűtőeleme 160 másodpercig van bekapcsolva. (Az A&#x002F;F-érzékelő vagy áramköre megszakadt)
+</ptxt>
+</entry>
+<entry colname = "4" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+<emph>
+M16A motor:
+</emph>
+</ptxt>
+<ptxt>
+Járó motornál az A&#x002F;F-érzékelő elem ellenállása 20 másodpercen keresztül több, mint 50 &#937; annak ellenére, hogy az érzékelő fűtőeleme 20 másodpercig van bekapcsolva. 
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114034"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0137
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A másodlagos lambdaszonda áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A HO2S-2 feszültsége az előírt időnél hosszabb ideig folyamatosan 0,4 V-nál alacsonyabb, miközben a jármű nagy motorterheléssel (nagy sebességgel) halad. Ezen kívül a HO2S-2 maximális feszültségéből kivonva a HO2S minimális feszültségét az eredmény kisebb, mint 0,2 V egy meghatározott ideig folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114034"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0138
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A másodlagos lambdaszonda áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A HO2S-2 feszültsége az előírt időnél hosszabb ideig folyamatosan 0,85 V-nál magasabb, miközben a jármű nagy motorterheléssel (nagy sebességgel) halad. Ezen kívül a HO2S-2 maximális feszültségéből kivonva a HO2S minimális feszültségét az eredmény kisebb, mint 0,2 V egy meghatározott ideig folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114089"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0139
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+O2 érzékelő áramkörének visszajelzése lassú (2. érzékelő) (M16A motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A kapcsolási idő, amikor a HO2S jeláramkör feszültsége 0,5 V-ról 0,3 V-ra változik hosszabb, mint 1,5 másodperc az üzemanyag-lezárásnál.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114035"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0140
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A másodlagos lambdaszonda áramköre nem működik
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+HO2S-2 feszültsége 0,5 másodpercig folyamatosan magasabb, mint 4,5 V a motor felmelegedése után (áramköri szakadás).
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0171
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A keverék túl szegény
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A teljes üzemanyag-szabályozás (rövid távú üzemanyag-szabályozás &#x002B; hosszú távú üzemanyag-szabályozás) tovább tart az előírt 30 - 90 másodpercnél (az ECT-től függően) folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0172
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A keverék túl dús
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A teljes üzemanyag-szabályozás (rövid távú üzemanyag-szabályozás &#x002B; hosszú távú üzemanyag-szabályozás) rövidebb ideig tart az előírt 30 - 90 másodpercnél (az ECT-től függően) folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114037"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0222
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelephelyzet-érzékelő (segédérzékelő) áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (segédérzékelő) kimenő feszültsége folyamatosan alacsonyabb, mint 0,3 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114038"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0223
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelephelyzet-érzékelő (segédérzékelő) áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (segédérzékelő) kimenő feszültsége folyamatosan magasabb, mint 4,7 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114039"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0300
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Véletlenszerű gyújtáskimaradás észlelése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Olyan gyújtási hiba észlelése, amely a katalizátor túlmelegedését okozza 200 motorfordulat során 2 vagy több hengernél. (A MIL addig villog, amíg ez a gyújtáskimaradás folyamatosan fennáll.)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+vagy
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Olyan gyújtáskimaradás észlelése, amely a károsanyag-kibocsátást hátrányosan befolyásolja 1000 motorfordulat során, 2 vagy több hengernél.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114039"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0301 &#x002F; <symbol name='utri' type='chara'/>&#x002A;P0302 &#x002F; <symbol name='utri' type='chara'/>&#x002A;P0303 &#x002F; <symbol name='utri' type='chara'/>&#x002A;P0304
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+1. henger gyújtáskimaradás észlelés
+</ptxt>
+<ptxt>
+2. henger gyújtáskimaradás észlelés
+</ptxt>
+<ptxt>
+3. henger gyújtáskimaradás észlelés
+</ptxt>
+<ptxt>
+4. henger gyújtáskimaradás észlelés
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Olyan gyújtáskimaradás észlelése, amely a katalizátor túlmelegedését okozza 200 motorfordulat során 1 hengernél. (A MIL addig villog, amíg ez a gyújtáskimaradás folyamatosan fennáll.)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+vagy
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Olyan gyújtáskimaradás észlelése, amely a károsanyag-kibocsátást hátrányosan befolyásolja 1000 motorfordulat során, 1 hengernél.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114040"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0327
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kopogásérzékelő áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A kopogásérzékelő feszültsége 0,5 másodpercig folyamatosan alacsonyabb mint 1,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114040"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0328
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kopogásérzékelő áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A kopogásérzékelő feszültsége 0,5 másodpercig folyamatosan magasabb mint 3,9 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114041"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+</ptxt>
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114042"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0335
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Forgattyústengely-helyzetérzékelő áramkör
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nincs forgattyústengely helyzetérzékelő jel 2 másodpercen keresztül még akkor sem, ha az indítómotor jel továbbításra került a motor forgatásakor.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114043"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0340
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Vezérműtengely-helyzet érzékelő áramkör
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A CMP-érzékelő impulzusszáma kevesebb, mint 20 a forgattyústengely 8 fordulata alatt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A CMP-érzékelő impulzusszáma több, mint 28 a forgattyústengely 8 fordulata alatt.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A CMP-érzékelő impulzusszáma kevesebb, mint 20 a forgattyús szög BTDC 155&#176; (M16A motor) vagy a BTDC 75&#176; (J20A motor esetén) és a forgattyús szög BTDC 5&#176; között, mialatt a forgattyústengely 8 fordulatot tesz meg a motor indításától számítva.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114044"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0401
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kipufogógáz visszakeringetésénél elégtelen áramlás észlelése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A szívócsőbeli abszolút nyomás különbsége a nyitott EGR-szelep és a zárt EGR-szelep között kisebb az előírt értéknél.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114044"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0402
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kipufogógáz visszakeringetésénél túl nagy áramlás észlelése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A szívócsőbeli abszolút nyomás különbsége a nyitott EGR-szelep és a zárt EGR-szelep között nagyobb az előírt értéknél.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114045"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0403
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kipufogógáz-visszavezetését vezérlő áramkör
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az EGR-szelep mért kimenő feszültsége 4 kimenetből legalább két kimeneten eltérő.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114046"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0420
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Katalizátor rendszer hatékonyság a küszöbérték alatt
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A felmelegedés után, amikor a jármű egyenletes sebességgel és alacsony motorterheléssel halad, a HO2S-2 kimenet eltéréseinek integrált értéke osztva az A&#x002F;F-érzékelő kimenet eltéréseinek integrált értékével arány nagyobb az előírtnál.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114047"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0443
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Benzingőzkibocsátás-csökkentő rendszer öblítésvezérlő szelep áramkör
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az EVAP-tartály ürítőszelep vezérlőjelének feszültsége a mérés szerint eltér a parancsjeltől. (Az áramkör megszakadt vagy zárlatos)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114050"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0480
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+1. ventilátor (hűtőventilátor) vezérlőáramkör
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A hűtőventilátor relé mért kimenő feszültsége eltér a parancsjeltől
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114051"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0500
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Jármű sebesség-érzékelő (VSS) hibás működése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A jármű sebesség jel nem került továbbításra, miközben az üzemanyag továbbítás szünetel lassításkor, 4 másodpercig folyamatosan, legfeljebb 3600 ford&#x002F;perc fordulatszámon.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114052"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0504
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fékkapcsoló &#8220;A&#8221;&#x002F;&#8220;B&#8221; korreláció
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fékpedál kapcsoló jele nem egyezik a féklámpakapcsoló jelével.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114053"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0532
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A&#x002F;C hűtőközeg-nyomásérzékelő áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az A&#x002F;C hűtőközeg-nyomásérzékelő jelfeszültsége 0,5 másodpercig folyamatosan kisebb, mint 0,15 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114054"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0533
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A&#x002F;C hűtőközeg-nyomásérzékelő áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az A&#x002F;C hűtőközeg-nyomásérzékelő jelfeszültsége 0,5 másodpercig folyamatosan nagyobb, mint 4,9 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114055"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0601
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Belső vezérlőmodul hibás memória-kontrollösszeg
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Adatfeljegyzési hiba vagy kontrollösszeg hiba
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114055"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0602
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Vezérlőmodul programozási hiba
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Adat programozási hiba
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114055"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P0607
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Vezérlőmodul működés
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Adat programozási hiba
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114056"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0616
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Indítómotor relé áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A motor akkor is indul, ha a jármű áll, és a motorindítási feszültségjel alacsony.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114057"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P0617
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Indítómotor relé áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az indítómotor jelfeszültsége magas 180 másodpercig, járó motor mellett.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114058"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0620
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Generátor vezérlőáramköre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az akkumulátorfeszültség magasabb, mint 14 V még úgy is, hogy a generátor vezérlés maximumra van állítva (100&#x0025;-os terhelés).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az akkumulátorfeszültség alacsonyabb, mint 12,5 V még úgy is , hogy a generátor vezérlés minimálisra van állítva (50&#x0025;-os terhelés), és az elektromos terhelés kevesebb, mint 20 A.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114059"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0625
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Generátor gerjesztőtekercs áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A generátor gerjesztőtekercs terhelése 100&#x0025; (alacsony feszültség) az előírtnál hosszabb ideig, bár a generátor vezérlése maximális mértékű (a vezérlési terhelés 100&#x0025;), vagy a generátor gerjesztőtekercs terhelése 100&#x0025; (alacsony feszültség), amikor beindul a motor.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114059"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0626
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Generátor gerjesztőtekercs áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A generátor gerjesztőtekercs terhelése 0&#x0025; (magas feszültség) az előírtnál hosszabb ideig, bár a generátor vezérlése minimális mértékű (a vezérlési terhelés 0&#x0025;).
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114060"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P0660
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Szívócső levegőszabályozó szelepének áramköre &#x002F; nyitott (J20A motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az IMT vákuum mágnesszelepének mért feszültsége eltér a parancsjeltől. (Az áramkör megszakadt vagy zárlatos)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114061"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1501
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Elektromosterhelés-érzékelő áramkörének feszültsége alacsony (J20A motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az elektromosterhelés-érzékelő áramkörének feszültsége alacsonyabb az előírtnál. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114061"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1502
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Elektromosterhelés-érzékelő áramkörének feszültsége magas (J20A motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az elektromosterhelés-érzékelő áramkörének feszültsége magasabb az előírtnál. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114062"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P1510
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ECM biztonsági áramellátás hibás működés
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Járó motornál a biztonsági tápellátás feszültség nem kerül továbbításra 5 másodpercig folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114063"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1603
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+TCM hibakód észlelése (J20A motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Amikor az ECM hibakódot fogad a TCM-től, az azt jelzi, hogy valamilyen rendellenesség történt a TCM által vezérelt érzékelők, mint például az alapjárati fordulatszám, a motor teljesítményszabályozása stb. áramköreiben és a kiszámított értékeknél, az ECM P1603 hibakódot jelez. (A TCM kiadja a hibakódot az ECM-nek, amikor a TCM nem tudja kiszámítani a motor vezérlőjelét a kapcsolásvezérléshez használt érzékelő áramköreiben fennálló működési hibák miatt.)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1674
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN kommunikáció (busz ki hiba)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA814002">CAN DTC (Nincs kommunikáció és Kommunikációs busz kikapcsolva) táblázat:M16A és J20A modellek</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114065"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P1676
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN kommunikáció (adatvételi hiba a TCM-nél)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA814002">CAN DTC (Nincs kommunikáció és Kommunikációs busz kikapcsolva) táblázat:M16A és J20A modellek</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114066"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ P1678
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN kommunikáció (adatvételi hiba a BCM-nél)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA814002">CAN DTC (Nincs kommunikáció és Kommunikációs busz kikapcsolva) táblázat:M16A és J20A modellek</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114067"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P1685
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN kommunikáció (adatvételi hiba az ABS- &#x002F; ESP&#174;-vezérlőmodulnál)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA814002">CAN DTC (Nincs kommunikáció és Kommunikációs busz kikapcsolva) táblázat:M16A és J20A modellek</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114068"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2101
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelep aktuátor vezérlőmotor áramkörének tartománya&#x002F;működése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep aktuátor mért kimenő feszültsége nem egyezik a fojtószelep aktuátor vezérlő parancsával. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114069"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2102
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelep aktuátor vezérlő motor áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep aktuátor tápellátásának vezérlő áramköri feszültsége az előírt 5 V-nál alacsonyabb még akkor is, amikor a működtető vezérlőreléje bekapcsolt állapotban van.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114070"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2103
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelep aktuátor vezérlő motor áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep aktuátor tápellátásának vezérlő áramköri feszültsége az előírt 5 V-nál nagyobb még akkor is, amikor a működtető vezérlőreléje kikapcsolt állapotban van.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114071"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2111
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelep aktuátor vezérlő rendszer &#8211; megakadt nyitott állapotban
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep alaphelyzeti nyitása több, mint 7&#176; a teljesen zárt helyzethez képest, amikor a fojtószelep diagnosztikája történik kikapcsolt gyújtáskapcsolóval. 
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114072"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2119
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelep aktuátor fojtószeleptestének tartománya&#x002F;működése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep nyitási szög mért (tényleges) értéke és a fojtószelep nyitásának számított értéke közötti különbség, ami a gázpedál nyitási szögéből és a motor működési körülményéből kerül kiszámításra, az előírtnál nagyobb, megadott ideig, folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114073"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2122
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Pedálhelyzet-érzékelő (főérzékelő) áramkörének bemeneti feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (főérzékelő) kimenő feszültsége 0,5 másodpercig folyamatosan alacsonyabb, mint 0,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114074"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2123
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Pedálhelyzet-érzékelő (főérzékelő) áramkörének bemeneti feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (főérzékelő) kimenő feszültsége 0,5 másodpercig folyamatosan magasabb, mint 4,8 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114075"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2127
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Pedálhelyzet-érzékelő (segédérzékelő) áramkörének bemeneti feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (segédérzékelő) kimenő feszültsége 0,5 másodpercig folyamatosan alacsonyabb, mint 0,2 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114076"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2128
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Pedálhelyzet-érzékelő (segédérzékelő) áramkörének bemeneti feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (segédérzékelő) kimenő feszültsége 0,5 másodpercig folyamatosan magasabb, mint 4,8 V.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114077"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2135
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Fojtószelep helyzetérzékelőjének (főérzékelő &#x002F; segédérzékelő) feszültségi korrelációja
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fojtószelep helyzetérzékelő (főérzékelő) nyitási szöge és a fojtószelep helyzetérzékelő (segédérzékelő) nyitási szöge közötti különbség az előírtnál nagyobb, meghatározott ideig, folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114078"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2138
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Pedálhelyzet-érzékelő (főérzékelő &#x002F; segédérzékelő) feszültségi korrelációja
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A gázpedál helyzetérzékelő (főérzékelő) alapján mért nyitási szög és a gázpedál helyzetérzékelő (segédérzékelő) alapján mért nyitási szög közötti különbség az előírtnál nagyobb, meghatározott ideig, folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P2195
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+O2-érzékelő jele beragadt a szegény oldalon (1. érzékelő)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Felmelegedés után, folyamatos fordulatszámon és állandó terheléssel járó motornál az A&#x002F;F-érzékelő kimenő jele magasabb, mint 0,7 V. (2 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P2196
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+O2-érzékelő jele beragadt a dús oldalon (1. érzékelő)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Felmelegedés után, folyamatos fordulatszámon és állandó terheléssel járó motornál az A&#x002F;F-érzékelő kimenő jele alacsonyabb, mint 0,2 V. (2 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114079"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2227
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Légköri nyomás áramkörének tartománya&#x002F;működése
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A légköri nyomás és a szívócsőnyomás értékének különbsége az előírtnál nagyobb a motor indítózásánál.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114079"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P2228
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Légköri nyomás áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az előírtnál alacsonyabb légköri nyomás jel észlelése.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114079"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2229
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Légköri nyomás áramkörének feszültsége magas
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az előírtnál nagyobb légköri nyomás jel észlelése.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ &#x002A;P2237
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+O2-érzékelő (HO2S) pozitív áramerősség vezérlőáramköre &#x002F; szakadás (1. érzékelő) (M16A motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Járó motornál az A&#x002F;F-érzékelő elem ellenállása 2 másodpercen keresztül több, mint 500 &#937; annak ellenére, hogy az A&#x002F;F-érzékelő fűtőeleme 160 másodpercig van bekapcsolva. (Az A&#x002F;F-érzékelő vagy áramköre megszakadt)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<intxreftitleoff refid = "H8T40A1114034"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ <symbol name='utri' type='chara'/>&#x002A;P2A01
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+O2 érzékelő áramkörének tartománya &#x002F; működése (2. érzékelő) (M16A motor)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ez a DTC akkor jelenik meg, ha teljesül a következő feltételek valamelyike.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S-2 feszültsége kisebb, mint 0,4 V a meghatározott ideig, miközben a jármű halad. Ezen kívül a HO2S-2 maximális feszültségéből kivonva a HO2S-2 minimális feszültségét az eredmény kisebb, mint 0,2 V egy meghatározott ideig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+HO2S-2 feszültsége nagyobb, mint 0,85 V a meghatározott ideig, miközben a jármű halad. Ezen kívül a HO2S-2 maximális feszültségéből kivonva a HO2S-2 minimális feszültségét az eredmény kisebb, mint 0,2 V egy meghatározott ideig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+HO2S feszültsége nagyobb, mint 0,3 V 15 másodpercig az üzemanyag-lezárás után.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2 működési ciklus
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1614
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Transzponder válasz hiba
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1615
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az azonosító kód nem került regisztrálásra (csak kulcsnélküli indítórendszerrel szerelt járművek esetén)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1616
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az azonosító kódok nem egyeznek (csak kulcsnélküli indítórendszerrel szerelt járművek esetén)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1618
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CAN kommunikációs hiba (vételi hiba a kulcsnélküli indításvezérlő modulnál) (csak kulcsnélküli indítórendszerrel szerelt járművek esetén)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1621
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Indításgátló kommunikációs vezetékének hibája
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1622
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+EEPROM-hiba
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1623
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nem regisztrált transzponder
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+<symbol name='utri' type='chara'/>P1625
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Indításgátló antenna hibája
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P1636
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Indításgátló információ-regisztrációs hiba
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P1638
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Az indításgátló információk nem egyeznek
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40AA314004">DTC-táblázat:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<servinfosub id = "H8T40A1114005001">
+<title>
+Automatikus sebességváltóval felszerelt járművek esetén
+</title>
+<ptxt>
+OBD általános vizsgálókészülék használata esetén nem csak a korábbi csillaggal (&#x002A;) jelzett ECM DTC-k kerülnek kijelzésre az OBD általános vizsgálókészüléken, hanem egyidejűleg a következő DTC-k is.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "3" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.627in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.213in"/>
+<colspec colnum = "3" colname = "3" colwidth = "2.362in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+DTC száma
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Észlelt elem
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Észlelési körülmények
+</ptxt>
+<ptxt>
+(A rendszer DTC-t küld az alábbiak észlelésekor)
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0705
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sebességváltó előválasztókar-helyzetérzékelő áramkör működési hiba (PRNDL-bemenet)
+</ptxt>
+</entry>
+<entry colname = "3" morerows = "24" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A5114005">DTC-táblázat:4 A&#x002F;T</intxref>
+.
+</ptxt>
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0707
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sebességváltó előválasztókar-helyzetérzékelő áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0712
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sebességváltó-folyadék hőmérséklet-érzékelő áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0713
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sebességváltó-folyadék hőmérséklet-érzékelő áramkörének feszültsége magas
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0717
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Bemenő jel &#x002F; turbinafordulatszám-érzékelő áramkörében nincs jel
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0722
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kihajtótengely fordulatszám-érzékelő áramkörében nincs jel
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0741
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nyomatékváltó tengelykapcsoló áramkör működése vagy megakadása kikapcsolt állásban
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0742
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nyomatékváltó tengelykapcsoló áramkör megakadás bekapcsolt állásban
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0751
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kapcsolás A-mágnestekercs (1. sz.) működés vagy megakadás kikapcsolt állásban
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0752
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kapcsolás A-mágnestekercsének (1. sz.) megakadása bekapcsolt állásban
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0756
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kapcsolás B-mágnestekercsének (2. sz.) működése vagy megakadása kikapcsolt állásban
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0757
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kapcsolás B-mágnestekercsének (2. sz.) megakadása bekapcsolt állásban
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0962
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nyomásszabályozó mágnestekercs vezérlő áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0963
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nyomásszabályozó mágnestekercs vezérlő áramkörének feszültsége magas
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0973
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kapcsolás A-mágnestekercs (1. sz.) vezérlő áramkör feszültség alacsony
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0974
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kapcsolás A-mágnestekercs (1. sz.) vezérlő áramkör feszültség magas
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0976
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kapcsolás B-mágnestekercs (2. sz.) vezérlő áramkörének feszültsége alacsony
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P0977
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Kapcsolás B-mágnestekercs (2. sz.) vezérlő áramkörének feszültsége magas
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1702
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Belső vezérlőmodul hibás memória-kontrollösszeg
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1774
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Vezérlőmodul kommunikációs busza kikapcsol
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1777
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+TCM megszakadt kommunikációja az ECM-mel (vételi hiba)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1874
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+4L kapcsoló áramkörének hibás működése (rövidzárlat)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P1875
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+4L kapcsoló áramkörének hibás működése (szakadás)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P2763
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nyomatékváltó-tengelykapcsoló nyomásszabályozó mágnestekercs vezérlő áramkör feszültség magas
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;P2764
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Nyomatékváltó-tengelykapcsoló nyomásszabályozó mágnestekercs vezérlő áramkör feszültség alacsony
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

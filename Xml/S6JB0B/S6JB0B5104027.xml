@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B5104027" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0741 &#x002F; P0742: TCC Circuit Performance or Stuck OFF &#x002F; TCC Circuit Stuck ON
+</title>
+<servinfosub id = "S6JB0B5104027001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.055in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0741:
+</emph>
+</ptxt>
+<ptxt>
+When driving vehicle with 4th or 5th gear in &#8220;D&#8221; range, difference in revolution between engine and A&#x002F;T input (input shaft speed) is larger than specification although TCM commanded TCC solenoid to turn ON.
+</ptxt>
+<ptxt>
+(2 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Mechanical malfunction of TCC solenoid valve.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Malfunction of valve body assembly.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fluid passage clogged or leaking.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Torque converter clutch malfunction.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0742:
+</emph>
+</ptxt>
+<ptxt>
+When driving vehicle with 2nd, 3rd, 4th or 5th gear in &#8220;D&#8221; range, difference in revolution between engine and A&#x002F;T input (input shaft speed) is smaller than specification although TCM commanded TCC solenoid to turn OFF.
+</ptxt>
+<ptxt>
+(2 driving cycle detection logic)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B5104027002">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When performing a road test, select a place where there is no traffic or possibility of a traffic accident and be very careful during testing to avoid occurrence of an accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Road test should be carried out with 2 persons, a driver and tester, on a level road.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Connect scan tool to DLC with ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Clear DTCs in TCM and ECM memories by using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm it up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Shift select lever to &#8220;N&#8221; and &#8220;D&#8221; range for each 10 seconds.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Drive vehicle with 5th in &#8220;D&#8221; range and lock-up ON for 20 seconds or longer referring to 
+<intxref refid = "S6JB0B5101010">Automatic Gear Shift Table</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Drive vehicle with 2nd or 3rd gear in &#8220;D&#8221; range, 15 &#8211; 20&#x0025; throttle opening and at vehicle speed of 40 km&#x002F;h (25 mile&#x002F;h).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop vehicle and turn ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 3) to 6) one time.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop vehicle.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC, pending DTC and freeze-frame data.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B5104027003">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0B5104027004">
+<testgroup id = "S6JB0B5104027005">
+<question>
+Was &#8220;A&#x002F;T System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B5104001">A&#x002F;T System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S6JB0B5104027006">
+<ptxt>
+Check TCC solenoid valve for operation referring to 
+<intxref refid = "S6JB0B5106022">Solenoid Valves (Shift Solenoid-A, Shift Solenoid-B, Shift Solenoid-E, TCC Solenoid, Pressure Control Solenoid-A, Pressure Control Solenoid-B, and Pressure Control Solenoid-C) Inspection</intxref>
+.
+</ptxt>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Clean fluid passage or replace valve body assembly.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace TCC solenoid valve.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

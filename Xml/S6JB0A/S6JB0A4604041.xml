@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A4604041" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC U1140: Lost Communication with BCM (Reception Error)
+</title>
+<servinfosub id = "S6JB0A4604041001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0A4604038">DTC U1101: Lost Communication with TCM (Reception Error)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A4604041002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+BCM message data is missing from CAN communication.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN communication circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174; control module
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0A4604041003">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0A4604041004">
+<testgroup>
+<question>
+Was &#8220;Electronic Stability Program Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0A4604001">Electronic Stability Program Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check for ESP&#174;
+</title>
+<test1>
+<ptxt>
+Check DTC for ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Is DTC U1140 and DTC U1073 detected together?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0A4504019">DTC U1073: Control Module Communication Bus Off (Petrol Engine Model)</intxref>
+ for troubleshooting.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check for BCM
+</title>
+<test1>
+<ptxt>
+Check DTC for BCM.
+</ptxt>
+</test1>
+<question>
+Is DTC U1073 detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0AA204013">DTC U1073 (No. 1073): Control Module Communication Bus Off</intxref>
+ for troubleshooting.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check each control module connectors
+</title>
+<test1>
+<ptxt>
+Check connection of connectors of all control modules communicating by means of CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check DTC for ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Is DTC U1140 detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check for intermittent trouble referring to 
+<intxref refid = "S6JB0A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connectors of ESP&#174; control module and BCM communicating by means of CAN.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit between ESP&#174; control module and BCM opened, shorted or high resistance?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Repair or replace the CAN communication line.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors of all control modules communicating by means of CAN.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit between disconnected control modules (other than ESP&#174; control module and BCM) opened, shorted or high resistance?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace the CAN communication line.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check for ESP&#174;
+</title>
+<test1>
+<ptxt>
+Connect connectors of disconnected control modules communicating by means of CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect each connector.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (for A&#x002F;T model)
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD control module (if equipped)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Keyless start control module (if equipped)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Steering angle sensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Immobilizer control modules
+</ptxt>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Check DTC for ESP&#174;.
+</ptxt>
+</test1>
+<question>
+Is DTC U1140 detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Check ESP&#174; control module power and ground circuit. If circuits are OK, substitute a known-good ESP&#174; hydraulic unit &#x002F; control module assembly and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check applicable control module power and ground circuit. If circuit is OK, substitute a known-good applicable control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

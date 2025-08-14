@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124056" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2138
+</title>
+<servinfosub id = "U8T40A1124056001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2138: Spanningscorrelatie gasklep-&#x002F;pedaalpositiesensor&#x002F;-schakelaar &#34;D&#34;&#x002F;&#34;E&#34;
+</emph>
+</ptxt>
+<ptxt>
+Het verschil tussen APP (hoofd) en APP (secundair) is hoger dan de vereiste waarde.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP-sensor en&#x002F;of het bijbehorende circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124056002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124053">DTC P2122 &#x002F; P2123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124056003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention3>
+<ptxt>
+Indien er eerder in de DTC-bevestigingsprocedure andere dan de beoogde DTC&apos;s werden waargenomen, los dan ook de eerder waargenomen DTC&apos;s op.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Houd het gaspedaal gedurende 2 sec volledig ingedrukt
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laat het gaspedaal gedurende 2 sec los
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 2) en 3) 3 keer.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124056004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1124056005">
+<testgroup id = "U8T40A1124056006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124056007">
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</test1>
+<question>
+Worden er behalve P2138 nog andere DTC&apos;s weergegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de betrokken DTC&apos;s.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124056008">
+<title>
+Controle van de bedradingsbundel
+</title>
+<test1>
+<ptxt>
+Controleer het APP-sensorcircuit (hoofd en sub) als volgt.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP-sensorcircuit (hoofd): Zie stap 3) tot en met 6) van 
+<intxref refid = "U8T40A1124053">DTC P2122 &#x002F; P2123:J24B</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+APP-sensorcircuit (sub): Zie stap 3) tot en met 6) van 
+<intxref refid = "U8T40A1124054">DTC P2127 &#x002F; P2128:J24B</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124056009">
+<title>
+Controle APP-sensor
+</title>
+<test1>
+<ptxt>
+Controleer de APP-sensor. 
+<intxreftitleoff1 refid = "U8T40A1326008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het gaspedaalsamenstel (geïntegreerd met de APP-sensor).
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

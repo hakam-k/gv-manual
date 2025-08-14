@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0E8204010" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "0" modify = "0">
+<title>
+&#8220;AIR BAG&#8221; Warning Lamp Cannot Indicate Flashing Pattern of DTC (If Equipped with &#8220;AIR BAG&#8221; Monitor Coupler)
+</title>
+<servinfosub id = "S5JB0E8204010001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0E8204009">&#8220;AIR BAG&#8221; Warning Lamp Flashes</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Be sure to observe instructions under CAUTION in &#8220;Air Bag Diagnostic System Check Flow&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "S5JB0E8204010002">
+<title>
+Flow Test Description
+</title>
+<ptxt>
+<emph etype = "bold">
+Step 1: Check &#8220;AIR BAG&#8221; monitor coupler.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 2: Check for open circuit in air bag diagnosis switch circuit.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0E8204010003">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S5JB0E8204010004">
+<testgroup>
+<ptxt>
+Inspect connection between diagnostic switch terminal on &#8220;AIR BAG&#8221; monitor coupler and body ground with service wire.
+</ptxt>
+<question>
+Are they connected securely with service wire?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Properly connect diagnostic switch terminal on &#8220;AIR BAG&#8221; monitor coupler and body ground with service wire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Disconnect SDM connector from SDM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection at &#8220;PPL&#8221; wire (&#8220;G47-14&#8221; terminal or &#8220;G46-12&#8221; terminal of SDM connector and &#8220;G34-2&#8221; terminal of &#8220;AIR BAG&#8221; monitor coupler (1)) terminals.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, then measure resistance between &#8220;G47-14&#8221; terminal &#x005B;A&#x005D; or &#8220;G46-12&#8221; terminal &#x005B;B&#x005D; and &#8220;G34-2&#8221; terminal.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B005">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820021.swf" width = "90.000mm" height = "58.564mm" ver = "02" gw = "210" gh = "149"/>
+</testfigure>
+</test1>
+<question>
+Is resistance 1 &#937; or more?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Check &#8220;PPL&#8221; wire terminals. If OK, repair high resistance or open in &#8220;PPL&#8221; wire circuit.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known good SDM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Upon completion of inspection and repair work, perform the following items.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Reconnect all air bag system components and ensure all components are properly mounted.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repeat 
+<intxref refid = "S5JB0E8204001">Air Bag Diagnostic System Check</intxref>
+ to confirm that the trouble has been corrected.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

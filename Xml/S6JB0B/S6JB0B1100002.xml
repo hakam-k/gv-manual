@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "0">
+<servinfo servinfosgmlid = "S6JB0B1100002" svcinfotypenbr = "01" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Precautions in Diagnosing Trouble 
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Don&#8217;t disconnect couplers from ECM, battery cable from battery, ECM ground wire harness from engine or main fuse before confirming diagnostic information (DTC, freeze frame data, etc.) stored in ECM memory. Such disconnection will erase memorized information in ECM memory.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Diagnostic information stored in ECM memory can be cleared as well as checked by using SUZUKI scan tool or OBD generic scan tool. Before using scan tool, read its Operator&#8217;s (Instruction) Manual carefully to have good understanding as to what functions are available and how to use it. 
+</ptxt>
+</item>
+<item>
+<ptxt>
+It is indistinguishable which module turns on MIL because not only ECM but also TCM (A&#x002F;T model) turns on MIL (For details of on-board diagnostic system for A&#x002F;T model, refer to 
+<intxref refid = "S6JB0B5101008">On-Board Diagnostic System Description</intxref>
+). Therefore, check both ECM and TCM (A&#x002F;T model) for DTC when MIL lights on. When checking ECM for DTC, keep in mind that DTC is displayed on the scan tool as follows depending on the scan tool used. 
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+SUZUKI scan tool displays DTC detected by ECM. 
+</ptxt>
+</item>
+<item>
+<ptxt>
+OBD generic scan tool displays DTC detected by each of ECM and TCM (A&#x002F;T model) simultaneously.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Priorities for diagnosing troubles
+</ptxt>
+<ptxt>
+If two or more diagnostic trouble codes (DTCs) are stored, proceed to the flow of the DTC which has detected earliest in the order and follow the instruction in that table.
+</ptxt>
+<ptxt>
+If no instructions are given, troubleshoot diagnostic trouble codes according to the following priorities.
+</ptxt>
+</item>
+<list2 type = "ordered">
+<item>
+<ptxt>
+Diagnostic trouble codes (DTCs) other than DTC P0171 &#x002F; P0172 &#x002F; P0174 &#x002F; P0175 (Fuel system too lean&#x002F;too rich), DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306 (Misfire detected) and DTC P0401 &#x002F; P0402 (EGR flow malfunction)
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC P0171 &#x002F; P0172 &#x002F; P0174 &#x002F; P0175 (Fuel system too lean&#x002F;too rich) and DTC P0401 &#x002F; P0402 (EGR flow malfunction)
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306 (Misfire detected)
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Be sure to read 
+<intxref refid = "S6JB0B0000005">Precaution for CAN Communication System</intxref>
+ before inspection and observe what is written there.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM Replacement
+</ptxt>
+<ptxt>
+When substituting a known good ECM, check for the following conditions. Neglecting this check may cause damage to known good ECM.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Resistance value of all relays, actuators is as specified respectively.
+</ptxt>
+</item>
+<item>
+<ptxt>
+MAF sensor MAP sensor, TP sensor and A&#x002F;C refrigerant pressure sensor are in good condition and none of power circuits of these sensors is shorted to ground.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Communication of ECM, BCM, combination meter, keyless start control module (if equipped), ABS or ESP&#174; control module, 4WD control module (if equipped), steering angle sensor (ESP&#174; model) and TCM (A&#x002F;T model), is established by CAN (Controller Area Network). (For more detail of CAN communication for ECM, refer to 
+<intxref refid = "S6JB0B1101009">CAN Communication System Description</intxref>
+). Therefore, handle CAN communication line with care referring to 
+<intxref refid = "S6JB0B0000005">Precaution for CAN Communication System</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Immobilizer transponder code registration after replacing ECM.
+</ptxt>
+<ptxt>
+When ECM is replaced with new one or with another one, make sure to register immobilizer transponder code to ECM correctly according to 
+<intxref refid = "S6JB0BA306003">Procedure after ECM Replacement</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

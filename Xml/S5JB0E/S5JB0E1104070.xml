@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0E1104070" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC P2103: Throttle Actuator Control Motor Circuit High
+</title>
+<servinfosub id = "S5JB0E1104070001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0E1104068">DTC P2101: Throttle Actuator Control Motor Circuit Range &#x002F; Performance</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0E1104070002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Power supply voltage of throttle actuator control circuit is more than 5 V for specified time even if throttle actuator control relay is turned off.
+</ptxt>
+<ptxt>
+(1 driving detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Throttle actuator control relay circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Throttle actuator control relay
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0E1104070003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ignition switch turned OFF for 20 sec. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and check DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "S5JB0E1104070004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S5JB0E1100003">Precautions For DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S5JB0E1104070005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S5JB0E1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle actuator control relay circuit check
+</title>
+<test1>
+<ptxt>
+Remove throttle actuator control relay from relay box with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to throttle actuator control relay at &#8220;BLU&#x002F;BLK&#8221;, &#8220;BLU&#x002F;RED&#8221;, &#8220;BLU&#x002F;ORN&#8221; and &#8220;GRN&#8221; wire terminals.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between engine ground and &#8220;E23-17&#8221; terminal of ECM connector.
+</ptxt>
+</test1>
+<question>
+Is voltage 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;GRN&#8221; wire is shorted to other circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle actuator control relay circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between engine ground and &#8220;E23-50&#8221; terminal of ECM connector.
+</ptxt>
+</test1>
+<question>
+Is resistance infinity?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;BLU&#x002F;ORN&#8221; wire is shorted to ground circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle actuator control relay check
+</title>
+<test1>
+<ptxt>
+Check throttle actuator control relay referring to 
+<intxref refid = "S5JB0E1306018">Control Relay Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace throttle actuator control relay.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

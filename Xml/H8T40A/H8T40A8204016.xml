@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A8204016" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1032: Vezetőoldali légzsák működtető áramkör ellenállása alacsony
+</title>
+<servinfosub id = "H8T40A8204016001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A8204015">DTC B1031: Vezetőoldali légzsák működtető áramkör ellenállása nagy</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Mindenképpen olvassa el a FIGYELEM címszóval jelzett figyelmeztetéseket a következő fejezetben: &#8220;Légzsák diagnosztikai rendszerének ellenőrzési folyamata&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "H8T40A8204016002">
+<title>
+DTC akkor jelenik meg, amikor
+</title>
+<ptxt>
+A vezetőoldali légzsák (felfúvódó) modul, az érintkezőtekercs szerelvény, a vezetékköteg és a csatlakozó érintkező együttes ellenállása egy előírt ideig az előírt érték alatt van.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A8204016003">
+<title>
+Áramlási teszt leírása
+</title>
+<ptxt>
+<emph etype = "bold">
+1. lépés: Ellenőrizze, hogy a hiba az érintkezőtekercsben és a vezetőoldali légzsák (felfúvódó) modulban van-e, vagy máshol.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+2. lépés: Ellenőrizze a vezetőoldali légzsák (felfúvódó) modul működtető áramkörét.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+3. lépés: Ellenőrizze, hogy a hiba az érintkezőtekercsben vagy a vezetőoldali légzsák (felfúvódó) modulban van-e.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A8204016004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A8204016005">
+<testgroup>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett húzza ki a kormányoszlop alatt lévő érintkezőtekercs csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e az érintkezőtekercs felé a kapcsolat a &#8220;G26&#8221; vagy &#8220;G27&#8221; csatlakozó érintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, akkor csatlakoztassa a (B) és (C) célszerszámot a &#8220;G26&#8221; csatlakozóhoz (sebességstabilizáló rendszerrel nem rendelkező jármű esetén &#x005B;A&#x005D;), vagy a (B) és (D) célszerszámot a &#8220;G27&#8221; csatlakozóhoz (sebességstabilizáló rendszerrel rendelkező jármű esetén &#x005B;B&#x005D;), amelyet az 1. lépésben széthúzott.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B019">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B020">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B021">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820026H.swf" width = "90.000mm" height = "50.803mm" ver = "02" gw = "231" gh = "127"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az SDM DTC-hibakódját.
+</ptxt>
+</test1>
+<question>
+Bekapcsolt gyújtásnál a DTC B1032 hibakód jelenik meg?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kikapcsolt gyújtásnál húzza szét az SDM &#8220;G47&#8221; vagy &#8220;G46&#8221; csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a kapcsolat az SDM felé a &#8220;G47-5&#8221; és &#8220;G47-6&#8221; vagy &#8220;G46-1&#8221; és &#8220;G46-2&#8221; érintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, akkor oldja ki a rövidre záró sínt az SDM csatlakozójában a célszerszám készlet (A) kioldó szerszámának (1) beillesztésével.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást a &#8220;G47-5&#8221; és &#8220;G47-6&#8221; érintkezők között &#x005B;A&#x005D;, vagy  a &#8220;G46-1&#8221; és &#8220;G46-2&#8221; érintkezők között &#x005B;B&#x005D; (B) és (C) célszerszámok csatlakoztatásával (sebességstabilizáló rendszerrel nem rendelkező jármű esetén&#x005B;C&#x005D;) vagy (B) és (D) célszerszámok csatlakoztatásával (sebességstabilizáló rendszerrel rendelkező jármű esetén &#x005B;D&#x005D;).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B022">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B023">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B024">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B025">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820027H.swf" width = "90.000mm" height = "106.189mm" ver = "02" gw = "229" gh = "284"/>
+</testfigure>
+</test1>
+<question>
+Az ellenállás mindenhol 0,95 &#937; vagy annál magasabb?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó SDM-et és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;GRN&#x002F;RED&#8221; áramkör zárlatos a &#8220;GRN&#8221;áramkörrel, a &#8220;GRN&#x002F;RED&#8221; áramkör vagy a &#8220;GRN&#8221; áramkör zárlatos egy másik áramkörrel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kikapcsolt gyújtásnál csatlakoztassa le a (B) és (C) vagy (D) célszerszámot a &#8220;G26&#8221; vagy &#8220;G27&#8221; csatlakozóról, és csatlakoztassa újra a kormányoszlop alatti érzékelőtekercs csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Vegye ki a vezetőoldali légzsák (felfúvódó) modult a kormánykerékből, lásd: 
+<intxref refid = "H8T40A8206005">Vezetőoldali légzsák (felfúvódó) modul leszerelése és felszerelése</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozás a vezetőoldali légzsák (felfúvódó) modul csatlakozójánál.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, csatlakoztassa az (A), (B) és (E) célszerszámot a vezetőoldali légzsák (felfúvódó) modul csatlakozójához.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B026">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B027">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B028">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B029">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B030">
+<s-part>
+(E)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820028H.swf" width = "90.000mm" height = "62.797mm" ver = "01" gw = "191" gh = "161"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az SDM DTC-hibakódját.
+</ptxt>
+</test1>
+<question>
+Bekapcsolt gyújtásnál a DTC B1032 hibakód jelenik meg?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Kapcsolja ki a gyújtást. Cserélje ki az érintkezőtekercs szerelvényt, lásd: 
+<intxref refid = "H8T40A6216003">Érintkezőtekercs kábel egység leszerelése és felszerelése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Kapcsolja ki a gyújtást. Cserélje ki a vezetőoldali légzsák (felfúvódó) modult, lásd: 
+<intxref refid = "H8T40A8206005">Vezetőoldali légzsák (felfúvódó) modul leszerelése és felszerelése</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Az ellenőrzés és a javítás elvégzése után hajtsa végre a következőket:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Újból kösse be a légzsákrendszer összes elemét, és ellenőrizze, hogy minden elem jól van-e felerősítve.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Törölje a DTC-t, ha van, lásd: 
+<intxref refid = "H8T40A8204005">DTC törlése</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A hiba kijavításának megerősítése érdekében ismételje meg a következő műveletet:
+<intxref refid = "H8T40A8204001">Légzsák diagnosztikai rendszerének ellenőrzése</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1124049" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2101
+</title>
+<servinfosub id = "S8T40A1124049001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2101: Throttle Motor Control Motor Circuit Range &#x002F; Performance
+</emph>
+</ptxt>
+<ptxt>
+Drive circuit of throttle motor is in malfunction condition (open or excess temperature of device).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Throttle motor and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1124049002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1124049003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Turn ignition switch to ON position.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep the accelerator pedal at fully depressed position for 2 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep the accelerator pedal at idle position for 2 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 2) through 3) for 3 times.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1124049004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1124049005">
+<testgroup id = "S8T40A1124049006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124049007">
+<title>
+Throttle motor drive circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from throttle body assembly and ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to throttle body assembly and ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that throttle motor drive circuit (B1, B2) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of each throttle motor drive circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of each throttle motor drive circuit are infinity between throttle body assembly connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between each throttle motor drive circuit terminal and each terminals at throttle body assembly connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of each throttle motor drive circuit are 0 &#8211; 1 V with ignition switch turned in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124049008">
+<title>
+Throttle body assembly check
+</title>
+<test1>
+<ptxt>
+Check throttle body for performance. 
+<intxreftitleoff1 refid = "S8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace throttle body assembly.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0137 &#x002F; P0138
+</title>
+<servinfosub id = "U8T40A1124026001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.626in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.565in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0137: Lage spanning circuit van O2-sensor (cilinderrij 1, sensor 2)
+</emph>
+</ptxt>
+<ptxt>
+Uitgangsspanning van het HO2S-signaalcircuit is lager dan 0,02 V gedurende 25 sec
+</ptxt>
+<ptxt>
+(Opsporingslogica van 2 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Uitlaatsysteem
+</ptxt>
+</item>
+<item>
+<ptxt>
+Luchtinlaatsysteem
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0138: Hoge spanning circuit van O2-sensor (cilinderrij 1, sensor 2)
+</emph>
+</ptxt>
+<ptxt>
+De uitgangsspanning van het HO2S-signaalcircuit is hoger dan 4,5 V gedurende 5 sec zelfs als HO2S-verwarming gedurende de voorgeschreven tijdspannes wordt aangezet.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 2 rijcyclus)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124026002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124014">DTC P0037 &#x002F; P0038:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124026003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kies voor een proefrit een verkeersvrije plaats waar geen gevaar voor verkeersongevallen is, en wees uiterst voorzichtig tijdens de proefrit om ongevallen te vermijden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De proefrit moet door 2 personen worden uitgevoerd, een bestuurder en iemand die de test uitvoert, op een effen weg.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Indien er eerder in de DTC-bevestigingsprocedure andere dan de beoogde DTC&apos;s werden waargenomen, los dan ook de eerder waargenomen DTC&apos;s op.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Start de motor en laat hem op de normale bedrijfstemperatuur komen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Rijd met het voertuig aan 50 - 60 km&#x002F;h (31 - 37 mile&#x002F;h) gedurende 3 min. (zorg bij deze stap voor een constante gasklepopeningshoek.)
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124026004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1124026005">
+<testgroup id = "U8T40A1124026006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124026007">
+<title>
+DTC-controle
+</title>
+<question>
+Zijn er behalve P0137 en P0138 nog andere DTC&apos;s?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar storingzoeken voor de betrokken DTC.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124026008">
+<title>
+Controle signaal- en massacircuit van de HO2S
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen los van HO2S en ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de HO2S- en de ECM-stekkers zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Als de verbindingen in orde zijn, controleer dan of het HO2S-signaalcircuit (A3) en -massacircuit (A4) aan het volgende voldoen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van elk HO2S-signaalcircuit en -massacircuit is kleiner dan 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van het HO2S-signaalcircuit en -massacircuit tussen de HO2S-stekkerverbinding en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de HO2S-signaalaansluitklem en elke andere aansluitklem op de HO2S-stekker is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de aansluitklem van het HO2S-massacircuit en elke andere aansluitklem is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De circuitspanning van het HO2S-signaalcircuit en -massacircuit is 0 - 1 V met het contactslot in de stand ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124026009">
+<title>
+Controle uitlaatsysteem en luchtinlaatsysteem
+</title>
+<test1>
+<ptxt>
+Controleer het uitlaatsysteem en het luchtinlaatsysteem op verstopping en lekkage.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het defecte onderdeel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124026010">
+<title>
+Controle circuit van de HO2S-verwarming
+</title>
+<test1>
+<ptxt>
+Controleer het HO2S-verwarmingscircuit zoals beschreven in stap 2 en 3 van 
+<intxref refid = "U8T40A1124014">DTC P0037 &#x002F; P0038:J24B</intxref>
+. 
+</ptxt>
+</test1>
+<question>
+Is het circuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het defecte onderdeel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124026011">
+<title>
+DTC opnieuw controleren
+</title>
+<test1>
+<ptxt>
+Vervang de HO2S. 
+<intxreftitleoff1 refid = "U8T40A1326013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Voer de DTC-bevestigingsprocedure uit en controleer de DTC.
+</ptxt>
+</test1>
+<question>
+Wordt DTC P0137 of P0138 nog steeds weergegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Einde.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

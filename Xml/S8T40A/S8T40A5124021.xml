@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A5124021" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0707: Transmission Range Sensor Circuit Low
+</title>
+<servinfosub id = "S8T40A5124021001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A5124020">DTC P0705: Transmission Range Sensor Circuit Malfunction:5 A/T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A5124021002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.780in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.346in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Transmission range sensor signal (P, R, N, D, 3, L) is not inputted for more than 2 seconds in the following condition.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Vehicle speed is more than 30 km&#x002F;h (19 mile&#x002F;h).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Engine speed is more than 1500 rpm.
+</ptxt>
+<ptxt>
+(2 driving cycle detection logic)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Select cable maladjusted.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Transmission range sensor maladjusted.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Transmission range sensor or its circuit malfunction.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A5124021003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Connect scan tool to DLC with ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Clear DTCs in TCM and ECM memory by using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and shift select lever to &#8220;D&#8221; range.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start vehicle and increase vehicle speed to 50 km&#x002F;h (31 mile&#x002F;h) or more for 2 minutes.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop vehicle and turn ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 3) to 5) one time.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop vehicle.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC, pending DTC and freeze-frame data.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A5124021004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A5124021005">
+<testgroup>
+<question>
+Was &#8220;A&#x002F;T System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A5124001">A&#x002F;T System Check:5 A/T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Do you have SUZUKI scan tool?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check transmission range sensor circuit for operation
+</title>
+<ptxt>
+Check by using SUZUKI scan tool:
+</ptxt>
+<test1>
+<ptxt>
+Connect SUZUKI scan tool to DLC with ignition switch OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch ON and check transmission range signal (&#8220;P&#8221;, &#8220;R&#8221;, &#8220;N&#8221;, &#8220;D&#8221;, &#8220;3&#8221; or &#8220;L&#8221;) on display when shifting select lever to each range.
+</ptxt>
+</test1>
+<question>
+Is applicable range indicated?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble. Check for intermittent trouble referring to 
+<intxref refid = "S8T40A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check transmission range sensor circuit for operation
+</title>
+<ptxt>
+Check without using SUZUKI scan tool:
+</ptxt>
+<test1>
+<ptxt>
+Turn ignition switch ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check voltage at terminals &#8220;E93-1&#8221;, &#8220;E93-7&#8221;, &#8220;E93-8&#8221;, &#8220;E93-18&#8221;, &#8220;E93-19&#8221; and &#8220;E93-20&#8221; respectively with select lever shifted to each range.
+</ptxt>
+<ptxt>
+Taking terminal &#8220;E93-1&#8221; as an example, is battery voltage will be indicated only when shift lever is shifted to &#8220;R&#8221; range and 0 V for other ranges as shown in table. Check voltage at other terminals likewise, referring to table.
+</ptxt>
+</test1>
+<question>
+Are check results satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble. Check for intermittent trouble referring to 
+<intxref refid = "S8T40A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check transmission range sensor for installation position
+</title>
+<test1>
+<ptxt>
+Check transmission range sensor for installation position referring to 
+<intxref refid = "S8T40A5126013">Transmission Range Sensor Inspection and Adjustment:5 A/T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it adjusted correctly?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Adjust transmission range sensor and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check select cable for adjustment
+</title>
+<test1>
+<ptxt>
+Check select cable for adjustment referring to 
+<intxref refid = "S8T40A5126011">Select Cable Adjustment:5 A/T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it adjusted correctly?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Adjust select cable and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check transmission range sensor 
+</title>
+<test1>
+<ptxt>
+Check transmission range sensor referring to 
+<intxref refid = "S8T40A5126013">Transmission Range Sensor Inspection and Adjustment:5 A/T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Are check results satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Transmission range sensor circuit open or shorted to ground. If wires and connections are OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace transmission range sensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "8" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.181in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.591in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.787in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.787in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.787in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.787in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.787in"/>
+<colspec colnum = "8" colname = "8" colwidth = "0.787in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+</ptxt>
+</entry>
+<entry namest = "3" nameend = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Terminal
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+E93-20
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+E93-1
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+E93-8
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+E93-7
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+E93-19
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+E93-18
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Select lever position
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+R
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+N
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+D or 4
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+3
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+L
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+0 V
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+8 &#8211; 14 V
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

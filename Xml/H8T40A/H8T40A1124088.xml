@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124088" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0625 &#x002F; P0626
+</title>
+<servinfosub id = "H8T40A1124088001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.835in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.369in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P0625: Generátor gerjesztőtekercs áramkörének feszültsége alacsony
+</emph>
+</ptxt>
+<ptxt>
+Generátor gerjesztőtekercs kitöltési tényező jele nagyobb, mint 99,9&#x0025; (kis feszültség) 10 másodpercig, még ha a generátor vezérlés kitöltési tényező jelének értéke maximumon van is (100&#x0025;).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika, de a MIL nem gyullad fel)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Generátor és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+DTC P0626: Generátor gerjesztőtekercs áramkörének feszültsége magas
+</emph>
+</ptxt>
+<ptxt>
+Generátor gerjesztőtekercs kitöltési tényező vezérlőjele kisebb, mint 1&#x0025; (magas feszültség) 10 másodpercig, még ha a generátor vezérlés kitöltési tényező jelének értéke minimumon van is (0&#x0025;).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika, de a MIL nem gyullad fel)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124088002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124087">DTC P0620:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124088003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Indítsa be a motort, és melegítse fel normál működési hőmérsékletre.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze, hogy a következő feltételek teljesülnek-e.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ventilátor: ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fényszóró-kapcsoló: ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Hátsó ablak páramentesítés kapcsoló: ON
+</ptxt>
+</item>
+</list1>
+</s1>
+<s1>
+<ptxt>
+Járassa a motort alapjáraton 5 percig.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124088004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124088005">
+<testgroup id = "H8T40A1124088006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124088007">
+<title>
+Generátor gerjesztőtekercs monitor jeláramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat a generátorról és az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása generátornál és az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben vannak a csatlakozások, ellenőrizze, hogy a generátor gerjesztőtekercs monitor jeláramköre (B1) megfelel-e a következőknek.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A generátor gerjesztőtekercs monitor jeláramkör vezetékkötegének ellenállása kevesebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A generátor gerjesztőtekercs monitor jeláramkör és a karosszériatest közötti szigetelési ellenállás végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása a generátor gerjesztőtekercs monitor jeláramkör érintkezője és a generátor csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A generátor gerjesztőtekercs monitor jeláramkörének áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124088008">
+<test1>
+<ptxt>
+Cserélje ki a generátort. 
+<intxreftitleoff1 refid = "H8T40A1A26005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t.
+</ptxt>
+</test1>
+<question>
+Észlelhető a P0625, vagy P0626 DTC?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Vége.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

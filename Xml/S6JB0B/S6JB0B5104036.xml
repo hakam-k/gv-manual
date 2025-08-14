@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B5104036" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0974 &#x002F; P0977 &#x002F; P0986: Shift Solenoid &#8220;A&#8221; Control Circuit High &#x002F; Shift Solenoid &#8220;B&#8221; Control Circuit High &#x002F; Shift Solenoid &#8220;E&#8221; Control Circuit High
+</title>
+<servinfosub id = "S6JB0B5104036001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B5104035">DTC P0973 &#x002F; P0976 &#x002F; P0985: Shift Solenoid &#8220;A&#8221; Control Circuit Low &#x002F; Shift Solenoid &#8220;B&#8221; Control Circuit Low &#x002F; Shift Solenoid &#8220;E&#8221; Control Circuit Low</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B5104036002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Voltage of shift solenoid valve TCM terminal is high although TCM is commanding shift solenoid to turn OFF.
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Shift solenoid valve circuit open or shorted to power circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Malfunction of shift solenoid valve.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B5104036003">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When performing a road test, select a place where there is no traffic or possibility of a traffic accident and be very careful during testing to avoid occurrence of an accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Road test should be carried out with 2 persons, a driver and tester, on a level road.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Connect scan tool to DLC with ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Clear DTCs in TCM and ECM memories by using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and shift select lever to &#8220;D&#8221; range.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start vehicle and increase vehicle speed to 60 km&#x002F;h (37 mile&#x002F;h) in &#8220;D&#8221; range.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep on driving in the speed for 20 seconds and decrease vehicle speed gradually.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop vehicle.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC, pending DTC and freeze-frame data.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B5104036004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0B5104036005">
+<testgroup id = "S6JB0B5104036006">
+<question>
+Was &#8220;A&#x002F;T System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B5104001">A&#x002F;T System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S6JB0B5104036007">
+<title>
+Check solenoid valve circuit for power supply short
+</title>
+<test1>
+<ptxt>
+Disconnect TCM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to TCM at terminals &#8220;E92-16&#8221; (for solenoid valve-A), &#8220;E92-15&#8221; (for solenoid valve-B) or &#8220;E92-14&#8221; (for solenoid valve-E).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connection is OK, turn ignition switch ON and measure voltage between terminal &#8220;E92-16&#8221; (for solenoid valve-A), &#8220;E92-15&#8221; (for solenoid valve-B) or &#8220;E92-14&#8221; (for solenoid valve-E) of disconnected harness side TCM connector and ground.
+</ptxt>
+</test1>
+<question>
+Is it 0 &#8211; 2 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Solenoid valve-A, -B or -E control circuit is shorted to power supply circuit.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "S6JB0B5104036008">
+<title>
+Check solenoid valve circuit for open
+</title>
+<test1>
+<ptxt>
+Check continuity between terminal &#8220;E92-16&#8221; (for solenoid valve-A), &#8220;E92-15&#8221; (for solenoid valve-B) or &#8220;E92-14&#8221; (for solenoid valve-E) of disconnected harness side TCM connector and ground.
+</ptxt>
+</test1>
+<question>
+Is it infinity?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Solenoid valve-A, -B or -E control circuit is open circuit.
+</ptxt>
+<ptxt>
+If circuit is OK, go to step 4.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S6JB0B5104036009">
+<title>
+Inspection solenoid valve
+</title>
+<ptxt>
+Inspection solenoid valve referring to 
+<intxref refid = "S6JB0B5106022">Solenoid Valves (Shift Solenoid-A, Shift Solenoid-B, Shift Solenoid-E, TCC Solenoid, Pressure Control Solenoid-A, Pressure Control Solenoid-B, and Pressure Control Solenoid-C) Inspection</intxref>
+.
+</ptxt>
+<question>
+Is check results satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble or faulty TCM. Check for intermittent trouble referring to 
+<intxref refid = "S6JB0B0006002">Intermittent and Poor Connection Inspection</intxref>
+. If OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace defective solenoid valve referring 
+<intxref refid = "S6JB0B5106021">Solenoid Valves (Shift Solenoid-A, Shift Solenoid-B, Shift Solenoid-E, TCC Solenoid, Pressure Control Solenoid-A, Pressure Control Solenoid-B, and Pressure Control Solenoid-C) Removal and Installation</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

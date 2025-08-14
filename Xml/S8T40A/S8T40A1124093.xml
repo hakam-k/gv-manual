@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1124093" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2016 &#x002F; P2017
+</title>
+<servinfosub id = "S8T40A1124093001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.887in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.327in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P2016: Intake Manifold Runner Position Sensor&#x002F;Switch Circuit Low
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of IMRC valve position sensor signal circuit is lower than 0.22 V.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+IMRC valve position sensor and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+DTC P2017: Intake Manifold Runner Position Sensor&#x002F;Switch Circuit High
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of IMRC valve position sensor signal circuit is higher than 4.3 V.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1124093002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1124091">DTC P2004 &#x002F; P2006:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1124093003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Turn ignition switch to ON position for 10 sec.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1124093004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1124093005">
+<testgroup id = "S8T40A1124093006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124093007">
+<title>
+IMRC valve position sensor power supply circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connector from IMRC valve actuator.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to IMRC valve actuator connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, turn ignition switch to ON position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that voltage between IMRC valve position sensor power supply circuit (B1) and IMRC valve position sensor ground circuit (B3) is 5 V.
+</ptxt>
+</test1>
+<question>
+ Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124093008">
+<title>
+IMRC valve position sensor ground circuit check
+</title>
+<test1>
+<ptxt>
+Check that voltage between IMRC valve position sensor power supply circuit (B1) and vehicle body ground is 5 V.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+<ptxt>
+If this DTC is detected again, substitute a known-good ECM and recheck.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124093009">
+<title>
+IMRC valve position sensor power supply circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that IMRC valve position sensor power supply circuit (B1) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of IMRC valve position sensor power supply circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between IMRC valve position sensor power supply circuit and vehicle body ground is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between IMRC valve position sensor power supply circuit terminal and each terminal at IMRC valve actuator connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of IMRC valve position sensor power supply circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124093010">
+<title>
+IMRC valve position sensor signal circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that IMRC valve position sensor signal circuit (B2) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of IMRC valve position sensor signal circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between IMRC valve position sensor signal circuit and vehicle body ground is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between IMRC valve position sensor signal circuit terminal and each terminal at IMRC actuator connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of IMRC valve position sensor signal circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124093011">
+<title>
+IMRC valve actuator check
+</title>
+<test1>
+<ptxt>
+Check IMRC valve actuator. 
+<intxreftitleoff1 refid = "S8T40A1326033"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace IMRC valve. 
+<intxreftitleoff1 refid = "S8T40A1326032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

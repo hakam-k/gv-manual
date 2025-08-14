@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A5114048" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2764: Nyomatékváltó rövidre záró tengelykapcsoló nyomásszabályozó mágnestekercs vezérlő áramkör feszültség alacsony
+</title>
+<servinfosub id = "H8T40A5114048001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A5114047">DTC P2763: Nyomatékváltó rövidre záró tengelykapcsoló nyomásszabályozó mágnestekercs vezérlő áramkör feszültség magas:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A5114048002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.035in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A TCC nyomásszabályozó mágnesszelep TCM érintkező feszültsége alacsony, noha a TCM bekapcsolásra utasítja a TCC nyomásszabályozó mágnestekercset.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A TCC nyomásszabályozó mágnesszelep áramkörében szakadás van vagy testzárlatos.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCC nyomásszabályozó mágnesszelep hibás működése
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A5114048003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Közúti próba végzéséhez olyan helyet válasszon, ahol nincs forgalom, illetve nem áll fenn a közúti baleset veszélye. A próbát a balesetek elkerülése érdekében igen óvatosan végezze.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A közúti próbát vízszintes úton, két személy végezze, a vezető és a vizsgálatot végző személy.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+A vizsgálókészülék használatával törölje a DTC-ket a TCM és az ECM memóriájából.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa el a motort.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Járassa a motort alapjáraton &#8220;P&#8221; helyzetben legalább 20 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t, a feltételes DTC-t és a befagyasztott adatokat.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A5114048004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A5114048005">
+<testgroup>
+<question>
+Az &#8220;A&#x002F;T rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A5114001">Automatikus sebességváltó rendszer ellenőrzése:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a TCC nyomásszabályozó mágnesszelep áramkörét testzárlat szempontjából.
+</title>
+<test1>
+<ptxt>
+Vegye le a TCM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e a csatlakozás a TCM &#8220;E92-3&#8221; és &#8220;E92-5&#8221; érintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a csatlakozás rendben van, akkor ellenőrizze az elektromos összeköttetést a leválasztott vezetékköteg-felőli TCM-csatlakozó &#8220;E92-5&#8221; érintkezője és a test között.
+</ptxt>
+</test1>
+<question>
+Van elektromos összeköttetés?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A TCC nyomásszabályozó mágnesszelep áramköre testzárlatos. Ha az áramkör rendben van, menjen a 4. lépésre.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a TCC nyomásszabályozó mágnesszelep áramkörét szakadás szempontjából.
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ellenállást a leválasztott vezetékköteg-felőli TCM-csatlakozó &#8220;E92-3&#8221; és &#8220;E92-5&#8221; érintkezője között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A TCC nyomásszabályozó mágnesszelep áramkörében szakadás van. Ha az áramkör rendben van, menjen a 4. lépésre.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a TCC nyomásszabályozó mágnesszelepet.
+</title>
+<test1>
+<ptxt>
+TCC nyomásszabályozó mágnesszelep ellenőrzése, lásd: 
+<intxref refid = "H8T40A5116022">Mágnesszelepek (&#34;A&#34; kapcsoló mágnesszelep, &#34;B&#34; kapcsoló mágnesszelep, TCC nyomásszabályozó mágnesszelep és nyomásszabályozó mágnesszelep) ellenőrzése:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az ellenőrzés eredményei kielégítőek?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Időszakos hiba vagy hibás TCM. Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H8T40A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+. Ha rendben van, tegyen be egy bizonyosan jó TCM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a hibás TCC nyomásszabályozó mágnesszelepet, lásd: 
+<intxref refid = "H8T40A5116021">Mágnesszelepek (&#34;A&#34; kapcsoló mágnesszelep, &#34;B&#34; kapcsoló mágnesszelep, TCC nyomásszabályozó mágnesszelep és nyomásszabályozó mágnesszelep) leszerelése és felszerelése:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

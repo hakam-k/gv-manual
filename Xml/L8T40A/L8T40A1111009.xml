@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "L8T40A1111009" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Descrizione sistema di controllo generatore
+</title>
+<ptxt>
+Il sistema di controllo generatore e costituito da un generatore (1), sensore corrente carico elettrico (7) (per motore J20A) posto nella scatola dei fusibili n. 1 (4) e ECM (5).
+</ptxt>
+<ptxt>
+L&apos;ECM controlla l&apos;elettricita generata (tensione di regolazione del regolatore IC (2)) in modo da renderla idonea alle condizioni del motore e del carico elettrico. Se il carico elettrico aumenta rapidamente, cresce anche il carico del generatore, provocando la modifica del minimo. Per impedire questo fenomeno, l&apos;ECM varia gradualmente il volume dell&apos;elettricita generata sino a stabilizzare la velocita del minimo. Inoltre, riduce il carico motore provocato dal temporaneo aumento di generazione di elettricita richiesto per far fronte alle condizioni del motore (ad esempio durante l&apos;accelerazione).
+</ptxt>
+<servinfosub id = "L8T40A1111009001">
+<title>
+Azionamento
+</title>
+<ptxt>
+L&apos;ECM controlla la tensione generata dal generatore utilizzando un morsetto a &#8220;C&#8221; (morsetto di controllo generatore), in base alle seguenti informazioni.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Condizioni motore (ECT, velocita veicolo, regime motore, TP. ecc.) (9)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tensione batteria (tensione alimentazione di backup ECM) (10)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Condizioni carico elettrico (motorino ventilatore, snebbiatore posteriore, fari, ventola radiatore, A&#x002F;C, ecc.) (11)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Uscita morsetto &#8220;FR&#8221; (lavoro di controllo bobina di campo (3)) che indica la velocita di funzionamento (condizione di generazione di elettricita) del generatore.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Il generatore utilizza quindi il fattore di utilizzazione del morsetto &#8220;C&#8221; per regolare la tensione di regolazione del regolatore IC sulla base del fattore di utilizzazione del controllo bobina di campo, al fine di controllare la propria tensione generata (tensione di entrata morsetto &#8220;B&#8221;).
+</ptxt>
+<ptxt>
+(Per ulteriori informazioni sulla tensione generata, fare riferimento a Impianto di carica, nella sezione 1J.)
+</ptxt>
+<ptxt>
+Inoltre, con il motore J20A, la condizione di generazione del generatore viene controllata al livello ottimale dal sensore corrente carico elettrico (7) che rileva le condizioni di carico elettrico (assorbimento corrente) linearmente anche quando si verifica un improvvisa variazione del carico elettrico e quindi il carico del motore ridotto.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A110009.swf" width = "183.000mm" height = "62.092mm" ver = "01" gw = "444" gh = "159"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.968in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Interruttore di accensione
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+8.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Batteria
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

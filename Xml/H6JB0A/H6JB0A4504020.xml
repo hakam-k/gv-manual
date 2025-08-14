@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0A4504020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC U1100: Megszakadt kommunikáció az ECM-mel (vételi hiba) (benzinmotor esetén)
+</title>
+<servinfosub id = "H6JB0A4504020001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A4504019">DTC U1073: Vezérlőmodul kommunikációs busza kikapcsolva (benzinmotor esetén)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0A4504020002">
+<title>
+DTC észlelésének körülményei
+</title>
+<ptxt>
+Az ECM kommunikációs adatok folyamatos vételi hibájának észlelése az előírtnál hosszabb ideig.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0A4504020003">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0A4504020004">
+<testgroup>
+<question>
+Elvégezte az &#8220;ABS-ellenőrzést&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A4504001">ABS ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-ket az ABS-ben (ESP&#174;-ben).
+</ptxt>
+</test1>
+<question>
+Észlelte az U1073 DTC-t?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A4504019">DTC U1073: Vezérlőmodul kommunikációs busza kikapcsolva (benzinmotor esetén)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t az ECM-ben.
+</ptxt>
+</test1>
+<question>
+P1674 számú DTC-t észlelt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A1114064">DTC P1674: CAN kommunikáció (busz ki hiba):Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ellenőrizze a CAN útján kommunikáló összes vezérlőmodul csatlakozójának csatlakozását.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-ket az ABS-ben (ESP&#174;-ben).
+</ptxt>
+</test1>
+<question>
+U1100 számú DTC-t észlelt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Időszakos hiba. Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H6JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Válassza le az ABS- (ESP&#174;-) vezérlőmodul és az ECM CAN útján kommunikáló csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört az ABS- (ESP&#174;-) vezérlőmodul és az ECM között szakadás, rövidzárlat és nagy ellenállás szempontjából.
+</ptxt>
+</test1>
+<question>
+Rendben van a CAN kommunikációs áramkör?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg vagy cserélje ki a CAN kommunikációs vezetéket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Válassza le a CAN útján kommunikáló összes vezérlőmodul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört az 5. lépésen kívüli vezérlőmodulok között szakadás, rövidzárlat és nagy ellenállás szempontjából.
+</ptxt>
+</test1>
+<question>
+Rendben vannak a CAN kommunikációs áramkörök?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg vagy cserélje ki a CAN kommunikációs vezetéket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Csatlakoztassa a CAN útján kommunikáló összes vezérlőmodul leválasztott csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kösse le a csatlakozókat.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (A&#x002F;T-vel szerelt modell esetén)
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-vezérlőmodul (ha van)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kulcsnélküli indításvezérlő modul (ha van)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kományelfordulásiszög-érzékelő (ESP&#174;-vel felszerelt modell)
+</ptxt>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-ket az ABS-ben (ESP&#174;-ben).
+</ptxt>
+</test1>
+<question>
+U1140 számú DTC-t észlelt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ellenőrizze az ABS- (ESP&#174;-) vezérlőmodul tápáramkörét és testáramkörét. Ha az áramkörök rendben vannak, tegyen be egy bizonyosan jó ABS- (ESP&#174;-) hidraulikaegység &#x002F; vezérlőmodul egységet és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ellenőrizze a megfelelő vezérlőmodul tápáramkörét és testáramkörét. Ha az áramkör rendben van, tegyen be egy bizonyosan jó és megfelelő vezérlőmodult, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

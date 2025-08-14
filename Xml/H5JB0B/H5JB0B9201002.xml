@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "9B">
+<servcat sctnbr = "09" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H5JB0B9201002" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "0" modify = "0">
+<title>
+Automatikus fényszórószint-szabályozó rendszer leírása (ha van)
+</title>
+<ptxt>
+Az automatikus fényszórószint-szabályozó rendszer beállítja a fényszóró optikai tengelyét a jármű eltérő állapotának megfelelően, amikor a fényszóró világít. A rendszer az első magasságérzékelőből (1), a hátsó magasságérzékelőből (2), a fényszórószint-szabályozó vezérlőmodulból (3), a fényszórószint-szabályozó működtetőjéből (4) és a fényszórószint-szabályozó figyelmeztető lámpából (5) áll.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A920036.swf" width = "183.000mm" height = "133.353mm" ver = "02" gw = "503" gh = "361"/>
+</figure>
+<ptxt>
+Ha több utas vagy csomag van a járműben, a jármű helyzete eltér attól, mint amilyen akkor, ha csak egy személy ül benne és nincs csomag. Így a fényszóró optikai tengelye ennek függvényében változik. Ez a rendszer automatikusan beállítja az eltérített szöget, hogy az optikai tengely optimális legyen.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A920004.swf" width = "183.000mm" height = "57.506mm" ver = "01" gw = "274" gh = "146"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.142in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+A fényszóró optikai tengelye normál helyzetben
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+A fényszóró kiigazított optikai tengelye
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<servinfosub id = "H5JB0B9201002001">
+<title>
+Első és hátsó magasságérzékelők
+</title>
+<ptxt>
+A magasságérzékelő (1) az első és hátsó függesztőkereteken található, és az összekötővel (3) csatlakozik az alsó lengőkarhoz (4). A magasságérzékelők az alsó lengőkar függőleges mozgását ellenállás értékké alakítják át, és a jármű helyzetének észlelt változását feszültségjelek formájában továbbítják a fényszórószint-szabályozó vezérlőmodul felé.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A920005.swf" width = "183.000mm" height = "58.917mm" ver = "01" gw = "364" gh = "150"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.562in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.629in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Első
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Hátsó
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "H5JB0B9201002002">
+<title>
+Fényszórószint-szabályozó vezérlőmodul
+</title>
+<ptxt>
+A fényszórószint-szabályozó vezérlőmodul az utasoldali első ülés lábánál található. A világításkapcsoló ON jelét, a BCM-ből jövő jármű sebesség jelét és a magasságérzékelőkből érkező járműhelyzet jelét használja arra, hogy kiszámítsa a fényszóró optikai tengelyének javítási szögét. Ezek után beállítja a fényszóró optikai tengelyét a fényszórószint-szabályozó működtetőjének meghajtásával úgy, hogy a megfelelő fényszóró helyzetet érje el a kiszámított szög értéke alapján. Ezen felül, amikor bármilyen rendellenességet észlel a rendszerben, a fényszórószint-szabályozó vezérlőmodul meggyújtja a műszeregységben található fényszórószint-szabályozó figyelmeztető lámpáját, ami arra figyelmezteti a vezetőt, hogy a rendszerben rendellenesség tapasztalható.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0B9201002003">
+<title>
+Fényszórószint-szabályozó vezérlőmodul üzembiztos funkciója
+</title>
+<ptxt>
+A fényszórószint-szabályozó vezérlőmodul üzembiztos funkciója a következők szerint működik.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "3" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.591in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.680in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.948in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Észlelt állapot
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Működést automatikusan kikapcsoló üzemmód
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Figyelmeztető lámpa
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A fényszórószint-szabályozó vezérlőmodul bemenetén a tápfeszültség nagyobb, mint 18,5 V.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Leállítja a fényszórószint-szabályozó működtetőjének működését.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A fényszórószint-szabályozó vezérlőmodul bemenetén a tápfeszültség alacsonyabb, mint 9 V.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Leállítja a fényszórószint-szabályozó működtetőjének működését.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A jármű sebessége legalább 180 km&#x002F;h.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Leállítja a fényszórószint-szabályozó működtetőjének működését.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A magasságérzékelő tápfeszültsége alacsonyabb, mint 4,6 V
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Leállítja a fényszórószint-szabályozó működtetőjének működését.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+ON
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A magasságérzékelő jelfeszültsége nagyobb, mint 4,75 V, de alacsonyabb, mint 0,25 V
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Leállítja a fényszórószint-szabályozó működtetőjének működését.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+ON
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A fényszórószint-szabályozó vezérlőmodul működésében rendellenesség észlelhető
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+A fényszórószint-szabályozó vezérlőmodul mikroszámítógépén visszaállítja az alapértéket.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+ON
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ha a fényszórószint-szabályozó működtetőjének működési tartománya nagyobb az előírtnál, a fényszórószint-szabályozó vezérlőmodul kiszámítja a módosítási értéket
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+és ez a fényszórószint-szabályozó működtetőjét annak működési tartományán belülre viszi.
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+OFF
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "H5JB0B9201002004">
+<title>
+Fényszórószint-szabályozó működtetője
+</title>
+<ptxt>
+A fényszórószint-szabályozó működtetője (1) a fényszóróházban (2) található. Ez mozgatja a reflektort (3) a fényszóróházban a fényszórószint-szabályozó vezérlőmoduljától kapott parancsjelnek megfelelően úgy, hogy a fényszóró optikai tengelye a fényszórószint-szabályozó vezérlőmodul által kiszámított szögnek megfelelően kerüljön beállításra.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A920006.swf" width = "88.000mm" height = "64.081mm" ver = "06" gw = "221" gh = "165"/>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

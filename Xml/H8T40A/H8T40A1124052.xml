@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119
+</title>
+<servinfosub id = "H8T40A1124052001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2119: Fojtószelep aktuátor vezérlő rendszer &#8211; megakadt nyitott állapot
+</emph>
+</ptxt>
+<ptxt>
+A TP észlelt értéke és a TP célértéke közötti eltérés nagyobb az előírtnál.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fojtószelep motor és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+TP-érzékelő (főérzékelő) áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fojtószeleptest
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124052002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124052003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention3>
+<ptxt>
+Amennyiben a DTC-t, mely más, mint a cél DTC, észlelt előzőleg a DTC megerősítési eljárásban, győződjön meg róla, hogy hibakeresést végez az előzőleg észlelt DTC ügyében.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Indítsa be a motort, és melegítse fel normál működési hőmérsékletre.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Járassa a motort alapjáraton 20 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Járassa a motort 3000 ford&#x002F;perc fordulatszámon 20 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ismételje meg a 2) - 3) lépéseket 3 alkalommal.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124052004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124052005">
+<testgroup id = "H8T40A1124052006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124052007">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t.
+</ptxt>
+</test1>
+<question>
+Található a P2119-en kívül más DTC is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC-kkel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124052008">
+<title>
+Fojtószelep motor áramellátó áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a csatlakozás rendben van, fordítsa a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a fojtószelep motor áramellátó áramköre (A4) akkumulátorfeszültségen van-e.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124052009">
+<title>
+Fojtószelep motor parancsáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat a fojtószeleptest egységről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószeleptest egység csatlakozó érintkezőinek megfelelő érintkezését.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben vannak a csatlakozások, ellenőrizze a fojtószelep motor parancsáramkörét (nyitva és zárva) (B1 &#8211; B2) a következőknek megfelelően.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az egyes fojtószelep motor parancsáramköreinek kábelköteg ellenállása kisebb, mint 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az egyes fojtószelep motorok parancsáramköreinek szigetelési ellenállása a fojtószeleptest egység csatlakozója és a karosszéria testpontja között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása az egyes fojtószelep parancsáramkörök érintkezői és a fojtószeleptest egység csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az egyes fojtószelep motor parancsáramkörök áramköri feszültsége 0 &#8211; 1 V a gyújtáskapcsoló bekapcsolt helyzetében
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124052010">
+<title>
+TP-érzékelő (főérzékelő) jeláramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a TP-érzékelő (főérzékelő) jeláramkör (C2) megfelel-e a következőknek.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A TP-érzékelő (főérzékelő) jeláramkör vezetékkötegének ellenállása kevesebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TP-érzékelő (főérzékelő) jeláramkörének szigetelési ellenállása a fojtószeleptest egység csatlakozója és a karosszéria testpontja között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása a TP-érzékelő (főérzékelő) jeláramköre és a fojtószeleptest egység csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TP-érzékelő (főérzékelő) jeláramkörének áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124052011">
+<title>
+Fojtószeleptest egység ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószeleptest működését és állapotát. 
+<intxreftitleoff1 refid = "H8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószeleptest egységet.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

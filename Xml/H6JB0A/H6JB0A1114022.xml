@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0A1114022" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0107: Szívócsőbeli abszolút nyomás áramkör bemenetén a feszültség alacsony
+</title>
+<servinfosub id = "H6JB0A1114022001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A1114021">DTC P0106: Szívócsőbeli abszolút nyomás tartománya &#x002F; működése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0A1114022002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.650in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.541in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+A szívócsőbeli abszolút nyomás érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan alacsonyabb, mint 0,2 V.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Szívócsőbeli abszolút nyomás érzékelő áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szívócsőbeli abszolút nyomás érzékelő
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Amikor egyszerre kerül kijelzésre a DTC P0532 és P1501 lehet, hogy a &#8220;GRY&#x002F;RED&#8221; vezetékáramkör szakadt.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "H6JB0A1114022003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével, és teljesen melegítse be a motort.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Járassa a motort alapjáraton 1 percig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t és a feltételes DTC-t.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "H6JB0A1114022004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd: 
+<intxref refid = "H6JB0A1110003">DTC hibaelhárítással kapcsolatos óvintézkedések:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H6JB0A1114022005">
+<testgroup>
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A1114001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+MAP-érzékelő és áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a vizsgálókészüléken kijelzett szívócső nyomást.
+</ptxt>
+</test1>
+<question>
+Ez 0 kPa (0 in.Hg)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Időszakos hiba. Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H6JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+MAP-érzékelő tápfeszültségének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le a MAP érzékelő csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a MAP-érzékelő csatlakozása a &#8220;GRY&#x002F;RED&#8221;, &#8220;RED&#x002F;WHT&#8221; és &#8220;GRY&#x002F;GRN&#8221; vezetékérintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja ON helyzetbe a gyújtáskapcsolót, mérje meg a motor testelése és a MAP érzékelő csatlakozójának &#8220;GRY&#x002F;RED&#8221; vezetékérintkezője között a feszültséget.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110035.swf" width = "90.000mm" height = "37.411mm" ver = "01" gw = "120" gh = "89"/>
+</testfigure>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A MAP-érzékelő tápfeszültség áramköri ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást a MAP-érzékelő csatlakozó &#8220;GRY&#x002F;RED&#8221; vezetékérintkezője és az ECM csatlakozó &#8220;C37-14&#8221; érintkezője között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;GRY&#x002F;RED&#8221; vezeték áramköre szakadt.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A MAP-érzékelő jeláramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót, mérje meg a feszültséget a MAP-érzékelő csatlakozó &#8220;RED&#x002F;WHT&#8221; vezetékérintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A MAP-érzékelő jeláramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az ECM csatlakozó &#8220;C37-55&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;RED&#x002F;WHT&#8221; vezeték rövidre zárt a testelő áramkör felé.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+MAP-érzékelő kimenő jelének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a MAP-érzékelőt, lásd 
+<intxref refid = "H6JB0A1316002">Szívócsőbeli abszolút nyomás (MAP) érzékelő ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Hibás MAP-érzékelő.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

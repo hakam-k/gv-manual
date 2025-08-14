@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1124055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2135
+</title>
+<servinfosub id = "L8T40A1124055001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2135: Sensore posizione pedale&#x002F;acceleratore&#x002F;Interruttore &#8220;A&#8221; &#x002F;&#8220;B&#8221; Correlazione tensione
+</emph>
+</ptxt>
+<ptxt>
+La differenza tra il TP (principale) e TP (secondario) e superiore al valore specificato.
+</ptxt>
+<ptxt>
+(1 logica di rilevamento D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensore TP e&#x002F;o il suo circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gruppo corpo farfallato
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1124055002">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1124055003">
+<title>
+Procedura di conferma DTC
+</title>
+<attention3>
+<ptxt>
+Se nella procedura di conferma DTC vengono rilevati DTC diversi da quelli cercati, accertarsi di fare la rilevazione guasto del DTC precedentemente rilevato.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Accendere l&apos;interruttore di accensione (ON).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tenere il pedale dell&#8217;acceleratore in posizione completamente premuta per 2 secondi.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tenere il pedale dell&#8217;acceleratore in posizione rilasciata per 2 secondi.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ripetere i punti da 2) a 3) per 3 volte.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1124055004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A1124055005">
+<testgroup id = "L8T40A1124055006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1124001">Verifica del sistema di controllo motore e emissioni:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124055007">
+<title>
+Controllo DTC
+</title>
+<test1>
+<ptxt>
+Controllare DTC.
+</ptxt>
+</test1>
+<question>
+Ci sono DTC diversi da P2135?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Andare ai relativi DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124055008">
+<title>
+Controllo cablaggio preassemblato
+</title>
+<test1>
+<ptxt>
+Controllare il circuito del sensore TP (principale e secondario) come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito sensore TP (principale) Fare riferimento ai punti da 2) a 5) di 
+<intxref refid = "L8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito sensore TP (secondario) Fare riferimento ai punti da 2) a 5) di 
+<intxref refid = "L8T40A1124028">DTC P0222 &#x002F; P0223:J24B</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire il cablaggio preassemblato difettoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124055009">
+<title>
+Controllo sensore TP
+</title>
+<test1>
+<ptxt>
+Controllare il rendimento del sensore TP facendo riferimento a &#8220;Controllo rendimento sensore posizione farfalla (TP)&#8221; in 
+<intxref refid = "L8T40A1326004">Ispezione sul veicolo del gruppo corpo farfallato:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire l&apos;assieme corpo farfallato.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

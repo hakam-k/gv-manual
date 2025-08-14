@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A8204013" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1017: Lage voedingsspanning
+</title>
+<servinfosub id = "U8T40A8204013001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A8204012">DTC B1016: Hoge voedingsspanning</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Volg de aanwijzingen onder LET OP in &#34;Schema voor de controle van het airbagdiagnosesysteem&#34;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "U8T40A8204013002">
+<title>
+De DTC wordt ingesteld wanneer
+</title>
+<ptxt>
+De voedingsspanning gedurende een welbepaalde tijd lager is dan voorgeschreven.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A8204013003">
+<title>
+Beschrijving van het stroomschema
+</title>
+<ptxt>
+<emph etype = "bold">
+Stap 1: Controleer of de spanning die de accu ontvangt binnen het normale bereik valt.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 2: Controleer of de spanning die de SDM ontvangt binnen het normale bereik valt.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 3: Controleer of de spanning die stekkerverbinding &#34;L04&#34; ontvangt binnen het normale bereik valt.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 4: Controleer of DTC B1017 nog altijd wordt aangegeven.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A8204013004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A8204013005">
+<testgroup id = "U8T40A8204013006">
+<test1>
+<ptxt>
+Meet de spanning op de accu.
+</ptxt>
+</test1>
+<question>
+Is de spanning 11 V of meer?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Controleer het laadsysteem en repareer het indien nodig volgens &#34;Dynamotest (controle van onvoldoende opgeladen accu)&#34;.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Modellen M16A en J20A: 
+<intxreftitleoff1 refid = "U8T40A1A14003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modellen J24B en N32A: 
+<intxreftitleoff1 refid = "U8T40A1A24003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Model F9Q: 
+<intxreftitleoff1 refid = "U8T40A1A34003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list2>
+</list1>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204013007">
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de SDM-stekker los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of aansluiting &#34;G47-16&#34; of &#34;G46-11&#34; goed op de SDM is aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, zet dan het contactslot op ON en controleer de spanning tussen aansluiting &#34;G47-16&#34; &#x005B;A&#x005D; of &#34;G46-11&#34; &#x005B;B&#x005D; van de SDM-stekker en de carrosseriemassa.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B006">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820023.swf" width = "90.000mm" height = "62.797mm" ver = "01" gw = "145" gh = "161"/>
+</testfigure>
+</test1>
+<question>
+Is de spanning 8 V of meer?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204013008">
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak stekkerverbinding &#34;G01&#34; van het aftakbloksamenstel los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer aansluiting &#34;G01-15&#34; op een goede verbinding.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, zet dan het contactslot op ON en controleer de spanning tussen aansluiting &#34;G01-15&#34; en de carrosseriemassa.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A820024.swf" width = "90.000mm" height = "72.675mm" ver = "01" gw = "221" gh = "189"/>
+</testfigure>
+</test1>
+<question>
+Is de spanning 8 V of meer?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Controleer het circuit van de accu naar stekkerverbinding &#34;G01&#34; en het laadsysteem.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204013009">
+<test1>
+<ptxt>
+Zet het contactslot op OFF en sluit de SDM-stekker weer aan.
+</ptxt>
+</test1>
+<question>
+Wordt DTC B1017 aangegeven met het contactslot op ON?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden SDM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Controleer het laadsysteem en repareer het indien nodig volgens &#34;Dynamotest (controle van onvoldoende opgeladen accu)&#34;.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Modellen M16A en J20A: 
+<intxreftitleoff1 refid = "U8T40A1A14003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modellen J24B en N32A: 
+<intxreftitleoff1 refid = "U8T40A1A24003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Model F9Q: 
+<intxreftitleoff1 refid = "U8T40A1A34003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list2>
+</list1>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Voer na het onderzoek en de reparaties de volgende stappen uit.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sluit alle componenten van het airbagsysteem weer aan en controleer of ze juist zijn gemonteerd.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wis eventuele DTC&apos;s volgens 
+<intxref refid = "U8T40A8204005">Wissen van DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Herhaal 
+<intxref refid = "U8T40A8204001">Controle van het airbagdiagnosesysteem</intxref>
+ om te controleren of de storing gecorrigeerd is.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

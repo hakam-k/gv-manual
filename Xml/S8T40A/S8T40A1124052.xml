@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1124052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119
+</title>
+<servinfosub id = "S8T40A1124052001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2119: Throttle Actuator Control System &#8211; Stuck Open
+</emph>
+</ptxt>
+<ptxt>
+Difference between targeted TP and measured TP is more than specified value.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Throttle motor and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+TP sensor (main) circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Throttle body assembly
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1124052002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1124052003">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention3>
+<ptxt>
+If DTC other than aimed DTC are previously detected in DTC confirmation procedure, be sure to troubleshoot DTC previously detected.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Run engine at idle speed for 20 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Run engine at 3,000 rpm for 20 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 2) through 3) for 3 times.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1124052004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1124052005">
+<testgroup id = "S8T40A1124052006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124052007">
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Check DTC.
+</ptxt>
+</test1>
+<question>
+Is there DTC(s) other than P2119?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC(s).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124052008">
+<title>
+Throttle motor power supply circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, turn ignition switch to ON position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that throttle motor power supply circuit (A4) is battery voltage.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124052009">
+<title>
+Throttle motor drive circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connector from throttle body assembly.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to throttle body assembly connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connection is OK, check that throttle motor drive circuit (open and close) (B1 &#8211; B2) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of each throttle motor drive circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of each throttle motor drive circuit is infinity between throttle body assembly connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between each throttle motor drive circuit terminal and other terminals at throttle body assembly connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of each throttle motor drive circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124052010">
+<title>
+TP sensor (main) signal circuit check
+</title>
+<test1>
+<ptxt>
+Check that TP sensor (main) signal circuit (C2) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of TP sensor (main) signal circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of TP sensor (main) signal circuit is infinity between throttle body assembly connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between TP sensor (main) signal circuit and each terminal at throttle body assembly connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of TP sensor (main) signal circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124052011">
+<title>
+Throttle body assembly check
+</title>
+<test1>
+<ptxt>
+Check throttle body for operation and condition. 
+<intxreftitleoff1 refid = "S8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace throttle body assembly.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

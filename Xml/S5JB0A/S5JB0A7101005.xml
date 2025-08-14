@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7A">
+<servcat sctnbr = "07" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "S5JB0A7101005" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+HVAC Control System Description (for Vehicle without A&#x002F;C)
+</title>
+<ptxt>
+For CAN communication system, refer to description on 
+<intxref refid = "S5JB0A1101005">CAN Communication System Description</intxref>
+.
+</ptxt>
+<ptxt>
+When following data are sent from control modules to BCM through CAN communication, they are sent from BCM to HVAC control module through serial communication line.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Engine coolant temperature
+</ptxt>
+</item>
+<item>
+<ptxt>
+Engine Speed
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wheel speed (Vehicle speed)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+HVAC control module has a function to make initial settings of temperature control actuator, air intake actuator and air flow actuator.
+</ptxt>
+<ptxt>
+For vehicle without A&#x002F;C, HVAC control module uses engine speed signal so that temperature control actuator, air intake actuator and air flow actuator can make initial setting for door position.
+</ptxt>
+<ptxt>
+Initial settings of actuators are automatically made when engine is started for the first time after battery is connected.
+</ptxt>
+<ptxt>
+When initial settings are made, each actuator is forced to operate for about 15 seconds continuously.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

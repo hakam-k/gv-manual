@@ -1,0 +1,1143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40AA814004" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "1">
+<title>
+Troubleshooting for Communication Bus Off
+</title>
+<servinfosub id = "S8T40AA814004001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40AA812001">CAN Communication System Circuit Diagram:M16A and J20A Model</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40AA814004002">
+<title>
+Diagnosis Procedure
+</title>
+<attention3>
+<ptxt>
+Before executing items in this flow, be sure to perform 
+<intxref refid = "S8T40AA814001">CAN Communication System Check:M16A and J20A Model</intxref>
+.
+</ptxt>
+</attention3>
+<ptxt>
+When &#8220;CAN Communication Bus Off&#8221; is detected in any control modules, or when it is not possible to communicate with any control modules by using SUZUKI scan tool (SUZUKI SDT), perform inspection using the following procedure.
+</ptxt>
+<s1>
+<ptxt>
+Connect SUZUKI scan tool (SUZUKI SDT) and have DTC of BCM displayed to check for communication with BCM. If scan tool fails to communicate with BCM, check SUZUKI scan tool and communication cable, DLC power and ground circuit.
+</ptxt>
+<ptxt>
+If communication is in good condition, proceed on to next Step.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Using oscilloscope or oscilloscope function of SUZUKI scan tool (SUZUKI SDT), observe both CAN High terminal (1) and CAN Low terminal (2) for CAN communication signal waveform at DLC on the following condition when ignition switch is at ON position.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Measuring condition
+</title>
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measurement terminal
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: CAN High terminal (1) to DLC ground terminal (3)
+</ptxt>
+<ptxt>
+CH2: CAN Low terminal (2) to DLC ground terminal (3)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Oscilloscope setting
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: 1 V&#x002F;DIV, CH2: 1 V&#x002F;DIV
+</ptxt>
+<ptxt>
+TIME: 5 ms&#x002F;DIV
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measurement condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ignition switch turned ON
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<figure>
+<graphic graphicname = "I7V10AA81005.swf" width = "88.000mm" height = "32.106mm" ver = "02" gw = "223" gh = "74"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.703in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC (View: &#x005B;a&#x005D;)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Compare observed signal waveform and waveforms given as 
+<intxref refid = "S8T40AA814004003">Reference Waveform</intxref>
+. Find the most similar signal waveform and identify the trouble system and trouble nature of the applicable &#8220;Reference Waveform&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Based on identified trouble system and trouble nature, perform troubleshooting according to 
+<intxref refid = "S8T40AA814004011">Troubleshooting</intxref>
+.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40AA814004003">
+<title>
+Reference Waveform
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Shown below are waveforms observed with oscilloscope function of SUZUKI scan tool (SUZUKI-SDT) as examples for reference.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Waveforms in &#8220;Examples of abnormal waveforms&#8221; are picked up as samples among CAN communication waveforms during occurrence of abnormality. However, the same waveform cannot necessarily be observed. Therefore, to identify the content of abnormality, select a waveform which is the most similar to the observed waveform from 
+<intxref refid = "S8T40AA814004005">Examples of abnormal waveforms</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<topic id = "S8T40AA814004004">
+<title>
+Normal waveform
+</title>
+<ptxt>
+Reference voltage is 2.5 V (1) for both CAN High signal (2) and CAN Low signal (3).
+</ptxt>
+<ptxt>
+Waveform of CAN High signal is 2.5 &#8211; 3.5 V and that of CAN Low signal is 2.5 &#8211; 1.5 V.
+</ptxt>
+<ptxt>
+For details, refer to &#8220;CAN Communication signal&#8221; under 
+<intxref refid = "S8T40AA811001">CAN Communication System Description:M16A and J20A Model</intxref>
+.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81006.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "162" gh = "188"/>
+</figure>
+<figure>
+<title>
+Reference (50 us time division)
+</title>
+<graphic graphicname = "I7V10AA81007.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "158" gh = "188"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.752in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.752in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Reference voltage (2.5 V)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN Low signal
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN High signal
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</topic>
+<topic id = "S8T40AA814004005">
+<title>
+Examples of abnormal waveforms
+</title>
+<subtopic id = "S8T40AA814004006">
+<title>
+In case of CAN High signal and&#x002F;or CAN Low signal wire is shorted to ground circuit
+</title>
+<ptxt>
+<emph etype = "bold">
+Characteristic waveform
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When CAN High signal wire is shorted to ground circuit: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Both CAN High signal and CAN Low signal are fixed to GND level (0 V) (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+When CAN Low signal wire is shorted to ground circuit: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Reference level of both CAN High signal and CAN Low signal is GND level (0 V).
+</ptxt>
+<ptxt>
+Waveform of CAN High signal oscillates irregularly (4) between 0 V and 3 V and that of CAN Low signal is fixed to 0 V (3).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81008.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "376" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Reference voltage (2.5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "S8T40AA814004007">
+<title>
+In case of CAN High signal and&#x002F;or CAN Low signal wire is open
+</title>
+<ptxt>
+<emph etype = "bold">
+Characteristic waveform
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When CAN High signal wire is open: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Reference voltage level of CAN High signal and CAN Low signal is unstable and tends to indicate a lower value than in the normal state (2.5 V) (1). Also, waveform of CAN High signal oscillates irregularly (3) but that of CAN Low signal is almost constant (2).
+</ptxt>
+</item>
+<item>
+<ptxt>
+When CAN Low signal wire is open: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Reference voltage level of CAN High signal and CAN Low signal is unstable and tends to indicate a higher value than in the normal state (2.5 V) (4). Also, waveform of CAN High signal is almost constant (5) but that of CAN Low signal oscillates irregularly (6).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81009.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+</figure>
+</subtopic>
+<subtopic id = "S8T40AA814004008">
+<title>
+In case of CAN High signal and&#x002F;or CAN Low signal wire is shorted to power supply (12 V) circuit
+</title>
+<ptxt>
+<emph etype = "bold">
+Characteristic waveform
+</emph>
+</ptxt>
+<ptxt>
+Both CAN High signal and CAN Low signal are fixed to 12 V (2). 
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81010.swf" width = "88.000mm" height = "71.278mm" ver = "01" gw = "149" gh = "185"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.598in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Reference voltage (2.5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "S8T40AA814004009">
+<title>
+In case of CAN High signal and&#x002F;or CAN Low signal wire is shorted to power supply (5 V) circuit
+</title>
+<ptxt>
+<emph etype = "bold">
+Characteristic waveform
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When CAN High signal wire is shorted to power supply (5 V) circuit: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Reference voltage (1) is 5 V for both CAN High signal and CAN Low signal.
+</ptxt>
+<ptxt>
+Waveform of CAN High signal oscillates irregularly near 5 V (3) and that of CAN Low signal between 5 V and 2 V (4).
+</ptxt>
+</item>
+<item>
+<ptxt>
+When CAN Low signal wire is shorted to power supply (5 V) circuit: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Reference voltage (5) is 5 V and of the same phase for both CAN High signal and CAN Low signal and their waveform oscillates irregularly (6) between 5 V and 2.5 V.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81011.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.673in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Reference voltage (2.5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "S8T40AA814004010">
+<title>
+In case of CAN High signal and CAN Low signal wire are shorted each other
+</title>
+<ptxt>
+<emph etype = "bold">
+Characteristic waveform
+</emph>
+</ptxt>
+<ptxt>
+Both CAN High signal and CAN Low signal are fixed to near 2.5 V (1).
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81012.swf" width = "88.000mm" height = "70.770mm" ver = "01" gw = "149" gh = "184"/>
+</figure>
+</subtopic>
+</topic>
+</servinfosub>
+<servinfosub id = "S8T40AA814004011">
+<title>
+Troubleshooting
+</title>
+<ptxt>
+Perform inspection according to the following troubleshooting procedure.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When performing &#8220;Communication Bus Check&#8221; using SUZUKI scan tool (SUZUKI-SDT) in each step of this troubleshooting, use the following table to determine whether the control module is in good condition or not.
+</ptxt>
+<ptxt>
+Also, while performing &#8220;Communication Bus Check&#8221;, do not perform any work other than instructed in this troubleshooting. Or, it may occur that display of control module &#x002F; sensor on SUZUKI-SDT screen and&#x002F;or its background color may change.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.303in"/>
+<colspec colnum = "2" colname = "2" colwidth = "5.787in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Judgment
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Display of Communication Bus Check
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Normal
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+All connected control modules &#x002F; sensors (communicated by CAN) are displayed and its back ground color is &#8220;White&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Above state remains unchanged while monitoring for longer than 1 minute.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Abnormal
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Even one of connected control modules &#x002F; sensors (communicated by CAN) is not displayed.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Display of even one of connected control modules &#x002F; sensors (communicated by CAN) changes.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Background color of even one of connected control modules &#x002F; sensors (communicated by CAN) is displayed in &#8220;Gray&#8221; or &#8220;Light green&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Background color of even one of connected control modules &#x002F; sensors (communicated by CAN) changes.
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8220;Communication Bus Check&#8221; cannot be executed.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</item>
+<item>
+<ptxt>
+Check vehicle specifications and comprehend yourself with installed control modules before inspection. Then, perform troubleshooting procedure.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "S8T40AA814004012">
+<testgroup id = "S8T40AA814004013">
+<title>
+CAN communication line check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connectors of all control modules &#x002F; sensors communicating by means of CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to each CAN communication circuit at all control module &#x002F; sensors (communicated by CAN) connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check each CAN communication circuit for breaking, shorting to power circuit, shorting to ground circuit, shorting to each other CAN communication wire or high resistance, based on results obtained through measurement and identification of trouble nature in Steps 2) and 3) of 
+<intxref refid = "S8T40AA814004002">Diagnosis Procedure</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Are all CAN communication circuits in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication line.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814004014">
+<title>
+ECM CAN terminating resistance check
+</title>
+<test1>
+<ptxt>
+Connect connector to ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check CAN terminating resistance in ECM as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ESP&#174; model:
+</ptxt>
+<ptxt>
+Measure resistance between &#8220;E53-43&#8221; and &#8220;E53-44&#8221; terminal at ESP&#174; control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Non-ESP&#174; model:
+</ptxt>
+<ptxt>
+Measure resistance between &#8220;E03-10&#8221; and &#8220;E03-8&#8221; terminal at ABS control module connector.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is resistance 114 &#8211; 134 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814004015">
+<title>
+Combination meter CAN terminating resistance check 
+</title>
+<test1>
+<ptxt>
+Connect connector to combination meter.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between &#8220;G31-1&#8221; and &#8220;G31-3&#8221; terminal of BCM connector.
+</ptxt>
+</test1>
+<question>
+Is resistance 114 &#8211; 134 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good combination meter and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814004016">
+<title>
+ECM, combination meter and BCM check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connect connector to BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Using service wire (1), connect terminals of ABS &#x002F; ESP&#174; control module connector as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ESP&#174; model &#x005B;A&#x005D;:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Connect service wire between &#8220;E53-43&#8221; and &#8220;E53-42&#8221; terminal of ESP&#174; control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Connect service wire between &#8220;E53-44&#8221; and &#8220;E53-45&#8221; terminal of ESP&#174; control module connector.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Non-ESP&#174; model &#x005B;B&#x005D;:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Connect service wire between &#8220;E03-12&#8221; and &#8220;E03-10&#8221; terminal of ABS control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Connect service wire between &#8220;E03-6&#8221; and &#8220;E03-8&#8221; terminal of ABS control module connector.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80006.swf" width = "88.000mm" height = "69.147mm" ver = "01" gw = "228" gh = "179"/>
+</testfigure>
+</item>
+</list2>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and select &#8220;Communication Bus Check&#8221; under &#8220;Bus Check&#8221; for SUZUKI scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication is normal condition for ECM, combination meter and BCM.
+</ptxt>
+</test1>
+<question>
+Is communication normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+A&#x002F;T model: Go to Step 5.
+</ptxt>
+<ptxt>
+M&#x002F;T model: Go to Step 7.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814004017">
+<title>
+TCM check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connect connector to TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and select &#8220;Communication Bus Check&#8221; under &#8220;Bus Check&#8221; for SUZUKI scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication is normal condition for ECM, combination meter, BCM and TCM.
+</ptxt>
+</test1>
+<question>
+Is communication normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+4WD model: Go to Step 6.
+</ptxt>
+<ptxt>
+2WD model: Go to Step 7.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+4WD control module check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connect connector to 4WD control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and select &#8220;Communication Bus Check&#8221; under &#8220;Bus Check&#8221; for SUZUKI scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication is normal condition for ECM, combination meter, BCM, TCM and 4WD control module.
+</ptxt>
+</test1>
+<question>
+Is communication normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good 4WD control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+HVAC control module check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connect connector to HVAC control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and select &#8220;Communication Bus Check&#8221; under &#8220;Bus Check&#8221; for SUZUKI scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication is normal condition for ECM, combination meter, BCM, TCM (A&#x002F;T model), 4WD control module (motor-shift type 4WD model) and HVAC control module.
+</ptxt>
+</test1>
+<question>
+Is communication normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Keyless start model: Go to Step 8.
+</ptxt>
+<ptxt>
+Non-keyless start model: Go to Step 9.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good HVAC control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Keyless start control module check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connect connector to keyless start control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and select &#8220;Communication Bus Check&#8221; under &#8220;Bus Check&#8221; for SUZUKI scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication is normal condition for ECM, combination meter, BCM, TCM (A&#x002F;T model), 4WD control module (motor-shift type 4WD model), HVAC control module and keyless start control module.
+</ptxt>
+</test1>
+<question>
+Is communication normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good keyless start control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Is vehicle equipped with ESP&#174;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ABS control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Steering angle sensor check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connect connector to steering angle sensor.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and select &#8220;Communication Bus Check&#8221; under &#8220;Bus Check&#8221; for SUZUKI scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication is normal condition for ECM, combination meter, BCM, TCM (A&#x002F;T model), 4WD control module (motor-shift type 4WD model), HVAC control module, keyless start control module (keyless start model) and steering angle sensor.
+</ptxt>
+</test1>
+<question>
+Is communication normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ESP&#174; control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace steering angle sensor.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814004018">
+<title>
+BCM check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Using service wire (1), connect terminals of BCM connector as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Connect service wire between &#8220;G31-3&#8221; and &#8220;G31-4&#8221; terminal of BCM connectors.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Connect service wire between &#8220;G31-2&#8221; and &#8220;G31-1&#8221; terminal of BCM connectors.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80005.swf" width = "88.000mm" height = "55.389mm" ver = "01" gw = "214" gh = "140"/>
+</testfigure>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and select &#8220;Communication Bus Check&#8221; under &#8220;Bus Check&#8221; for SUZUKI scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication is normal condition for ECM and combination meter.
+</ptxt>
+</test1>
+<question>
+Is communication normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good BCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 12.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814004019">
+<title>
+Combination meter check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect service wires connected in Step 4 from ABS &#x002F; ESP&#174; control module connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect service wires connected in Step 11 from BCM connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch to ON position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Observe waveform obtained at &#8220;G31-1&#8221; and &#8220;G31-3&#8221; terminals of BCM connector.
+</ptxt>
+</test1>
+<question>
+Is observed waveform normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good combination meter and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

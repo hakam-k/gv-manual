@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40A1124020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0112 &#x002F; P0113
+</title>
+<servinfosub id = "K8T40A1124020001">
+<title>
+Κατάσταση Ανίχνευσης Κωδικού Βλάβης και  Περιοχή Προβλήματος
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.301in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.904in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Συνθήκη ανίχνευσης κωδικού
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Περιοχή Προβλήματος
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0112: Χαμηλό Κύκλωμα Αισθητήρα 1 Θερμοκρασίας Αέρα Εισαγωγής
+</emph>
+</ptxt>
+<ptxt>
+Η τάση εξόδου του σήματος κυκλώματος αισθητήρα IAT είναι χαμηλότερη από 0,15 V για 5 sec.
+</ptxt>
+<ptxt>
+(λογική ανίχνευσης 2 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Αισθητήρας ΙΑΤ ή και το κύκλωμά του
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0113: Υψηλό Κύκλωμα του Αισθητήρα 1 Θερμοκρασίας Αέρα Εισαγωγής
+</emph>
+</ptxt>
+<ptxt>
+Η τάση εξόδου του σήματος κυκλώματος αισθητήρα IAT είναι υψηλότερη από 4,85 V για 5 sec.
+</ptxt>
+<ptxt>
+(λογική ανίχνευσης 2 D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40A1124020002">
+<title>
+Ηλεκτρικό Διάγραμμα
+</title>
+<ptxt>
+Ανατρέξτε στο 
+<intxref refid = "K8T40A1124073">DTC P0101:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40A1124020003">
+<title>
+Διαδικασία Επιβεβαίωσης Κωδικού Βλάβης DTC
+</title>
+<s1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση ΟΝ για 10 sec.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "K8T40A1124020004">
+<title>
+Διάγνωση Κωδικού DTC
+</title>
+<diag type = "test" id = "K8T40A1124020005">
+<testgroup id = "K8T40A1124020006">
+<question>
+Έγινε &#34;Έλεγχος του Κινητήρα και του Συστήματος Ελέγχου Εκπομπής Ρύπων&#34;;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40A1124001">Έλεγχος του Κινητήρα και του Συστήματος Ελέγχου Εκπομπής Ρύπων:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1124020007">
+<title>
+Έλεγχος κυκλώματος αισθητήρα ΙΑΤ
+</title>
+<test1>
+<ptxt>
+Ελέγξτε το κύκλωμα του αισθητήρα IAT ανατρέχοντας στο Βήμα 3 του 
+<intxref refid = "K8T40A1124019">DTC P0111:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε ή αντικαταστήστε την ελαττωματική ηλεκτρική καλωδίωση.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1124020008">
+<title>
+Έλεγχος του αισθητήρα ΙΑΤ
+</title>
+<test1>
+<ptxt>
+Ελέγξτε τον αισθητήρα ΙΑΤ. 
+<intxreftitleoff1 refid = "K8T40A1326022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα ECM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Αντικαταστήστε τον αισθητήρα MAF &#38; IAT.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

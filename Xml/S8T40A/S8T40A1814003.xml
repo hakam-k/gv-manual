@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1H">
+<servcat sctnbr = "01" scnbr = "08">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1814003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Ignition System Check
+</title>
+<diag type = "test" id = "S8T40A1814003001">
+<testgroup id = "S8T40A1814003002">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114001">Engine and Emission Control System Check:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003003">
+<title>
+Ignition spark test
+</title>
+<test1>
+<ptxt>
+Check all spark plugs for condition and type referring to 
+<intxref refid = "S8T40A1816004">Spark Plug Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, perform ignition spark test referring to 
+<intxref refid = "S8T40A1814004">Ignition Spark Test:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is spark emitted from all spark plugs?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003004">
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Perform DTC check referring to 
+<intxref refid = "S8T40A1114003">DTC Check:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is DTC stored in ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003005">
+<title>
+Electrical connection check
+</title>
+<test1>
+<ptxt>
+Check ignition coil assemblies and high-tension cords (for M16A engine) for electrical connection.
+</ptxt>
+</test1>
+<question>
+Are they connected securely?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5 for M16A engine or go to Step 6 for J20A engine.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Connect securely.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003006">
+<title>
+High-tension cords check (for M16A engine)
+</title>
+<test1>
+<ptxt>
+Check high-tension cord for resistance referring to 
+<intxref refid = "S8T40A1816002">High-Tension Cord Inspection (M16A):M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace high-tension cord(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003007">
+<title>
+Ignition coil assembly power supply and ground circuit check
+</title>
+<test1>
+<ptxt>
+Check ignition coil assembly power supply and ground circuits for open and short.
+</ptxt>
+</test1>
+<question>
+Are circuits in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003008">
+<title>
+Ignition coil assembly check
+</title>
+<test1>
+<ptxt>
+Check ignition coil for resistance referring to 
+<intxref refid = "S8T40A1816006">Ignition Coil Assembly (Including ignitor) Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace ignition coil assembly.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003009">
+<title>
+CKP sensor check
+</title>
+<test1>
+<ptxt>
+Check CKP sensor referring to 
+<intxref refid = "S8T40A1316016">Crankshaft Position (CKP) Sensor Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Tighten CKP sensor bolt, replace CKP sensor or CKP sensor plate.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003010">
+<title>
+CMP sensor check
+</title>
+<test1>
+<ptxt>
+Check CMP sensor referring to 
+<intxref refid = "S8T40A1316014">Camshaft Position (CMP) Sensor Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Tighten CMP sensor bolt, replace CMP sensor or intake camshaft.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003011">
+<title>
+Ignition trigger signal circuit check
+</title>
+<test1>
+<ptxt>
+Check ignition trigger signal wire for open, short and poor connection.
+</ptxt>
+</test1>
+<question>
+Is circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003012">
+<title>
+A known-good ignition coil assembly substitution
+</title>
+<test1>
+<ptxt>
+Substitute a known-good ignition coil assembly and then repeat Step 2.
+</ptxt>
+</test1>
+<question>
+Is check result of Step 2 satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and then repeat Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003013">
+<title>
+Ignition timing check
+</title>
+<test1>
+<ptxt>
+Check initial ignition timing and ignition timing advance referring to 
+<intxref refid = "S8T40A1816007">Ignition Timing Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+System is in good condition.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 13.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1814003014">
+<title>
+Knock sensor check
+</title>
+<test1>
+<ptxt>
+Confirm that knock sensor circuit is in good condition referring to 
+<intxref refid = "S8T40A1114040">DTC P0327 &#x002F; P0328: Knock Sensor Circuit Low &#x002F; High:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check oscilloscope waveform of knock sensor signal referring to &#8220;Reference waveform No.26&#8221; and &#8220;Reference waveform No.27&#8221; under 
+<intxref refid = "S8T40A1114080">Inspection of ECM and Its Circuits:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Check CMP sensor, CMP sensor rotor tooth of camshaft, CKP sensor, CKP sensor plate and&#x002F;or input signals related to this system.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good knock sensor and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

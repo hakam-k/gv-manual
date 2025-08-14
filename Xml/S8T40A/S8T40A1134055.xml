@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1134055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2135
+</title>
+<servinfosub id = "S8T40A1134055001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.194in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2135: Throttle &#x002F; Pedal Position Sensor &#x002F; Switch &#8220;A&#8221; &#x002F; &#8220;B&#8221; Voltage Correlation
+</emph>
+</ptxt>
+<ptxt>
+This DTC is detected if any one of the following conditions is met.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Difference between TP measured by TP sensor (main) and standard TP is more than 9&#x0025;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Difference between TP measured by TP sensor (sub) and standard TP is more than 9&#x0025;.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(1 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP sensor (sub) and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1134055002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1134055003">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention3>
+<ptxt>
+Make sure that the following conditions are satisfied when using this procedure.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Battery voltage &gt; 7 V
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Start engine.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Depress accelerator pedal fully, and release it.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 2) for 3 times.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1134055004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1134055005">
+<testgroup id = "S8T40A1134055006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1134001">Engine and Emission Control System Check:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134055007">
+<title>
+TP sensor check
+</title>
+<test1>
+<ptxt>
+Check TP sensor for performance referring to &#8220;Throttle Position (TP) Sensor Performance Check&#8221; under 
+<intxref refid = "S8T40A1336004">Electric Throttle System On-Vehicle Inspection:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace throttle body.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134055008">
+<title>
+TP sensor circuit check
+</title>
+<test1>
+<ptxt>
+Check TP sensor (main and sub) circuits as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+TP sensor (main) circuit: Refer to Step 2 through 5 under 
+<intxref refid = "S8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TP sensor (sub) circuit: Refer to Step 2 through 5 under 
+<intxref refid = "S8T40A1134028">DTC P0222 &#x002F; P0223:N32A</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134055009">
+<title>
+Throttle body check
+</title>
+<test1>
+<ptxt>
+Check throttle body referring to &#8220;Electric Throttle System Operation Check&#8221; and &#8220;Throttle Actuator Check&#8221; under 
+<intxref refid = "S8T40A1336004">Electric Throttle System On-Vehicle Inspection:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace throttle body.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134055010">
+<title>
+Troubleshooting of other DTC(s) detected at the same time
+</title>
+<question>
+Is other DTC(s) detected together?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to troubleshooting for applicable DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

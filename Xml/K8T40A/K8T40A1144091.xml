@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40A1144091" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0089: Επιθεώρηση Ενεργοποιητή Ροής Καυσίμου
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Συνθήκες για την ε&#248;αρμογή διαδικασιών ανεύρεσης βλαβών για να καταγρα&#248;ούν βλάβες:
+</ptxt>
+<ptxt>
+Η βλάβη θεωρείται παρούσα μετά από:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Εκκίνηση του κινητήρα.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Μία δοκιμή στο δρόμο.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Δοκιμή απόδοσης &#34;IMV&#x002F;Flow actuator - Ενεργοποιητής Ροής &#x002F; IMV&#34; στο διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Εάν η βλάβη είναι παρούσα:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Δεν είναι δυνατόν να ξεκινήσει ο κινητήρας.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ο κινητήρας σταματά εάν ήδη έχει ξεκινήσει,
+</ptxt>
+</item>
+<item>
+<ptxt>
+Εάν είναι παρόν το D3 , η προειδοποιητική λυχνία Ψεκασμού (προειδοποιητική λυχνία σοβαρότητας 1) είναι αναμμένη.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Εάν είναι παρούσα μία από τις άλλες βλάβες, η Κόκκινη προειδοποιητική λυχνία stop (προειδοποιητική λυχνία σοβαρότητας 2) είναι αναμμένη.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Χρησιμοποιήστε ένα καλώδιο συνεργείου για όλες τις εργασίες επάνω στα &#248;ις του εγκε&#248;άλου ECM.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "K8T40A1144091001">
+<title>
+Ηλεκτρικό Διάγραμμα
+</title>
+<ptxt>
+Για το κύκλωμα της καλωδίωσης και τον αριθμό του &#248;ις, ανατρέξτε στο 
+<intxref refid = "K8T40A910E013">A-5 Ηλεκτρικό διάγραμμα συστήματος ελέγχου κινητήρα και A&#x002F;C (Μοντέλο Βενζινοκινητήρα)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40A1144091002">
+<title>
+Κατάσταση Ανίχνευσης
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Εμ&#248;ανίζεται στο διαγνωστικό εργαλείο SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Συνθήκη ανίχνευσης
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Βραχυκύκλωμα με τα &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Βραχυκύκλωμα με την γείωση του αμαξώματος του αυτοκινήτου
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ανοικτό κύκλωμα
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Εσωτερική ηλεκτρονική βλάβη
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Τιμή ρύθμισης πολύ χαμηλή
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Τιμή ρύθμισης πολύ υψηλή
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ανεπαρκής πίεση καυσίμου
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D5
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Πίεση καυσίμου &lt; ελάχιστη
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D6
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Πίεση καυσίμου &gt; μέγιστη
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D7
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Πίεση καυσίμου &gt; τιμή ορίου
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40A1144091003">
+<title>
+Διάγνωση βλαβών για CC.1: Βραχυκύκλωμα με τα &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ελέγξτε το &#248;ις του ενεργοποιητή ροής καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε τις συνδέσεις του εγκε&#248;άλου ECM.
+</ptxt>
+<ptxt>
+Ελέγξτε το κύκλωμα χαμηλής πίεσης και ότι χρησιμοποιείται η σωστή πίεση χρησιμοποιώντας ανεύρεση βλαβών
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Έλεγχοι Ελέγχου 2 ανατρέχοντας στο 
+<intxref refid = "K8T40A1144167">Έλεγχος 2: Έλεγχος Κυκλώματος Χαμηλής Πίεσης:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+Επισκευάστε εάν είναι αναγκαίο.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Μετρήστε την αντίσταση του ενεργοποιητή ροής καυσίμου μεταξύ των ακροδεκτών &#34;C83-1&#34; και &#34;C83-2&#34;.
+</ptxt>
+<ptxt>
+Εάν η βλάβη εξακολουθεί να είναι 2,9 - 3,1 Ω σε 20 &#176;C, 68 &#176;F, αντικαταστήστε τον ενεργοποιητή της ροής καυσίμου.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ελέγξτε τη συνέχεια και τη μόνωση από την τρο&#248;οδοσία των &#x002B;12 V της παρακάτω σύνδεσης:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Μεταξύ του καλωδίου &#34;C83-2&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου και του ακροδέκτη &#34;C86-7&#34; του &#248;ις του εγκε&#248;άλου ECM.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ελέγξτε τον αισθητήρα πίεσης καυσίμου χρησιμοποιώντας την ερμηνεία του 
+<intxref refid = "K8T40A1144096">DTC P0190: Κύκλωμα Αισθητήρα Πίεσης Καυσίμου:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+Εάν η βλάβη εξακολουθεί να είναι παρούσα αντικαταστήστε τον ενεργοποιητή της ροής καυσίμου.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40A1144091004">
+<title>
+Διάγνωση βλαβών για CC.0: Βραχυκύκλωμα με την γείωση του αμαξώματος του αυτοκινήτου και CO: Ανοικτό κύκλωμα
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ελέγξτε το &#248;ις του ενεργοποιητή ροής καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε τις συνδέσεις του εγκε&#248;άλου ECM.
+</ptxt>
+<ptxt>
+Ελέγξτε το κύκλωμα χαμηλής πίεσης και ότι χρησιμοποιείται η σωστή πίεση χρησιμοποιώντας ανεύρεση βλαβών
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Έλεγχοι Ελέγχου 2 ανατρέχοντας στο 
+<intxref refid = "K8T40A1144167">Έλεγχος 2: Έλεγχος Κυκλώματος Χαμηλής Πίεσης:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+Επισκευάστε εάν είναι αναγκαίο.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Μετρήστε την αντίσταση του ενεργοποιητή ροής καυσίμου μεταξύ των ακροδεκτών &#34;C83-1&#34; και &#34;C83-2&#34;.
+</ptxt>
+<ptxt>
+Εάν η βλάβη εξακολουθεί να είναι 2,9 - 3,1 Ω σε 20 &#176;C, 68 &#176;F, αντικαταστήστε τον ενεργοποιητή της ροής καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε τη συνέχεια και τη μόνωση από την γείωση του αμαξώματος του αυτοκινήτου της παρακάτω σύνδεσης:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Μεταξύ του καλωδίου &#34;C83-2&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου και του ακροδέκτη &#34;C86-7&#34; του &#248;ις του εγκε&#248;άλου ECM.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Με τον διακόπτη ανά&#248;λεξης ON, ελέγξτε για &#x002B;12 V στο &#34;C83-1&#34; του ενεργοποιητή ροής καυσίμου. Εάν δεν υπάρχει &#x002B;12 V στον &#34;C83-1&#34;, ελέγξτε την συνέχεια και απουσία αντίστασης παρεμβολής της ακόλουθης σύνδεσης:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Μεταξύ του καλωδίου &#34;C83-1&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου και του καλωδίου &#34;E33-6&#34; του &#248;ις συγκράτησης του κεντρικού ρελέ
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Επισκευάστε εάν είναι αναγκαίο.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ελέγξτε τον αισθητήρα πίεσης καυσίμου χρησιμοποιώντας την ερμηνεία του 
+<intxref refid = "K8T40A1144096">DTC P0190: Κύκλωμα Αισθητήρα Πίεσης Καυσίμου:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+Εάν η βλάβη εξακολουθεί να είναι παρούσα αντικαταστήστε τον ενεργοποιητή της ροής καυσίμου.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40A1144091005">
+<title>
+Διάγνωση βλαβών για D1: Εσωτερική ηλεκτρονική βλάβη
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ελέγξτε το &#248;ις του ενεργοποιητή ροής καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε τις συνδέσεις του εγκε&#248;άλου ECM.
+</ptxt>
+<ptxt>
+Ελέγξτε το κύκλωμα χαμηλής πίεσης και ότι χρησιμοποιείται η σωστή πίεση χρησιμοποιώντας ανεύρεση βλαβών
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Έλεγχοι Ελέγχου 2 ανατρέχοντας στο 
+<intxref refid = "K8T40A1144167">Έλεγχος 2: Έλεγχος Κυκλώματος Χαμηλής Πίεσης:F9Q</intxref>
+.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Επισκευάστε εάν είναι αναγκαίο.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Μετρήστε την αντίσταση του ενεργοποιητή ροής καυσίμου μεταξύ των ακροδεκτών &#34;C83-1&#34; και &#34;C83-2&#34;.
+</ptxt>
+<ptxt>
+Εάν η βλάβη εξακολουθεί να είναι 2,9 - 3,1 Ω σε 20 &#176;C, 68 &#176;F, αντικαταστήστε τον ενεργοποιητή της ροής καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε την συνέχεια και για απουσία αντίστασης παρεμβολής στις παρακάτω συνδέσεις:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Μεταξύ του καλωδίου &#34;C83-2&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου και του ακροδέκτη &#34;C86-7&#34; του &#248;ις του εγκε&#248;άλου ECM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Μεταξύ του καλωδίου &#34;C83-1&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου και του καλωδίου &#34;E33-6&#34; του &#248;ις συγκράτησης του κεντρικού ρελέ
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Επισκευάστε εάν είναι αναγκαίο.
+</ptxt>
+<ptxt>
+Ελέγξτε τον αισθητήρα πίεσης καυσίμου χρησιμοποιώντας την ερμηνεία του 
+<intxref refid = "K8T40A1144096">DTC P0190: Κύκλωμα Αισθητήρα Πίεσης Καυσίμου:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+Επισκευάστε εάν είναι αναγκαίο.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Εάν η βλάβη εξακολουθεί να είναι παρούσα, ελέγξτε ότι το στάδιο απόδοσης του εγκε&#248;άλου ECM λειτουργεί κανονικά.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Είτε χρησιμοποιώντας ένα αμπερόμετρο:
+</ptxt>
+<ptxt>
+Με τον ρυθμιστή συνδεδεμένο, συνδέστε τον σ&#248;ιγκτήρα αμπερόμετρου στην σύνδεση στο &#248;ις ακροδέκτη ενεργοποιητή ροής καυσίμου &#34;C83-1&#34;, παρατηρώντας την κατεύθυνση ρεύματος. Διαγράψτε οποιεσδήποτε βλάβες της ηλεκτρομαγνητικής βαλβίδας και πραγματοποιήστε μία δοκιμή απόδοσης της &#34;IMV&#x002F; Ενεργοποιητή ροής&#34; στο διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+<ptxt>
+Το αμπερόμετρο θα πρέπει να εμ&#248;ανίζει πέντε κύκλους από δύο διαδοχικές εντάσεις: ~ 0,6 A κατόπιν ~ 2 A
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ή χρησιμοποιώντας ένα βολτόμετρο:
+</ptxt>
+<ptxt>
+Με τον ενεργοποιητή ροής καυσίμου συνδεδεμένο, συνδέστε τον αρνητικό ακροδέκτη του βολτομέτρου στο καλώδιο &#34;C83-2&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου και τον θετικό ακροδέκτη στο καλώδιο &#34;C83-1&#34;. Διαγράψτε οποιεσδήποτε βλάβες του ενεργοποιητή ροής καυσίμου, κατόπιν πραγματοποιήστε &#34;Ενεργ Ροής &#x002F; IMV&#34; στο διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+<ptxt>
+Το βολτόμετρο θα πρέπει να εμ&#248;ανίζει δύο διαδοχικές ενδείξεις τάσης:
+</ptxt>
+<ptxt>
+~ 3,15 βολτ για μία περιοδική σχέση ανοίγματος του 25 &#x0025; κατόπιν ~ 9,45 V για μία περιοδική σχέση ανοίγματος των 75 &#x0025; (πέντε κύκλοι)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ή χρησιμοποιώντας έναν παλμογρά&#248;ο (στην κλίμακα 5 V &#x002F; υποδιαίρεση και βάση χρόνου 1 ms.&#x002F;DIV.&#x002F; υποδιαίρεση):
+</ptxt>
+<ptxt>
+Με τον ενεργοποιητή ροής καυσίμου συνδεδεμένο, συνδέστε τον αρνητικό ακροδέκτη του παλμογρά&#248;ου στον ακροδέκτη της γείωσης στη μπαταρία και τον θετικό ακροδέκτη στο καλώδιο &#34;C83-2&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου, διαγράψτε οποιεσδήποτε βλάβες του ενεργοποιητή ροής καυσίμου, κατόπιν πραγματοποιήστε &#34;Ενεργ Ροής &#x002F; IMV&#34; στο διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+<ptxt>
+Ο παλμογρά&#248;ος πρέπει να εμ&#248;ανίσει ένα σήμα τετράγωνου κύματος με ένα πλάτος των 12,5 V στη συχνότητα των 185 Hz (με μία περιοδική σχέση ανοίγματος εναλλασσόμενη από 25 έως 75 &#x0025;).
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Εάν η μέτρηση δεν εμ&#248;ανίζει οποιονδήποτε έλεγχο ή συνεχόμενη τάση, αντικαταστήστε τον εγκέ&#248;αλο ECM με έναν που γνωρίζετε ότι λειτουργεί κανονικά και ελέγξτε πάλι.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40A1144091006">
+<title>
+Διάγνωση βλαβών για D2: Τιμή ρύθμισης πολύ χαμηλή, D3: Τιμή ρύθμισης πολύ υψηλή, D4: Ανεπαρκής πίεση καυσίμου, D5: Πίεση καυσίμου &lt; ελάχιστη, D6: Πίεση καυσίμου &gt; μέγιστη και D7: Πίεση καυσίμου &gt; τιμή ορίου
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ελέγξτε το &#248;ις του ενεργοποιητή ροής καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε τις συνδέσεις του εγκε&#248;άλου ECM.
+</ptxt>
+<ptxt>
+Ελέγξτε το κύκλωμα χαμηλής πίεσης και ότι χρησιμοποιείται η σωστή πίεση χρησιμοποιώντας ανεύρεση βλαβών
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Έλεγχοι Ελέγχου 2 ανατρέχοντας στο 
+<intxref refid = "K8T40A1144167">Έλεγχος 2: Έλεγχος Κυκλώματος Χαμηλής Πίεσης:F9Q</intxref>
+.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Επισκευάστε εάν είναι αναγκαίο.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Μετρήστε την αντίσταση του ενεργοποιητή ροής καυσίμου μεταξύ του καλωδίου &#34;C83-2&#34; και &#34;C83-1&#34;.
+</ptxt>
+<ptxt>
+Εάν η βλάβη εξακολουθεί να είναι 2,9 - 3,1 Ω σε 20 &#176;C, 68 &#176;F, αντικαταστήστε τον ενεργοποιητή της ροής καυσίμου.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ελέγξτε την συνέχεια και για απουσία αντίστασης παρεμβολής στις παρακάτω συνδέσεις:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Μεταξύ του καλωδίου &#34;C83-2&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου και του ακροδέκτη &#34;C86-7&#34; του &#248;ις του εγκε&#248;άλου ECM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Μεταξύ του καλωδίου &#34;C83-1&#34; του &#248;ις του ενεργοποιητή ροής καυσίμου και του καλωδίου &#34;E33-6&#34; του &#248;ις συγκράτησης του κεντρικού ρελέ
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Επισκευάστε εάν είναι αναγκαίο.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Σε περίπτωση υπερβολικής πίεσης στον κανόνα:
+</ptxt>
+<ptxt>
+Ελέγξτε τη λειτουργία των μπεκ ανατρέχοντας στο 
+<intxref refid = "K8T40A1144173">Έλεγχος 8: Δυσλειτουργία μπεκ ψεκασμού:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+Ελέγξτε ότι ο αισθητήρας πίεσης καυσίμου λειτουργεί σωστά χρησιμοποιώντας την εντολή &#34;Ενεργ Ροής &#x002F; IMV&#34; στο διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+<ptxt>
+Εμ&#248;ανίστε την παράμετρο &#34;Πίεση καυσίμου&#34; στη Λίστα Δεδομένων του διαγνωστικού εργαλείου SUZUKI και ανατρέξτε στο &#34;Δεδομένα Διαγνωστικού Εργαλείου SUZUKI&#34; για να ελέγξετε τις τιμές λειτουργίας.
+</ptxt>
+<ptxt>
+Εάν αυτοί οι έλεγχοι δεν αποκαλύπτουν οποιεσδήποτε βλάβες και εάν η βλάβη εξακολουθεί να είναι παρούσα, αντικαταστήστε τον αισθητήρα πίεσης καυσίμου.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Σε περίπτωση μικρότερης πίεσης στον κανόνα:
+</ptxt>
+<ptxt>
+Ελέγξτε ότι ο αισθητήρας πίεσης καυσίμου λειτουργεί σωστά χρησιμοποιώντας την εντολή &#34;Ενεργ Ροής &#x002F; IMV&#34; στο διαγνωστικό εργαλείο SUZUKI.
+</ptxt>
+<ptxt>
+Εμ&#248;ανίστε την παράμετρο &#34;Πίεση καυσίμου&#34; στη Λίστα Δεδομένων του διαγνωστικού εργαλείου SUZUKI και ανατρέξτε στο &#34;Δεδομένα Διαγνωστικού Εργαλείου SUZUKI&#34; για να ελέγξετε τις τιμές λειτουργίας.
+</ptxt>
+<ptxt>
+Ελέγξτε αρχική πίεση του κυκλώματος χαμηλής πίεσης καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε την ορθότητα των συνδέσεων του &#248;ίλτρου καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε την κατάσταση του &#248;ίλτρου καυσίμου (&#248;ραγμός και τον κορεσμό του νερού).
+</ptxt>
+<ptxt>
+Ελέγξτε ότι δεν υπάρχουν &#248;υσαλίδες μεταξύ του &#248;ίλτρου καυσίμου και της αντλίας υψηλής πίεσης.
+</ptxt>
+<ptxt>
+Ελέγξτε την στεγανότητα του κυκλώματος χαμηλής και υψηλής πίεσης (οπτικοί έλεγχοι, μυρωδιά κ.λ.π.): κέλυ&#248;ος αντλίας, βαλβίδα ανακού&#248;ισης πίεσης, σωλήνες, συνδέσεις κανόνα και μπεκ ψεκασμού, θήκες μπεκ ψεκασμού κ.λ.π.
+</ptxt>
+<ptxt>
+Ελέγξτε την ορθότητα της προσαρμογής της τσιμούχας του ενεργοποιητή ροής καυσίμου.
+</ptxt>
+<ptxt>
+Ελέγξτε τη λειτουργία των μπεκ ανατρέχοντας στο 
+<intxref refid = "K8T40A1144173">Έλεγχος 8: Δυσλειτουργία μπεκ ψεκασμού:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+Εκτελέστε τις αναγκαίες εργασίες.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Εάν η βλάβη εξακολουθεί να είναι παρούσα αντικαταστήστε τον ενεργοποιητή της ροής καυσίμου.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

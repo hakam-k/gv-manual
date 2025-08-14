@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B8204002" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Air Bag Diagnostic System Check Flow
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Be sure to perform 
+<intxref refid = "S6JB0B8204001">Air Bag Diagnostic System Check</intxref>
+ before starting diagnosis according to each flow.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When measurement of resistance or voltage is required in the flow, use a tester along with a correct terminal adapter from special tool (Connector test adapter kit).
+</ptxt>
+</item>
+<item>
+<ptxt>
+When a check for proper connection is required, refer to 
+<intxref refid = "S6JB0B8204040">Inspection of Intermittent and Poor Connections</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If an open circuit in the air bag wire harness damaged, connector or terminal is found, replace the wire harness, connectors and terminals as an assembly.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<servinfosub id = "S6JB0B8204002001">
+<title>
+Flow test description
+</title>
+<ptxt>
+<emph etype = "bold">
+Step 1: Check &#8220;AIR BAG&#8221; warning light and circuits.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 2: Check that &#8220;AIR BAG&#8221; warning light lights.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 3: Check diagnosis switch circuit.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 4: Check that &#8220;AIR BAG&#8221; warning light flashes 6 times after ignition switch is turned ON.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 6: Check that history code(s) is in SDM memory. (using SUZUKI scan tool)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 7: Check that history code(s) is in SDM memory. (using monitor coupler)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 9: Check that current code is in SDM memory. (using SUZUKI scan tool)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 10: Check that current code is in SDM memory. (using monitor coupler)
+</emph>
+</ptxt>
+<diag type = "test" id = "S6JB0B8204002002">
+<testgroup>
+<test1>
+<ptxt>
+Make sure that battery voltage is about 11 V or higher.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Note &#8220;AIR BAG&#8221; warning light as ignition switch is turned ON.
+</ptxt>
+</test1>
+<question>
+Does &#8220;AIR BAG&#8221; warning light come ON when ignition switch is turned ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Proceed to 
+<intxref refid = "S6JB0B8204008">&#8220;AIR BAG&#8221; Warning Light Does Not Come ON</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Does &#8220;AIR BAG&#8221; warning light come ON steady?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Proceed to 
+<intxref refid = "S6JB0B8204007">&#8220;AIR BAG&#8221; Warning Light Comes ON Steady</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Does &#8220;AIR BAG&#8221; warning light keep flashing (indicating DTC) when ignition switch is ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Proceed to 
+<intxref refid = "S6JB0B8204009">&#8220;AIR BAG&#8221; Warning Light Flashes</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Does &#8220;AIR BAG&#8221; warning light turn OFF, after flashing 6 times?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+&#8220;AIR BAG&#8221; warning light circuit is in good condition. Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;AIR BAG&#8221; warning light circuit is in good condition. Go to Step 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Do you have SUZUKI scan tool?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to step 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Check DTC referring to 
+<intxref refid = "S6JB0B8204004">DTC Check</intxref>
+ using SUZUKI scan tool.
+</ptxt>
+<question>
+Is &#8220;NO CODES&#8221; displayed on SUZUKI scan tool?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Air bag system is in good condition.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+An intermittent trouble has occurred at some place.
+</ptxt>
+<ptxt>
+Check the connector harness, etc. related to the sensed DTC.
+</ptxt>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B8204040">Inspection of Intermittent and Poor Connections</intxref>
+.
+</ptxt>
+<ptxt>
+Then clear DTC (referring to 
+<intxref refid = "S6JB0B8204005">DTC Clearance</intxref>
+.) and repeat this flow.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Check DTC referring to 
+<intxref refid = "S6JB0B8204004">DTC Check</intxref>
+ using monitor connector (if equipped).
+</ptxt>
+</test1>
+<question>
+Is flashing pattern DTC No. 0000 indicated on &#8220;AIR BAG&#8221; warning light?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Air bag system is in good condition.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+An intermittent trouble has occurred at some place.
+</ptxt>
+<ptxt>
+Check the connector harness, etc. related to the sensed DTC.
+</ptxt>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B8204040">Inspection of Intermittent and Poor Connections</intxref>
+.
+</ptxt>
+<ptxt>
+Then clear DTC (referring to 
+<intxref refid = "S6JB0B8204005">DTC Clearance</intxref>
+.) and repeat this flow.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Do you have SUZUKI scan tool?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to step 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Check DTC referring to 
+<intxref refid = "S6JB0B8204004">DTC Check</intxref>
+ using SUZUKI scan tool.
+</ptxt>
+<question>
+Is &#8220;NO CODES&#8221; displayed on SUZUKI scan tool?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good SDM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check and repair according to flow corresponding to that DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Check DTC referring to 
+<intxref refid = "S6JB0B8204004">DTC Check</intxref>
+ using monitor connector (if equipped).
+</ptxt>
+<question>
+Is flashing pattern DTC No. 0000 indicated on &#8220;AIR BAG&#8221; warning light?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good SDM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check and repair according to flow corresponding to that DTC.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

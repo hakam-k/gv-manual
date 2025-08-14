@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A5124041" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1875: Malfunzionamento circuito basso interruttore 4WD (aperto)
+</title>
+<servinfosub id = "L8T40A5124041001">
+<title>
+Cablaggio del sistema
+</title>
+<ptxt>
+Vedere 
+<intxref refid = "L8T40A5124040">DTC P1874: Malfunzionamento circuito basso interruttore 4WD (corto):5 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A5124041002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.330in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.046in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+L&apos;attuale posizione del rinvio è 4L nonostante il TCM abbia rilevato che l&apos;interruttore ridotte è spento con velocità del veicolo compreso tra 29 km&#x002F;h (18 miglia&#x002F;h) e 88 km&#x002F;h (55 miglia&#x002F;h).
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 1)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore 4L&#x002F;N o relativo circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A5124041003">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Resettare i DTC nella memoria TCM e ECM usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e portare l&apos;interruttore a posizioni sulla posizione &#8220;4L&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+mantenere il motore acceso al minimo per 10 secondi o più con il rapporto &#8220;D&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il veicolo e aumentare la velocità a circa 50 km&#x002F;h (31 miglia&#x002F;h) con rapporto &#8220;4L&#8221; per 2 minuti.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fermare il veicolo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllo DTC, DTC in attesa e dati freeze-frame.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A5124041004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A5124041005">
+<testgroup>
+<title>
+Controllo del segnale della velocità del veicolo
+</title>
+<test1>
+<ptxt>
+Controllare i DTC in ECM, modulo di controllo&#x002F;unità idraulica ABS e modulo di controllo&#x002F;unità idraulica ESP&#174; facendo riferimento a 
+<intxref refid = "L8T40A1134003">Controllo DTC:N32A</intxref>
+, 
+<intxref refid = "L8T40A4504004">Controllo DTC</intxref>
+ e 
+<intxref refid = "L8T40A4604005">Controllo DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+È presente il DTC P0500: Malfunzionamento del sensore di velocità (VSS) nell&apos;ECM e&#x002F;o DTC C1021, C1022, C1025, C1026, C1031, C1032, C1035 e&#x002F;o C1036 nel modulo di controllo&#x002F;unità idraulica ABS e modulo di controllo&#x002F;unità idraulica ESP&#174;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare alla tabella del diagramma di flusso diagnostico applicabile.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+È stato effettuato il &#8220;controllo del sistema A&#x002F;T&#8221;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A5124001">Controllo sistema A&#x002F;T:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Si è in possesso di scanner SUZUKI?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo dell&apos;interruttore 4L&#x002F;N e del suo circuito
+</title>
+<test1>
+<ptxt>
+Collegare lo scanner SUZUKI a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di avviamento su ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Impostare sullo scanner la modalità &#8220;ELENCO DATI&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare sul display il segnale dell&apos;interruttore 4L&#x002F;N (ON o OFF) durante il passaggio ad ogni posizione dell&apos;interruttore della posizione di rinvio .
+</ptxt>
+<spec>
+<title>
+Specifiche interruttore 4L&#x002F;N
+</title>
+<ptxt>
+&#8220;4H&#8221; posizione: OFF
+</ptxt>
+<ptxt>
+&#8220;4L&#8221; posizione: ON
+</ptxt>
+</spec>
+</test1>
+<question>
+OFF &#x002F; ON sono visualizzati come mostrato sopra?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Guasto intermittente o TCM difettoso. Controllare l&apos;eventuale presenza di un guasto intermittente facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+. Se OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo dell&apos;interruttore 4L&#x002F;N e del suo circuito
+</title>
+<test1>
+<ptxt>
+Portare il commutatore di avviamento su ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare il voltaggio del terminale &#8220;E93-4&#8221; del connettore TCM collegato, durante il passaggio ad ogni posizione dell&apos;interruttore della posizione di rinvio.
+</ptxt>
+<spec>
+<title>
+Specifiche interruttore 4L&#x002F;N
+</title>
+<ptxt>
+&#8220;4H&#8221; posizione: 10 &#8211; 14 V
+</ptxt>
+<ptxt>
+&#8220;4L&#8221; posizione: 0 &#8211; 1 V
+</ptxt>
+</spec>
+</test1>
+<question>
+La tensione corrisponde a quella specificata?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Guasto intermittente o TCM difettoso. Controllare l&apos;eventuale presenza di un guasto intermittente facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+. Se OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo interruttore 4L&#x002F;N
+</title>
+<test1>
+<ptxt>
+Controllare il funzionamento dell&apos;interruttore 4L&#x002F;N facendo riferimento a 
+<intxref refid = "L8T40A3316010">Ispezione del complessivo sistema di trasferimento:Tipo con cambiata motorizzata (trasferimento con attuatore di cambiata)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il risultato del controllo è soddisfacente?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Circuito interruttore 4L&#x002F;N aperto. Se i cavi e le connessioni sono OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire l&apos;interruttore 4L&#x002F;N.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10E">
+<servcat sctnbr = "10" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "L8T40AA501004" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Descrizione della funzione di blocco portiera sistema di avvio senza chiave
+</title>
+<ptxt>
+Quando l&apos;interruttore di richiesta (1) incorporato nella maniglia esterna della portiera lato guidatore, della portiera anteriore lato passeggero o del portellone viene premuto, il modulo di controllo avvio senza chiave (2) attiva l&apos;antenna centrale (3) e l&apos;antenna del vano portabagagli (4) per spedire una onda radio nello scomparto del veicolo per controllare se il telecomando (5) si trova dentro o meno il veicolo. Quando il modulo di controllo dell&apos;avvio senza chiave non riceve il segnale dal telecomando ( es il telecomando non e nell&apos;abitacolo), attiva l&apos;antenna (6) della portiera di cui era stato premuto l&apos;interruttore di richiesta per inviare il segnale fuori dall&apos;abitacolo. Se il telecomando e entro il campo di azione del blocco portiera, riceve il segnale inviato dall&apos;antenna di cui sopra, invia contemporaneamente il codice ID del telecomando ed il segnale di richiesta al modulo di controllo avvio senza chiave, illumina la spia di funzionamento (7) del telecomando. L&apos;illuminazione della spia di funzionamento indica che il telecomando ha inviato il codice ID ed il segnale di richiesta.
+</ptxt>
+<ptxt>
+Il modulo di controllo avviamento senza chiave confronta il codice ID inviato dal telecomando con il codice ID registrato nel modulo di controllo avviamento senza chiave. Se entrambi i codici ID combaciano, il modulo di controllo emette il segnale di richiesta di blocco o sblocco ( a seconda dello stato dell&apos;interruttore di blocco (8) della portiera) al BCM (9). Quando il BCM riceve tale segnale tramite la comunicazione CAN dal modulo di controllo avvio senza chiave, attiva l&apos;attuatore di blocco portiera per blocca o sbloccare le portiere.
+</ptxt>
+<ptxt>
+Quando il modulo di controllo avvio senza chiave riceve il segnale dal telecomando (es., il telecomando e nell&apos;abitacolo), si attiva la funzione del sistema di avvio senza chiave per prevenire la chiusura del telecomando nel veicolo ed il modulo di controllo avvio senza chiave invia una richiesta al BCM per sbloccare le portiere. In tal modo le portiere rimangono sbloccate.
+</ptxt>
+<ptxt>
+Inoltre, anche se il guidatore o passeggere chiudono dentro l&apos;auto il telecomando tramite la manopola di blocco portiera o l&apos;interruttore di bloccaggio porte manuale, la funzione per prevenire la chiusura del telecomando nel veicolo si attiva e sblocca le portiere.
+</ptxt>
+<figure>
+<graphic graphicname = "I6JB0AA50003.swf" width = "183.000mm" height = "115.009mm" ver = "01" gw = "431" gh = "309"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.326in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.076in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.326in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.076in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.326in"/>
+<colspec colnum = "6" colname = "6" colwidth = "2.076in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Flusso del segnale
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Modello 5 porte
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;C&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Modello 3 porte
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<ptxt>
+In piu, quando i codici ID del telecomando e del modulo di controllo avvio senza chiave non coincidono o il telecomando e fuori dal campo di azione, le porte non vengono bloccate o sbloccate anche se si opera la richiesta con la maniglia esterna.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

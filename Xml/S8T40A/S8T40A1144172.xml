@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1144172" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Test 7: Exhaust Gas Recirculation Valve
+</title>
+<diag type = "test" id = "S8T40A1144172001">
+<testgroup id = "S8T40A1144172002">
+<ptxt>
+VALVE POSITION FAULT FINDING:
+</ptxt>
+<ptxt>
+Or detection of a leak in the exhaust gas recirculation valve
+</ptxt>
+<ptxt>
+Clear the faults.
+</ptxt>
+<ptxt>
+Use &#8220;Initialize EGR valve data&#8221; on SUZUKI scan tool command to try to reinitialise the operating values of the EGR valve.
+</ptxt>
+<ptxt>
+Switch OFF the ignition and wait 40 seconds.
+</ptxt>
+<ptxt>
+Switch the ignition back on and check for faults.
+</ptxt>
+<ptxt>
+If the fault is still present:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Switch OFF the vehicle ignition.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Disconnect the connector of the EGR valve.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Remove the EGR valve referring to 
+<intxref refid = "S8T40A1456071">EGR Valve Removal and Installation:F9Q</intxref>
+ and reconnect it after having removed it.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check that no particles are blocking the movement of the EGR valve flap.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check that the EGR valve is not stuck or jammed in one position.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Switch ON the ignition again.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the movement of the valve with displaying &#8220;EGR position sensor&#8221; on Data List of SUZUKI scan tool (0 to 2.5 mm travel for an opening cyclic ratio of 40&#x0025; and when fully open, ~ 5 mm, for an opening cyclic ratio of 95&#x0025;).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check that the EGR valve flap closes completely.
+</ptxt>
+</item>
+</list1>
+<question>
+Is there in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace the EGR valve referring to 
+<intxref refid = "S8T40A1456071">EGR Valve Removal and Installation:F9Q</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144172003">
+<ptxt>
+EGR VALVE BUSHING FAULT FINDING:
+</ptxt>
+<ptxt>
+Remove the EGR valve referring to 
+<intxref refid = "S8T40A1456071">EGR Valve Removal and Installation:F9Q</intxref>
+ the EGR valve should not contain a cluster of soot between the base and the valve.
+</ptxt>
+<ptxt>
+Clean the EGR valve sleeve if necessary.
+</ptxt>
+<ptxt>
+</ptxt>
+<question>
+Is there in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace the EGR valve referring to 
+<intxref refid = "S8T40A1456071">EGR Valve Removal and Installation:F9Q</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144172004">
+<test1>
+<ptxt>
+Use &#8220;Initialize EGR valve data&#8221; on SUZUKI scan tool command to try to reinitialise the operating values of the EGR valve.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check the air circuit referring to 
+<intxref refid = "S8T40A1144168">Test 3: Checking the Turbocharged Air Inlet Circuit:F9Q</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check the MAF sensor referring to 
+<intxref refid = "S8T40A1144169">Test 4: MAF Sensor:F9Q</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is there in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair as necessary.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144172005">
+<ptxt>
+Confirmation of the fault finding:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Start the vehicle.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Leave the engine at idling speed for 1 min.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Accelerate very slowly up to 1500 rpm for 2 mins until the exhaust gas recirculation function becomes active.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Carry out a vehicle test at low speed, without accelerating heavily, then normally.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check for faults using SUZUKI scan tool.
+</ptxt>
+</item>
+</list1>
+<question>
+Does customer complaint or the faults recur?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Exhaust gas recirculation valve correct.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

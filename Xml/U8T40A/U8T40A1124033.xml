@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124033" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0340
+</title>
+<servinfosub id = "U8T40A1124033001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.681in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.467in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0340: Circuit van nokkenaspositiesensor &#34;A&#34;
+</emph>
+</ptxt>
+<ptxt>
+Deze DTC wordt waargenomen als aan een van de volgende voorwaarden is voldaan.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De CMP-sensor produceert minder dan 20 impulsen per 8 krukasomwentelingen
+</ptxt>
+</item>
+<item>
+<ptxt>
+De CMP-sensor produceert meer dan 28 impulsen per 8 krukasomwentelingen
+</ptxt>
+</item>
+<item>
+<ptxt>
+De CMP-sensor produceert minder dan 20 pulsen tussen BTDC 75&#176; en BTDC 5&#176; binnen 8 krukasomwentelingen na het starten van de motor.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CMP-sensor en&#x002F;of het bijbehorende circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Signaalrotor
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124033002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124031">DTC P0335:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124033003">
+<title>
+Beschrijving van het systeem
+</title>
+<ptxt>
+De CMP-sensor op de cilinderkop bestaat uit de signaalgenerator (magnetische sensor) en de signaalrotor (gemonteerd op de inlaatnokkenas).
+</ptxt>
+<ptxt>
+De signaalgenerator genereert een referentiesignaal via de gleuven in de signaalrotor die samen met de nokkenas ronddraait.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124033004">
+<title>
+Referentiesignaal
+</title>
+<ptxt>
+De CMP-sensor genereert 6 signaalimpulsen, elk met een verschillende golfvormlengte, tijdens één volledige rotatie van de nokkenas. Zie 
+<intxref refid = "U8T40A1124063">Onderzoek van de ECM en de bijbehorende circuits:J24B</intxref>
+.
+</ptxt>
+<ptxt>
+Op basis van de CMP- en CKP-sensorsignalen bepaalt de ECM welke cilinderzuiger zich in de compressieslag bevindt.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124033005">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention3>
+<ptxt>
+Indien er eerder in de DTC-bevestigingsprocedure andere dan de beoogde DTC&apos;s werden waargenomen, los dan ook de eerder waargenomen DTC&apos;s op.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Start motor gedurende 5 sec (Contactslot: ST-positie).
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124033006">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1124033007">
+<testgroup id = "U8T40A1124033008">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124033009">
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</test1>
+<question>
+Worden er behalve P0340 nog andere DTC&apos;s weergegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de betrokken DTC&apos;s.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124033010">
+<title>
+Controle van CMP-sensorvoedingscircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de CMP-sensorstekker los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de stekker van de CMP-sensor zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON als alle verbindingen goed zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of het voedingscircuit van de CMP-sensor (A1) accuspanning bevat.
+</ptxt>
+</test1>
+<question>
+Is hij in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124033011">
+<title>
+Controle signaal- en massacircuit van de CMP-sensor
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen los van de ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de ECM-stekkerverbindingen zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer, als de verbindingen in orde zijn, of het signaalcircuit (A2) en het massacircuit (A3) van de CMP-sensor aan het volgende voldoen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van elk signaal- en massacircuit van de CMP-sensor is minder dan 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand tussen het signaalcircuit van de CMP-sensor en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de signaalcircuitaansluitklem van de CMP-sensor en elke aansluitklem op de stekker van de CMP-sensor is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de massacircuitaansluitklem van de CMP-sensor en elke aansluitklem op de stekker van de CMP-sensor is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De circuitspanning van elk CMP-sensorsignaalcircuit en -massacircuit is 0 - 1 V met het contactslot in de stand ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124033012">
+<title>
+Controle van CMP-sensor en signaalrotor
+</title>
+<test1>
+<ptxt>
+Controleer CMP-sensor en signaalrotor. 
+<intxreftitleoff1 refid = "U8T40A1326015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de CMP-sensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

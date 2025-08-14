@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1114062" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1510: ECM biztonsági áramellátás hibás működése
+</title>
+<servinfosub id = "H8T40A1114062001">
+<title>
+Kapcsolási rajz
+</title>
+<figure>
+<graphic graphicname = "I8T40A111009.swf" width = "183.000mm" height = "81.142mm" ver = "01" gw = "446" gh = "213"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.476in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+&#8220;B&#x002F;U&#8221; biztosíték
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+&#8220;DOME&#8221; biztosíték
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "H8T40A1114062002">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+Az akkumulátorfeszültség úgy kerül továbbításra, hogy a DTC memória, az ECM által átvett motorvezérlési értékek stb. megmarad az ECM-ben még akkor is, amikor a gyújtást kikapcsolja.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1114062003">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.116in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.086in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Járó motornál a biztonsági tápellátás feszültség nem kerül továbbításra 5 másodpercig folyamatosan.
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Akkumulátorfeszültség tápáramkör
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1114062004">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja a gyújtáskapcsolót ON helyzetbe, majd törölje a DTC-t a vizsgálókészülék segítségével, és járassa a motort alapjáraton 1 percig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t és a feltételes DTC-t.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1114062005">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd: 
+<intxref refid = "H8T40A1110003">DTC hibaelhárítással kapcsolatos óvintézkedések:M16A és J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H8T40A1114062006">
+<testgroup id = "H8T40A1114062007">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114062008">
+<title>
+Akkumulátor tápfeszültség áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja KI a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Szerelje ki az ECM-et a foglalatából bekapcsolt ECM csatlakozók mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Járó motornál mérje meg a feszültséget az ECM csatlakozó &#8220;E23-2&#8221; érintkezője és a motor testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 10 &#8211; 14 V?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Rossz érintkezés az &#8220;E23-2&#8221; érintkezőnél, vagy időszakos hiba.
+</ptxt>
+<ptxt>
+Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H8T40A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+<ptxt>
+Ha a vezeték és a csatlakozó rendben van, a meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Ellenőrizze a &#8220;B&#x002F;U&#8221; biztosítékot és a &#8220;DOME&#8221; biztosítékot kiolvadás miatt. Amennyiben rendben van, a &#8220;WHT&#8221; vezeték áramköre szakadt, vagy zárlatos.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

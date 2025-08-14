@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0E1104003" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "2" supplyoff = "0" modify = "0">
+<title>
+DTC Check
+</title>
+<attention3>
+<ptxt>
+The MIL is turned on when the ECM and&#x002F;or TCM detect malfunction(s). Each ECM and TCM stores diagnostic information as the diagnostic trouble code (DTC) in its memory and outputs the DTC to the scan tool.
+</ptxt>
+<ptxt>
+Therefore, check both of the ECM and TCM for any DTC with the scan tool because the DTC stored in ECM and TCM is not read and displayed at a time. However, each of the ECM and TCM needs not to be checked with the generic scan tool because the DTC stored in ECM and TCM is read and displayed at a time.
+</ptxt>
+</attention3>
+<servinfosub id = "S5JB0E1104003001">
+<title>
+Using Scan Tool
+</title>
+<s1>
+<ptxt>
+Prepare SUZUKI scan tool or OBD generic scan tool (vehicle not equipped with diagnosis connector).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect it to data link connector (DLC) (1) located on underside of instrument panel at driver&#8217;s seat side.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L1A001">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00003">
+SUZUKI scan tool
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I5JB0A110019.swf" width = "88.000mm" height = "57.858mm" ver = "01" gw = "158" gh = "147"/>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Turn ignition switch ON and confirm that MIL lights.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Read DTC, pending DTC and freeze frame data according to instructions displayed on scan tool and print them or write them down. Refer to scan tool operator&#8217;s manual for further details.
+</ptxt>
+<ptxt>
+If communication between scan tool and ECM is not possible, check if scan tool is communicable by connecting it to ECM in another vehicle. If communication is possible in this case, scan tool is in good condition. Then check data link connector and serial data line (circuit) in the vehicle with which communication was not possible. If connector and circuit are OK, check that power supply and ground circuits of ECM and DLC are in good condition referring to 
+<intxref refid = "S5JB0E1104081">ECM Power and Ground Circuit Check</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+After completing the check, turn ignition switch OFF and disconnect scan tool from data link connector.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S5JB0E1104003002">
+<title>
+Without Using Scan Tool (Vehicle Equipped with Diagnosis Connector)
+</title>
+<s1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Using service wire, ground diagnosis switch terminal (1) of diagnosis connector (2).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and check DTC displayed on odometer (3) of combination meter.
+</ptxt>
+<ptxt>
+When more than 2 DTCs are stored in memory, blinking for each DTC starts with the smallest DTC number in increasing order. Also, DTC is indicated repeatedly until the ignition switch is turned OFF or disconnect service wire.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0A110020.swf" width = "88.000mm" height = "104.425mm" ver = "01" gw = "192" gh = "279"/>
+</figure>
+<attention3>
+<ptxt>
+When no DTC is detected, display on odometer of combination meter is &#8220;0000&#8221;.
+</ptxt>
+</attention3>
+</s1>
+<s1>
+<ptxt>
+After completing the check, turn ignition switch to OFF position and disconnect service wire from diagnosis connector.
+</ptxt>
+</s1>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

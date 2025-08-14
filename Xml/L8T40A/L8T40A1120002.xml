@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "0">
+<servinfo servinfosgmlid = "L8T40A1120002" svcinfotypenbr = "01" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Precauzioni nella diagnosi di errori 
+</title>
+<attention3>
+<ptxt>
+Per la definizione del sistema OBD, fare riferimento a 
+<intxref refid = "L8T40A1120010">Precauzione per il sistema diagnostico a bordo (OBD):J24B</intxref>
+.
+</ptxt>
+</attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Non scollegare i connettori ECM da ECM, il cavo della batteria dalla batteria, cablaggio conduttori dal motore, il fusibile principale, il fusibile &#8220;DOME&#8221;  o i fusibile &#8220;B&#x002F;U&#8221; prima di avere confermato le informazioni diagnostiche (DTC, i dati &#34;freeze frame&#34;, ecc.) conservati nella memoria ECM. Uno scollegamento di questo tipo cancella le informazioni memorizzate nella memoria dell&apos;ECM se la batteria viene scollegata prima che venga spento il relè principale.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le informazioni diagnostiche conservate nella memoria ECM possono essere eliminate e controllate, usando lo strumento di scansione SUZUKI o lo strumento di scansione generico OBD per comunicazione CAN.(Tipo A, B e C). Prima di usare lo scanner, leggere attentamente il manuale per l&#8217;operatore (Istruzioni) per una buona comprensione delle funzioni disponibili e di come si usano.
+</ptxt>
+<ptxt>
+Non è i grado di distinguere quale modulo, ECM o TCM accenda il MIL. (Per dettagli riguardanti il sistema di diagnostica a bordo per il modello A&#x002F;T, fare riferimento a 
+<intxref refid = "L8T40A5111008">Descrizione generale della diagnosi A&#x002F;T:4 A&#x002F;T</intxref>
+). Perciò, controllare sia l&#8217;ECM e il TCM per DTC quando MIL si accende.
+</ptxt>
+</item>
+</list1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Nel controllare l&#8217;ECM per verificare la presenza di DTC, tenere a mente che DTC è visualizzato sullo scanner nel modo seguente dipendendo dallo scanner.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Lo scanner SUZUKI visualizza il DTC visualizzato dall&#8217;ECM.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lo scanner generico OBD di comunicazione CAN visualizza i DTC rilevati da entrambi ECM e TCM contemporaneamente.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Priorità per la diagnosi dei guasti
+</ptxt>
+<ptxt>
+Se sono memorizzati due o più DTC, procedere alla tabella di flusso del DTC che è stato rilevato per primo nell&#8217;ordine e seguire le istruzioni di quella tabella.
+</ptxt>
+<ptxt>
+Se non ci sono istruzioni, localizzare i DTC secondo le seguenti priorità.
+</ptxt>
+</item>
+<list2 type = "ordered">
+<item>
+<ptxt>
+DTC diversi da DTC P0171 &#x002F; P0172 (sistema carburante troppo magro&#x002F;troppo ricco), DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 (mancata accensione rilevata)
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC P0171 &#x002F; P0172 (sistema carburante troppo magro&#x002F;troppo ricco)
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 (mancata accensione rilevata)
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Leggere sempre prima 
+<intxref refid = "L8T40A0000007">Precauzioni per il sistema di comunicazioni CAN</intxref>
+ di eseguire l&apos;ispezione e seguire le indicazioni contenute.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sostituzione di ECM
+</ptxt>
+<ptxt>
+Quando si sostituisce l&apos;ECM con uno nuovo o uno in sostituzione, controllare le seguenti condizioni. Se questo controllo non viene eseguito l&apos;ECM potrebbe venirne danneggiato.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Il valore di resistenza di tutti i relè e attuatori sono specificati rispettivamente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore APP, sensore TP e sensore pressione refrigerante A&#x002F;C sono in buone condizioni e nessuno di questi circuiti di alimentazione di questi sensori è in corto a massa.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Le comunicazioni di ECM, BCM, quadro strumenti, modulo di controllo avviamento senza chiave, modulo di controllo ABS &#x002F; ESP&#174;, modulo di controllo 4WD, sensore angolo di sterzata (modello ESP&#174;) e TCM, sono gestite dal CAN (Controller Area Network). (Per dettagli relativi al sistema di comunicazione CAN, per l&apos;ECM fare riferimento a 
+<intxref refid = "L8T40AA821001">Descrizione del sistema di comunicazione CAN:Modello J24B e N32A</intxref>
+).
+</ptxt>
+<ptxt>
+Quindi, maneggiare la linea di comunicazione CAN con grande cura facendo riferimento a 
+<intxref refid = "L8T40A0000007">Precauzioni per il sistema di comunicazioni CAN</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Registrazione codice trasponditore immobilizzatore dopo la sostituzione dell&apos;ECM
+</ptxt>
+<ptxt>
+Quando si sostituisce l&apos;ECM con uno nuovo o uno in sostituzione, assicurarsi di registrare il codice del trasponditore dell&apos;immobilizzatore. 
+<intxref refid = "L8T40AA316002">Registrazione della chiave di accensione:Modello con motore a benzina</intxref>
+</ptxt>
+</item>
+</list1>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0A1114012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+A hibajelző lámpa égve marad a motor beindulása után
+</title>
+<servinfosub id = "H6JB0A1114012001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A1114011">Hibajelző lámpa nem gyullad ki, amikor a gyújtáskapcsoló ON helyzetben van és a motor áll (de a motort lehet indítani):Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0A1114012002">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+Ha a gyújtáskapcsolót ON helyzetbe fordítja, az ECM bekapcsolja a főrelét (zárja az érintkezési pontot). Utána, mivel az ECM kapja a fő tápellátást, továbbítja a hibajelző lámpa (MIL) ON jelét a műszeregységhez a MIL bekapcsolásához. Ezután a műszeregység meggyújtja a MIL hibajelző lámpát. Amikor a motor beindul, és a rendszer nem észlel működési hibát, az ECM továbbítja a MIL OFF kijelzést a műszeregység felé, hogy kikapcsolja a MIL hibajelző lámpát. Ezután a műszeregység kikapcsolja a MIL hibajelző lámpát, de ha működési hiba került vagy kerül észlelésre a MIL égve marad miközben a motor jár.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0A1114012003">
+<title>
+Hibaelhárítás
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Hibaelhárítás elvégzése előtt feltétlenül olvassa el a következőket: 
+<intxref refid = "H6JB0A1110004">ECM-áramkör ellenőrzésével kapcsolatos óvintézkedések:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Amikor áramköri feszültséget, ellenállást és&#x002F;vagy impulzusjelet mér az ECM csatlakozónál, kösse a célszerszámot az ECM-re és&#x002F;vagy az ECM csatlakozókra, lásd: 
+<intxref refid = "H6JB0A1114080">ECM és áramköreinek ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "H6JB0A1114012004">
+<testgroup>
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Indítsa be a motort és ellenőrizze újra az ECM és TCM(automatikus sebességváltóval szerelt modellek esetén) DTC-ket járó motornál.
+</ptxt>
+</test1>
+<question>
+Megjelenik valamilyen hibakód?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a 
+<intxref refid = "H6JB0A1114001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:Benzinmotoros modell esetén</intxref>
+ 2. lépésére és a 
+<intxref refid = "H6JB0A5104001">Automatikus sebességváltó rendszer ellenőrzése</intxref>
+ 2. lépésére.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs vezeték áramköri ellenőrzés
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs vezeték áramkörét a műszeregység és az ECM, a TCM (automatikus sebességváltóval szerelt modellek esetén), az ABS- &#x002F; ESP&#174;-vezérlőmodul, a 4WD-vezérlőmodul (ha van) és a kulcsnélküli indításvezérlő modul (ha van) között, lásd: 
+<intxref refid = "H6JB0A1114064">DTC P1674: CAN kommunikáció (busz ki hiba):Benzinmotoros modell esetén</intxref>
+, 9 &#8211; 15. lépés.
+</ptxt>
+</test1>
+<question>
+Rendben van az áramkör?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó műszeregységet, és újból ellenőrizze. Ha a MIL égve marad, a meglévő helyett tegyen be egy bizonyosan jó ECM-et és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg vagy cserélje ki a CAN kommunikációs áramkört.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

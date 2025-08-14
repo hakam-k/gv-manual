@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "S6JB0A1121005" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+CAN Communication System Description
+</title>
+<ptxt>
+ECM (1), ABS or ESP&#174; control module (2), BCM (3), 4WD control module (4), keyless start control module (5) combination meter (6), immobilizer control module (7) and steering angle sensor (8) (ESP&#174; model) of this vehicle communicate control data between each control module.
+</ptxt>
+<ptxt>
+Communication of each control module is established by CAN (Controller Area Network) communication system.
+</ptxt>
+<figure>
+<graphic graphicname = "I6JB01110110.swf" width = "183.000mm" height = "73.733mm" ver = "02" gw = "291" gh = "192"/>
+</figure>
+<ptxt>
+CAN communication system uses the serial communication in which data is transmitted at a high speed. It uses a twisted pair of two communication lines for the high-speed data transmission. As one of its characteristics, multiple control modules can communicate simultaneously. In addition, it has a function to detect a communication error automatically. Each module reads necessary data from the received data and transmits data. ECM communicates control data with each control module as follows.
+</ptxt>
+<p-change/>
+<servinfosub id = "S6JB0A1121005001">
+<title>
+ECM Transmission Data
+</title>
+<figure>
+<graphic graphicname = "I6JB0A112001.swf" width = "183.000mm" height = "116.067mm" ver = "06" gw = "486" gh = "312"/>
+</figure>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+In communication between ECM and combination meter, between ECM and 4WD control module, between ECM and keyless start control module, data is transmitted only from ECM to combination meter and 4WD control module. (combination meter and 4WD control module does not transmit data to ECM.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+For vehicle without diesel particulate filter, data with asterisk (&#x002A;) below are not applicable.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "S6JB0A1121005002">
+<title>
+ECM Reception Data
+</title>
+<figure>
+<graphic graphicname = "I6JB0A112002.swf" width = "183.000mm" height = "48.333mm" ver = "06" gw = "371" gh = "120"/>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

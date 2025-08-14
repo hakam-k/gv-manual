@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "S5JB0E7201002" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "0" modify = "0">
+<title>
+HVAC Control System Description
+</title>
+<ptxt>
+For CAN communication system, refer to description on 
+<intxref refid = "S5JB0E1101005">CAN Communication System Description</intxref>
+.
+</ptxt>
+<ptxt>
+When following data are sent from control modules to BCM through CAN communication, they are sent from BCM to HVAC control module through serial communication line.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Engine coolant temperature
+</ptxt>
+</item>
+<item>
+<ptxt>
+Engine speed
+</ptxt>
+</item>
+<item>
+<ptxt>
+A&#x002F;C refrigerant pressure
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vehicle Speed (wheel speed)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Outside air temperature
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Based on above data, HVAC control module sends A&#x002F;C compressor ON &#x002F; OFF request signal to BCM through serial communication line.
+</ptxt>
+<ptxt>
+BCM sends this signal through CAN communication to ECM which then causes compressor relay to turn ON &#x002F; OFF.
+</ptxt>
+<ptxt>
+For more information on signal transmission and reception of Auto A&#x002F;C system, refer to 
+<intxref refid = "S5JB0E7202003">Auto A&#x002F;C Electronic Control Input &#x002F; Output Diagram</intxref>
+.
+</ptxt>
+<ptxt>
+HVAC control module has a function to make initial settings of temperature control actuator, air intake actuator and air flow actuator.
+</ptxt>
+<ptxt>
+Initial settings of actuators are automatically made when engine is started for the first time after battery is connected.
+</ptxt>
+<ptxt>
+When initial settings are made, each actuator is forced to operate for about 15 seconds continuously.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

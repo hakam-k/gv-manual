@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114016" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0031 &#x002F; P0032: Lage&#x002F;hoge spanning in het regelcircuit van de HO2S-verwarming (sensor-1)
+</title>
+<servinfosub id = "U8T40A1114016001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1114015">DTC P0030: Regelcircuit van de HO2S-verwarming (sensor-1):M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114016002">
+<title>
+Beschrijving A&#x002F;F-sensor
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1111010">Beschrijving A&#x002F;F-sensor:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114016003">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.937in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.272in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0031:
+</emph>
+</ptxt>
+<ptxt>
+De spanning in het regelcircuit van de A&#x002F;F-sensorverwarming is langer dan de voorgeschreven tijd lager dan voorgeschreven, hoewel de regelimpulsaansluitverhouding van de A&#x002F;F-sensorverwarming lager is dan 90 &#x0025; terwijl de motor draait. (De regelarbeidsimpuls van de verwarming wordt niet waargenomen in het bijbehorende ECM-circuit)
+</ptxt>
+<ptxt>
+(opsporingslogica van 2 rijcyclus)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0032:
+</emph>
+</ptxt>
+<ptxt>
+De spanning in het regelcircuit van de A&#x002F;F-sensorverwarming is langer dan de voorgeschreven tijd hoger dan voorgeschreven, hoewel de regelimpulsaansluitverhouding van de A&#x002F;F-sensorverwarming hoger is dan 10 &#x0025; terwijl de motor draait. (De regelarbeidsimpuls van de verwarming wordt niet waargenomen in het bijbehorende ECM-circuit)
+</ptxt>
+<ptxt>
+(opsporingslogica van 2 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit van de A&#x002F;F-sensorverwarming
+</ptxt>
+</item>
+<item>
+<ptxt>
+A&#x002F;F-sensorverwarming
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1114016004">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start de motor en laat hem op de normale bedrijfstemperatuur komen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laat de motor gedurende ten minste 1 min. stationair draaien.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer op DTC&apos;s en voorlopige DTC&apos;s.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1114016005">
+<title>
+DTC-storingzoeken
+</title>
+<attention3>
+<ptxt>
+Lees de voorzorgsmaatregelen voor DTC-storingzoeken zoals beschreven in 
+<intxref refid = "U8T40A1110003">Voorzorgsmaatregelen bij DTC-storingzoeken:M16A and J20A</intxref>
+ alvorens deze procedure te volgen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "U8T40A1114016006">
+<testgroup id = "U8T40A1114016007">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016008">
+<title>
+Controle circuit van de A&#x002F;F-sensorverwarming
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de A&#x002F;F-sensorstekker los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de A&#x002F;F-sensorstekker goed is aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Als de verbinding in orde is, zet dan het contactslot op ON en meet de spanning tussen de aansluitklem van de verwarmingsvoeding van de A&#x002F;F-sensorstekker en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Bedraagt de gemeten spanning 10 - 14 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 9.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016009">
+<title>
+Controle van de HO2S-verwarmingszekering
+</title>
+<test1>
+<ptxt>
+Controleer of de &#34;O2 HTR&#34;-zekering (1) gesprongen is.
+</ptxt>
+<testfigure>
+<title>
+Voor J20A-motor
+</title>
+<graphic graphicname = "I5JB0A110028.swf" width = "90.000mm" height = "47.981mm" ver = "02" gw = "155" gh = "119"/>
+</testfigure>
+<testfigure>
+<title>
+Voor M16A-motor
+</title>
+<graphic graphicname = "I5JB0A110029.swf" width = "90.000mm" height = "47.628mm" ver = "02" gw = "156" gh = "118"/>
+</testfigure>
+</test1>
+<question>
+Is de &#34;O2 HTR&#34;-zekering in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016010">
+<title>
+Controle van de weerstand van de A&#x002F;F-sensor en de HO2S-verwarming
+</title>
+<test1>
+<ptxt>
+Maak de HO2S-2-stekkerverbinding los met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de verwarmingsweerstand van de A&#x002F;F-sensor en de HO2S volgens 
+<intxref refid = "U8T40A1316010">Onderzoek lucht&#x002F;brandstofverhoudingssensor (A&#x002F;F-sensor) in het voertuig:M16A and J20A</intxref>
+ en 
+<intxref refid = "U8T40A1316011">Onderzoek in het voertuig van de verwarming van de verwarmde zuurstofsensor (HO2S-2):M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn de A&#x002F;F-sensorverwarming en HO2S-verwarming in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de defecte sensor.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016011">
+<title>
+Controle van het voedingscircuit van het HO2S-verwarmingsrelais
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en verwijder integratierelais nr.2 (voor J20A-motor) (1) of het HO2S-verwarmingsrelais (voor M16A-motor) (2).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer op een goede verbinding met de relaisstekker.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Als de verbinding in orde is, zet dan het contactslot op ON en meet de spanning tussen elke stekkeraansluitklem van de relaisvoeding en de carrosseriemassa.
+</ptxt>
+<testfigure>
+<title>
+Voor J20A-motor
+</title>
+<graphic graphicname = "I5JB0A110030.swf" width = "90.000mm" height = "48.333mm" ver = "02" gw = "155" gh = "120"/>
+</testfigure>
+<testfigure>
+<title>
+Voor M16A-motor
+</title>
+<graphic graphicname = "I5JB0A110031.swf" width = "90.000mm" height = "52.214mm" ver = "03" gw = "156" gh = "131"/>
+</testfigure>
+</test1>
+<question>
+Bedraagt de gemeten spanning 10 - 14 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Voedingscircuit is onderbroken.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016012">
+<title>
+Controleer het HO2S-verwarmingsrelais
+</title>
+<test1>
+<ptxt>
+Controleer integratierelais nr.2 (voor J20A-motor) of het HO2S-verwarmingsrelais (voor M16A-motor) volgens 
+<intxref refid = "U8T40A1316018">Onderzoek van het regelrelais:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is het in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 7.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het relais.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016013">
+<title>
+Controle circuit van de A&#x002F;F-sensorverwarming
+</title>
+<test1>
+<ptxt>
+Meet de isolatieweerstand tussen de verwarmingsaansluitingen van de A&#x002F;F-sensorstekker.
+</ptxt>
+</test1>
+<question>
+Is de gemeten weerstand oneindig?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 8.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de kortgesloten draad.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016014">
+<title>
+Controle van het HO2S-verwarmingsrelaiscircuit
+</title>
+<test1>
+<ptxt>
+Meet de draadweerstand tussen de spoelmassa-aansluiting van de relaisstekker en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Is de gemeten weerstand lager dan 1 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+De uitgangsdraad van de relaisstekker is onderbroken of kortgesloten aan de massa.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het defecte circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016015">
+<title>
+ Controle van de A&#x002F;F-sensorverwarming
+</title>
+<test1>
+<ptxt>
+Controleer de verwarmingsweerstand van de A&#x002F;F-sensor volgens 
+<intxref refid = "U8T40A1316010">Onderzoek lucht&#x002F;brandstofverhoudingssensor (A&#x002F;F-sensor) in het voertuig:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de A&#x002F;F-sensorverwarming in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 10.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de A&#x002F;F-sensor.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016016">
+<title>
+Controle van het regelcircuit van de A&#x002F;F-sensorverwarming
+</title>
+<test1>
+<ptxt>
+Maak de stekker van de ECM los met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklem van het A&#x002F;F-sensorverwarmingscircuit goed op de ECM-stekker is aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Als de verbinding in orde is, meet dan elke draadweerstand in het regelcircuit van de sensorverwarming aan de ECM-stekkerverbinding tussen de ECM en de A&#x002F;F-sensor en tussen de ECM en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Is elke gemeten draadweerstand lager dan 1 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 11.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang defecte draadcircuits.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114016017">
+<title>
+Controle circuit van de A&#x002F;F-sensorverwarming
+</title>
+<test1>
+<ptxt>
+Meet de isolatieweerstand tussen de regelaansluitklem en de massa-aansluiting van de A&#x002F;F-sensorverwarming aan de ECM-stekkerverbinding.
+</ptxt>
+</test1>
+<question>
+Is de gemeten weerstand oneindig?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de kortgesloten draad.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

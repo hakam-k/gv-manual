@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA314008" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1614: Responsfout van de transponder
+</title>
+<servinfosub id = "U8T40AA314008001">
+<title>
+Waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+De transpondercode van de transponder in de contactsleutel kan niet door de ICM worden gelezen.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gebruik van de contactsleutel zonder transponder
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gebruik van een niet-geregistreerde contactsleutel
+</ptxt>
+</item>
+<item>
+<ptxt>
+Defecte transponder in de contactsleutel
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM defect
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM defect
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40AA314008002">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40AA314008003">
+<testgroup>
+<title>
+Bevestiging van de diagnosecode (DTC)
+</title>
+<test1>
+<ptxt>
+Wis de DTC(&apos;s) volgens 
+<intxref refid = "U8T40AA314003">Wissen van DTC:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of er DTC&apos;s worden waargenomen volgens 
+<intxref refid = "U8T40AA314002">DTC-controle:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wordt DTC P1614 nog steeds waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Het storingzoeken is voltooid.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Controleer of er andere DTC&apos;s dan P1614 worden weergegeven volgens 
+<intxref refid = "U8T40AA314002">DTC-controle:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wordt er een andere DTC dan P1614 waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Voer het storingzoeken uit volgens het overeenkomstige stroomschema in dit hoofdstuk en ga dan naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registratie van de gebruikte contactsleutel met de ECM en controle van de diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Het is mogelijk dat de ongeregistreerde contactsleutel wordt gebruikt. Registreer daarom de 		transpondercode in de transponder van de contactsleutel met de ECM volgens 
+<intxref refid = "U8T40AA316002">Registratie van de contactsleutel:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer volgens 
+<intxref refid = "U8T40AA314002">DTC-controle:Model met benzinemotor</intxref>
+ of DTC P1614 wordt waargenomen.
+</ptxt>
+</test1>
+<question>
+Wordt DTC P1614 waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Het storingzoeken is voltooid.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de registratie van de nieuwe contactsleutel met de ECM en diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+De transponder in de contactsleutel is beschadigd of de contactsleutel zonder transponder wordt gebruikt. Maak daarom een nieuwe contactsleutel klaar.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Registreer de transpondercode met de ECM in de transponder van de nieuwe contactsleutel volgens 
+<intxref refid = "U8T40AA316002">Registratie van de contactsleutel:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer volgens 
+<intxref refid = "U8T40AA314002">DTC-controle:Model met benzinemotor</intxref>
+ of DTC P1614 wordt waargenomen.
+</ptxt>
+</test1>
+<question>
+Wordt DTC P1614 waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Het storingzoeken is voltooid.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de ICM
+</title>
+<test1>
+<ptxt>
+Controleer de ICM volgens 
+<intxref refid = "U8T40AA314020">Onderzoek van het regelapparaat van het startblokkeersysteem (ICM) en het bijbehorende circuit:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de ICM in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Vervang de ECM door een nieuwe.
+</ptxt>
+<ptxt>
+- Model M16A en J20A: 
+<intxreftitleoff1 refid = "U8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Model J24B: 
+<intxreftitleoff1 refid = "U8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Model N32A: 
+<intxreftitleoff1 refid = "U8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Voer daarna 
+<intxref refid = "U8T40AA316003">Procedure na vervanging van de ECM:Model met benzinemotor</intxref>
+ uit.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de ICM door een nieuwe volgens 
+<intxref refid = "U8T40AA316001">Uitbouw en inbouw van het regelapparaat van het startblokkeersysteem (ICM):Model met benzinemotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

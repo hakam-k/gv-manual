@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0AA314012" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1621: Indításgátló kommunikációs vezetékének hibája
+</title>
+<servinfosub id = "H6JB0AA314012001" page = "1">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0AA312001">Indításgátló vezérlőrendszer kapcsolási rajza:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0AA314012002">
+<title>
+Észlelési körülmények és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Észlelési körülmények
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az ECM kommunikációs hibát észlel az indításgátló vezérlőmodul (ICM) és az ECM között.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Érintett biztosíték(ok) kiolvadt(ak)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Rossz csatlakozás az indításgátló vezérlőmodul (ICM) csatlakozójánál
+</ptxt>
+</item>
+<item>
+<ptxt>
+Rossz csatlakozás az ECM csatlakozójánál
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szakadás a tápáramkörben
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szakadás a testelő áramkörben
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szakadás a kommunikációs áramkörökben
+</ptxt>
+</item>
+<item>
+<ptxt>
+Testzárlat a kommunikációs áramkörökben
+</ptxt>
+</item>
+<item>
+<ptxt>
+Zárlat a tápáramkörrel a kommunikációs áramkörökben
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kommunikációs áramkörök zárlata
+</ptxt>
+</item>
+<item>
+<ptxt>
+Indításgátló vezérlőmodul (ICM) hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM hibás
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H6JB0AA314012003">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0AA314012004">
+<testgroup>
+<title>
+Diagnosztikai hibakód (DTC) megerősítése
+</title>
+<test1>
+<ptxt>
+Törölje a DTC-(ke)t, lásd: 
+<intxref refid = "H6JB0AA314003">Diagnosztikai hibakódok (DTC) törlése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le, észlelt-e hibakódot az ECM, lásd: 
+<intxref refid = "H6JB0AA314002">Diagnosztikai hibakódok (DTC) ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a P1621 számú hibakódot?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A biztosíték ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, nem olvadt-e ki valamelyik érintett biztosíték.
+</ptxt>
+</test1>
+<question>
+Kiolvadt valamelyik biztosíték?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Cserélje ki a kiolvadt biztosítékot újra (biztosítékokat újakra).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Indításgátló vezérlőmodul (ICM) rossz csatlakozásának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Válassza le az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozóját, lásd: 
+<intxref refid = "H6JB0AA316001">Indításgátló vezérlőmodul (ICM) leszerelése és felszerelése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, rendben vannak-e a vezetékcsatlakozások az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozójánál.
+</ptxt>
+</test1>
+<question>
+Mindegyik vezetékcsatlakozás rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a rossz csatlakozást (csatlakozásokat).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM rossz csatlakozásának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Válassza le az ECM &#8220;E23&#8221; csatlakozóját, lásd: 
+<intxref refid = "H6JB0A1316001">Motorvezérlő egység (ECM) leszerelése és felszerelése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy rendben van-e az &#8220;E23-13&#8221; és &#8220;E23-28&#8221; vezetékérintkező csatlakozása.
+</ptxt>
+</test1>
+<question>
+Mindegyik vezetékcsatlakozás rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a rossz csatlakozást (csatlakozásokat).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Szakadás keresése a tápáramkörben
+</title>
+<test1>
+<ptxt>
+Csatlakoztassa az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozóját, lásd: 
+<intxref refid = "H6JB0AA316001">Indításgátló vezérlőmodul (ICM) leszerelése és felszerelése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+A gyújtáskapcsoló ON helyzetében ellenőrizze a feszültséget az indításgátló vezérlőmodul (ICM) &#8220;G24-1&#8221; vezetékérintkezője és a jármű karosszériája között.
+</ptxt>
+</test1>
+<question>
+A feszültség 12 V körül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a szakadást a tápáramkörben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Szakadás keresése a testáramkörben
+</title>
+<test1>
+<ptxt>
+A gyújtáskapcsoló ON helyzetében ellenőrizze a feszültséget az indításgátló vezérlőmodul (ICM) &#8220;G24-2&#8221; vezetékérintkezője és a jármű karosszériája között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a szakadást a testáramkörben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Szakadás keresése a kommunikációs áramkörben
+</title>
+<test1>
+<ptxt>
+Válassza le az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozóját, lásd: 
+<intxref refid = "H6JB0AA316001">Indításgátló vezérlőmodul (ICM) leszerelése és felszerelése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Válassza le az ECM &#8220;E23&#8221; csatlakozóját, lásd: 
+<intxref refid = "H6JB0A1316001">Motorvezérlő egység (ECM) leszerelése és felszerelése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ellenállást az indításgátló vezérlőmodul (ICM) csatlakozójának &#8220;G24-3&#8221; vezetékérintkezője és az ECM csatlakozójának &#8220;E23-28&#8221; vezetékérintkezője között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Javítsa meg a szakadást a kommunikációs áramkörben.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 8. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Testzárlat ellenőrzése a kommunikációs áramkörben
+</title>
+<test1>
+<ptxt>
+Az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozójának és az ECM &#8220;E23&#8221; csatlakozójának leválasztása után ellenőrizze az ellenállást az indításgátló vezérlőmodul (ICM) csatlakozójának &#8220;G24-3&#8221; vezetékérintkezője és a jármű karosszériája között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 9. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a testzárlatot a kommunikációs áramkörben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A tápáramkörrel fennálló zárlat ellenőrzése a kommunikációs áramkörben
+</title>
+<test1>
+<ptxt>
+Az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozójának és az ECM &#8220;E23&#8221; csatlakozójának leválasztása után fordítsa a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a feszültséget az indításgátló vezérlőmodul (ICM) csatlakozójának &#8220;G24-3&#8221; vezetékérintkezője és a jármű karosszériája között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 10. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a zárlatot a tápáramkörrel a kommunikációs áramkörben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Szakadás keresése a kommunikációs áramkörben
+</title>
+<test1>
+<ptxt>
+Az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozójának és az ECM &#8220;E23&#8221; csatlakozójának leválasztása után ellenőrizze az ellenállást az indításgátló vezérlőmodul (ICM) csatlakozójának &#8220;G24-4&#8221; vezetékérintkezője és az ECM-csatlakozó &#8220;E23-13&#8221; vezetékérintkezője között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Javítsa meg a szakadást a kommunikációs áramkörben.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 11. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Testzárlat ellenőrzése a kommunikációs áramkörben
+</title>
+<test1>
+<ptxt>
+Az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozójának és az ECM &#8220;E23&#8221; csatlakozójának leválasztása után ellenőrizze az ellenállást az indításgátló vezérlőmodul (ICM) csatlakozójának&#8220;G24-4&#8221; vezetékérintkezője és a jármű karosszériája között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 12. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a testzárlatot a kommunikációs áramkörben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A tápáramkörrel fennálló zárlat ellenőrzése a kommunikációs áramkörben
+</title>
+<test1>
+<ptxt>
+Az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozójának és az ECM &#8220;E23&#8221; csatlakozójának leválasztása után fordítsa a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a feszültséget az indításgátló vezérlőmodul (ICM) csatlakozójának &#8220;G24-4&#8221; vezetékérintkezője és a jármű karosszériája között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 13. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a zárlatot a tápáramkörrel a kommunikációs áramkörben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Zárlat keresése a kommunikációs áramkörben
+</title>
+<test1>
+<ptxt>
+Az indításgátló vezérlőmodul (ICM) &#8220;G24&#8221; csatlakozójának és az ECM &#8220;E23&#8221; csatlakozójának leválasztása után ellenőrizze az ellenállást az indításgátló vezérlőmodul (ICM) csatlakozójának &#8220;G24-3&#8221; és &#8220;G24-4&#8221; vezetékérintkezője között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás végtelen nagy?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 14. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a kommunikációs áramkörök zárlatát.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Indításgátló vezérlőmodul (ICM) ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az indításgátló vezérlőmodult (ICM), lásd: 
+<intxref refid = "H6JB0AA314018">Indításgátló vezérlőmodul (ICM) és áramkörének ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az indításgátló vezérlőmodul (ICM) jó állapotban van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Cserélje ki az ECM-et új ECM-re, lásd: 
+<intxref refid = "H6JB0A1316001">Motorvezérlő egység (ECM) leszerelése és felszerelése:Benzinmotoros modell esetén</intxref>
+, majd hajtsa végre a következőket: 
+<intxref refid = "H6JB0AA316003">Eljárás az ECM cseréje után:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki az indításgátló vezérlőmodult (ICM) új ICM-re, lásd: 
+<intxref refid = "H6JB0AA316001">Indításgátló vezérlőmodul (ICM) leszerelése és felszerelése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

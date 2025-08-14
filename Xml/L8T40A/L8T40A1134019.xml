@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1134019" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0111
+</title>
+<servinfosub id = "L8T40A1134019001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.419in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.785in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0111: Circuito sensore 1 temper. aria di aspirazione Range&#x002F;Rendimento
+</emph>
+</ptxt>
+<ptxt>
+La differenza tra il valore IAT misurato e il valore IAT minimo è inferiore a 1 &#176;C (1,8 &#176;F)
+</ptxt>
+<ptxt>
+(2 logica di rilevamenti D&#x002F;C, ma il MIL non si accende)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensore IAT e&#x002F;o il suo circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1134019002">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1134074">DTC P0100 &#x002F; P0102 &#x002F; P0103:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1134019003">
+<title>
+Procedura di conferma DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando si esegue una prova su strada, scegliere un luogo in cui non ci sia traffico o possibilità di un incidente e fare molta attenzione durante la prova per evitare incidenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il test su strada deve essere eseguito con 2 persone, un guidatore e un collaudatore, su una strada in pianura.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Quando si usa questa procedura assicurarsi che le seguenti condizioni vengano soddisfatte:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT all&apos;avvio del motore &gt; 110 &#176;C (230 &#176;F)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Guidare il veicolo a 50 &#8211; 60 km&#x002F;h (31 &#8211; 37 miglia&#x002F;h) per 1 min, o superiore. (Tenere l&apos;apertura della farfalla costante in questo punto.)
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Arrestare il veicolo e far funzionare il motore al regime di minimo per 30 min o più.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ripetere i punti da 2) a 3) per 4 volte.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1134019004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A1134019005">
+<testgroup id = "L8T40A1134019006">
+<question>
+È stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1131004">Descrizione del sistema di controllo emissioni e motore:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134019007">
+<title>
+Controllo del sensore IAT e del suo circuito.
+</title>
+<test1>
+<ptxt>
+Controllare il sensore IAT, e il suo circuito in base ai punti da 2 a 3 di 
+<intxref refid = "L8T40A1134020">DTC P0112 &#x002F; P0113:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le condizioni sono buone?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire la parte difettosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134019008">
+<title>
+Contemporaneamente è stata rilevata l&#8217;attività di individuazione guasti di altri DTC
+</title>
+<question>
+Sono stati rilevati contemporaneamente dei DTC?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare alla risoluzione dei problemi per il DTC corrispondente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

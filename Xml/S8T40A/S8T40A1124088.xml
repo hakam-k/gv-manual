@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1124088" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0625 &#x002F; P0626
+</title>
+<servinfosub id = "S8T40A1124088001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.835in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.369in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P0625: Generator Field Terminal Circuit Low
+</emph>
+</ptxt>
+<ptxt>
+Duty signal of generator field coil is higher than 99.9&#x0025; (low voltage) for 10 sec. even if duty control signal of generator control is maximum (100&#x0025;).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C detection logic but MIL does not light up)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Generator and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+DTC P0626: Generator Field Terminal Circuit High
+</emph>
+</ptxt>
+<ptxt>
+Duty control signal of generator field coil is lower than 1&#x0025; (high voltage) for 10 sec. even if duty control signal of generator control is minimum (0&#x0025;).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C detection logic but MIL does not light up)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1124088002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1124087">DTC P0620:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1124088003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check to make sure that the following conditions are met.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Blower fan: ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Headlight switch: ON
+</ptxt>
+</item>
+<item>
+<ptxt>
+Rear defogger switch: ON
+</ptxt>
+</item>
+</list1>
+</s1>
+<s1>
+<ptxt>
+Run engine at idle speed for 5 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1124088004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1124088005">
+<testgroup id = "S8T40A1124088006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124088007">
+<title>
+Generator field coil monitor signal circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and connectors from generator and ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to generator connector and ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that generator field coil monitor signal circuit (B1) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of generator field coil monitor signal circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between generator field coil monitor signal circuit and vehicle body ground is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between generator field coil monitor signal circuit terminal and each terminal at generator connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of generator field coil monitor signal circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124088008">
+<test1>
+<ptxt>
+Replace generator. 
+<intxreftitleoff1 refid = "S8T40A1A26005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check DTC.
+</ptxt>
+</test1>
+<question>
+Is DTC P0625 or P0626 still detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+End.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

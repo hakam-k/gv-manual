@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0A4604024" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1039: Szögsebesség- &#x002F; gyorsulásérzékelő szerelvény belső hibája
+</title>
+<servinfosub id = "H6JB0A4604024001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A rendszer a szögsebesség- &#x002F; gyorsulásérzékelő belső hibáját észlelte.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Szögsebesség- &#x002F; gyorsulásérzékelő szerelvény
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174; vezérlőmodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H6JB0A4604024002">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0A4604024003">
+<testgroup>
+<question>
+Elvégezte az &#8220;elektronikus menetstabilizáló program ellenőrzését&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A4604001">Elektronikus menetstabilizáló program ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe és ellenőrizze, van-e DTC.
+</ptxt>
+</test1>
+<question>
+A DTC C1034 és&#x002F;vagy C1073 érzékelhető?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a vonatkozó DTC diagnosztikai folyamat táblázatra.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze az érzékelő kalibrálását.
+</title>
+<test1>
+<ptxt>
+Végezze el a szögsebesség- &#x002F; gyorsulásérzékelő kalibrálását, lásd: 
+<intxref refid = "H6JB0A4606002">Az érzékelő kalibrálása</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Törölje az összes DTC-t és ellenőrizze, hogy van-e további DTC.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a C1039 számú hibakódot?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A szögsebesség- &#x002F; gyorsulásérzékelő kalibrálása nem történt meg.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a szögsebesség- &#x002F; gyorsulásérzékelő szerelvényt
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a szögsebesség- &#x002F; gyorsulásérzékelőt, lásd: 
+<intxref refid = "H6JB0A4606016">Szögsebesség- &#x002F; gyorsulásérzékelő szerelvény ellenőrzése járműbe szerelt állapotban</intxref>
+.
+</ptxt>
+</test1>
+<question>
+A rendszer rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ESP&#174;-hidraulikaegységet &#x002F; vezérlőmodul egységet, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki a szögsebesség- &#x002F; gyorsulásérzékelő szerelvényt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

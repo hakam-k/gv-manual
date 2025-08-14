@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0B1104141" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2413: Exhaust Gas Recirculation System Performance Malfunction
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+EGR valve data initialization procedure is required when the EGR valve is replaced.
+</ptxt>
+<ptxt>
+The &#8220;EGR valve initial offset&#8221; and &#8220;EGR valve last offset&#8221; parameters must be reinitialised.
+</ptxt>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0B1306025">EGR Valve Data Initialization</intxref>
+ to carry out this programming.
+</ptxt>
+</item>
+<item>
+<ptxt>
+This fault can result in a rapid and significant fouling of the diesel particulate filter. If the EGR valve needs to be replaced to deal with the fault, it must be cleared.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions for applying fault finding procedures to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present after a road test.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault is present:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+There is heavy smoke at the exhaust.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The Malfunction indicator light (MIL) will come on after three consecutive driving cycles (starting &#x002B;5 seconds &#x002B; turn OFF ignition switch and wait 40 seconds.).
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Use service wire for any operation on the ECM connectors.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S5JB0B1104141001">
+<title>
+Troubleshooting
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the connections of the EGR valve.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Check the operation of the EGR valve:
+</ptxt>
+<ptxt>
+Perform Test 7 referring to 
+<intxref refid = "S5JB0B1104172">Test 7: Exhaust gas recirculation valve</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault if still present, perform &#8220;Initialization EGR valve data&#8221; on SUZUKI scan tool to reinitialize the operating values of the valve and launch a programming procedure for the EGR offsets (Refer to 
+<intxref refid = "S5JB0B1306025">EGR Valve Data Initialization</intxref>
+).
+</ptxt>
+<ptxt>
+If the valve is jammed or irrevocably seized, replace the EGR valve.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

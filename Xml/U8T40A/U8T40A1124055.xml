@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2135
+</title>
+<servinfosub id = "U8T40A1124055001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2135: Spanningscorrelatie gasklep-&#x002F;pedaalpositiesensor&#x002F;-schakelaar &#34;A&#34;&#x002F;&#34;B&#34;
+</emph>
+</ptxt>
+<ptxt>
+Het verschil tussen TP (hoofd) en TP (secundair) is hoger dan de vereiste waarde.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+TP-sensor en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gasklephuissamenstel
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124055002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124055003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention3>
+<ptxt>
+Indien er eerder in de DTC-bevestigingsprocedure andere dan de beoogde DTC&apos;s werden waargenomen, los dan ook de eerder waargenomen DTC&apos;s op.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Houd het gaspedaal gedurende 2 sec volledig ingedrukt
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laat het gaspedaal gedurende 2 sec los
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 2) en 3) 3 keer.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124055004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1124055005">
+<testgroup id = "U8T40A1124055006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124055007">
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</test1>
+<question>
+Worden er behalve P2135 nog andere DTC&apos;s weergegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de betrokken DTC&apos;s.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124055008">
+<title>
+Controle van de bedradingsbundel
+</title>
+<test1>
+<ptxt>
+Controleer het TP-sensorcircuit (hoofd en sub) als volgt.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+TP-sensorcircuit (hoofd): Zie stap 2) tot en met 5) van 
+<intxref refid = "U8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TP-sensorcircuit (sub): Zie stap 2) tot en met 5) van 
+<intxref refid = "U8T40A1124028">DTC P0222 &#x002F; P0223:J24B</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124055009">
+<title>
+Controle van de TP-sensor
+</title>
+<test1>
+<ptxt>
+Controleer de prestaties van de TP-sensor zoals beschreven in &#34;Controle van de prestaties van de gaskleppositiesensor&#34; onder 
+<intxref refid = "U8T40A1326004">Onderzoek in het voertuig van het gasklephuissamenstel:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het klephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0A5104065" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+&#8220;POWER&#8221; Light Circuit Check &#8211; Light Does Not Come &#8220;ON&#8221; at Ignition Switch ON
+</title>
+<servinfosub id = "S5JB0A5104065001">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S5JB0A5104065002">
+<testgroup>
+<title>
+Combination Meter Power Supply Check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch ON.
+</ptxt>
+</test1>
+<question>
+Does other indicator &#x002F; warning lights in combination meter comes ON?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair combination meter power supply circuit referring to 
+<intxref refid = "S5JB0A9302001">Combination Meter Circuit Diagram</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+TCM power and ground circuit check referring to 
+<intxref refid = "S5JB0A5104062">TCM Power and Ground Circuit Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Check DTC referring to 
+<intxref refid = "S5JB0A5104006">DTC Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is there DTC P1774 or P1775?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Combination Meter Function Check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch ON.
+</ptxt>
+</test1>
+<question>
+Does A&#x002F;T selector position indicator show correct select lever position?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Replace combination meter.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

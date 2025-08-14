@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A7224024" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1546: Storing in de A&#x002F;C-koelmiddeldruk
+</title>
+<servinfosub id = "U8T40A7224024001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.768in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.436in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+De buitentemperatuur is hoger dan de voorgeschreven waarde. De koelmiddeldruk is echter lager dan voorgeschreven.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit van de koelmiddeldruksensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Koelmiddeldruksensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit van de buitenluchttemperatuursensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Buitenluchttemperatuursensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+HVAC-regelapparaat
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A7224024002">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start de motor en laat hem op de normale bedrijfstemperatuur komen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start het A&#x002F;C-systeem en laat het 1 min. of langer werken.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A7224024003">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A7224024004">
+<testgroup>
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en controleer op DTC&apos;s.
+</ptxt>
+</test1>
+<question>
+Wordt DTC B1546 aangegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Controleer de toestand van het A&#x002F;C-systeem volgens 
+<intxref refid = "U8T40A7224009">Onderzoek van de A&#x002F;C-systeemprestaties:Modellen J24B en N32A</intxref>
+ en controleer opnieuw op DTC&apos;s.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de koelmiddeldruk
+</title>
+<test1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Lees de koelmiddeldruk af van het uitleesapparaat.
+</ptxt>
+</test1>
+<question>
+Bedraagt hij 340 kPa of meer?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vul koelmiddel bij en controleer de toestand van het A&#x002F;C-systeem volgens 
+<intxref refid = "U8T40A7224009">Onderzoek van de A&#x002F;C-systeemprestaties:Modellen J24B en N32A</intxref>
+. Controleer vervolgens opnieuw op DTC&apos;s.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het A&#x002F;C-systeem
+</title>
+<test1>
+<ptxt>
+Controleer de toestand van het A&#x002F;C-systeem volgens 
+<intxref refid = "U8T40A7224009">Onderzoek van de A&#x002F;C-systeemprestaties:Modellen J24B en N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is het A&#x002F;C-systeem in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer en&#x002F;of vervang.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de koelmiddeldruksensor
+</title>
+<test1>
+<ptxt>
+Controleer de koelmiddeldruksensor volgens 
+<intxref refid = "U8T40A7226015">Onderzoek van de A&#x002F;C-koelmiddeldruksensor en bijbehorend circuit:Modellen J24B en N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn de koelmiddeldruksensor en&#x002F;of het bijbehorende circuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het circuit en&#x002F;of vervang de koelmiddeldruksensor.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de buitentemperatuursensor
+</title>
+<test1>
+<ptxt>
+Controleer de buitentemperatuursensor volgens 
+<intxref refid = "U8T40A9306013">Onderzoek van de buitenluchttemperatuursensor (indien uitgerust)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de buitentemperatuursensor in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang het HVAC-regelapparaat.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de buitentemperatuursensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

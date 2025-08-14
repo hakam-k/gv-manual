@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0AA314007" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Indításgátló visszajelző lámpa égve marad a motor elindulása után is
+</title>
+<servinfosub id = "H6JB0AA314007001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0AA312001">Indításgátló vezérlőrendszer kapcsolási rajza:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0AA314007002">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+Amikor a gyújtáskapcsolót ON helyzetbe fordítja, az ECM továbbítja a &#34;visszajelzés bekapcsolása&#34; jelet a műszeregységhez, amellyel az indításgátló visszajelző lámpa felkapcsolására ad utasítást abban az esetben, ha az indításgátló vezérlőrendszer hibátlan. Ezután a műszeregység felkapcsolja a lámpát. Miután a motor beindult, az ECM továbbítja a &#34;visszajelzés kikapcsolása&#34; jelet a műszeregységhez, amellyel az indításgátló visszajelző lámpa kikapcsolására ad utasítást. Ezután a műszeregység kikapcsolja az indításgátló visszajelző lámpát. Abban az esetben azonban, ha az indításgátló vezérlőrendszerben valamilyen hiba lépett fel, az indításgátló visszajelző lámpa villog, amikor a gyújtáskulcsot ON helyzetbe fordítja.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0AA314007003">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0AA314007004">
+<testgroup>
+<title>
+Diagnosztikai hibakódok (DTC) lekérdezése
+</title>
+<test1>
+<ptxt>
+Indítsa el a motort.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le, észlelt-e hibakódot az ECM, lásd: 
+<intxref refid = "H6JB0AA314002">Diagnosztikai hibakódok (DTC) ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Észlelt hibakódot?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0AA314001">Indításgátló vezérlőrendszer ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört a műszeregység és az ECM között, lásd: 
+<intxref refid = "H6JB0A1114064">DTC P1674: CAN kommunikáció (busz ki hiba):Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az áramkörök rendben vannak?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Tegyen be egy bizonyosan jó műszeregységet, és ismételje meg az ellenőrzést. Ha az indításgátló visszajelző lámpa továbbra sem világít, tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a hibás áramkört.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

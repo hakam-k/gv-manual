@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0AA204014" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC U1100 (1100. sz.): Megszakadt a kommunikáció az ECM-mel (benzinmotor esetén)
+</title>
+<servinfosub id = "H6JB0AA204014001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0AA204018">DTC U0155 (0155. sz.): Megszakadt kommunikáció a műszerfal (IPC) vezérlőmoduljával</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0AA204014002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.954in"/>
+<colspec colnum = "2" colname = "2" colwidth = "4.251in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A BCM nem tud CAN adatokat fogadni az ECM-től az előírtnál hosszabb ideig, folyamatosan.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN kommunikációs áramkör
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM 
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H6JB0AA204014003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett csatlakoztassa a vizsgálókészüléket a DLC-hez.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa el a motort és járassa legalább 1 percig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H6JB0AA204014004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0AA204014005">
+<testgroup>
+<title>
+DTC ellenőrzés a BCM-ben
+</title>
+<question>
+Észlelhető U1100 (1100. sz.) és U1073 (1073. sz.) DTC egyidejűleg?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0AA204013">DTC U1073 (1073. sz.): Vezérlőmodul kommunikációs busza kikapcsolva</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés az ECM-ben
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECM-et, hogy van-e DTC?	
+</ptxt>
+</test1>
+<question>
+P1674 számú DTC-t észlelt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A1114064">DTC P1674: CAN kommunikáció (busz ki hiba):Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a DTC-t az ABS- vagy az ESP&#174;-vezérlőmodulban
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t az ABS- vagy az ESP&#174;-vezérlőmodulban.
+</ptxt>
+</test1>
+<question>
+Észlelte az U1073 DTC-t?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A4504019">DTC U1073: Vezérlőmodul kommunikációs busza kikapcsolva (benzinmotor esetén)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Vezérlőmodul csatlakozójának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CAN útján kommunikáló összes vezérlőmodul csatlakozójának csatlakozását.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze újra a BCM-et, hogy van-e DTC.
+</ptxt>
+</test1>
+<question>
+Észlelhető DTC U1100 (1100. sz.)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Időszakos hiba. Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H6JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a DTC-t az ABS- vagy az ESP&#174;-vezérlőmodulban
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t az ABS- vagy az ESP&#174;-vezérlőmodulban.
+</ptxt>
+</test1>
+<question>
+U1100 számú DTC-t észlelt?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Csatolja le az ECM és az ABS- vagy ESP&#174;-vezérlőmodul csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört az ABS- vagy ESP&#174;-vezérlőmodul és az ECM között szakadás, rövidzárlat és nagy ellenállás szempontjából.
+</ptxt>
+</test1>
+<question>
+Rendben vannak a CAN kommunikációs áramkörök?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ellenőrizze az ECM áramellátó és testelő áramkörét. Ha az áramkör rendben van, tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa ki az áramkört.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Csatolja le a BCM és az ABS- vagy ESP&#174;-vezérlőmodul csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört az ABS- vagy ESP&#174;-vezérlőmodul és a BCM között szakadás, rövidzárlat és nagy ellenállás szempontjából.
+</ptxt>
+</test1>
+<question>
+Rendben vannak a CAN kommunikációs áramkörök?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 8. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa ki az áramkört.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Válassza le a CAN útján kommunikáló összes vezérlőmodul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört a 7. lépésen kívüli vezérlőmodulok között szakadás, rövidzárlat és nagy ellenállás szempontjából.
+</ptxt>
+</test1>
+<question>
+Rendben vannak a CAN kommunikációs áramkörök?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 9. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa ki az áramkört.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzés a BCM-ben
+</title>
+<test1>
+<ptxt>
+Csatlakoztassa a CAN útján kommunikáló összes vezérlőmodul leválasztott csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Csatolja le a BCM-en kívül az összes vezérlőmodul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze újra a BCM-et, hogy van-e DTC.
+</ptxt>
+</test1>
+<question>
+Észlelhető DTC U1100 (1100. sz.)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Kösse le egyenként azoknak a vezérlőmoduloknak a csatlakozóit, amelyek nem lettek lekötve a 2. lépésben, és ellenőrizze, minden lekötés alkalmával, hogy a BCM észlel-e U1100 DTC-t. Ha U1100 DTC-t nem észlel a BCM az ilyen ellenőrzés során, olvassa el a &#8220;NO&#8221; alatt leírtakat a következőkben. Ha még akkor is észlel U1100 DTC-t , ha a CAN kommunikációt felhasználó összes vezérlőmodul csatlakozója lekötésre került, a meglévő helyett tegyen be egy bizonyosan jó BCM-t, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ellenőrizze a 2. lépésben lekötött vezérlőmodulok táp- és testáramköreit. Ha az áramkörök rendben vannak, a mostani helyére szereljen be egy bizonyosan jó, a 2. lépésben eltávolított vezérlőmodult, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

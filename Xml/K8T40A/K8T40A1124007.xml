@@ -1,0 +1,2392 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40A1124007" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Δεδομένα Διαγνωστικού Εργαλείου
+</title>
+<scantool>
+<scantool-title>
+ECM
+</scantool-title>
+<ptxt>
+Καθώς οι τιμές είναι κανονικές τιμές κατ&apos; εκτίμησιν με βάση τιμές που έχουν λη&#248;θεί από τα αυτοκίνητα που λειτουργούν κανονικά με τη χρήση ενός διαγνωστικού εργαλείου, χρησιμοποιήστε τις ως τιμές ανα&#248;οράς. Ακόμη και όταν το αυτοκίνητο είναι σε καλή κατάσταση, μπορεί να υπάρχουν περιπτώσεις όπου οι ελεγχόμενες τιμές να μην βρίσκονται εντός της καθορισμένης περιοχής των δεδομένων. Για το λόγο αυτό, η κρίση ως μιας μη κανονικής κατάστασης δεν πρέπει να γίνεται μόνο με τον έλεγχο αυτών των δεδομένων.
+</ptxt>
+<ptxt>
+Επίσης, συνθήκες που μπορούν να ελεγχθούν με το διαγνωστικό εργαλείο είναι αυτές που ανιχνεύονται από το ΕCM και εξάγονται από το ΕCM ως εντολές και μπορεί να υπάρχουν περιπτώσεις όπου ο κινητήρας ή ο ενεργοποιητής να μην λειτουργούν (υπό τη συνθήκη) όπως υποδεικνύεται από το διαγνωστικό εργαλείο. Χρησιμοποιείτε την λυχνία αβάνς όταν ελέγχετε τον χρονισμό της ανά&#248;λεξης. 
+<intxreftitleoff1 refid = "K8T40A1826005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Με το διαγνωστικό εργαλείο γενικής χρήσης, μπορούν να διαβαστούν μόνον τα δεδομένα που είναι μαρκαρισμένα με (&#x002A;) στον παρακάτω πίνακα.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Όταν ελέγχετε τα δεδομένα με τον κινητήρα σε ρελαντί ή κανονική λειτουργία, βεβαιωθείτε ότι τοποθετήσατε τον λεβιέ επιλογής ταχύτητας στο &#34;Νεκρά&#34; (μοντέλο M&#x002F;T) ή επιλέξατε την θέση λεβιέ &#34;P&#34; (μοντέλο A&#x002F;T) και δέσατε πλήρως το &#248;ρένο στάθμευσης. Επίσης εάν, δεν εμ&#248;ανίζεται τίποτε ή η ένδειξη &#34;χωρίς &#248;ορτίο&#34;, γυρίστε OFF το A&#x002F;C, όλα τα ηλεκτρικά &#248;ορτία, τον P&#x002F;S και όλους τους άλλους διακόπτες.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.240in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.635in"/>
+<colspec colnum = "3" colname = "3" colwidth = "3.563in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.708in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Δεδομένα διαγνωστικού εργαλείου
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Κατάσταση αυτοκινήτου
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Κανονική κατάσταση &#x002F; τιμή ανα&#248;οράς
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Σύστημα Καυσίμου 
+<intxreftitleoff1 refid = "K8T40A1124007002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Το ανοικτό κύκλωμα δεν έχει ακόμη ικανοποιήσει τις συνθήκες του κινητήρα (ECT &gt; 10 &#176;C, IAT, TP, A&#x002F;F σύστημα &#x002F; αισθητήρα &#x003D; OK) για να πάει σε κλειστό βρόγχο.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανοικτό Κύκλωμα (ΑΚ)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανοικτό κύκλωμα λόγω των συνθηκών οδήγησης (Εμπλουτισμός ισχύος, κ.λ.π.)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ΑΚ-Οδηγού (ανοικτό κύκλωμα)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανοικτό κύκλωμα επειδή έχει ανιχνευτεί βλάβη στο σύστημα.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ΑΚ-Αστοχία (ανοικτό κύκλωμα)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Κλειστό κύκλωμα με την χρήση των αισθητήρων HO2S και A&#x002F;F ως ενημέρωση για τον έλεγχο καυσίμου
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+CL (κλειστός βρόχος)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Όταν ο κινητήρας σβήσει με τον διακόπτη ανά&#248;λεξης ΟΝ
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Βραχυπρόθεσμη Ρύθμιση Καυσίμου 
+<intxreftitleoff1 refid = "K8T40A1124007003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί για 2 min. μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου -20 έως 20 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Μακρυπρόθεσμη Ρύθμιση Καυσίμου 
+<intxreftitleoff1 refid = "K8T40A1124007004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί για 2 min. μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου -20 έως 20 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Συνολική Ρύθμιση Καυσίμου 
+<intxreftitleoff1 refid = "K8T40A1124007005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί για 2 min. μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου -30 έως 30 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Πλάτος Παλμού Μπεκ 
+<intxreftitleoff1 refid = "K8T40A1124007006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί χωρίς &#248;ορτίο μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 1,6 έως 4,0 msec
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Αβάνς Ανά&#248;λεξης 
+<intxreftitleoff1 refid = "K8T40A1124007007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί χωρίς &#248;ορτίο μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+8 &#177; 5&#176; BTDC
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Χρονισμός ανά&#248;λεξης: Σταθερός (χρησιμοποιώντας το &#34;Έλεγχος Σταθερού Σπινθήρα&#34; στη λειτουργία &#34;Κινητήρας &#x002F; Ενεργός Έλεγχος&#34; του διαγνωστικού εργαλείου)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+5 &#177; 3&#176; BTDC
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Υπολογισμένο Φορτίο 
+<intxreftitleoff1 refid = "K8T40A1124007008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί χωρίς &#248;ορτίο μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 20 έως 30 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Στρο&#248;ές Κινητήρα 
+<intxreftitleoff1 refid = "K8T40A1124007009"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ανεμιστήρας ψύξης του ψυγείου: Σταμάτημα
+</ptxt>
+</item>
+<item>
+<ptxt>
+Όλα τα ηλεκτρικά εξαρτήματα: OFF
+</ptxt>
+</item>
+<item>
+<ptxt>
+A&#x002F;T: Περιοχή &#34;N&#34;
+</ptxt>
+</item>
+<item>
+<ptxt>
+M&#x002F;T: Θέση νεκράς
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 600 έως 750 rpm
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Επιθυμ Ρελαντί 
+<intxreftitleoff1 refid = "K8T40A1124007010"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ανεμιστήρας ψύξης του ψυγείου: Σταμάτημα
+</ptxt>
+</item>
+<item>
+<ptxt>
+Όλα τα ηλεκτρικά εξαρτήματα: OFF
+</ptxt>
+</item>
+<item>
+<ptxt>
+A&#x002F;T: Περιοχή &#34;N&#34;
+</ptxt>
+</item>
+<item>
+<ptxt>
+M&#x002F;T: Θέση νεκράς
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 650 έως 750 rpm
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+MAF 
+<intxreftitleoff1 refid = "K8T40A1124007011"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί χωρίς &#248;ορτίο μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 1,5 έως 4,0 g&#x002F;s
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ταχύτητα Αυτοκινήτου 
+<intxreftitleoff1 refid = "K8T40A1124007012"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Το αυτοκίνητο κινείται
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Η τιμή είναι η ίδια όπως του κοντέρ
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ECT 
+<intxreftitleoff1 refid = "K8T40A1124007013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 80 - 105 &#176;C, 176 - 221 &#176;F
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Αισθητήρας Θερμοκρασίας Αέρα Εισαγωγής 
+<intxreftitleoff1 refid = "K8T40A1124007014"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+-5 &#176;C (23 &#176;F) &#x002B; θερμοκρασία περιβάλλοντος έως 40 &#176;C (104 &#176;F) &#x002B; θερμοκρασία περιβάλλοντος
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Βαρομετρ Πίεση 
+<intxreftitleoff1 refid = "K8T40A1124007015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Εμ&#248;ανίζεται η βαρομετρική πίεση
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Κύκλος Εξαερισμού Κάνιστρου Evap 
+<intxreftitleoff1 refid = "K8T40A1124007016"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+0
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διάκενο VVT 
+<intxreftitleoff1 refid = "K8T40A1124007017"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί χωρίς &#248;ορτίο μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+-5 έως 5 &#176;CA
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Βαλβίδα IMRC 
+<intxreftitleoff1 refid = "K8T40A1124007018"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Διακόπτης ανά&#248;λεξης: ΟN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Κρύος
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+0,534 έως 0,762 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί χωρίς &#248;ορτίο μετά το ζέσταμα
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+3,253 έως 3,947 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Βαλβίδα IMRC (Συμπ.) 
+<intxreftitleoff1 refid = "K8T40A1124007019"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Διακόπτης ανά&#248;λεξης: ΟN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Κρύος
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Κλείσιμο
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άνοιγμα
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Βαλβίδα IMRC (Mon) 
+<intxreftitleoff1 refid = "K8T40A1124007020"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Διακόπτης ανά&#248;λεξης: ΟN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Κρύος
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Κλείσιμο
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άνοιγμα
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άνοιγμα Πεταλούδας IAC 
+<intxreftitleoff1 refid = "K8T40A1124007021"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί χωρίς &#248;ορτίο μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 5 έως 40 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</item>
+<item>
+<ptxt>
+Διακόπτης A&#x002F;C: ΟN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Διακόπτης ανεμιστήρα στην 3η θέση
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 10 έως 50 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Τάση Αισθ TP 1 
+<intxreftitleoff1 refid = "K8T40A1124007022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+0,45 έως 0,75 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+3,825 έως 4,095 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Τάση Αισθ TP 2 
+<intxreftitleoff1 refid = "K8T40A1124007023"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+1,33 έως 1,63 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+4,035 έως 4,305 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Τάση Αισθ ΑΡΡ 1 
+<intxreftitleoff1 refid = "K8T40A1124007024"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+0,65 έως 0,82 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+3,50 έως 4,27 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Τάση Αισθ ΑΡΡ 2 
+<intxreftitleoff1 refid = "K8T40A1124007025"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+0,30 έως 0,44 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+1,74 έως 2,17 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Θέση Πεντάλ 
+<intxreftitleoff1 refid = "K8T40A1124007026"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+0 έως 2 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+90 έως 100 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Θέση Πεταλούδας 
+<intxreftitleoff1 refid = "K8T40A1124007027"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+0 έως 2 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+90 έως 100 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Στόχος Θέσης πεταλούδας 
+<intxreftitleoff1 refid = "K8T40A1124007028"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+0 έως 2 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+90 έως 100 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Τάση Μοτέρ Πεταλούδας 
+<intxreftitleoff1 refid = "K8T40A1124007029"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Διακόπτης ανά&#248;λεξης: ΟN
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+13 έως 15 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+O2S B1 S2 
+<intxreftitleoff1 refid = "K8T40A1124007030"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+2.000 rpm για 3 min. ή περισσότερο μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 0 έως 1,0 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Φορτίο A&#x002F;F B1 S1 
+<intxreftitleoff1 refid = "K8T40A1124007031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί για 2 min. μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου -0,1 έως 0,1 mA
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Τάση Μπαταρίας 
+<intxreftitleoff1 refid = "K8T40A1124007032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 13 έως 15 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Πίεση A&#x002F;C 
+<intxreftitleoff1 refid = "K8T40A1124007033"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανατρέξτε στο 
+<intxref refid = "K8T40A7224009">Επιθεώρηση Απόδοσης Συστήματος A&#x002F;C:Μοντέλο J24B και N32A</intxref>
+.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Απόδοση Ελέγχου Γεννήτριας 
+<intxreftitleoff1 refid = "K8T40A1124007034"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 20 έως 100 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Απόδοση Γεννήτριας Διέγερσης 
+<intxreftitleoff1 refid = "K8T40A1124007035"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Περίπου 20 έως 100 &#x0025;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανεμιστήρας Ψυγείου 
+<intxreftitleoff1 refid = "K8T40A1124007037"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανεμιστήρας ψύξης του ψυγείου: OFF
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανεμιστήρας ψύξης του ψυγείου: Χαμ.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Χαμηλό
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανεμιστήρας ψύξης του ψυγείου: Εντός 3 sec. μετά την αλλαγή από Χαμηλό σε Ψηλό
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Μεσαίο
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανεμιστήρας ψύξης του ψυγείου: Υψ.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Υψ
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ρελέ Συμπ A&#x002F;C 
+<intxreftitleoff1 refid = "K8T40A1124007038"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+ο διακόπτης κλιματισμού και ο διακόπτης του ανεμιστήρα γυρισμένοι ΟΝ
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άλλη εκτός από την παραπάνω κατάσταση
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Αντλία Καυσίμου 
+<intxreftitleoff1 refid = "K8T40A1124007040"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ο κινητήρας λειτουργεί
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άλλη εκτός από την παραπάνω κατάσταση
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ενεργοποιητής Βαλβίδας IMT 
+<intxreftitleoff1 refid = "K8T40A1124007041"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Κατάσταση κινητήρα: 2.750 - 4.750 rpm
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Κλείσιμο
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άλλη εκτός από την παραπάνω κατάσταση
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άνοιγμα
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ρελέ Μοτέρ Πεταλούδας Γκαζιού 
+<intxreftitleoff1 refid = "K8T40A1124007042"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης ανά&#248;λεξης: ΟN
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άλλη εκτός από την παραπάνω κατάσταση
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+SW Μίζας 
+<intxreftitleoff1 refid = "K8T40A1124007043"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης ανά&#248;λεξης: Θέση ST (ο κινητήρας περιστρέ&#248;εται με τη μίζα)
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άλλη εκτός από την παραπάνω κατάσταση
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης PSP (σήμα P&#x002F;S) 
+<intxreftitleoff1 refid = "K8T40A1124007044"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Σε προσδιορισμένη ταχύτητα ρελαντί και το τιμόνι στην θέση ευθείας
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Σε προσδιορισμένη ταχύτητα ρελαντί και το τιμόνι στριμμένο στα δεξιά ή στα αριστερά μέχρι το τέρμα.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης A&#x002F;C 
+<intxreftitleoff1 refid = "K8T40A1124007045"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης A&#x002F;C: ΟN
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άλλη εκτός από την παραπάνω κατάσταση
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ανεμιστήρας Εξαερισμού 
+<intxreftitleoff1 refid = "K8T40A1124007046"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης ανεμιστήρα: 5η θέση ταχύτητας ή περισσότερο
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Άλλη εκτός από την παραπάνω κατάσταση
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης Φρένων 
+<intxreftitleoff1 refid = "K8T40A1124007047"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Πεντάλ &#248;ρένων: Πατημένο τελείως
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Πεντάλ &#248;ρένων: Απελευθερωμένο
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ηλεκτρικό Φορτίο 
+<intxreftitleoff1 refid = "K8T40A1124007048"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης προβολέα ή διακόπτης πίσω μηχανισμού ξεθαμπώματος ΟN
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Διακόπτης προβολέα ή διακόπτης πίσω μηχανισμού ξεθαμπώματος OFF
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Σήμα PNP 
+<intxreftitleoff1 refid = "K8T40A1124007049"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Λεβιές επιλογής ταχυτήτων: Άλλη από τη θέση &#34;Ρ&#34; ή &#34;Ν&#34;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+D
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Λεβιές επιλογής ταχυτήτων: Θέση &#34;Ρ&#34; ή &#34;Ν&#34;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+P&#x002F;N
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Αποκοπή Καυσίμου 
+<intxreftitleoff1 refid = "K8T40A1124007050"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Κατάσταση κινητήρα: 2.000 rpm ή περισσότερο μετά το ζέσταμα
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Θέση Κλειστ Πεταλούδ 
+<intxreftitleoff1 refid = "K8T40A1124007051"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Απελευθερωμένο
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+On
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατάσταση κινητήρα: Σταματημένο
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πεντάλ γκαζιού: Πατημένο τελείως
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Off
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x002A;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ενεργοποιητής O2S B1 S2 (ΕΝΕΡΗΟΠΟΙΗΤΗΣ O2S B1 S2 
+<intxreftitleoff1 refid = "K8T40A1124007052"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ενεργό
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ενεργοποιητής A&#x002F;F B1 S1 
+<intxreftitleoff1 refid = "K8T40A1124007053"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Προκαθορισμένες στρο&#248;ές ρελαντί μετά το ζέσταμα
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Ενεργό
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</scantool>
+<servinfosub id = "K8T40A1124007001" page = "2">
+<title>
+Ορισμοί Δεδομένων Διαγνωστικού Εργαλείου
+</title>
+<topic id = "K8T40A1124007002">
+<title>
+Σύστημα Καυσίμου (Κατάσταση του Συστήματος Καυσίμου)
+</title>
+<ptxt>
+Η κατάσταση της ενημέρωσης του κυκλώματος του λόγου A&#x002F;F υποδεικνύεται σαν ένα από τα παρακάτω.
+</ptxt>
+<ptxt>
+OL: Το ανοικτό κύκλωμα δεν έχει ακόμη ικανοποιήσει τις συνθήκες του κινητήρα (ECT &gt; 10 &#176;C, IAT, TP, A&#x002F;F σύστημα &#x002F; αισθητήρα &#x003D; OK) για να πάει σε κλειστό βρόγχο.
+</ptxt>
+<ptxt>
+CL: Κλειστό - κύκλωμα χρησιμοποιώντας τον αισθητήρα (-ες) οξυγόνου σαν ανα&#248;ορά για τον έλεγχο καυσίμου.
+</ptxt>
+<ptxt>
+OL-ΟΔΗΓΗΣΗΣ: Ανοικτό κύκλωμα λόγω των συνθηκών οδήγησης (Εμπλουτισμός καυσίμου, κ.λ.π.)
+</ptxt>
+<ptxt>
+OL-ΒΛΑΒΗΣ: Ανοικτό Κύκλωμα επειδή έχει ανιχνευτεί βλάβη στο σύστημα.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007003">
+<title>
+Βραχυπρόθεσμη Ρύθμιση Καυσίμου (&#x0025;)
+</title>
+<ptxt>
+Η τιμή της βραχυπρόθεσμης ρύθμισης καυσίμου αντιπροσωπεύει τις βραχυπρόθεσμες διορθώσεις του υπολογισμού του μείγματος αέρα &#x002F; καυσίμου. Μία τιμή 0 υποδεικνύει καμία διόρθωση, μία τιμή μεγαλύτερη από 0 σημαίνει μία διόρθωση εμπλουτισμού και μία τιμή μικρότερη από 0 συνεπάγεται μία διόρθωση εξασθένησης του μείγματος.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007004">
+<title>
+Μακρυπρόθεσμη Ρύθμιση Καυσίμου (&#x0025;)
+</title>
+<ptxt>
+Η τιμή της μακροπρόθεσμης ρύθμισης καυσίμου αντιπροσωπεύει τις μακροπρόθεσμες διορθώσεις του υπολογισμού του μείγματος αέρα &#x002F; καυσίμου. Μία τιμή 0 υποδεικνύει καμία διόρθωση, μία τιμή μεγαλύτερη από 0 σημαίνει μία διόρθωση εμπλουτισμού και μία τιμή μικρότερη από 0 συνεπάγεται μία διόρθωση εξασθένησης του μείγματος.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007005">
+<title>
+Συνολική Ρύθμιση Καυσίμου (&#x0025;)
+</title>
+<ptxt>
+Η τιμή της Συνολικής Ρύθμισης Καυσίμου επιτυγχάνεται υπολογίζοντας με βάση τις τιμές της Βραχυπρόθεσμης Ρύθμισης Καυσίμου και της Μακροπρόθεσμης Ρύθμισης Καυσίμου. Αυτή η τιμή υποδεικνύει το ποσό της διόρθωσης που είναι αναγκαίο για να διατηρήσει την στοιχειομετρική αναλογία του μείγματος αέρα &#x002F; καυσίμου.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007006">
+<title>
+Πλάτος Παλμού Ψεκασμού (Πλάτος Παλμού Ψεκασμού Καυσίμου, msec)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει τον χρόνο παλμού ενεργοποίησης του μπεκ ψεκασμού (άνοιγμα βαλβίδας) ο οποίος είναι έξοδος από τον ECM (αλλά ο χρόνος ενεργοποίησης του μπεκ του κυλίνδρου ΝΟ.1 για το σύστημα ψεκασμού καυσίμου πολλαπλών σημείων).
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007007">
+<title>
+Αβάνς Ανά&#248;λεξης (Χρονισμός Ανά&#248;λεξης σε Προπορείο για τον Κύλινδρο ΝΟ.1, &#176; BTDC)
+</title>
+<ptxt>
+Ο χρονισμός του ψεκασμού για τον κύλινδρο Νο.1 επιλέγεται από τον ECM. Ο πραγματικός χρονισμός της ανά&#248;λεξης θα πρέπει να ελέγχεται χρησιμοποιώντας την λυχνία χρονισμού.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007008">
+<title>
+Υπολογισμένο Φορτίο (Υπολογισμένη Τιμή, &#x0025; Φορτίου)
+</title>
+<ptxt>
+Η συγκεκριμένη παράμετρος υποδεικνύει τον υπολογισμένο &#248;όρτο κινητήρα σε ποσοστό, βάση του σήματος εισόδου που λαμβάνει ο ECM από διά&#248;ορους αισθητήρες.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007009">
+<title>
+Στρο&#248;ές Κινητήρα (rpm)
+</title>
+<ptxt>
+Υπολογίζονται από παλμούς ανα&#248;οράς από τον αισθητήρα θέσης εκκεντρο&#248;όρου.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007010">
+<title>
+Επιθυμ Ρελαντί (Επιθυμητές Στρο&#248;ές Ρελαντί, σ.α.λ.):
+</title>
+<ptxt>
+Οι Επιθυμητές Στρο&#248;ές Ρελαντί είναι μία εσωτερική παράμετρος του ECM η οποία υποδεικνύει το ρελαντί το οποίο έχει απαιτήσει ο ECM. Εάν ο κινητήρας δεν λειτουργεί, αυτός ο αριθμός δεν ισχύει.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007011">
+<title>
+MAF (Ρυθμός Ροής Μάζας Αέρα, g&#x002F;s, lb&#x002F;min)
+</title>
+<ptxt>
+Αντιπροσωπεύει την συνολική μάζα του αέρα ο οποίος εισέρχεται μέσα στην πολλαπλή εισαγωγής η οποία μετράται από τον αισθητήρα ροής μάζας αέρα MAF.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007012">
+<title>
+Ταχύτητα αυτοκινήτου (km&#x002F;h, mph)
+</title>
+<ptxt>
+Υπολογίζεται με βάση σήματα παλμών από τους αισθητήρες ταχύτητας του αυτοκινήτου.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007013">
+<title>
+Επιθεώρηση Αισθητήρα ECT (Θερμοκρασία Ψυκτικού Κινητήρα, &#176;C, &#176;F)
+</title>
+<ptxt>
+Ανιχνεύεται από τον αισθητήρα θερμοκρασίας ψυκτικού υγρού του κινητήρα.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007014">
+<title>
+Θερμοκρασία Αέρα Εισαγωγής (&#176;C, &#176;F)
+</title>
+<ptxt>
+Ανιχνεύεται από τον αισθητήρα θερμοκρασίας του αέρα εισαγωγής.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007015">
+<title>
+Βαρομετρική Πίεση (kPa, mmHg, in.Hg, bar)
+</title>
+<ptxt>
+Αυτή η παράμετρος αντιπροσωπεύει μία μέτρηση της βαρομετρικής πίεσης του αέρα και χρησιμοποιείται για διόρθωση λόγω υψομέτρου της ποσότητας ψεκασμού του καυσίμου.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007016">
+<title>
+Απόδοση Εξαερισμού Κάνιστρου Evap (Απόδοση Ροής Εξαερισμού Κάνιστρου Evap &#x0025;)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την βαλβίδα ΟΝ (ανοικτή βαλβίδα) σαν σχέση χρόνου μέσα σε ένα συγκεκριμένο καθορισμένο κύκλο της βαλβίδας εξαερισμού του κάνιστρου EVAP η οποία ελέγχει την ποσότητα εξαερισμού του κάνιστρου EVAP.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007017">
+<title>
+Διάκενο VVT (Πραγματική θέση Στόχου, &#176;)
+</title>
+<ptxt>
+Η τιμή υπολογίζεται χρησιμοποιώντας την &#248;όρμουλα: αβάνς χρονισμού στόχου βαλβίδας - πραγματικό αβάνς χρονισμού βαλβίδας
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007018">
+<title>
+Βαλβίδα IMRC (Βαλβίδα Ελέγχου Λειτουργίας Πολλαπλής Εισαγωγής, V)
+</title>
+<ptxt>
+Η ένδειξη του αισθητήρα θέσης βαλβίδας IMRC  παρέχει στην βαλβίδα IMRC πληρο&#248;ορίες για το άνοιγμα της πεταλούδας γκαζιού σε μορ&#248;ή τάσης.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007019">
+<title>
+Βαλβίδα IMRC (Συμπιεστής) (Εντολή Βαλβίδας Ελέγχου Λειτουργίας Πολλαπλής Εισαγωγής, Ανοικτή&#x002F;Κλειστή)
+</title>
+<ptxt>
+Άνοιγμα: Εντολή ανοίγματος εξάγεται από τον ενεργοποιητή βαλβίδας IMRC 
+</ptxt>
+<ptxt>
+Κλείσιμο: Εντολή κλεισίματος εξάγεται από τον ενεργοποιητή βαλβίδας IMRC
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007020">
+<title>
+Βαλβίδα IMRC (Mon) (Εντολή Βαλβίδας Ελέγχου Λειτουργίας Πολλαπλής Εισαγωγής, Ανοικτή&#x002F;Κλειστή)
+</title>
+<ptxt>
+Άνοιγμα: Η βαλβίδα IMRC είναι πλήρως ανοικτή.
+</ptxt>
+<ptxt>
+Κλείσιμο: Η βαλβίδα IMRC είναι πλήρως κλειστή.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007021">
+<title>
+Άνοιγμα Πεταλούδας Throttle (Άνοιγμα Ρελαντί Βαλβίδας Αέρα Πεταλούδας, &#x0025;) 
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει το άνοιγμα της πεταλούδας γκαζιού για τον έλεγχο του αέρα του ρελαντί σε ποσοστό &#x0025;.
+</ptxt>
+<ptxt>
+(100 &#x0025; υποδεικνύει την μέγιστη ροή του αέρα για το ρελαντί.)
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007022">
+<title>
+Τάση Αισθητήρα TΡ1 (Τάση Εξόδου Αισθητήρα TP (Κύριος), V)
+</title>
+<ptxt>
+Η ένδειξη του Αισθητήρα ΤΡ (Κύριος) παρέχει πληρο&#248;ορίες για το άνοιγμα της πεταλούδας γκαζιού σε μορ&#248;ή τάσης.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007023">
+<title>
+Τάση Αισθητήρα TΡ1 (Τάση Εξόδου Αισθητήρα TP (Δευτερεύων), V)
+</title>
+<ptxt>
+Η ένδειξη του Αισθητήρα ΤΡ (Βοηθητικός) παρέχει πληρο&#248;ορίες για το άνοιγμα της πεταλούδας γκαζιού σε μορ&#248;ή τάσης.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007024">
+<title>
+Τάση Αισθητήρα ΑΡΡ 1 (Τάση εξόδου του Αισθητήρα APP (Κύριος) V)
+</title>
+<ptxt>
+Η ένδειξη του Αισθητήρα APP (Κύριος) παρέχει πληρο&#248;ορίες για το άνοιγμα του πεντάλ του γκαζιού σε μορ&#248;ή τάσης.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007025">
+<title>
+Τάση Αισθ ΑΡΡ 2 (Τάση Εξόδου του Αισθητήρα APP (Βοηθητικός) V)
+</title>
+<ptxt>
+Η ένδειξη του Αισθητήρα APP (Βοηθητικός) παρέχει πληρο&#248;ορίες για το άνοιγμα του πεντάλ του γκαζιού σε μορ&#248;ή τάσης.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007026">
+<title>
+Θέση Πεντάλ (Απόλυτη Θέση Πεντάλ Γκαζιού, &#x0025;)
+</title>
+<ptxt>
+Όταν το πεντάλ του γκαζιού βρίσκεται στην τελείως απελευθερωμένη θέση, το πεντάλ του γκαζιού υποδεικνύεται σαν 0 - 5 &#x0025; και 90 - 100 &#x0025; στη θέση τελείως πατημένο.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007027">
+<title>
+Θέση Πεταλούδας (Απόλυτη Θέση Πεταλούδας Γκαζιού, &#x0025;)
+</title>
+<ptxt>
+Όταν ο αισθητήρας θέσης της πεταλούδας γκαζιού ΤΡ βρίσκεται στην τελείως κλειστή θέση, το άνοιγμα της πεταλούδας υποδεικνύεται σαν 0 - 5 &#x0025; και 90 - 100 &#x0025; στην τελείως ανοικτή θέση.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007028">
+<title>
+Θέση Στόχος Πεταλούδας (ΘΕΣΗ Στόχευσης Πεταλούδας Γκαζιού, &#x0025;)
+</title>
+<ptxt>
+Η στόχευση της Θέσης της Πεταλούδας Γκαζιού είναι μία εσωτερική παράμετρος του ECM η οποία υποδεικνύει την θέση ανοίγματος την οποία απαίτησε ο ECM.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007029">
+<title>
+Τάση Μοτέρ Πεταλοούδας (Τάση Τρο&#248;οδοσίας Μοτέρ Πεταλούδας) (V)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την τάση τρο&#248;οδοσίας ρεύματος του κυκλώματος ελέγχου (μοτέρ) του μοτέρ της πεταλούδας (τάση εισόδου από το ρελέ ελέγχου του μοτέρ της πεταλούδας).
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007030">
+<title>
+O2S B1 S2 (HO2S, V)
+</title>
+<ptxt>
+Υποδεικνύει την τάση εξόδου του αισθητήρα οξυγόνου HO2S που βρίσκεται τοποθετημένος στην πολλαπλή εξαγωγής (μετά τον καταλύτη TWC). Χρησιμοποιείται για να ανιχνεύει την &#248;θορά του καταλύτη.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007031">
+<title>
+Ρεύμα A&#x002F;F B1 S1 (Ρεύμα Εξόδου Αισθητήρα A&#x002F;F mA)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει το ρεύμα εξόδου του αισθητήρα A&#x002F;F που βρίσκεται τοποθετημένος στον σωλήνα Νο.1 της εξάτμισης (πριν τον καταλύτη TWC).
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007032">
+<title>
+Τάση Μπαταρίας (V)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την θετική τάση της μπαταρίας που λαμβάνεται από το κεντρικό ρελέ στον ECM.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007033">
+<title>
+Πίεση A&#x002F;C (Απόλυτη Πίεση Ψυκτικού του A&#x002F;C kPa)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την απόλυτη πίεση του ψυκτικού υγρού του κλιματισμού που υπολογίζεται από τον ECM.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007034">
+<title>
+Λόγος Απόδοσης Ελέγχου Γεννήτριας (Απόδοση Ελέγχου Γεννήτριας, &#x0025;)
+</title>
+<ptxt>
+Η συγκεκριμένη παράμετρος απεικονίζει τον λόγο απόδοσης ελέγχου γεννήτριας που ελέγχει την παραγωγή ηλεκτρισμού της γεννήτριας από το ECM.
+</ptxt>
+<ptxt>
+100 &#x0025;: Δεν υ&#248;ίσταται περιορισμός στην παραγωγή
+</ptxt>
+<ptxt>
+0 &#x0025;: Υ&#248;ίσταται μέγιστος περιορισμός στην παραγωγή
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007035">
+<title>
+Απόδοση Γεννήτριας Διέγερσης (Απόδοση Πηνίου Γεννήτριας Διέγερσης, &#x0025;):
+</title>
+<ptxt>
+Η συγκεκριμένη παράμετρος απεικονίζει τον ρυθμό λειτουργίας (κατάσταση της παραγωγής ηλεκτρισμού) από τον γεννήτρια μέσω του λόγου απόδοσης του πηνίου γεννήτριας διέγερσης.
+</ptxt>
+<ptxt>
+100 &#x0025;: μέγιστη λειτουργία 
+</ptxt>
+<ptxt>
+0 &#x0025;: ελάχιστη λειτουργία 
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007037">
+<title>
+Ανεμιστήρας Ψυγείου (Ρελέ Ελέγχου Ανεμιστήρα Ψύξης Ψυγείου, Χαμηλό&#x002F;Μεσαίο&#x002F;Υψηλό)
+</title>
+<ptxt>
+Low: εξάγεται εντολή ενεργοποίησης ΟΝ προς το ρελέ No.1 του ανεμιστήρα ψύξης του ψυγείου.
+</ptxt>
+<ptxt>
+Μεσαίο: εξάγεται εντολή ενεργοποίησης ΟΝ προς τα ρελέ Νο.1 και Νο.3 του ανεμιστήρα ψύξης του ψυγείου.
+</ptxt>
+<ptxt>
+Υψηλό: εξάγεται εντολή ενεργοποίησης ΟΝ προς τα ρελέ Νο.1, No.2 και Νο.3 του ανεμιστήρα ψύξης του ψυγείου.
+</ptxt>
+<ptxt>
+OFF: Δεν εξάγεται εντολή.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007038">
+<title>
+Ρελέ Συμπ A&#x002F;C (Ρελέ Συμπιεστή Κλιματισμού, On&#x002F;Off)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την κατάσταση του ρελέ του συμπιεστή του κλιματισμού.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007040">
+<title>
+Αντλία Καυσίμου (On&#x002F;Off)
+</title>
+<ptxt>
+Εμ&#248;ανίζεται ΟΝ όταν ο ECM ενεργοποιεί την αντλία καυσίμου μέσα από τον διακόπτη του ρελέ της αντλίας.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007041">
+<title>
+Ενεργοποιητής Βαλβίδας IMT (Βαλβίδα Ελέγχου Συντονισμού Πολλαπλής Εισαγωγής, Ανοικτό  &#x002F; Κλειστό)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την κατάσταση λειτουργίας της βαλβίδας EGR.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007042">
+<title>
+Ρελέ Μοτέρ Πεταλούδας (On&#x002F;Off)
+</title>
+<ptxt>
+ON: Ο έλεγχος του ρελέ μοτέρ της πεταλούδας έχει ενεργοποιηθεί από τον εγκέ&#248;αλο ECM.
+</ptxt>
+<ptxt>
+OFF: Ο έλεγχος του ρελέ μοτέρ της πεταλούδας σταματάει από τον εγκέ&#248;αλο ECM.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007043">
+<title>
+SW Μίζας (Διακόπτης Μίζας, ON &#x002F; OFF)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την κατάσταση της εξόδου του ρελέ της μίζας.
+</ptxt>
+<ptxt>
+ON: Το ρελέ της μίζας είναι ενεργοποιημένο ΟΝ
+</ptxt>
+<ptxt>
+OFF: Το ρελέ της μίζας είναι απενεργοποιημένο OFF
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007044">
+<title>
+Διακόπτης PSP (Σήμα P&#x002F;S) (Διακόπτης Ααντλίας Πίεσης Υποβοήθησης Τιμονιού, On &#x002F; Off)
+</title>
+<ptxt>
+ON: Ο ΔΙΑΚΟΠΤΗΣ PSP είναι ON (ο διακόπτης υψηλής πίεσης P&#x002F;S είναι ON)
+</ptxt>
+<ptxt>
+OFF: Ο ΔΙΑΚΟΠΤΗΣ PSP είναι ON (ο διακόπτης υψηλής πίεσης P&#x002F;S είναι OFF)
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007045">
+<title>
+Διακόπτης A&#x002F;C (On&#x002F;Off)
+</title>
+<ptxt>
+ON: Έχει δοθεί εντολή λειτουργίας του κλιματισμού από τον ECM στο HVAC.
+</ptxt>
+<ptxt>
+OFF: Δεν έχει δοθεί εντολή λειτουργίας προς τον κλιματισμό.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007046">
+<title>
+Ανεμιστήρας Καλορι&#248;έρ (On&#x002F;Off)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την κατάσταση του διακόπτη του μοτέρ του ανεμιστήρα του καλορι&#248;έρ.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007047">
+<title>
+Διακόπτης Φρένων (On&#x002F;Off)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την κατάσταση του διακόπτη των &#248;ώτων στοπ.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007048">
+<title>
+Ηλεκτρικό Φορτίο (On&#x002F;Off)
+</title>
+<ptxt>
+ON: Εισάγεται σήμα ΟΝ από τους προβολείς, τα μικρά &#248;ώτα ή τον πίσω μηχανισμό ξεθαμπώματος.
+</ptxt>
+<ptxt>
+OFF: Τα παραπάνω ηλεκτρικά &#248;ορτία όλα είναι OFF.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007049">
+<title>
+Σήμα ΡΝΡ (σχέση P&#x002F;N ή D) (μοντέλο A&#x002F;T)
+</title>
+<ptxt>
+Εμ&#248;ανίζεται εάν ο διακόπτης σχέσης του κιβωτίου ταχυτήτων βρίσκεται στη σχέση Ρ ή Ν ή σε άλλη σχέση. Εάν βρίσκεται στη σχέση Ρ ή Ν, εμ&#248;ανίζεται &#34;Ρ&#x002F;Ν&#34; και εάν βρίσκεται σε άλλη εκτός της &#34;Ρ&#34; και &#34;Ν&#34;, εμ&#248;ανίζεται &#34;D&#34;.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007050">
+<title>
+Αποκοπή Καυσίμου (On&#x002F;Off)
+</title>
+<ptxt>
+ON: Η παροχή καυσίμου αποκόπτεται (το σήμα εξόδου προς τα μπεκ ψεκασμού σταματά)
+</ptxt>
+<ptxt>
+OFF: Η παροχή καυσίμου δεν αποκόπτεται
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007051">
+<title>
+Κλειστή Θέση Πεταλούδας (Κλειστή Θέση Πεταλούδας, On&#x002F;Off)
+</title>
+<ptxt>
+Αυτή η παράμετρος δείχνει ΟΝ όταν η πεταλούδα γκαζιού είναι τελείως κλειστή, ή OFF όταν η πεταλούδα γκαζιού δεν είναι τελείως κλειστή.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007052">
+<title>
+ΕΝΕΡΓ O2S B1 S2 (HO2S, Ενεργός &#x002F; Ανενεργός)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την κατάσταση ενεργοποίησης του αισθητήρα οξυγόνου HO2S
+</ptxt>
+<ptxt>
+ΕΝΕΡΓΟ: Ενεργοποιημένο
+</ptxt>
+<ptxt>
+ΑΝΕΝΕΡΓΟ: Σε προθέρμανση ή σταματημένο.
+</ptxt>
+</topic>
+<topic id = "K8T40A1124007053">
+<title>
+ΕΝΕΡΓ A&#x002F;F B1 S1 (Αισθητήρας A&#x002F;F, Ενεργός &#x002F; Ανενεργός)
+</title>
+<ptxt>
+Αυτή η παράμετρος υποδεικνύει την κατάσταση ενεργοποίησης του αισθητήρα A&#x002F;F
+</ptxt>
+<ptxt>
+ΕΝΕΡΓΟ: Ενεργοποιημένο
+</ptxt>
+<ptxt>
+ΑΝΕΝΕΡΓΟ: Σε προθέρμανση ή σταματημένο.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

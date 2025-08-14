@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1124050" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2102 &#x002F; P2103
+</title>
+<servinfosub id = "S8T40A1124050001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2102: Throttle Actuator Control Motor Circuit Low
+</emph>
+</ptxt>
+<ptxt>
+Monitor voltage of throttle motor power supply circuit is lower than 5 V even if throttle motor control relay is ON (ignition switch is ON).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Throttle motor control relay and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8220;THR MOT&#8221; fuse
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2103: Throttle Actuator Control Motor Circuit High
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of throttle motor power supply circuit is higher than 5 V even if throttle motor control relay is OFF (ignition switch is OFF).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Throttle motor control relay and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1124050002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1124050003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Turn ignition switch to ON position for 10 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn OFF ignition switch for 10 sec.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1124050004">
+<title>
+DTC Troubleshooting (P2102)
+</title>
+<diag type = "test" id = "S8T40A1124050005">
+<testgroup id = "S8T40A1124050006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124050007">
+<title>
+Throttle motor control relay circuit check
+</title>
+<test1>
+<ptxt>
+Check throttle motor control relay. 
+<intxreftitleoff1 refid = "S8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace throttle motor control relay.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124050008">
+<title>
+Throttle motor control relay power supply circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and remove throttle motor control relay.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to throttle motor control relay connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that voltage between throttle motor control relay power supply circuit (A1 &#8211; A2) and vehicle body ground is battery voltage.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124050009">
+<title>
+Throttle motor control relay drive circuit and throttle motor power supply circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that throttle motor control relay drive circuit (A3) and throttle motor power supply circuit (A4) are as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of throttle motor control relay drive circuit and throttle motor power supply circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between throttle motor control relay drive circuit and throttle motor power supply circuit and vehicle body ground is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between throttle motor control relay drive circuit terminal and each terminal at throttle motor control relay connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between throttle motor power supply circuit terminal and each terminal at throttle motor control relay connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of throttle motor control relay drive circuit and throttle motor power supply circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+<servinfosub id = "S8T40A1124050010">
+<title>
+DTC Troubleshooting (P2103)
+</title>
+<diag type = "test" id = "S8T40A1124050011">
+<testgroup id = "S8T40A1124050012">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124050013">
+<title>
+Throttle motor control relay check
+</title>
+<test1>
+<ptxt>
+Check throttle motor control relay. 
+<intxreftitleoff1 refid = "S8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace throttle motor control relay.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124050014">
+<title>
+Throttle motor power supply circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that throttle motor power supply circuit (A4) is 0 &#8211; 1 V with ignition switch turned OFF.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

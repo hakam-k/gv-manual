@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114058" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0620: Circuito di controllo alternatore
+</title>
+<servinfosub id = "L8T40A1114058001">
+<title>
+Sistema e diagramma cablaggio
+</title>
+<figure>
+<graphic graphicname = "I8T40A111013.swf" width = "183.000mm" height = "102.661mm" ver = "01" gw = "446" gh = "274"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.331in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.070in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.331in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.070in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.331in"/>
+<colspec colnum = "6" colname = "6" colwidth = "2.070in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Generatore
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Bobina di campo
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Interruttore di accensione
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Regolatore IC
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Spia di carica
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "L8T40A1114058002">
+<title>
+Descrizione sistema di controllo generatore
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1111009">Descrizione sistema di controllo generatore:M16A e J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1114058003">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.116in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.086in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+La tensione della batteria e superiore a 14 V nonostante il controllo del generatore sia nella posizione massima di regolazione (lavoro 100&#x0025;)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensione della batteria e inferiore a 12,5 V nonostante il controllo del generatore sia nella posizione minima di regolazione (lavoro 50&#x0025;) e il carico elettrico sia inferiore a 20 A.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Il generatore e&#x002F;o il suo circuito
+</ptxt>
+<ptxt>
+Sensore corrente carico elettrico (per motore J20A)
+</ptxt>
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1114058004">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner al DCL controllando che il commutatore di avviamento sia in posizione OFF
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e cancellare il DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Accertarsi che tutti gli interruttori accessori siano posizionati su OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e riscaldare fino a portarlo alla normale temperatura di esercizio (ECT approssimativamente. 90 &#8211; 95 &#176;C, 193 &#8211; 203 &#176;F).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare in posizione ON i seguenti interruttori accessorio.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Interruttore faro
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore motorino ventola (posizione max.).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruttore dello sbrinatore posteriore.
+</ptxt>
+</item>
+</list1>
+</s1>
+<s1>
+<ptxt>
+Portare il regime motore a 4000 giri&#x002F;min. e mantenerlo per almeno 10 secondi.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Diminuire il regime motore portando al minimo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllare DTC e DTC in corso.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1114058005">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<attention3>
+<ptxt>
+Prima di eseguire questa procedura di individuazione guasto, leggere le precauzioni per l&#8217;individuazione DTC facendo riferimento a 
+<intxref refid = "L8T40A1110003">Precauzione per la risoluzione dei problemi DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "L8T40A1114058006">
+<testgroup id = "L8T40A1114058007">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114001">Verifica del sistema di controllo motore e emissioni:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114058008">
+<title>
+Controllo circuito di controllo generatore
+</title>
+<test1>
+<ptxt>
+Staccare il connettore dal generatore e dall&apos;ECM con l&apos;interruttore di accensione in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare che la connessione del terminale del generatore con il connettore del generatore e con il connettore ECM sia corretta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se i connettori sono a posto, verificare il circuito di controllo generatore alla ricerca dei seguenti elementi.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistenza del filo circuito di controllo generatore tra il connettore generatore e il connettore ECM e inferiore a 1 &#937; (controllo di continuita)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistenza tra il filo circuito di controllo generatore del connettore generatore e la massa carrozzeria veicolo e infinita (controllare per un possibile corto a massa)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensione tra il filo circuito di controllo generatore del connettore generatore e la massa carrozzeria veicolo e 0 V quando il commutatore di avviamento e in posizione ON (controllo cortocircuito di potenza)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Le condizioni sono buone?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire il filo difettoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114058009">
+<title>
+Verifica generatore
+</title>
+<test1>
+<ptxt>
+Controllare l&apos;uscita generatore facendo riferimento a 
+<intxref refid = "L8T40A1A14003">Test del generatore (controllo batteria scarica):M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il risultato del controllo e soddisfacente?
+</question>
+<result>
+SI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Per il motore J20A andare al punto 4.
+</ptxt>
+<ptxt>
+Per il motore M16A, Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire il generatore.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114058010">
+<title>
+Controllo sensore corrente carico elettrico (per motore J20A)
+</title>
+<test1>
+<ptxt>
+Controllare il carico elettrico dell&apos;uscita sensore facendo riferimento a 
+<intxref refid = "L8T40A1316023">Ispezione su veicolo del sensore della corrente del carico elettrico (J20A):M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il risultato del controllo e soddisfacente?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il sensore della corrente carico elettrico
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

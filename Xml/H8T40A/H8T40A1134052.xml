@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1134052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119
+</title>
+<servinfosub id = "H8T40A1134052001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2119: Fojtószelep aktuátor fojtószelep tartománya &#x002F; működése
+</emph>
+</ptxt>
+<ptxt>
+Ez a DTC akkor jelenik meg, ha teljesül a következő feltételek valamelyike.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A mért TP értéke az előírt tartományon kívül van.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A fojtószelep visszatérítőrugó meghibásodása észlelhető.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fojtószeleptest és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1134052002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1134052003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention3>
+<ptxt>
+Győződjön meg arról, hogy az alábbi feltételek teljesülnek-e, amikor ezt az eljárást alkalmazza.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Akkumulátorfeszültség &gt; 10 V
+</ptxt>
+</item>
+<item>
+<ptxt>
+5,3 &#176;C (42 &#176;F) &lt; ECT &lt; 100,5 &#176;C (203 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+IAT &lt; 5,3 &#176;C (42 &#176;F)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1 page = "1">
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe 1 percig miután felengedte a gázpedált.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Járassa a motort alapjáraton 1 percig.
+</ptxt>
+</s1>
+<s1 page = "1">
+<ptxt>
+Kapcsolja ki a gyújtást 1 percre.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1134052004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1134052005">
+<testgroup id = "H8T40A1134052006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1134001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134052007">
+<title>
+DTC újraellenőrzése
+</title>
+<test1>
+<ptxt>
+Végezze el az elektromos fojtószelep vezérlőrendszer kalibrálását. 
+<intxreftitleoff1 refid = "H8T40A1336005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Végezze el a DTC megerősítési eljárást és ellenőrizze a DTC-ket.
+</ptxt>
+</test1>
+<question>
+Észlelhető a P2119, vagy P2176 DTC?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Vége.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134052008">
+<title>
+Fojtószeleptest ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószeleptestet, lásd: 
+<intxref refid = "H8T40A1336004">A járműre szerelt elektromos fojtószelep rendszer ellenőrzése:N32A</intxref>
+, &#8220;Elektromos fojtószelep rendszer működésének ellenőrzése&#8221; és &#8220;Fojtószelep aktuátor ellenőrzése&#8221;.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószeleptestet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134052009">
+<title>
+Fojtószelep aktuátor vezérlőáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep aktuátor vezérlőáramköröket, lásd: 
+<intxref refid = "H8T40A1134049">DTC P2100 &#x002F; P2101:N32A</intxref>
+, 2. lépés.
+</ptxt>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134052010">
+<title>
+DTC újraellenőrzése
+</title>
+<test1>
+<ptxt>
+Cserélje ki a fojtószeleptestet. 
+<intxreftitleoff1 refid = "H8T40A1446006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Végezze el a DTC megerősítési eljárást és ellenőrizze újra a DTC-ket.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a P2119 számú hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Vége.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134052011">
+<title>
+Az egy időben észlelt más DTC-k hibakeresése
+</title>
+<question>
+Észlelt más hibakódot is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC hibakereséssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

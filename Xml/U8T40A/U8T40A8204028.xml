@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A8204028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1074 &#x002F; B1078: Kortsluiting aan het voedingscircuit of stroomonderbreking in het vooruitsensorcircuit aan de bestuurders-&#x002F;passagierszijde
+</title>
+<servinfosub id = "U8T40A8204028001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A8204027">DTC B1073 &#x002F; B1077: Kortsluiting aan de massa van het vooruitsensorcircuit aan de bestuurders-&#x002F;passagierszijde</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Volg de aanwijzingen onder LET OP in &#34;Schema voor de controle van het airbagdiagnosesysteem&#34;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "U8T40A8204028002">
+<title>
+De DTC wordt ingesteld wanneer
+</title>
+<ptxt>
+De SDM een abnormaal signaal van de vooruitsensor waarneemt.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A8204028003">
+<title>
+Beschrijving van het stroomschema
+</title>
+<ptxt>
+<emph etype = "bold">
+Stap 1: Controleer het vooruitsensorcircuit op stroomonderbreking.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 2: Controleer op kortsluiting tussen het vooruitsensorcircuit en het voedingscircuit.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Stap 3: Controleer of er een storing is in de vooruitsensor.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A8204028004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A8204028005">
+<testgroup id = "U8T40A8204028006">
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak stekker &#34;E13&#34; of &#34;E24&#34; van de vooruitsensor los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak SDM-stekker &#34;G47&#34; of &#34;L33&#34; los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of aansluitingen &#34;G47-9&#34; en &#34;G47-17&#34; of &#34;L33-9&#34; en &#34;L33-10&#34; (voor DTC B1074) of aansluitingen &#34;G47-11&#34; en &#34;G47-19&#34; of &#34;L33-11&#34; en &#34;L33-12&#34; (voor DTC B1078) goed verbonden zijn met de SDM-stekker.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitingen &#34;E13-1&#34; en &#34;E13-2&#34; of &#34;E24-1&#34; en &#34;E24-2&#34; goed verbonden zijn met de vooruitsensorstekker.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verbind aansluiting &#34;E13-1&#34; en &#34;E13-2&#34; (voor DTC B1074) of aansluiting &#34;E24-1&#34; en &#34;E24-2&#34; (voor DTC B1078) van de stekkerverbinding van de vooruitsensor met een verbindingsdraad (1).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen &#34;G47-9&#34; en &#34;G47-17&#34; (voor DTC B1074) of &#34;G47-11&#34; en &#34;G47-19&#34; (voor DTC B1078) &#x005B;A&#x005D;, of tussen &#34;L33-9&#34; en &#34;L33-10&#34; (voor DTC B1074) of &#34;L33-11&#34; en &#34;L33-12&#34; (voor DTC B1078) &#x005B;B&#x005D;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0124">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820051.swf" width = "90.000mm" height = "60.681mm" ver = "01" gw = "230" gh = "155"/>
+</testfigure>
+</test1>
+<question>
+Bedraagt elke gemeten weerstand 1 &#937; of minder?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Voor DTC B1074: Hoge weerstand of stroomonderbreking in het &#34;ORN&#34;- of &#34;PNK&#x002F;BLK&#34; circuit.
+</ptxt>
+<ptxt>
+Voor DTC B1078: Hoge weerstand of stroomonderbreking in &#34;PNK&#34;-circuit of &#34;PNK&#x002F;BLU&#34;-circuit.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204028007">
+<test1>
+<ptxt>
+Maak de verbindingsdraad los van stekkerverbinding &#34;E13&#34; of &#34;E24&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de spanning tussen &#34;G47-9&#34; en de carrosseriemassa, &#34;G47-17&#34; en de carrosseriemassa (voor DTC B1074) of &#34;G47-11&#34; en de carrosseriemassa, &#34;G47-19&#34; en de carrosseriemassa (voor DTC B1078) &#x005B;A&#x005D;, of tussen &#34;L33-9&#34; en de carrosseriemassa, &#34;L33-10&#34; en de carrosseriemassa (voor DTC B1074) of &#34;L33-11&#34; en de carrosseriemassa, &#34;L33-12&#34; en de carrosseriemassa (voor DTC B1078) &#x005B;B&#x005D;.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0125">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932-76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820052.swf" width = "90.000mm" height = "59.975mm" ver = "01" gw = "195" gh = "153"/>
+</testfigure>
+</test1>
+<question>
+Is elke gemeten waarde 1 V of minder met het contactslot op ON?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Voor DTC B1074: &#34;ORN&#34;-circuit of &#34;PNK&#x002F;BLK&#34;-circuit kortgesloten aan het voedingscircuit.
+</ptxt>
+<ptxt>
+Voor DTC B1078: &#34;PNK&#34;-circuit of &#34;PNK&#x002F;BLU&#34;-circuit kortgesloten aan het voedingscircuit.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A8204028008">
+<test1>
+<ptxt>
+Controleer de vooruitsensor volgens 
+<intxref refid = "U8T40A8206014">Onderzoek van de vooruitsensor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is hij in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden SDM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de vooruitsensor volgens 
+<intxref refid = "U8T40A8206013">Uitbouw en inbouw van de vooruitsensor</intxref>
+. Als de DTC nog steeds wordt weergegeven, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Voer na het onderzoek en de reparaties de volgende stappen uit.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sluit alle componenten van het airbagsysteem weer aan en controleer of ze juist zijn gemonteerd.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wis eventuele DTC&apos;s volgens 
+<intxref refid = "U8T40A8204005">Wissen van DTC</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Herhaal 
+<intxref refid = "U8T40A8204001">Controle van het airbagdiagnosesysteem</intxref>
+ om te controleren of de storing gecorrigeerd is.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

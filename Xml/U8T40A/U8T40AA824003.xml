@@ -1,0 +1,1148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA824003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Storingzoeken &#34;Comm. verbroken&#34;
+</title>
+<servinfosub id = "U8T40AA824003001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA822001">Systeemschakelschema van de CAN-communicatie:Modellen J24B en N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA824003002">
+<title>
+Diagnoseprocedure
+</title>
+<attention3>
+<ptxt>
+Voer 
+<intxref refid = "U8T40AA824001">Controle van het CAN-communicatiesysteem:Modellen J24B en N32A</intxref>
+ uit alvorens de punten in dit schema uit te voeren.
+</ptxt>
+</attention3>
+<ptxt>
+Wanneer een regelapparaat &#34;Comm. verbroken&#34; waarneemt, moet dat via de volgende procedure onderzocht worden.
+</ptxt>
+<s1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en sluit het SUZUKI-uitleesapparaat aan op de DLC (1).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L10H202">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI-diagnosecodeuitleesapparaat (SUZUKISDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I9T401720004.swf" width = "88.000mm" height = "58.917mm" ver = "01" gw = "138" gh = "150"/>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Gebruik de &#34;Communicatiebuscontr&#34; onder &#34;Buscontrole&#34; van het SUZUKI-uitleesapparaat (SUZUKI-SDT) om te controleren of de communicatie van het regelapparaat is uitgeschakeld (geen schermweergave).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kies op basis van bovenstaande controleresultaten de toepasselijke diagnosetabelcode (A tot K) uit 
+<intxref refid = "U8T40AA824003003">Diagnosekeuzetabel</intxref>
+ en onderzoek de storing volgens de gekozen diagnosetabel.
+</ptxt>
+<attention3>
+<ptxt>
+Voer 
+<intxref refid = "U8T40AA824004">Storingzoeken bij &#34;Communicatiebus uit&#34;:Modellen J24B en N32A</intxref>
+ uit als er geen geschikte diagnose-stroomcode uit het diagnose-stroomkeuzeschema kan worden gekozen of als er twee of meer diagnose-stroomcodes kunnen worden gekozen.
+</ptxt>
+</attention3>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40AA824003003">
+<title>
+Diagnosekeuzetabel
+</title>
+<attention3>
+<ptxt>
+Diagnosecodes A tot en met J verwijzen naar CAN-gegevenstransmissielijnen &#x005B;a&#x005D; tot en met &#x005B;j&#x005D; van 
+<intxref refid = "U8T40AA822001">Systeemschakelschema van de CAN-communicatie:Modellen J24B en N32A</intxref>
+.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.689in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.520in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Regelapparaat &#x002F; -sensor met uitgeschakelde communicatie
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Diagnosetabelcode
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM en ABS &#x002F; ESP&#174;-regelapparaat
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+B
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Combimeter
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+C
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Stuurhoeksensor
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+D
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Regelapparaat van het startsysteem met afstandsbediening
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+E
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4WD-regelapparaat
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+F
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Andere dan BCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+G
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+H
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+HVAC-regelapparaat
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+I
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Alle regelapparaten die via het CAN communiceren
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+J
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+K
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ABS &#x002F; ESP&#174;-regelapparaat
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40AA824003004">
+<title>
+Storingzoeken
+</title>
+<topic id = "U8T40AA824003007">
+<title>
+Diagnosetabelcode: A
+</title>
+<diag type = "test" id = "U8T40AA824003008">
+<testgroup id = "U8T40AA824003005">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding los van de ECM en het ABS &#x002F; ESP&#174;-regelapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de stekkerverbindingen van de ECM en het ABS &#x002F; ESP&#174;-regelapparaat goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbindingen van de ECM en het ABS &#x002F; ESP&#174;-regelapparaat op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003006">
+<title>
+Controle van het voedings- en massacircuit van de ECM
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de ECM als volgt.
+</ptxt>
+<ptxt>
+Model J24B: 
+<intxreftitleoff1 refid = "U8T40A1124064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Model N32A: 
+<intxreftitleoff1 refid = "U8T40A1134064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003019">
+<title>
+Controle van de CAN-eindweerstand van de ECM
+</title>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding op de ECM aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de CAN-eindweerstand in de ECM als volgt.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ESP&#174;-model:
+</ptxt>
+<ptxt>
+Meet de weerstand tussen stekkeraansluiting &#34;E53-43&#34; en &#34;E53-44&#34; van het ESP&#174;-regelapparaat.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Niet-ESP&#174;-model:
+</ptxt>
+<ptxt>
+Meet de weerstand tussen stekkeraansluiting &#34;E03-10&#34; en &#34;E03-8&#34; van het ABS-regelapparaat.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is de weerstand 114 - 134 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Monteer een goed bevonden ABS &#x002F; ESP&#174;-regelapparaat en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003009">
+<title>
+Diagnosetabelcode: B
+</title>
+<diag type = "test" id = "U8T40AA824003010">
+<testgroup id = "U8T40AA824003020">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding los van de BCM en het ABS &#x002F; ESP&#174;-regelapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de stekkerverbindingen van de BCM en het ABS &#x002F; ESP&#174;-regelapparaat goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbindingen van de BCM en het ABS &#x002F; ESP&#174;-regelapparaat op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Monteer een goed bevonden ABS &#x002F; EPS&#174;-regelapparaat en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003011">
+<title>
+Diagnosetabelcode: C
+</title>
+<diag type = "test" id = "U8T40AA824003012">
+<testgroup id = "U8T40AA824003021">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbindingen van de BCM en de combimeter los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de stekkerverbinding van de BCM en die van de combimeter goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbinding van de BCM en die van de combimeter op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003022">
+<title>
+Controle van het voedings- en massacircuit van de combimeter
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de combimeter.
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden combimeter aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003013">
+<title>
+Diagnosetabelcode: D
+</title>
+<diag type = "test" id = "U8T40AA824003014">
+<testgroup id = "U8T40AA824003023">
+<title>
+Controle van het voedings- en massacircuit van de stuurhoeksensor
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de stuurhoeksensor.
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003024">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding los van de stuurhoeksensor en het ESP&#174;-regelapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de stekkerverbindingen van de stuurhoeksensor en het ESP&#174;-regelapparaat goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbindingen van de stuurhoeksensor en het ESP&#174;-regelapparaat op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang de stuurhoeksensor.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003028">
+<title>
+Diagnosetabelcode: E
+</title>
+<diag type = "test" id = "U8T40AA824003030">
+<testgroup id = "U8T40AA824003029">
+<title>
+Controle van het voedings- en massacircuit van het regelapparaat van het startsysteem met afstandsbediening
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van het regelapparaat van het startsysteem met afstandsbediening. 
+<intxreftitleoff1 refid = "U8T40AA504015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003031">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding van het regelapparaat van het startsysteem met afstandsbediening en de BCM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen van het regelapparaat van het startsysteem met afstandsbediening en de BCM goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbinding van het regelapparaat van het startsysteem met afstandsbediening en de BCM-stekkerverbinding op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang het regelapparaat van het startsysteem met afstandsbediening door een goed bevonden exemplaar en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003032">
+<title>
+Diagnosetabelcode: F
+</title>
+<diag type = "test" id = "U8T40AA824003033">
+<testgroup id = "U8T40AA824003034">
+<title>
+Controle van het voedings- en massacircuit van het 4WD-regelapparaat
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van het 4WD-regelapparaat.
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003044">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding van het 4WD-regelapparaat en het ABS &#x002F; ESP&#174;-regelapparaat los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen van het 4WD-regelapparaat en het ABS &#x002F; ESP&#174;-regelapparaat goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbinding van het 4WD-regelapparaat en het ABS &#x002F; ESP&#174;-regelapparaat op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Monteer een goed bevonden 4WD-regelapparaat en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003035">
+<title>
+Diagnosetabelcode: G
+</title>
+<diag type = "test" id = "U8T40AA824003036">
+<testgroup id = "U8T40AA824003037">
+<title>
+Controle van het voedings- en massacircuit van de BCM
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de BCM. 
+<intxreftitleoff1 refid = "U8T40AA204007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003045">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding los van de BCM en het ABS &#x002F; ESP&#174;-regelapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de stekkerverbindingen van de BCM en het ABS &#x002F; ESP&#174;-regelapparaat goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbindingen van de BCM en het ABS &#x002F; ESP&#174;-regelapparaat op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden BCM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003038">
+<title>
+Diagnosetabelcode: H
+</title>
+<diag type = "test" id = "U8T40AA824003039">
+<testgroup id = "U8T40AA824003040">
+<title>
+Controle van het voedings- en massacircuit van de TCM
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de TCM als volgt.
+</ptxt>
+<ptxt>
+4 A&#x002F;T-model: 
+<intxreftitleoff1 refid = "U8T40A5114050"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+5 A&#x002F;T-model: 
+<intxreftitleoff1 refid = "U8T40A5124049"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003046">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding van de TCM en BCM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen van de TCM en BCM goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de TCM- en BCM-stekkerverbinding op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden TCM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003041">
+<title>
+Diagnosetabelcode: I
+</title>
+<diag type = "test" id = "U8T40AA824003042">
+<testgroup id = "U8T40AA824003043">
+<title>
+Controle van het voedings- en massacircuit van het HVAC-regelapparaat
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van het HVAC-regelapparaat.
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003047">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding van het HVAC-regelapparaat en de BCM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen van het HVAC-regelapparaat en de BCM goed op het CAN-communicatiecircuit zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbinding van het HVAC-regelapparaat en de BCM op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Monteer een goed bevonden HVAC-regelapparaat en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003015">
+<title>
+Diagnosetabelcode: J
+</title>
+<diag type = "test" id = "U8T40AA824003016">
+<testgroup id = "U8T40AA824003025">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak stekkerverbinding &#34;G31&#34; los van de BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de BCM-stekker goed op het CAN-communicatiecircuit is aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan de CAN-communicatiecircuits tussen de stekkerverbinding van de DLC en de BCM op onderbrekingen.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824003026">
+<title>
+Controle van de CAN-eindweerstand van de combimeter
+</title>
+<test1>
+<ptxt>
+Sluit stekkerverbinding &#34;G31&#34; op de BCM aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbinding los van het ABS &#x002F; ESP&#174;-regelapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen de aansluiting CAN Hoog en CAN Laag op de DLC.
+</ptxt>
+</test1>
+<question>
+Is de weerstand 114 - 134 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA824004">Storingzoeken bij &#34;Communicatiebus uit&#34;:Modellen J24B en N32A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden BCM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "U8T40AA824003017">
+<title>
+Diagnosetabelcode: K
+</title>
+<diag type = "test" id = "U8T40AA824003018">
+<testgroup id = "U8T40AA824003027">
+<title>
+Controle van het voedings- en massacircuit van een regelapparaat dat niet communiceert
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van het regelapparaat dat niet communiceert (BCM of ABS &#x002F; ESP&#174;-regelapparaat).
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Monteer een goed bevonden regelapparaat (BCM of ABS &#x002F; ESP&#174;-regelapparaat) en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het voedings- en&#x002F;of massacircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

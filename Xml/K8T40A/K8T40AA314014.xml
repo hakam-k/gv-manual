@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40AA314014" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+Κωδικός DTC P1623: Μη Καταχωρημένος Πομποδέκτης
+</title>
+<servinfosub id = "K8T40AA314014001">
+<title>
+Κατάσταση Ανίχνευσης και Περιοχή Προβλήματος
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Κατάσταση Ανίχνευσης
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Περιοχή Προβλήματος
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ο κωδικός πομποδέκτη στον πομποδέκτη που είναι ενσωματωμένος στο κλειδί ανά&#248;λεξης είναι άκυρος.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Χρήση του μη καταχωρημένου κλειδιού ανά&#248;λεξης
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ελαττωματικός εγκέ&#248;αλος ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ελαττωματικός ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40AA314014002">
+<title>
+Διάγνωση βλαβών
+</title>
+<diag type = "test" id = "K8T40AA314014003">
+<testgroup>
+<title>
+Επιβεβαίωση Διαγνωστικού Κωδικού Βλάβης (DTC)
+</title>
+<test1>
+<ptxt>
+Διαγράψτε τον κωδικό βλάβης ανατρέχοντας στο 
+<intxref refid = "K8T40AA314003">Διαγρα&#248;ή Κωδικού DTC:Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης στη θέση OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε εάν ανιχνεύεται κάποιος κωδικός DTC ανατρέχοντας στο 
+<intxref refid = "K8T40AA314002">Έλεγχος Κωδικού DTC:Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ο κωδικός βλάβης P1623 εξακολουθεί να ανιχνεύεται;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Η διάγνωση βλάβης έχει ολοκληρωθεί.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος Διαγνωστικού Κωδικού Βλάβης (DTC)
+</title>
+<question>
+Ανιχνεύεται κάποιος κωδικός βλάβης άλλος εκτός του P1623 στο Βήμα   1;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Εκτελέστε την αντιμετώπιση βλαβών ανατρέχοντας στον αντίστοιχο πίνακα ροής και στη συνέχεια μεταβείτε στο Βήμα 3.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος καταχώρησης του μη καταχωρημένου κλειδιού ανά&#248;λεξης στο ECM και Διαγνωστικού Κωδικού Βλάβης
+</title>
+<test1>
+<ptxt>
+Καταχωρήστε τον κωδικό πομποδέκτη στον πομποδέκτη του μη καταχωρημένου κλειδιού ανά&#248;λεξης με τον εγκέ&#248;αλο ECM ανατρέχοντας στο 
+<intxref refid = "K8T40AA316002">Καταχώρηση του Κλειδιού Ανά&#248;λεξης:Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε εάν ο κωδικός DTC P1623 ανιχνεύεται ανατρέχοντας στο 
+<intxref refid = "K8T40AA314002">Έλεγχος Κωδικού DTC:Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ο κωδικός βλάβης P1623 ανιχνεύεται;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 4.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Η διάγνωση βλάβης έχει ολοκληρωθεί.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος εγκε&#248;άλου ICM
+</title>
+<test1>
+<ptxt>
+Ελέγξτε τον εγκέ&#248;αλο ICM ανατρέχοντας στο 
+<intxref refid = "K8T40AA314020">Επιθεώρηση του Εγκε&#248;άλου Immobilizer (ICM) και του Κυκλώματός Του:Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Το συγκρότημα ελεγκτή του immobilizer είναι κανονικό;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Αντικαταστήστε τον εγκέ&#248;αλο ECM με έναν καινούργιο.
+</ptxt>
+<ptxt>
+- Μοντέλα M16A και J20A: 
+<intxreftitleoff1 refid = "K8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Μοντέλο J24B: 
+<intxreftitleoff1 refid = "K8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Μοντέλο N32A: 
+<intxreftitleoff1 refid = "K8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Ακολούθως τελέστε το 
+<intxref refid = "K8T40AA316003">Διαδικασία μετά την Αντικατάσταση του ECM:Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Αντικαταστήστε τον εγκέ&#248;αλο ICM με ένα καινούριο, ανατρέχοντας στο 
+<intxref refid = "K8T40AA316001">Α&#248;αίρεση και Τοποθέτηση Εγκε&#248;άλου Immobilizer (ICM):Μοντέλο με Βενζινοκινητήρα</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

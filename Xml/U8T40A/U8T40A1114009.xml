@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114009" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Basisonderzoek van de motor
+</title>
+<ptxt>
+Deze controle is erg belangrijk bij het onderzoeken van storingen wanneer de ECM geen DTC heeft waargenomen en er geen abnormale toestand is vastgesteld bij 
+<intxref refid = "U8T40A1114008">Visueel onderzoek:M16A and J20A</intxref>
+.
+</ptxt>
+<ptxt>
+Volg het stroomschema nauwgezet.
+</ptxt>
+<diag type = "test" id = "U8T40A1114009001">
+<testgroup id = "U8T40A1114009002">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009003">
+<title>
+Controleer de accuspanning
+</title>
+<question>
+Is die 11 V of meer?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Laad of vervang de accu.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009004">
+<question>
+Is het voertuig uitgerust met een startsysteem met afstandsbediening?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009005">
+<title>
+Controleer de storing in het startsysteem met afstandsbediening (indien uitgerust met startregelsysteem met afstandbediening)
+</title>
+<test1>
+<ptxt>
+Controleer het startsysteem met afstandsbediening volgens 
+<intxref refid = "U8T40AA504010">Onderzoek van de werking van het startsysteem met afstandsbediening</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Storing in het startsysteem met afstandsbediening.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009006">
+<question>
+Draait de motor rond?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1914001">Diagnose van symptomen van startsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009007">
+<question>
+Start de motor?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 7.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009008">
+<title>
+Controleer het stationaire toerental
+</title>
+<test1>
+<ptxt>
+Laat de motor op de normale bedrijfstemperatuur komen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet de transmissie in de vrijstand voor M&#x002F;T-model (stand &#34;P&#34; voor A&#x002F;T-model).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of alle elektrische belastingen zijn uitgeschakeld.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer het stationaire toerental met het uitleesapparaat.
+</ptxt>
+</test1>
+<question>
+Is het 600 - 700 (voor J20A-motor), 610 - 710 (voor M16A-motor) omw&#x002F;min?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 8.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114010">Diagnose van motorsymptomen:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009009">
+<title>
+Controleer het ontstekingstijdstip
+</title>
+<test1>
+<ptxt>
+Kies op het SUZUKI-uitleesapparaat de modus &#34;Actief Test&#34; op het SUZUKI-uitleesapparaat en stel het aanvangsontstekingstijdstip in.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer met een stroboscooplamp (1) het aanvangsontstekingstijdstip.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L1A102">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09930-76420">
+09930-76420
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<title>
+Voor J20A-motor
+</title>
+<graphic graphicname = "I5JB0A110021.swf" width = "90.000mm" height = "52.567mm" ver = "01" gw = "134" gh = "132"/>
+</testfigure>
+<testfigure>
+<title>
+Voor M16A-motor
+</title>
+<graphic graphicname = "I5JB0A110022.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "165" gh = "128"/>
+</testfigure>
+</test1>
+<question>
+Is het 5&#176; - 15&#176; (voor J20A-motor), 7&#176; - 17&#176; (voor M16A-motor) BTDC bij het voorgeschreven stationaire toerental?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114010">Diagnose van motorsymptomen:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Controleer onderdelen in verband met de ontstekingsverstelinrichting volgens 
+<intxref refid = "U8T40A1816007">Onderzoek van het ontstekingstijdstip:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009010">
+<title>
+Controleer de storing in het startblokkeringssysteem (indien uitgerust met regelsysteem van de startblokkering)
+</title>
+<test1>
+<ptxt>
+Controleer het regelsysteem van de startblokkering volgens 
+<intxref refid = "U8T40AA314001">Controle van het regelsysteem van de startblokkering:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is het in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 10.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Storing in het regelsysteem van de startblokkering.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009011">
+<title>
+Controleer de brandstoftoevoer
+</title>
+<test1>
+<ptxt>
+Controleer of er voldoende brandstof in de brandstoftank zit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot gedurende 2 seconden op ON en dan weer op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Herhaal Stap 2) een paar keer.
+</ptxt>
+</test1>
+<question>
+Is er brandstofdruk voelbaar op de brandstoftoevoerslang wanneer het contactslot op ON wordt gezet?
+</question>
+<testfigure>
+<title>
+Voor J20A-motor
+</title>
+<graphic graphicname = "I5JB0A110023.swf" width = "90.000mm" height = "46.570mm" ver = "01" gw = "130" gh = "115"/>
+</testfigure>
+<testfigure>
+<title>
+Voor M16A-motor
+</title>
+<graphic graphicname = "I5JB0A110024.swf" width = "90.000mm" height = "46.922mm" ver = "01" gw = "138" gh = "116"/>
+</testfigure>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 12.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009012">
+<title>
+Controleer of de brandstofpomp werkt.
+</title>
+<question>
+Was het bedrijfsgeluid van de brandstofpomp hoorbaar vanuit de brandstoftank-vulhals gedurende ongeveer 2 seconden nadat het contactslot op ON werd gezet en weer werd uitgeschakeld?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1714004">Controle van de brandstofdruk:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114083">Controle van brandstofpomp en bijbehorend circuit:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009013">
+<title>
+Controleer de ontstekingsvonk
+</title>
+<test1>
+<ptxt>
+Maak de stekkers van de verstuivers los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verwijder de bougies en sluit ze aan op de hoogspanningskabels of bobinesamenstellen.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verbind de bougies met de massa.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Start de motor en controleer of alle bougies vonken.
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 13.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1814004">Ontstekingsvonktest:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114009014">
+<title>
+Controleer of de verstuiver werkt.
+</title>
+<test1>
+<ptxt>
+Monteer de bougies en sluit de verstuiverstekkerverbindingen aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer met een stethoscoop (1) het bedrijfsgeluid van elke verstuiver (2) bij het starten van de motor.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I3RM0A110015.swf" width = "90.000mm" height = "49.095mm" ver = "01" gw = "145" gh = "122"/>
+</testfigure>
+</test1>
+<question>
+Is het bedrijfsgeluid van alle verstuivers hoorbaar?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114010">Diagnose van motorsymptomen:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114082">Controle van brandstofverstuivercircuit:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

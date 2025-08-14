@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0B4604056" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "0" modify = "0">
+<title>
+Az ESP&#174; figyelmeztető lámpa állandóan világít
+</title>
+<servinfosub id = "H5JB0B4604056001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H5JB0B4604055">Az ESP&#174; figyelmeztető lámpa nem gyullad ki, amikor a gyújtáskapcsoló ON helyzetben van</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0B4604056002">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+Az ESP&#174; figyelmeztető lámpa működését (BE&#x002F;KI) az ESP&#174;-vezérlőmodul vezérli a műszeregységben lévő lámpavezérlő modul útján.
+</ptxt>
+<ptxt>
+Ha az ESP&#174;-vezérlőmodul működőképes, akkor a gyújtáskapcsoló bekapcsolásakor az ESP&#174;-vezérlőmodul bekapcsolja az ESP&#174; figyelmeztető lámpát, kb. két másodpercig égve hagyja, majd utána kikapcsolja. Ha a rendszer bármiféle hibát észlel, az ESP&#174;-vezérlőmodul folyamatosan bekapcsolva tartja az ESP&#174; figyelmeztető lámpát. A lámpavezérlő modul akkor is folyamatosan égve tartja az ESP&#174; figyelmeztető lámpát, ha az ESP&#174;-vezérlőmodul csatlakozója nincs csatlakoztatva.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0B4604056003">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H5JB0B4604056004">
+<testgroup>
+<test1>
+<ptxt>
+Kérdezze le a diagnosztikai hibakódokat.
+</ptxt>
+</test1>
+<question>
+Megjelenik valamilyen hibakód?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a vonatkozó DTC diagnosztikai folyamat táblázatra.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Az ABS-szivattyúmotor és az ABS-mágnesszelep főbiztosítéka jó állapotban van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki a biztosítékot és ellenőrizze, nincs-e letestelve.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Válassza le az ESP&#174;-vezérlőmodul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e a csatlakozás az ESP&#174;-vezérlőmodul csatlakozójának &#8220;E53-35&#8221;, &#8220;E53-16&#8221; és &#8220;E53-47&#8221; érintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, kapcsolja be a gyújtást és mérje meg az &#8220;E53-35&#8221; érintkező és a karosszériatest közötti feszültséget.
+</ptxt>
+</test1>
+<question>
+A feszültség 10 &#8211;14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;GRN&#x002F;ORN&#8221; áramkörben szakadás van.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e a csatlakozás az ESP&#174;-vezérlőmodul csatlakozójának &#8220;E53-1&#8221; és &#8220;E53-32&#8221; érintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, kapcsolja be a gyújtást és mérje meg az &#8220;E53-1&#8221; és &#8220;E53-32&#8221; érintkező, valamint a karosszériatest közötti feszültséget.
+</ptxt>
+</test1>
+<question>
+Az érték 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;WHT&#x002F;RED&#8221; és&#x002F;vagy &#8220;WHT&#x002F;BLU&#8221; áramkörben szakadás van.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ha rendben van, kapcsolja be a gyújtást és mérje meg az &#8220;E53-16&#8221;, &#8220;E53-47&#8221; érintkező és a karosszériatest közötti feszültséget.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kevesebb mint 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Az ESP&#174;-vezérlőmodul testelőáramkörében szakadás van vagy nagy az ellenállás.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört a műszeregység és a ESP&#174;-vezérlőmodul között, lásd: 
+<intxref refid = "H5JB0B4604081">DTC U1073: Vezérlőmodul kommunikációs busza kikapcsolva</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van a CAN kommunikációs áramkör?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó műszeregységet, és újból ellenőrizze. Ha az ESP&#174; figyelmeztető lámpa továbbra is világít, tegyen be egy bizonyosan jó ESP&#174;-hidraulikaegység &#x002F; vezérlőmodul egységet és újból ellenőrizze.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "3C">
+<servcat sctnbr = "03" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A3314013" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+De tussenbakstandindicator blijft branden met het contactslot op ON
+</title>
+<servinfosub id = "U8T40A3314013001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie &#34;Bedradingsschema&#34; onder 
+<intxref refid = "U8T40A3314012">Tussenbakstandindicator licht niet op wanneer het contactslot op ON wordt gezet en de motor niet draait:Motorgeschakeld type (tussenbak met schakelstelmotor)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A3314013002">
+<title>
+Beschrijving van het circuit
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A3314012">Tussenbakstandindicator licht niet op wanneer het contactslot op ON wordt gezet en de motor niet draait:Motorgeschakeld type (tussenbak met schakelstelmotor)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A3314013003">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40A3314013004">
+<testgroup id = "U8T40A3314013005">
+<title>
+Controleer de DTC
+</title>
+<test1>
+<ptxt>
+Lees de DTC&apos;s af volgens 
+<intxref refid = "U8T40A3314005">DTC-controle:Motorgeschakeld type (tussenbak met schakelstelmotor)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn er DTC&apos;s?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Volg het DTC-stroomschema om het probleem op te lossen en probeer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A3314013006">
+<title>
+Controle van het CAN-communicatiecircuit
+</title>
+<test1>
+<ptxt>
+Controleer het CAN-communicatiecircuit tussen de combimeter en het 4WD-regelapparaat volgens 
+<intxref refid = "U8T40A3314032">DTC U0073: Communicatiebus van regelapparaat uitgeschakeld:Motorgeschakeld type (tussenbak met schakelstelmotor)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is het CAN-communicatiecircuit in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden combimeter aan en controleer opnieuw. Als de tussenbakstandindicator nog steeds niet brandt, sluit dan een goed bevonden 4WD-regelapparaat aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

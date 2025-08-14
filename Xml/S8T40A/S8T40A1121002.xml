@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "S8T40A1121002" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+On-Board Diagnostic (OBD) System Description
+</title>
+<attention3>
+<ptxt>
+For type definition of OBD system, refer to 
+<intxref refid = "S8T40A1120010">Precaution on On-Board Diagnostic (OBD) System:J24B</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "S8T40A1121002010">
+<title>
+General description (Type A, B and C)
+</title>
+<ptxt>
+ECM in this vehicle has the following functions.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When the ignition switch is turned to ON position with the engine stopped, malfunction indicator lamp (MIL) (1) turns on in order to check the MIL (1) and its circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When ECM detects a malfunction which gives an adverse effect to vehicle emission more than specified driving cycle (D&#x002F;C), it turns on or flashes MIL in the combination meter (flashing only when detecting a misfire which can cause damage to the catalyst) and stores the diagnostic trouble code (DTC) in its memory.
+</ptxt>
+<ptxt>
+(If it detects normal condition for continuously 3 driving cycles after detecting a malfunction, it turns OFF MIL although DTC stored in its memory is remained as a history DTC.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+For some malfunctions, ECM adopts the 2D&#x002F;C detecting logic to prevent erroneous detection. With this logic, MIL is turned on when the malfunction is detected in 2 consecutive driving cycles.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When a malfunction is detected, engine and driving conditions at that moment are stored in ECM memory as freeze frame data.
+</ptxt>
+<ptxt>
+For details, refer to description on 
+<intxref refid = "S8T40A1121002005">Freeze Frame Data (Type A, B and C)</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+It is possible to communicate ECM via data link connector (DLC) (3) not only by SUZUKI scan tool (SUZUKI-SDT) (2) but also by CAN communication OBD generic scan tool.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I9T401112002.swf" width = "88.000mm" height = "99.839mm" ver = "01" gw = "172" gh = "266"/>
+</figure>
+</servinfosub>
+<servinfosub id = "S8T40A1121002011">
+<title>
+General description (Type D)
+</title>
+<ptxt>
+ECM diagnosis troubles which may occur in the area including the engine exhaust emission system when the ignition switch is ON and the engine is running, and indicates the result by turning on malfunction indicator lamp (MIL) (1).
+</ptxt>
+<ptxt>
+ECM and MIL operate as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+MIL lights when the ignition switch is turned ON (but the engine at stop) regardless of the condition of Engine and Emission control system. This is only to check MIL in the combination meter and its circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the above areas of Engine and Emission control system is free from any trouble after the engine start (while engine is running), MIL turns OFF.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When ECM detects a trouble which has occurred in the above areas, it makes MIL turn ON while the engine is running to warn the driver of such occurrence of trouble and at the same time it stores the trouble area in ECM back-up memory. (The memory is kept as it is even if the trouble was only temporary and disappeared immediately. And it is not erased unless the power to ECM is shut off for specified time or it is cleared by SUZUKI scan tool (SUZUKI-SDT) (2).)
+</ptxt>
+<ptxt>
+For further detail of the checking &#x002F; clearing procedure, refer to &#8220;DTC Check&#8221; or &#8220;DTC Clearance&#8221;. 
+</ptxt>
+<figure>
+<graphic graphicname = "I9T401112002.swf" width = "88.000mm" height = "99.839mm" ver = "01" gw = "172" gh = "266"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.031in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "S8T40A1121002001">
+<title>
+Warm-Up Cycle
+</title>
+<ptxt>
+A warm-up cycle means the duration from the engine start until the coolant temperature has risen by at least 23 &#176;C (73 &#176;F) exceeding the minimum temperature of 70 &#176;C (158 &#176;F).
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1121002002">
+<title>
+Driving Cycle (D&#x002F;C)
+</title>
+<ptxt>
+A &#8220;Driving Cycle&#8221; is a duration from an engine startup to the following engine shutoff.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1121002003">
+<title>
+2 Driving Cycle Detection Logic
+</title>
+<ptxt>
+The malfunction detected in the first driving cycle is stored in ECM memory (in the form of pending DTC and freeze frame data) but the MIL does not turn on at this time. It turns on at the second detection of the same malfunction in the next driving cycle.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1121002004">
+<title>
+Pending DTC
+</title>
+<ptxt>
+Pending DTC means a DTC detected and stored temporarily at the first driving cycle of the 2 driving cycle detection logic.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1121002005" page = "2">
+<title>
+Freeze Frame Data (Type A, B and C)
+</title>
+<ptxt>
+ECM stores the engine and driving conditions (in the form of data as shown) at the moment of the detection of a malfunction in its memory. This data is called &#8220;Freeze frame data&#8221;.
+</ptxt>
+<ptxt>
+It is possible to know engine and driving conditions (e.g., whether the engine was warm or not, where the vehicle was running or stopped, where air&#x002F;fuel mixture was lean or rich) when a malfunction was detected by checking the freeze frame data. Also, ECM has a function to store each freeze frame data for three different malfunctions in the order of their detection. Utilizing this function, it is possible to know the order of detection of these malfunctions. This is helpful when rechecking or diagnosing a trouble.
+</ptxt>
+<ptxt>
+For details of freeze frame data that can be read from ECM, refer to table below.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.333in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Fuel System
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Calculated Load
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECT
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short Term Fuel Trim
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Long Term Fuel Trim
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Engine Speed
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Vehicle Speed
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ignition Advance
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Intake Air Temperature
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MAF
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Absolute TP 1&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Evap Canist Prg Duty
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Barometric Pres
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Battery Voltage
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Relative TP&#x002A;&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Absolute TP 2&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Absolute APP 1 &#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Absolute APP 2 &#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Target Throt Pos
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+For freeze flame data with asterisk (&#x002A;), it indicates the ratio between power supply voltage and output voltage of related sensor.
+</ptxt>
+<ptxt>
+When power supply voltage is 5.0 V and output voltage is 4.0 V, freeze frame data is displayed the following.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+For systems where the output is proportional to the input voltage, it displays 80&#x0025; (&#x003D; the percent of maximum input reference voltage).
+</ptxt>
+</item>
+<item>
+<ptxt>
+For systems where the output is inversely proportional to the input voltage, it displays 20&#x0025; (&#x003D;100&#x0025; minus the percent of maximum input reference voltage).
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+For relative TP with asterisks (&#x002A;&#x002A;) in above table, it indicates by formula ((output voltage - output voltage at closed throttle position) &#x002F; power supply voltage).
+</ptxt>
+<ptxt>
+When power supply voltage is 5.0 V and output voltage at closed throttle position is 1.0 V, freeze frame data is displayed the following.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+At closed throttle position (output voltage &#x003D; 1.0 V), it displays 0&#x0025;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+At wide open throttle position (output voltage &#x003D; 4.0 V), it displays 60&#x0025;.
+</ptxt>
+<ptxt>
+ However, for systems where the output is inversely proportional to the input voltage, it displays 100&#x0025; minus above-mentioned formula.
+</ptxt>
+</item>
+</list2>
+</list1>
+</attention3>
+<figure page = "2">
+<title>
+Freeze flame data (for example)
+</title>
+<graphic graphicname = "I7V10A111018.swf" width = "88.000mm" height = "76.556mm" ver = "01" gw = "148" gh = "200"/>
+</figure>
+<topic id = "S8T40A1121002006" page = "1">
+<title>
+Priority of freeze frame data
+</title>
+<ptxt>
+ECM has 4 frames where the freeze frame data can be stored. The first frame stores the freeze frame data of the malfunction which was detected first. However, the freeze frame data stored in this frame is updated according to the priority described below. (If malfunction as described in the upper square &#8220;1&#8221; below is detected while the freeze frame data in the lower square &#8220;2&#8221; has been stored, the freeze frame data &#8220;2&#8221; will be updated by the freeze frame data &#8220;1&#8221;.)
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.286in"/>
+<colspec colnum = "2" colname = "2" colwidth = "5.918in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Priority
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Freeze frame data in frame 1
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+Freeze frame data at initial detection of malfunction among &#8220;misfire detected&#8221; (P0300 &#8211; P0304), &#8220;fuel system too lean&#8221; (P0171) and &#8220;fuel system too rich&#8221; (P0172)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+Freeze frame data when a malfunction other than those in &#8220;1&#8221; above is detected.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<ptxt>
+In the 2nd through the 4th frames, the freeze frame data of each malfunction is stored in the order of detection. These data are not updated.
+</ptxt>
+<ptxt>
+Shown in the table below are examples of how freeze frame data are stored when two or more DTCs are detected.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10A111002.swf" width = "183.000mm" height = "49.392mm" ver = "01" gw = "464" gh = "123"/>
+</figure>
+<ptxt>
+&#8212;: No freeze frame data
+</ptxt>
+</topic>
+<topic id = "S8T40A1121002007" page = "1">
+<title>
+Freeze frame data clearance
+</title>
+<ptxt>
+The freeze frame data is cleared at the same time as clearance of DTC.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "S8T40A1121002008">
+<title>
+System Readiness Test (Type A, B and C)
+</title>
+<ptxt>
+The system readiness test is to check if the on-board diagnosis of each system related to exhaust emission has been completed or not using a scan tool (Suzuki SDT or CAN communication OBD generic scan tool). When the conditions established for each system are met, ECM performs an on-board diagnosis of corresponding system and changes the status of system readiness test from &#8220;Incomplete&#8221; to &#8220;Complete&#8221;.
+</ptxt>
+<ptxt>
+When &#8220;Complete&#8221; status is displayed, it is maintained until the &#8220;DTC clearance&#8221; is performed using scan tool.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+The status of system readiness test may be changed as &#8220;incomplete&#8221; when performing the following services.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Disconnection of battery negative cable
+</ptxt>
+</item>
+<item>
+<ptxt>
+Disconnection of ECM connectors
+</ptxt>
+</item>
+<item>
+<ptxt>
+Removal of ground cable for ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Disconnection of &#8220;ECM&#8221; fuse
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+By utilizing this system readiness test, it is possible to confirm that all DTC confirmation procedure for each system has been completed or incompleted. For all DTCs related to each system, refer to the table below.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The system readiness test is NOT the result (&#8220;Normal&#8221; or &#8220;Abnormal&#8221;) of the on-board diagnosis but the result (&#8220;Complete&#8221; or &#8220;Incomplete&#8221;) of the on-board diagnosis.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "S8T40A1121002009">
+<title>
+Monitoring item of system readiness test table
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Type A:
+</title>
+<tgroup cols = "7" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.771in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.446in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.446in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.446in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.446in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.446in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.467in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Monitoring item
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC related to monitoring item
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Catalyst
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0420
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+O2 Sensor
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0133
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0139
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2195
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2196
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2A01
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+O2 Sensor Heater
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Type B:
+</title>
+<tgroup cols = "7" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.771in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.446in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.446in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.446in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.446in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.446in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.467in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Monitoring item
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC related to monitoring item
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Catalyst
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0420
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+O2 Sensor
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0133
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2195
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2196
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+O2 Sensor Heater
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Type C:
+</title>
+<tgroup cols = "7" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.771in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.446in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.446in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.446in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.446in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.446in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.467in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Monitoring item
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC related to monitoring item
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Catalyst
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0420
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+O2 Sensor
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0133
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0139
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+O2 Sensor Heater
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

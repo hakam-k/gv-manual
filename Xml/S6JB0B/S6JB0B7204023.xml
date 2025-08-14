@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B7204023" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1546: A&#x002F;C Refrigerant Pressure Malfunction
+</title>
+<servinfosub id = "S6JB0B7204023001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.694in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.510in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Outside temperature is more than specified value. However, refrigerant pressure is less than specified value.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Refrigerant shortage
+</ptxt>
+</item>
+<item>
+<ptxt>
+Refrigerant pressure sensor circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Refrigerant pressure sensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Outside air temperature sensor circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Outside air temperature sensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+HVAC control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B7204023002">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start A&#x002F;C system for 1 min. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B7204023003">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0B7204023004">
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and clear DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ignition switch turned OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch and check DTC.
+</ptxt>
+</test1>
+<question>
+Is there DTC B1546?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Confirm that vehicle A&#x002F;C system condition referring 
+<intxref refid = "S6JB0B7204008">A&#x002F;C System Performance Inspection</intxref>
+, and recheck DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Refrigerant pressure check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ignition switch ON turned ON position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check refrigerant pressure displayed on scan tool.
+</ptxt>
+</test1>
+<question>
+Is it 340 kPa or more?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Charge refrigerant and Confirm that vehicle A&#x002F;C system condition referring to 
+<intxref refid = "S6JB0B7204008">A&#x002F;C System Performance Inspection</intxref>
+. And then recheck DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A&#x002F;C system check
+</title>
+<test1>
+<ptxt>
+Confirm that vehicle A&#x002F;C system condition referring to 
+<intxref refid = "S6JB0B7204008">A&#x002F;C System Performance Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is A&#x002F;C system in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair and&#x002F;or replace.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Refrigerant pressure sensor check
+</title>
+<test1>
+<ptxt>
+Check refrigerant pressure sensor referring to 
+<intxref refid = "S6JB0B7206015">A&#x002F;C Refrigerant Pressure Sensor and Its Circuit Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Are refrigerant pressure sensor and&#x002F;or its circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair circuit and&#x002F;or replace refrigerant pressure sensor.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Outside temperature sensor check
+</title>
+<test1>
+<ptxt>
+Check outside temperature sensor referring to 
+<intxref refid = "S6JB0B9306013">Outside Air Temperature Sensor Inspection (If Equipped)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is outside temperature sensor in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace HVAC control module.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace outside temperature sensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

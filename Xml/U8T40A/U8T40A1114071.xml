@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114071" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2111: Regelsysteem van de gasklepstelmotor - open geblokkeerd
+</title>
+<servinfosub id = "U8T40A1114071001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+De standaard gasklepopening is groter dan 7&#176; vanuit de volledig gesloten positie bij het onderzoeken van de gasklep met het contactslot op OFF.
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Elektrische-gasklephuissamenstel
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1114071002">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan met het contactslot op OFF. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Het contactslot staat minstens 20 sec op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en controleer op DTC&apos;s.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1114071003">
+<title>
+DTC-storingzoeken
+</title>
+<attention3>
+<ptxt>
+Lees de voorzorgsmaatregelen voor DTC-storingzoeken zoals beschreven in 
+<intxref refid = "U8T40A1110003">Voorzorgsmaatregelen bij DTC-storingzoeken:M16A and J20A</intxref>
+ alvorens deze procedure te volgen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "U8T40A1114071004">
+<testgroup id = "U8T40A1114071005">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114071006">
+<title>
+Visuele controle van de gasklep
+</title>
+<test1>
+<ptxt>
+Controleer of er geen vreemd materiaal tussen de gasklep en het gasklephuis zit, zoals beschreven bij &#34;Visuele controle van de gasklep&#34; onder 
+<intxref refid = "U8T40A1316003">Onderzoek elektrisch-gasklephuissamenstel in het voertuig:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Neem het eruit na het verwijderen van het gasklephuis en maak de binnenkant van het gasklephuis grondig schoon.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114071007">
+<title>
+Controle van de werking van de gasklep 
+</title>
+<test1>
+<ptxt>
+Controleer de werking van de gasklep volgens &#34;Controle van de werking van de gasklep&#34; onder 
+<intxref refid = "U8T40A1316003">Onderzoek elektrisch-gasklephuissamenstel in het voertuig:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het elektrische-gasklephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114071008">
+<title>
+Controle van de gasklepstelmotor (motor)
+</title>
+<test1>
+<ptxt>
+Controleer de werking van de gasklepstelmotor volgens &#34;Controle van de gasklepstelmotor (Motor)&#34; onder 
+<intxref refid = "U8T40A1316003">Onderzoek elektrisch-gasklephuissamenstel in het voertuig:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het elektrische-gasklephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114071009">
+<title>
+Controle van de prestaties van de gaskleppositiesensor
+</title>
+<test1>
+<ptxt>
+Controleer de prestaties van de gaskleppositiesensor volgens &#34;Controlevan de prestaties van de gaskleppositiesensor&#34; onder 
+<intxref refid = "U8T40A1316003">Onderzoek elektrisch-gasklephuissamenstel in het voertuig:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het elektrische-gasklephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

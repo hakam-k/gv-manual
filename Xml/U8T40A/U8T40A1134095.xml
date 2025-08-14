@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1134095" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0697 &#x002F; P0698 &#x002F; P0699
+</title>
+<servinfosub id = "U8T40A1134095001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.194in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0697: Sensorreferentiespanning &#34;C&#34;-circuit &#x002F; onderbroken
+</emph>
+</ptxt>
+<ptxt>
+5 V voedingscircuit en TP-sensor of APP-sensor (secundair) is onderbroken.
+</ptxt>
+<ptxt>
+(Opsporingslogica over 2 rijcycli)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+TP-sensor en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+APP-sensor (sub) en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0698: Lage sensorreferentiespanning in circuit &#34;C&#34;
+</emph>
+</ptxt>
+<ptxt>
+5 V voedingscircuit van TP-sensor en APP-sensor (secundair) is kortgesloten met de massa.
+</ptxt>
+<ptxt>
+(Opsporingslogica over 2 rijcycli)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0699: Hoge sensorreferentiespanning in circuit &#34;C&#34;
+</emph>
+</ptxt>
+<ptxt>
+5 V voedingscircuit van TP-sensor en APP-sensor (secundair) is kortgesloten met het voedingscircuit.
+</ptxt>
+<ptxt>
+(Opsporingslogica over 2 rijcycli)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1134095002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1134064">Controle van het voedings- en massacircuit van de ECM:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1134095003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Zet het contactslot gedurende 1 min. op ON.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1134095004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1134095005">
+<testgroup id = "U8T40A1134095006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1134001">Controle van het motor- en emissieregelsysteem:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134095007">
+<title>
+Controle van de TP-sensor en het bijbehorend circuit
+</title>
+<test1>
+<ptxt>
+Controleer het TP-sensorcircuit (hoofd en sub) als volgt.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+TP-sensor (hoofd) en het bijbehorende circuit: Zie stap 2 tot en met 6 onder 
+<intxref refid = "U8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TP-sensor (secundair) en het bijbehorende circuit: Zie stap 2 tot en met 6 onder 
+<intxref refid = "U8T40A1134028">DTC P0222 &#x002F; P0223:N32A</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het defecte onderdeel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134095008">
+<title>
+Controle van de APP-sensor (hulp) en diens circuit
+</title>
+<test1>
+<ptxt>
+Controleer de APP-sensor (secundair) en het bijbehorende circuit zoals beschreven in stap 2 tot 7 onder 
+<intxref refid = "U8T40A1134054">DTC P2127 &#x002F; P2128:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het defecte onderdeel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134095009">
+<title>
+Controle van de voeding en massa van de ECM
+</title>
+<test1>
+<ptxt>
+Controleer het voedings- en massacircuit van de ECM. 
+<intxreftitleoff1 refid = "U8T40A1134064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134095010">
+<title>
+Tegelijk storingzoeken voor andere DTC&apos;s
+</title>
+<question>
+Worden er tegelijkertijd andere DTC&apos;s waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar storingzoeken voor de betrokken DTC.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

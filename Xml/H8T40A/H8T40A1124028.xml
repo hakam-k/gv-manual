@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0222 &#x002F; P0223
+</title>
+<servinfosub id = "H8T40A1124028001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.888in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.325in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0222: Fojtószelep&#x002F;pedálhelyzet-érzékelő&#x002F;kapcsoló &#8220;B&#8221; áramkör feszültsége alacsony
+</emph>
+</ptxt>
+<ptxt>
+A TP-érzékelő (segédérzékelő) jeláramkör kimeneti feszültsége kisebb, mint 0,74 V.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+TP-érzékelő (segédérzékelő) és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0223: Fojtószelep&#x002F;pedálhelyzet-érzékelő&#x002F;kapcsoló &#8220;B&#8221; áramkör feszültsége magas
+</emph>
+</ptxt>
+<ptxt>
+A TP-érzékelő (segédérzékelő) jeláramkör kimeneti feszültsége nagyobb, mint 4,7 V.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124028002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124028003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tartsa a gázpedált 2 másodpercig teljesen lenyomott helyzetben.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tartsa a gázpedált 2 másodpercig felengedett helyzetben.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ismételje meg a 2) - 3) lépéseket 3 alkalommal.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124028004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124028005">
+<testgroup id = "H8T40A1124028006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124028007">
+<title>
+A TP-érzékelő áramellátó áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat a fojtószeleptest egységről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószeleptest egység csatlakozó érintkezőinek megfelelő érintkezését.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a csatlakozás rendben van, fordítsa a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a feszültség a TP-érzékelő áramellátó áramkör (C1) és a testáramkör (C4) között 5 V.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124028008">
+<title>
+A TP-érzékelő áramellátó áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a feszültség a TP-érzékelő áramellátó áramkör (C1) és a karosszéria testelése között 5 V-e.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+<ptxt>
+Ha a DTC továbbra is észlelhető, a mostani helyére tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124028009">
+<title>
+A TP-érzékelő áramellátó áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben vannak a csatlakozások, ellenőrizze, hogy a TP-érzékelő áramellátó áramköre (C1) megfelel-e a következőknek.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A TP-érzékelő áramellátó áramkör vezetékkötegének ellenállása kevesebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TP-érzékelő áramellátó áramkörének szigetelési ellenállása a fojtószeleptest egység és a karosszéria testpontja között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása a TP-érzékelő áramellátó áramkör érintkezője és a fojtószeleptest egység csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TP-érzékelő áramellátó áramkörének áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124028010">
+<title>
+TP-érzékelő (segédérzékelő) jeláramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben vannak a csatlakozások, ellenőrizze, hogy a TP-érzékelő (segédérzékelő) jeláramköre (C3) megfelel-e a következőknek.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A TP-érzékelő (segédérzékelő) jeláramkör vezetékkötegének ellenállása kevesebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TP-érzékelő (segédérzékelő) jeláramkörének szigetelési ellenállása a fojtószeleptest egység és a karosszéria testpontja között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása a TP-érzékelő (segédérzékelő) jelérintkezője és a fojtószeleptest egység csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A TP-érzékelő (segédérzékelő) jeláramkörének áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124028011">
+<title>
+TP-érzékelő ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a TP-érzékelő működését. 
+<intxreftitleoff1 refid = "H8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószeleptest egységet.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

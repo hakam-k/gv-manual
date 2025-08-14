@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1114016" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0031 &#x002F; P0032: HO2S Heater Control Circuit Low &#x002F; High (Sensor-1)
+</title>
+<servinfosub id = "S8T40A1114016001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1114015">DTC P0030: HO2S Heater Control Circuit (Sensor-1):M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1114016002">
+<title>
+A&#x002F;F Sensor Description
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1111010">A&#x002F;F Sensor Description:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1114016003">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.937in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.272in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0031:
+</emph>
+</ptxt>
+<ptxt>
+Heater control circuit voltage of A&#x002F;F sensor is lower than specification for more than specified time continuously even though control duty ratio of A&#x002F;F sensor heater is less than 90&#x0025; with engine running. (Heater control duty pulse is not detected in its circuit of ECM)
+</ptxt>
+<ptxt>
+(2 driving cycle detection logic)
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0032:
+</emph>
+</ptxt>
+<ptxt>
+Heater control circuit voltage of A&#x002F;F sensor is higher than specification for more than specified time continuously even though control duty ratio of A&#x002F;F sensor heater is more than 10&#x0025; with engine running. (Heater control duty pulse is not detected in its circuit of ECM)
+</ptxt>
+<ptxt>
+(2 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A&#x002F;F sensor heater circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+A&#x002F;F sensor heater
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1114016004">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Run engine at idle speed for 1 min. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC and pending DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1114016005">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S8T40A1110003">Precautions for DTC Troubleshooting:M16A and J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S8T40A1114016006">
+<testgroup id = "S8T40A1114016007">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1114001">Engine and Emission Control System Check:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016008">
+<title>
+A&#x002F;F sensor heater circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from A&#x002F;F sensor with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to A&#x002F;F sensor connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connection are OK, measure voltage between heater power terminal of A&#x002F;F sensor connector and vehicle body ground with ignition switch turned ON.
+</ptxt>
+</test1>
+<question>
+Is measured voltage 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016009">
+<title>
+HO2S heater fuse check
+</title>
+<test1>
+<ptxt>
+Check for &#8220;O2 HTR&#8221; fuse (1) blown.
+</ptxt>
+<testfigure>
+<title>
+For J20A engine
+</title>
+<graphic graphicname = "I5JB0A110028.swf" width = "90.000mm" height = "47.981mm" ver = "02" gw = "155" gh = "119"/>
+</testfigure>
+<testfigure>
+<title>
+For M16A engine
+</title>
+<graphic graphicname = "I5JB0A110029.swf" width = "90.000mm" height = "47.628mm" ver = "02" gw = "156" gh = "118"/>
+</testfigure>
+</test1>
+<question>
+Is &#8220;O2 HTR&#8221; fuse in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016010">
+<title>
+A&#x002F;F sensor and HO2S heater resistance check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from HO2S-2 with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check heater resistance of A&#x002F;F sensor and HO2S referring to 
+<intxref refid = "S8T40A1316010">Air Fuel Ratio (A&#x002F;F) Sensor On-Vehicle Inspection:M16A and J20A</intxref>
+ and 
+<intxref refid = "S8T40A1316011">Heated Oxygen Sensor (HO2S-2) Heater On-Vehicle Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Are A&#x002F;F sensor heater and HO2S heater in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace defective sensor.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016011">
+<title>
+HO2S heater relay power circuit check
+</title>
+<test1>
+<ptxt>
+Remove integration relay No.2 (for J20A engine) (1) or HO2S heater relay (for M16A engine) (2) with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to relay connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connection are OK, measure voltage between each relay power terminal of relay connector and vehicle body ground with ignition switch tuned ON.
+</ptxt>
+<testfigure>
+<title>
+For J20A engine
+</title>
+<graphic graphicname = "I5JB0A110030.swf" width = "90.000mm" height = "48.333mm" ver = "02" gw = "155" gh = "120"/>
+</testfigure>
+<testfigure>
+<title>
+For M16A engine
+</title>
+<graphic graphicname = "I5JB0A110031.swf" width = "90.000mm" height = "52.214mm" ver = "03" gw = "156" gh = "131"/>
+</testfigure>
+</test1>
+<question>
+Is each measured voltage 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Power circuit is open.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016012">
+<title>
+Check HO2S heater relay
+</title>
+<test1>
+<ptxt>
+Check integration relay No.2 (for J20A engine) or HO2S heater relay (for M16A engine) referring to 
+<intxref refid = "S8T40A1316018">Control Relay Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace relay.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016013">
+<title>
+A&#x002F;F sensor heater circuit check
+</title>
+<test1>
+<ptxt>
+Measure insulation resistance between heater terminals of A&#x002F;F sensor connector.
+</ptxt>
+</test1>
+<question>
+Is measured resistance infinity?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace short wire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016014">
+<title>
+HO2S heater relay circuit check
+</title>
+<test1>
+<ptxt>
+Measure wire resistance between coil ground terminal of relay connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is measured resistance lower than 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Output wire of relay connector is open or short to ground.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016015">
+<title>
+ A&#x002F;F sensor heater check
+</title>
+<test1>
+<ptxt>
+Check heater resistance of A&#x002F;F sensor referring to 
+<intxref refid = "S8T40A1316010">Air Fuel Ratio (A&#x002F;F) Sensor On-Vehicle Inspection:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is A&#x002F;F sensor heater in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace A&#x002F;F sensor.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016016">
+<title>
+A&#x002F;F sensor heater control circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection of A&#x002F;F sensor heater circuit terminal to ECM connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connection are OK, measure each wire resistance of sensor heater control circuit at ECM connector between ECM to A&#x002F;F sensor and ECM to vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is each measured wire resistance lower than 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1114016017">
+<title>
+A&#x002F;F sensor heater circuit check
+</title>
+<test1>
+<ptxt>
+Measure insulation resistance between control terminal of A&#x002F;F sensor heater and ground terminal of A&#x002F;F sensor heater at ECM connector.
+</ptxt>
+</test1>
+<question>
+Is measured resistance infinity?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace short wire.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

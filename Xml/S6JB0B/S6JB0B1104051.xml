@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B1104051" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0601 &#x002F; P0602 &#x002F; P0607: Internal Control Module Memory Check Sum Error &#x002F; Control Module Programming Error &#x002F; Control Module Performance
+</title>
+<servinfosub id = "S6JB0B1104051001">
+<title>
+System Description
+</title>
+<ptxt>
+Internal control module is installed in ECM.
+</ptxt>
+<attention3>
+<ptxt>
+After reprogramming of ECM is executed, if the DTC P0601 and&#x002F;or P0602 are indicated, it is possible that the reprogramming of ECM is not completed correctly.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "S6JB0B1104051002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.087in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.117in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+DTC P0601: Internal Control Module Memory Check Sum Error
+</emph>
+</ptxt>
+<ptxt>
+Data write error or check sum error
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0602: Control Module Programming Error 
+</emph>
+</ptxt>
+<ptxt>
+Data programming error
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0607: Control Module Performance 
+</emph>
+</ptxt>
+<ptxt>
+Internal processor error
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B1104051003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC by using scan tool if any.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and run it at idle if possible.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC by using scan tool.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B1104051004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0B1104051005">
+<testgroup>
+<title>
+DTC recheck
+</title>
+<test1>
+<ptxt>
+Clear DTC referring to 
+<intxref refid = "S6JB0B1104008">DTC Clearance</intxref>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn off ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn on ignition switch and check DTC.
+</ptxt>
+</test1>
+<question>
+Is DTC P0601, P0602 or P0607 still indicated?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Intermittent trouble. Check for intermittent referring to 
+<intxref refid = "S6JB0B0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM reprogramming check
+</title>
+<question>
+Was reprogramming of ECM executed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Execute reprogramming of ECM correctly once again.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM power and ground circuit check
+</title>
+<test1>
+<ptxt>
+Check that ECM power supply circuit and ECM ground circuit is in good condition referring to 
+<intxref refid = "S6JB0B1104085">ECM Power and Ground Circuit Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Are checking results OK?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair ECM power or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

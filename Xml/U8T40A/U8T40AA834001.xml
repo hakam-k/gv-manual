@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA834001" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Controle van het CAN-communicatiesysteem
+</title>
+<diag type = "test" id = "U8T40AA834001001">
+<testgroup>
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Sluit het SUZUKI-uitleesapparaat (SUZUKI SDT) aan op de DLC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de regelapparaten die via het CAN communiceren op DTC&apos;s.
+</ptxt>
+</test1>
+<question>
+Wordt &#34;Regelapparaatbus OFF&#34; weergegeven op een van de regelapparaten?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van sporadische storingen
+</title>
+<test1>
+<ptxt>
+Controleer of alle CAN-communicatiecircuits goed op alle stekkerverbindingen van regelapparaten &#x002F; sensoren (die via het CAN communiceren) aangesloten zijn.
+</ptxt>
+</test1>
+<question>
+Is het in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA834004">Storingzoeken bij &#34;Communicatiebus uit&#34;:F9Q-model</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit de stekkerverbinding stevig aan en controleer opnieuw op DTC&apos;s.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC-controle
+</title>
+<question>
+Wordt &#34;Comm. verbroken&#34; weergegeven bij een van de regelapparaten?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA834003">Storingzoeken &#34;Comm. verbroken&#34;:F9Q-model</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Communicatiecontrole van elk regelapparaat
+</title>
+<question>
+Kunnen ze met het SUZUKI-uitleesapparaat (SUZUKI SDT) met alle regelapparaten communiceren die via CAN communiceren?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Het CAN-communicatiesysteem is in orde.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het DLC-circuit
+</title>
+<test1>
+<ptxt>
+Maak het SUZUKI-uitleesapparaat (SUZUKI-SDT) los van de DLC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer het voedingscircuit, het massacircuit en het seriële-communicatiecircuit van de DLC op onderbrekingen, kortsluitingen en hoge weerstand.
+</ptxt>
+</test1>
+<question>
+Is elk circuit in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het SUZUKI-uitleesapparaat (SUZUKI SDT)
+</title>
+<test1>
+<ptxt>
+Controleer of het SUZUKI-uitleesapparaat (SUZUKI SDT) kan communiceren door het op een ander voertuig aan te sluiten.
+</ptxt>
+</test1>
+<question>
+Kan het SUZUKI-uitleesapparaat (SUZUKI SDT) correct communiceren?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA834004">Storingzoeken bij &#34;Communicatiebus uit&#34;:F9Q-model</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het SUZUKI-uitleesapparaat (SUZUKI SDT) en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "U8T40A5121008" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Beschrijving van het boorddiagnosesysteem
+</title>
+<servinfosub id = "U8T40A5121008004">
+<title>
+Voor het E-OBD-model
+</title>
+<ptxt>
+Voor het regelsysteem van de automatische transmissie heeft de TCM de volgende functies. Zie 
+<intxref refid = "U8T40A5124048">Onderzoek van de TCM en haar circuits:5 A&#x002F;T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wanneer het contactslot op ON wordt gezet maar de motor afgezet is, licht het storingsindicatorlampje (MIL) (1) op om de gloeilamp van het MIL te controleren.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wanneer de TCM een storing in het A&#x002F;T-regelsysteem waarneemt (en&#x002F;of een storing die een nadelige invloed heeft op de uitlaatgasemissie) terwijl de motor draait, vraagt de TCM aan de ECM om het storingsindicatorlampje in de metergroep van het instrumentenpaneel te doen oplichten. De TCM slaat de plaats van de storing op in het TCM-geheugen.
+</ptxt>
+<ptxt>
+(Als de TCM evenwel na een storing 3 opeenvolgende normale rijcycli vaststelt, wordt het MIL uitgeschakeld maar de DTC blijft in het geheugen bewaard.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Communiceren via DLC (2) kan zowel met het SUZUKI-uitleesapparaat als met een algemeen gebruikt OBD-uitleesapparaat. (De diagnose-informatie is toegankelijk met behulp van een uitleesapparaat.)
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L5A228">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI-diagnosecodeuitleesapparaat (SUZUKISDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I9T401511002.swf" width = "88.000mm" height = "102.309mm" ver = "01" gw = "189" gh = "273"/>
+</figure>
+</item>
+</list1>
+<topic id = "U8T40A5121008005">
+<title>
+Opsporingslogica van 2 rijcycli
+</title>
+<ptxt>
+De storing die tijdens de eerste rijcyclus is waargenomen, wordt in het TCM-geheugen opgeslagen (als een voorlopige DTC en freeze-framegegevens), maar het storingsindicatielampje gaat nog niet branden. Het lampje gaat pas branden wanneer dezelfde storing voor de tweede maal wordt waargenomen in de daaropvolgende rijcyclus.
+</ptxt>
+</topic>
+<topic id = "U8T40A5121008001">
+<title>
+Voorlopige DTC
+</title>
+<ptxt>
+Een voorlopige DTC is een DTC die wordt waargenomen en voorlopig opgeslagen na 1 rijcyclus waarin de DTC is waargenomen in de opsporingslogica van 2 rijcycli.
+</ptxt>
+</topic>
+<topic id = "U8T40A5121008002">
+<title>
+Freeze-framegegevens
+</title>
+<ptxt>
+De TCM slaat de motor- en rijomstandigheden op in zijn geheugen op het moment dat een storing wordt waargenomen. Deze gegevens worden de &#34;Freeze-framegegevens&#34; genoemd.
+</ptxt>
+<ptxt>
+Op die manier kunnen de motor- en de rijomstandigheden (b.v., was de motor warm of niet, draaide de motor of niet) op het moment waarop de storing werd waargenomen, worden achterhaald door het aflezen van de freeze-framegegevens.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "U8T40A5121008003">
+<title>
+Voor een niet-E-OBD-model
+</title>
+<ptxt>
+Voor het regelsysteem van de automatische transmissie heeft de TCM de volgende functies. Zie 
+<intxref refid = "U8T40A5124048">Onderzoek van de TCM en haar circuits:5 A&#x002F;T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wanneer het contactslot op ON wordt gezet en er geen storing in het A&#x002F;T-regelsysteem is waargenomen, licht het transmissiewaarschuwingslampje (1) op gedurende 2 seconden nadat het contactslot op ON is gezet en gaat het daarna uit voor de controle van de gloeilamp.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wanneer de TCM een storing in het A&#x002F;T-regelsysteem vaststelt, gaat het transmissiewaarschuwingslampje (1) branden en wordt de storing-DTC in het TCM-geheugen opgeslagen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Met een SUZUKI-uitleesapparaat is via de gegevensverbindingsstekker (DLC) (2) communicatie mogelijk met de TCM. De diagnose-informatie kan gecontroleerd en gewist worden door het SUZUKI-uitleesapparaat te gebruiken.
+</ptxt>
+</item>
+</list1>
+<servicetool>
+<servicetoolitem id = "L5A229">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI-diagnosecodeuitleesapparaat (SUZUKISDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I8T40A511002.swf" width = "88.000mm" height = "109.011mm" ver = "01" gw = "189" gh = "292"/>
+</figure>
+<topic id = "U8T40A5121008006">
+<title>
+Opsporingslogica van 2 rijcycli
+</title>
+<ptxt>
+De storing die tijdens de eerste rijcyclus is waargenomen, wordt in het TCM-geheugen opgeslagen (als een voorlopige DTC en freeze-framegegevens), maar het storingsindicatielampje gaat nog niet branden. Het lampje gaat pas branden wanneer dezelfde storing voor de tweede maal wordt waargenomen in de daaropvolgende rijcyclus.
+</ptxt>
+</topic>
+<topic id = "U8T40A5121008007">
+<title>
+Voorlopige DTC
+</title>
+<ptxt>
+Een voorlopige DTC is een DTC die wordt waargenomen en voorlopig opgeslagen na 1 rijcyclus waarin de DTC is waargenomen in de opsporingslogica van 2 rijcycli.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

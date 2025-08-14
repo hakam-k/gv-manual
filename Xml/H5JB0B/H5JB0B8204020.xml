@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0B8204020" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1042: Utasoldali légzsák működtető áramkör ellenállása alacsony
+</title>
+<servinfosub id = "H5JB0B8204020001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H5JB0B8204019">DTC B1041: Utasoldali légzsák múködtető áramkör ellenállása magas</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Mindenképpen olvassa el a VIGYÁZAT címszóval jelzett figyelmeztetéseket a következő fejezetben: &#8220;Légzsák diagnosztikai rendszerének ellenőrzési folyamata&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "H5JB0B8204020002">
+<title>
+DTC akkor jelenik meg, amikor
+</title>
+<ptxt>
+Az utasoldali légzsák (felfúvódó) modul, a vezetékköteg és a csatlakozó érintkező együttes ellenállása egy meghatározott ideig az előírt érték alatt van.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0B8204020003">
+<title>
+Áramlási teszt leírása
+</title>
+<ptxt>
+<emph etype = "bold">
+1. lépés: Ellenőrizze, hogy a hiba az utasoldali légzsák (felfúvódó) modulban van-e.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+2. lépés: Ellenőrizze az utasoldali légzsák (felfúvódó) modul működtető áramkörét. (A &#8220;G68&#8221; és &#8220;G65&#8221; csatlakozók között)
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+3. lépés: Ellenőrizze az utasoldali légzsák (felfúvódó) modul működtető áramkörét. (A &#8220;G67&#8221; és &#8220;G47&#8221; vagy a &#8220;G67&#8221; és &#8220;G46&#8221; csatlakozók között)
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0B8204020004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H5JB0B8204020005">
+<testgroup>
+<test1>
+<ptxt>
+Kikapcsolt gyújtásnál húzza szét az utasoldali légzsák (felfúvódó) modul csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az utasoldali légzsák (felfúvódó) modul megfelelő csatlakozását a &#8220;G65&#8221; csatlakozó érintkezőinél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, akkor csatlakoztassa az (A), (B) és (D) célszerszámot a &#8220;G65&#8221; csatlakozóra.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B064">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B065">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B066">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820033.swf" width = "90.000mm" height = "54.683mm" ver = "01" gw = "173" gh = "138"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az SDM DTC-hibakódját.
+</ptxt>
+</test1>
+<question>
+Bekapcsolt gyújtásnál a DTC B1042 hibakód jelenik meg?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Kapcsolja ki a gyújtást. Cserélje ki az utasoldali légzsák (felfúvódó) modult, lásd: 
+<intxref refid = "H5JB0B8206007">Utasoldali légzsák (felfúvódó) modul leszerelése és felszerelése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kikapcsolt gyújtásnál húzza szét a &#8220;G67&#8221; csatlakozót a kesztyűtartó mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a kapcsolat a műszerfal vezetékkötege felé a &#8220;G67-1&#8221; és &#8220;G67-2&#8221; érintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, akkor csatlakoztassa a (B) és (C) célszerszámot a &#8220;G67&#8221; csatlakozóra, amelyet az 1. lépésben húzott szét.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B067">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B068">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820034H.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "0" gh = "0"/>
+</testfigure>
+</test1>
+<test1>
+<paragroup>
+<ptxt>
+Ellenőrizze az SDM DTC-hibakódját.
+</ptxt>
+</paragroup>
+</test1>
+<question>
+Bekapcsolt gyújtásnál a DTC B1042 hibakód jelenik meg?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+A &#8220;BLU&#x002F;RED&#8221; áramkör zárlatos a &#8220;YEL&#x002F;RED&#8221; áramkörrel, a &#8220;BLU&#x002F;RED&#8221; áramkör vagy a &#8220;YEL&#x002F;RED&#8221; áramkör zárlatos egy másik áramkörrel. (A &#8220;G68&#8221; és &#8220;G65&#8221; csatlakozók között)
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Kikapcsolt gyújtásnál húzza szét az SDM &#8220;G47&#8221; vagy &#8220;G46&#8221; csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a kapcsolat az SDM felé a &#8220;G47-3&#8221; és &#8220;G47-4&#8221; vagy a &#8220;G46-5&#8221; és &#8220;G46-6&#8221; érintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben van, akkor oldja ki a rövidre záró sínt az SDM csatlakozójában a célszerszám készlet (A) kioldó szerszámának (1) beillesztésével.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást a &#8220;G47-3&#8221; és &#8220;G47-4&#8221; érintkezők között &#x005B;A&#x005D; vagy a &#8220;G46-5&#8221; és &#8220;G46-6&#8221; érintkezők között &#x005B;B&#x005D; a (B) és (C) célszerszám csatlakoztatásával.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B069">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B070">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+<servicetoolitem id = "L8B071">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-77320">
+09932&#8211;77320
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820035H.swf" width = "90.000mm" height = "107.247mm" ver = "01" gw = "186" gh = "285"/>
+</testfigure>
+</test1>
+<question>
+Az ellenállás mindenhol 0,65 &#937; vagy annál magasabb?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó SDM-et és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;BLU&#x002F;RED&#8221; áramkör zárlatos a &#8220;YEL&#x002F;RED&#8221; áramkörrel, a &#8220;BLU&#x002F;RED&#8221; áramkör vagy a &#8220;YEL&#x002F;RED&#8221; áramkör zárlatos egy másik áramkörrel. (A &#8220;G67&#8221; és &#8220;G47&#8221; vagy a &#8221;G67&#8220; és &#8220;G46&#8221; csatlakozók között)
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Az ellenőrzés és a javítás elvégzése után hajtsa végre a következőket:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Újból kösse be a légzsákrendszer összes elemét, és ellenőrizze, hogy minden elem jól van-e felerősítve.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Törölje a DTC-t, ha van, lásd: 
+<intxref refid = "H5JB0B8204005">DTC törlése</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A hiba kijavításának megerősítése érdekében ismételje meg a következő műveletet: 
+<intxref refid = "H5JB0B8204001">Légzsák diagnosztikai rendszerének ellenőrzése</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

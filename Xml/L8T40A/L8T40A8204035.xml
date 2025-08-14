@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A8204035" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1324 &#x002F; B1328: Corto al circuito di alimentazione nel circuito attivatore airbag laterale sinistro &#x002F; destro
+</title>
+<servinfosub id = "L8T40A8204035001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A8204032">DTC B1321 &#x002F; B1325: Resistenza alta circuito di attivazione airbag laterale Conducente &#x002F; Passeggero</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Accertarsi di seguire le istruzioni riportate in ATTENZIONE in &#8220;Flusso di controllo diagnostico sistema airbag&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "L8T40A8204035002">
+<title>
+Il DTC viene generato quando
+</title>
+<ptxt>
+La tensione misurata al circuito attivatore dell&apos;airbag laterale (sinistro o destro) e superiore ad un valore specificato per un determinato tempo.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A8204035003">
+<title>
+Descrizione test di flusso
+</title>
+<ptxt>
+<emph etype = "bold">
+Punto 1: Controllare se il malfunzionamento e nel modulo (attivatore) airbag laterale.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Punto 2: Controllare il circuito attivatore airbag nel cablaggio pavimento.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Punto 3: Controllare il circuito attivatore airbag nel cablaggio del sedile.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A8204035004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A8204035005">
+<testgroup id = "L8T40A8204035006">
+<test1>
+<ptxt>
+Con il commutatore d&apos;accensione in posizione OFF, scollegare il connettore del modulo attivatore (attivatore) dell&apos;airbag laterale sotto il cuscino del sedile anteriore.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che non vi siano problemi di collegamento sul modulo airbag sinistro o destro (attivatore) ai terminali nel connettore &#8220;L25&#8221; o &#8220;L30&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se OK allora connettere gli strumenti speciali (B) e (C) al connettore del modulo generatore airbag laterale staccato al punto 1.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0152">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0153">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I4RS0A820032I.swf" width = "90.000mm" height = "52.567mm" ver = "01" gw = "117" gh = "132"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Controllo DTC SDM.
+</ptxt>
+</test1>
+<question>
+Con il commutatore di accensione su ON, il DTC B1324 o B1328 e ancora presente?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A8204035007">
+<test1>
+<ptxt>
+Con il commutatore d&apos;accensione in posizione OFF, scollegare lo strumento speciale (B), (C) e il connettore SDM &#8220;L33&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Togliere la barra di corto nel connettore SDM inserendo lo strumento di sgancio (1) incluso nell&apos;attrezzo speciale (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la tensione tra il terminale &#8220;L33-1&#8221; e la massa della carrozzeria, il terminale &#8220;L33-2&#8221; e la massa della carrozzeria (per il DTC B1324) o il terminale &#8220;L33-3&#8221; e la massa della carrozzeria, o tra il terminale &#8220;L33-4&#8221; e la massa della carrozzeria (per il DTC B1328).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0154">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0155">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0156">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78340">
+09932&#8211;78340
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820048I.swf" width = "90.000mm" height = "61.739mm" ver = "01" gw = "215" gh = "158"/>
+</testfigure>
+</test1>
+<question>
+Con il commutatore d&apos;accensione in posizione ON, la tensione e 1 V o inferiore?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Rimpiazzare con un SDM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1324: Riparare il corto a massa nel circuito del filo &#8220;GRY&#x002F;RED&#8221; o &#8220;GRY&#8221; nel cablaggio del pavimento.
+</ptxt>
+<ptxt>
+DTC B1328: Riparare il corto a massa tra il circuito del filo &#8220;BRN&#x002F;WHT&#8221; o &#8220;BRN&#8221; nel cablaggio del pavimento.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A8204035008">
+<test1>
+<ptxt>
+Con il commutatore d&apos;accensione in posizione OFF, staccare gli strumenti speciali (B) e (C) poi ricollegare i connettori &#8220;L25&#8221; o &#8220;L30&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Scollegare il connettore del modulo airbag laterale (gonfiatore) &#8220;Q07&#8221; o &#8220;Q05&#8221; dal modulo stesso.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare e non vi siano problemi di collegamento al modulo (attivatore) dell&apos;airbag laterale al terminale del connettore.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se OK, allora collegare gli strumenti speciali (A), (B) e (C) al connettore (attivatore) dell&apos;airbag laterale.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0157">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0158">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0159">
+<s-part>
+(D)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I9T401822013I.swf" width = "90.000mm" height = "51.508mm" ver = "01" gw = "196" gh = "129"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Controllo DTC SDM.
+</ptxt>
+</test1>
+<question>
+Con il commutatore di accensione su ON, il DTC B1064 o B1068 e ancora presente?
+</question>
+<result>
+SI
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1324: Riparare il corto a massa nel circuito del filo &#8220;GRY&#x002F;RED&#8221; o &#8220;GRY&#8221; nel cablaggio del sedile.
+</ptxt>
+<ptxt>
+DTC B1328: Riparare il corto a massa nel circuito del filo &#8220;BRN&#x002F;WHT&#8221; o &#8220;BRN&#8221; nel cablaggio del sedile.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il modulo attivatore airbag laterale riferimento a 
+<intxref refid = "L8T40A8206009">Montaggio e installazione del modulo airbag laterale (attivatore)</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Una volta completato il lavoro di controllo e riparazione, eseguire i punti seguenti.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ricollegare tutti i componenti del sistema airbag, assicurandosi che siano montati correttamente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cancellare i DTC facendo riferimento a 
+<intxref refid = "L8T40A8204005">Spazio libero DTC</intxref>
+, se presenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ripetere 
+<intxref refid = "L8T40A8204001">Controllo diagnostico sistema airbag</intxref>
+ per confermare che il problema e stato risolto.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

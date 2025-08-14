@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A4604024" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1039: Guasto interno gruppo sensore G &#x002F; velocità d&apos;imbardata
+</title>
+<servinfosub id = "L8T40A4604024001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevamento DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+È stato rilevato un guasto interno gruppo sensore G &#x002F; velocità d&apos;imbardata.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gruppo Sensore G &#x002F; velocità d&#8217;imbardata
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modulo di controllo ESP&#174;
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A4604024002">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A4604024003">
+<testgroup id = "L8T40A4604024004">
+<question>
+È stato eseguito un &#8220;Controllo programma di stabilità elettronica&#8221;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A4604001">Controllo del programma di stabilità elettronica</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A4604024005">
+<title>
+Controllo DTC
+</title>
+<test1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione nella posizione ON e controllare il DTC.
+</ptxt>
+</test1>
+<question>
+I DTC C1034 e&#x002F;o C1073 sono rilevati?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare alla tabella del diagramma di flusso diagnostico applicabile.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A4604024006">
+<title>
+Controllare la calibrazione del sensore
+</title>
+<test1>
+<ptxt>
+Calibrare il gruppo sensore G &#x002F; velocità d&apos;imbardata. 
+<intxreftitleoff1 refid = "L8T40A4606002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Cancellare tutti i DTC e ricontrollare i DTC.
+</ptxt>
+</test1>
+<question>
+Il DTC C1039 viene ancora rilevato?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Calibrazione del gruppo sensore G &#x002F; velocità di imbardata incompleta.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A4604024007">
+<title>
+Controllare il gruppo sensore G &#x002F; velocità d&apos;imbardata
+</title>
+<test1>
+<ptxt>
+Controllare il gruppo sensore G &#x002F; velocità d&apos;imbardata. 
+<intxreftitleoff1 refid = "L8T40A4606016"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+È in buone condizioni?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Sostituire con un ESP&#174; gruppo unità idraulica &#x002F; modulo di controllo si è certi funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il gruppo velocità d&apos;imbardata &#x002F; sensore G.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

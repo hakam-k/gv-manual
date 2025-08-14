@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1124025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0133
+</title>
+<servinfosub id = "L8T40A1124025001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.410in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.815in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+P0133: Circuito Sensore O2 Risposta rallentata
+</emph>
+</ptxt>
+<ptxt>
+Rapporto del valore integrato della variazione di uscita del sensore A&#x002F;F della variazione di regolazione carburante a breve termine supera il valore specificato nelle condizioni specificate di guida.
+</ptxt>
+<ptxt>
+(2 logica di rilevamento D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensore A&#x002F;F e&#x002F;o il suo circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1124025002">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1124013">DTC P0031 &#x002F; P0032:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1124025003">
+<title>
+Procedura di conferma DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando si esegue una prova su strada, scegliere un luogo in cui non ci sia traffico o possibilita di un incidente e fare molta attenzione durante la prova per evitare incidenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il test su strada deve essere eseguito con 2 persone, un guidatore e un collaudatore, su una strada in pianura.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Se nella procedura di conferma DTC vengono rilevati DTC diversi da quelli cercati, accertarsi di fare la rilevazione guasto del DTC precedentemente rilevato.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Guidare il veicolo a 60 &#8211; 100 km&#x002F;h (37 &#8211; 62 miglia&#x002F;h) per 6 min. (tenere la farfalla aperta costantemente in questa fase.)
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1124025004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A1124025005">
+<testgroup id = "L8T40A1124025006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1124001">Verifica del sistema di controllo motore e emissioni:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124025007">
+<title>
+Controllo DTC
+</title>
+<question>
+Esistono altri DTC oltre a P0133?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Andare alla risoluzione dei problemi per il DTC corrispondente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124025008">
+<title>
+Controllo circuito segnale sensore A&#x002F;F
+</title>
+<test1>
+<ptxt>
+Controllare il circuito sensore A&#x002F;F facendo riferimento al passo da 3 di 
+<intxref refid = "L8T40A1124024">DTC P0131 &#x002F; P0132 &#x002F; P0134 &#x002F; P2195 &#x002F; P2196 &#x002F; P2237:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Le condizioni sono buone?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire il cablaggio preassemblato difettoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124025009">
+<title>
+Ricontrollare il DTC
+</title>
+<test1>
+<ptxt>
+Sostituire il sensore A&#x002F;F. 
+<intxreftitleoff1 refid = "L8T40A1326013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Eseguire la procedura di conferma DTC e controllare il DTC.
+</ptxt>
+</test1>
+<question>
+Il DTC P0133 viene ancora rilevato?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+FINE
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

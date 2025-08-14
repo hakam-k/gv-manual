@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A1114088" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Radiator Cooling Fan High Speed Control System Check
+</title>
+<servinfosub id = "S6JB0A1114088001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0A1114087">Radiator Cooling Fan Low Speed Control System Check:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A1114088002">
+<title>
+Troubleshooting
+</title>
+<attention1>
+<ptxt>
+Keep hands, tools, and clothing away from engine cooling fan to help prevent personal injury. This fan is electric and can come on whether or not the engine is running. The fan can start automatically in response to the ECT sensor with the ignition switch at the &#8220;ON&#8221; position.
+</ptxt>
+</attention1>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Before performed troubleshooting, be sure to read the 
+<intxref refid = "S6JB0A1110004">Precautions of ECM Circuit Inspection:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When measuring circuit voltage, resistance and&#x002F;or pulse signal at ECM connector, connect the special tool to ECM and&#x002F;or the ECM connectors referring to 
+<intxref refid = "S6JB0A1114080">Inspection of ECM and Its Circuits:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "S6JB0A1114088003">
+<testgroup>
+<question>
+Is there DTC(s) of ECT sensor circuit (DTC P0116 &#x002F; P0117 &#x002F; P0118) and&#x002F;or radiator cooling fan circuit (DTC P0480)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to corresponding DTC flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Low speed radiator cooling fan control circuit check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Start engine and select &#8220;DATA LIST&#8221; mode on scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Warm up engine until coolant temp. is 97.5 &#176;C, 207.5 &#176;F or higher and A&#x002F;C switch turns OFF (if equipped with A&#x002F;C). (If engine coolant temp. dose not rise, check engine cooling system or ECT sensor.)
+</ptxt>
+</test1>
+<question>
+Is radiator cooling fan started at low speed when engine coolant temp. reached above temp.?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Perform from Step 2 to Step 5 in 
+<intxref refid = "S6JB0A1114087">Radiator Cooling Fan Low Speed Control System Check:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+High speed radiator cooling fan control circuit check
+</title>
+<test1>
+<ptxt>
+Start engine and select &#8220;DATA LIST&#8221; mode on scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Warm up engine until coolant temp. is 102.5 &#176;C, 216.5 &#176;F or higher and A&#x002F;C switch turns OFF (if equipped with A&#x002F;C). (If engine coolant temp. dose not rise, check engine cooling system or ECT sensor.)
+</ptxt>
+</test1>
+<question>
+Is radiator cooling fan started at high speed when engine coolant temp. reached above temp?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Radiator cooling fan control system is in good condition.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Perform from Step 8 to Step 19 in DTC P0480 diag. flow.
+</ptxt>
+<ptxt>
+If OK, Go to Step 4.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect radiator cooling fan relay No.3 from relay box with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ON ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between &#8220;BLU&#x002F;BLK&#8221; wire terminal of radiator cooling fan relay No.3 connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is voltage 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;BLU&#x002F;BLK&#8221; wire is open circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Radiator cooling fan control check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from radiator cooling fan motor No.2 with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between &#8220;BLU&#8221; wire terminal of radiator cooling fan relay No.3 connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is voltage 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;BLU&#8221; wire is shorted to other circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire circuit check
+</title>
+<test1>
+<ptxt>
+Measure resistance between &#8220;BLU&#8221; wire terminals of radiator cooling fan relay No.3 connector and radiator cooling fan motor No.2 connector with ignition switch turned OFF.
+</ptxt>
+</test1>
+<question>
+Is resistance below 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;BLU&#8221; wire is open or high resistances.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect radiator cooling fan relay No.2 from relay box.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between &#8220;BLK&#8221; wire terminal of radiator cooling fan relay No.2 connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is resistance below 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;BLK&#8221; wire is open circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Radiator cooling fan relay check
+</title>
+<test1>
+<ptxt>
+Check radiator cooling fan relay referring to 
+<intxref refid = "S6JB0A1616011">Radiator Cooling Fan Relay Inspection:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace radiator cooling fan relay.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Radiator cooling fan motor check
+</title>
+<test1>
+<ptxt>
+Check radiator cooling fan motor referring to 
+<intxref refid = "S6JB0A1616010">Radiator Cooling Fan Motor On-Vehicle Inspection:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace radiator cooling fan motor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

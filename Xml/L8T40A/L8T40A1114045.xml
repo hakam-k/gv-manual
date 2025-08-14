@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114045" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0403: Circuito di controllo del ricircolo del gas esausto
+</title>
+<servinfosub id = "L8T40A1114045001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1114044">DTC P0401 &#x002F; P0402: Rilevato insufficiente &#x002F; eccessivo flusso di ricircolo del gas esausto:M16A e J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1114045002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.370in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.813in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La tensione di monitoraggio della valvola EGR e diversa dal comando di uscita in piu di uno dei quattro poli.
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 1)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito valvola EGR aperto
+</ptxt>
+</item>
+<item>
+<ptxt>
+Valvola EGR
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1114045003">
+<title>
+Procedura di conferma DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando si esegue una prova su strada, scegliere un luogo in cui non ci sia traffico o possibilita di un incidente e fare molta attenzione durante la prova per evitare incidenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il test su strada deve essere eseguito con 2 persone, un guidatore e un collaudatore, su una strada in pianura.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Collegare lo scanner al DCL controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e cancellare il DTC usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Guidare il veicolo a un regime di 2000 &#8211; 3500 g&#x002F;min.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tenere la suddetta velocita per 1 min. (In questa fase l&#8217;apertura della valvola a farfalla e tenuta costante).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fermare il veicolo e controllare DTC e DTC in corso.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1114045004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<attention3>
+<ptxt>
+Prima di eseguire questa procedura di individuazione guasto, leggere le precauzioni per l&#8217;individuazione DTC facendo riferimento a 
+<intxref refid = "L8T40A1110003">Precauzione per la risoluzione dei problemi DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "L8T40A1114045005">
+<testgroup id = "L8T40A1114045006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114001">Verifica del sistema di controllo motore e emissioni:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114045007">
+<title>
+Controllo del circuito di alimentazione della valvola EGR.
+</title>
+<test1>
+<ptxt>
+Con l&#8217;interruttore di accensione spento, scollegare il connettore della valvola EGR.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la tensione tra il morsetto filo &#8220;BLU&#x002F;BLK&#8221; del connettore della valvola EGR e la massa carrozzeria veicolo, con il commutatore di avviamento posizionato su ON.
+</ptxt>
+</test1>
+<question>
+La tensione di controllo e 10 &#8211; 14 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il filo &#8220;BLU&#x002F;BLK&#8221; e un circuito aperto.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114045008">
+<title>
+Verifica del circuito
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori dal modulo ECM controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la tensione tra la massa del motore e ciascuno dei terminale dei fili &#8220;YEL&#x002F;BLK&#8221;, &#8220;YEL&#x002F;RED&#8221;, &#8220;YEL&#x002F;GRN&#8221;, &#8220;YEL&#8221; del connettore della valvola EGR.
+</ptxt>
+</test1>
+<question>
+Ciascuna tensione e 0 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Il filo(i) difettoso(i) e in corto su un altro circuito.
+</ptxt>
+<ptxt>
+Se i cavi sono OK, sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114045009">
+<title>
+Verifica del circuito
+</title>
+<test1>
+<ptxt>
+Con la chiavetta di accensione in posizione OFF, misurare la tensione tra la massa del motore e ciascuno dei terminale dei fili &#8220;YEL&#x002F;BLK&#8221;, &#8220;YEL&#x002F;RED&#8221;, &#8220;YEL&#x002F;GRN&#8221;, &#8220;YEL&#8221; del connettore della valvola EGR.
+</ptxt>
+</test1>
+<question>
+La resistenza e infinita?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Il filo(i) difettoso(i) e in corto a sul circuito di massa.
+</ptxt>
+<ptxt>
+Se i cavi sono OK, sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114045010">
+<title>
+Controllo corto circuito sul circuito di controllo della valvola EGR
+</title>
+<test1>
+<ptxt>
+Con la chiavetta di accensione in posizione OFF, misurare la resistenza tra ciascun terminale dei fili (&#8220;YEL&#x002F;BLK&#8221;, &#8220;YEL&#x002F;RED&#8221;, &#8220;YEL&#x002F;GRN&#8221; e &#8220;YEL&#8221;) del ciascun filo del circuito di controllo della valvola EGR.
+</ptxt>
+</test1>
+<question>
+Ciascuna resistenza e infinita?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il filo(i) difettoso(i) e in corto .
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114045011">
+<title>
+Controllo del circuito della bobina del motore a passo della valvola EGR.
+</title>
+<test1>
+<ptxt>
+Con l&#8217;interruttore di accensione spento, collegare il connettore della valvola EGR.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra i terminali &#8220;E23-1&#x002F;16&#8221; e ciascun &#8220;C37-3&#8221;, &#8220;C37-4&#8221;, &#8220;C37-5&#8221;, &#8220;C37-6&#8221; del connettore ECM.
+</ptxt>
+</test1>
+<question>
+Ciascuna resistenza e 20 &#8211; 31 &#937; a 20 &#176;C, 68 &#176;F?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+ECM guasto Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114045012">
+<title>
+Controllo valvola EGR
+</title>
+<test1>
+<ptxt>
+Controllare la resistenza della valvola EGR facendo riferimento a 
+<intxref refid = "L8T40A1216008">Verifica della valvola EGR:M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+La resistenza rientra nei parametri specificati?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Il filo (i) difettoso(i) e interrotto o circuito ad alta resistenza. Se i cavi sono OK, sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Valvola EGR difettosa.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

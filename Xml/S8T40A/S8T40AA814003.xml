@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40AA814003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Troubleshooting for Lost Communication
+</title>
+<servinfosub id = "S8T40AA814003001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40AA812001">CAN Communication System Circuit Diagram:M16A and J20A Model</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40AA814003002">
+<title>
+Diagnosis Procedure
+</title>
+<attention3>
+<ptxt>
+Before executing items in this flow, be sure to perform 
+<intxref refid = "S8T40AA814001">CAN Communication System Check:M16A and J20A Model</intxref>
+.
+</ptxt>
+</attention3>
+<ptxt>
+When &#8220;Lost Communication&#8221; is detected in any control modules, perform inspection using the following procedure.
+</ptxt>
+<s1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Connect SUZUKI scan tool to DLC (1) and ignition switch to ON.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L10H101">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI scan tool (SUZUKI-SDT)
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I9T401720004.swf" width = "88.000mm" height = "58.917mm" ver = "01" gw = "138" gh = "150"/>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Using &#8220;Communication Bus Check&#8221; under &#8220;Bus Check&#8221; of SUZUKI scan tool (SUZUKI-SDT), check for control module disabled to communicate (no display on screen).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Based on above check results, select applicable diagnosis flow code (A to K) from 
+<intxref refid = "S8T40AA814003003">Diagnosis Flow Selection Table</intxref>
+ and perform troubleshooting according to selected diagnosis flow.
+</ptxt>
+<attention3>
+<ptxt>
+If it is not possible to select suitable diagnosis flow code from &#8220;Diagnosis Flow Selection Table&#8221; 
+<intxref refid = "S8T40AA814003003">Diagnosis Flow Selection Table</intxref>
+ or &#8220;two or more diagnosis flow codes are selectable&#8221;, perform 
+<intxref refid = "S8T40AA814004">Troubleshooting for Communication Bus Off:M16A and J20A Model</intxref>
+.
+</ptxt>
+</attention3>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40AA814003003">
+<title>
+Diagnosis Flow Selection Table
+</title>
+<attention3>
+<ptxt>
+Diagnosis flow codes A to J link with CAN communication lines &#x005B;a&#x005D; to &#x005B;j&#x005D; of 
+<intxref refid = "S8T40AA812001">CAN Communication System Circuit Diagram:M16A and J20A Model</intxref>
+.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.689in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.520in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Communication disabled control module &#x002F; sensor
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Diagnosis flow code
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM and ABS &#x002F; ESP&#174; control module
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+B
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Combination meter
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+C
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Steering angle sensor
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+D
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Keyless start control module
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+E
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4WD control module
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+F
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Other than BCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+G
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+H
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+HVAC control module
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+I
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+All control module communicating by means of CAN
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+J
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+BCM
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+K
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ABS &#x002F; ESP&#174; control module
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40AA814003004">
+<title>
+Troubleshooting
+</title>
+<topic id = "S8T40AA814003007">
+<title>
+Diagnosis flow code: A
+</title>
+<diag type = "test" id = "S8T40AA814003008">
+<testgroup id = "S8T40AA814003005">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from ECM and ABS &#x002F; ESP&#174; control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at ECM and ABS &#x002F; ESP&#174; control module connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between ECM connector and ABS &#x002F; ESP&#174; control module connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003006">
+<title>
+Power and ground circuit check of ECM
+</title>
+<test1>
+<ptxt>
+Check ECM power and ground circuits. 
+<intxreftitleoff1 refid = "S8T40A1114081"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003019">
+<title>
+ECM CAN terminating resistance check
+</title>
+<test1>
+<ptxt>
+Connect connector to ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check CAN terminating resistance in ECM as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ESP&#174; model:
+</ptxt>
+<ptxt>
+Measure Resistance between &#8220;E53-43&#8221; and &#8220;E53-44&#8221; terminal of ESP&#174; control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Non-ESP&#174; model:
+</ptxt>
+<ptxt>
+Measure Resistance between &#8220;E03-10&#8221; and &#8220;E03-8&#8221; terminal of ABS control module connector.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is resistance 114 &#8211; 134 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ABS &#x002F; ESP&#174; control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003009">
+<title>
+Diagnosis flow code: B
+</title>
+<diag type = "test" id = "S8T40AA814003010">
+<testgroup id = "S8T40AA814003020">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from BCM and ABS &#x002F; ESP&#174; control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at BCM and ABS &#x002F; ESP&#174; control module connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between BCM connector and ABS &#x002F; ESP&#174; control module connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ABS &#x002F; ESP&#174; control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003011">
+<title>
+Diagnosis flow code: C
+</title>
+<diag type = "test" id = "S8T40AA814003012">
+<testgroup id = "S8T40AA814003021">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from BCM and combination meter.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at BCM and combination meter connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between BCM connector and combination meter connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003022">
+<title>
+Power and ground circuit check of combination meter
+</title>
+<test1>
+<ptxt>
+Check combination meter power and ground circuits.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good combination meter and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003013">
+<title>
+Diagnosis flow code: D
+</title>
+<diag type = "test" id = "S8T40AA814003014">
+<testgroup id = "S8T40AA814003023">
+<title>
+Power and ground circuit check of steering angle sensor
+</title>
+<test1>
+<ptxt>
+Check steering angle sensor power and ground circuits.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003024">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from steering angle sensor and ESP&#174; control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at steering angle sensor and ESP&#174; control module connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between steering angle sensor connector and ESP&#174; control module connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace steering angle sensor.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003015">
+<title>
+Diagnosis flow code: E
+</title>
+<diag type = "test" id = "S8T40AA814003016">
+<testgroup id = "S8T40AA814003025">
+<title>
+Power and ground circuit check of keyless start control module
+</title>
+<test1>
+<ptxt>
+Check keyless start control module power and ground circuits. 
+<intxreftitleoff1 refid = "S8T40AA504015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003026">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from keyless start control module and BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at keyless start control module and BCM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between keyless start control module connector and BCM connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good keyless start control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003017">
+<title>
+Diagnosis flow code: F
+</title>
+<diag type = "test" id = "S8T40AA814003018">
+<testgroup id = "S8T40AA814003027">
+<title>
+Power and ground circuit check of 4WD control module
+</title>
+<test1>
+<ptxt>
+Check 4WD control module power and ground circuits.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003028">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from 4WD control module and ABS &#x002F; ESP&#174; control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at 4WD control module and ABS &#x002F; ESP&#174; control module connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between 4WD control module connector and ABS &#x002F; ESP&#174; control module connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good 4WD control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003029">
+<title>
+Diagnosis flow code: G
+</title>
+<diag type = "test" id = "S8T40AA814003030">
+<testgroup id = "S8T40AA814003031">
+<title>
+Power and ground circuit check of BCM
+</title>
+<test1>
+<ptxt>
+Check BCM power and ground circuits. 
+<intxreftitleoff1 refid = "S8T40AA204007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003032">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from BCM and ABS &#x002F; ESP&#174; control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at BCM and ABS &#x002F; ESP&#174; control module connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between BCM connector and ABS &#x002F; ESP&#174; control module connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good BCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003033">
+<title>
+Diagnosis flow code: H
+</title>
+<diag type = "test" id = "S8T40AA814003034">
+<testgroup id = "S8T40AA814003035">
+<title>
+Power and ground circuit check of TCM
+</title>
+<test1>
+<ptxt>
+Check TCM power and ground circuits. 
+<intxreftitleoff1 refid = "S8T40A5114050"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003036">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from TCM and BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at TCM and BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between TCM connector and BCM connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003037">
+<title>
+Diagnosis flow code: I
+</title>
+<diag type = "test" id = "S8T40AA814003038">
+<testgroup id = "S8T40AA814003039">
+<title>
+Power and ground circuit check of HVAC control module
+</title>
+<test1>
+<ptxt>
+Check HVAC control module power and ground circuits.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003040">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from HVAC control module and BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at HVAC control module and BCM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between HVAC control module connector and BCM connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good HVAC control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003041">
+<title>
+Diagnosis flow code: J
+</title>
+<diag type = "test" id = "S8T40AA814003043">
+<testgroup id = "S8T40AA814003044">
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect &#8220;G31&#8221; connector from BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to CAN communication circuit at BCM connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check CAN communication circuits between DLC and BCM connector for breaking.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40AA814003046">
+<title>
+Combination meter CAN terminating resistance check
+</title>
+<test1>
+<ptxt>
+Connect &#8220;G31&#8221; connector to BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from ABS &#x002F; ESP&#174; control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between CAN High terminal and CAN Low terminal on DLC.
+</ptxt>
+</test1>
+<question>
+Is resistance 114 &#8211; 134 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40AA814004">Troubleshooting for Communication Bus Off:M16A and J20A Model</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good BCM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+<topic id = "S8T40AA814003045">
+<title>
+Diagnosis flow code: K
+</title>
+<diag type = "test" id = "S8T40AA814003047">
+<testgroup id = "S8T40AA814003048">
+<title>
+Power and ground circuit check of control module that fails to communicate
+</title>
+<test1>
+<ptxt>
+Check power and ground circuits of control module that fails to communicate (BCM or ABS &#x002F; ESP&#174; control module).
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good control module (BCM or ABS &#x002F; ESP&#174; control module) and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair power and&#x002F;or ground circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

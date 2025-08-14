@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1134029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306
+</title>
+<attention3>
+<ptxt>
+Per l&#8217;identificazione di ciascun cilindro e bancata, fare riferimento a 
+<intxref refid = "L8T40A1130007">Precauzioni per l&apos;identificazione del cilindro e bancata:N32A</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "L8T40A1134029001">
+<title>
+Descrizione del sistema
+</title>
+<ptxt>
+L&#8217;ECM misura l&#8217;angolo dell&#8217;albero a gomito sulla base del segnale dell&#8217;impulso proveniente dal sensore CKP e dal sensore CMP per ciascun cilindro. Se rileva un grande cambiamento nella velocità dell&#8217;angolo dell&#8217;albero a gomito, stabilisce la presenza di una mancata accensione. Quando il numero di mancate accensione calcolato dall&#8217;ECM supera le condizioni di rilevamento del DTC, si determina il cilindro in cui è avvenuta la mancata accensione e lo produce come DTC.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1134029002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.295in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.909in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0300: Rilevato mancata accensione casuale&#x002F;in più cilindri
+</emph>
+</ptxt>
+<ptxt>
+Questo DTC viene rilevato se viene soddisfatta una delle seguenti condizioni.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Le frequenze di mancate accensioni su 2 o più cilindri superano la frequenza di mancate accensioni specificate che provocano danni al convertitore catalitico. 
+</ptxt>
+<ptxt>
+(la MIL lampeggia di continuo fino a che si presenta questa mancata accensione).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Le frequenze di mancate accensioni su 2 o più cilindri superano la frequenza specificata di mancate accensioni con effetto negativo sulle emissioni di scarico.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(2 logica di rilevamento D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Carburante (pressione, mancanza di carburante o carburante di qualità scadente)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema di presa d&apos;aria
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema di scarico
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema di accensione
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema di alimentazione
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sistema meccanico motore
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0301: Rilevata mancata accensione del cilindro 1
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0302: Rilevata mancata accensione del cilindro 2
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+P0303: Rilevata mancata accensione del cilindro 3
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0304: Rilevata mancata accensione del cilindro 4
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0305: Cilindro 5 rilevata mancata accensione
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+P0306: Cilindro 6 rilevata mancata accensione
+</emph>
+</ptxt>
+<ptxt>
+Questo DTC viene rilevato se viene soddisfatta una delle seguenti condizioni.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La frequenza di mancate accensioni sul cilindro specificato supera la frequenza di mancate accensioni che provoca danni al convertitore catalitico. 
+</ptxt>
+<ptxt>
+(la MIL lampeggia di continuo fintanto si presenta questa mancata accensione).
+</ptxt>
+</item>
+<item>
+<ptxt>
+La frequenza di mancate accensioni sul cilindro specificato supera la frequenza di mancate accensioni specificate che influenza negativamente le emissioni di scarico.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(2 logica di rilevamento D&#x002F;C)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1134029003">
+<title>
+Procedura di conferma DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando si esegue un test su strada, scegliere un luogo in cui non ci sia traffico o possibilità di un incidente e fare molta attenzione durante il test per evitare incidenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prova su strada deve essere eseguita con 2 persone, un guidatore e un collaudatore su una strada in pianura.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Se nella procedura di conferma DTC vengono rilevati DTC diversi da quelli cercati, accertarsi di fare la rilevazione guasto del DTC precedentemente rilevato.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando si usa questa procedura assicurarsi che le seguenti condizioni vengano soddisfatte:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Livello carburante &#8805; 15,0&#x0025;
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Nel caso si sospetti che un carburante di qualità scadente sia miscelato nel serbatoio sostituire il carburante nel serbatoio con carburante di alta qualità.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Guidare il veicolo a 40 &#8211; 50 km&#x002F;h (25 &#8211; 31 miglia&#x002F;h) per 5 min.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Far andare il motore al minimo per 5 minuti.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Guidare il veicolo nelle condizioni dei dati &#34;freeze frame&#34; (regime motore, carico motore ecc.) memorizzato nell&apos;ECM per vari minuti.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1134029004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A1134029005">
+<testgroup id = "L8T40A1134029006">
+<question>
+È stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1134001">Verifica del sistema di controllo motore e emissioni:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134029007">
+<question>
+Il misuratore del livello del carburante indica livello &#8220;E&#8221; (vuoto)?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Aggiungere carburante e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134029008">
+<title>
+ispezione dell&apos;impianto di aspirazione aria e impianto di scarico
+</title>
+<test1>
+<ptxt>
+Controllare il sistema di aspirazione aria, sistema di scarico, tubi flessibili e tubi flessibili PCV per un eventuale intasamento o perdite.
+</ptxt>
+</test1>
+<question>
+È in buone condizioni?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire la parte difettosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134029009">
+<title>
+Controllo del sistema di accensione
+</title>
+<test1>
+<ptxt>
+Controllare sistema di accensione. 
+<intxreftitleoff1 refid = "L8T40A1834003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+È in buone condizioni?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire la parte difettosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134029010">
+<title>
+Controllo dell&apos;iniettore e del suo circuito
+</title>
+<test1>
+<ptxt>
+Controllare l&apos;iniettore del carburante e il suo circuito come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito iniettore carburante: 
+<intxreftitleoff1 refid = "L8T40A1734005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Iniettore carburante: 
+<intxreftitleoff1 refid = "L8T40A1736009"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+È in buone condizioni?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire la parte difettosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134029011">
+<title>
+Controllo del sistema meccanico del motore.
+</title>
+<test1>
+<ptxt>
+Controllare le parti o i sistemi meccanici del motore che possono causare un cattivo minimo del motore o una performance di scarsa qualità
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Compressione motore 
+<intxreftitleoff1 refid = "L8T40A1444001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Fasatura accensione: 
+<intxreftitleoff1 refid = "L8T40A1836005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Le condizioni sono buone?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire la parte difettosa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1134029012">
+<title>
+Contemporaneamente è stata rilevata l&#8217;attività di individuazione guasti di altri DTC
+</title>
+<question>
+Sono stati rilevati contemporaneamente dei DTC?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Andare alla risoluzione dei problemi per il DTC corrispondente.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1144122" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0606: Processore ECM
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Il DTC P0606 D6 (attuale) verrà rilevato raramente anche se il sistema si trova in condizioni normali al momento del collegamento della batteria con IG ON ed esso non può essere cancellato utilizzando la normale procedura descritta in 
+<intxref refid = "L8T40A1144006">Spazio libero DTC:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+In questo caso, cancellare i DTC P0606 D6 come segue.
+</ptxt>
+</item>
+<list2 type = "ordered">
+<item>
+<ptxt>
+Collegare lo scanner SUZUKI al DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Accendere l&apos;interruttore di accensione (ON).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Selezionare &#8220;Clear DTC (attuale P0606 D6)&#8221; in modalità &#8220;Trouble Code&#8221; dello strumento di diagnosi SUZUKI e seguire le istruzioni visualizzate su quest&apos;ultimo.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Condizioni per l&apos;applicazione delle procedure di rilevazione errori agli errori memorizzati:
+</ptxt>
+<ptxt>
+L&apos;errore è considerato come presente dopo un tentativo di avvio, oppure durante il funzionamento del motore.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se D6, D8 o D12 è presente, la spia d&apos;avvertimento iniezione (gravità 1 indicatore luminoso d&apos;avvertimento) è accesa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se D6 è ancora presente, la spia di indicazione malfunzionamento (MIL) si accenderà dopo tre cicli di guida consecutivi (avviamento &#x002B;5 secondi &#x002B; spengere il quadro e attendere 40 secondi).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se altri errori tranne D6, D8 e D12 sono presenti, la spia d&apos;avvertimento di arresto rossa (indicatore luminoso d&apos;avvertimento di gravità 2) è accesa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Per qualsiasi operazione sui connettori ECM usare il cavo di servizio.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Priorità quando si analizzano un certo numero di errori:
+</ptxt>
+<ptxt>
+Gestire prima l&apos;errore 
+<intxref refid = "L8T40A1144119">DTC P0560: Tensione del sistema:F9Q</intxref>
+ se presente o memorizzato.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "L8T40A1144122001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Per il numero del circuito di cablaggio e connettore, fare riferimento a 
+<intxref refid = "L8T40A910E013">A-5 Schema circuito motore e sistema di controllo A&#x002F;C sistema di controllo (Modello N32A)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1144122002">
+<title>
+Condizione di rilevamento
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Visualizzazione sullo scanner SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condizione di rilevamento
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+In permanenza al livello alto
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Segnale in permanenza basso
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Configurazione assente o errata
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Errore convertitore analogico&#x002F;digitale
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D5
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Comunicazione interrotta
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D6
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Guasto EEPROM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D7
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Attivazione Watchdog
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D8
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Limite esterno superiore segnale
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D10
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Comando iniettore carburante
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D11
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Malfunzionamento condensatore controllo iniettore carburante
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D12
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Errore iniezione in decelerazione
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D13
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Errore di inizializzazione
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D14
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Circuito aperto o errore elettronico interno
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1144122003">
+<title>
+Risoluzione dei problemi per il D1: Ad alto livello in permanenza, D8: Segnale fuori del limite superiore, D10: Controllo iniettore, D12: Errore iniezione in rallentamento e D13: Errore di inizializzazione
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Controllare i collegamenti dell&apos; ECM e la continuità di tutte le sue alimentazioni.
+</ptxt>
+<ptxt>
+Riparare se necessario.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cancellare gli errori.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Spegnere l&apos;interruttore di accensione, attendere 10 secondi ed accendere nuovamente il quadro.
+</ptxt>
+<ptxt>
+Se l&apos;errore è ancora presente, sostituire con un modulo ECM che si è certi funzioni e controllare nuovamente.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "L8T40A1144122004">
+<title>
+Risoluzione di problemi connessi a D11: Malfunzionamento condensatore controllo iniettore carburante
+</title>
+<attention3>
+<ptxt>
+Se ci sono un certo numero di errori, analizzare per prima cosa gli altri errori del sistema.
+</ptxt>
+</attention3>
+<diag type = "test" id = "L8T40A1144122005">
+<testgroup id = "L8T40A1144122006">
+<question>
+È presente il DTC P0606: Malfunzionamento processore ECM &#x002F; PCM di D10: Comando iniettore carburante?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1144122007">
+<ptxt>
+Controllare la tensione della batteria utilizzando &#8220;Battery Voltage&#8221; sull&apos;elenco dati dello strumento di diagnosi SUZUKI.
+</ptxt>
+<question>
+La tensione della batteria è maggiore di 10 V?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Controllare il circuito di carica ed effettuare le riparazioni necessarie:
+</ptxt>
+<ptxt>
+Controllare lo stato dei terminali della batteria.
+</ptxt>
+<ptxt>
+Effettuare l&apos;individuazione del guasto sull&apos;alternatore.
+</ptxt>
+<ptxt>
+Ricaricare o sostituire la batteria.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1144122008">
+<ptxt>
+Controllare lo stato del cablaggio fra il computer e la batteria, effettuare le riparazioni necessarie.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Avviare il veicolo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cancellare gli errori memorizzati.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Controllare gli errori.
+</ptxt>
+</item>
+</list1>
+<question>
+È presente il DTC P0606: Malfunzionamento processore ECM &#x002F; PCM?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Conclusione individuazione del guasto.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

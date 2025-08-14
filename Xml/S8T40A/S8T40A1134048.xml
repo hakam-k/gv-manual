@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1134048" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0560 &#x002F; P0562 &#x002F; P0563
+</title>
+<servinfosub id = "S8T40A1134048001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.228in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.968in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0560: System Voltage
+</emph>
+</ptxt>
+<ptxt>
+ECM power supply circuit voltage is lower than 2.5 V for 2 sec.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM power supply circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Charging system
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0562: System Voltage Low
+</emph>
+</ptxt>
+<ptxt>
+ECM power supply circuit voltage is lower than 10 V for 2 sec. at engine start.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0563: System Voltage High
+</emph>
+</ptxt>
+<ptxt>
+ECM power supply circuit voltage is higher than 18 V for 2 sec. with engine running.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1134048002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1134064">ECM Power and Ground Circuit Check:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1134048003">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention3>
+<ptxt>
+If DTC other than aimed DTC are previously detected in DTC confirmation procedure, be sure to troubleshoot DTC previously detected.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Drive vehicle at 10 km&#x002F;h (6 mile&#x002F;h) or more for 5 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1134048004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1134048005">
+<testgroup id = "S8T40A1134048006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1134001">Engine and Emission Control System Check:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134048007">
+<title>
+ECM power supply circuit check
+</title>
+<test1>
+<ptxt>
+Check ECM power supply circuit (H4) referring to 1) through 2) under 
+<intxref refid = "S8T40A1134064">ECM Power and Ground Circuit Check:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Check for intermittent trouble. 
+<intxreftitleoff1 refid = "S8T40A0006002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+If OK, Go to Step 3.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134048008">
+<title>
+Troubleshooting of other DTC(s) detected at the same time
+</title>
+<question>
+Is other DTC(s) detected together?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to troubleshooting for applicable DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

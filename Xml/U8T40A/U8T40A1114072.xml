@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114072" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119: Bereik&#x002F;prestatie gasklepstelregelmotor
+</title>
+<servinfosub id = "U8T40A1114072001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1114068">DTC P2101: Bereik &#x002F; prestaties gasklepstelregelmotorcircuit:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114072002">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Het verschil tussen de gemeten (effectieve) gasklepopeningshoek en de voorgeschreven gasklepopeningshoek die wordt berekend op basis van de gaspedaalopeningshoek en de motortoestand is gedurende een welbepaalde tijd onafgebroken groter dan voorgeschreven.
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit van de gasklepstelmotor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Elektrische-gasklephuissamenstel
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1114072003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan met het contactslot op OFF. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Houd het gaspedaal 2 seconden in de stationaire stand.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Houd het gaspedaal 2 seconden volledig ingetrapt.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 3) en 4) 3 keer.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1114072004">
+<title>
+DTC-storingzoeken
+</title>
+<attention3>
+<ptxt>
+Lees de voorzorgsmaatregelen voor DTC-storingzoeken zoals beschreven in 
+<intxref refid = "U8T40A1110003">Voorzorgsmaatregelen bij DTC-storingzoeken:M16A and J20A</intxref>
+ alvorens deze procedure te volgen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "U8T40A1114072005">
+<testgroup id = "U8T40A1114072006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114072007">
+<title>
+Systeemcontrole van het elektrische-gasklephuissamenstel
+</title>
+<test1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en controleer de spanning van &#34;TP sensor 1 Volt&#34; en &#34;TP sensor 2 Volt&#34; op het uitleesapparaat met het gaspedaal in de stationaire stand en volledig ingetrapt.
+</ptxt>
+</test1>
+<question>
+Is elke weergegeven TP-sensorwaarde zoals beschreven in 
+<intxref refid = "U8T40A1114007">Gegevens van het uitleesapparaat:M16A and J20A</intxref>
+?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sporadische storing. Controleer op sporadische storingen volgens 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114072008">
+<title>
+Controle van het circuit van de gasklepstelmotor
+</title>
+<test1>
+<ptxt>
+Maak de stekkerverbinding van het elektrische-gasklephuissamenstel los met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de &#34;BLU&#x002F;YEL&#34;- en &#34;BLU&#x002F;RED&#34;-draadaansluitingen op een goede verbinding met het elektrische-gasklephuissamenstel.
+</ptxt>
+<testfigure>
+<title>
+Voor J20A-motor
+</title>
+<graphic graphicname = "I5JB0A110042.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "158" gh = "76"/>
+</testfigure>
+<testfigure>
+<title>
+Voor M16A-motor
+</title>
+<graphic graphicname = "I5JB0A110043.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "149" gh = "76"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkers van de ECM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer aansluitingen &#34;C37-45&#34; en &#34;C37-44&#34; op een goede verbinding met de ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand bij de volgende stekkeraansluitingen.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tussen de &#34;BLU&#x002F;YEL&#34;-draadaansluiting van het elektrisch gasklephuis en aansluiting &#34;C37-45&#34; van de ECM-stekker
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tussen de &#34;BLU&#x002F;RED&#34;-draadaansluiting van het elektrisch gasklephuis en aansluiting &#34;C37-44&#34; van de ECM-stekker
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is de weerstand lager dan 3 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Stroomonderbreking of hoge weerstand in het &#34;BLU&#x002F;YEL&#34;- en&#x002F;of &#34;BLU&#x002F;RED&#34;-draadcircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114072009">
+<title>
+Controle van het elektrische-gasklephuissamenstel
+</title>
+<test1>
+<ptxt>
+Controleer het elektrische-gasklephuissamenstel volgens &#34;Controle van het elektrische-gasklephuissamenstel en bijbehorend circuit&#34; onder 
+<intxref refid = "U8T40A1316003">Onderzoek elektrisch-gasklephuissamenstel in het voertuig:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het elektrische-gasklephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

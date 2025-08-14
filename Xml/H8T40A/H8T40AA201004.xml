@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H8T40AA201004" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Riasztórendszer leírása (ha van)
+</title>
+<servinfosub id = "H8T40AA201004001">
+<title>
+Működés
+</title>
+<ptxt>
+A riasztórendszer figyelmezteti a körülállókat egy rendellenes állapotra. A működése a következő. Miközben a rendszer készenléti üzemmódban van (amikor 20 másodperc, vagy több telt el, hogy bezárt az ajtót a kulcsnélküli ajtónyitó rendszer távirányítójával, vagy az ajtó jeladókapcsolójával) a BCM figyeli az ajtózárak állapotát, az ajtókapcsolók állapotát és az akkumulátor áramellátó feszültségét. Amennyiben rendellenes állapotot észlel (az ajtót kinyitják a kulcsnélküli ajtónyitó rendszer távirányítójának, vagy az ajtó jeladókapcsolónak a működtetésétől eltérő módon, vagy ideiglenesen megszűnik a BCM áramellátó feszültsége) bekapcsolja a figyelmeztető csipogót (a műszeregységben található), a riasztóberendezés-ellenőrző lámpáját, a vészvillogó relét és a kürt relét.
+</ptxt>
+<ptxt>
+A riasztórendszernek 2 választható üzemmódja van.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+&#8220;Inaktív&#8221; üzemmód: Nincs működés
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8220;Aktív&#8221; üzemmód: A riasztóberendezés-ellenőrző lámpája villog, a vészvillogó villog, a figyelmeztető csipogó (a műszeregységben) megszólal és megszólal a kürt
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Ha az &#8220;Aktív&#8221; üzemmód van kiválasztva és az ajtót a kulcsnélküli ajtónyitó rendszer távirányítójával, vagy az ajtó jeladókapcsolójával nyitották ki, a riasztóberendezés-ellenőrző lámpája (1) 20 másodpercen keresztül 0,1 másodperces időintervallumban villog és a riasztórendszer készenléti üzemmódba (2) kapcsol. Amikor készenléti üzemmódban van, a riasztóberendezés-ellenőrző lámpája 2 másodperces intervallumban villog.
+</ptxt>
+<ptxt>
+Ha a rendszer készenléti üzemmódba van kapcsolva és az ajtót a kulcsnélküli ajtónyitó rendszer távirányítóján, vagy az ajtó jeladókapcsolóján kívül más módon nyitották ki, vagy a BCM áramellátó feszültsége ideiglenesen megszűnik, a riasztó berendezés a kiválasztott üzemmód szerint működik a fentebb leírtaknak megfelelően.
+</ptxt>
+<figure>
+<graphic graphicname = "I9T401A20002.swf" width = "183.000mm" height = "41.631mm" ver = "01" gw = "393" gh = "101"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.559in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.920in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+A:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Visszajelző lámpa bekapcsolva
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+T1:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+0,1 másodperc
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+B:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Visszajelző lámpa kikapcsolva
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+T2:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+20 másodperc
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+C:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Ha az ajtót a kulcsnélküli ajtónyitó rendszer távirányítójának, vagy az ajtó jeladókapcsolójának segítségével zárták be
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+T3:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+2 másodperc
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<ptxt>
+A riasztás megszűnik az alábbi állapotok egyikénél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A gyújtáskapcsoló ON helyzetben
+</ptxt>
+</item>
+<item>
+<ptxt>
+Egy bizonyos idő telt el a riasztó megszólalása óta
+</ptxt>
+</item>
+</list1>
+<ptxt>
+A riasztó rendszer üzemmódjának kiválasztásához, lásd: 
+<intxref refid = "H8T40AA206005">Riasztórendszer üzemmód kiválasztási folyamata (ha van)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40AA201004002">
+<title>
+Bemenet &#x002F; kimenet táblázat
+</title>
+<figure>
+<graphic graphicname = "I9T401A20003H.swf" width = "183.000mm" height = "70.206mm" ver = "01" gw = "473" gh = "182"/>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

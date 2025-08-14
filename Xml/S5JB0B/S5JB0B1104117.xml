@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0B1104117" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0530: A&#x002F;C Refrigerant Pressure Sensor &#8220;A&#8221; Circuit Malfunction
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+For vehicle not equipped with A&#x002F;C system, it is not abnormal even if the DTC is detected.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Conditions for applying fault finding procedures to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present following a road test, or if the air conditioning is switched ON.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault is present, air conditioning is not authorized.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Use service wire for all operations on the ECM connectors.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S5JB0B1104117001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S5JB0B910E048">A-5 Engine and A&#x002F;C Control System Circuit Diagram (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0B1104117002">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC.1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short circuit to &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO.0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Open circuit or short circuit to vehicle body ground
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0B1104117003">
+<title>
+Troubleshooting for CC.1: Short circuit to &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the A&#x002F;C refrigerant pressure sensor connectors.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Connect an air conditioning filling station (equipped with a high pressure gauge) to the vehicle.
+</ptxt>
+<ptxt>
+Display parameter &#8220;REFRIGERANT PRESSURE&#8221; on HVAC control module with SUZUKI scan tool and compare the value displayed by the filling station.
+</ptxt>
+<ptxt>
+If the values match, carry out a fault finding procedure as described in the fault finding note for that vehicle.
+</ptxt>
+<ptxt>
+If the values do not match, check the continuity and insulation against &#x002B;12 V of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;E04- 3&#34; wire of A&#x002F;C refrigerant pressure sensor connector and &#8220;C86-13&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E04-1&#8221; wire of A&#x002F;C refrigerant pressure sensor connector and &#8220;C86-33&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E04-2&#8221; wire of A&#x002F;C refrigerant pressure sensor connector and &#8220;C85-9&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the A&#x002F;C refrigerant pressure sensor
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0B1104117004">
+<title>
+Troubleshooting for CO.0: Open circuit or short circuit to vehicle body ground
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the A&#x002F;C refrigerant pressure sensor connector.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Connect an air conditioning filling station (equipped with a high pressure gauge) to the vehicle.
+</ptxt>
+<ptxt>
+Display parameter &#8220;REFRIGERANT PRESSURE&#8221; on HVAC control module with SUZUKI scan tool and compare the value displayed by the filling station.
+</ptxt>
+<ptxt>
+If the values match, carry out a fault finding procedure as described in the fault finding note for that vehicle.
+</ptxt>
+<ptxt>
+If the values do not match, check the continuity and insulation against vehicle body ground of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;E04-3&#8221; wire of A&#x002F;C refrigerant pressure sensor connector and &#8220;C86-13&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E04-1&#8221; wire of A&#x002F;C refrigerant pressure sensor connector and &#8220;C86-33&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the A&#x002F;C refrigerant pressure sensor.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

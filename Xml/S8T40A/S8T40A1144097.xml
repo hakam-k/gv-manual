@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1144097" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0201: Fuel Injector No.1 Circuit
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+This fault can result in a rapid and significant fouling of the diesel particulate filter.
+</ptxt>
+</item>
+<item>
+<ptxt>
+This fault may appear if the wiring harness has been damaged.
+</ptxt>
+<ptxt>
+Follow the procedure described in 
+<intxref refid = "S8T40A0006001">Electrical Circuit Inspection Procedure</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+This test enables the condition and the conformity of the engine wiring harness to be checked.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cylinder number is counted from flywheel side.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Conditions for applying fault finding procedures to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present after the engine has been started.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If CC1, CC, or D1 is present, the Red stop warning light (gravity 2 warning light) is lit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If CO is present the Injection warning light (gravity 1 warning light) is lit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If CO is still present, the Malfunction indicator light (MIL) will come on after three consecutive driving cycles (starting &#x002B;5 seconds &#x002B; turn OFF ignition switch and wait 40 seconds.).
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault is present, the injection on cylinder 1 is disabled.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Use service wire for all operations on the ECM connectors.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S8T40A1144097001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S8T40A910E013">A-5 Engine and A&#x002F;C Control System Circuit Diagram (Diesel Model)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1144097002">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short circuit to &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Open circuit
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short circuit
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Fuel injector control
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1144097003">
+<title>
+Troubleshooting
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the connections on fuel injector No.1.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Disconnect fuel injector No.1.
+</ptxt>
+<ptxt>
+Measure the resistance of fuel injector No.1 between &#8220;C04-1&#8221; and &#8220;C04-2&#8221; terminals. Replace the fuel injector if there is a short circuit (R &#x003D; 0 &#937;) or an open circuit (resistance &#x003D; infinity).
+</ptxt>
+<ptxt>
+Otherwise reconnect fuel injector No.1.
+</ptxt>
+<ptxt>
+Check the following connections for continuity and make sure there is no interference resistance:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C04-2&#8221; wire of fuel injector No.1 connector and &#8220;C85-27&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C04-1&#8221; wire of fuel injector No.1 connector and &#8220;C85-32&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present: apply Test 8 of Fault Finding-Tests referring to 
+<intxref refid = "S8T40A1144173">Test 8: Injector Malfunction:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+If the fault is still present, substitute a known-good ECM and recheck.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

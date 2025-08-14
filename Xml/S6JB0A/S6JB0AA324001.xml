@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0AA324001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Immobilizer Control System Check
+</title>
+<diag type = "test" id = "S6JB0AA324001001">
+<testgroup>
+<title>
+Injection warning light ON check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to ON position using ignition key.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I6JB0AA32003.swf" width = "90.000mm" height = "55.742mm" ver = "01" gw = "203" gh = "141"/>
+</testfigure>
+</test1>
+<question>
+Does injection warning light (1) come on?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0AA324006">Injection Warning Light Does Not Come ON with Ignition Switch ON and Engine Stop:For Diesel Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Injection warning light flash check
+</title>
+<question>
+Does injection warning light flash on and off continuously in Step 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Check ICM for DTC referring to 
+<intxref refid = "S6JB0AA324002">Diagnostic Trouble Code (DTC) Check:For Diesel Engine Model</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Engine start check
+</title>
+<test1>
+<ptxt>
+Start engine using ignition key.
+</ptxt>
+</test1>
+<question>
+Does engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0A1124004">Engine and Emission Control System Check:For Diesel Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Injection warning light remain ON check
+</title>
+<test1>
+<ptxt>
+Check if injection warning light remains ON after engine start.
+</ptxt>
+</test1>
+<question>
+Does injection warning light remain ON after engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0AA324007">Injection Warning Light Remains ON after Engine Start:For Diesel Engine Model</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Immobilizer control system is in good condition.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

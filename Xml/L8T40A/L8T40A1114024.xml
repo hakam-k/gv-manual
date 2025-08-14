@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114024" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0111: Circuito temperatura aria aspirazione Range &#x002F; Rendimento
+</title>
+<servinfosub id = "L8T40A1114024001">
+<title>
+Schema elettrico
+</title>
+<figure>
+<graphic graphicname = "I5JB0A110036.swf" width = "183.000mm" height = "86.786mm" ver = "01" gw = "446" gh = "229"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.905in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.905in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Sensore MAF e IAT
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Agli altri sensori
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Dal rele principale
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "L8T40A1114024002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.169in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.036in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "center">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La differenza della IAT massima e IAT minima e inferiore a 0,3 &#176;C (32,5 &#176;F) mentre l&apos;ECT e superiore a 70 &#176;C (158 &#176;F) dopo 10 min dall&apos;avviamento del motore a freddo (ECT e inferiore a 30&#176;C (86 &#176;F) all&apos;avvio del motore).
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 2)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito di alta resistenza
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore MAF e IAT
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1114024003">
+<title>
+Procedura di conferma DTC 
+</title>
+<attention3>
+<ptxt>
+Assicurarsi che siano soddisfatte le seguenti condizioni quando si usa la &#8220;Procedura di conferma DTC&#8221;.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Temperatura aria di aspirazione all&apos;avvio: da &#8211;10 &#176;C (14 &#176;F) a 80 &#176;C (176 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Temperatura aria di aspirazione: da &#8211;10 &#176;C (14 &#176;F) a 70 &#176;C (158 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Temperatura refrigerante del motore all&apos;avvio del motore: Inferiore a 30 &#176;C (86 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Temperatura refrigerante 70 &#176;C (158 &#176;F) a 150 &#176;C (302 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Altitudine (pressione barometrica): 2400 m, 8000 ft o meno (560 mmHg, 75 kPa o piu)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Collegare lo scanner controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e cancellare il DTC usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale. (ECT circa 90 &#8211; 95 &#176;C, 194 &#8211; 203 &#176;F)
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Far andare il motore al minimo per 10 min. o piu.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllare DTC e DTC in corso.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1114024004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<attention3>
+<ptxt>
+Prima di eseguire questa procedura di individuazione guasto, leggere le precauzioni per l&#8217;individuazione DTC facendo riferimento a 
+<intxref refid = "L8T40A1110003">Precauzione per la risoluzione dei problemi DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "L8T40A1114024005">
+<testgroup id = "L8T40A1114024006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114001">Verifica del sistema di controllo motore e emissioni:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024007">
+<title>
+Controllo del sensore IAT e del suo circuito.
+</title>
+<test1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Accendere l&apos;interruttore di accensione (ON).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la temp. dell&#8217;aria di aspirazione sullo scanner.
+</ptxt>
+</test1>
+<question>
+Sono indicati &#8211;40 &#176;C (&#8211;40 &#176;F) o 119 &#176;C (246 &#176;F)?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Guasto intermittente.
+</ptxt>
+<ptxt>
+Controllare intermittenze facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024008">
+<title>
+Controllo cablaggio preassemblato
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori dal sensore MAF e IAT (1) con l&#8217;interruttore di accensione spento.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare la connessione al sensore MAF e IAT (1) in corrispondenza dei terminali filo &#8220;LT GRN&#8221; e &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se e OK, accendere l&#8217;interruttore di accensione (ON), misurare la tensione tra il terminale &#8220;LT GRN&#8221; del connettore dei sensori MAF e IAT e la massa della carrozzeria.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110037.swf" width = "90.000mm" height = "52.736mm" ver = "02" gw = "202" gh = "132"/>
+</testfigure>
+</test1>
+<question>
+La tensione misurata applicata al terminale filo &#8220;LT GRN&#8221; e circa 4 &#8211; 6 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024009">
+<title>
+Controllo della tensione ECM.
+</title>
+<test1>
+<ptxt>
+Girare il commutatore di accensione nella posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rimuovere l&apos;ECM dalla staffa di supporto lasciando collegati i connettori ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare l&#8217;esatto collegamento del connettore ECM al terminale &#8220;C37-25&#8221; .
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se e OK, Portare il commutatore di accensione in posizione ON, controllare la tensione tra il terminale &#8220;C37-25&#8221; del connettore ECM e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La tensione e circa 4 &#8211; 6 V sul terminale?
+</question>
+<result>
+SI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito di cablaggio &#8220;LT GRN&#8221; e interrotto.
+</ptxt>
+<ptxt>
+Se cavo e connessione sono OK, passare al punto 5.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024010">
+<title>
+Verifica del circuito
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori dal modulo ECM controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la resistenza tra il terminale &#8220;LT GRN&#8221; del connettore dei sensori MAF e IAT e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La resistenza e infinita?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Il filo &#8220;LT GRN&#8221; e in corto a massa o su un altro circuito.
+</ptxt>
+<ptxt>
+Se i cavi sono OK, sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024011">
+<title>
+Verifica del circuito
+</title>
+<test1>
+<ptxt>
+Accendere l&apos;interruttore di accensione (ON).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la tensione tra il terminale &#8220;LT GRN&#8221; del connettore dei sensori MAF e IAT e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La tensione e circa 0 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Il filo &#8220;LT GRN&#8221; e in corto sull&apos;altro circuito.
+</ptxt>
+<ptxt>
+Se i cavi sono OK, sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024012">
+<title>
+Verifica del circuito
+</title>
+<test1>
+<ptxt>
+Misurare la resistenza tra il terminale &#8220;C37-25&#8221; del connettore ECM e il terminale &#8220;LT GRN&#8221; del connettore del sensore MAF e IAT con l&#8217;interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<question>
+La resistenza e inferiore a 3 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Alta resistenza sul circuito di cablaggio &#8220;LT GRN&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024013">
+<title>
+Verifiche del circuito di massa
+</title>
+<test1>
+<ptxt>
+Collegare i connettori al modulo ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la giusta connessione del connettore dei sensori MAF e IAT al terminale &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la tensione tra il terminale filo &#8220;GRY&#x002F;GRN&#8221; del connettore sensori MAF e IAT e la massa carrozzeria veicolo, controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</test1>
+<question>
+La resistenza e inferiore a 5 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024014">
+<title>
+Verifiche del circuito di massa
+</title>
+<test1>
+<ptxt>
+Rimuovere l&apos;ECM dalla staffa di supporto lasciando collegati i connettori ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra il terminale &#8220;C37-57&#8221; del connettore ECM e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La resistenza e inferiore a 3 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Interruzione o circuito di resistenza alta sul filo &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+<ptxt>
+Connessione terminale &#8220;C37-57&#8221; di scarsa qualita.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Circuito di messa a terra ECM difettoso.
+</ptxt>
+<ptxt>
+Se i cavi sono OK, sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114024015">
+<title>
+Controllo del sensore IAT
+</title>
+<test1>
+<ptxt>
+Verifica del sensore IAT in conformita a 
+<intxref refid = "L8T40A1316021">Ispezione del sensore flusso aria di massa (MAF) e temperatura aria aspirata (IAT):M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il sensore MAF e IAT.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

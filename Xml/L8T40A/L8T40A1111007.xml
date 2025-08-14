@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "L8T40A1111007" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Descrizione sistema corpo farfallato elettrico
+</title>
+<ptxt>
+Il sistema a corpo farfallato elettrico consiste di gruppo corpo farfallato elettrico, gruppo sensore di posizione acceleratore (APP), ECM e rele di controllo attuatore farfalla.
+</ptxt>
+<ptxt>
+I componenti a gruppo sono i seguenti:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gruppo corpo farfallato elettrico: valvola a farfalla, attuatore farfalla, 2 sensori di posizione farfalla
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gruppo sensore di posizione pedale acceleratore (APP): pedale acceleratore, 2 sensori di posizione pedale acceleratore
+</ptxt>
+</item>
+</list1>
+<servinfosub id = "L8T40A1111007001">
+<title>
+Descrizione del funzionamento
+</title>
+<ptxt>
+L&apos;ECM (5) rileva l&apos;apertura (pressione del pedale) del pedale acceleratore in base alla tensione di segnale del sensore di posizione pedale acceleratore (APP) (1) e, utilizzando questi dati e le condizioni di funzionamento del motore, calcola l&apos;apertura ottimale della valvola a farfalla. Nel contempo rileva anche l&apos;apertura della valvola a farfalla in base alla tensione di segnale del sensore di posizione farfalla (3) integrato nel corpo farfallato (2) e la confronta con l&apos;apertura ottimale della valvola a farfalla calcolata come indicato piu sopra. Se tra i due valori non esiste differenza, l&apos;ECM controlla il fattore di utilizzazione (100&#x0025; &#8211; 0&#x0025;) del controllo motorino della farfalla in base a questa differenza per comandare l&apos;attuatore (motorino) farfalla (4) i integrato nel corpo farfallato. Quando non ci sono differenze, l&apos;ECM controlla il rapporto di lavoro del comando del motorino della farfalla su circa 15&#x0025; per mantenere l&apos;apertura della valvola a farfalla. In questo modo, la valvola a farfalla (17) viene aperta e chiusa per ottenere l&apos;apertura ottimale.
+</ptxt>
+<ptxt>
+In questo sistema, poiché il sensore di posizione farfalla e il sensore di posizione penale acceleratore (APP) hanno 2 sensori ciascuno (principale e secondario) sono garantiti un controllo e un rilevamento delle anomalie estremamente accurati ed affidabili. Inoltre, se l&apos;ECM rileva un&apos;anomalia nel sistema, diseccita il rele di controllo attuatore farfalla (8) per interrompere il controllo dell&apos;attuatore farfalla. Quando il rele di controllo del motorino della farfalla e diseccitato, la valvola a farfalla rimane fissa in posizione di circa 7&#176; (apertura predefinita) dalla posizione non completamente chiusa per la spinta esercitata dalla molla di ritorno e dalla molla di apertura del corpo farfallato.
+</ptxt>
+<ptxt>
+Questo corpo farfallato non e equipaggiato di valvola IAC per il controllo del minimo. Il controllo del minimo viene effettuato per mezzo dell&apos;attuatore farfalla che apre&#x002F;chiude la valvola a farfalla.
+</ptxt>
+<figure>
+<graphic graphicname = "I4RS0B110007.swf" width = "183.000mm" height = "92.078mm" ver = "02" gw = "441" gh = "244"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.331in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.070in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.331in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.070in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.331in"/>
+<colspec colnum = "6" colname = "6" colwidth = "2.070in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6. 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+CPU
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Segnale del sensore (principale) di posizione pedale acceleratore (APP)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+15.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Segnale di comando attuatore farfalla
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Circuito di comando attuatore farfalla
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+12.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Segnale sensore (secondario) di posizione pedale acceleratore (APP)
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+16.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Alimentazione dell&apos;attuatore farfalla
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+9. 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Dal fusibile &#8220;THR MOT&#8221;
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+13.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Segnale sensore (principale) di posizione valvola a farfalla
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+18.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Segnale di controllo rele di controllo attuatore farfalla
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Dal rele principale
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+14.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Segnale sensore (secondario) di posizione valvola a farfalla
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "bottom">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

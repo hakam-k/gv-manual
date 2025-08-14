@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40AA314009" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1615: Kormányzár egység kommunikációs hiba (kulcsnélküli indítórendszerrel felszerelt jármű esetén)
+</title>
+<ptxt>
+<intxrefpoff refid = "H8T40AA312001">Indításgátló vezérlőrendszer kapcsolási rajza:Benzinmotoros modell</intxrefpoff>
+</ptxt>
+<servinfosub id = "H8T40AA314009001">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+Ha a gyújtáskulcsba beépített transzponder kódja az ECM-ben regisztrálva van, a távirányító azonosítókódja egyidőben regisztrálódik az ECM-ben és a kulcsnélküli indításvezérlő modulban. Ez a hibakód csak abban az esetben észlelhető, ha a távirányító azonosítókódját nem lehet regisztrálni az ECM-ben és a kulcsnélküli indításvezérlő modulban, amikor a gyújtáskulcsba beépített transzponder kódját regisztrálják az ECM-ben.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Először a P1618 hibakód hibaelhárítását végezze el, ha egyidőben észleli a P1615 és P1618 hibakódot.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM cseréje után feltétlenül regisztrálja a gyújtáskulcsba beépített transzponder kódját az ECM-ben, lásd: 
+<intxref refid = "H8T40AA316002">A gyújtáskulcs regisztrálása:Benzinmotoros modell</intxref>
+. A kulcsnélküli indítórendszerrel felszerelt jármű kulcsnélküli indításvezérlő moduljának cseréje után feltétlenül hajtsa végre a következőket: 
+<intxref refid = "H8T40AA316002">A gyújtáskulcs regisztrálása:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "H8T40AA314009002">
+<title>
+Észlelési körülmények és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Észlelési körülmények
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A gyújtáskulcsba beépített transzponder kódjának az ECM-ben történő regisztrálása során a kulcsnélküli indításvezérlő modul jelet küldött az ECM-nek, amely azt jelezte, hogy a távirányító azonosítókódját nem lehet regisztrálni.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A távirányító azonosítókódját nem lehet regisztrálni a kulcsnélküli indításvezérlő modulban vagy az ECM-ben. A gyújtáskulcsba beépített transzponder kódjának regisztrálási eljárása kényszer hatására megszakadt.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A kormányzár egység és a kulcsnélküli indításvezérlő modul közötti áramkörben szakadás vagy zárlat van
+</ptxt>
+</item>
+<item>
+<ptxt>
+A CAN kommunikációs áramkör hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kormányzár egység hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kulcsnélküli indításvezérlő modul hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM hibás
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40AA314009003">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40AA314009004">
+<testgroup>
+<title>
+Diagnosztikai hibakód (DTC) megerősítése
+</title>
+<test1>
+<ptxt>
+Törölje a DTC-(ke)t, lásd: 
+<intxref refid = "H8T40AA314003">DTC törlése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le, észlelt-e hibakódot az ECM, lásd: 
+<intxref refid = "H8T40AA314002">DTC ellenőrzése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Továbbra is észleli a P1615 számú hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Gyújtáskulcs regisztrálása
+</title>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskulcsot ON helyzetbe és regisztrálja a gyújtáskulcsba beépített transzponder kódját az ECM-ben, lásd: 
+<intxref refid = "H8T40AA316002">A gyújtáskulcs regisztrálása:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sikerült regisztrálni a gyújtáskulcsot (a transzponder kódját) az ECM-ben?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A hibaelhárítás befejeződött.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnosztikai hibakódok (DTC) lekérdezése
+</title>
+<test1>
+<ptxt>
+Kérdezze le, észlelt-e hibakódot az ECM, lásd: 
+<intxref refid = "H8T40AA314002">DTC ellenőrzése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Észlelt hibakódot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Végezze el a hibaelhárítást, lásd a vonatkozó folyamat-táblázatot, majd lépjen a 4. lépéshez.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kormányzár egység ellenőrzése
+</title>
+<test1>
+<ptxt>
+Fordítsa el a kulcsnélküli indítórendszer motorindító gombját.
+</ptxt>
+</test1>
+<question>
+Beindul a motor, ha a motor indító gomb bekapcsolt helyzetben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Tegyen be egy bizonyosan jó kormányzár egységet, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Kormányzár egység működésének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a kormányzár egység működését, lásd: 
+<intxref refid = "H8T40A9306002">Gyújtáskapcsoló ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az előírásoknak megfelelően működik a motorindító gomb?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a kormányzár egységet, lásd: 
+<intxref refid = "H8T40A6216011">Kormányzár szerelvény (gyújtáskapcsoló) leszerelése és felszerelése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Áramköri szakadás ellenőrzése a kormányzár egység és a kulcsnélküli indításvezérlő modul között.
+</title>
+<test1>
+<ptxt>
+Válassza le a kormányzár egység &#8220;G22&#8221; csatlakozóját és a kulcsnélküli indításvezérlő modul &#8220;G42&#8221; csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást a csatlakozók alábbi érintkezőinél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-3&#8221; érintkezője és a kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-20&#8221; érintkezője között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-7&#8221; érintkezője és a kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-29&#8221; érintkezője között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-8&#8221; érintkezője és a kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-30&#8221; érintkezője között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Az ellenállás mindenhol 1 &#937; vagy kevesebb?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg a szakadást vagy a nagy ellenállást a hibás áramkörben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze, nincs-e zárlat a kormányzár egység és a kulcsnélküli indításvezérlő modul között.
+</title>
+<test1>
+<ptxt>
+Mérje meg az ellenállást a csatlakozók alábbi érintkezőinél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-3&#8221;, &#8220;G22-7&#8221; és &#8220;G22-8&#8221; érintkezője között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kulcsnélküli indításvezérlő modul &#8220;G44-20&#8221;, &#8220;G44-29&#8221; és &#8220;G44-30&#8221; érintkezője között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Mindegyik ellenállás végtelen nagy?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 8. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Ellenőrizze a vezetékek szigetelését.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze, nincs-e testzárlat a kormányzár egység és a kulcsnélküli indításvezérlő modul áramkörében.
+</title>
+<test1>
+<ptxt>
+Mérje meg az ellenállást a csatlakozók alábbi érintkezőinél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-3&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-7&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-8&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-20&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-29&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-30&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Mindegyik ellenállás végtelen nagy?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 9. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg a testzárlatot a hibás áramkörben.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze, nincs-e zárlat a tápáramkörrel a kormányzár egység és a kulcsnélküli indításvezérlő modul közötti áramkörben
+</title>
+<test1>
+<ptxt>
+A gyújtáskapcsoló ON helyzetében mérje meg a feszültséget a csatlakozók alábbi érintkezőinél.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-3&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-7&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kormányzár egység csatlakozójának &#8220;G22-8&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-20&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-29&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A kulcsnélküli indításvezérlő modul csatlakozójának &#8220;G44-30&#8221; érintkezője és a jármű karosszériája között.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+A feszültség minden egyes esetben 0 &#8211; 1 V?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Tegyen be egy bizonyosan jó kulcsnélküli indításvezérlő modult, és ismételje meg az ellenőrzést. Ha továbbra is észleli a P1615 hibakódot, tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg a zárlatot a tápáramkörrel a hibás áramkörben.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

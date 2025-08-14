@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A5114028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0713: Transmission Fluid Temperature Sensor &#8220;A&#8221; Circuit High
+</title>
+<servinfosub id = "S8T40A5114028001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A5114027">DTC P0712: Transmission Fluid Temperature Sensor &#8220;A&#8221; Circuit Low:4 A/T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A5114028002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.067in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.099in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Transmission fluid temperature sensor terminal voltage is less than 4.89 V under vehicle condition shown in the following.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ignition switch is turned on for 1 minute or more
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Transmission fluid temperature sensor or its circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A5114028003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Connect scan tool to DLC with ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Clear DTCs in TCM and ECM memories by using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep engine running at idle speed for 1 minute or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat Step 3) to 5) one time.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC, pending DTC and freeze-frame data.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A5114028004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A5114028005">
+<testgroup>
+<question>
+Was &#8220;A&#x002F;T System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A5114001">A&#x002F;T System Check:4 A/T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check transmission fluid temperature sensor circuit for open
+</title>
+<test1>
+<ptxt>
+Turn ignition switch OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect TCM connectors from TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to transmission fluid temperature sensor at terminal &#8220;E92-11&#8221; and &#8220;E92-12&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check continuity between terminal &#8220;E92-11&#8221; and &#8220;E92-12&#8221; of disconnected harness side TCM connector.
+</ptxt>
+</test1>
+<question>
+Is continuity indicated?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Transmission fluid temperature sensor circuit is open circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check transmission fluid temperature sensor circuit for power supply short
+</title>
+<test1>
+<ptxt>
+Cool down A&#x002F;T fluid temperature under ambient temperature.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connect TCM connectors to TCM with ignition switch OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between terminal &#8220;E92-11&#8221; of TCM connector and ground.
+</ptxt>
+</test1>
+<question>
+Is it 4.89 V or more?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Transmission fluid temperature sensor circuit is shorted to power supply circuit. If circuit is OK, go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Intermittent trouble or faulty TCM. Check for intermittent trouble referring to 
+<intxref refid = "S8T40A0006002">Intermittent and Poor Connection Inspection</intxref>
+. If OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check transmission fluid temperature sensor
+</title>
+<test1>
+<ptxt>
+Check transmission fluid temperature sensor referring to 
+<intxref refid = "S8T40A5116024">Transmission Fluid Temperature Sensor Inspection:4 A/T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble or faulty TCM. Check for intermittent trouble referring to 
+<intxref refid = "S8T40A0006002">Intermittent and Poor Connection Inspection</intxref>
+. If OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace solenoid wire harness including transmission fluid temperature sensor referring to 
+<intxref refid = "S8T40A5116023">Transmission Fluid Temperature Sensor Removal and Installation:4 A/T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

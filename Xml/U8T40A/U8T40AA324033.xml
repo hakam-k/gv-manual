@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA324033" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1718: Communicatiefout in de stuursloteenheid
+</title>
+<servinfosub id = "U8T40AA324033001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA322001">Bedradingsschakelschema van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA324033002">
+<title>
+Beschrijving van het circuit
+</title>
+<ptxt>
+Wanneer de controlecode in de ECM in het regelsysteem van de startblokkering wordt geregistreerd, wordt tegelijkertijd ook de ID-code in de ECM en het regelapparaat van het startsysteem met afstandsbediening geregistreerd. Deze DTC wordt alleen waargenomen als de ID-code niet kan worden geregistreerd in zowel de ECM als het regelapparaat van het startsysteem met afstandsbediening wanneer de controlecode in de ECM in het regelsysteem van de startblokkering is geregistreerd.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Controleer eerst DTC B1716 wanneer DTC B1716 en B1718 tegelijkertijd worden waargenomen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Vervang de ECM en voer daarna zeker 
+<intxref refid = "U8T40AA326003">Procedure na vervanging van de ECM:Model met dieselmotor</intxref>
+ uit. Vervang het regelapparaat van het startsysteem met afstandsbediening en voer daarna zeker 
+<intxref refid = "U8T40AA326003">Procedure na vervanging van de ECM:Model met dieselmotor</intxref>
+ uit.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "U8T40AA324033003">
+<title>
+Waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bij de registratie van de controlecode in de ECM in het regelsysteem van de startblokkering stuurde het regelapparaat van het startsysteem met afstandsbediening een signaal naar de ECM om te melden dat de ID-code niet kon worden geregistreerd.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De ID-code kon niet worden geregistreerd in het regelapparaat van het startsysteem met afstandsbediening of de ECM.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Defecte draadcircuits tussen de stuursloteenheid en het regelapparaat van het startsysteem met afstandsbediening
+</ptxt>
+</item>
+<item>
+<ptxt>
+Stuursloteenheid
+</ptxt>
+</item>
+<item>
+<ptxt>
+CAN-communicatiecircuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Stuurhoeksensor (ESP&#174;-model)
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD-regelapparaat
+</ptxt>
+</item>
+<item>
+<ptxt>
+Regelapparaat van het startsysteem met afstandsbediening (indien uitgerust)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS &#x002F; ESP&#174;-regelapparaat
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combimeter
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40AA324033004">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40AA324033005">
+<testgroup>
+<question>
+Is &#34;Controle van het regelsysteem van de startblokkering&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40AA324001">Controle van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registratie van de ECM
+</title>
+<test1>
+<ptxt>
+Registreer de ECM in het regelsysteem van de startblokkering volgens 
+<intxref refid = "U8T40AA326003">Procedure na vervanging van de ECM:Model met dieselmotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de registratie van de ECM in het regelsysteem van de startblokkering voltooid?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Controleer de ECM opnieuw op DTC&apos;s. Ga naar stap 3 als DTC B1718 nog steeds wordt waargenomen.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC-controle
+</title>
+<question>
+Wordt er een andere DTC dan P1718 waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de DTC-diagnosetabel van toepassing.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC-controle van het regelapparaat van het startsysteem met afstandsbediening
+</title>
+<test1>
+<ptxt>
+Controleer het regelapparaat van het startsysteem met afstandsbediening op DTC&apos;s, zie 
+<intxref refid = "U8T40AA504006">DTC-controle</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn er DTC&apos;s?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de DTC-diagnosetabel van toepassing.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het communicatiecircuit tussen de stuursloteenheid en het regelapparaat van het startsysteem met afstandsbediening
+</title>
+<test1>
+<ptxt>
+Koppel met het contactslot op OFF de stekkerverbinding van de stuursloteenheid en de stekkerverbinding van het regelapparaat van het startsysteem met afstandsbediening los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de aansluitingen en draden van elke stekker op een goede verbinding, zie 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan op stroomonderbreking, kortsluiting en hoge weerstand in elk circuit tussen de stuursloteenheid en het regelapparaat van het startsysteem met afstandsbediening. Zie stap 2 in 
+<intxref refid = "U8T40AA504016">DTC Nr.11: Communicatiefout met de stuursloteenheid</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is elk circuit in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer het onderdeel met de storing en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de voeding van de stuursloteenheid
+</title>
+<test1>
+<ptxt>
+Sluit de stekker van het regelapparaat van het startsysteem met afstandsbediening aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer met het contactslot op ON de voedingsspanning van de stuursloteenheidstekker. Zie 
+<intxref refid = "U8T40AA504015">Controle voedings- en massacircuit van het regelapparaat van het startsysteem met afstandsbediening</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de spanning 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang de stuursloteenheid en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het regelapparaat van het startsysteem met afstandsbediening door een goed bevonden exemplaar en controleer opnieuw. Als DTC B1718 nog steeds wordt waargenomen, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1134055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2135
+</title>
+<servinfosub id = "H8T40A1134055001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.194in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2135: Fojtószelep&#x002F;pedálhelyzet-érzékelő&#x002F;kapcsoló &#8220;A&#8221; &#x002F; &#8220;B&#8221; feszültség korrelációja
+</emph>
+</ptxt>
+<ptxt>
+Ez a DTC akkor jelenik meg, ha teljesül a következő feltételek valamelyike.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A különbség a TP-érzékelő (főérzékelő) által mért TP és az alap TP értéke között több, mint 9&#x0025;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A különbség a TP-érzékelő (segédérzékelő) által mért TP és az alap TP értéke között több, mint 9&#x0025;.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP-érzékelő (segédérzékelő) és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1134055002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1134055003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention3>
+<ptxt>
+Győződjön meg arról, hogy az alábbi feltételek teljesülnek-e, amikor ezt az eljárást alkalmazza.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Akkumulátorfeszültség &gt; 7 V
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Indítsa el a motort.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Nyomja le teljesen a gázpedált, majd engedje fel.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ismételje meg a 2) lépést három alkalommal.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1134055004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1134055005">
+<testgroup id = "H8T40A1134055006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1134001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134055007">
+<title>
+TP-érzékelő ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a TP-érzékelő működését, lásd: 
+<intxref refid = "H8T40A1336004">A járműre szerelt elektromos fojtószelep rendszer ellenőrzése:N32A</intxref>
+, &#8220;A fojtószelephelyzet-érzékelő (TP) működésének ellenőrzése&#8221;.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószeleptestet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134055008">
+<title>
+TP-érzékelő áramköri ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a TP-érzékelő (a fő- és segédérzékelő) áramkörét a következők szerint.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+TP-érzékelő (főérzékelő) áramköre: Lásd: 
+<intxref refid = "H8T40A1134023">DTC P0122 &#x002F; P0123:N32A</intxref>
+, 2. - 5. lépés.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TP-érzékelő (segédérzékelő) áramköre: Lásd: 
+<intxref refid = "H8T40A1134028">DTC P0222 &#x002F; P0223:N32A</intxref>
+, 2. - 5. lépés.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134055009">
+<title>
+Fojtószeleptest ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószeleptestet, lásd: 
+<intxref refid = "H8T40A1336004">A járműre szerelt elektromos fojtószelep rendszer ellenőrzése:N32A</intxref>
+, &#8220;Elektromos fojtószelep rendszer működésének ellenőrzése&#8221; és &#8220;Fojtószelep aktuátor ellenőrzése&#8221;.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószeleptestet.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134055010">
+<title>
+Az egy időben észlelt más DTC-k hibakeresése
+</title>
+<question>
+Észlelt más hibakódot is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC hibakereséssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

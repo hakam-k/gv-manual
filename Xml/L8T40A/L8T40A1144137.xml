@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1144137" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2120: Circuito sensore APP (secondario)
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Questo problema può verificarsi se il cablaggio è stato danneggiato.
+</ptxt>
+<ptxt>
+Seguire la procedura descritta in 
+<intxref refid = "L8T40A0006001">Procedure di ispezione del circuito elettrico</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Questo test abilita il controllo della condizione e conformità del cablaggio del motore.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<servinfosub id = "L8T40A1144137001">
+<title>
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Condizioni per l&apos;applicazione delle procedure di rilevazione errori agli errori memorizzati:
+</ptxt>
+<ptxt>
+L&apos;errore viene riconosciuto dopo una serie di azioni a pieno carico&#x002F;nessun carico sul pedale dell&apos;acceleratore.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Turbocompressione, l&apos;attivazione del resistore di riscaldamento scomparto passeggero e il controllo velocità di crociera&#x002F;limitatore di velocità non sono autorizzati.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se l&apos;errore è presente, la spia dell&apos;iniezione (spia gravità 1) è accesa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il regime del motore viene fissato a 1400 rpm sia presente un errore sul filo &#8220;principale&#8221; e &#8220;secondario&#8221; del sensore di posizione pedale acceleratore (APP) e la coppia del motore viene limitata.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Per qualsiasi operazione sui connettori di controllo usare il cavo di servizio.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Priorità nella gestione di più errori:
+</ptxt>
+<ptxt>
+Applicare la procedura per verificare l&apos;errore 
+<intxref refid = "L8T40A1144127">DTC P0651: Circuito tensione 2 di riferimento sensore:F9Q</intxref>
+ per prima cosa se è presente o memorizzato.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "L8T40A1144137002">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Per il numero del circuito di cablaggio e connettore, fare riferimento a 
+<intxref refid = "L8T40A910E013">A-5 Schema circuito motore e sistema di controllo A&#x002F;C sistema di controllo (Modello N32A)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1144137003">
+<title>
+Condizione di rilevamento
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Visualizzazione sullo scanner SUZUKI
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condizione di rilevamento
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CO0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Circuito aperto o in corto a massa della carrozzeria veicolo
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Cortocircuito a &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Inconsistenza tra il sensore APP (principale) e il sensore APP (secondario).
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1144137004">
+<title>
+Risoluzione dei problemi per il CO0: Circuito aperto o in corto a massa della carrozzeria veicolo
+</title>
+<attention3>
+<ptxt>
+Priorità nella gestione di più errori:
+</ptxt>
+<ptxt>
+Se l&apos;errore 
+<intxref refid = "L8T40A1144101">DTC P0225: Circuito sensore APP (principale):F9Q</intxref>
+ è presente allo stesso tempo, controllare che il sensore sia collegato correttamente.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Controllare le connessioni del sensore della posizione del pedale dell&apos;acceleratore (APP).
+</ptxt>
+<ptxt>
+Controllare le connessioni ECM.
+</ptxt>
+<ptxt>
+Riparare se necessario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Controllare la continuità e l&apos;isolamento dalla massa carrozzeria del veicolo delle seguenti connessioni:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-6&#8221; del connettore del sensore APP ed il cavo &#8220;E66-21&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-1&#8221; del connettore del sensore APP ed il cavo &#8220;E66-15&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Riparare se necessario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Misurare la resistenza sul sensore di posizione pedale acceleratore (APP) (secondario) sul complessivo sensore posizione pedale acceleratore (APP) fra i terminali &#8220;E68-1&#8221; e &#8220;E68-5&#8221;.
+</ptxt>
+<ptxt>
+Sostituire il complessivo sensore di posizione (APP) pedale acceleratore se la resistenza non è 0,8 &#8211; 4,9 k&#937;.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1144137005">
+<title>
+Risoluzione dei problemi per il CC1: Cortocircuito a &#x002B;12 V
+</title>
+<attention3>
+<ptxt>
+Priorità nella gestione di più errori:
+</ptxt>
+<ptxt>
+Se l&apos;errore 
+<intxref refid = "L8T40A1144101">DTC P0225: Circuito sensore APP (principale):F9Q</intxref>
+ è presente allo stesso tempo, controllare che il sensore sia collegato correttamente.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Controllare le connessioni del sensore della posizione del pedale dell&apos;acceleratore (APP).
+</ptxt>
+<ptxt>
+Controllare le connessioni ECM.
+</ptxt>
+<ptxt>
+Riparare se necessario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Controllare continuità e isolamento rispetto a &#x002B;12 V dei seguenti collegamenti:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-6&#8221; del connettore del sensore APP ed il cavo &#8220;E66-21&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-1&#8221; del connettore del sensore APP ed il cavo &#8220;E66-15&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-5&#8221; del connettore del sensore APP ed il cavo &#8220;E66-27&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Riparare se necessario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Misurare la resistenza sul sensore di posizione pedale acceleratore (APP) (secondario) sul complessivo sensore posizione pedale acceleratore (APP) fra i terminali &#8220;E68-1&#8221; e &#8220;E68-5&#8221;.
+</ptxt>
+<ptxt>
+Sostituire il complessivo sensore di posizione pedale acceleratore (APP) se la sua resistenza non è approssimativamente: 0,8 &#8211; 4,9 k&#937;.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1144137006">
+<title>
+Risoluzione dei problemi per il D1: Inconsistenza tra il sensore APP (principale) e il sensore APP (secondario).
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Controllare i connettori del sensore APP.
+</ptxt>
+<ptxt>
+Controllare le connessioni ECM.
+</ptxt>
+<ptxt>
+Riparare se necessario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Controllare la continuità delle seguenti connessioni e l&apos;assenza di resistenze da interferenza:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-6&#8221; del connettore del sensore APP ed il cavo &#8220;E66-21&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-1&#8221; del connettore del sensore APP ed il cavo &#8220;E66-15&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-5&#8221; del connettore del sensore APP ed il cavo &#8220;E66-27&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-3&#8221; del connettore del sensore APP ed il cavo &#8220;E66-3&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-2&#8221; del connettore del sensore APP ed il cavo &#8220;E66-4&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Tra il cavo &#8220;E68-4&#8221; del connettore del sensore APP ed il cavo &#8220;E66-5&#8221; del terminale del connettore ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Riparare se necessario.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Se il problema è ancora presente, sostituire il gruppo del sensore di posizione del pedale dell&apos;acceleratore (APP).
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

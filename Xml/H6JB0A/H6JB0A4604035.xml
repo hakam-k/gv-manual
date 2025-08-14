@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4F">
+<servcat sctnbr = "04" scnbr = "06">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0A4604035" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC C1091 &#x002F; 1092 &#x002F; 1093: ECM- &#x002F; TCM- &#x002F; 4WD-vezérlőmodul adatai a CAN vezetékben hiba
+</title>
+<servinfosub id = "H6JB0A4604035001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.599in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.599in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+C1091:
+</emph>
+</ptxt>
+<ptxt>
+Az ECM érvénytelen jelet küldött az ESP&#174;-vezérlőmodulnak.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motorvezérlő rendszer
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174; vezérlőmodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+C1092:
+</emph>
+</ptxt>
+<ptxt>
+A TCM érvénytelen jelet küldött az ESP&#174;-vezérlőmodulnak. (Automata sebességváltóval szerelt modelleknél.)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A&#x002F;T rendszer
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174; vezérlőmodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+C1093:
+</emph>
+</ptxt>
+<ptxt>
+A 4WD-vezérlőmodul érvénytelen jelet küldött az ESP&#174;-vezérlőmodulnak. (Ha van 4WD-vezérlőmodul.)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+4WD-vezérlőmodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD vezérlőmodul
+</ptxt>
+</item>
+<item>
+<ptxt>
+ESP&#174; vezérlőmodul
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H6JB0A4604035002">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0A4604035003">
+<testgroup>
+<question>
+Elvégezte az &#8220;elektronikus menetstabilizáló program ellenőrzését&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A4604001">Elektronikus menetstabilizáló program ellenőrzése</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC ellenőrzése az ESP&#174;-től eltérő vezérlőmodulokban
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t az ECM-, a TCM- és&#x002F;vagy a 4WD-vezérlőmodulban.
+</ptxt>
+</test1>
+<question>
+Megjelenik valamilyen hibakód?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a vonatkozó DTC diagnosztikai folyamat táblázatra.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ESP&#174;-hidraulikaegységet &#x002F; vezérlőmodul egységet, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A1124119" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0560: System Voltage
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions for applying fault finding procedures to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present following a road test or after attempting to start the engine several times.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM operating voltage: 9 V &lt; operating voltage &lt; 16 V.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Battery voltage that is too low can cause the level 1 fault warning light to come on thereby causing other faults to appear.
+</ptxt>
+</item>
+<item>
+<ptxt>
+It is then not possible to start the engine.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Use service wire for all operations on the ECM connectors.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S6JB0A1124119001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S6JB0A910E048">A-5 Engine and A&#x002F;C Control System Circuit Diagram (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A1124119002">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Overvoltage
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Undervoltage
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0A1124119003">
+<title>
+Troubleshooting for D1: Overvoltage
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the charge circuits:
+</ptxt>
+<ptxt>
+Condition of the battery.
+</ptxt>
+<ptxt>
+Condition of the alternator (full fault finding).
+</ptxt>
+<ptxt>
+Carry out the necessary repairs.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0A1124119004">
+<title>
+Troubleshooting for D2: Undervoltage
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+With ignition switch OFF, measure the voltage across the battery terminals.
+</ptxt>
+<ptxt>
+If the voltage is less than 11.5 V, test the battery.
+</ptxt>
+<ptxt>
+If the battery is faulty, replace the battery then test the charge circuit.
+</ptxt>
+<ptxt>
+With ignition switch ON and the with the starter motor turning, measure the voltage across the battery terminals.
+</ptxt>
+<ptxt>
+If the voltage drops below 9.6 V, check the tightness and condition of the battery terminals.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+<ptxt>
+If the terminals are in good condition, test the battery.
+</ptxt>
+<ptxt>
+If they are faulty, replace the battery.
+</ptxt>
+<ptxt>
+If the starter is cranking the engine correctly, but the fault is still present,
+</ptxt>
+<ptxt>
+Check the continuity and for the absence of interference resistance on the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;E33-6&#8221; wire of main relay mounting connector and &#8220;C86-3&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E33-6&#8221; wire of main relay mounting connector and &#8220;E66-2&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E66-1&#8221;, &#8220;E66-7&#8221; and &#8220;E66-8&#8221; terminals of ECM connector and ground terminal at battery
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

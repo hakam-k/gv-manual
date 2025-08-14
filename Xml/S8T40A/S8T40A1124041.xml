@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1124041" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0481
+</title>
+<servinfosub id = "S8T40A1124041001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.290in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.913in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+P0481: Fan 2 Control Circuit
+</emph>
+</ptxt>
+<ptxt>
+This DTC is detected if any one of the following conditions is met.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Monitor signal of radiator cooling fan relay No.2 drive circuit is high level (OFF) for 5 sec. even if command signal of radiator cooling fan is at high speed.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Monitor signal of radiator cooling fan relay No.2 drive circuit is low level (ON) for 5 sec. even if command signal of radiator cooling fan is NOT at high speed.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(1 D&#x002F;C detection logic but MIL does not light up)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Radiator cooling fan relay No.2 (coil side) and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1124041002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1124040">DTC P0480:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1124041003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep engine at idle speed until engine coolant temperature reaches 104 &#176;C (219.2 &#176;F) or more.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1124041004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1124041005">
+<testgroup id = "S8T40A1124041006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124041007">
+<title>
+Radiator cooling fan relay No.2 power supply circuit (coil side) check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and remove radiator cooling fan relay No.2.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to cooling fan relay No.2 connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that voltage between radiator cooling fan relay No.2 power supply circuit (coil side) (A2) and vehicle body ground is battery voltage with ignition switch in ON position.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124041008">
+<title>
+Radiator cooling fan relay check
+</title>
+<test1>
+<ptxt>
+Check radiator cooling fan relay No.2. 
+<intxreftitleoff1 refid = "S8T40A1626021"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace radiator cooling fan relay No.2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124041009">
+<title>
+Radiator cooling fan relay No.2 drive circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that radiator cooling fan relay No.2 drive circuit (B2) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of radiator cooling fan relay No.2 drive circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between radiator cooling fan relay No.2 drive circuit and vehicle body ground is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between radiator cooling fan No.2 drive circuit terminal and each terminal at radiator cooling fan relay No.2 connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of radiator cooling fan relay No.2 drive circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0B7204025" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "0" modify = "0">
+<title>
+DTC B1552: Serial Communication Circuit Malfunction
+</title>
+<servinfosub id = "S5JB0B7204025001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.768in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.436in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Data received by HVAC control module from BCM is erroneous continuously.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+HVAC control module
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0B7204025002">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S5JB0B7204025003">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S5JB0B7204025004">
+<testgroup>
+<title>
+Serial communication signal data check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Start engine and select &#8220;DATA LIST&#8221; mode on scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check &#8220;Refrigerant Pressure&#8221;, &#8220;Vehicle Speed&#8221;, &#8220;Coolant Temp&#8221; and &#8220;Outside Air Temp&#8221; varies displayed on scan tool.
+</ptxt>
+</test1>
+<question>
+Is displayed each varies described varies in 
+<intxref refid = "S5JB0B7204006">Scan Tool Data</intxref>
+?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble. Check for intermittent referring to 
+<intxref refid = "S5JB0B0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Serial communication signal check
+</title>
+<test1>
+<ptxt>
+Connect connectors to BCM and HVAC control module.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Using oscilloscope, check that serial communication signal at &#8220;G30-5&#8221; is outputted referring to &#8220;Voltage Check&#8221; of 
+<intxref refid = "S5JB0BA204017">Inspection of BCM and its Circuits</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is serial communication signal outputted at &#8220;G30-5&#8221; terminal of BCM connector?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+HVAC control module faulty.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+BCM (included in junction block assembly) faulty.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

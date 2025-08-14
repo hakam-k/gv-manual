@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1144156" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Table 3: The Engine Starts with Difficulty
+</title>
+<servinfosub id = "S8T40A1144156001">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1144156002">
+<testgroup id = "S8T40A1144156003">
+<ptxt>
+Check that the fuel tank is correctly filled and that the fuel type is suitable.
+</ptxt>
+<question>
+Is the fuel type suitable and the tank correctly filled?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Refill the fuel tank correctly. Bleed the low and high pressure diesel circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144156004">
+<ptxt>
+Check the engine earths.
+</ptxt>
+<ptxt>
+Check that engine speed reaches 250 rpm under the starter motor, as displayed on SUZUKI scan tool.
+</ptxt>
+<question>
+Is the starter motor working properly?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Carry out the required repairs.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144156005">
+<ptxt>
+Check ECM for DTC(s).
+</ptxt>
+<question>
+Is there DTC P0335?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1144109">DTC P0335: CKP Sensor Circuit:F9Q</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144156006">
+<ptxt>
+Check ECM for DTC(s).
+</ptxt>
+<question>
+Is there DTC P0016?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1144089">DTC P0016: CKP &#8211; CMP Correlation:F9Q</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144156007">
+<ptxt>
+Check that the engine earthing is in order (oxidation, tightness, etc.).
+</ptxt>
+<ptxt>
+Check the mounting, the air gap and the condition of the sensor (overheating).
+</ptxt>
+<question>
+Is there in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace the defective part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144156008">
+<ptxt>
+Check that the fuel circuit is leak-tight.
+</ptxt>
+<ptxt>
+If the fault is still present, refer to 
+<intxref refid = "S8T40A1144091">DTC P0089: Fuel Flow Actuator Performance:F9Q</intxref>
+ of troubleshooting for 2.DEF: Measured pressure too low.
+</ptxt>
+<question>
+Is there in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace the defective part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144156009">
+<ptxt>
+Check the following:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Check that the heater plugs are actuated using &#8220;Pre&#x002F;post Heater Relay Control&#8221; on SUZUKI scan tool.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check that the fuel flow actuator are actuated using &#8220;IMV&#x002F;Flow actuator&#8221; on SUZUKI scan tool.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the exhaust system referring to 
+<intxref refid = "S8T40A1144166">Test 1: Exhaust System Check:F9Q</intxref>
+. 
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the low pressure circuit referring to 
+<intxref refid = "S8T40A1144167">Test 2: Low Pressure Circuit Check:F9Q</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check for leaks in the high pressure circuit referring to 
+<intxref refid = "S8T40A1144173">Test 8: Injector Malfunction:F9Q</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the turbocharged air inlet circuit referring to 
+<intxref refid = "S8T40A1144168">Test 3: Checking the Turbocharged Air Inlet Circuit:F9Q</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the MAF sensor referring to 
+<intxref refid = "S8T40A1144169">Test 4: MAF Sensor:F9Q</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the consistency of the signal from the engine coolant temperature sensor.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check that the injectors are working properly (return leakage too high, clogging, sticking) referring to 
+<intxref refid = "S8T40A1144173">Test 8: Injector Malfunction:F9Q</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the engine timing (and the position of the high pressure pump sprocket).
+</ptxt>
+</item>
+</list1>
+<question>
+Is there in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace the defective part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144156010">
+<question>
+Are the compressions correct?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+End of fault finding.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Carry out the required repairs.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

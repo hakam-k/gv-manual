@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "L8T40A1111003" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Descrizione sistema diagnostico di bordo
+</title>
+<servinfosub id = "L8T40A1111003001">
+<title>
+Modello OBD euro
+</title>
+<ptxt>
+L&apos;ECM in questo veicolo ha le seguenti funzioni.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando l&#8217;interruttore di accensione e acceso (ON) con il motore fermo, una spia di malfunzionamento (MIL) (1) si accende per controllare il circuito della spia di malfunzionamento (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando l&#8217;ECM rileva un malfunzionamento che provoca un effetto negativo alle emissioni del veicolo, mentre il motore e in moto, questo fa si che la spia di malfunzionamento (1) nel cluster del contatore del quadro comandi si accenda o lampeggi (lampeggiando solo quando si rileva una mancata accensione che puo causare danni al catalizzatore) e conserva in memoria l&#8217;area di malfunzionamento.
+</ptxt>
+<ptxt>
+(Se rileva che tre cicli di guida continui sono normali dopo il rilevamento di un malfunzionamento, pero, questo fa si che MIL (1) si spenga sebbene il DTC conservato in memoria rimanga.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Come condizione per il rilevamento di un malfunzionamento in alcune aree nel sistema che si stanno monitorando da parte di ECM e per l&#8217;accensione della spia di malfunzionamento (1) a causa di quel malfunzionamento, si adotta la logica di rilevamento a ciclo di guida 2 per impedire un rilevamento errato.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando si rileva un malfunzionamento, le condizioni del motore e della guida, quindi, sono conservate nella memoria ECM come dati presenti al momento. (Per i dettagli vedere la descrizione su 
+<intxref refid = "L8T40A1111003007">Dati condizioni presenti (Modello OBD euro)</intxref>
+.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+E possibile comunicare usando non solo lo strumento di scansione SUZUKI (SUZUKI-SDT) (2) ma anche lo scanner generico OBD. (E possibile accedere alle informazioni diagnostiche usando uno strumento di scansione).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I9T401112002.swf" width = "88.000mm" height = "99.839mm" ver = "01" gw = "172" gh = "266"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "L8T40A1111003002">
+<title>
+Modello OBD non euro
+</title>
+<ptxt>
+L&apos;ECM diagnostica problemi che si possono verificare in questa zona inclusi i seguenti componenti quando l&apos;interruttore di accensione e in posizione ON e il motore e in funzione e indica il risultato accendendo, o lampeggiando, la spia di malfunzionamento (1).
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sensore A&#x002F;F (se in dotazione)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore ossigeno riscaldato (se in dotazione)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore ECT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore TP 
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore MAF
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore IAT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore MAP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore CMP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore CKP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore di battito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore di velocita della ruota
+</ptxt>
+</item>
+<item>
+<ptxt>
+CPU (Unita centrale di elaborazione) dell&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore APP
+</ptxt>
+</item>
+<item>
+<ptxt>
+Valvola di controllo dell&apos;olio (per motore M16A)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Rele della ventola di raffreddamento del radiatore
+</ptxt>
+</item>
+</list1>
+<ptxt>
+L&apos;ECM e la spia di malfunzionamento (1) funzionano come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La spia di malfunzionamento (1) si accende quando l&apos;interruttore di accensione portato in posizione ON (ma il motore non e in funzione) con il terminale interruttore diagnostica non a massa incurante delle condizioni del sistema di controllo del motore e delle emissioni. Questo serve solo per controllare la spia di malfunzionamento (1) nel quadro strumenti e il suo circuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se le aree controllate dal modulo di controllo motore e emissioni funzionano correttamente dopo l&apos;avvio del motore (mentre il motore e in funzione), la spia (1) si spegne.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando l&apos;ECM rileva un guasto che si e verificato in una delle zone di cui sopra, accende la spia di malfunzionamento (1) quando il motore e in funzione per avvertire il conducente del verificarsi del problema e contemporaneamente memorizza la zona del guasto guidatore nella memoria di backup dell&apos;ECM.  (La memoria viene mantenuta come e anche nel caso di un guasto che si e verificato temporaneamente per scomparire immediatamente. E non viene cancellato a meno che non venga interrotta l&apos;alimentazione all&apos;ECM per un periodo di tempo specificato o viene cancellato dallo scanner SUZUKI (2).
+</ptxt>
+<ptxt>
+E possibile accedere alle informazioni diagnostiche usando lo scanner SUZUKI.
+</ptxt>
+<ptxt>
+Per ulteriori relativi della procedura di controllo, fare riferimento a 
+<intxref refid = "L8T40A1114003">Controllo DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I9T401112002.swf" width = "88.000mm" height = "99.839mm" ver = "01" gw = "172" gh = "266"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "L8T40A1111003003">
+<title>
+Ciclo di riscaldamento
+</title>
+<ptxt>
+Un ciclo di riscaldamento indica un funzionamento del veicolo sufficiente a innalzare la temperatura del refrigerante almeno a 22 &#176;C (40 &#176;F) dall&#8217;avvio del motore e a far raggiungere una temperatura minima di 70 &#176;C (160 &#176;F).
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1111003004">
+<title>
+Ciclo di guida
+</title>
+<ptxt>
+Un &#8220;Ciclo di guida &#8221; consiste dell&#8217;avvio e dell&#8217;arresto del motore.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1111003005">
+<title>
+Logica di rilevamento dei 2 cicli di guida
+</title>
+<ptxt>
+Il malfunzionamento rilevato nel primo ciclo di guida e conservato nella memoria ECM (nella forma di DTC in corso) ma la spia di malfunzionamento, questa volta non si accende. Si accende al secondo rilevamento della stessa avaria anche nel successivo ciclo di guida.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1111003006">
+<title>
+DTC in corso
+</title>
+<ptxt>
+Il DTC in corso indica un DTC rilevato e memorizzato temporaneamente nel ciclo di guida 1 del DTC che e rilevato nella logica di rilevamento del ciclo di guida 2.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1111003007">
+<title>
+Dati condizioni presenti (Modello OBD euro)
+</title>
+<ptxt>
+ECM memorizza le condizioni del motore e della guida (nella forma di dati come mostrato dalla figura) al momento del rilevamento di un malfunzionamento nella sua memoria. Questi dati sono definiti &#8220;dati &#34;freeze frame&#34;&#8221;.
+</ptxt>
+<ptxt>
+Quindi, nel caso in cui era stato rilevato un malfunzionamento, controllando i dati presenti al momento, e possibile conoscere le condizioni del motore e di guida per es. se il motore era caldo o meno, dove il veicolo era in moto o si era fermato, dove la miscela aria&#x002F;carburante era povera o ricca). Inoltre, l&apos;ECM ha una funzione per memorizzare ciascun dato presente al momento per tre diversi malfunzionamenti nell&#8217;ordine in cui ciascun malfunzionamento e rilevato. Utilizzando questa funzione, e possibile sapere l&#8217;ordine in cui sono stati rilevati i malfunzionamenti. Il suo uso e utile quando si ricontrolla o si diagnostica un guasto.
+</ptxt>
+<figure>
+<title>
+Dati presenti al momento (per esempio)
+</title>
+<graphic graphicname = "I7V10A111018.swf" width = "88.000mm" height = "76.556mm" ver = "01" gw = "148" gh = "200"/>
+</figure>
+<topic id = "L8T40A1111003008" page = "1">
+<title>
+Priorita dei dati presenti al momento:
+</title>
+<ptxt>
+ECM ha 4 frame in cui possono essere memorizzati i dati &#34;freeze frame&#34;. Il primo frame memorizza i dati &#34;freeze frame&#34; in cui e stato rilevato il primo malfunzionamento. Comunque, i dati presenti al momento, memorizzati in questo frame, sono aggiornati secondo la priorita descritta. (Se il malfunzionamento come descritto nel riquadro superiore &#8220;1&#8221; e rilevato mentre sono stati memorizzati i dati presenti al momento nel riquadro inferiore &#8220;2&#8221;, i dati presenti al momento &#8220;2&#8221; saranno aggiornati dai dati presenti al momento &#8220;1&#8221;).
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.787in"/>
+<colspec colnum = "2" colname = "2" colwidth = "6.417in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Priorita
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Dati presenti al momento nel frame 1
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati presenti al momento del rilevamento iniziale di malfunzionamento tra mancata accensione rilevata (P0300 &#8211; P0304), sistema di carburante troppo povero (P0171) e sistema di carburante troppo ricco (P0172)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati presenti al momento quando viene rilevato un malfunzionamento diverso da uno di quelli rilevati in &#8220;1&#8221;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<paragroup>
+<ptxt>
+Nei frame da 2 a 4, i dati presenti al momento di ciascun malfunzionamento sono memorizzati nell&#8217;ordine in cui e rilevato il malfunzionamento. Questi dati non sono aggiornati.
+</ptxt>
+<ptxt>
+Nella tabella vengono mostrati esempi di come i dati presenti al momento sono memorizzati quando sono rilevati due o piu malfunzionamenti.
+</ptxt>
+</paragroup>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.167in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.802in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.457in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.260in"/>
+<colspec colnum = "5" colname = "5" colwidth = "1.260in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.260in"/>
+<thead>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Ordine rilevato del malfunzionamento
+</ptxt>
+</entry>
+<entry namest = "3" nameend = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Frame
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Frame 1
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Frame 2
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Frame 3
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Frame 4
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Dati presenti al momento da aggiornare
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1° dato presente al momento
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2° dato presente al momento
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+3° dato presente al momento
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Nessun malfunzionamento
+</ptxt>
+</entry>
+<entry namest = "3" nameend = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Nessun dato presente al momento
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+P0401 (EGR)
+</ptxt>
+<ptxt>
+rilevato
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0401
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0401
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+P0171 (sistema carburante)
+</ptxt>
+<ptxt>
+rilevato
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0171
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0401
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0171
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+P0300 (mancata accensione)
+</ptxt>
+<ptxt>
+rilevato
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0171
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0401
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0171
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0300
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+P0301 (mancata accensione)
+</ptxt>
+<ptxt>
+rilevato
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0171
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0401
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0171
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Dati al rilevamento P0300
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</topic>
+<topic id = "L8T40A1111003009" page = "1">
+<title>
+Cancellazione dei dati presenti al momento:
+</title>
+<ptxt>
+I dati &#34;freeze frame&#34; sono cancellati contemporaneamente alla eliminazione del DTC.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "L8T40A1111003010">
+<title>
+Connettore collegamento dati (DLC)
+</title>
+<ptxt>
+DLC (1) e conforme a SAE J1962 nella forma di connettore e assegnazione di perno.
+</ptxt>
+<topic id = "L8T40A1111003011">
+<title>
+Per il motore J20A
+</title>
+<ptxt>
+La linea dati seriali OBD (3) (linea K di ISO 9141) viene usata dallo scanner SUZUKI (SUZUKI-SDT) o scanner OBD generico per comunicare con l&apos;ECM, SDM, modulo di controllo immobilizzatore (nell&apos;ECM), TCM (modulo di controllo della trasmissione (per il modello 4 A&#x002F;T)) e modulo di controllo trazione a 4 ruote (se in dotazione).
+</ptxt>
+</topic>
+<topic id = "L8T40A1111003012">
+<title>
+Per il motore M16A
+</title>
+<ptxt>
+Le linee OBD CAN Hi (6) e Low (6) (linea CAN di ISO 15765-4) sono usate dallo scanner SUZUKI (SUZUKI-SDT) (8) o dallo scanner generico OBD di comunicazione CAN per comunicare con l&apos;ECM, e modulo di controllo immobilizzatore (nell&apos; ECM).
+</ptxt>
+</topic>
+<figure>
+<graphic graphicname = "I8T40A111001.swf" width = "88.000mm" height = "89.256mm" ver = "01" gw = "164" gh = "236"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+B &#x002B; (Polo positivo della batteria del veicolo non commutato)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Massa ECM (massa del segnale)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" valign = "top" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Massa della carrozzeria del veicolo (Massa dello chassis)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

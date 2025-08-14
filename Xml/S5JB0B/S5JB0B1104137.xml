@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0B1104137" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2120: Throttle&#x002F;Pedal Position Sensor&#x002F;Switch &#8220;D&#8221; Circuit Malfunction
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+This fault may appear if the wiring harness has been damaged.
+</ptxt>
+<ptxt>
+Follow the procedure described in 
+<intxref refid = "S5JB0B0006001">Electrical Circuit Inspection Procedure</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+This check enables the condition and the conformity of the engine wiring harness to be checked.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<servinfosub id = "S5JB0B1104137001">
+<title>
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions for applying the fault finding procedure to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present after a series of full load&#x002F;no load actions on the accelerator pedal.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Turbocharging, passenger compartment heating resistor activation and cruise control&#x002F; speed limiter are not authorised.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault is present, the Injection warning light (gravity 1 warning light) is lit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The engine speed is fixed at 1400 rpm if there is a fault on &#8220;main&#8221; and &#8220;sub&#8221; wire of the accelerator pedal position (APP) sensor and the engine torque is limited.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Use service wire for all operations on the controller connectors.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Priorities when dealing with a number of faults:
+</ptxt>
+<ptxt>
+Apply the procedure for dealing with fault 
+<intxref refid = "S5JB0B1104127">DTC P0651: Sensor Reference Voltage &#8220;B&#8221; Circuit &#x002F; Open Malfunction</intxref>
+ first if it is present or stored.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "S5JB0B1104137002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S5JB0B910E048">A-5 Engine and A&#x002F;C Control System Circuit Diagram (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0B1104137003">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CO.0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Open circuit or short circuit to vehicle body ground
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+CC.1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Short circuit to &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+1.DEF
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "left">
+<ptxt>
+Inconsistency of signal
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0B1104137004">
+<title>
+Troubleshooting for CO.0: Open circuit or short circuit to vehicle body ground
+</title>
+<attention3>
+<ptxt>
+Priorities when dealing with a number of faults:
+</ptxt>
+<ptxt>
+If fault 
+<intxref refid = "S5JB0B1104101">DTC P0225: Accelerator Pedal Position (APP) Sensor Assembly &#x002F; Switch &#8220;C&#8221; Circuit Malfunction</intxref>
+ is present at the same time, check that the sensor is connected correctly.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the connections of the accelerator pedal position (APP) sensor.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and insulation from vehicle body ground of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;E68-6&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-21&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E68-1&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-15&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measure the resistance on the accelerator pedal position (APP) sensor (sub) on accelerator pedal position (APP) sensor assembly between &#8220;E68-1&#8221; and &#8220;E68-5&#8221; terminals.
+</ptxt>
+<ptxt>
+Replace the accelerator pedal position (APP) sensor assembly if the resistance is not 0.8 &#8211; 4.9 k&#937;.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "S5JB0B1104137005">
+<title>
+Troubleshooting for CC.1: Short circuit to &#x002B;12 V
+</title>
+<attention3>
+<ptxt>
+Priorities when dealing with a number of faults:
+</ptxt>
+<ptxt>
+If fault 
+<intxref refid = "S5JB0B1104101">DTC P0225: Accelerator Pedal Position (APP) Sensor Assembly &#x002F; Switch &#8220;C&#8221; Circuit Malfunction</intxref>
+ is present at the same time, check that the sensor is connected correctly.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the connections of the accelerator pedal position (APP) sensor.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and insulation in relation to &#x002B;12 V of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;E68-6&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-21&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E68-1&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-15&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E68-5&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-27&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measure the resistance on the accelerator pedal position (APP) sensor (sub) on accelerator pedal position (APP) sensor assembly between &#8220;E68-1&#8221; and &#8220;E68-5&#8221; terminals.
+</ptxt>
+<ptxt>
+Replace the accelerator pedal position (APP) sensor assembly if its resistance is not approximately: 0.8 &#8211; 4.9 k&#937;.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0B1104137006">
+<title>
+Troubleshooting for 1.DEF: Inconsistency of signal
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the fuel pressure sensor connectors.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the following connections for continuity and make sure there is no interference resistance:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;E68-6&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-21&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E68-1&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-15&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E68-5&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-27&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E68-3&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-3&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E68-2&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-4&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;E68-4&#8221; wire of accelerator pedal position (APP) sensor connector and &#8220;E66-5&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the accelerator pedal position (APP) sensor assembly.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

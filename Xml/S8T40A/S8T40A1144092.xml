@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1144092" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0100: Mass or Volume Air Flow Circuit
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions for applying the fault finding procedure to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present after a road test.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault is present, the Injection warning light (gravity 1 warning light) is lit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Use service wire for all operations on the ECM connectors.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Priorities when dealing with a number of faults:
+</ptxt>
+<ptxt>
+As a priority, deal with fault 
+<intxref refid = "S8T40A1144130">DTC P0697: Sensor Reference Voltage 3 Circuit:F9Q</intxref>
+ if the fault is present or stored.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S8T40A1144092001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S8T40A910E013">A-5 Engine and A&#x002F;C Control System Circuit Diagram (Diesel Model)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1144092002">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short circuit to &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Open circuit or short circuit to vehicle body ground
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Offset at maximum threshold
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Offset at minimum threshold
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1144092003">
+<title>
+Troubleshooting for CC1: Short circuit to &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the MAF sensor assembly with IAT sensor connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and the insulation against &#x002B;12 V of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C13-2&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-24&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C13-6&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-12&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C13-5&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-47&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the MAF sensor assembly with IAT sensor.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1144092004">
+<title>
+Troubleshooting for CO0: Open circuit or short circuit to vehicle body ground
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check there is a &#x002B;5 V supply on &#8220;C13-5&#8221; wire of the MAF sensor assembly with IAT sensor connector.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+<ptxt>
+Check the MAF sensor assembly with IAT sensor connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and insulation from vehicle body ground between:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C13-2&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-24&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C13-5&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-47&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C13-6&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-12&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C13-4&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;E33-6&#8221; terminal of main mounting connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present and remains present, replace the MAF sensor assembly with IAT sensor.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1144092005">
+<title>
+Troubleshooting for D1: Offset at maximum threshold and D2: Offset at minimum threshold
+</title>
+<attention3>
+<ptxt>
+Conditions for applying fault finding procedures to stored faults: The fault is declared present after ignition switch has been turned OFF for 40 seconds.
+</ptxt>
+</attention3>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the MAF sensor assembly with IAT sensor connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the following connections for continuity and make sure there is no interference resistance:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C13-5&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-47&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C13-6&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-12&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C13-2&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;C86-24&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C13-4&#8221; wire of MAF sensor assembly with IAT sensor connector and &#8220;E33-6&#8221; terminal of main relay mounting connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, apply fault finding-Tests Test 3 referring to 
+<intxref refid = "S8T40A1144168">Test 3: Checking the Turbocharged Air Inlet Circuit:F9Q</intxref>
+ and Test 4 referring to 
+<intxref refid = "S8T40A1144169">Test 4: MAF Sensor:F9Q</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Check that the inlet throttle valve is open
+</ptxt>
+</item>
+<item>
+<ptxt>
+With the MAF sensor assembly with IAT sensor connected, turn ON ignition switch and engine stopped:
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the voltage between &#8220;C13-2&#8221; and &#8220;C13-6&#8221; wires of the MAF sensor assembly with IAT sensor connector:
+</ptxt>
+</item>
+</list1>
+<ptxt>
+If the value is not 0.5 &#8211; 0.7 V, replace the MAF sensor assembly with IAT sensor.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the EGR valve is not jammed open:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Deal with any faults.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Apply fault finding-Tests Test 7 referring to 
+<intxref refid = "S8T40A1144172">Test 7: Exhaust Gas Recirculation Valve:F9Q</intxref>
+.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+If these checks show that the valve is jammed or irrevocably seized, replace the EGR valve.
+</ptxt>
+<ptxt>
+If no faults are revealed, but the fault is still present, replace the MAF sensor assembly with IAT sensor
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

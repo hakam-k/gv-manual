@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0B1104102" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0235: Turbo &#x002F; Super Charger Boost Sensor &#8220;A&#8221; Circuit Malfunction
+</title>
+<attention2>
+<ptxt>
+This fault can result in a rapid and significant fouling of the diesel particulate filter.
+</ptxt>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions for applying the fault finding procedure to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+When an attempt is made to start the engine
+</ptxt>
+</item>
+<item>
+<ptxt>
+With the engine running
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Use service wire for all operations on the ECM connectors.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault is present:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+The EGR function is inhibited.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The turbocharging pressure value changes to safe mode: &#8220;Turbo Pressure&#8221; on Data List of SUZUKI scan tool &#x003D; 1000 hPa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The Injection warning light (gravity 1 warning light) is lit.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Order of priority in the event of more than one fault:
+</ptxt>
+<ptxt>
+Deal with fault 
+<intxref refid = "S5JB0B1104126">DTC P0641: Sensor Reference Voltage &#8220;A&#8221; Circuit &#x002F; Open Malfunction</intxref>
+ first if it is present or stored.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S5JB0B1104102001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S5JB0B910E048">A-5 Engine and A&#x002F;C Control System Circuit Diagram (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0B1104102002">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO.0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Open circuit or short circuit to vehicle body ground
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC.1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short circuit to &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+1.DEF
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Inconsistency of signal
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0B1104102003">
+<title>
+Troubleshooting for CO.0: Open circuit or short circuit to vehicle body ground
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the boost pressure sensor connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and insulation from vehicle body ground of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C76-3&#8221; wire of boost pressure sensor connector and &#8220;C86-42&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C76-74&#8221; wire of boost pressure sensor connector and &#8220;C86-19&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the boost pressure sensor.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "S5JB0B1104102004">
+<title>
+Troubleshooting for CC.1: Short circuit to &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the boost pressure sensor connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and insulation against &#x002B;12 volts of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C76-3&#8221; wire of boost pressure sensor connector and &#8220;C86-42&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C76-14&#8221; wire of boost pressure sensor connector and &#8220;C86-45&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C76-4&#8221; wire of boost pressure sensor connector and &#8220;C86-19&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the boost pressure sensor.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0B1104102005">
+<title>
+Troubleshooting for 1.DEF: Inconsistency of signal
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+In the event of a number of faults with 
+<intxref refid = "S5JB0B1104093">DTC P0105: Manifold Absolute Pressure &#x002F; Barometric Pressure Circuit Malfunction</intxref>
+, display parameter &#8220;Turbo Pressure&#8221; on Data List of SUZUKI scan tool.
+</ptxt>
+<ptxt>
+If this value is locked at 1000 hPa and &#8220;Barometric Pres&#8221; on Data List of SUZUKI scan tool is displaying a different value, replace the boost pressure sensor.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the boost pressure sensor connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the following connections for continuity and make sure there is no interference resistance:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C76-3&#8221; wire of boost pressure sensor connector and &#8220;C86-42&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C76-1&#8221; wire of boost pressure sensor connector and &#8220;C86-45&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C76-4&#8221; wire of boost pressure sensor connector and &#8220;C86-19&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the boost pressure sensor.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

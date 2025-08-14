@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "9C">
+<servcat sctnbr = "09" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "L8T40A9301001" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Descrizione Quadro Strumenti
+</title>
+<ptxt>
+Il quadro strumenti (1) utilizza segnali (informazioni) inviati a ciascun modulo di controllo tramite la comunicazione CAN per controllare indicatore di tachimetro, contagiri, indicatore ECT e indicatore (diversa dalla spia di avvertenza livellamento automatico fari (se in dotazione), spia air bag, spia della riserva carburante, spia fendinebbia posteriore e spia indicatori di direzione).
+</ptxt>
+<ptxt>
+Per ulteriori informazioni sui dati di comunicazione CAN ricevuti dal quadro strumenti, fare riferimento a 
+<intxref refid = "L8T40AA821001">Descrizione del sistema di comunicazione CAN:Modello J24B e N32A</intxref>
+, 
+<intxref refid = "L8T40AA811001">Descrizione del sistema di comunicazione CAN:Modello M16A e J20A</intxref>
+ o 
+<intxref refid = "L8T40AA831001">Descrizione del sistema di comunicazione CAN:Modello F9Q</intxref>
+.
+</ptxt>
+<figure>
+<graphic graphicname = "I8T40A930001.swf" width = "183.000mm" height = "70.911mm" ver = "02" gw = "342" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "8" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.496in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.496in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.315in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.496in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.315in"/>
+<colspec colnum = "8" colname = "8" colwidth = "1.457in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Display informativo
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Indicatore spia master
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Manopola parziale
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Manopola MODO&#x002F;ILL
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<servinfosub id = "L8T40A9301001001">
+<title>
+Indicatore di velocità
+</title>
+<ptxt>
+ECM calcola la velocità del veicolo utilizzando il segnale dal sensore di velocità delle ruote ed invia il segnale di velocità del veicolo attraverso la comunicazione CAN al quadro strumenti. Quindi, il quadro strumenti aziona l&apos;indicatore di velocità in base al segnale di velocità del veicolo.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A9301001002">
+<title>
+Contagiri
+</title>
+<ptxt>
+ECM calcola la velocità del motore utilizzando il segnale dal sensore CKP ed invia il segnale di velocità del motore attraverso la comunicazione CAN al quadro strumenti. Quindi, il quadro strumenti aziona il contagiri in base al segnale di velocità del veicolo.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A9301001003">
+<title>
+Misuratore ECT
+</title>
+<ptxt>
+ECM calcola la temperatura del refrigerane del motore utilizzando il segnale dal sensore ECT ed invia il segnale di temperatura del refrigerante del motore attraverso la comunicazione CAN al quadro strumenti. Quindi, il quadro degli strumenti regola l&apos;indicatore ECT in base al segnale della temperatura del refrigerante del motore.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A9301001004">
+<title>
+Indicatore carburante
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Il sensore di livello del carburante invia il segnale di livello al quadro strumenti. Utilizzando questo segnale di livello del carburante, il quadro strumenti calcola il livello attuale del carburante e guida l&apos;indicatore del carburante
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando il carburante rimasto è inferiore a circa 9,9 litri (20,92&#x002F;17,42 US&#x002F;Imp. pt.) (modello a 5 porte) o 8,3 litri (17,44&#x002F;14,52 US&#x002F;Imp. pt.) (modello a 3 porte), si accende la spia della riserva.
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "L8T40A9301001005">
+<title>
+Indicatore generale di allarme
+</title>
+<ptxt>
+L&apos;indicatore generale di allarme lampeggia mentre il messaggio di stato viene visualizzato e il display informativo attira l&apos;attenzione del conducente. Per i dettagli, fare riferimento a 
+<intxref refid = "L8T40A9301001012">Tabella messaggi di visualizzazione informazioni</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A9301001006">
+<title>
+Display informazioni
+</title>
+<ptxt>
+Il display informativo indica le seguenti informazioni in ciascuna area della finestra di display.
+</ptxt>
+<figure>
+<graphic graphicname = "I8T40A930002.swf" width = "88.000mm" height = "30.807mm" ver = "01" gw = "217" gh = "70"/>
+</figure>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.885in"/>
+<colspec colnum = "2" colname = "2" colwidth = "6.323in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Posizione
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+generale
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x005B;A&#x005D;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Viene indicata la posizione marcia. (modello A&#x002F;T)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x005B;B&#x005D;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+&#8220;Consumo istantaneo di carburante&#8221;, &#8220;Consumo medio di carburante&#8221;, &#8220;Autonomia di guida&#8221;, &#8220;Velocità media&#8221; o &#8220;Nessuna indicazione&#8221; vengono visualizzati ogni volta che venga premuto brevemente la manopola MODE&#x002F;ILL.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Dipendendo dalle condizioni del veicolo vengono visualizzati vari messaggio di stato. Per i dettagli, fare riferimento a 
+<intxref refid = "L8T40A9301001012">Tabella messaggi di visualizzazione informazioni</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x005B;C&#x005D;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Modello con orologio: Viene indicato l&apos;orologio.
+</ptxt>
+<ptxt>
+Modello senza orologio: &#8220;Parzializzatore A&#8221;, &#8220;Parzializzatore B&#8221; o &#8220;Temperatura esterna&#8221; vengono visualizzati ogni volta che viene premuta la manopola TRIP.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#x005B;D&#x005D;
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Modello con orologio: &#8220;Parzializzatore A&#8221;, &#8220;Parzializzatore B&#8221;, &#8220;Odometro&#8221; o &#8220;Temperatura esterna&#8221; vengono visualizzati ogni volta che viene premuta la manopola TRIP.
+</ptxt>
+<ptxt>
+Modello senza orologio: Viene indicato l&apos;odometro.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<topic id = "L8T40A9301001014">
+<title>
+Posizione del Cambio (Modello A&#x002F;T)
+</title>
+<ptxt>
+Il TCM invia il segnale di posizione cambio A&#x002F;T attraverso la comunicazione CAN al quadro strumenti. Quindi, il quadro strumenti fa si che lo LCD (posizione del cambio) visualizzi in base al segnale di posizione cambio A&#x002F;T.
+</ptxt>
+</topic>
+<topic id = "L8T40A9301001007">
+<title>
+Consumo di carburante
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Il quadro strumenti calcola il consumo di carburante utilizzando la distanza percorsa in un certo periodo di tempo ed il segnale di consumo del carburante inviato da ECM attraverso la comunicazione CAN al quadro strumenti e fa si che il LCD (consumo di carburante) lo visualizzi.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La visualizzazione del consumo di carburante può essere selezionata fra &#8220;visualizzazione immediata del consumo di carburante&#8221;, &#8220;visualizzazione consumo medio di carburante&#8221;.
+</ptxt>
+</item>
+</list1>
+</topic>
+<topic id = "L8T40A9301001009">
+<title>
+Autonomia di guida
+</title>
+<ptxt>
+Il quadro strumenti calcola l&apos;autonomia di guida utilizzando la distanza percorsa in un certo periodo di tempo ed il segnale di consumo del carburante inviato da ECM attraverso la comunicazione CAN al quadro strumenti e fa si che il LCD (autonomia d guida) lo visualizzi.
+</ptxt>
+</topic>
+<topic id = "L8T40A9301001010">
+<title>
+Velocità media
+</title>
+<ptxt>
+Il quadro strumenti calcola la velocità media utilizzando la distanza percorsa in un certo periodo di tempo ed il segnale di velocità media inviato da ECM attraverso la comunicazione CAN al quadro strumenti e fa si che il LCD (velocità media) lo visualizzi.
+</ptxt>
+</topic>
+<topic id = "L8T40A9301001008">
+<title>
+Temperatura aria esterna
+</title>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Il modulo BCM calcola la temperatura dell&apos;aria esterna utilizzato il segnale del sensore della temperatura esterna ed inviandolo tramite la comunicazione CAN al quadro strumenti. Quindi, il quadro strumenti fa si che LCD (temperatura aria esterna) visualizzi la temperatura aria esterna attuale in base al segnale di temperatura aria esterna.
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;intervallo di visualizzazione della temperatura aria esterna va da &#8211;30 &#176;C (&#8211;22 &#176;F) a 50 &#176;C (122 &#176;F). Quando l&apos;interruttore di accensione è ON, &#8220;-- &#176;C&#8221; appare sullo LCD finché non viene ricevuto il segnale di temperatura aria esterna. Inoltre , quando la temperatura esterna scende a 3 &#176;C (37,4 &#176;F) o sotto, sul display LCD viene visualizzato un messaggio che avverte il conducente della strada ghiacciata.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Dato che il valore visualizzato sullo LCD è la temperatura rilevata in corrispondenza del sensore di temperatura aria esterna, si suppone che la temperatura aria esterna effettiva quando il segnale di congelamento si accende sia di circa 0 &#176;C (32 &#176;F).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando il veicolo è fermo o viaggia ad una velocità inferiore ai 30 km&#x002F;h (19 miglia&#x002F;h), anche quando la temperatura aria esterna aumenta, il valore visualizzato non cambia.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</item>
+</list1>
+</topic>
+</servinfosub>
+<servinfosub id = "L8T40A9301001012">
+<title>
+Tabella messaggi di visualizzazione informazioni
+</title>
+<ptxt>
+Nella tabella di sotto sono elencati i messaggi di stato visualizzati sul display informativo.
+</ptxt>
+<ptxt>
+I messaggi contrassegnati da asterisco (&#x002A;1 e &#x002A;2) sono usati due volte ma la loro priorità e colore di visualizzazione dipendono dalle condizioni di visualizzazione.
+</ptxt>
+<ptxt>
+Quando si tratta di due o più messaggi, essi vengono elencati in ordine di priorità partendo da quella più alta a quella più bassa. Se viene generato un nuovo messaggio durante la visualizzazione dei messaggi, appare un messaggio di interruzione e i messaggi vengono elencati nell&apos;ordine partendo dalla priorità più alta a quella più bassa.
+</ptxt>
+<ptxt>
+Il messaggio viene visualizzato continuamente in arancione per tutto il tempo per il quale la condizione visualizzata rimane valida, contemporaneamente l&apos;indicatore generale di allarme lampeggia. D&apos;altra parte, il messaggio di colore bianco viene visualizzato in continuo per un periodo da 5 a 7 secondi e poi si spegne.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.569in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.306in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.629in"/>
+<colspec colnum = "4" colname = "4" colwidth = "3.700in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Priorità
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Messaggio
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Colore
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizioni di visualizzazione
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MANUTENZIONE DEL SISTEMA ESP
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Arancio
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+l&apos;ESP&#174; rileva il DTC (&#x002A;3)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MANUTENZIONE DEL SISTEMA 4WD
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Arancio
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Il modulo di controllo 4WD ha rilevato un DTC (eccetto C1237, C1238 e C1243)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+4WD MODO-N IL VEICOLO PUO&apos; ROTOLARE
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Arancio
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Posizione cambio trasferimento nella posizione &#8220;N&#8221;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+SOVRACCARICO TRASMISSIONE USARE IL MODO 4HL
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Arancio
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La scatola di trasferimento è in posizione 4H e la differenza di rotazione tra le ruote anteriori e posteriori supera un livello specifico (quando viene rilevato lo slittamento delle ruote).
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+5
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+FRENO ON&#x002F;ACCEL OFF CAMBIO N
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Quando l&apos;interruttore di trasferimento viene azionato o la posizione di trasferimento viene cambiata, se una qualsiasi delle seguenti condizioni si verifica (eccetto 4H &#8596; 4HL)
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La posizione di cambiata A&#x002F;T non è la posizione &#8220;N&#8221; (modello A&#x002F;T)
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;interruttore della luce del freno è su OFF (il pedale del freno non è premuto).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il motore è in marcia ad un regime che non è il minimo (il pedale dell&apos;acceleratore è premuto)
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;interruttore di avviamento frizione è OFF (il pedale della frizione non è premuto) (modello M&#x002F;T)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+6
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+FRENO ON&#x002F;ACCEL OFF FRIZIONE IN
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+7
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CONTROLLARE LA POSIZIONE DELL&apos;INTERRUTTORE DI TRASFERIMENTO (&#x002A;1)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+L&apos;interruttore di trasferimento viene azionato durante la guida (eccetto che per il 4H &#8596; 4HL)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+8
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CAMBIATA SCATOLA DI TRASFERIMENTO
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Il trasferimento non è riuscito nella cambiata
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+9
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+SI PREGA DI ATTENDERE LA CAMBIATA DEL TRASFERIMENTO
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+L&apos;interruttore di trasferimento viene azionato durante la guida (eccetto che per il 4H &#8596; 4HL)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+10
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CONTROLLARE LA POSIZIONE DELL&apos;INTERRUTTORE DI TRASFERIMENTO (&#x002A;1)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Il trasferimento non è riuscito nella cambiata (eccetto 4H &#8596; 4HL)
+</ptxt>
+</item>
+<item>
+<ptxt>
+La posizione dell&apos;interruttore di trasferimento e la posizione della cambiata di trasferimento sono diverse.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+11
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+L&apos;INTERRUTTORE ESP OFF FUNZIONA SOLO IN 4HL
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ESP OFF è premuto con la posizione della cambiata di trasferimento su &#8220;4H&#8221;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+12
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Livello carburante basso
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Il carburante rimasto è inferiore a circa 9,9 litri (20,92&#x002F;17,42 US&#x002F;Imp.&#x002F; pt.) (modello a 5 porte) o 8,3 litri (17,44&#x002F;14,52 US&#x002F;Imp.&#x002F;pt.) (modello a 3 porte) (in collegamento con l&apos;accensione della spia della riserva)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+13
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+GHIACCIO POSSIBILE GUIDARE CON ATTENZIONE
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La temperatura esterna scende sotto 3 &#176;C (37,4 &#176;F)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+14
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+PORTA APERTA (&#x002A;2)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Arancio
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Veicolo in marcia con qualsiasi porta aperta
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+15
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+PORTA APERTA (&#x002A;2)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Bianco
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Veicolo in arresto con qualsiasi porta aperta
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+16
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+LUCI ACCESE
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Arancio
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+L&apos;interruttore di accensione in posizione OF, interruttore delle luci nella posizione FARI o CLEARANCE e porta del lato conducente aperta
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+17
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MODO MANUTENZIONE ATTIVO
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Arancio
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Manutenzione ESP&#174; è stata attivata
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+18
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Controllo blocco su discesa
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Arancio
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Si sono verificati dei problemi con la funzione di blocco su discesa
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+&#x002A;3: Eccetto C1016, C1027, C1037, C1065, C1066, C1067, C1075, C1076, C1077 e C1078.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "L8T40A9301001013">
+<title>
+Funzione di Allarme Automatico
+</title>
+<ptxt>
+Il quadro strumenti dispone della funzione di allarme automatico quando viene rilevato uno qualsiasi dei guasti sotto elencati.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.577in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.627in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Funzione di allarme
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Il misuratore di carburante non indica il livello di carburante e la luce della riserva lampeggia.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito sensore livello carburante aperto o in corto
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+L&apos;indicatore di velocità ed il contagiri indicano la posizione zero
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;indicatore ECT non in dica la temperatura del refrigerante del motore
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il display informativo non mostra
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Circuito comunicazione CAN aperto o corto
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

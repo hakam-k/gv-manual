@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0A1114029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0118: Hűtőfolyadék hőmérséklet áramkörének feszültsége magas
+</title>
+<servinfosub id = "H6JB0A1114029001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A1114027">DTC P0116: Hűtőfolyadék hőmérséklet áramkörének tartománya &#x002F; működése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0A1114029002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.205in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.985in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Az ECT-érzékelő kimenő feszültsége 0,5 másodpercig folyamatosan magasabb mint 4,8 V
+</ptxt>
+<ptxt>
+(Alacsony hűtőfolyadék-hőmérséklet (magas feszültség &#x002F; nagy ellenállás))		
+</ptxt>
+<ptxt>
+(1 működési ciklusos észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT-érzékelő áramkör
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECT-érzékelő
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Amikor egyszerre kerül kijelzésre a DTC P0108, P0113 és P0533 lehet, hogy a &#8220;GRY&#x002F;GRN&#8221; vezetékáramkör szakadt.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "H6JB0A1114029003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót és törölje a DTC-t a vizsgálókészülék segítségével.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa el a motort és járassa legalább 10 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ellenőrizze a DTC-t és a feltételes DTC-t.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H6JB0A1114029004">
+<title>
+DTC hibaelhárítás
+</title>
+<attention3>
+<ptxt>
+Mielőtt elvégezné ezt a hibaelhárítást, olvassa el a DTC hibaelhárítással kapcsolatos óvintézkedéseket, lásd: 
+<intxref refid = "H6JB0A1110003">DTC hibaelhárítással kapcsolatos óvintézkedések:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "H6JB0A1114029005">
+<testgroup>
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0A1114001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő és áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett csatlakoztassa a vizsgálókészüléket.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a vizsgálókészüléken kijelzett hűtőfolyadék-hőmérsékletet.
+</ptxt>
+</test1>
+<question>
+&#8211;40 &#176;C (&#8211;40 &#176;F) a kijelzett érték?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Időszakos hiba.
+</ptxt>
+<ptxt>
+Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H6JB0A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT feszültség ellenőrzés
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECT-érzékelő csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECT-érzékelő megfelelő csatlakozását a &#8220;PPL&#x002F;YEL&#8221; és &#8220;GRY&#x002F;GRN&#8221; vezetékérintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Amennyiben rendben vannak, akkor bekapcsolt gyújtáskapcsolónál mérje meg a feszültséget az ECT-érzékelő csatlakozójának &#8220;PPL&#x002F;YEL&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110040.swf" width = "90.000mm" height = "33.220mm" ver = "01" gw = "109" gh = "77"/>
+</testfigure>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V körül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM feszültség ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja KI a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Szedje ki az ECM-et a foglalatából bekapcsolt ECM csatlakozók mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelő-e az érintkezés az ECM csatlakozó &#8220;C37-24&#8221; érintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Amennyiben rendben van, fordítsa a gyújtáskapcsolót ON helyzetbe, és mérje meg a feszültséget az ECM csatlakozó &#8220;C37-24&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 4 &#8211; 6 V körül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+A &#8220;PPL&#x002F;YEL&#8221; vezeték áramköre szakadt. Ha a vezeték és a csatlakozás rendben van, menjen az 5. lépésre.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő vezetékköteg feszültség ellenőrzés
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtás mellett vegye le az ECM csatlakozóit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja be a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg a feszültséget az ECT-érzékelő csatlakozó &#8220;PPL&#x002F;YEL&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+A feszültség 0 V körül van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+A &#8220;PPL&#x002F;YEL&#8221; vezeték rövidre zárt más áramkör felé.
+</ptxt>
+<ptxt>
+Ha a vezeték rendben van, a meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő vezetékköteg ellenállásának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsolónál mérje meg az ellenállást az ECM csatlakozó &#8220;C37-24&#8221; érintkezője és az ECT-érzékelő csatlakozójának &#8220;PPL&#x002F;YEL&#8221; vezetékérintkezője között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+A &#8220;PPL&#x002F;YEL&#8221; vezetékáramkör ellenállása nagy.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő testáramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Csatlakoztassa a csatlakozókat az ECM-re.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy tökéletes-e a csatlakozás az ECT-érzékelő csatlakozójának &#8220;GRY&#x002F;GRN&#8221; vezetékérintkezőjénél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az ECT-érzékelő csatlakozó &#8220;GRY&#x002F;GRN&#8221; vezetékérintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 9. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 8. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő testáramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Mérje meg az ellenállást az ECM csatlakozó &#8220;C37-57&#8221; érintkezője és a karosszéria testelése között.
+</ptxt>
+</test1>
+<question>
+Az ellenállás kisebb, mint 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+A &#8220;GRY&#x002F;GRN&#8221; vezetékáramkör szakadt vagy az áramköri ellenállás nagy. Rossz érintkezés a &#8220;C37-57&#8221; érintkezőnél.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+ECM testáramköre hibás. Ha az áramkör rendben van, tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECT-érzékelő működésének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECT-érzékelőt, lásd: 
+<intxref refid = "H6JB0A1316009">Hűtőfolyadék-hőmérséklet-(ETC) érzékelő ellenőrzése:Benzinmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki az ECT-érzékelőt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40AA314001" svcinfotypenbr = "06" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+Immobilizer Control System Check
+</title>
+<diag type = "test" id = "S8T40AA314001001">
+<testgroup>
+<title>
+Immobilizer indicator light ON check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch to ON position using ignition key.
+</ptxt>
+</test1>
+<question>
+Does immobilizer indicator light come on?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40AA314006">Immobilizer Indicator Light Does Not Come ON with Ignition Switch ON and Engine at Stop:Petrol Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Check ECM for DTC referring to 
+<intxref refid = "S8T40AA314002">DTC Check:Petrol Engine Model</intxref>
+</ptxt>
+</test1>
+<question>
+Is DTC P1636 or P1638 detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Immobilizer indicator light flash check
+</title>
+<question>
+Does immobilizer indicator light flash on and off continuously in Step 1?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Check what DTC is detected by ECM referring to 
+<intxref refid = "S8T40AA314002">DTC Check:Petrol Engine Model</intxref>
+. Then, perform the troubleshooting referring to the corresponding flowchart in this section.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Engine start check
+</title>
+<test1>
+<ptxt>
+Start engine using ignition key.
+</ptxt>
+</test1>
+<question>
+Does engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Perform engine and emission control system check.
+</ptxt>
+<ptxt>
+- M16A and J20A models: Refer to 
+<intxreftitleoff1 refid = "S8T40A1114001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B model: Refer to 
+<intxreftitleoff1 refid = "S8T40A1124001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A model: Refer to 
+<intxreftitleoff1 refid = "S8T40A1134001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Immobilizer indicator light remain ON check
+</title>
+<test1>
+<ptxt>
+Check if immobilizer indicator light remains ON after engine start.
+</ptxt>
+</test1>
+<question>
+Does immobilizer indicator light remain ON after engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40AA314007">Immobilizer Indicator Light Remains ON after Engine Start:Petrol Engine Model</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Immobilizer control system is in good condition. Then, go to 
+<intxref refid = "S8T40AA504003">Keyless Start System Check</intxref>
+ for the vehicle with keyless start system.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

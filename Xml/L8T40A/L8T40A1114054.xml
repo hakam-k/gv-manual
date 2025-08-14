@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114054" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0533: Circuito alto sensore pressione refrigerante A&#x002F;C
+</title>
+<servinfosub id = "L8T40A1114054001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1114053">DTC P0532: Circuito basso sensore pressione refrigerante A&#x002F;C:M16A e J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1114054002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tensione del segnale sensore pressione refrigerante A&#x002F;C e inferiore a 4,93 V per 0,5 sec.
+</ptxt>
+<ptxt>
+(1 logica rilevamento guida ma il MIL non si accende)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito sensore di pressione refrigerante A&#x002F;C
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore pressione refrigerante A&#x002F;C
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Quando i DTC P0108 e P0113 e P0118 sono indicati insieme, e possibile che esista un&apos;interruzione di circuito sul filo &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "L8T40A1114054003">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e cancellare il DTC usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllare DTC e DTC in corso.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1114054004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<attention3>
+<ptxt>
+Prima di eseguire questa procedura di individuazione guasto, leggere le precauzioni per l&#8217;individuazione DTC facendo riferimento a 
+<intxref refid = "L8T40A1110003">Precauzione per la risoluzione dei problemi DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "L8T40A1114054005">
+<testgroup id = "L8T40A1114054006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vai a 
+<intxref refid = "L8T40A1114001">Verifica del sistema di controllo motore e emissioni:M16A e J20A</intxref>
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114054007">
+<title>
+Controllo circuito tensione di alimentazione refrigerante A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Collegare il connettore del sensore pressione refrigerante A&#x002F;C con chiavetta di accensione in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare la connessione corretta del sensore di pressione refrigerante A&#x002F;C con i terminali filo &#8220;GRY&#x002F;RED&#8221;, &#8220;GRY&#x002F;BLK&#8221; e &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione ON, misurare la tensione tra la massa del motore e il terminale &#8220;GRY&#x002F;RED&#8221; del connettore del sensore di pressione refrigerante A&#x002F;C.
+</ptxt>
+</test1>
+<question>
+La tensione e 4 &#8211; 6 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114054008">
+<title>
+Controllo del circuito segnale sensore di pressione differenziale A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione ON, misurare la tensione tra la massa del motore e il terminale &#8220;GRY&#x002F;BLK&#8221; del connettore del sensore di pressione refrigerante A&#x002F;C.
+</ptxt>
+</test1>
+<question>
+La tensione e 4 &#8211; 6 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114054009">
+<title>
+Controllo del circuito segnale sensore di pressione differenziale A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori dal modulo ECM controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra il terminale &#8220;GRY&#x002F;BLK&#8221; del connettore del sensore di pressione refrigerante A&#x002F;C e il terminale &#8220;C37-12&#8221; del connettore ECM.
+</ptxt>
+</test1>
+<question>
+La resistenza e inferiore a 2 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Corto a tensione sul filo &#8220;GRY&#x002F;BLK&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Interruzione o circuito di resistenza alta sul filo &#8220;GRY&#x002F;BLK&#8221;.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114054010">
+<title>
+Controllo del circuito di massa sensore di pressione differenziale A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione OFF, misurare la resistenza tra la massa del motore e il terminale &#8220;GRY&#x002F;RED&#8221; del connettore del sensore di pressione refrigerante A&#x002F;C.
+</ptxt>
+</test1>
+<question>
+La resistenza e inferiore a 5 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114054011">
+<title>
+Controllo circuito di massa ECM
+</title>
+<test1>
+<ptxt>
+Rimuovere l&apos;ECM dalla staffa di supporto lasciando collegati i connettori ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra il terminale &#8220;C37-57&#8221; del connettore ECM e la massa del motore.
+</ptxt>
+</test1>
+<question>
+La resistenza e inferiore a 5 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Interruzione o circuito di resistenza alta sul filo &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il circuito di massa ECM &#8220;C37-58&#8221;, &#8220;C37-48&#8221;, &#8220;C37-30&#8221;, &#8220;C37-29&#8221; e&#x002F;o &#8220;C37-15&#8221; aperti o resistenza alta.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114054012">
+<title>
+Controllo del sensore pressione refrigerante A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Controllare il sensore di pressione refrigerante A&#x002F;C facendo riferimento a 
+<intxref refid = "L8T40A7216015">Ispezione sensore pressione refrigerante A&#x002F;C e relativo circuito (modello motore a benzina):Modello M16A, J20A e F9Q</intxref>
+.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sensore pressione refrigerante A&#x002F;C difettoso.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

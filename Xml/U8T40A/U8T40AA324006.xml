@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA324006" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Het inspuitingswaarschuwingslampje gaat niet branden met het contactslot op ON en de motor uit.
+</title>
+<servinfosub id = "U8T40AA324006001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA322001">Bedradingsschakelschema van het regelsysteem van de startblokkering:Model met dieselmotor</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA324006002">
+<title>
+Beschrijving van het circuit
+</title>
+<ptxt>
+Wanneer het contactslot op ON wordt gezet, stuurt de ECM een AAN-signaal naar de combimeter om het inspuitingswaarschuwingslampje te laten branden wanneer er geen probleem is met het regelsysteem van de startblokkering. De combimeter zet het lichtje dan aan. Wanneer de motor start, stuurt de ECM een UIT-signaal naar de combimeter om het lichtje te doven. De combimeter schakelt het inspuitingswaarschuwingslampje dan uit. Wanneer het regelsysteem van de startblokkering echter defect is, knippert het inspuitingswaarschuwingslampje wanneer het contactslot op ON wordt gezet.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA324006003">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40AA324006004">
+<testgroup>
+<title>
+Controle van de voeding van het inspuitingswaarschuwingslampje
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Gaan er andere waarschuwingslampjes branden?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Controleer de ECM op DTC&apos;s volgens 
+<intxref refid = "U8T40A1144005">DTC-controle:F9Q</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer het ABS- of ESP&#174;-regelapparaat op DTC&apos;s. Zie 
+<intxref refid = "U8T40A4604005">DTC-controle</intxref>
+ voor het ESP&#174;-model. Zie 
+<intxref refid = "U8T40A4504004">DTC-controle</intxref>
+ voor een model zonder ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de BCM op DTC&apos;s volgens 
+<intxref refid = "U8T40AA204005">DTC-controle</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn er DTC&apos;s?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de DTC-diagnosetabel van toepassing.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de combimeter door een goed bevonden exemplaar en controleer opnieuw. Als het inspuitingswaarschuwingslampje nog steeds uit blijft, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de zekering
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of er een betrokken zekering is gesprongen.
+</ptxt>
+</test1>
+<question>
+Is er een zekering gesprongen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang de gesprongen zekering en controleer op kortsluiting.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het voedingsdraadcircuit van de combimeter
+</title>
+<test1>
+<ptxt>
+Verwijder de combimeter volgens 
+<intxref refid = "U8T40A9306003">Uitbouw en inbouw van de combimeter</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de draadaansluitingen van de combimeterstekker goed aangesloten zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, zet dan het contactslot op ON en meet de spanning tussen de voedingsaansluiting van de combimeter en de carrosseriemassa van het voertuig volgens 
+<intxref refid = "U8T40A9302001">Schakelschema combimeter</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Bedraagt de spanning 10 - 14 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer de stroomonderbreking in het voedingscircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het massadraadcircuit van de combinatiemeter
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen de massa-aansluiting van de combimeterstekker en de carrosseriemassa volgens 
+<intxref refid = "U8T40A9302001">Schakelschema combimeter</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de weerstand 1 &#937; of minder?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang de combimeter door een goed bevonden exemplaar en controleer opnieuw. Als het inspuitingswaarschuwingslampje nog steeds uit blijft, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer de stroomonderbreking of hoge weerstand in het massabedradingscircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

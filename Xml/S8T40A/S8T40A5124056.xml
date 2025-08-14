@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A5124056" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0961 &#x002F; P0965 &#x002F; P0969
+</title>
+<servinfosub id = "S8T40A5124056001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.236in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P0961: Pressure Control Solenoid &#8220;A&#8221; Control Circuit Range &#x002F; Performance
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+P0965: Pressure Control Solenoid &#8220;B&#8221; Control Circuit Range &#x002F; Performance
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+P0969: Pressure Control Solenoid &#8220;C&#8221; Control Circuit Range &#x002F; Performance
+</emph>
+</ptxt>
+<ptxt>
+Difference between target current of control solenoid circuit and monitor current of control solenoid circuit is more than specified.
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Malfunction of pressure control solenoid valve or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A5124056002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A5124033">DTC P0962 &#x002F; P0966 &#x002F; P0970: Pressure Control Solenoid &#8220;A&#8221; Control Circuit Low &#x002F; Pressure Control Solenoid &#8220;B&#8221; Control Circuit Low &#x002F; Pressure Control Solenoid &#8220;C&#8221; Control Circuit Low:5 A/T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A5124056003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Connect scan tool to DLC with ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Clear DTCs in TCM and ECM memories by using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm it up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep engine running at idle speed for 30 seconds or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC, pending DTC and freeze-frame data.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A5124056004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A5124056005">
+<testgroup id = "S8T40A5124056006">
+<question>
+Was &#8220;A&#x002F;T System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A5124001">A&#x002F;T System Check:5 A/T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A5124056007">
+<title>
+Check for pressure control solenoid valve circuit
+</title>
+<test1>
+<ptxt>
+Turn ignition switch OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect TCM connectors from TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect solenoid connector and TCM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check TCM and TCM connector(s) for proper connection at related terminal.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK, check resistance for pressure control solenoid valve circuit.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Pressure control solenoid valve-A: Repair &#8220;YEL&#x002F;RED&#8221; and&#x002F;or &#8220;BRN&#x002F;RED&#8221; circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Pressure control solenoid valve-B: Repair &#8220;LT GRN&#x002F;BLK&#8221; and&#x002F;or &#8220;LT GRN&#x002F;RED&#8221; circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Pressure control solenoid valve-C: Repair &#8220;LT GRN&#8221; and&#x002F;or &#8220;BRN&#x002F;BLU&#8221; circuit.
+</ptxt>
+</item>
+</list1>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check pressure control solenoid valve resistance
+</title>
+<test1>
+<ptxt>
+Turn ignition switch OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect solenoid connector on A&#x002F;T.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check solenoid connector for proper connection at related terminals.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check resistance of pressure control solenoid valve circuit referring to 
+<intxref refid = "S8T40A5126021">Solenoid Valves (Shift Solenoid-A, Shift Solenoid-B, Shift Solenoid-E, TCC Pressure Control Solenoid, Pressure Control Solenoid-A, Pressure Control Solenoid-B and Pressure Control Solenoid-C) Inspection:5 A/T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check results satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble or faulty TCM. Check for intermittent trouble referring to 
+<intxref refid = "S8T40A0006002">Intermittent and Poor Connection Inspection</intxref>
+. If OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace pressure control solenoid valve or solenoid connector.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

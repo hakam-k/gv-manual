@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0118: Hoge spanning in het circuit van de motorkoelvloeistoftemperatuursensor
+</title>
+<servinfosub id = "U8T40A1114029001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1114027">DTC P0116: Bereik&#x002F;prestatie van circuit van motorkoelvloeistoftemperatuur:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114029002">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.205in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.985in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+De spanning van de ECT-sensoruitgang is gedurende 0,5 sec ononderbroken hoger dan 4,8 V
+</ptxt>
+<ptxt>
+(Lage motorkoelvloeistoftemperatuur (hoge spanning &#x002F; hoge weerstand))		
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECT-sensorcircuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECT-sensor
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Wanneer DTC P0108, P0113 en P0533 samen worden aangegeven, is er mogelijk een stroomonderbreking in het &#34;GRY&#x002F;GRN&#34;-draadcircuit.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "U8T40A1114029003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start de motor en laat hem 10 sec of langer draaien.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer op DTC&apos;s en voorlopige DTC&apos;s.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1114029004">
+<title>
+DTC-storingzoeken
+</title>
+<attention3>
+<ptxt>
+Lees de voorzorgsmaatregelen voor DTC-storingzoeken zoals beschreven in 
+<intxref refid = "U8T40A1110003">Voorzorgsmaatregelen bij DTC-storingzoeken:M16A and J20A</intxref>
+ alvorens deze procedure te volgen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "U8T40A1114029005">
+<testgroup id = "U8T40A1114029006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114029007">
+<title>
+Controle van de ECT-sensor en het bijbehorende circuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en sluit het uitleesapparaat aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de motorkoelvloeistoftemperatuur op het uitleesapparaat.
+</ptxt>
+</test1>
+<question>
+Wordt -40 &#176;C (-40 &#176;F) aangegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Sporadische storing.
+</ptxt>
+<ptxt>
+Controleer op sporadische storingen volgens 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114029008">
+<title>
+Controle van de ECT-spanning
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de ECT-sensorstekker los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de correcte verbinding van de ECT-sensor op de draadaansluitingen &#34;PPL&#x002F;YEL&#34;, &#34;GRY&#x002F;GRN&#34;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, zet dan het contactslot op ON en meet de spanning tussen de PPL&#x002F;YEL&#34;-draadaansluiting van de ECT-sensorstekker en de carrosseriemassa.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110040.swf" width = "90.000mm" height = "33.220mm" ver = "01" gw = "109" gh = "77"/>
+</testfigure>
+</test1>
+<question>
+Is de spanning ongeveer 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114029009">
+<title>
+Controle van de ECM-spanning
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verwijder de ECM van zijn steun terwijl de ECM-stekkerverbindingen aangesloten zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer aansluiting &#34;C37-24&#34; op een goede verbinding met de ECM-stekkerverbinding.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, zet dan het contactslot op ON en meet de spanning tussen stekkeraansluiting &#34;C37-24&#34; van de ECM en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Is de spanning ongeveer 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Stroomonderbreking in &#34;PPL&#x002F;YEL&#34;-draadcircuit. Ga naar stap 5 als de draad en de verbinding in orde zijn.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114029010">
+<title>
+Controle spanning van de ECT-sensorbedradingsbundel
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen van de ECM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de spanning tussen de &#34;PPL&#x002F;YEL&#34;-draadaansluiting van de ECT-sensorstekker en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Is de spanning ongeveer 0 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+De &#34;PPL&#x002F;YEL&#34;-draad is kortgesloten met een ander circuit.
+</ptxt>
+<ptxt>
+Als de draad in orde is, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114029011">
+<title>
+Controle weerstand van de ECT-sensorbedradingsbundel
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en meet de weerstand tussen aansluitklem &#34;C37-24&#34; van de ECM-stekkerverbinding en de &#34;PPL&#x002F;YEL&#34;-draadaansluiting van de ECT-sensorstekker.
+</ptxt>
+</test1>
+<question>
+Bedraagt de weerstand minder dan 3 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 7.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Hoge weerstand in de &#34;PPL&#x002F;YEL&#34;-draad.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114029012">
+<title>
+Controle massacircuit van de ECT-sensor
+</title>
+<test1>
+<ptxt>
+Sluit de stekkerverbindingen aan op de ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer bij de &#34;GRY&#x002F;GRN&#34;-draadaansluiting op een goede verbinding met de ECT-sensorstekker.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen de &#34;GRY&#x002F;GRN&#34;-draadaansluiting van de ECT-sensorstekker en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Bedraagt de weerstand minder dan 3 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 9.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114029013">
+<title>
+Controle massacircuit van de ECT-sensor
+</title>
+<test1>
+<ptxt>
+Meet de weerstand tussen aansluiting &#34;C37-57&#34; van de ECM-stekkerverbinding en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Bedraagt de weerstand minder dan 3 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Stroomonderbreking of hoge weerstand in &#34;GRY&#x002F;GRN&#34;-draadcircuit. Slechte &#34;C37-57&#34;-verbinding.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+ECM-massacircuit defect. Als het circuit in orde is, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114029014">
+<title>
+Prestatiecontrole van de ECT-sensor
+</title>
+<test1>
+<ptxt>
+Controleer de ECT-sensor zoals beschreven in 
+<intxref refid = "U8T40A1316009">Onderzoek temperatuursensor van de motorkoelvloeistof (ECT-sensor):M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is hij in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de ECT-sensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

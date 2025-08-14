@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10A">
+<servcat sctnbr = "10" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0BA104010" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0566 &#x002F; P0567 &#x002F; P0568: Cruise Control Off Signal &#x002F; Resume Signal &#x002F; Set Signal
+</title>
+<servinfosub id = "S6JB0BA104010001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0BA104009">DTC P0565: Cruise Control On Signal</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0BA104010002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.740in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.425in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0566:
+</emph>
+</ptxt>
+<ptxt>
+CANCEL switch signal voltage is lower than specified value for 40 seconds continuously
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0567:
+</emph>
+</ptxt>
+<ptxt>
+RES&#x002F;ACC switch signal voltage is specified value for 120 seconds continuously
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+P0568:
+</emph>
+</ptxt>
+<ptxt>
+SET&#x002F;COAST switch signal voltage is specified value for 120 seconds continuously
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Cruise control switch and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0BA104010003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool to DLC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Press cruise main switch once.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Drive vehicle at 40 km&#x002F;h (25 mph) or higher for 3 min. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop vehicle.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0BA104010004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this troubleshooting, read and observe 
+<intxref refid = "S6JB0B1100003">Precautions for DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S6JB0BA104010005">
+<testgroup>
+<title>
+Cruise control switch check
+</title>
+<test1>
+<ptxt>
+Check cruise control switch referring to 
+<intxref refid = "S6JB0BA106002">Cruise Control Switch Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace cruise control switch.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Cruise control command switch circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection of cruise control switch circuit terminal to ECM connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check the following for cruise command switch circuit.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Resistance between &#8220;LT GRN&#8221; wire terminal and &#8220;BLK&#x002F;YEL&#8221; wire terminal of cruise control switch connector are infinity (no continuity check)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Resistance between &#8220;LT GRN&#8221; wire terminal of cruise control switch connector and vehicle body ground is infinity (ground short check)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace wire circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124071" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0011 &#x002F; P0012
+</title>
+<attention3>
+<ptxt>
+Az OBD rendszer típus definíciójával kapcsolatos további részletekről lásd: 
+<intxref refid = "H8T40A1120010">Fedélzeti diagnosztikai (OBD) rendszerrel kapcsolatos óvintézkedések:J24B</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "H8T40A1124071001">
+<title>
+DTC észlelésének körülményei és a hiba helye 
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.937in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.272in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0011: Vezérműtengely-időzítés túlságosan korai szelepnyitás
+</emph>
+</ptxt>
+<ptxt>
+A mért CMP 12&#176;-kal korábbi helyzetben van a cél CMP értéktől a meghatározott ideig, ha a CMP vezérlőrendszer működik.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+OCV és&#x002F;vagy annak áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+Olajnyomás
+</ptxt>
+</item>
+<item>
+<ptxt>
+Olaj vezérlőköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+CKP-érzékelő
+</ptxt>
+</item>
+<item>
+<ptxt>
+Érzékelőtárcsa
+</ptxt>
+</item>
+<item>
+<ptxt>
+CMP-érzékelő
+</ptxt>
+</item>
+<item>
+<ptxt>
+Jeladó forgórész
+</ptxt>
+</item>
+<item>
+<ptxt>
+CMP-aktuátor
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szelepvezérlés
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P0012: Vezérműtengely-időzítés túlságosan késői szelepnyitás
+</emph>
+</ptxt>
+<ptxt>
+A mért CMP 15&#176;-kal későbbi helyzetben van a cél CMP értéktől a meghatározott ideig, ha a CMP vezérlőrendszer működik.
+</ptxt>
+<ptxt>
+<emph>
+A és B típus:
+</emph>
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+<ptxt>
+<emph>
+C típus:
+</emph>
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika, de a MIL nem gyullad fel)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124071002">
+<title>
+Kapcsolási rajz 
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124070">DTC P0010:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124071003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Amennyiben a DTC-t, mely más, mint a cél DTC, észlelt előzőleg a DTC megerősítési eljárásban, győződjön meg róla, hogy hibakeresést végez az előzőleg észlelt DTC ügyében.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Győződjön meg arról, hogy az alábbi feltételek teljesülnek-e, amikor ezt az eljárást alkalmazza.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+BARO &gt; 75 kPa (0,8 kgf&#x002F;cm&#x00B2;, 10,8 psi, 0,75 bar)
+</ptxt>
+</item>
+</list2>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Indítsa be a motort, és melegítse fel normál működési hőmérsékletre.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+A jármű sebessége 80 km&#x002F;h (50 mérföld&#x002F;h), vagy több.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124071004">
+<title>
+DTC hibaelhárítás 
+</title>
+<diag type = "test" id = "H8T40A1124071005">
+<testgroup id = "H8T40A1124071006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071007">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t.
+</ptxt>
+</test1>
+<question>
+Található a P0011-en és a P0012-n kívül más DTC is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC-kkel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071008">
+<title>
+OCV vezérlőáramkör és OCV testáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az OCV vezérlőáramkört és az OCV testáramkört, lásd: 
+<intxref refid = "H8T40A1124070">DTC P0010:J24B</intxref>
+, 2. lépés.
+</ptxt>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071009">
+<title>
+Az olajnyomás ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az olajnyomást. 
+<intxreftitleoff1 refid = "H8T40A1534001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás alkatrészeket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071010">
+<title>
+OCV olajkör szemrevételezéses ellenőrzése
+</title>
+<test1>
+<ptxt>
+Vegye le a szelepfedelet. 
+<intxreftitleoff1 refid = "H8T40A1436010"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az olajnyomás szivárgását az OCV olaj keringési körből.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás alkatrészeket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071011">
+<title>
+CKP-érzékelő és érzékelőtárcsa ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CKP-érzékelőt és az érzékelőtárcsát.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+CKP-érzékelő vizsgálata: 
+<intxreftitleoff1 refid = "H8T40A1326017"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Érzékelőtárcsa vizsgálata: 
+<intxreftitleoff1 refid = "H8T40A1436040"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás alkatrészeket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071012">
+<title>
+CMP-érzékelő jeltárcsa ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CMP-érzékelőt és a jeltárcsát. 
+<intxreftitleoff1 refid = "H8T40A1326015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 8. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás alkatrészeket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071013">
+<title>
+OCV ellenőrzés
+</title>
+<test1>
+<ptxt>
+Szerelje le az OCV-t. 
+<intxreftitleoff1 refid = "H8T40A1436051"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az OCV-t eldugulás, vagy lerakódások miatt.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 9. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki az OCV-t.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071014">
+<title>
+OCV ellenőrzés
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az OCV-t. 
+<intxreftitleoff1 refid = "H8T40A1326036"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 10. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki az OCV-t.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071015">
+<title>
+A CMP-aktuátor ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CMP-aktuátort. 
+<intxreftitleoff1 refid = "H8T40A1436022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 11. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a CMP-aktuátort.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124071016">
+<title>
+Szelepvezérlés ellenőrzés
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a szelepvezérlést. 
+<intxreftitleoff1 refid = "H8T40A1436018"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Állítsa be a szelepvezérlést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

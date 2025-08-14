@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A5104045" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1875: 4L Switch Circuit Malfunction (Open)
+</title>
+<servinfosub id = "S6JB0A5104045001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0A5104044">DTC P1874: 4L Switch Circuit Malfunction (Short)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A5104045002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.996in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Actual transfer position is 4L although TCM detected low switch is turned OFF with vehicle speed between 29 km&#x002F;h (18 mile&#x002F;h) and 88 km&#x002F;h (55 mile&#x002F;h). (if equipped with 4L&#x002F;N switch)
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+4L&#x002F;N switch or its circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0A5104045003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Connect scan tool to DLC with ignition switch OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Clear DTCs in TCM and ECM memories by using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and transfer position switch to &#8220;4L&#8221; position.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep engine running at idle speed for 10 seconds or more with select lever &#8220;D&#8221; range.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start vehicle and increase vehicle speed to about 50 km&#x002F;h (31 mile&#x002F;h) in &#8220;4L&#8221; position for 2 minutes.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop vehicle.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC, pending DTC and freeze-frame data.
+</ptxt>
+</s1>
+</servinfosub>
+<p-change/>
+<servinfosub id = "S6JB0A5104045004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0A5104045005">
+<testgroup id = "S6JB0A5104045006">
+<title>
+Vehicle speed signal check
+</title>
+<test1>
+<ptxt>
+Check DTC in ECM and ABS&#x002F;ESP&#174; control module referring to 
+<intxref refid = "S6JB0A1114003">DTC Check:For Petrol Engine Model</intxref>
+ or 
+<intxref refid = "S6JB0A4504004">DTC Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is there DTC P P0500: Vehicle speed sensor (VSS) malfunction in ECM and&#x002F;or DTC C1021, C1022, C1025, C1026, C1031, C1032, C1035 and&#x002F;or C1036 in ABS&#x002F;ESP&#174; control module?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S6JB0A5104045007">
+<question>
+Was &#8220;A&#x002F;T System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0A5104001">A&#x002F;T System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S6JB0A5104045008">
+<question>
+Do you have SUZUKI scan tool?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S6JB0A5104045009">
+<title>
+4L switch and its circuit check
+</title>
+<test1>
+<ptxt>
+Connect SUZUKI scan tool to DLC with ignition switch OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Select &#8220;DATA LIST&#8221; mode on scan tool.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check 4L&#x002F;N switch signal (ON or OFF) on display when turning transfer position switch to each position.
+</ptxt>
+<spec>
+<title>
+4L&#x002F;N switch specifications
+</title>
+<ptxt>
+&#8220;4H&#8221; position: OFF
+</ptxt>
+<ptxt>
+&#8220;4L&#8221; position: ON
+</ptxt>
+</spec>
+</test1>
+<question>
+Is OFF &#x002F; ON displayed as described above?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble or faulty TCM. Check for intermittent trouble referring to 
+<intxref refid = "S6JB0A0006002">Intermittent and Poor Connection Inspection</intxref>
+. If OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S6JB0A5104045010">
+<title>
+4L&#x002F;N switch and its circuit check
+</title>
+<test1>
+<ptxt>
+Turn ignition switch ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check terminal voltage &#8220;E93-4&#8221; of TCM connector connected when turning transfer position switch to each position.
+</ptxt>
+<spec>
+<title>
+4L&#x002F;N switch specifications
+</title>
+<ptxt>
+&#8220;4H&#8221; position: 10 &#8211; 14 V
+</ptxt>
+<ptxt>
+&#8220;4L&#8221; position: 0 &#8211; 1 V
+</ptxt>
+</spec>
+</test1>
+<question>
+Is voltage as specified?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Intermittent trouble or faulty TCM. Check for intermittent trouble referring to 
+<intxref refid = "S6JB0A0006002">Intermittent and Poor Connection Inspection</intxref>
+. If OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S6JB0A5104045011">
+<title>
+4L&#x002F;N switch check
+</title>
+<test1>
+<ptxt>
+Check 4L&#x002F;N switch for operation referring to 
+<intxref refid = "S6JB0A3316010">Transfer Assembly Inspection:Motor-Shift Type (Transfer with Shift Actuator)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+4L&#x002F;N switch circuit open. If wire and connections are OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace 4L&#x002F;N switch.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A5124055" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0602 &#x002F; P1702
+</title>
+<servinfosub id = "U8T40A5124055001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.024in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.181in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P0602: Programmeerfout in regelapparaat
+</emph>
+</ptxt>
+<ptxt>
+Fout in de gegevensprogrammering
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcycli, maar het MIL (E-OBD-model) of het transmissiewaarschuwingslampje (model zonder E-OBD) gaat niet branden)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TCM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+P1702: Controletotaalfout in intern geheugen van regelapparaat
+</emph>
+</ptxt>
+<ptxt>
+De berekening van de huidige in de TCM opgeslagen gegevens is niet juist in vergelijking met de eerder in de TCM opgeslagen controlegegevens.
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A5124055002">
+<title>
+Beschrijving van het systeem
+</title>
+<ptxt>
+Het interne regelapparaat is in de ECM gemonteerd.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A5124055003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Wis de DTC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start de motor en laat hem indien mogelijk stationair draaien.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A5124055004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A5124055005">
+<testgroup id = "U8T40A5124055006">
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Wis de DTC volgens 
+<intxref refid = "U8T40A5124005">Wissen van DTC:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en controleer de DTC opnieuw.
+</ptxt>
+</test1>
+<question>
+Wordt DTC P0602 of P1702 nog steeds waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden TCM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sporadische storing. Controleer op sporadische storingen volgens 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0222 &#x002F; P0223
+</title>
+<servinfosub id = "U8T40A1124028001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.888in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.325in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0222: Lage spanning in circuit gasklep-&#x002F;pedaalpositiesensor&#x002F;-schakelaar &#34;B&#34;
+</emph>
+</ptxt>
+<ptxt>
+Uitgangsspanning van (secundair) signaalcircuit van TP-sensor is lager dan 0,74 V.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+TP-sensor (sub) en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0223: Hoge spanning in circuit gasklep-&#x002F;pedaalpositiesensor&#x002F;-schakelaar &#34;B&#34;
+</emph>
+</ptxt>
+<ptxt>
+Uitgangsspanning van (secundair) signaalcircuit van TP-sensor is hoger dan 4,7 V.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124028002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124028003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Houd het gaspedaal gedurende 2 sec volledig ingedrukt
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laat het gaspedaal gedurende 2 sec los
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 2) en 3) 3 keer.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124028004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1124028005">
+<testgroup id = "U8T40A1124028006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124028007">
+<title>
+Controle van TP-sensorvoedingscircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF, maak de stekkerverbinding los van het gasklephuissamenstel.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de stekkerverbinding van het gasklephuissamenstel zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON als alle verbindingen goed zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de spanning tussen het voedingscircuit (C1) van de TP-sensor en het massacircuit (C4) 5 V is.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124028008">
+<title>
+Controle van TP-sensorvoedingscircuit
+</title>
+<test1>
+<ptxt>
+Controleer of de spanning tussen het voedingscircuit (C1) van de TP-sensor en de carrosseriemassa 5 V is.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+<ptxt>
+Als deze DTC nogmaals wordt waargenomen, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124028009">
+<title>
+Controle van TP-sensorvoedingscircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen los van de ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de ECM-stekkerverbindingen zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer, als de verbindingen in orde zijn, of het voedingscircuit (C1) van de TP-sensor aan het volgende voldoet:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van het TP-sensorvoedingscircuit is minder dan 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van het TP-sensorvoedingscircuit tussen het gasklephuis en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de aansluitklem van het TP-sensorvoedingscircuit en elke andere aansluitklem op de stekkerverbinding van het gasklephuissamenstel is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De circuitspanning van het TP-sensorvoedingscircuit is 0 - 1 V met het contactslot in de stand ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124028010">
+<title>
+Controle TP-sensorsignaalcircuit (sub)
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen los van de ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de ECM-stekkerverbindingen zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer, als de verbindingen in orde zijn, of het signaalcircuit (sub) (C3) van de TP-sensor aan het volgende voldoet:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van het TP-sensorsignaalcircuit (sub) is minder dan 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van het TP-sensorsignaalcircuit (secundair) tussen het gasklephuis en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de aansluitklem van het TP-sensorsignaal (secundair) en elke aansluitklem op de stekkerverbinding van het gasklephuissamenstel is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De circuitspanning van het (secundair) signaalcircuit van de TP-sensor is 0 - 1 V met het contactslot in de stand ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124028011">
+<title>
+Controle van de TP-sensor
+</title>
+<test1>
+<ptxt>
+Controleer de prestaties van de TP-sensor. 
+<intxreftitleoff1 refid = "U8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het klephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

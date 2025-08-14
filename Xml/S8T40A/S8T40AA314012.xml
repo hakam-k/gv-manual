@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40AA314012" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1621: Immobilizer Communication Line Error
+</title>
+<ptxt>
+<intxrefpoff refid = "S8T40AA312001">Immobilizer Control System Wiring Circuit Diagram:Petrol Engine Model</intxrefpoff>
+</ptxt>
+<servinfosub id = "S8T40AA314012001">
+<title>
+Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Communication error between ICM and ECM is detected by ECM.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Related fuse(s) blown
+</ptxt>
+</item>
+<item>
+<ptxt>
+Poor connection at ICM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Poor connection at ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Open in power supply wire circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Open in ground wire circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Open in communication wire circuits
+</ptxt>
+</item>
+<item>
+<ptxt>
+Short to ground wire circuit in communication wire circuits
+</ptxt>
+</item>
+<item>
+<ptxt>
+Short to power supply wire circuit in communication wire circuits
+</ptxt>
+</item>
+<item>
+<ptxt>
+Short of communication wire circuits
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM faulty
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM faulty
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40AA314012002">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S8T40AA314012003">
+<testgroup>
+<title>
+Diagnostic Trouble Code (DTC) confirmation
+</title>
+<test1>
+<ptxt>
+Clear DTC(s) referring to 
+<intxref refid = "S8T40AA314003">DTC Clearance:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check if any DTC is detected referring to 
+<intxref refid = "S8T40AA314002">DTC Check:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is DTC P1621 still detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+The troubleshooting is completed.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Fuse check
+</title>
+<test1>
+<ptxt>
+Check if any related fuse is blown.
+</ptxt>
+</test1>
+<question>
+Is any fuse blown?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace blown fuse(s) with new one(s).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM poor connection check
+</title>
+<test1>
+<ptxt>
+Disconnect ICM connector &#8220;G24&#8221; referring to 
+<intxref refid = "S8T40AA316001">Immobilizer Control Module (ICM) Removal and Installation:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check if wire connections are normal at ICM connector &#8220;G24&#8221;.
+</ptxt>
+</test1>
+<question>
+Is each wire connection normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair poor connection(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM poor connection check
+</title>
+<test1>
+<ptxt>
+Disconnect ECM connector &#8220;E23&#8221;.
+</ptxt>
+<ptxt>
+- M16A and J20A models: 
+<intxreftitleoff1 refid = "S8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B model: 
+<intxreftitleoff1 refid = "S8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A model: 
+<intxreftitleoff1 refid = "S8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper following terminal connections to ECM connector.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+M16A, J20A and J24B model: &#8220;E23-13&#8221; and &#8220;E23-28&#8221;
+</ptxt>
+</item>
+<item>
+<ptxt>
+N32A model: &#8220;E23-1&#8221; and &#8220;E23-3&#8221;
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is each wire connection normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair poor connection(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for open in power supply wire circuit
+</title>
+<test1>
+<ptxt>
+Connect ICM connector &#8220;G24&#8221; referring to 
+<intxref refid = "S8T40AA316001">Immobilizer Control Module (ICM) Removal and Installation:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+With the ignition switch at ON position, check voltage between &#8220;G24-1&#8221; wire terminal at ICM and body ground.
+</ptxt>
+</test1>
+<question>
+Is voltage about 12 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair open in power supply wire circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for open in ground wire circuit
+</title>
+<test1>
+<ptxt>
+With the ignition switch at ON position, check voltage between &#8220;G24-2&#8221; wire terminal at ICM and body ground.
+</ptxt>
+</test1>
+<question>
+Is voltage 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair open in ground wire circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for short to ground circuit in communication wire circuit
+</title>
+<test1>
+<ptxt>
+With ICM connector &#8220;G24&#8221; and ECM connector &#8220;E23&#8221; disconnected, check resistance between &#8220;G24-4&#8221; &#x002F; &#8220;G24-3&#8221; wire terminal at ICM connector and body ground.
+</ptxt>
+</test1>
+<question>
+Is resistance infinite?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair short to ground wire circuit in communication wire circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for short to power circuit in communication wire circuit
+</title>
+<test1>
+<ptxt>
+With ICM connector &#8220;G24&#8221; and ECM connector &#8220;E23&#8221; disconnected, turn the ignition switch to ON position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check voltage between &#8220;G24-4&#8221; &#x002F; &#8220;G24-3&#8221; wire terminal at ICM connector and body ground.
+</ptxt>
+</test1>
+<question>
+Is voltage 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair short to power supply wire circuit in communication wire circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for short of communication wire circuit
+</title>
+<test1>
+<ptxt>
+With ICM connector &#8220;G24&#8221; and ECM connector &#8220;E23&#8221; disconnected, check resistance between &#8220;G24-3&#8221; wire terminal and &#8220;G24-4&#8221; wire terminal at ICM connector.
+</ptxt>
+</test1>
+<question>
+Is resistance infinite?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair short of communication wire circuits.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for open in communication wire circuit
+</title>
+<test1>
+<ptxt>
+Disconnect ICM connector &#8220;G24&#8221; referring to 
+<intxref refid = "S8T40AA316001">Immobilizer Control Module (ICM) Removal and Installation:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect ECM connector &#8220;E23&#8221;.
+</ptxt>
+<ptxt>
+- M16A and J20A models: 
+<intxreftitleoff1 refid = "S8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B model: 
+<intxreftitleoff1 refid = "S8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A model: 
+<intxreftitleoff1 refid = "S8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check resistance between following terminal at ICM connector and ECM connector with ignition switch ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+M16A, J20A and J24B model: &#8220;G24-4&#8221; and &#8220;E23-13&#8221; (&#8220;PNK&#x002F;BLU&#8221;) wire terminal &#x002F; 
+</ptxt>
+<ptxt>
+&#8220;G24-3&#8221; and &#8220;E23-28&#8221; (&#8220;GRY&#x002F;BLU&#8221;) wire terminal
+</ptxt>
+</item>
+<item>
+<ptxt>
+N32A model: &#8220;G24-4&#8221; and &#8220;E23-1&#8221; (&#8220;PNK&#x002F;BLU&#8221;) wire terminal &#x002F; 
+</ptxt>
+<ptxt>
+ &#8220;G24-3&#8221; and &#8220;E23-3&#8221; (&#8220;GRY&#x002F;BLU&#8221;) wire terminal
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is resistance infinite?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Repair open in communication wire circuit.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM check
+</title>
+<test1>
+<ptxt>
+Check ICM referring to 
+<intxref refid = "S8T40AA314020">Inspection of Immobilizer Control Module (ICM) and Its Circuit:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is ICM normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Replace ECM with new one.
+</ptxt>
+<ptxt>
+- M16A and J20A models: 
+<intxreftitleoff1 refid = "S8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- J24B model: 
+<intxreftitleoff1 refid = "S8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- N32A model: 
+<intxreftitleoff1 refid = "S8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Then perform 
+<intxref refid = "S8T40AA316003">Procedure after ECM Replacement:Petrol Engine Model</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace ICM with new one referring to 
+<intxref refid = "S8T40AA316001">Immobilizer Control Module (ICM) Removal and Installation:Petrol Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

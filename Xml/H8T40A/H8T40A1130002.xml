@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "0">
+<servinfo servinfosgmlid = "H8T40A1130002" svcinfotypenbr = "01" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Hibák diagnosztizálásával kapcsolatos óvintézkedések 
+</title>
+<attention3>
+<ptxt>
+Az OBD rendszer típus definíciójával kapcsolatos további részletekről lásd: 
+<intxref refid = "H8T40A1130008">Fedélzeti diagnosztikai (OBD) rendszerrel kapcsolatos óvintézkedések:N32A</intxref>
+.
+</ptxt>
+</attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ne vegye le a csatlakozókat az ECM-ről, az akkumulátor-kábelt az akkumulátorról, az ECM testelő-vezetékköteget a motorról, és ne vegye ki a főbiztosítékot, amíg meg nem erősítette az ECM memóriájában tárolt diagnosztikai információkat (DTC, befagyasztott adatok stb.). Az ilyen szétkapcsolás törli az ECM memóriájában tárolt információkat.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM memóriájában tárolt diagnosztikai információ a SUZUKI vizsgálókészülékkel vagy CAN kommunikációs OBD általános vizsgálókészülékkel kitörölhető és ellenőrizhető. A vizsgálókészülék használata előtt gondosan olvassa el a készülék kezelési utasítását, hogy pontos képe legyen a rendelkezésre álló funkciókról és azok alkalmazásáról.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az A és B típusú OBD rendszer esetén nem lehet megkülönböztetni, hogy melyik modul, az ECM, vagy a TCM kapcsolta-e be a MIL lámpát. (Az A&#x002F;T modell fedélzeti diagnosztikai rendszerével kapcsolatos bővebb információt, lásd: 
+<intxref refid = "H8T40A1130008">Fedélzeti diagnosztikai (OBD) rendszerrel kapcsolatos óvintézkedések:N32A</intxref>
+). Ezért az ECM-ben és a TCM-ben is ellenőrizze a DTC-t, amikor a MIL lámpa kigyullad.
+</ptxt>
+</item>
+</list1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Amikor ellenőrzi az ECM-ben a DTC-t, ne felejtse el, hogy a DTC a használt vizsgálóeszköztől függően a következők szerint jelenik meg a kijelzőn.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+A SUZUKI vizsgálókészülék az ECM által észlelt DTC-t jelzi ki.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A CAN kommunikációs OBD általános vizsgálókészülék az ECM és a TCM által észlelt DTC-ket egyszerre jelzi ki.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Prioritások a hibák diagnosztizálása során
+</ptxt>
+<ptxt>
+Amennyiben két vagy több DTC kerül tárolásra, azzal a DTC folyamattal foglalkozzon, amelyik időrendi sorrendben a legkorábbi, és az ehhez a folyamathoz tartozó utasításokat kövesse a táblázatban.
+</ptxt>
+<ptxt>
+Ha nincs utasítás, a DTC-ben jelzett hibák elhárítása a következő prioritások alapján történjen.
+</ptxt>
+</item>
+<list2 type = "ordered">
+<item>
+<ptxt>
+Hibakódok eltérően a DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306-tól (gyújtás kihagyás)
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304 &#x002F; P0305 &#x002F; P0306 (gyújtás kihagyás)
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Az ellenőrzés előtt olvassa el és tartsa be a következőket: 
+<intxref refid = "H8T40A0000007">Óvintézkedés a CAN Kommunikációs Rendszerhez</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM cseréje
+</ptxt>
+<ptxt>
+Ha kicseréli az ECM-et egy újra, vagy egy helyettesítőre, ellenőrizze az alábbi állapotokat. Ezek figyelmen kívül hagyása tönkreteheti az ECM-et.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Minden relé és működtetőelem ellenállás értéke megfelel az előírtaknak.
+</ptxt>
+</item>
+<item>
+<ptxt>
+APP-érzékelő, TP-érzékelő, CMP-érzékelő, CKP-érzékelő és A&#x002F;C hűtőközeg nyomásérzékelő jó állapotban vannak és a jeladók egyik áramellátó áramköre sem testzárlatos.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+A vezérlőegységek (beleértve az ECM-et) a CAN útján kommunikálnak (helyi hálózat vezérlő).
+</ptxt>
+<ptxt>
+Ezért óvatosan bánjon a CAN kommunikációs vezetékkel. 
+<intxreftitleoff1 refid = "H8T40A0000007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+További részleteket lásd: 
+<intxref refid = "H8T40AA821001">CAN kommunikációs rendszer leírása:J24B és N32A modellek</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az indításgátló transzponder kódjának regisztrációja az ECM kicserélése után.
+</ptxt>
+<ptxt>
+Ha az ECM-et egy újra, vagy helyettesítőre kell kicserélni, feltétlenül regisztrálja az indításgátló transzponder kódot. 
+<intxreftitleoff1 refid = "H8T40AA316003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H6JB0A1111007" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Elektromos fojtószeleptest rendszer leírása
+</title>
+<ptxt>
+Az elektromos fojtószeleptest rendszer az elektromos fojtószeleptest egységből, a gázpedál helyzet (APP) érzékelő egységből, az ECM-ből és a fojtószelep működtető reléből áll.
+</ptxt>
+<ptxt>
+A következő alkatrészek tartoznak közéjük.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Elektromos fojtószeleptest egység: fojtószelep, fojtószelep működtető, 2 fojtószelep helyzetérzékelő
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gázpedál helyzet (APP) érzékelő egység: Gázpedál, 2 gázpedál helyzet érzékelő
+</ptxt>
+</item>
+</list1>
+<servinfosub id = "H6JB0A1111007001">
+<title>
+A működés ismertetése
+</title>
+<ptxt>
+Az ECM (5) érzékeli a gázpedál nyitását (a pedál lenyomásának mértékét), amelyik a gázpedál helyzet (APP) érzékelő (1) feszültségjelén alapul, és ezt az adatot, valamint a motor működési körülményét felhasználva kiszámítja a fojtószelep optimális nyitásának mértékét. Másfelől érzékeli a fojtószeleptestben (2) található fojtószelep helyzetérzékelő (3) feszültség jelét, és összehasonlítja ezt a fentiekben kiszámított optimális fojtószelep nyitás mértékével. Amikor különbség van a kettő között, az ECM a fojtószelep működtető vezérlőjének kitöltési tényezőjét (100&#x0025; &#8211; 0&#x0025;), ennek a különbségnek megfelelően szabályozza, a fojtószeleptestben található fojtószelep működtető (motor) (4)hajtásával. Amikor nincs különbség, az ECM a fojtószelep működtető kitöltési tényezőjét hozzávetőlegesen 15&#x0025;-ra állítja a fojtószelep nyitás érdekében. Így a fojtószelep (17) nyitása és zárása optimálissá válik.
+</ptxt>
+<ptxt>
+Ebben a rendszerben, mivel a fojtószelep helyzetérzékelője és a gázpedál helyzet (APP) érzékelő 2 érzékelővel (egy fő- és egy mellékérzékelő) rendelkezik, biztosítva van a nagyon pontos és nagyon megbízható vezérlés és a rendellenesség észlelése. Amikor pedig az ECM rendellenességet észlel a rendszerben, kikapcsolja a fojtószelep működtető reléjét (8), és leállítja a fojtószelep működtető vezérlését. Amikor a fojtószelep működtető vezérlő relé kikapcsolásra kerül, a fojtószelep rögzül a teljesen zárt helyzethez képest megközelítőleg 7&#176;-nyira nyitott helyzetben (nyitási alaphelyzet) a fojtószeleptestben található visszatérítőrugó és nyitó rugó erejének hatására.
+</ptxt>
+<ptxt>
+Ez a fojtószeleptest nincs ellátva alapjárati fordulatszámot szabályozó IAC szeleppel. Az alapjárati fordulatszám szabályozását a fojtószelep működtetője végzi, amelyik nyitja&#x002F;zárja a fojtószelepet.
+</ptxt>
+<figure>
+<graphic graphicname = "I4RS0B110007.swf" width = "183.000mm" height = "92.078mm" ver = "02" gw = "441" gh = "244"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.331in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.070in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.331in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.070in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.331in"/>
+<colspec colnum = "6" colname = "6" colwidth = "2.070in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6. 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+CPU
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+11.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gázpedál helyzet (APP) érzékelő (főérzékelő) jele
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+15.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Fojtószelep működtető parancsjele
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Fojtószelep működtető parancsáramköre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+12.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gázpedál helyzet (APP) érzékelő (mellékérzékelő) jele
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+16.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Fojtószelep működtető tápellátása
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+9. 
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+A &#8220;THR MOT&#8221; biztosíték felől
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+13.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Fojtószelep helyzetérzékelő (főérzékelő) jele
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+18.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Fojtószelep működtető vezérlőrelé vezérlőjele
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+10.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+A főrelé felől
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "center">
+<ptxt>
+14.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Fojtószelep helyzetérzékelő (mellékérzékelő) jele
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" valign = "bottom">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

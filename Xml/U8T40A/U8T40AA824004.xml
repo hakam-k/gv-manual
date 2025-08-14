@@ -1,0 +1,1128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA824004" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Storingzoeken bij &#34;Communicatiebus uit&#34;
+</title>
+<servinfosub id = "U8T40AA824004001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA822001">Systeemschakelschema van de CAN-communicatie:Modellen J24B en N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA824004002">
+<title>
+Diagnoseprocedure
+</title>
+<attention3>
+<ptxt>
+Voer 
+<intxref refid = "U8T40AA824001">Controle van het CAN-communicatiesysteem:Modellen J24B en N32A</intxref>
+ uit alvorens de punten in dit schema uit te voeren.
+</ptxt>
+</attention3>
+<ptxt>
+Wanneer in een van de regelapparaten de foutmelding &#34;CAN-comm.bus uit&#34; wordt waargenomen of wanneer het SUZUKI-uitleesapparaat (SUZUKI DST) niet met om het even welk regelapparaat kan communiceren, onderzoek dan volgens de volgende procedure.
+</ptxt>
+<s1>
+<ptxt>
+Sluit het SUZUKI-uitleesapparaat aan (SUZUKI SDT) en laat de DTC&apos;s van de ECM weergeven om de communicatie met de ECM te controleren. Controleer het SUZUKI-uitleesapparaat, de communicatiekabel en het voedings- en massacircuit van de DLC als het uitleesapparaat niet met de ECM kan communiceren.
+</ptxt>
+<ptxt>
+Als de communicatie in orde is, ga dan door naar de volgende stap.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer bij de DLC met een oscilloscoop of de oscilloscoopfunctie van het SUZUKI-uitleesapparaat (SUZUKI SDT) of de golfvorm van het CAN-communicatiesignaal van zowel de aansluiting CAN Hoog (1) als CAN Laag (2) aan de volgende toestand beantwoorden wanneer het contactslot op ON staat.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Meetomstandigheden
+</title>
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Meetaansluiting
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: CAN Hoog-aansluiting (1) naar DLC massa-aansluiting (3)
+</ptxt>
+<ptxt>
+CH2: CAN Laag-aansluiting (2) naar DLC massa-aansluiting (3)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Instelling van de oscilloscoop
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: 1 V&#x002F;DIV., CH2: 1 V&#x002F;DIV.
+</ptxt>
+<ptxt>
+TIJD: 5 ms.&#x002F;DIV.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Meetomstandigheid
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Contactslot op ON
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<figure>
+<graphic graphicname = "I7V10AA81005.swf" width = "88.000mm" height = "32.106mm" ver = "02" gw = "223" gh = "74"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.703in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC (Aanzicht: &#x005B;a&#x005D;)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Vergelijk de waargenomen signaalgolfvorm met de golfvormen in 
+<intxref refid = "U8T40AA824004003">Referentiegolfvorm</intxref>
+. Zoek de signaalgolfvorm die er het meeste op lijkt en identificeer het systeem met de storing en de aard van de storing van de &#34;Referentiegolfvorm&#34; van toepassing.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Voer vervolgens een storingonderzoek uit op basis van het systeem met storing en de aard van de storing volgens 
+<intxref refid = "U8T40AA824004011">Storingzoeken</intxref>
+.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40AA824004003">
+<title>
+Referentiegolfvorm
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Hieronder staan referentievoorbeelden van golfvormen die zijn waargenomen met de oscilloscoopfunctie van het SUZUKI-uitleesapparaat (SUZUKI-SDT).
+</ptxt>
+</item>
+<item>
+<ptxt>
+De golfvormen onder &#34;Voorbeelden van abnormale golfvormen&#34; zijn CAN-communicatiegolfvormen die bij een abnormale toestand zijn vastgesteld. Het is echter mogelijk dat niet dezelfde golfvorm wordt waargenomen. Kies daarom de golfvorm die het meeste lijkt op de waargenomen golfvorm uit 
+<intxref refid = "U8T40AA824004005">Voorbeelden van abnormale golfvormen</intxref>
+ om de abnormale toestand te identificeren.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<topic id = "U8T40AA824004004">
+<title>
+Normale golfvorm
+</title>
+<ptxt>
+De referentiespanning voor zowel het CAN Hoog-signaal (2) als het CAN Laag-signaal (3) is 2,5 V (1).
+</ptxt>
+<ptxt>
+De golfvorm van het CAN Hoog-signaal is 2,5 - 3,5 V en die van het CAN Laag-signaal 2,5 - 1,5 V.
+</ptxt>
+<ptxt>
+Zie &#34;CAN-communicatiesignaal&#34; in 
+<intxref refid = "U8T40AA821001">Beschrijving CAN-communicatiesysteem:Modellen J24B en N32A</intxref>
+ voor nadere bijzonderheden.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81006.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "162" gh = "188"/>
+</figure>
+<figure>
+<title>
+Referentie (tijdsindeling 50 us)
+</title>
+<graphic graphicname = "I7V10AA81007.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "158" gh = "188"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.752in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.752in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Referentiespanning (2,5 V)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN Laag-signaal
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+CAN Hoog-signaal
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</topic>
+<topic id = "U8T40AA824004005">
+<title>
+Voorbeelden van abnormale golfvormen
+</title>
+<subtopic id = "U8T40AA824004006">
+<title>
+Wanneer de draad van een CAN Hoog-signaal en&#x002F;of een CAN Laag-signaal is kortgesloten met het massacircuit
+</title>
+<ptxt>
+<emph etype = "bold">
+Kenmerkende golfvorm
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wanneer de draad van het CAN Hoog-signaal kortgesloten is met het massacircuit: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Zowel het CAN Hoog-signaal als het CAN Laag-signaal blijven op het GND-niveau (0 V) (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wanneer de draad van het CAN Laag-signaal kortgesloten is met het massacircuit: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Het referentieniveau van zowel het CAN Hoog-signaal als het CAN Laag-signaal is het GND-niveau (0 V).
+</ptxt>
+<ptxt>
+De golfvorm van het CAN Hoog-signaal schommelt onregelmatig (4) tussen 0 V en 3 V en die van het CAN Laag-signaal blijft op 0 V (3).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81008.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "376" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Referentiespanning (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "U8T40AA824004007">
+<title>
+Wanneer de draad van een CAN Hoog-signaal en&#x002F;of een CAN Laag-signaal onderbroken is
+</title>
+<ptxt>
+<emph etype = "bold">
+Kenmerkende golfvorm
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wanneer de draad van het CAN Hoog-signaal onderbroken is: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+De referentiespanning van het CAN Hoog-signaal en het CAN Laag-signaal is onstabiel en neigt naar een lagere waarde dan in de normale toestand (2,5 V) (1). De golfvorm van het CAN Hoog-signaal schommelt bovendien onregelmatig (3), maar die van het CAN Laag-signaal is bijna constant (2).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wanneer de draad van het CAN Laag-signaal onderbroken is: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+De referentiespanning van het CAN Hoog-signaal en het CAN Laag-signaal is onstabiel en neigt naar een hogere waarde dan in de normale toestand (2,5 V) (4). De golfvorm van het CAN Hoog-signaal is bovendien bijna constant (5), maar die van het CAN Laag-signaal schommelt onregelmatig (6).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81009.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+</figure>
+</subtopic>
+<subtopic id = "U8T40AA824004008">
+<title>
+Wanneer de draad van het CAN Hoog-signaal en&#x002F;of het CAN Laag-signaal kortgesloten is met het voedingscircuit (12 V)
+</title>
+<ptxt>
+<emph etype = "bold">
+Kenmerkende golfvorm
+</emph>
+</ptxt>
+<ptxt>
+Zowel het CAN Hoog-signaal als het CAN Laag-signaal blijft op 12 V (2). 
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81010.swf" width = "88.000mm" height = "71.278mm" ver = "01" gw = "149" gh = "185"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.598in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Referentiespanning (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "U8T40AA824004009">
+<title>
+Wanneer de draad van het CAN Hoog-signaal en&#x002F;of het CAN Laag-signaal kortgesloten is met het voedingscircuit (5 V)
+</title>
+<ptxt>
+<emph etype = "bold">
+Kenmerkende golfvorm
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wanneer de draad van het CAN Hoog-signaal is kortgesloten met het voedingscircuit (5 V): &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+De referentiespanning (1) van zowel het CAN Hoog-signaal als het CAN Laag-signaal bedraagt is 5 V.
+</ptxt>
+<ptxt>
+De golfvorm van het CAN Hoog-signaal schommelt onregelmatig rond de 5 V (3) en die van het CAN Laag-signaal tussen 5 V en 2 V (4).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Wanneer de draad van het CAN Laag-signaal kortgesloten is met het voedingscircuit (5 V): &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+De referentiespanning (5) is 5 V en heeft dezelfde fase zowel bij het CAN Hoog-signaal als bij het CAN Laag-signaal. Hun golfvorm schommelt onregelmatig (6) tussen 5 V en 2,5 V.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81011.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.673in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Referentiespanning (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "U8T40AA824004010">
+<title>
+Wanneer de draad van het CAN Hoog-signaal en van het CAN Laag-signaal met elkaar zijn kortgesloten
+</title>
+<ptxt>
+<emph etype = "bold">
+Kenmerkende golfvorm
+</emph>
+</ptxt>
+<ptxt>
+Zowel het CAN Hoog-signaal als het CAN Laag-signaal blijft op ongeveer 2,5 V (1).
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81012.swf" width = "88.000mm" height = "70.770mm" ver = "01" gw = "149" gh = "184"/>
+</figure>
+</subtopic>
+</topic>
+</servinfosub>
+<servinfosub id = "U8T40AA824004011">
+<title>
+Storingzoeken
+</title>
+<ptxt>
+Onderzoek aan de hand van de volgende storingsonderzoekprocedure.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Bepaal bij elke stap van dit storingonderzoek tijdens het uitvoeren van de &#34;Communicatiebuscontr&#34; met het SUZUKI-uitleesapparaat (SUZUKI-SDT) of het regelapparaat in orde is aan de hand van de volgende tabel.
+</ptxt>
+<ptxt>
+Verricht tijdens het uitvoeren van de &#34;Communicatiebuscontr&#34; geen andere werkzaamheden dan dewelke zijn aangegeven in dit storingonderzoek. Anders kan de weergave van het regelapparaat &#x002F; de sensor op het scherm van de SUZUKI-SDT en&#x002F;of de achtergrondkleur veranderen.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.303in"/>
+<colspec colnum = "2" colname = "2" colwidth = "5.787in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Beoordeling
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Weergave van de communicatiebuscontrole
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Normaal
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Alle aangesloten regelapparaten &#x002F; sensoren (die via het CAN communiceren) worden weergegeven en de achtergrondkleur is &#34;Wit&#34;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De bovenstaande toestand blijft ongewijzigd als er langer dan 1 minuut gecontroleerd wordt.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Abnormaal
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Een van de aangesloten regelapparaten &#x002F; sensoren (die via het CAN communiceren) wordt niet weergegeven.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De weergave van een van de aangesloten regelapparaten &#x002F; sensoren (die via het CAN communiceren) verandert.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De achtergrondkleur van een van de aangesloten regelapparaten &#x002F; sensoren (die via het CAN communiceren) is &#34;Grijs&#34; of &#34;Lichtgroen&#34;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De achtergrondkleur van een van de aangesloten regelapparaten &#x002F; sensoren (die via het CAN communiceren) verandert.
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#34;Communicatiebuscontr&#34; kan niet worden uitgevoerd.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</item>
+<item>
+<ptxt>
+Controleer vooraleer het onderzoek te starten de voorgeschreven waarden van het voertuig en zorg dat de gemonteerde regelapparaten duidelijk zijn. Voer daarna de procedure voor storingzoeken uit.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "U8T40AA824004012">
+<testgroup id = "U8T40AA824004013">
+<title>
+Controle van de CAN-gegevenstransmissielijn
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de stekkerverbindingen los van alle regelapparaten &#x002F; sensoren die via het CAN communiceren.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of alle CAN-communicatiecircuits goed op alle stekkerverbindingen van regelapparaten &#x002F; sensoren (die via het CAN communiceren) aangesloten zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, controleer dan elk CAN-communicatiecircuit op onderbrekingen, kortsluiting aan het voedings- en massacircuit, aan elke andere CAN-communicatiedraad of hoge weerstand op basis van de meetresultaten en de bepaling van de aard van de storing uit stappen 2) en 3) van 
+<intxref refid = "U8T40AA824004002">Diagnoseprocedure</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is elk CAN-communicatiecircuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer de CAN-gegevenstransmissielijn.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824004014">
+<title>
+Controle van de CAN-eindweerstand van de ECM
+</title>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding op de ECM aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de CAN-eindweerstand in de ECM als volgt.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ESP&#174;-model:
+</ptxt>
+<ptxt>
+Meet de weerstand tussen stekkeraansluiting &#34;E53-43&#34; en &#34;E53-44&#34; van het ESP&#174;-regelapparaat.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Niet-ESP&#174;-model:
+</ptxt>
+<ptxt>
+Meet de weerstand tussen stekkeraansluiting &#34;E03-10&#34; en &#34;E03-8&#34; van het ABS-regelapparaat.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is de weerstand 114 - 134 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824004015">
+<title>
+Controle van de CAN-eindweerstand van de combimeter 
+</title>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding op de combimeter aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen stekkeraansluiting &#34;G31-1&#34; en &#34;G31-3&#34; van de BCM.
+</ptxt>
+</test1>
+<question>
+Is de weerstand 114 - 134 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden combimeter aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824004016">
+<title>
+Controle van de ECM, de combimeter en de BCM
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding op de BCM aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gebruik de verbindingsdraad (1) om de aansluitingen van het ABS &#x002F; ESP&#174;-regelapparaat als volgt te verbinden.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ESP&#174;-model &#x005B;A&#x005D;:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Sluit de verbindingsdraad tussen stekkeraansluiting &#34;E53-43&#34; en &#34;E53-42&#34; van het ESP&#174;-regelapparaat aan.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sluit de verbindingsdraad tussen stekkeraansluiting &#34;E53-44&#34; en &#34;E53-45&#34; van het ESP&#174;-regelapparaat aan.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Niet-ESP&#174;-model &#x005B;B&#x005D;:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Sluit de verbindingsdraad tussen stekkeraansluiting &#34;E03-12&#34; en &#34;E03-10&#34; van het ABS-regelapparaat aan.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sluit de verbindingsdraad tussen stekkeraansluiting &#34;E03-6&#34; en &#34;E03-8&#34; van het ABS-regelapparaat aan.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80006.swf" width = "90.000mm" height = "69.147mm" ver = "01" gw = "228" gh = "179"/>
+</testfigure>
+</item>
+</list2>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en kies &#34;Communicatiebuscontr&#34; in het menu &#34;Buscontrole&#34; van het SUZUKI-uitleesapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de CAN-communicatie voor de ECM, de combimeter en de BCM normaal verloopt.
+</ptxt>
+</test1>
+<question>
+Is de communicatie in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+4WD-model van het motorgeschakelde type: Ga naar stap 5.
+</ptxt>
+<ptxt>
+4WD-model van het niet-geschakelde type of 2WD-model: Ga naar stap 8.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824004017">
+<title>
+Controle van het 4WD-regelapparaat
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding op het 4WD-regelapparaat aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en kies &#34;Communicatiebuscontr&#34; in het menu &#34;Buscontrole&#34; van het SUZUKI-uitleesapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de CAN-communicatie voor de ECM, de combimeter, de BCM en het 4WD-regelapparaat normaal verloopt.
+</ptxt>
+</test1>
+<question>
+Is de communicatie in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Model met startsysteem met afstandsbediening: Ga naar stap 6.
+</ptxt>
+<ptxt>
+Model zonder startsysteem met afstandsbediening en met ESP&#174;: Ga naar stap 7.
+</ptxt>
+<ptxt>
+Model zonder startsysteem met afstandsbediening en zonder ESP&#174;: Ga naar stap 8.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Monteer een goed bevonden 4WD-regelapparaat en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het regelapparaat van het startsysteem met afstandsbediening
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding aan op het regelapparaat van het startsysteem met afstandsbediening.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en kies &#34;Communicatiebuscontr&#34; in het menu &#34;Buscontrole&#34; van het SUZUKI-uitleesapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de CAN-communicatie voor de ECM, de combimeter, de BCM, het 4WD-regelapparaat en het regelapparaat van het startsysteem met afstandsbediening normaal verloopt.
+</ptxt>
+</test1>
+<question>
+Is de communicatie in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+ESP&#174;-model: Ga naar stap 7.
+</ptxt>
+<ptxt>
+Niet-ESP&#174;-model: Ga naar stap 8.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het regelapparaat van het startsysteem met afstandsbediening door een goed bevonden exemplaar en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de stuurhoeksensor
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding aan op de stuurhoeksensor.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en kies &#34;Communicatiebuscontr&#34; in het menu &#34;Buscontrole&#34; van het SUZUKI-uitleesapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de CAN-communicatie voor de ECM, de combimeter, de BCM, het 4WD-regelapparaat, het regelapparaat van het startsysteem met afstandsbediening (model met startsysteem met afstandsbediening) en de stuurhoeksensor normaal verloopt.
+</ptxt>
+</test1>
+<question>
+Is de communicatie in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 8.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de stuurhoeksensor.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het HVAC-regelapparaat
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding aan op het HVAC-regelapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en kies &#34;Communicatiebuscontr&#34; in het menu &#34;Buscontrole&#34; van het SUZUKI-uitleesapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de CAN-communicatie voor de ECM, de combimeter, de BCM, het 4WD-regelapparaat (4WD-model van het motorgeschakelde type), het regelapparaat van het startsysteem met afstandsbediening (model met startsysteem met afstandsbediening), de stuurhoeksensor (model met ESP&#174;) en het HVAC-regelapparaat normaal verloopt.
+</ptxt>
+</test1>
+<question>
+Is de communicatie in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+A&#x002F;T-model: Ga naar stap 9.
+</ptxt>
+<ptxt>
+M&#x002F;T-model: Monteer een goed bevonden ABS &#x002F; ESP&#174;-regelapparaat en controleer opnieuw.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Monteer een goed bevonden HVAC-regelapparaat en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+TCM-controle
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding op de TCM aan.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en kies &#34;Communicatiebuscontr&#34; in het menu &#34;Buscontrole&#34; van het SUZUKI-uitleesapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de CAN-communicatie voor de ECM, de combimeter, de BCM, het 4WD-regelapparaat (4WD-model van het motorgeschakelde type), het regelapparaat van het startsysteem met afstandsbediening (model met startsysteem met afstandsbediening), de stuurhoeksensor (model met ESP&#174;), het HVAC-regelapparaat en de TCM normaal verloopt.
+</ptxt>
+</test1>
+<question>
+Is de communicatie in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Monteer een goed bevonden ABS &#x002F; ESP&#174;-regelapparaat en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden TCM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824004018">
+<title>
+BCM-controle 
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de BCM-stekker los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Gebruik de verbindingsdraad (1) om de stekkeraansluitingen van de BCM als volgt te verbinden.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sluit de verbindingsdraad tussen stekkeraansluiting &#34;G31-3&#34; en &#34;G31-4&#34; van de BCM aan.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sluit de verbindingsdraad tussen stekkeraansluiting &#34;G31-2&#34; en &#34;G31-1&#34; van de BCM aan.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80005.swf" width = "90.000mm" height = "55.389mm" ver = "01" gw = "214" gh = "140"/>
+</testfigure>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en kies &#34;Communicatiebuscontr&#34; in het menu &#34;Buscontrole&#34; van het SUZUKI-uitleesapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de CAN-communicatie voor de ECM en de combimeter goed verloopt.
+</ptxt>
+</test1>
+<question>
+Is de communicatie in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden BCM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40AA824004019">
+<title>
+Controle van de combimeter
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de verbindingsdraden die in stap 4 werden aangesloten los van de stekkerverbinding van het ABS &#x002F; ESP&#174;-regelapparaat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Maak de verbindingsdraden die in stap 10 werden aangesloten los van de BCM-stekkerverbinding.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de verkregen golfvorm bij stekkeraansluiting &#34;G31-1&#34; en &#34;G31-3&#34; van de BCM.
+</ptxt>
+</test1>
+<question>
+Is de waargenomen golfvorm normaal?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden combimeter aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

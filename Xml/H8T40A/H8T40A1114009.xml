@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1114009" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Motor általános ellenőrzése
+</title>
+<ptxt>
+Ez az ellenőrzés igen fontos a hibaelhárítás szempontjából akkor, ha az ECM nem észlelt DTC-t, és semmilyen rendellenesség nem merült fel a következő témakör alapján végzett ellenőrzés során: 
+<intxref refid = "H8T40A1114008">Szemrevételezés:M16A és J20A</intxref>
+.
+</ptxt>
+<ptxt>
+Gondosan kövesse a folyamat-táblázat lépéseit.
+</ptxt>
+<diag type = "test" id = "H8T40A1114009001">
+<testgroup id = "H8T40A1114009002">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009003">
+<title>
+Ellenőrizze az akkumulátor feszültségét.
+</title>
+<question>
+A feszültség legalább 11 V?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Töltse fel vagy cserélje ki az akkumulátort.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009004">
+<question>
+Van a járműben kulcsnélküli indítórendszer?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009005">
+<title>
+Ellenőrizze a kulcsnélküli indítórendszer hibás működését (ha van kulcsnélküli indítórendszer)
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a kulcsnélküli indítórendszert, lásd: 
+<intxref refid = "H8T40AA504010">Kulcsnélküli indítórendszer működésének ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Az ellenőrzés eredménye megfelelő?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Kulcsnélküli indítórendszer hibás működése.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009006">
+<question>
+Az indítómotor megforgatja a motort?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1914001">Önindítórendszer hibajelenségeinek diagnosztizálása:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009007">
+<question>
+Elindul a motor?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 9. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009008">
+<title>
+Ellenőrizze az alapjárati fordulatszámot
+</title>
+<test1>
+<ptxt>
+Melegítse fel a motort normál működési hőmérsékletre.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja a sebességváltót üres helyzetbe kézi sebességváltóval szerelt modelleknél (&#8220;P&#8221; helyzetbe automatikus sebességváltóval szerelt modelleknél).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Győződjön meg arról, hogy minden elektromos terhelés ki van-e kapcsolva.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a motor alapjárati sebességét vizsgálókészülékkel.
+</ptxt>
+</test1>
+<question>
+A fordulatszám 600 &#8211; 700 (J20A motor esetén), 610 &#8211; 710 (M16A motor esetén) fordulat&#x002F;perc?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 8. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114010">Motor hibajelenségeinek diagnosztizálása:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009009">
+<title>
+Ellenőrizze a gyújtásbeállítást
+</title>
+<test1>
+<ptxt>
+SUZUKI vizsgálókészüléket használva, válassza az &#8220;Active Test&#8221; üzemmódot a SUZUKI vizsgálókészüléken, és állítsa be a gyújtást a kiinduló értékre.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+(1) stroboszkópot használva ellenőrizze a kezdeti gyújtásbeállítást.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L1A102">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09930-76420">
+09930&#8211;76420
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<title>
+J20A motor esetén
+</title>
+<graphic graphicname = "I5JB0A110021.swf" width = "90.000mm" height = "52.567mm" ver = "01" gw = "134" gh = "132"/>
+</testfigure>
+<testfigure>
+<title>
+M16A motor esetén
+</title>
+<graphic graphicname = "I5JB0A110022.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "165" gh = "128"/>
+</testfigure>
+</test1>
+<question>
+Az érték 5&#176; &#8211; 15&#176; (J20A motor esetén), és 7&#176; &#8211; 17&#176; (M16A motor esetén) BTDC előírt alapjárati fordulatszámnál?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114010">Motor hibajelenségeinek diagnosztizálása:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Ellenőrizze a gyújtásvezérlés érintett alkatrészeit, lásd: 
+<intxref refid = "H8T40A1816007">A gyújtásbeállítás ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009010">
+<title>
+Ellenőrizze az indításgátló hibás működését (ha a járműn van indításgátló vezérlőrendszer)
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az indításgátló rendszert, lásd: 
+<intxref refid = "H8T40AA314001">Indításgátló vezérlőrendszer ellenőrzése:Benzinmotoros modell</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 10. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Indításgátló vezérlőrendszer működési hiba.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009011">
+<title>
+Ellenőrizze az üzemanyag ellátást
+</title>
+<test1>
+<ptxt>
+Ellenőrizze és győződjön meg arról, hogy elegendő üzemanyag van-e az üzemanyagtartályban.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót 2 másodpercre ON helyzetbe, majd OFF helyzetbe.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ismételje meg a 2. lépést néhányszor
+</ptxt>
+</test1>
+<question>
+Érezni az üzemanyag nyomását az üzemanyag tömlőn keresztül, amikor a gyújtáskapcsolót ON helyzetbe fordítja?
+</question>
+<testfigure>
+<title>
+J20A motor esetén
+</title>
+<graphic graphicname = "I5JB0A110023.swf" width = "90.000mm" height = "46.570mm" ver = "01" gw = "130" gh = "115"/>
+</testfigure>
+<testfigure>
+<title>
+M16A motor esetén
+</title>
+<graphic graphicname = "I5JB0A110024.swf" width = "90.000mm" height = "46.922mm" ver = "01" gw = "138" gh = "116"/>
+</testfigure>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 12. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 11. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009012">
+<title>
+Ellenőrizze az üzemanyag-szivattyú működését
+</title>
+<question>
+Hallható volt az üzemanyag-szivattyú működése körülbelül 2 másodpercig az üzemanyag betöltőnyílás felől, amikor a gyújtáskapcsolót be- majd kikapcsolta?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1714004">Az üzemanyagnyomás ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114083">Üzemanyag-szivattyú és áramkörének ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009013">
+<title>
+Ellenőrizze a gyújtógyertyát
+</title>
+<test1>
+<ptxt>
+Válassza le a befecskendező csatlakozókat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Szerelje ki a gyújtógyertyákat és csatlakoztassa őket a gyújtáskábelekhez vagy a gyújtótekercs egységekhez.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Testelje a gyújtógyertyákat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Forgassa meg a motort és ellenőrizze, minden gyújtógyertya szikrázik-e.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 13. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1814004">Gyújtószikra próba:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1114009014">
+<title>
+Ellenőrizze az üzemanyag-befecskendező működését
+</title>
+<test1>
+<ptxt>
+Szerelje be a gyújtógyertyákat és csatlakoztassa a befecskendező csatlakozókat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Hangradart (1) használva ellenőrizze mindegyik befecskendező (2) működési hangját a motor forgatása közben.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I3RM0A110015.swf" width = "90.000mm" height = "49.095mm" ver = "01" gw = "145" gh = "122"/>
+</testfigure>
+</test1>
+<question>
+Hallható volt a működési hang mindegyik befecskendező felől?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114010">Motor hibajelenségeinek diagnosztizálása:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1114082">Üzemanyag-befecskendező áramkörének ellenőrzése:M16A és J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

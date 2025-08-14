@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0B1104115" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0486: Exhaust Gas Recirculation Sensor &#8220;B&#8221; Circuit Malfunction
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+This fault can result in a rapid and significant fouling of the diesel particulate filter. If the EGR needs to be replaced to deal with the fault, it must be cleared.
+</ptxt>
+</item>
+<item>
+<ptxt>
+This fault may appear if the wiring harness has been damaged.
+</ptxt>
+<ptxt>
+Follow the procedure described in 
+<intxref refid = "S5JB0B0006001">Electrical Circuit Inspection Procedure</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+This check enables the condition and the conformity of the engine wiring harness to be checked.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions for applying the fault finding procedure to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present after the engine is started or following a road test.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault is present:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+There is smoke at the exhaust.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The EGR offset fault finding function is deactivated.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The Malfunction indicator light (MIL) will come on after three consecutive driving cycles (starting &#x002B;5 seconds &#x002B; turn OFF ignition switch and wait 40 seconds.).
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Use service wire for all operations on the ECM connectors.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Priorities when dealing with a number of faults:
+</ptxt>
+<ptxt>
+Apply the procedure for dealing with fault 
+<intxref refid = "S5JB0B1104127">DTC P0651: Sensor Reference Voltage &#8220;B&#8221; Circuit &#x002F; Open Malfunction</intxref>
+ first if it is present or stored.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S5JB0B1104115001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S5JB0B910E048">A-5 Engine and A&#x002F;C Control System Circuit Diagram (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0B1104115002">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO.0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Open circuit or short circuit to vehicle body ground
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC.1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short circuit to &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+1.DEF
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Micro-breaks
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0B1104115003">
+<title>
+Troubleshooting for CO.0: Open circuit or short circuit to vehicle body ground
+</title>
+<attention2>
+<ptxt>
+EGR valve data initialization procedure is required when the EGR valve is replaced.
+</ptxt>
+<ptxt>
+The &#8220;EGR valve initial offset&#8221; and &#8220;EGR valve last offset&#8221; parameters must be reinitialised.
+</ptxt>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0B1306025">EGR Valve Data Initialization</intxref>
+ to carry out this programming.
+</ptxt>
+</attention2>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the EGR valve connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measure the resistance of the EGR valve position feedback potentiometer between &#8220;C10-1&#8221; and &#8220;C10-2&#8221; terminals.
+</ptxt>
+<ptxt>
+If the resistance displayed is not approximately 5.9 &#8211; 7.1 &#937; at 20 &#176;C, 68 &#176;F, replace the EGR valve.
+</ptxt>
+<ptxt>
+Check the continuity and insulation from vehicle body ground of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C10-3&#8221; wire of EGR valve connector and &#8220;C86-20&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C10-1&#8221; wire of EGR valve connector and &#8220;C86-43&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the operation of the EGR valve:
+</ptxt>
+<ptxt>
+Perform &#8220;Initialize EGR valve data&#8221; on SUZUKI scan tool to reinitialise the operating values of the valve and launch a programming procedure for the EGR offsets (Refer to 
+<intxref refid = "S5JB0B1306025">EGR Valve Data Initialization</intxref>
+).
+</ptxt>
+<ptxt>
+If the valve is jammed or irrevocably seized, replace the EGR valve.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "S5JB0B1104115004">
+<title>
+Troubleshooting for CC.1: Short circuit to &#x002B;12 V and 1.DEF: Micro-breaks
+</title>
+<attention2>
+<ptxt>
+EGR valve data initialization procedure is required when the EGR valve is replaced.
+</ptxt>
+<ptxt>
+The &#8220;EGR valve initial offset&#8221; and &#8220;EGR valve last offset&#8221; parameters must be reinitialised.
+</ptxt>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0B1306025">EGR Valve Data Initialization</intxref>
+ to carry out this programming.
+</ptxt>
+</attention2>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the EGR valve connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measure the resistance of the EGR valve position feedback potentiometer between &#8220;C10-1&#8221;and &#8220;C10-2&#8221; terminals.
+</ptxt>
+<ptxt>
+If the resistance displayed is not approximately 5.9 &#8211; 7.1 k&#937; at 20 &#176;C, 68 &#176;F, replace the EGR valve.
+</ptxt>
+<ptxt>
+Check for continuity and insulation from &#x002B;12 V on the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C10-3&#8221; wire of EGR valve connector and &#8220;C86-20&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C10-2&#8221; wire of EGR valve connector and &#8220;C85-15&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C10-1&#8221; wire of EGR valve connector and &#8220;C86-43&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ensure the presence of &#x002B;5 V on &#8220;C10-1&#8221;terminal of the EGR valve.
+</ptxt>
+<ptxt>
+Check the operation of the EGR valve:
+</ptxt>
+<ptxt>
+Perform &#8220;Initialize EGR valve data&#8221; on SUZUKI scan tool to reinitialise the operating values of the valve and launch a programming procedure for the EGR offsets (Refer to 
+<intxref refid = "S5JB0B1306025">EGR Valve Data Initialization</intxref>
+).
+</ptxt>
+<ptxt>
+If the valve is jammed or irrevocably seized, replace the EGR valve.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

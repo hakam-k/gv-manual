@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1134054" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2127 &#x002F; P2128
+</title>
+<servinfosub id = "H8T40A1134054001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.194in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2127: Fojtószelep&#x002F;pedálhelyzet-érzékelő&#x002F;kapcsoló &#8220;E&#8221; áramkör bemeneti feszültsége alacsony
+</emph>
+</ptxt>
+<ptxt>
+Az APP-érzékelő (segédérzékelő) jeláramkör feszültsége kisebb, mint 0,60 V.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP-érzékelő (segédérzékelő) és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2128: Fojtószelep&#x002F;pedálhelyzet-érzékelő&#x002F;kapcsoló &#8220;E&#8221; áramkör bemeneti feszültsége magas
+</emph>
+</ptxt>
+<ptxt>
+Az APP-érzékelő (segédérzékelő) jeláramkör feszültsége nagyobb, mint 4,82 V.
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1134054002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1134053">DTC P2122 &#x002F; P2123:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1134054003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention3>
+<ptxt>
+Győződjön meg arról, hogy az alábbi feltételek teljesülnek-e, amikor ezt az eljárást alkalmazza.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Akkumulátorfeszültség &gt; 7 V
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Indítsa el a motort.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Nyomja le teljesen a gázpedált, majd engedje fel.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ismételje meg a 2) lépést három alkalommal.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1134054004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1134054005">
+<testgroup id = "H8T40A1134054006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1134001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134054007">
+<title>
+Gázpedálegység (egybeépítve az APP-érzékelővel) beépítésének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, megfelelően fel van-e szerelve a gázpedálhelyzet (APP érzékelővel együtt) érzékelő a járműbe (nincs-e becsípve a padlószőnyeg stb.).
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Szerelje vissza a gázpedálegységet (egybeépítve az APP-érzékelővel) megfelelően. 
+<intxreftitleoff1 refid = "H8T40A1336007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134054008">
+<title>
+APP-érzékelő (segédérzékelő) tápáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Csatlakoztassa le a gázpedálegység (APP érzékelővel együtt) csatlakozóját, kikapcsolt gyújtáskapcsoló mellett.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a gázpedálegység (egybeépítve az APP-érzékelővel) csatlakozó érintkezőinek megfelelő csatlakozását.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a csatlakozás rendben van, fordítsa a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a feszültség az APP-érzékelő (segédérzékelő) áramellátó áramkör (B1) és a karosszéria testelése között 5 V.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134054009">
+<title>
+APP-érzékelő (segédérzékelő) tápáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a feszültség az APP-érzékelő (segédérzékelő) áramellátó áramkör (B1) és a testáramkör (B3) között 5 V.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<paragroup>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+<ptxt>
+Ha a DTC továbbra is megjelenik, folytassa a 8. lépéssel.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134054010">
+<title>
+APP-érzékelő (segédérzékelő) tápáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben vannak a csatlakozások, ellenőrizze, hogy az APP-érzékelő (segédérzékelő) áramellátó áramköre (B1) megfelel-e a következőknek.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az APP-érzékelő (segédérzékelő) áramellátó áramkörének vezetékköteg ellenállása kevesebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az APP-érzékelő (segédérzékelő) áramellátó áramkör szigetelési ellenállása végtelen a gázpedálegység (egybeépítve az APP-érzékelővel) csatlakozója és a karosszéria testelése között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása az APP-érzékelő (segédérzékelő) áramellátó áramkör érintkezője és az APP-érzékelő csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az APP-érzékelő (segédérzékelő) áramellátó áramkörének áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 8. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134054011">
+<title>
+APP-érzékelő (segéd) jeláramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben vannak a csatlakozások, ellenőrizze, hogy az APP-érzékelő jeláramköre (B2) megfelel-e a következőknek.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az APP-érzékelő (segédérzékelő) jeláramkör vezetékkötegének ellenállása kevesebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az APP-érzékelő (segédérzékelő) jeláramkör szigetelési ellenállása végtelen a gázpedálegység (egybeépítve az APP-érzékelővel) csatlakozója és a karosszéria testelése között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása az APP-érzékelő (segédérzékelő) jeláramkör érintkezője és az gázpedálegység (egybeépítve az APP-érzékelővel) csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az APP-érzékelő (segédérzékelő) jeláramkörének áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 7. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134054012">
+<title>
+APP-érzékelő ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az APP-érzékelőt. 
+<intxreftitleoff1 refid = "H8T40A1336006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 8. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a gázpedálegységet (egybeépítve az APP-érzékelővel).
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134054013">
+<title>
+Az egy időben észlelt más DTC-k hibakeresése
+</title>
+<question>
+Észlelt más hibakódot is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC hibakereséssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

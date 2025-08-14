@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124025" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0133
+</title>
+<servinfosub id = "U8T40A1124025001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.410in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.815in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+P0133: Trage respons van circuit van O2-sensor
+</emph>
+</ptxt>
+<ptxt>
+De verhouding van de geïntegreerde waarde van A&#x002F;F-sensoroutputvariatie per geïntegreerde waarde van kortetermijn-brandstofmengselvariatie is meer dan de voorgeschreven waarde in de voorgeschreven rijomstandigheden.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 2 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+A&#x002F;F-sensor en&#x002F;of het bijbehorende circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124025002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124013">DTC P0031 &#x002F; P0032:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124025003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kies voor een proefrit een verkeersvrije plaats waar geen gevaar voor verkeersongevallen is, en wees uiterst voorzichtig tijdens de proefrit om ongevallen te vermijden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De proefrit moet door 2 personen worden uitgevoerd, een bestuurder en iemand die de test uitvoert, op een effen weg.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Indien er eerder in de DTC-bevestigingsprocedure andere dan de beoogde DTC&apos;s werden waargenomen, los dan ook de eerder waargenomen DTC&apos;s op.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Start de motor en laat hem op de normale bedrijfstemperatuur komen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Rijd met het voertuig aan 60 - 100 km&#x002F;h (37 - 62 mile&#x002F;h) gedurende 6 min. (zorg bij deze stap voor een constante gasklepopeningshoek.)
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124025004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1124025005">
+<testgroup id = "U8T40A1124025006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124025007">
+<title>
+DTC-controle
+</title>
+<question>
+Zijn er behalve P0133 nog andere DTC&apos;s?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar storingzoeken voor de betrokken DTC.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124025008">
+<title>
+Controle van het signaalcircuit van de A&#x002F;F-sensor
+</title>
+<test1>
+<ptxt>
+Controleer het A&#x002F;F-sensorsignaalcircuit volgens stap 3 van 
+<intxref refid = "U8T40A1124024">DTC P0131 &#x002F; P0132 &#x002F; P0134 &#x002F; P2195 &#x002F; P2196 &#x002F; P2237:J24B</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124025009">
+<title>
+DTC opnieuw controleren
+</title>
+<test1>
+<ptxt>
+Plaats de A&#x002F;F-sensor terug. 
+<intxreftitleoff1 refid = "U8T40A1326013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Voer de DTC-bevestigingsprocedure uit en controleer de DTC.
+</ptxt>
+</test1>
+<question>
+Wordt DTC 0133 nog waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Einde.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0BA304009" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1615: Steering Lock Unit Communication Error (for Vehicle with Keyless Start System)
+</title>
+<servinfosub id = "S6JB0BA304009001" page = "1">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0BA302001">Immobilizer Control System Wiring Circuit Diagram</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0BA304009002">
+<title>
+Circuit Description
+</title>
+<ptxt>
+When the transponder code in the ignition key is registered in ECM, the remote controller ID code is registered in both ECM and keyless start control module at the same time. This DTC is detected only in case that the remote controller ID code cannot be registered in both ECM and keyless start control module when the transponder code in the ignition key is registered in ECM.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Perform the troubleshooting for DTC P1618 first if both DTC P1615 and P1618 are detected at the same time.
+</ptxt>
+</item>
+<item>
+<ptxt>
+After replacing ECM, be sure to register the transponder code in the ignition key with ECM referring to 
+<intxref refid = "S6JB0BA306002">Registration of the Ignition Key</intxref>
+. After replacing the keyless start control module of the vehicle equipped with the keyless start system, be sure to perform 
+<intxref refid = "S6JB0BA306002">Registration of the Ignition Key</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+<servinfosub id = "S6JB0BA304009003">
+<title>
+Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+While registering the transponder code in ECM, the keyless start control module sent a signal to ECM indicating that the remote controller ID code could not be registered.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The remote controller ID code could not be registered in the keyless start control module or ECM. And, the registration of the transponder code in ECM was terminated forcibly.
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wire circuits between steering lock unit and keyless start control unit open or shorted
+</ptxt>
+</item>
+<item>
+<ptxt>
+CAN communication wire circuits faulty
+</ptxt>
+</item>
+<item>
+<ptxt>
+Steering lock unit faulty
+</ptxt>
+</item>
+<item>
+<ptxt>
+Keyless start control module faulty
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM faulty
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0BA304009004">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0BA304009005">
+<testgroup>
+<title>
+Diagnostic Trouble Code (DTC) confirmation
+</title>
+<test1>
+<ptxt>
+Clear DTC(s) referring to 
+<intxref refid = "S6JB0BA304003">Diagnostic Trouble Code (DTC) Clearance</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn the ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check if any DTC is detected referring to 
+<intxref refid = "S6JB0BA304002">Diagnostic Trouble Code (DTC) Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is DTC P1615 still detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+The troubleshooting is completed.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registration of the ignition key
+</title>
+<test1>
+<ptxt>
+Turn the ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn the ignition switch to ON position, and register the transponder code in the transponder in the ignition key with ECM referring to 
+<intxref refid = "S6JB0BA306002">Registration of the Ignition Key</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Was it possible to register the ignition key (transponder code) in ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+The troubleshooting is completed.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnostic Trouble Code (DTC) check
+</title>
+<test1>
+<ptxt>
+Check if any DTC is detected referring to 
+<intxref refid = "S6JB0BA304002">Diagnostic Trouble Code (DTC) Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is any DTC detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace ECM with a known-good one and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnostic Trouble Code (DTC) check
+</title>
+<question>
+Is any DTC other than P1615 detected in Step 3?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Perform the troubleshooting referring to the corresponding flowchart.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Steering lock unit check
+</title>
+<test1>
+<ptxt>
+Turn on the engine start knob of the keyless start system.
+</ptxt>
+</test1>
+<question>
+Is the engine start knob at ON position?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace the steering lock unit with a known-good one and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Steering lock unit operation check
+</title>
+<test1>
+<ptxt>
+Check the steering lock unit for operation referring to 
+<intxref refid = "S6JB0B9306002">Ignition Switch Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Does the engine start knob operate as specified?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace the steering lock unit referring to 
+<intxref refid = "S6JB0B6206009">Steering Lock Assembly (Ignition Switch) Removal and Installation</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for open in wire circuits between steering lock unit and keyless start control module
+</title>
+<test1>
+<ptxt>
+Disconnect steering lock unit connector &#8220;G22&#8221; and keyless start control module connector &#8220;G42&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance at the following connector terminals.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;G22-3&#8221; terminal of steering lock unit connector and &#8220;G42-20&#8221; terminal of keyless start control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G22-7&#8221; terminal of steering lock unit connector and &#8220;G42-29&#8221; terminal of keyless start control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G22-8&#8221; terminal of steering lock unit connector and &#8220;G42-30&#8221; terminal of keyless start control module connector.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is each resistance 1 &#937; or less?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair open or high resistance in malfunctional wire circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for short of wire circuits between steering lock unit and keyless start control module
+</title>
+<test1>
+<ptxt>
+Measure resistance at the following connector terminals.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;G22-3&#8221;, &#8220;G22-7&#8221; and &#8220;G22-8&#8221; terminal of steering lock unit connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G42-20&#8221;, &#8220;G42-29&#8221; and &#8220;G42-30&#8221; terminal of keyless start control module.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is each resistance infinity?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Make sure of insulation of each wire circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for short to ground wire circuit in wire circuits between steering lock unit and keyless start control module
+</title>
+<test1>
+<ptxt>
+Measure resistance at the following connector terminals.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;G22-3&#8221; terminal of steering lock unit connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G22-7&#8221; terminal of steering lock unit connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G22-8&#8221; terminal of steering lock unit connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G42-20&#8221; terminal of keyless start control module connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G42-29&#8221; terminal of keyless start control module connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G42-30&#8221; terminal of keyless start control module connector and vehicle body ground.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is each resistance infinity?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair short to ground wire circuit in malfunctional wire circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check for short to power supply wire circuit in wire circuits between steering lock unit and keyless start control module
+</title>
+<test1>
+<ptxt>
+Measure voltage at the following connector terminals with ignition switch turned ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;G22-3&#8221; terminal of steering lock unit connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G22-7&#8221; terminal of steering lock unit connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G22-8&#8221; terminal of steering lock unit connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G42-20&#8221; terminal of keyless start control module connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G42-29&#8221; terminal of keyless start control module connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;G42-30&#8221; terminal of keyless start control module connector and vehicle body ground.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is each voltage 0 &#8211; 1 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace keyless start control module with a known-good one and recheck. If DTC P1615 is still detected, replace ECM with a known-good one and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair short to power supply wire circuit in malfunctional wire circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

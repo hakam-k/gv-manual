@@ -1,0 +1,1344 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "L8T40A1131002" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Descrizione del sistema diagnostico a bordo (OBD)
+</title>
+<attention3>
+<ptxt>
+Per la definizione del sistema OBD, fare riferimento a 
+<intxref refid = "L8T40A1130008">Precauzione per il sistema diagnostico a bordo (OBD):N32A</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "L8T40A1131002009">
+<title>
+Sistema OBD tipo A e B:
+</title>
+<ptxt>
+L&apos;ECM in questo veicolo ha le seguenti funzioni.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando a motore fermo il commutatore di accensione viene portato in posizione ON, la spia di guasto (MIL) (1) si accende per controllare il MIL (1) e il suo circuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando l&apos;ECM rileva un malfunzionamento con effetti avversi sulle emissioni del veicolo oltre il ciclo di guida specificato (C&#x002F;G), accende il MIL nel quadro strumenti oppure ne provoca il lampeggiamento (lampeggiamento solo quando la mancata accensione rilevata puo provocare danni al catalizzatore) e registra il codice diagnostico del guasto (DTC) in memoria.
+</ptxt>
+<ptxt>
+(Se rileva una condizione normale per tre cicli di guida continui dopo il rilevamento di un malfunzionamento, spegne il MIL dopo l&apos;avvio del motore nel C&#x002F;G successivo sebbene il DTC conservato in memoria rimanga come dato di cronologia.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Per alcuni cattivi funzionamenti, l&apos;ECM adotta la logica di rilevamento 2C&#x002F;G per prevenire rilevamenti erronei. Con questa logica il MIL viene acceso quando il malfunzionamento viene rilevato in 2 C&#x002F;G consecutivi.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando si rileva un malfunzionamento, le condizioni del motore e della guida del momento sono conservate nella memoria ECM come dati &#34;freeze frame&#34;.
+</ptxt>
+<ptxt>
+Per i dettagli vedere la descrizione su 
+<intxref refid = "L8T40A1131002004">Dati presenti al momento</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+E possibile comunicare con l&apos;ECM tramite il connettore per la trasmissione dei dati (DLC) (3) non solo tramite lo scanner (SUZUKI-SDT) (2) ma anche tramite lo scanner generico OBD di comunicazione CAN.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I8T401111007.swf" width = "88.000mm" height = "46.217mm" ver = "01" gw = "168" gh = "114"/>
+</figure>
+<figure>
+<graphic graphicname = "I9T401111002.swf" width = "88.000mm" height = "53.978mm" ver = "01" gw = "142" gh = "136"/>
+</figure>
+<topic id = "L8T40A1131002010">
+<title>
+Ciclo di riscaldamento
+</title>
+<ptxt>
+Un ciclo di riscaldamento indica la durata dall&apos;avviamento del veicolo fino all&apos;innalzamento della temperatura del refrigerante almeno a 23 &#176;C (73 &#176;F) superando la temperatura di 70 &#176;C (158 &#176;F).
+</ptxt>
+</topic>
+<topic id = "L8T40A1131002001">
+<title>
+Ciclo di guida (D&#x002F;C)
+</title>
+<ptxt>
+Un &#8220;Ciclo di guida&#8221; e la durata dall&apos;avvio del motore al successivo spegnimento del motore.
+</ptxt>
+</topic>
+<topic id = "L8T40A1131002002">
+<title>
+Logica di rilevamento dei 2 cicli di guida
+</title>
+<ptxt>
+L&apos;avaria rilevata nel primo ciclo di guida e conservata nella memoria ECM (nella forma di DTC in corso e dati sulle condizioni presenti al momento) ma la spia di rilevamento avarie MIL questa volta non si accende. Si accende al secondo rilevamento della stessa avaria nel successivo ciclo di guida.
+</ptxt>
+</topic>
+<topic id = "L8T40A1131002003">
+<title>
+DTC in corso
+</title>
+<ptxt>
+Un DTC in corso indica un DTC rilevato e memorizzato temporaneamente nel primo ciclo di guida della logica di rilevamento a 2 C&#x002F;G.
+</ptxt>
+</topic>
+<topic id = "L8T40A1131002004">
+<title>
+Dati presenti al momento
+</title>
+<ptxt>
+L&apos;ECM memorizza nella sua memoria le condizioni del motore e della guida al momento del rilevamento di un malfunzionamento. Questi dati sono definiti &#8220;dati &#34;freeze frame&#34;&#8221;.
+</ptxt>
+<ptxt>
+Controllando i dati &#34;freeze frame&#34;, e possibile conoscere le condizioni del motore e di guida al momento del rilevamento (per es. se il motore e caldo o meno, se il veicolo e in moto o si e fermato, e se la miscela aria&#x002F;carburante e povera o ricca). Inoltre, l&apos;ECM dispone di una funzione per memorizzare ciascun dato &#34;freeze frame&#34; per tre diversi malfunzionamenti nell&#8217;ordine in cui ciascuno e stato rilevato. Utilizzando questa funzione, e possibile sapere l&#8217;ordine in cui sono stati rilevati i malfunzionamenti. Questo e molto utile ricontrollando o nella diagnosi dei problemi.
+</ptxt>
+<ptxt>
+Per dettagli relativi ai dati &#34;freeze frame&#34; che possono essere letti dall&apos;ECM, fare riferimento alla tabella sottostante.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "2.175in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Sistema di alimentazione B1
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Sistema di alimentazione B2
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Carico calcolato
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECT
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Regolazione fine carburante breve termine B1
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Regolazione fine carburante lungo termine B1
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Regolazione fine carburante breve termine B2
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Regolazione fine carburante lungo termine B2
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Velocita Motore
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Velocita Veicolo
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Anticipo accensione
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Temperatura aria aspirata:
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+MAF
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TP 1 assoluto&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ciclo prg contenitore EVAP
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Livello serbatoio carburante
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Press. Barometrica
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Voltaggio Batteria
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TP relativo&#x002A;&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+TP 2 assoluto&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+APP 1 assoluto&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+APP 2 assoluto&#x002A;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Pos target farfalla
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Nei dati &#34;freeze frame&#34; con asterisco (&#x002A;), indica il rapporto tra tensione di alimentazione e tensione di uscita del relativo sensore.
+</ptxt>
+<ptxt>
+Quando la tensione di alimentazione e 5,0 V e la tensione di uscita 4,0 V, i dati &#34;freeze frame&#34; visualizzati sono i seguenti.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Nei sistemi in cui l&apos;uscita e proporzionale alla tensione di ingresso, visualizza 80&#x0025; (&#x003D; la percentuale della tensione di riferimento massima in ingresso ).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Nei sistemi in cui l&apos;uscita e proporzionale alla tensione di ingresso, visualizza 20&#x0025; (&#x003D;100&#x0025; meno la percentuale della tensione di riferimento massima in ingresso ).
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Nei TP relativi con asterischi (&#x002A;&#x002A;) riportati nella tabella sopra, lo indica tramite formula ((tensione di uscita - tensione di uscita nella posizione di farfalla chiusa) &#x002F; tensione di alimentazione).
+</ptxt>
+<ptxt>
+Quando la tensione di alimentazione e 5,0 V e la tensione di uscita nella posizione di farfalla chiusa e 1,0 V, i dati &#34;freeze frame&#34; visualizzati sono i seguenti.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Nella posizione di farfalla chiusa (tensione di uscita &#x003D; 1,0 V), visualizza 0&#x0025;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Nella posizione di farfalla aperta (tensione di uscita &#x003D; 4,0 V), visualizza 60&#x0025;. Tuttavia, nei sistemi in cui l&apos;uscita e inversamente proporzionale alla tensione di ingresso, visualizza 100&#x0025; meno la formula menzionata in precedenza.
+</ptxt>
+</item>
+</list2>
+</list1>
+<ptxt>
+</ptxt>
+</attention3>
+<figure page = "2">
+<title>
+Visualizzazione dei dati &#34;freeze frame&#34; del SUZUKI SDT (per esempio)
+</title>
+<graphic graphicname = "I7V10A111018.swf" width = "88.000mm" height = "76.556mm" ver = "01" gw = "148" gh = "200"/>
+</figure>
+</topic>
+<topic id = "L8T40A1131002006">
+<title>
+Cancellazione dei dai &#34;freeze frame&#34;
+</title>
+<ptxt>
+I dati &#34;freeze frame&#34; sono cancellati contemporaneamente alla eliminazione del DTC.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "L8T40A1131002005" page = "2">
+<title>
+Sistema OBD tipo C
+</title>
+<ptxt>
+L&apos;ECM diagnostica problemi che si possono verificare nel motore e nel sistema di controllo delle emissioni quando l&apos;interruttore di accensione e in posizione ON e il motore e in funzione e indica il risultato accendendo, o lampeggiando, la spia di malfunzionamento (MIL) (1).
+</ptxt>
+<ptxt>
+L&apos;ECM e MIL funzionano come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando a motore fermo il commutatore di accensione viene portato in posizione ON, la spia di guasto (MIL) (1) si accende per controllare il MIL (1) e il suo circuito.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se il motore e il sistema di controllo delle emissioni funzionano correttamente dopo l&apos;avvio del motore (mentre il motore e in funzione), la spia MIL si spegne.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando l&apos;ECM rileva un malfunzionamento del motore o sistema di controllo delle emissioni oltre il ciclo di guida specificato (C&#x002F;G), accende il MIL nel quadro strumenti e registra il codice diagnostico del guasto (DTC) in memoria. (La memoria viene mantenuta come e anche nel caso di un guasto che si e verificato temporaneamente per scomparire immediatamente. E non viene cancellato a meno che non venga interrotta l&apos;alimentazione all&apos;ECM per un periodo di tempo specificato o viene cancellato dallo scanner SUZUKI (-SDT) (2).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Per ulteriori relativi della procedura di controllo &#x002F; cancellazione, fare riferimento a 
+<intxref refid = "L8T40A1134003">Controllo DTC:N32A</intxref>
+ o 
+<intxref refid = "L8T40A1134004">Spazio libero DTC:N32A</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Per informazioni sulle voci seguenti, fare riferimento a 
+<intxref refid = "L8T40A1131002009">Sistema OBD tipo A e B:</intxref>
+.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Ciclo di riscaldamento
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ciclo di guida
+</ptxt>
+</item>
+<item>
+<ptxt>
+Logica rilevamento 2 cicli di guida
+</ptxt>
+</item>
+<item>
+<ptxt>
+DTC in corso
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+E possibile comunicare con l&apos;ECM tramite il connettore per la trasmissione dei dati (DLC) (3) non solo tramite lo scanner SUZUKI (SUZUKI-SDT) ma anche tramite lo scanner generico OBD di comunicazione CAN.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I5RW0C110001.swf" width = "88.000mm" height = "98.781mm" ver = "01" gw = "182" gh = "263"/>
+</figure>
+</servinfosub>
+<servinfosub id = "L8T40A1131002007" page = "1">
+<title>
+Test di prontezza sistema
+</title>
+<ptxt>
+Il test di prontezza del sistema e quello di controllare con lo scanner (Suzuki SDT o scanner generico OBD per comunicazione CAN) se la diagnostica a bordo di ogni sistema relativo alle emissioni di scarico sia stata completata o meno. Quando le condizioni fissate per ogni sistema sono soddisfatte, l&apos;ECM esegue una diagnostica a bordo del sistema corrispondente e modifica lo stato del test di prontezza del sistema da &#8220;Incompleto&#8221; a &#8220;Completo&#8221;. Quando viene visualizzato lo stato &#8220;Completo&#8221;, questo viene mantenuto fino a quando non viene eseguita la &#8220;Cancellazione DTC&#8221; con lo scanner.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lo stato del test di prontezza del sistema puo essere modificato in &#8220;incompleto&#8221; quando si eseguono i seguenti servizi.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Distacco del cavo negativo della batteria
+</ptxt>
+</item>
+<item>
+<ptxt>
+Distacco dei connettori dell&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Rimozione del cavo di massa per l&apos;ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Distacco del fusibile dell&apos;&#8220;ECM&#8221;
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+usando questo test di prontezza del sistema e possibile confermare che tutte le procedure di conferma DTC sono state completate o meno. Per tutti i DTC relativi a ciascun sistema, fare riferimento alla tabella sottostante.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il test di prontezza del sistema NON  e il risultato (&#8220;Normale&#8221; o &#8220;Anomalo&#8221;) della diagnostica a bordo, ma il risultato (&#8220;Completo&#8221; o &#8220;Incompleto&#8221;) della diagnosi a bordo.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<topic id = "L8T40A1131002008">
+<title>
+Monitoraggio dell&apos;elemento della tabella del test di prontezza del sistema
+</title>
+<subtopic id = "L8T40A1131002011">
+<title>
+Sistema OBD tipo A
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "11" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.292in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.582in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.713in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.560in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.713in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.560in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.560in"/>
+<colspec colnum = "8" colname = "8" colwidth = "0.560in"/>
+<colspec colnum = "9" colname = "9" colwidth = "0.560in"/>
+<colspec colnum = "10" colname = "10" colwidth = "0.560in"/>
+<colspec colnum = "11" colname = "11" colwidth = "0.560in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Elemento di monitoraggio
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Elemento di monitoraggio relativo al DTC
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Catalizzatore
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0420
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0430
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sensore O2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0130
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0131
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0132
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0133
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0137
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0138
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P013E
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0140
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P014A
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0150
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0151
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0152
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0153
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0154
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0157
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0158
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0160
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2270
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2271
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2272
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2273
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Riscaldatore sensore O2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0030
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0031
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0032
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0036
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0037
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0038
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0050
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0051
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0052
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0056
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0057
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0058
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</subtopic>
+<subtopic id = "L8T40A1131002012">
+<title>
+Sistema OBD tipo B
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "11" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.292in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.582in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.713in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.560in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.713in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.560in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.560in"/>
+<colspec colnum = "8" colname = "8" colwidth = "0.560in"/>
+<colspec colnum = "9" colname = "9" colwidth = "0.560in"/>
+<colspec colnum = "10" colname = "10" colwidth = "0.560in"/>
+<colspec colnum = "11" colname = "11" colwidth = "0.560in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Elemento di monitoraggio
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Elemento di monitoraggio relativo al DTC
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Catalizzatore
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0420
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0430
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sensore O2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0130
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0131
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0132
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0133
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0137
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0138
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0140
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0150
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0151
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0152
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0153
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0154
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0157
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0158
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0160
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2270
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2271
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2272
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P2273
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Riscaldatore sensore O2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0030
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0031
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0032
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0036
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0037
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0038
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0050
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0051
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0052
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0056
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0057
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0058
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</subtopic>
+<subtopic id = "L8T40A1131002013">
+<title>
+Sistema OBD tipo C
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "11" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.292in"/>
+<colspec colnum = "2" colname = "2" colwidth = "0.582in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.713in"/>
+<colspec colnum = "4" colname = "4" colwidth = "0.560in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.713in"/>
+<colspec colnum = "6" colname = "6" colwidth = "0.560in"/>
+<colspec colnum = "7" colname = "7" colwidth = "0.560in"/>
+<colspec colnum = "8" colname = "8" colwidth = "0.560in"/>
+<colspec colnum = "9" colname = "9" colwidth = "0.560in"/>
+<colspec colnum = "10" colname = "10" colwidth = "0.560in"/>
+<colspec colnum = "11" colname = "11" colwidth = "0.560in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Elemento di monitoraggio
+</ptxt>
+</entry>
+<entry namest = "2" nameend = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Elemento di monitoraggio relativo al DTC
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Sensore O2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0131
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0132
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0134
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0137
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0138
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0140
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0151
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0152
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0154
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0157
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0158
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0160
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle">
+<ptxt>
+Riscaldatore sensore O2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0030
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0031
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0032
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0036
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0037
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0038
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0050
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0051
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0052
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0056
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0057
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0058
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "7" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "8" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "9" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "10" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "11" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</subtopic>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

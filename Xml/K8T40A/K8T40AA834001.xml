@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40AA834001" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Έλεγχος Συστήματος Επικοινωνίας CAN
+</title>
+<diag type = "test" id = "K8T40AA834001001">
+<testgroup>
+<title>
+Έλεγχος Κωδικού Βλάβης DTC
+</title>
+<test1>
+<ptxt>
+Συνδέστε το διαγνωστικό εργαλείο της SUZUKI (SUZUKI SDT) στο DLC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε τις μονάδες ελέγχου που επικοινωνούν μέσω CAN για κωδικούς DTC.
+</ptxt>
+</test1>
+<question>
+Ανιχνεύεται το &#34;Δίαυλος Μονάδας Ελέγχου OFF&#34; σε κάποια από τις μονάδες ελέγχου;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος διακοπτόμενων προβλημάτων
+</title>
+<test1>
+<ptxt>
+Ελέγξτε για κατάλληλη σύνδεση ακροδεκτών σε κάθε ένα κύκλωμα επικοινωνίας CAN σε όλα τα &#248;ις μονάδων ελέγχου &#x002F; αισθητήρων (που επικοινωνούν με το CAN).
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40AA834004">Διάγνωση για Δίαυλο Επικοινωνίας Εκτός Λειτουργίας:Μοντέλο F9Q</intxref>
+.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Συνδέστε καλά το &#248;ις και ελέγξτε πάλι για κωδικό DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος Κωδικού Βλάβης DTC
+</title>
+<question>
+Ανιχνεύεται το &#34;Απώλεια Επικοινωνίας&#34; σε κάποια από τις μονάδες ελέγχου;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40AA834003">Διάγνωση για Απώλεια Επικοινωνίας:Μοντέλο F9Q</intxref>
+.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος επικοινωνίας κάθε μονάδας ελέγχου
+</title>
+<question>
+Είναι σε θέση να επικοινωνήσουν με όλες τις μονάδες ελέγχου που επικοινωνούν μέσω CAN χρησιμοποιώντας το διαγνωστικό εργαλείο SUZUKI (SUZUKI SDT);
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Το σύστημα επικοινωνίας CAN είναι σε καλή κατάσταση.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος κυκλώματος DLC
+</title>
+<test1>
+<ptxt>
+Αποσυνδέστε το διαγνωστικό εργαλείο SUZUKI (SUZUKI SDT) από το DLC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε το κύκλωμα τρο&#248;οδοσίας DLC, το κύκλωμα γείωσης και το κύκλωμα σειριακής επικοινωνίας για διακοπή, βραχυκύκλωμα και υψηλή αντίσταση.
+</ptxt>
+</test1>
+<question>
+Κάθε ένα κύκλωμα είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 6.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε το κύκλωμα.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος διαγνωστικού εργαλείου SUZUKI (SUZUKI SDT)
+</title>
+<test1>
+<ptxt>
+Ελέγξτε εάν το διαγνωστικό εργαλείο SUZUKI (SUZUKI SDT) μπορεί να επικοινωνήσει συνδέοντάς το με ένα άλλο αυτοκίνητο.
+</ptxt>
+</test1>
+<question>
+Το διαγνωστικό εργαλείο SUZUKI (SUZUKI SDT) επικοινωνεί κατάλληλα;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40AA834004">Διάγνωση για Δίαυλο Επικοινωνίας Εκτός Λειτουργίας:Μοντέλο F9Q</intxref>
+.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Αντικαταστήστε το διαγνωστικό εργαλείο της SUZUKI (SUZUKI SDT) και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A1124090" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0033: Boost Pressure Control Solenoid Valve Control Circuit
+</title>
+<attention2>
+<ptxt>
+This fault can result in a rapid and significant fouling of the diesel particulate filter.
+</ptxt>
+</attention2>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions for applying the fault finding procedure to stored faults:
+</ptxt>
+<ptxt>
+The fault is declared present after:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Engine start.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A road test.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Output test &#8220;Boost pressure valve&#8221; on SUZUKI scan tool.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+If the fault is present:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Turbocharging is no longer authorized.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The EGR function is inhibited.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The vehicle performance is reduced.
+</ptxt>
+</item>
+<item>
+<ptxt>
+The Injection warning light (gravity 1 warning light) is lit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If CC0 is present, the Malfunction indicator light (MIL) will come on after three consecutive driving cycles (starting &#x002B;5 seconds &#x002B; turn OFF ignition switch and wait 40 seconds.).
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Use service wire for all operations on the ECM connectors.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S6JB0A1124090001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S6JB0A910E048">A-5 Engine and A&#x002F;C Control System Circuit Diagram (DSL)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A1124090002">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short circuit to &#x002B;12 V
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CC0
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Short circuit to vehicle body ground
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CO
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Open circuit
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Internal electronic fault
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0A1124090003">
+<title>
+Troubleshooting for CC1: Short circuit to &#x002B;12 V
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the boost pressure control solenoid valve connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measure the resistance of the boost pressure control solenoid valve between its &#8220;C90-1&#8221; and &#8220;C90-2&#8221; terminals:
+</ptxt>
+<ptxt>
+If the resistance displayed is not 14.7 &#8211; 16.1 &#937; at 20 &#176;C, 68 &#176;F, replace the boost pressure control solenoid valve.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and insulation from the &#x002B;12 V feed of the following connection:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C90-1&#8221; wire of boost pressure control solenoid valve connector and &#8220;C85-23&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the boost pressure control solenoid valve.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0A1124090004">
+<title>
+Troubleshooting for CC0: Short circuit to vehicle body ground and CO: Open circuit
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the boost pressure control solenoid valve connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measure the resistance of the boost pressure control solenoid valve between its &#8220;C90-1&#8221; and &#8220;C90-2&#8221; terminals:
+</ptxt>
+<ptxt>
+If the resistance displayed is not 14.7 &#8211; 16.1 &#937; at 20 &#176;C, 68 &#176;F, replace the boost pressure control solenoid valve.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and insulation from vehicle body ground of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C90-1&#8221; wire of boost pressure control solenoid valve connector and &#8220;C85-23&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C90-2&#8221; wire of boost pressure control solenoid valve connector and &#8220;E33-6&#8221; wire of main relay mounting connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, replace the boost pressure control solenoid valve.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<p-change/>
+<servinfosub id = "S6JB0A1124090005">
+<title>
+Troubleshooting for D1: Internal electronic fault
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the boost pressure control solenoid valve connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Measure the resistance of the boost pressure control solenoid valve between its &#8220;C90-1&#8221; and &#8220;C90-2&#8221; terminals:
+</ptxt>
+<ptxt>
+If the resistance displayed is not 14.7 &#8211; 16.1 &#937; at 20 &#176;C, 68 &#176;F, replace the boost pressure control solenoid valve.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and insulation from vehicle body ground of the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C90-1&#8221; wire of boost pressure control solenoid valve connector and &#8220;C85-23&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C90-2&#8221; wire of boost pressure control solenoid valve connector and &#8220;E33-6&#8221; wire of main relay mounting connector
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+If the fault is still present, check that the ECM output stage is working correctly. With the boost pressure control solenoid valve connected:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Or using a voltmeter:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Connect the negative terminal of the voltmeter to &#8220;C90-1&#8221; wire of the solenoid valve connector and the positive terminal to &#8220;C90-2&#8221; wire.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Clear any solenoid valve faults and perform output test &#8220;Boost pressure valve&#8221; on SUZUKI scan tool.
+</ptxt>
+<ptxt>
+The voltmeter should display five cycles of two successive voltages: ~ 2.5 V (opening cyclic ratio of 20&#x0025;) then ~ 8.75 V (opening cyclic ratio of 70&#x0025;).
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Or using an oscilloscope (at 5 V range&#x002F;division and 1 ms&#x002F;div time base):
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Connect the negative terminal of the oscilloscope to &#8220;C90-1&#8221; wire of the solenoid valve connector and the positive terminal to &#8220;C90-2&#8221; wire of the solenoid valve connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Clear any solenoid valve faults and perform output test &#8220;Boost pressure valve&#8221; on SUZUKI scan tool.
+</ptxt>
+<ptxt>
+The oscilloscope should display a square wave signal with an amplitude of 12.5 V (equal to the battery voltage) at a frequency of 140 Hz (with an opening cyclic ratio increasing successively from ~ 20 to ~ 70&#x0025;).
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the measurement is correct, replace the solenoid valve.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the measurement does not show any control or continuous voltage, substitute a known-good ECM and recheck.
+</ptxt>
+</item>
+</list2>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

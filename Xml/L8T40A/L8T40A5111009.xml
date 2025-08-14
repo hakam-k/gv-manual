@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "L8T40A5111009" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Descrizione sistema diagnostico di bordo
+</title>
+<servinfosub id = "L8T40A5111009001">
+<title>
+Per il modello E-OBD
+</title>
+<ptxt>
+Per il sistema di controllo del cambio automatico, il TCM ha le seguenti funzioni. Fare riferimento a 
+<intxref refid = "L8T40A5114049">Ispezione del TCM e dei suoi circuiti:4 A&#x002F;T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando l&apos;interruttore di accensione e acceso (ON) con il motore fermo, una spia di malfunzionamento (MIL) (1) si accende per controllare la lampadina della MIL.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando il TCM rileva un malfunzionamento del sistema di controllo A&#x002F;T, il TCM cerca di accendere la spia di rilevamento avarie (MIL) e memorizza il DTC guasto nella memoria del TCM.
+</ptxt>
+<ptxt>
+(Pero, se rileva che tre cicli di guida continui sono normali dopo il rilevamento di un malfunzionamento, questo fa si che MIL si spenga sebbene il DTC conservato in memoria rimanga.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+É possibile comunicare tramite il DLC (2) usando non solo lo strumento di scansione SUZUKI ma anche lo scanner generico OBD. (E possibile controllare e cancellare le informazioni diagnostiche usando lo scanner.)
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L5A101">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+Analizzatore SUZUKI (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure page = "2">
+<graphic graphicname = "I9T401511002.swf" width = "88.000mm" height = "102.309mm" ver = "01" gw = "189" gh = "273"/>
+</figure>
+</item>
+</list1>
+<topic id = "L8T40A5111009002">
+<title>
+Logica rilevamento 2 cicli di guida
+</title>
+<ptxt>
+L&apos;avaria rilevata nel primo ciclo di guida e conservata nella memoria TCM (nella forma di DTC in corso e dati sulle condizioni del motore presenti al momento) ma la spia di rilevamento avarie questa volta non si accende. Si accende al secondo rilevamento della stessa avaria anche nel successivo ciclo di guida.
+</ptxt>
+</topic>
+<topic id = "L8T40A5111009003">
+<title>
+DTC in corso
+</title>
+<ptxt>
+Il DTC in corso indica un DTC rilevato e memorizzato temporaneamente nel ciclo di guida 1 del DTC che e rilevato nella logica di rilevamento del ciclo di guida 2.
+</ptxt>
+</topic>
+<topic id = "L8T40A5111009004">
+<title>
+Dati &#8220;freeze frame&#8221;
+</title>
+<ptxt>
+Il TCM memorizza nella sua memoria le condizioni del motore e della guida al momento del rilevamento di un malfunzionamento. Questi dati sono definiti &#8220;dati freeze frame&#8221;.
+</ptxt>
+<ptxt>
+Quindi, nel caso in cui era stato rilevato un malfunzionamento, controllando i dati &#8220;freeze frame&#8221;, e possibile conoscere le condizioni del motore e di guida (es. se il motore era caldo o meno, dove il veicolo era in moto o si era fermato).
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "L8T40A5111009005">
+<title>
+Per modello non-E-OBD
+</title>
+<ptxt>
+Per il sistema di controllo del cambio automatico, il TCM ha le seguenti funzioni. Fare riferimento a 
+<intxref refid = "L8T40A5114049">Ispezione del TCM e dei suoi circuiti:4 A&#x002F;T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando l&apos;interruttore di accensione viene regolato in posizione ON e non e rilevata nessun malfunzionamento del sistema di controllo A&#x002F;T, la spia della trasmissione (1) si illumina per circa 2 secondi dopo l&apos;accensione e quindi si spegne per il controllo della lampadina.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando il TCM rileva un malfunzionamento nel sistema di controllo A&#x002F;T, si illumina la spia della trasmissione (1) e memorizza il DTC dell&apos;avaria in memoria.
+</ptxt>
+</item>
+<item>
+<ptxt>
+É possibile comunicare con il TCM tramite il connettore di collegamento dati (DLC) (2) usando lo scanner SUZUKI. E possibile controllare e cancellare le informazioni diagnostiche usando lo scanner SUZUKI.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L5A102">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+Analizzatore SUZUKI (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure page = "2">
+<graphic graphicname = "I8T40A511002.swf" width = "88.000mm" height = "109.011mm" ver = "01" gw = "189" gh = "292"/>
+</figure>
+</item>
+</list1>
+<topic id = "L8T40A5111009006">
+<title>
+Logica rilevamento 2 cicli di guida
+</title>
+<ptxt>
+L&apos;avaria rilevata nel primo ciclo di guida e conservata nella memoria TCM (nella forma di DTC in corso e dati sulle condizioni del motore presenti al momento) ma la spia di rilevamento avarie questa volta non si accende. Si accende al secondo rilevamento della stessa avaria anche nel successivo ciclo di guida.
+</ptxt>
+</topic>
+<topic id = "L8T40A5111009007">
+<title>
+DTC in corso
+</title>
+<ptxt>
+Il DTC in corso indica un DTC rilevato e memorizzato temporaneamente nel ciclo di guida 1 del DTC che e rilevato nella logica di rilevamento del ciclo di guida 2.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

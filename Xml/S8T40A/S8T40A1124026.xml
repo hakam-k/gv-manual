@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1124026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0137 &#x002F; P0138
+</title>
+<servinfosub id = "S8T40A1124026001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.626in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.565in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0137: O2 Sensor Circuit Voltage Low (Bank 1, Sensor 2)
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of HO2S signal circuit is lower than 0.02 V for 25 sec.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Exhaust system
+</ptxt>
+</item>
+<item>
+<ptxt>
+Air intake system
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0138: O2 Sensor Circuit Voltage High (Bank 1, Sensor 2)
+</emph>
+</ptxt>
+<ptxt>
+Output voltage of HO2S signal circuit is higher than 4.5 V for 5 sec. even if HO2S heater is turned ON for specified times.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C detection logic)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1124026002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1124014">DTC P0037 &#x002F; P0038:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1124026003">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When performing a road test, select a place where there is no traffic or possibility of a traffic accident and be very careful during testing to avoid occurrence of an accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Road test should be carried out by 2 persons, a driver and a tester, on a level road.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+If DTC other than aimed DTC are previously detected in DTC confirmation procedure, be sure to troubleshoot DTC previously detected.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Drive vehicle at 50 &#8211; 60 km&#x002F;h (31 &#8211; 37 mile&#x002F;h) for 3 min. (Keep throttle valve opening constantly in this step.)
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1124026004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1124026005">
+<testgroup id = "S8T40A1124026006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1124001">Engine and Emission Control System Check:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124026007">
+<title>
+DTC Check
+</title>
+<question>
+Is there any DTC(s) other than P0137 and P0138?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to troubleshooting for applicable DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124026008">
+<title>
+HO2S signal circuit and ground circuit check
+</title>
+<test1>
+<ptxt>
+Turn OFF ignition switch and disconnect connectors from HO2S and ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to HO2S and ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that HO2S signal circuit (A3) and ground circuit (A4) are as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of each HO2S signal circuit and ground circuit is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of HO2S signal circuit and ground circuit is infinity between HO2S connector and vehicle body ground.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between HO2S signal terminal and each other terminal at HO2S connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between HO2S ground circuit terminal and each other terminal.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of HO2S signal circuit and ground circuit is 0 &#8211; 1 V with ignition switch in ON position.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124026009">
+<title>
+Exhaust system and air intake system check
+</title>
+<test1>
+<ptxt>
+Check exhaust system and air intake system for clogging or leak.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124026010">
+<title>
+HO2S heater circuit check
+</title>
+<test1>
+<ptxt>
+Check HO2S heater circuit referring to Step 2 through Step 3 of 
+<intxref refid = "S8T40A1124014">DTC P0037 &#x002F; P0038:J24B</intxref>
+. 
+</ptxt>
+</test1>
+<question>
+Is circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1124026011">
+<title>
+DTC recheck
+</title>
+<test1>
+<ptxt>
+Replace HO2S. 
+<intxreftitleoff1 refid = "S8T40A1326013"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Perform DTC confirmation procedure and check DTC.
+</ptxt>
+</test1>
+<question>
+Is DTC P0137 or P0138 still detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+End.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

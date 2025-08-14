@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0BA304026" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1709: ECM 2. kommunikációs hiba
+</title>
+<servinfosub id = "H5JB0BA304026010">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H5JB0BA302001">Indításgátló vezérlőrendszer kapcsolási rajza</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0BA304026001">
+<title>
+Észlelési körülmények és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Észlelési körülmények
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Kommunikációs hiba az ICM és az ECM között
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN kommunikációs áramkör hibás
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM-hiba
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az ECM hibás
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<attention3>
+<ptxt>
+Ha a rendszer egyszerre DTC B1702-t és B1709-et észlel, előfordulhat, hogy meghibásodott a CAN kommunikációs vezeték. Ellenőrizze, hogy a CAN-nel kapcsolatos hibát észleli-e az ECM-, BCM-, ABS-vezérlőmodul és&#x002F;vagy az ESP&#174;-vezérlőmodul. Ha észleli a hibát, végezze el a vonatkozó DTC diagnosztikai folyamatot.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "H5JB0BA304026002">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H5JB0BA304026004">
+<testgroup>
+<title>
+Diagnosztikai hibakódok (DTC) ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kérdezze le az ECM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H5JB0B1104005">DTC ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy van-e DTC-t az ABS- vagy az ESP&#174;-vezérlőmodulban. ESP&#174;-rendszerrel felszerelt járműre vonatkozóan lásd: 
+<intxref refid = "H5JB0B4604050">DTC ellenőrzése</intxref>
+ ESP&#174;-rendszerrel nem felszerelt járműre vonatkozóan lásd: 
+<intxref refid = "H5JB0B4504004">DTC ellenőrzése</intxref>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kérdezze le a BCM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H5JB0BA204005">DTC ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Észlelt hibakódot?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Menjen a vonatkozó DTC diagnosztikai folyamat táblázatra.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+A biztosíték ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, nem olvadt-e ki valamelyik biztosíték.
+</ptxt>
+</test1>
+<question>
+Kiolvadt valamelyik biztosíték?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Cserélje ki a kiolvadt biztosítéko(ka)t.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM-kapcsoló ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett vegye le az ICM-csatlakozót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek ICM-csatlakozása. Lásd: 
+<intxref refid = "H5JB0B0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Mindegyik érintkező- és vezetékcsatlakozás rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a rossz csatlakozást (csatlakozásokat).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM rossz csatlakozásának ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett vegye le az ECM-csatlakozókat.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek ECM-csatlakozása. Lásd: 
+<intxref refid = "H5JB0B0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Mindegyik érintkező- és vezetékcsatlakozás rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg a rossz csatlakozást (csatlakozásokat).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN kommunikációs áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a CAN kommunikációs áramkört az ICM és az ECM között szakadás, rövidzárlat és nagy ellenállás szempontjából. Lásd: 
+<intxref refid = "H5JB0B0006001">A villamos áramkörök ellenőrzési eljárása</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben vannak a CAN kommunikációs áramkörök?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa ki az áramkört.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ICM-ellenőrzés
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ICM táp- és testáramkörét, lásd: 
+<intxref refid = "H5JB0BA304018">Indításgátló vezérlőmodul (ICM) és áramkörének ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van az ICM táp- és testáramköre?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ICM-et, és ismételje meg az ellenőrzést. Ha továbbra is B1709-es DTC-t észlel, a mostani helyére tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Javítsa meg az ICM táp- és testáramkörét.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

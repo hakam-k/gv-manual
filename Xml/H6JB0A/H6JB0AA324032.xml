@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H6JB0AA324032" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1717: Nem regisztrált kulcsnélküli indításvezérlő modul
+</title>
+<servinfosub id = "H6JB0AA324032001">
+<title>
+Áramkör leírása
+</title>
+<ptxt>
+A motorindító gomb ON helyzetbe történő fordítása után az ECM B1717 hibakódot észlel, amikor az ECM észleli, hogy az ECM-ben és a kulcsnélküli indításvezérlő modulban eltérő azonosító kódok vannak regisztrálva. Amikor a kulcsnélküli indításvezérlő modult újra cserélik, a gyújtáskapcsoló ON helyzetbe történő fordítása után az ECM általában automatikusan regisztrálja az azonosító kódot a kulcsnélküli indításvezérlő modulban. Amikor azonban a kulcsnélküli indításvezérlő modult használt modulra cserélik, az ECM nem regisztrálja automatikusan az azonosító kódot a kulcsnélküli indításvezérlő modulban, még a gyújtáskapcsoló ON helyzetbe történő fordítása után sem.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H6JB0AA324032002">
+<title>
+Észlelési körülmények és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Az ECM észleli, hogy az ECM-ben és a kulcsnélküli vezérlőmodulban eltérő azonosítókódok vannak regisztrálva.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kulcsnélküli indítórendszer áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kulcsnélküli indítás vezérlőmodulja
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H6JB0AA324032003">
+<title>
+Hibaelhárítás
+</title>
+<diag type = "test" id = "H6JB0AA324032004">
+<testgroup>
+<question>
+Elvégezte az &#8220;Indításgátló vezérlőrendszer ellenőrzését&#8221;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H6JB0AA324001">Indításgátló vezérlőrendszer ellenőrzése:Dzelmotoros modell esetén</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM regisztrálása
+</title>
+<test1>
+<ptxt>
+Regisztrálja az ECM-et az indításgátló vezérlőrendszerben, lásd: 
+<intxref refid = "H6JB0AA326003">Eljárás az ECM cseréje után:Dzelmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Sikerült regisztrálni az ECM-et az indításgátló vezérlőrendszerben?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ellenőrizze újra az ECM-et, hogy van-e DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ellenőrizze a DTC-t az ECM-ben
+</title>
+<test1>
+<ptxt>
+Kérdezze le az ECM-ben tárolt DTC-t, lásd: 
+<intxref refid = "H6JB0AA324002">Diagnosztikai hibakódok (DTC) ellenőrzése:Dzelmotoros modell esetén</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Észlelhető-e a B1716 és&#x002F;vagy B1718 hibakód a B1717 hibakódon kívül?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a DTC B1716 hibaelhárítással.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Folytassa a DTC B1718 hibaelhárítással.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1144010" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Engine Basic Inspection
+</title>
+<ptxt>
+This check is very important for troubleshooting when ECM has detected no DTC and no abnormality has been found in 
+<intxref refid = "S8T40A1144009">Visual Inspection:F9Q</intxref>
+.
+</ptxt>
+<ptxt>
+Follow the flow carefully.
+</ptxt>
+<diag type = "test" id = "S8T40A1144010001">
+<testgroup id = "S8T40A1144010002">
+<ptxt>
+Check battery voltage
+</ptxt>
+<question>
+Is it 11 V or more?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Charge or replace battery.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144010003">
+<question>
+Is engine cranked?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1934001">Cranking System Symptom Diagnosis:F9Q</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144010004">
+<question>
+Does engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144010005">
+<question>
+Was the trouble symptom able to be confirmed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1144153">Fault Finding-Customer Complaints:F9Q</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 7 of 
+<intxref refid = "S8T40A1144004">Engine and Emission Control System Check:F9Q</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1144010006">
+<ptxt>
+Check immobilizer system
+</ptxt>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40AA324001">Immobilizer Control System Check:Diesel Engine Model</intxref>
+.
+</ptxt>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1144153">Fault Finding-Customer Complaints:F9Q</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair malfunction part.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

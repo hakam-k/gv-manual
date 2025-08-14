@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114009" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Ispezione di base del motore
+</title>
+<ptxt>
+Questo controllo e molto importante per la ricerca di guasti quando ECM non ha rilevato alcun DTC e non e stata trovata alcuna anomalia in 
+<intxref refid = "L8T40A1114008">Controllo visivo:M16A e J20A</intxref>
+.
+</ptxt>
+<ptxt>
+Seguire attentamente la tabella di flusso.
+</ptxt>
+<diag type = "test" id = "L8T40A1114009001">
+<testgroup id = "L8T40A1114009002">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114001">Verifica del sistema di controllo motore e emissioni:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009003">
+<title>
+Controllo della tensione della batteria.
+</title>
+<question>
+La tensione e 11 V o maggiore?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Caricare o sostituire la batteria.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009004">
+<question>
+Il veicolo e dotato di un sistema di controllo di avviamento senza chiave?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009005">
+<title>
+Controllare il malfunzionamento del sistema di controllo avviamento senza chiave (se e presente un sistema di controllo avviamento senza chiave)
+</title>
+<test1>
+<ptxt>
+Controllare il sistema di controllo avviamento senza chiave facendo riferimento a 
+<intxref refid = "L8T40AA504010">Ispezione del funzionamento del sistema di avvio senza chiave</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il risultato del controllo e soddisfacente?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cattivo funzionamento del sistema di controllo avviamento senza chiave.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009006">
+<question>
+Il motore viene avviato?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1914001">Diagnosi dei sintomi dell&apos;impianto di avviamento:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009007">
+<question>
+Il motore si avvia?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 9.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009008">
+<title>
+Controllare il regime di minimo
+</title>
+<test1>
+<ptxt>
+Riscaldare il motore alla temperatura d&apos;esercizio normale.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Posizionare il cambio nella posizione di folle per il modello M&#x002F;T (posizione &#8220;P&#8221; per cambio A&#x002F;T).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Accertarsi che tutti i carichi elettrici siano stati spenti.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare il minimo del motore con lo scanner.
+</ptxt>
+</test1>
+<question>
+Ci sono 600 &#8211; 700 g&#x002F;min (per il motore J20A), 610 &#8211; 710 g&#x002F;min (per il motore M16A)?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114010">Diagnosi del sintomo del motore:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009009">
+<title>
+Controllare la messa in fase dell&apos;accensione
+</title>
+<test1>
+<ptxt>
+Usando lo scanner SUZUKI, selezionare la modalita &#8220;Test attivo&#8221; sullo scanner SUZUKI e fissare il tempo di accensione a quello iniziale.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Usando la spia di messa in fase (1), controllare il tempo di accensione iniziale.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L1A102">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09930-76420">
+09930&#8211;76420
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<title>
+Per motore J20A
+</title>
+<graphic graphicname = "I5JB0A110021.swf" width = "90.000mm" height = "52.567mm" ver = "01" gw = "134" gh = "132"/>
+</testfigure>
+<testfigure>
+<title>
+Per il motore M16A
+</title>
+<graphic graphicname = "I5JB0A110022.swf" width = "90.000mm" height = "51.156mm" ver = "01" gw = "165" gh = "128"/>
+</testfigure>
+</test1>
+<question>
+E&apos; presnete un BTDC di 5&#176; &#8211; 15&#176; (per il motore J20A), 7&#176; &#8211; 17&#176; (per il motore M16A) al regime di minimo specificato?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114010">Diagnosi del sintomo del motore:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Controllare i componenti relativi al controllo di accensione facendo riferimento a 
+<intxref refid = "L8T40A1816007">Verifica della messa in fase dell&apos;accensione:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009010">
+<title>
+Controllare il malfunzionamento del sistema immobilizzatore (se presente un sistema immobilizzatore)
+</title>
+<test1>
+<ptxt>
+Controllare il sistema di controllo immobilizzatore facendo riferimento a 
+<intxref refid = "L8T40AA314001">Controllo del sistema di controllo dell&apos;immobilizzatore:Modello con motore a benzina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cattivo funzionamento del sistema di controllo immobilizzatore.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009011">
+<title>
+Controllare l&apos;alimentazione carburante
+</title>
+<test1>
+<ptxt>
+Controllare per assicurarsi che vada sufficiente carburante nel serbatoio.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Accendere l&#8217;interruttore di accensione per 2 secondi e poi spegnerlo.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ripetere il punto 2) diverse volte.
+</ptxt>
+</test1>
+<question>
+Si sente la pressione del carburante dal flessibile di alimentazione del carburante quando l&#8217;interruttore di accensione e acceso (ON)?
+</question>
+<testfigure>
+<title>
+Per motore J20A
+</title>
+<graphic graphicname = "I5JB0A110023.swf" width = "90.000mm" height = "46.570mm" ver = "01" gw = "130" gh = "115"/>
+</testfigure>
+<testfigure>
+<title>
+Per il motore M16A
+</title>
+<graphic graphicname = "I5JB0A110024.swf" width = "90.000mm" height = "46.922mm" ver = "01" gw = "138" gh = "116"/>
+</testfigure>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009012">
+<title>
+Controllare il funzionamento della pompa del carburante
+</title>
+<question>
+Si e sentito il rumore del funzionamento della pompa del carburante dal bocchettone di riempimento per 2 secondi dopo che l&#8217;interruttore di accensione e stato acceso e spento?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1714004">Controllo della pressione del carburante:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114083">Controllo della pompa del carburante e del suo circuito:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009013">
+<title>
+Controllare la scintilla dell&apos;accensione.
+</title>
+<test1>
+<ptxt>
+Scollegare gli accoppiatori dell&apos;iniettore.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Rimuovere le candele e collegarle ai cavi di alta tensione o alle bobine di accensione.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Collegare a terra le candele.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Avviare il motore e controllare se ogni candela emette scintille.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1814004">Prova delle scintille di accensione:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114009014">
+<title>
+Controllare il funzionamento dell&apos;iniettore del carburante.
+</title>
+<test1>
+<ptxt>
+Installare le candele e collegare i connettori dell&#8217;iniettore.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Usando l&#8217;indicatore di rumore (1), controllare il rumore di funzionamento di ciascun iniettore (2) avviando il motore.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I3RM0A110015.swf" width = "90.000mm" height = "49.095mm" ver = "01" gw = "145" gh = "122"/>
+</testfigure>
+</test1>
+<question>
+Il rumore del funzionamento dell&#8217;iniettore era prodotto da tutti gli iniettori?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114010">Diagnosi del sintomo del motore:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114082">Controllo circuito iniettore carburante:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

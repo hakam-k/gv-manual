@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1134009" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Engine Basic Inspection
+</title>
+<ptxt>
+This check is very important for troubleshooting when ECM has detected no DTC and no abnormality has been found in 
+<intxref refid = "S8T40A1134008">Visual Inspection:N32A</intxref>
+.
+</ptxt>
+<ptxt>
+Follow the flow carefully.
+</ptxt>
+<diag type = "test" id = "S8T40A1134009001">
+<testgroup id = "S8T40A1134009002">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1134001">Engine and Emission Control System Check:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134009003">
+<title>
+Check battery voltage
+</title>
+<question>
+Is it 11 V or more?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Charge or replace battery.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134009004">
+<question>
+Can engine be cranked?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1924001">Cranking System Symptom Diagnosis:J24B and N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134009005">
+<question>
+Does engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134009006">
+<title>
+Check idle speed
+</title>
+<test1>
+<ptxt>
+Check engine idle speed.
+<intxreftitleoff1 refid = "S8T40A1136001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is check result as specified?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1134010">Engine Symptom Diagnosis:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134009007">
+<title>
+Check ignition system
+</title>
+<test1>
+<ptxt>
+Check ignition system. 
+<intxreftitleoff1 refid = "S8T40A1834003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is check result as specified?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1134010">Engine Symptom Diagnosis:N32A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective parts.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134009008">
+<title>
+Check immobilizer system for operation
+</title>
+<test1>
+<ptxt>
+Check immobilizer control system. 
+<intxreftitleoff1 refid = "S8T40AA314001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Immobilizer control system malfunction.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134009009">
+<title>
+Check fuel system
+</title>
+<test1>
+<ptxt>
+Check fuel system. 
+<intxreftitleoff1 refid = "S8T40A1734003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is check result as specified?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1134010">Engine Symptom Diagnosis:N32A</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective parts.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

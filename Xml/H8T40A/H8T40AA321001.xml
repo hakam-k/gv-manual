@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H8T40AA321001" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+Indításgátló vezérlőrendszer bemutatása
+</title>
+<ptxt>
+Az indításgátló vezérlőrendszer lopásgátló berendezés, amely mozgásképtelenné teszi a járművet. Megakadályozza a motor működését és elejét veszi annak, hogy a járművet ellopják. A következő főbb elemekből áll. Az indításgátló vezérlőrendszer elemeinek elhelyezkedését lásd: 
+<intxref refid = "H8T40AA323001">Indításgátló vezérlőrendszer elemeinek elhelyezkedése:Dízelmotoros modell</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motorvezérlő egység (ECM)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Indításgátló vezérlőmodul (ICM) a beépített tekercsantennával
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gyújtáskulcs a beépített transzponderrel
+</ptxt>
+</item>
+</list1>
+<ptxt>
+A transzponderkódnak nevezett kód a transzponder memóriájában tárolódik. Valamint a kód az ECM-ben regisztrált kód. A rendszer működésének lényege az, hogy amikor a gyújtáskapcsolót ON helyzetbe fordítja, az ECM a tekercsantennával leolvassa a kódot. Ha a kód megegyezik az ICM-ben regisztrált kóddal, az ICM összehasonlítja a titkos kódot az ECM-ben tárolttal. Ha a titkos kódok megegyeznek, a motor indítható. Ha az ICM és a gyújtáskulcs transzponderkódja, vagy az ICM és az ECM titkos kódjai nem egyeznek, az ECM gátolja a motor elindítását úgy, hogy leállítja az üzemanyag befecskendezését, és a CAN kommunikációs vezeték segítségével villogtatja a befecskendező hibajelző lámpáját.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

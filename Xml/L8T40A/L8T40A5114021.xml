@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A5114021" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Non si verifica alcun blocco
+</title>
+<servinfosub id = "L8T40A5114021001">
+<title>
+Descrizione sintomi
+</title>
+<ptxt>
+Il TCM disattiva l&apos;elettrovalvola di controllo pressione TCC in una qualunque delle seguenti condizioni.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La temperatura del refrigerante motore e inferiore a 60 &#176;C (140 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&apos;interruttore 4L&#x002F;N (se in dotazione) e in posizione ON. (modalita 4L o N)
+</ptxt>
+</item>
+<item>
+<ptxt>
+L&#8217;interruttore luce freno e su ON. (Il pedale del freno e premuto).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il TCM rileva i seguenti DTC.
+</ptxt>
+<ptxt>
+DTC P0602, P0712, P0713, P0717, P0722, P0962, P0963, P0973, P0974, P0976, P0977, P1702, P1703, P1706, P1774, P1777, P2763, P2764, U0073 e&#x002F;o U0100
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "L8T40A5114021002">
+<title>
+Risoluzione dei problemi
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando si esegue una prova su strada, scegliere un luogo in cui non ci sia traffico o possibilita di un incidente e fare molta attenzione durante la prova per evitare incidenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prova su strada deve essere eseguita con 2 persone, un guidatore e un collaudatore su una strada in pianura.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<diag type = "test" id = "L8T40A5114021003">
+<testgroup>
+<question>
+E stato effettuato il controllo del sistema &#8220;A&#x002F;T&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Vai a 
+<intxref refid = "L8T40A5114001">Controllo sistema A&#x002F;T:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllare i DTC
+</title>
+<question>
+v iene rilevato DTC P0602, P0712, P0713, P0717, P0722, P0962, P0963, P0973, P0974, P0976, P0977, P1702, P1703, P1706, P1774, P1777, P2763, P2764, U0073 orU0100?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Eseguire il flusso DTC per riparare e riprovare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo ECT
+</title>
+<test1>
+<ptxt>
+Riscaldare il motore alla temperatura d&apos;esercizio normale.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare l&apos;ECT utilizzando uno scanner.
+</ptxt>
+</test1>
+<question>
+L&apos;ECT e piu di 60 &#176;C (140 &#176;F)?
+</question>
+<result>
+SI
+</result>
+<action>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Per i veicoli dotati dell&apos;interruttore 4L&#x002F;N, passare al punto 4.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Per i veicoli non dotati dell&apos;interruttore 4L&#x002F;N, passare al punto 5.
+</ptxt>
+</item>
+</list1>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sensore ECT difettoso, e il circuito od il sistema di raffreddamento del motore. Se OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ispezione segnale interruttore 4L&#x002F;N
+</title>
+<test1>
+<ptxt>
+Con l&#8217;interruttore di accensione su ON, controllare la tensione tra il terminale &#8220;E93-4&#8221; del connettore TCM e la massa.
+</ptxt>
+<spec>
+<title>
+Specifiche interruttore 4L&#x002F;N
+</title>
+<ptxt>
+Posizione di rinvio marcia o &#8220;4H&#8221;: Tensione batteria
+</ptxt>
+<ptxt>
+La posizione del trasferimento marcia e &#8220;4L&#8221; o &#8220;N&#8221;: 0 &#8211; 2 V
+</ptxt>
+</spec>
+</test1>
+<question>
+Il risultato e come specificato?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Interruttore 4L&#x002F;N o suo circuito difettosi. Se OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ispezione segnale interruttore luce freni.
+</title>
+<test1>
+<ptxt>
+Con l&#8217;interruttore di accensione su ON, controllare la tensione tra il terminale del connettore ECM e la massa.
+</ptxt>
+<spec>
+<title>
+Specifiche interruttore luce freno
+</title>
+<ptxt>
+Il pedale del freno e rilasciato: 0 &#8211; 1 V
+</ptxt>
+<ptxt>
+Il pedale del freno e premuto: Tensione batteria
+</ptxt>
+</spec>
+</test1>
+<question>
+Il risultato e come specificato?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Interruttore luce freni regolato male, interruttore luce freni o suo circuito difettosi. Se OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

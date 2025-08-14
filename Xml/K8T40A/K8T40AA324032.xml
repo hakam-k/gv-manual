@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40AA324032" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1717: Μη καταχωρημένος εγκέ&#248;αλος εκκίνησης χωρίς κλειδί
+</title>
+<servinfosub id = "K8T40AA324032001">
+<title>
+Περιγρα&#248;ή Κυκλώματος
+</title>
+<ptxt>
+O κωδικός Β1717 ανιχνεύεται όταν ο εγκέ&#248;αλος ECM ανιχνεύσει δια&#248;ορετικούς κωδικούς ID να έχουν καταχωρηθεί στον εγκέ&#248;αλο ECM και τον εγκέ&#248;αλο εκκίνησης χωρίς κλειδί μετά το γύρισμα του μοχλού εκκίνησης του κινητήρα στη θέση ON. Κανονικά, όταν αντικατασταθεί ο εγκέ&#248;αλος εκκίνησης χωρίς κλειδί με έναν καινούργιο, ο εγκέ&#248;αλος ECM καταχωρεί αυτόματα τον αντίστοιχο κωδικό ID στον εγκέ&#248;αλο εκκίνησης χωρίς κλειδί μετά το γύρισμα του διακόπτη ανά&#248;λεξης στη θέση ON. Παρόλα αυτά, όταν αντικατασταθεί ο εγκέ&#248;αλος εκκίνησης χωρίς κλειδί με έναν μεταχειρισμένο, ο εγκέ&#248;αλος ECM δεν καταχωρεί αυτόματα τον αντίστοιχο κωδικό ID στον εγκέ&#248;αλο εκκίνησης χωρίς κλειδί ακόμη και εάν γυρίσετε το διακόπτη ανά&#248;λεξης στη θέση ON.
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40AA324032002">
+<title>
+Κατάσταση Ανίχνευσης και Περιοχή Προβλήματος
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Συνθήκη ανίχνευσης κωδικού DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Περιοχή Προβλήματος
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Ο εγκέ&#248;αλος ECM ανιχνεύει δια&#248;ορετικούς κωδικούς ID να έχουν καταχωρηθεί στον εγκέ&#248;αλο ECM και στον εγκέ&#248;αλο εκκίνησης χωρίς κλειδί.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κύκλωμα καλωδίωσης εγκε&#248;άλου εκκίνησης χωρίς κλειδί
+</ptxt>
+</item>
+<item>
+<ptxt>
+Εγκέ&#248;αλος εκκίνησης χωρίς κλειδί
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40AA324032003">
+<title>
+Διάγνωση βλαβών
+</title>
+<diag type = "test" id = "K8T40AA324032004">
+<testgroup>
+<question>
+Εκτελέστηκε ο &#34;Έλεγχος συστήματος immobilizer&#34;;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40AA324001">Έλεγχος Συστήματος Ελέγχου Ακινητοποίησης Κινητήρα (Immobilizer):Μοντέλο με Πετρελαιοκινητήρα</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Καταχώρηση εγκε&#248;άλου ECM
+</title>
+<test1>
+<ptxt>
+Καταχωρήστε τον εγκέ&#248;αλο ECM στον εγκέ&#248;αλο immobilizer ανατρέχοντας στο 
+<intxref refid = "K8T40AA326003">Διαδικασία μετά την Αντικατάσταση του ECM:Μοντέλο με Πετρελαιοκινητήρα</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ολοκληρώθηκε η καταχώρηση του εγκε&#248;άλου ECM στον εγκέ&#248;αλο immobilizer; 
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Ελέγξτε πάλι για κωδικό DTC τον εγκέ&#248;αλο ECM.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος Κωδικού DTC για τον ECM
+</title>
+<test1>
+<ptxt>
+Ελέγξτε τον εγκέ&#248;αλο ECM για DTC ανατρέχοντας στο 
+<intxref refid = "K8T40AA324002">Έλεγχος Κωδικού DTC:Μοντέλο με Πετρελαιοκινητήρα</intxref>
+</ptxt>
+</test1>
+<question>
+Ανιχνεύονται οι κωδικοί βλαβών B1716 ή&#x002F;και B1718, εκτός από τον κωδικό Β1717;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στην αντιμετώπιση του κωδικού βλάβης Β1716.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στην αντιμετώπιση του κωδικού βλάβης Β1718.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

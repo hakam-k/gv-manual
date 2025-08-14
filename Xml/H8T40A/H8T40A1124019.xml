@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124019" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0111
+</title>
+<servinfosub id = "H8T40A1124019001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.417in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.787in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P0111: Beszívott levegő hőmérséklet-érzékelő 1. sz. áramkör tartománya működése
+</emph>
+</ptxt>
+<ptxt>
+Az IAT-érzékelő jeláramkör kimeneti feszültsége nem változik, amennyiben a motor indítástól számított idő nagyobb, mint 10 perc.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+IAT-érzékelő és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124019002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124073">DTC P0101:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124019003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Közúti próba végzéséhez olyan helyet válasszon, ahol nincs forgalom, illetve nem áll fenn a közúti baleset veszélye. A próbát a balesetek elkerülése érdekében igen óvatosan végezze.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A közúti próbát vízszintes úton két személy végezze, a vezető és a vizsgálatot végző személy.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ha más DTC is észlelhető mielőtt azonosítaná a DTC-t a megerősítési eljárással, végezze el az észlelt DTC hibakeresését először.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Győződjön meg arról, hogy az alábbi feltételek teljesülnek-e, amikor ezt az eljárást alkalmazza.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+ECT &gt; 70 &#176;C (158 &#176;F)
+</ptxt>
+</item>
+</list2>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Indítsa be a motort, és melegítse fel normál működési hőmérsékletre.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Vezesse a járművet 60 &#8211; 100 km&#x002F;h (37 &#8211; 62 mérföld&#x002F;h) sebességgel 10 percig.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124019004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124019005">
+<testgroup id = "H8T40A1124019006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124019007">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t.
+</ptxt>
+</test1>
+<question>
+Található a P0111-en kívül más DTC is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC-kkel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124019008">
+<title>
+IAT-érzékelő jeláramkör és testáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja KI a gyújtáskapcsolót, és csatlakoztassa le a MAF- és IAT-érzékelő és az ECM csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása a MAF és az IAT-érzékelőnél és az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a csatlakozások megfelelőek, ellenőrizze, hogy az IAT-érzékelő jeláramkör (B1) és a testáramkör (B2) megfelel-e az alábbiaknak.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az IAT-érzékelő jeláramkörének és testáramkörének kábelköteg ellenállása kevesebb, mint 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az IAT-érzékelő jeláramkörének szigetelési ellenállása végtelen a MAF- és az IAT-érzékelő csatlakozója és a karosszéria testelése között.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása az IAT-érzékelő jeláramkör érintkezője és a MAF- és IAT-érzékelő csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása az IAT-érzékelő testáramkör érintkezője és a MAF- és IAT-érzékelő csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az egyes IAT-érzékelők jeláramköre és a testáramköre közötti áramköri feszültség a gyújtáskapcsoló bekapcsolt helyzetében 0 &#8211; 1 V.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124019009">
+<title>
+IAT-érzékelő ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az IAT-érzékelőt. 
+<intxreftitleoff1 refid = "H8T40A1326022"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a MAF- és IAT-érzékelőt.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40AA324031" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1716: Σ&#248;άλμα επικοινωνίας CAN του εγκε&#248;άλου εκκίνησης χωρίς κλειδί
+</title>
+<attention3>
+<ptxt>
+Εάν ανιχνευτεί κωδικός DTC που σχετίζεται με αστοχία CAN από τον εγκέ&#248;αλο ECM και BCM, τελέστε πρώτα το αντίστοιχο διάγραμμα ροής κωδικών DTC.
+</ptxt>
+</attention3>
+<servinfosub id = "K8T40AA324031001">
+<title>
+Ηλεκτρικό Διάγραμμα
+</title>
+<ptxt>
+Ανατρέξτε στο 
+<intxref refid = "K8T40AA322001">Ηλεκτρικό Διάγραμμα Συστήματος Ελέγχου Immobilizer:Μοντέλο με Πετρελαιοκινητήρα</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40AA324031002">
+<title>
+Κατάσταση Ανίχνευσης και Περιοχή Προβλήματος
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Συνθήκη ανίχνευσης κωδικού DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Περιοχή Προβλήματος
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Σ&#248;άλμα λήψης των δεδομένων επικοινωνίας για τον εγκέ&#248;αλο εκκίνησης χωρίς κλειδί ανιχνεύεται για χρόνο μεγαλύτερο του καθορισμένου συνεχώς.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κύκλωμα επικοινωνίας CAN
+</ptxt>
+</item>
+<item>
+<ptxt>
+Αισθητήρας γωνίας στρο&#248;ής (μοντέλο με ESP&#174;)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Μονάδα ελέγχου 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+Εγκέ&#248;αλος εκκίνησης χωρίς κλειδί (εάν διατίθεται)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Εγκέ&#248;αλος ABS &#x002F; ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πίνακας οργάνων
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40AA324031003">
+<title>
+Διάγνωση βλαβών
+</title>
+<diag type = "test" id = "K8T40AA324031004">
+<testgroup>
+<question>
+Εκτελέστηκε ο &#34;Έλεγχος συστήματος immobilizer&#34;;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40AA324001">Έλεγχος Συστήματος Ελέγχου Ακινητοποίησης Κινητήρα (Immobilizer):Μοντέλο με Πετρελαιοκινητήρα</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος Κωδικού DTC για τον ECM
+</title>
+<question>
+Ανιχνεύτηκε κωδικός DTC άλλος εκτός από τον B1716;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο ισχύον διάγραμμα ροής του Κωδικού DTC.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος &#248;ίσας εγκε&#248;άλου
+</title>
+<test1>
+<ptxt>
+Με το διακόπτη ανά&#248;λεξης στη θέση OFF, ελέγξτε για διακοπτόμενη και κακή σύνδεση της κάθε μίας &#248;ίσας που ανα&#248;έρεται παρακάτω, ανατρέχοντας στο 
+<intxref refid = "K8T40A0006002">Επιθεώρηση Διακοπτόμενης και Κακής Σύνδεσης</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Εγκέ&#248;αλος ABS &#x002F; ESP&#174;
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Εγκέ&#248;αλος εκκίνησης χωρίς κλειδί
+</ptxt>
+</item>
+<item>
+<ptxt>
+Πίνακας οργάνων
+</ptxt>
+</item>
+<item>
+<ptxt>
+Μονάδα ελέγχου 4WD
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Είναι όλες οι &#248;ίσες σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 4.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε το τμήμα που δυσλειτουργεί και ελέγξτε ξανά.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ελέγξτε το κύκλωμα επικοινωνίας CAN
+</title>
+<test1>
+<ptxt>
+Ελέγξτε για ανοικτό κύκλωμα, βραχυκύκλωμα και υψηλή αντίσταση στο κύκλωμα επικοινωνίας CAN μεταξύ του εγκε&#248;άλου ECM και του εγκε&#248;άλου εκκίνησης χωρίς κλειδί.
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση το καθένα κύκλωμα επικοινωνίας CAN;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 5.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε το κύκλωμα.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ελέγξτε τα κυκλώματα καλωδίων τρο&#248;οδοσίας και γείωσης του εγκε&#248;άλου εκκίνησης χωρίς κλειδί
+</title>
+<test1>
+<ptxt>
+Ελέγξτε το κύκλωμα τρο&#248;οδοσίας και γείωσης του εγκε&#248;άλου εκκίνησης χωρίς κλειδί ανατρέχοντας στο 
+<intxref refid = "K8T40AA504015">Έλεγχος Κυκλώματος Τρο&#248;οδοσίας και Γείωσης Μονάδας Ελέγχου Συστήματος Εκκίνησης Χωρίς Κλειδί</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Είναι κανονικοί;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε έναν εγκέ&#248;αλο εκκίνησης χωρίς κλειδί που γνωρίζετε ότι λειτουργεί καλά και ελέγξτε πάλι.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε το ελαττωματικό κύκλωμα του καλωδίου.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

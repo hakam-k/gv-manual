@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "S6JB0B1101003" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+On-Board Diagnostic System Description
+</title>
+<ptxt>
+ECM in this vehicle has the following functions.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When the ignition switch is turned ON with the engine at a stop, MIL (1) turns ON to check the malfunction indicator lamp (MIL) (1) and its circuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When ECM detects a malfunction which gives an adverse effect to vehicle emission while the engine is running, it makes the malfunction indicator lamp in the meter cluster of the instrument panel turn ON or flash (flashing only when detecting a misfire which can cause damage to the catalyst) and stores the malfunction area (DTC according to SAE J2012) in its memory.
+</ptxt>
+<ptxt>
+(If it detects that continuously 3 driving cycles are normal after detecting a malfunction, however, it makes MIL turn OFF although DTC stored in its memory will remain.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+As a condition for detecting a malfunction in some areas in the system being monitored by ECM and turning ON the malfunction indicator lamp due to that malfunction, 2 driving cycle detection logic is adopted to prevent erroneous detection.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When a malfunction is detected, engine and driving conditions then are stored in ECM memory as freeze frame data. (For the details, refer to description on Freeze frame data.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+It is possible to communicate via DLC (data link connector) (2) by using not only SUZUKI scan tool (3) but also OBD generic scan tool.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I5JB0C110019.swf" width = "88.000mm" height = "107.247mm" ver = "02" gw = "192" gh = "287"/>
+</figure>
+<servinfosub id = "S6JB0B1101003001">
+<title>
+Warm-Up Cycle
+</title>
+<ptxt>
+A warm-up cycle means sufficient vehicle operation such that the coolant temperature has risen by at least 22 &#176;C (40 &#176;F) from engine starting and reaches a minimum temperature of 70 &#176;C (160 &#176;F).
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1101003002">
+<title>
+Driving Cycle
+</title>
+<ptxt>
+A &#8220;Driving Cycle&#8221; consists of engine startup driving mode where a malfunction would be detected if present and next engine startup.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1101003003">
+<title>
+2 Driving Cycle Detection Logic
+</title>
+<ptxt>
+The malfunction detected in the first driving cycle is stored in ECM memory (in the form of pending DTC and freeze frame data) but the malfunction indicator lamp does not light at this time. It lights up at the second detection of same malfunction also in the next driving cycle.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1101003004">
+<title>
+Pending DTC
+</title>
+<ptxt>
+Pending DTC means a DTC detected and stored temporarily at 1 driving cycle of the DTC which is detected in the 2 driving cycle detection logic.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1101003005" page = "2">
+<title>
+Freeze Frame Data
+</title>
+<ptxt>
+ECM stores the engine and driving conditions (in the form of data as shown) at the moment of the detection of a malfunction in its memory. This data is called &#8220;Freeze frame data&#8221;.
+</ptxt>
+<ptxt>
+Therefore, it is possible to know engine and driving conditions (e.g., whether the engine was warm or not, where the vehicle was running or stopped, where air&#x002F;fuel mixture was lean or rich) when a malfunction was detected by checking the freeze frame data. Also, ECM has a function to store each freeze frame data for three different malfunctions in the order as the malfunction is detected. Utilizing this function, it is possible to know the order of malfunctions that have been detected. Its use is helpful when rechecking or diagnosing a trouble.
+</ptxt>
+<figure>
+<title>
+An example of freeze frame data
+</title>
+<graphic graphicname = "I5JA01112021.swf" width = "88.000mm" height = "104.072mm" ver = "01" gw = "176" gh = "278"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+1st, 2nd or 3rd in parentheses here represents which position in the order the malfunction is detected.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<topic id = "S6JB0B1101003006" page = "1">
+<title>
+Priority of freeze frame data
+</title>
+<ptxt>
+ECM has 4 frames where the freeze frame data can be stored. The first frame stores the freeze frame data of the malfunction which was detected first. However, the freeze frame data stored in this frame is updated according to the priority described below. (If malfunction as described in the upper square &#8220;1&#8221; below is detected while the freeze frame data in the lower square &#8220;2&#8221; has been stored, the freeze frame data &#8220;2&#8221; will be updated by the freeze frame data &#8220;1&#8221;.)
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.286in"/>
+<colspec colnum = "2" colname = "2" colwidth = "5.918in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Priority
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Freeze frame data in frame 1
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+Freeze frame data at initial detection of malfunction among misfire detected (P0300 &#8211; P0306), fuel system too lean (P0171, P0174) and fuel system too rich (P0172, P0175)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+Freeze frame data when a malfunction other than those in &#8220;1&#8221; above is detected.
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<ptxt>
+In the 2nd through the 4th frames, the freeze frame data of each malfunction is stored in the order as the malfunction is detected. These data are not updated.
+</ptxt>
+<ptxt>
+Shown in the table below are examples of how freeze frame data are stored when two or more malfunctions are detected.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.229in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.647in"/>
+<colspec colnum = "3" colname = "3" colwidth = "1.205in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.358in"/>
+<colspec colnum = "5" colname = "5" colwidth = "1.400in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.365in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top">
+<ptxt>
+Frame
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Frame 1
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Frame 2
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Frame 3
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Frame 4
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry namest = "1" nameend = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Malfunction detection order
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Freeze frame data
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+1st freeze frame data
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+2nd freeze frame data
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+3rd freeze frame data
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+No malfunction detected
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+2
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+P0401 (Pending DTC)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0401 data
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0401 data
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+3
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+No malfunction detected
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0401 data
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0401 data
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+4
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+No malfunction detected
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+5
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+P0111 (Pending DTC)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0111 data
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0111 data
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+6
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+P0111
+</ptxt>
+<ptxt>
+P0401 (Pending DTC)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0111 data
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0111 data
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0401 data
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+7
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+P0300 (Pending DTC)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0300 data
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0111 data
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0401 data
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0300 data
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+8
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "left">
+<ptxt>
+P0300
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0300 data
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0111 data
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+P0300 data
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+&#8212;
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<ptxt>
+&#8212;: No freeze frame data
+</ptxt>
+</topic>
+<topic id = "S6JB0B1101003007">
+<title>
+Freeze frame data clearance
+</title>
+<ptxt>
+The freeze frame data is cleared at the same time as clearance of DTC or Pending DTC.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "S6JB0B1101003008">
+<title>
+DLC (Data Link Connector)
+</title>
+<ptxt>
+DLC (1) is in compliance with SAE J1962 in the shape of connector and pin assignment.
+</ptxt>
+<ptxt>
+OBD serial data line (K line of ISO 9141) (3) is used for SUZUKI scan tool or OBD generic scan tool to communicate with ECM, SDM, BCM, TCM (A&#x002F;T model), 4WD control module (if equipped) and ABS &#x002F; ESP&#174; control module.
+</ptxt>
+<figure>
+<graphic graphicname = "I5JB0C110020.swf" width = "88.000mm" height = "91.372mm" ver = "02" gw = "164" gh = "242"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.150in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+B &#x002B; (Unswitched vehicle battery positive)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+ECM ground (Signal ground)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Vehicle body ground (Chassis ground)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

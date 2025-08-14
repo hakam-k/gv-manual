@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40AA204011" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1157 (Αρ. 1157): Εισαγωγή Σήματος Ενεργοποίησης Αερόσακου
+</title>
+<servinfosub id = "K8T40AA204011001">
+<title>
+Ηλεκτρικό Διάγραμμα
+</title>
+<ptxt>
+Ανατρέξτε στο 
+<intxref refid = "K8T40AA204010">DTC B1150 (Αρ. 1150): Δυσλειτουργία Κυκλώματος Επικοινωνίας Αερόσακων</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40AA204011002">
+<title>
+Κατάσταση Ανίχνευσης Κωδικού Βλάβης και Πιθανή Αιτία
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.643in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.560in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Συνθήκη ανίχνευσης κωδικού
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Πιθανή αιτία
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Σήμα &#248;ουσκώματος αερόσακου τρο&#248;οδοτείται από το SDM προς το BCM.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Εξαρτήματα αερόσακων
+</ptxt>
+</item>
+<item>
+<ptxt>
+Δυσλειτουργία BCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40AA204011003">
+<title>
+Περιγρα&#248;ή Ροής Ελέγχου
+</title>
+<ptxt>
+<emph etype = "bold">
+Βήμα 1: Ελέγξτε για κωδικό βλάβης του SDM.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40AA204011004">
+<title>
+Διάγνωση Κωδικού DTC
+</title>
+<diag type = "test" id = "K8T40AA204011005">
+<testgroup id = "K8T40AA204011006">
+<title>
+Έλεγχος DTC του SDM
+</title>
+<test1>
+<ptxt>
+Ελέγξτε τους κωδικούς βλάβης DTC που είναι αποθηκευμένοι στο SDM ανατρέχοντας στο 
+<intxref refid = "K8T40A8204004">Έλεγχος Κωδικού DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Ανιχνεύεται ο Κωδικός DTC B1021;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40A8204014">DTC B1021: Ενεργοποιημένη μονάδα αερόσακου</intxref>
+.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40AA204011007">
+<title>
+Έλεγχος DTC του BCM
+</title>
+<test1>
+<ptxt>
+Διαγράψτε τον Κωδικό DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε πάλι το BCM για Κωδικό DTC.
+</ptxt>
+</test1>
+<question>
+Ανιχνεύεται ο Κωδικός DTC B1157;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα BCM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Ο αερόσακος έχει &#248;ουσκώσει στο παρελθόν. (Ο κωδικός DTC δεν έχει διαγρα&#248;εί)
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

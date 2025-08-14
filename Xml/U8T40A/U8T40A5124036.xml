@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A5124036" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0974 &#x002F; P0977 &#x002F; P0986: Hoge spanning in het regelcircuit van schakelsolenoïde &#34;A&#34; &#x002F; hoge spanning in het regelcircuit van schakelsolenoïde &#34;B&#34; &#x002F; hoge spanning in het regelcircuit van schakelsolenoïde &#34;E&#34;
+</title>
+<servinfosub id = "U8T40A5124036001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A5124035">DTC P0973 &#x002F; P0976 &#x002F; P0985: Lage spanning in het regelcircuit van schakelsolenoïde &#34;A&#34; &#x002F; lage spanning in het regelcircuit van schakelsolenoïde &#34;B&#34; &#x002F; lage spanning in het regelcircuit van schakelsolenoïde &#34;E&#34;:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A5124036002">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+De spanning op de TCM-aansluiting van de schakelsolenoïdeklep is hoog hoewel de TCM de schakelsolenoïde het bevel geeft om uit te schakelen.
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Het circuit van de schakelsolenoïdeklep is onderbroken of kortgesloten aan het voedingscircuit.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Storing in de schakelsolenoïdeklep.
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A5124036003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kies voor een proefrit een verkeersvrije plaats waar geen gevaar voor verkeersongevallen is, en wees uiterst voorzichtig tijdens de proefrit om ongevallen te vermijden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De proefrit moet worden uitgevoerd op een vlakke weg door 2 personen, een bestuurder en iemand die de proef uitvoert.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Wis de DTC&apos;s in het TCM- en ECM-geheugen met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start de motor en schakel de keuzehendel in de &#34;D&#34;-stand.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start het voertuig en verhoog de rijsnelheid tot 60 km&#x002F;h (37 mile&#x002F;h) in de &#34;D&#34;-stand.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Blijf gedurende 20 seconden met die snelheid rijden en verminder de rijsnelheid daarna geleidelijk.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop het voertuig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer de DTC, voorlopige DTC en freeze-framegegevens.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A5124036004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A5124036005">
+<testgroup>
+<question>
+Werd de &#34;A&#x002F;T-systeemcontrole&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A5124001">Controle van het A&#x002F;T-systeem:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controleer het circuit van de schakelsolenoïdeklep op een kortsluiting aan de voeding
+</title>
+<test1>
+<ptxt>
+Maak de TCM-stekkerverbindingen los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of aansluiting &#34;E92-16&#34; (voor schakelsolenoïdeklep-A), &#34;E92-15&#34; (voor schakelsolenoïdeklep-B) of &#34;E92-14&#34; (voor schakelsolenoïdeklep-E) goed met de TCM verbonden is.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien de verbinding in orde is, zet dan het contactslot op ON en meet de spanning tussen aansluiting &#34;E92-16&#34; (voor schakelsolenoïdeklep-A), &#34;E92-15&#34; (voor schakelsolenoïdeklep-B) of &#34;E92-14&#34; (voor schakelsolenoïdeklep-E) van de losgemaakte TCM-stekker aan de bedradingsbundelzijde en de massa.
+</ptxt>
+</test1>
+<question>
+Is de spanning 0 - 2 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Het regelcircuit van schakelsolenoïdeklep-A, -B of -E is kortgesloten aan het voedingscircuit.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controleer of het circuit van de schakelsolenoïdeklep onderbroken is
+</title>
+<test1>
+<ptxt>
+Controleer de continuïteit tussen aansluiting &#34;E92-16&#34; (voor schakelsolenoïdeklep-A), &#34;E92-15&#34; (voor schakelsolenoïdeklep-B) of &#34;E92-14&#34; (voor schakelsolenoïdeklep-E) van de losgemaakte TCM-stekker aan de bedradingsbundelzijde en de massa.
+</ptxt>
+</test1>
+<question>
+Is deze oneindig?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Het circuit van schakelsolenoïdeklep-A, -B of -E is onderbroken.
+</ptxt>
+<ptxt>
+Ga naar stap 4 als het circuit in orde is.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controleer de schakelsolenoïdeklep
+</title>
+<test1>
+<ptxt>
+Controleer de solenoïdeklep volgens 
+<intxref refid = "U8T40A5126021">Onderzoek van solenoïdekleppen (schakelsolenoïde-A, schakelsolenoïde-B, schakelsolenoïde-E, TCC-drukregelsolenoïde, drukregelsolenoïde-A, drukregelsolenoïde-B en drukregelsolenoïde-C):5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sporadische storing of defect in TCM. Controleer op sporadische storingen volgens 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+. Indien OK, sluit dan een goed bevonden TCM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de defecte schakelsolenoïdeklep volgens 
+<intxref refid = "U8T40A5126020">Uitbouw en inbouw van solenoïdekleppen (schakelsolenoïde-A, schakelsolenoïde-B, schakelsolenoïde-E, TCC-drukregelsolenoïde, drukregelsolenoïde-A, drukregelsolenoïde-B en drukregelsolenoïde-C):5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

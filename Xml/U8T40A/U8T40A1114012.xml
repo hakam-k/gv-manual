@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Het storingsindicatorlampje blijft branden nadat de motor is gestart
+</title>
+<servinfosub id = "U8T40A1114012001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1114011">Het storingsindicatorlampje licht niet op met contactslot op ON en de motor uitgeschakeld (maar de motor kan wel worden gestart):M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114012002">
+<title>
+Beschrijving van het circuit
+</title>
+<ptxt>
+Wanneer het contactslot op ON wordt gezet, schakelt de ECM het hoofdrelais aan (contactpunt wordt gesloten). De ECM staat dan onder stroom en stuurt een ON-signaal voor het storingsindicatorlampje (MIL) naar de combimeter om het lampje te laten oplichten. De combimeter schakelt dan de MIL aan. Wanneer de motor begint te draaien en er geen defect in het systeem wordt waargenomen, stuurt de ECM een OFF signaal voor de MIL naar de combimeter om het lampje te doven. De combimeter schakelt de MIL dan uit maar wanneer er een defect werd of wordt gedetecteerd, blijft het branden terwijl de motor draait.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114012003">
+<title>
+Storingzoeken
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Lees zeker 
+<intxref refid = "U8T40A1110004">Voorzorgsmaatregelen voor onderzoek ECM-circuit:M16A and J20A</intxref>
+ voor het storingzoeken.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sluit volgens 
+<intxref refid = "U8T40A1114080">Onderzoek van de ECM en de bijbehorende circuits:M16A and J20A</intxref>
+ het speciaal gereedschap aan op de ECM en&#x002F;of ECM-stekkerverbindingen om de circuitspanning, de weerstand en&#x002F;of het impulssignaal te meten van een ECM-stekker.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "U8T40A1114012004">
+<testgroup id = "U8T40A1114012005">
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Start de motor en controleer opnieuw de ECM en TCM (voor A&#x002F;T-model) op DTC&apos;s terwijl de motor draait.
+</ptxt>
+</test1>
+<question>
+Zijn er DTC&apos;s?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2 van 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+, stap 2 van 
+<intxref refid = "U8T40A5114001">Controle van het A&#x002F;T-systeem:4 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114012006">
+<title>
+Controle van het CAN-gegevenstransmissielijncircuit
+</title>
+<test1>
+<ptxt>
+Controleer het circuit van de CAN-gegevenstransmissielijn tussen de combimeter en de ECM, TCM (voor A&#x002F;T-model), het ABS &#x002F; ESP&#174;-regelapparaat, 4WD-regelapparaat (indien uitgerust) en het regelapparaat van het startsysteem met afstandsbediening (indien uitgerust) volgens stap 9 tot 15 
+<intxref refid = "U8T40A1114064">DTC P1674: CAN-communicatie (&#34;bus uit&#34;-fout):M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is het circuit in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden combimeter aan en controleer opnieuw. Sluit een goed bevonden ECM aan en controleer opnieuw als de MIL blijft branden.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het CAN-communicatiecircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

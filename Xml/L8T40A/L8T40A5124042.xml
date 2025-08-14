@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A5124042" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1878: Vibrazione frizione convertitore di coppia
+</title>
+<servinfosub id = "L8T40A5124042001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.842in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.362in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La funzione di controllo slittamento in accelerazione si arresta quando la variazione nella velocità di uscita è dell&apos;ampiezza specificata e il ciclo specificato viene rilevato entro un periodo di tempo specificato. Quando non viene rilevata la variazione specificata dopo l&apos;arresto del controllo slittamento.
+</ptxt>
+<ptxt>
+(logica di rilevamento 20 ciclo di guida ma la MIL (modello E-OBD) o la spia di attenzione della trasmissione (modello non-E-OBD ) non si illumina)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ATF non corrispondente
+</ptxt>
+</item>
+<item>
+<ptxt>
+Guasto frizione del gruppo convertitore di coppia
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A5124042002">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Resettare i DTC nella memoria TCM e ECM usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Guidare il veicolo in 4a o 5a marcia nel rapporto &#8220;D&#8221; e attivare (ON) il blocco controllato per 20 secondi o più facendo riferimento alla &#8220;Tabella dei rapporti del cambio automatico&#8221; in 
+<intxref refid = "L8T40A5124010">Prova su strada:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fermare il veicolo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllo DTC, DTC in attesa e dati freeze-frame.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A5124042003">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A5124042004">
+<testgroup>
+<question>
+È stato effettuato il &#8220;controllo del sistema A&#x002F;T&#8221;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A5124001">Controllo sistema A&#x002F;T:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Cambiare il liquido A&#x002F;T facendo riferimento a 
+<intxref refid = "L8T40A5126003">Cambio liquido A&#x002F;T:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare il DTC dopo aver eseguito 
+<intxref refid = "L8T40A5124042002">Procedura di conferma DTC</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il DTC P1878 viene ancora indicato?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Frizione del convertitore di coppia difettoso. Sostituire il convertitore di coppia.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il sistema è in buone condizioni.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

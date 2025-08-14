@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10E">
+<servcat sctnbr = "10" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "U8T40AA501004" svcinfotypenbr = "03" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Beschrijving van de portiervergrendelingsfunctie van het startsysteem met afstandsbediening
+</title>
+<ptxt>
+Als de regelschakelaar (1) in de kruk aan de buitenzijde van het bestuurders- of passagiersportier of de achterklep wordt ingedrukt, activeert het regelapparaat van het startsysteem met afstandsbediening (2) de middenantenne (3) en de bagageruimte-antenne (4) om een radiogolf in de voertuigruimte uit te zenden en zo te controleren of de afstandsbediening (5) zich al dan niet in de voertuigruimte bevindt. Als het regelapparaat van het startsysteem met afstandsbediening geen signaal ontvangt van de afstandsbediening (d.w.z. de afstandsbediening is niet aanwezig in de voertuigruimte), activeert het de antenne (6) van het portier waar de regelschakelaar is ingedrukt om het verzoeksignaal uit de ruimte te zenden. Als de afstandsbediening binnen het werkingsgebied van de portiervergrendeling zit, ontvangt hij het verzoeksignaal van bovengenoemde antenne, stuurt de ID-code van de afstandsbediening en het verzoeksignaal naar het regelapparaat van het startsysteem met afstandsbediening en laat tegelijkertijd het werkingscontrolelichtje (7) van de afstandsbediening oplichten. Het werkingscontrolelichtje duidt aan dat de afstandsbediening de ID-code en het verzoeksignaal heeft verzonden.
+</ptxt>
+<ptxt>
+Het regelapparaat van het startsysteem met afstandsbediening vergelijkt de ID-code die is verzonden door de afstandsbediening met de ID-code in het keyless start-regelapparaat. Als de ID-codes met elkaar overeenkomen, stuurt het regelapparaat van het startsysteem met afstandsbediening een verzoeksignaal voor vergrendeling of ontgrendeling (afhankelijk van de status die de portiervergrendelingsschakelaar (8) dan heeft) uit naar de BCM (9). Als de BCM dat signaal via CAN-communicatie van het regelapparaat van het startsysteem met afstandsbediening ontvangt, activeert hij de portiervergrendelingsstelmotor om de portieren te vergrendelen of ontgrendelen.
+</ptxt>
+<ptxt>
+Als het regelapparaat van het startsysteem met afstandsbediening een signaal ontvangt van de afstandsbediening (d.w.z. de afstandsbediening is aanwezig in de voertuigruimte), voorkomt het regelapparaat dat het voertuig wordt afgesloten met de afstandsbediening erin. Het stuurt een verzoeksignaal naar de BCM om de portieren te ontgrendelen. Op deze manier blijven de portieren ontgrendeld.
+</ptxt>
+<ptxt>
+Als de bestuurder of passagier het voertuig heeft verlaten en de afstandbediening heeft achtergelaten in de voertuigruimte en de portieren heeft vergrendeld met de portiervergrendelingsknop of de schakelaar van de handmatige portiervergrendeling, ontgrendelt de functie om te voorkomen dat de afstandsbediening in het afgesloten voertuig achterblijft de portieren.
+</ptxt>
+<figure>
+<graphic graphicname = "I6JB0AA50003.swf" width = "183.000mm" height = "115.009mm" ver = "01" gw = "431" gh = "309"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.326in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.076in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.326in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.076in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.326in"/>
+<colspec colnum = "6" colname = "6" colwidth = "2.076in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Signaalstroom
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;B&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+5-deursmodel
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;C&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+3-deursmodel
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+<ptxt>
+Als de ID-codes van de afstandsbediening en het regelapparaat van het startsysteem met afstandsbediening niet met elkaar overeenkomen of als de afstandsbediening zich buiten het werkingsgebied bevindt, worden de portieren niet vergrendeld of ontgrendeld, zelfs als de regelschakelaar van de kruk aan de buitenzijde wordt bediend.
+</ptxt>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

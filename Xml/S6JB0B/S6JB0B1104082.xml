@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B1104082" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC U0121: Lost Communication with Electronic Stability Program &#x002F; ABS Control Module
+</title>
+<servinfosub id = "S6JB0B1104082001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B1104080">DTC U0073: Control Module Communication Bus Off</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1104082002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Reception error of communication data for ABS or ESP&#174; control module is detected for longer than specified time continuously.
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN communication circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combination meter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Keyless start control module (if equipped)
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD control module (if equipped)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS or ESP&#174; control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM (A&#x002F;T model)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Steering angle sensor (ESP&#174; model)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B1104082003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Clear DTC referring to &#8220;DTC Clearance&#8221; in this section.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and run it for 1 min. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC referring to &#8220;DTC Check&#8221;.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B1104082004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S6JB0B1100003">Precautions for DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S6JB0B1104082005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Connect scan tool to DLC with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for all control modules (ECM, TCM (A&#x002F;T model), BCM, ABS or ESP&#174; control module, 4WD control module (if equipped), keyless start control module (if equipped), combination meter, steering angle sensor (ESP&#174; model)) for DTC(s) other than CAN communication DTCs.
+</ptxt>
+</test1>
+<question>
+Is there any DTC(s) other than CAN communication DTC(s) at each control module (other than DTC U0073, U0100, U0101, U0121, U0140, U1073, U1100, U1101, U1121, U1126, U1139, U1140, U1144)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check
+</title>
+<question>
+Is DTC U0121 and U0073 detected together?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B1104080">DTC U0073: Control Module Communication Bus Off</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM and ABS or ESP&#174; control module connector check
+</title>
+<test1>
+<ptxt>
+Check for proper connection at each ECM and ABS or ESP&#174; control module connector terminals with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, recheck ECM for DTC with engine running.
+</ptxt>
+</test1>
+<question>
+Is there DTC U0121?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Intermittent trouble. Check for intermittent referring to 
+<intxref refid = "S6JB0B0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM power and ground circuit check
+</title>
+<test1>
+<ptxt>
+Check ECM power and ground circuits referring to 
+<intxref refid = "S6JB0B1104085">ECM Power and Ground Circuit Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair ECM power and&#x002F;or ground circuits.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check in ABS or ESP&#174; control module
+</title>
+<test1>
+<ptxt>
+Check DTC U1073 in ABS or ESP&#174; control module.
+</ptxt>
+</test1>
+<question>
+Is it indicated?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B4504019">DTC U1073: Control Module Communication Bus Off</intxref>
+ or 
+<intxref refid = "S6JB0B4604020">DTC U1073: Control Module Communication Bus Off</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from ABS or ESP&#174; control module and ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication circuit is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuit resistance of CAN communication circuit is less than 1 &#937; between ECM connector and ABS or ESP&#174; control module connector.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+ECM circuit check
+</title>
+<test1>
+<ptxt>
+Connect connector to ABS or ESP&#174; control module with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance at following connector terminals.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;WHT&#x002F;BLU&#8221; and &#8220;WHT&#8221; terminals of ABS or ESP&#174; control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;WHT&#x002F;RED&#8221; and &#8220;RED&#8221; terminals of ABS or ESP&#174; control module connector.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is resistance below 1 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+CAN communication circuit wire between ABS or ESP&#174; control module and ECM connector is open or high resistance.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ABS or ESP&#174; control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check in ECM
+</title>
+<test1>
+<ptxt>
+Connect connectors to ABS or ESP&#174; control module and ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connector from BCM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check ECM for DTC(s).
+</ptxt>
+</test1>
+<question>
+Is there DTC U0121?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN communication circuit wire between BCM and CAN circuit junction connector is open or high resistance. If wires are OK, check BCM power and ground circuits. If circuits are OK, substitute a known-good BCM and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check in ECM
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from TCM (A&#x002F;T model) with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check ECM for DTC.
+</ptxt>
+</test1>
+<question>
+Is there DTC U0121?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 11.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN communication circuit wire between TCM and CAN circuit junction connector is open or high resistance. If wires are OK, check TCM power and ground circuits. If circuits are OK, substitute a known-good TCM and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check in ECM
+</title>
+<test1>
+<ptxt>
+Disconnect connector from keyless start control module (if equipped) with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check ECM for DTC.
+</ptxt>
+</test1>
+<question>
+Is there DTC U0121?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 12.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN communication circuit wire between keyless start control module and CAN circuit junction connector is open or high resistance. If wires are OK, check keyless start control module power and ground circuits. If circuits are OK, substitute a known-good keyless start control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check in ECM
+</title>
+<test1>
+<ptxt>
+Disconnect connector from combination meter with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check ECM for DTC.
+</ptxt>
+</test1>
+<question>
+Is there DTC U0121?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 13.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN communication circuit wire between combination meter and CAN circuit junction connector is open or high resistance. If wires are OK, check combination meter power and ground circuits. If circuits are OK, substitute a known-good combination meter and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check in ECM
+</title>
+<test1>
+<ptxt>
+Disconnect connector from 4WD control module (if equipped) with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check ECM for DTC.
+</ptxt>
+</test1>
+<question>
+Is there DTC U0121?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 14.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN communication circuit wire between 4WD control module and CAN circuit junction connector is open or high resistance. If wires are OK, check 4WD control module power and ground circuits. If circuits are OK, substitute a known-good 4WD control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from steering angle sensor (ESP&#174; model) with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check ECM for DTC.
+</ptxt>
+</test1>
+<question>
+Is there DTC U0121?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 15.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+CAN communication circuit wire between steering angle sensor and CAN circuit junction connector is open or high resistance. If wires are OK, check steering angle sensor power and ground circuits. If circuits are OK, substitute a known-good steering angle sensor and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from all control modules (ECM, TCM (A&#x002F;T model), BCM, ABS or ESP&#174; control module, 4WD control module (if equipped), keyless start control module (if equipped), combination meter, steering angle sensor (ESP&#174; model)) with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check that CAN communication circuit is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ALL wire harness resistance of CAN communication circuit is less than 1 &#937; between each control module.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between CAN communication circuit wires is infinity at each control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between each CAN communication circuit wire and vehicle body ground is infinity at each control module connector.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of CAN communication circuit is 0 V with ignition switch turned ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 16.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Warning light check
+</title>
+<test1>
+<ptxt>
+Connect connectors to all control modules communicating by CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch ON.
+</ptxt>
+</test1>
+<question>
+Is ABS or ESP&#174; warning light light up?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ABS or ESP&#174; control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

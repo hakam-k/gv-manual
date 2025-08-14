@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124041" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0481
+</title>
+<servinfosub id = "H8T40A1124041001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.290in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.913in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+P0481: 2. ventilátor vezérlőáramkör
+</emph>
+</ptxt>
+<ptxt>
+Ez a DTC akkor jelenik meg, ha teljesül a következő feltételek valamelyike.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A 2. sz. hűtőventilátor relé vezérlőáramkör feszültsége magas szinten van (OFF) 5 másodpercig, még akkor is, ha a hűtőventilátor parancsjele magas szinten van.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A 2. sz. hűtőventilátor relé vezérlőáramkör feszültsége alacsony szinten van (ON) 5 másodpercig, még akkor is, ha a hűtőventilátor parancsjele NEM magas szinten van.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(1 D&#x002F;C észlelési logika, de a MIL nem gyullad fel)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Hűtőventilátor motor 2. sz. relé (tekercs oldali) és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124041002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124040">DTC P0480:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124041003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Indítsa be a motort, és melegítse fel normál működési hőmérsékletre.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Tartsa a motor alapjáraton, amíg a hűtőfolyadék hőmérséklet el nem éri legalább a 104 &#176;C (219,2 &#176;F) hőmérsékletet.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124041004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124041005">
+<testgroup id = "H8T40A1124041006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124041007">
+<title>
+A hűtőventilátor 2.sz. relé tápáramkörének (tekercs oldali) ellenőrzése
+</title>
+<test1>
+<ptxt>
+Miközben a gyújtáskapcsoló OFF helyzetben van, vegye ki a 2. sz. hűtőventilátor relét.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az érintkezők megfelelő csatlakozását a hűtőventilátor relé 2. sz. csatlakozójánál.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a csatlakozások megfelelőek, ellenőrizze, hogy a feszültség a hűtőventilátor 2. sz. relé áramellátó áramköre (tekercs oldali) (A2) és a karosszéria testelése között akkumulátorfeszültség, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124041008">
+<title>
+Hűtőventilátor relé ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a hűtőventilátor 2.sz. relét. 
+<intxreftitleoff1 refid = "H8T40A1626021"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a 2. sz. hűtőventilátor relét.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124041009">
+<title>
+Hűtőventilátor 2. sz. relé parancsáramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a hűtőventilátor 2. sz. relé parancsáramkörét (B2) az alábbiak szerint.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A hűtőventilátor 2. sz. relé parancsáramkör vezetékkötegének ellenállása kisebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A hűtőventilátor 2. sz. relé parancsáramkör és a karosszériatest közötti szigetelési ellenállás végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása a hűtőventilátor 2. sz. parancsáramkör érintkezője és a hűtőventilátor relé 2. sz. csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A hűtőventilátor 2. sz. relé parancsáramkör áramköri feszültsége 0 &#8211; 1 V a gyújtáskapcsoló bekapcsolt helyzetében.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

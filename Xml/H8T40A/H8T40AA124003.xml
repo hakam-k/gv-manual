@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10A">
+<servcat sctnbr = "10" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40AA124003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Sebességstabilizáló rendszer ellenőrzése
+</title>
+<diag type = "test" id = "H8T40AA124003001">
+<testgroup>
+<test1>
+<ptxt>
+Részletesen jegyezze fel a problémát. A feljegyzések elkészítése során a kérdőív használata megkönnyíti a megfelelő felméréshez és diagnózishoz szükséges információk összegyűjtését.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a következő probléma ténylegesen jelentkezik-e a járművön: 
+<intxref refid = "H8T40AA124004">Ügyfél kérdőív (minta):J24B és N32A modellek</intxref>
+. (Ezt a lépést lehetőleg az ügyféllel közösen hajtsa végre.)
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze az ECM, az ABS &#x002F; ESP&#174; vezérlőmodul, a 4WD vezérlőmodul (motorosan kapcsolható típusú 4WD modell) és a TCM (A&#x002F;T modell) DTC-jét, és jegyezze fel a DTC-ket.
+</ptxt>
+</test1>
+<question>
+Van más a sebességstabilizáló rendszerrel nem kapcsolatos DTC (más mint P0504 és P0575 DTC)?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Lépjen a vonatkozó DTC-diagnosztikai folyamattáblázathoz.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Van DTC a sebességstabilizáló vezérlőrendszerben?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Végezze el az ellenőrzést és a javítást, lásd: 
+<intxref refid = "H8T40AA124007">DTC-táblázat:J24B és N32A modellek</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Elvégezte az ellenőrzést és a javítást?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Ellenőrizze és javítsa ki a hibás alkatrészt (alkatrészeket), majd folytassa a 6. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ellenőrizze és javítsa meg az alapvető alkatrészeket, lásd: 
+<intxref refid = "H8T40AA124008">Sebességstabilizáló rendszer hibajelenségeinek diagnosztizálása:J24B és N32A modellek</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Talált hibát?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Ellenőrizze vagy javítsa meg a hibás alkatrészt (alkatrészeket), majd folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ellenőrizze az időszakos hibákat, lásd: 
+<intxref refid = "H8T40A0006002">Áramkimaradás és rossz csatlakozások ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Talált hibát?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Ellenőrizze vagy javítsa meg a hibás alkatrészt (alkatrészeket), majd folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a hibajelenség megszűnt-e és a sebességstabilizáló vezérlőrendszer minden tekintetben normálisan működik-e. Ha az, amit kijavított, a DTC-vel állt kapcsolatban, törölje a DTC-t, majd győződjön meg arról, hogy jelentkezik-e ismét DTC.
+</ptxt>
+</test1>
+<question>
+Talált hibajelenséget, DTC-t vagy rendellenes állapotot?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Menjen az 1. lépés 2) pontjára, és újból végezze el a hibakeresést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Vége.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

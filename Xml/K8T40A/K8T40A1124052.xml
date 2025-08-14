@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40A1124052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119
+</title>
+<servinfosub id = "K8T40A1124052001">
+<title>
+Κατάσταση Ανίχνευσης Κωδικού Βλάβης και  Περιοχή Προβλήματος
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Συνθήκη ανίχνευσης κωδικού
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Περιοχή Προβλήματος
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2119: Σύστημα Ελέγχου Ενεργοποιητή Πεταλούδας - Κολλημένο Ανοικτό
+</emph>
+</ptxt>
+<ptxt>
+Η δια&#248;ορά μεταξή του στόχου TP και της μέτρησης TP είναι μεγαλύτερη από την προσδιορισμένη τιμή. 
+</ptxt>
+<ptxt>
+(λογική ανίχνευσης 1 D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Μοτέρ πεταλούδας ή και το κύκλωμά του
+</ptxt>
+</item>
+<item>
+<ptxt>
+Κύκλωμα αισθητήρα ΤΡ (κύριος)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Συγκρότημα σώματος πεταλούδας 
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "K8T40A1124052002">
+<title>
+Ηλεκτρικό Διάγραμμα
+</title>
+<ptxt>
+Ανατρέξτε στο 
+<intxref refid = "K8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40A1124052003">
+<title>
+Διαδικασία Επιβεβαίωσης Κωδικού Βλάβης DTC
+</title>
+<attention3>
+<ptxt>
+Εάν DTC άλλο από το σκοπούμενο DTC εντοπιστεί στην διαδικασία επιβεβαίωσης DTC, βεβαιωθείτε να εκτελέσετε την διαδικασία εντοπισμού προβλήματος DTC που εντοπίστηκε προηγουμένως.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Ξεκινήστε τον κινητήρα και ζεστάνετε τον μέχρι να έλθει σε κανονική θερμοκρασία λειτουργίας.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Λειτουργήστε τον κινητήρα για 20 sec. στο ρελαντί.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Λειτουργήστε τον κινητήρα στις 3.000 rpm για 20 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Επαναλάβατε τα Βήματα 2) έως 3) για 3 &#248;ορές.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "K8T40A1124052004">
+<title>
+Διάγνωση Κωδικού DTC
+</title>
+<diag type = "test" id = "K8T40A1124052005">
+<testgroup id = "K8T40A1124052006">
+<question>
+Έγινε &#34;Έλεγχος του Κινητήρα και του Συστήματος Ελέγχου Εκπομπής Ρύπων&#34;;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40A1124001">Έλεγχος του Κινητήρα και του Συστήματος Ελέγχου Εκπομπής Ρύπων:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1124052007">
+<title>
+Έλεγχος Κωδικού Βλάβης DTC
+</title>
+<test1>
+<ptxt>
+Ελέγξτε για κωδικό βλάβης.
+</ptxt>
+</test1>
+<question>
+Υπάρχει οποιαδήποτε άλλα DTC εκτός από το P2119;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στον αντίστοιχο Κωδικό (-ους) DTC.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1124052008">
+<title>
+Έλεγχος κυκλώματος τρο&#248;οδοσίας ρεύματος μοτέρ πεταλούδας
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης σε θέση OFF και αποσυνδέστε τους συνδέσμους από τον εγκέ&#248;αλο ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε για σωστή σύνδεση ακροδέκτη τα &#248;ις του εγκε&#248;άλου ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Εάν οι συνδέσεις είναι ΟΚ, γυρίστε τον διακόπτη ανά&#248;λεξης στη θέση ΟΝ.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε ότι το κύκλωμα τρο&#248;οδοσίας ρεύματος (A4) του μοτέρ πεταλούδας έχει τάση μπαταρίας.
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 4.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε ή αντικαταστήστε την ελαττωματική ηλεκτρική καλωδίωση.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1124052009">
+<title>
+Έλεγχος κυκλώματος ενεργοποίησης μοτέρ πεταλούδας
+</title>
+<test1>
+<ptxt>
+Γυρίστε το διακόπτη ανά&#248;λεξης σε θέση OFF και αποσυνδέστε το σύνδεσμο από το συγκρότημα σώματος πεταλούδας.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε για σωστή σύνδεση ακροδέκτη το &#248;ις του συγκροτήματος του σώματος της ηλεκτρικής πεταλούδας γκαζιού.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Εάν η σύνδεση είναι ΟΚ, ελέγξτε ότι το κύκλωμα (B1 - B2) ενεργοποίησης (ανοίγματος και κλεισίματος) του μοτέρ της πεταλούδας είναι όπως παρακάτω.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Η αντίσταση της ηλεκτρικής καλωδίωσης του καθενός κυκλώματος ενεργοποίησης του μοτέρ της πεταλούδας είναι μικρότερη από 3 Ω.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η αντίσταση της μόνωσης του κάθε κυκλώματος ενεργοποίησης του μοτέρ της πεταλούδας είναι άπειρη μεταξύ του &#248;ις του συγκροτήματος του σώματος της πεταλούδας γκαζιού και της γείωσης του αμαξώματος του αυτοκινήτου.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η αντίσταση της μόνωσης της ηλεκτρικής καλωδίωσης είναι άπειρη μεταξύ του κάθε ακροδέκτη του κυκλώματος ενεργοποίησης του μοτέρ της πεταλούδας και του κάθε ακροδέκτη στο &#248;ις του συγκροτήματος της ηλεκτρικής πεταλούδας γκαζιού.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η τάση κυκλώματος του κάθε κυκλώματος ενεργοποίησης μποτέρ πεταλούδας είναι 0 - 1 V με τον διακόπτη ανά&#248;λεξης στη θέση ΟΝ.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 5.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε ή αντικαταστήστε την ελαττωματική ηλεκτρική καλωδίωση.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1124052010">
+<title>
+Έλεγχος κυκλώματος του σήματος αισθητήρα ΤΡ (κύριος)
+</title>
+<test1>
+<ptxt>
+Ελέγξτε ότι το κύκλωμα (C2) του σήματος του αισθητήρα TP (κύριος) είναι όπως παρακάτω.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Η αντίσταση της ηλεκτρικής καλωδίωσης του κυκλώματος του σήματος του αισθητήρα ΤΡ (κύριος) είναι μικρότερη από 3 Ω.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η αντίσταση της μόνωσης του κυκλώματος του σήματος του αισθητήρα ΤΡ (κύριος) είναι άπειρη μεταξύ του συγκροτήματος του &#248;ις σώματος της ηλεκτρικής πεταλούδας γκαζιού και της γείωσης του αμαξώματος του αυτοκινήτου.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η αντίσταση της μόνωσης της ηλεκτρικής καλωδίωσης είναι άπειρη μεταξύ του ακροδέκτη τρο&#248;οδοσίας ρεύματος του αισθητήρα ΤΡ (κύριος) και του κάθε ακροδέκτη στο &#248;ις του συγκροτήματος του σώματος της ηλεκτρικής πεταλούδας γκαζιού.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η τάση κυκλώματος του κυκλώματος του σήματος του αισθητήρα ΤΡ (κύριος) είναι 0 - 1 V με τον διακόπτη ανά&#248;λεξης γυρισμένο ΟΝ.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 6.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Επισκευάστε ή αντικαταστήστε την ελαττωματική ηλεκτρική καλωδίωση.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A1124052011">
+<title>
+Έλεγχος του σώματος της πεταλούδας γκαζιού
+</title>
+<test1>
+<ptxt>
+Ελέγξτε τη λειτουργία και την κατάσταση του σώματος της ηλεκτρικής πεταλούδας γκαζιού. 
+<intxreftitleoff1 refid = "K8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Είναι σε καλή κατάσταση;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα ECM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Αντικαταστήστε το συγκρότημα σώματος της πεταλούδας γκαζιού.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124092" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2008 
+</title>
+<servinfosub id = "H8T40A1124092001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.168in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.879in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P2008: Szívócső kapcsolás vezérlés áramkör&#x002F;nyitva
+</emph>
+</ptxt>
+<ptxt>
+Ez a DTC akkor jelenik meg, ha teljesül a következő feltételek valamelyike.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az IMRC szelepmotor vezérlőáramkör monitor feszültsége kisebb, mint a meghatározott érték 5 alkalommal.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az IMRC szelepmotor vezérlőáramkör elektromos áramerőssége nagyobb, mint 6,5 A 5 alkalommal.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+IMRC szelepmotor és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124092002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124091">DTC P2004 &#x002F; P2006:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124092003">
+<title>
+DTC megerősítési eljárás 
+</title>
+<attention3>
+<ptxt>
+Győződjön meg arról, hogy az alábbi feltételek teljesülnek-e, amikor ezt az eljárást alkalmazza.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+0 &#176;C (32 &#176;F) &lt; ECT a motor indulásakor &lt; 50 &#176;C (122 &#176;F)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Járassa a motort alapjáraton 20 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Járassa a motort 3500 ford&#x002F;perc fordulatszámon 20 másodpercig.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124092004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124092005">
+<testgroup id = "H8T40A1124092006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124092007">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t.
+</ptxt>
+</test1>
+<question>
+Található a P2008-on kívül más DTC is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC-kkel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124092008">
+<title>
+IMRC szelepmotor vezérlőáramkör (nyitva) és az IMRC szelepmotor vezérlőáramkör (zárva) ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az IMRC szelepmotor vezérlőáramkört (nyitva) és az IMRC szelepmotor vezérlőáramkört (zárva), lásd: 
+<intxref refid = "H8T40A1124091">DTC P2004 &#x002F; P2006:J24B</intxref>
+, 3. lépés.
+</ptxt>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124092009">
+<title>
+IMRC szelepmotor ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az IMRC szelepmotort. 
+<intxreftitleoff1 refid = "H8T40A1326033"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki az IMRC szelepet. 
+<intxreftitleoff1 refid = "H8T40A1436008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

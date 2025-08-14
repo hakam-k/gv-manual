@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A1114071" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2111: Throttle Actuator Control System - Stuck Open
+</title>
+<servinfosub id = "S6JB0A1114071001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Throttle valve default opening is greater than 7&#176; from complementary closed position when diagnosing throttle valve at ignition switch turned OFF.
+</ptxt>
+<ptxt>
+(1 driving detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Electric throttle body assembly
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0A1114071002">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool. 
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ignition switch turned OFF for 20 sec. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and check DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0A1114071003">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S6JB0A1110003">Precautions for DTC Troubleshooting:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S6JB0A1114071004">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0A1114001">Engine and Emission Control System Check:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle valve visual check
+</title>
+<test1>
+<ptxt>
+Check that there isn&#8217;t any foreign matter caught between throttle valve and throttle body housing referring to &#8220;Throttle Valve Visual Check&#8221; under 
+<intxref refid = "S6JB0A1316003">Electric Throttle Body Assembly On-Vehicle Inspection:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Take it out after removing throttle body and clean inside of throttle body thoroughly.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle valve operation check 
+</title>
+<test1>
+<ptxt>
+Check operation of throttle valve referring to &#8220;Throttle Valve Operation Check&#8221; under 
+<intxref refid = "S6JB0A1316003">Electric Throttle Body Assembly On-Vehicle Inspection:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace electric throttle body assembly.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle actuator (motor) check
+</title>
+<test1>
+<ptxt>
+Check operation of throttle actuator referring to &#8220;Throttle Actuator (Motor) Check&#8221; under 
+<intxref refid = "S6JB0A1316003">Electric Throttle Body Assembly On-Vehicle Inspection:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace electric throttle body assembly.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle position sensor performance check
+</title>
+<test1>
+<ptxt>
+Check performance of throttle position sensor referring to &#8220;Throttle Position Sensor Performance Check&#8221; under 
+<intxref refid = "S6JB0A1316003">Electric Throttle Body Assembly On-Vehicle Inspection:For Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace electric throttle body assembly.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

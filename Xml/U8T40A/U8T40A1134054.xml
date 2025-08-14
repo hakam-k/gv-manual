@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1134054" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2127 &#x002F; P2128
+</title>
+<servinfosub id = "U8T40A1134054001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.194in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2127: Lage ingangsspanning in het circuit van de gasklep-&#x002F;pedaalpositiesensor&#x002F;-schakelaar &#34;E&#34;
+</emph>
+</ptxt>
+<ptxt>
+Spanning van (secundair) APP-sensorsignaalcircuit is lager dan 0,60 V.
+</ptxt>
+<ptxt>
+(Opsporingslogica over 1 rijcycli)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+APP-sensor (sub) en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2128: Hoge spanning in het circuit van de gasklep-&#x002F;pedaalpositiesensor&#x002F;-schakelaar &#34;E&#34;
+</emph>
+</ptxt>
+<ptxt>
+Spanning van (secundair) APP-sensorsignaalcircuit is hoger dan 4,82 V.
+</ptxt>
+<ptxt>
+(Opsporingslogica over 1 rijcycli)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1134054002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1134053">DTC P2122 &#x002F; P2123:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1134054003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention3>
+<ptxt>
+Zorg dat bij deze procedure aan de volgende voorwaarden is voldaan.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Accuspanning &gt; 7 V
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Start de motor.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Druk het gaspedaal volledig in en laat het vervolgens los.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 2) drie keer.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1134054004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1134054005">
+<testgroup id = "U8T40A1134054006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1134001">Controle van het motor- en emissieregelsysteem:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134054007">
+<title>
+Controle van de gaspedaalbevestiging (geïntegreerd met APP-sensor)
+</title>
+<test1>
+<ptxt>
+Controleer of het gaspedaalsamenstel (geïntegreerd met de APP-sensor) goed op de carrosserie is gemonteerd (vloerbedekking niet geklemd, enz.).
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Monteer het gaspedaal correct terug (geïntegreerd met de APP-sensor). 
+<intxreftitleoff1 refid = "U8T40A1336007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134054008">
+<title>
+Controle voedingscircuit van de APP-sensor (sub)
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbinding los van het gaspedaalsamenstel (geïntegreerd met de APP-sensor).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen juist op de stekker van het gaspedaal (geïntegreerd met de APP-sensor) zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON als alle verbindingen in orde zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de spanning tussen het voedingscircuit (B1) van de APP-sensor (sub) en de carrosseriemassa 5 V is.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134054009">
+<title>
+Controle voedingscircuit van de APP-sensor (sub)
+</title>
+<test1>
+<ptxt>
+Controleer of de spanning tussen het voedingscircuit (B1) van de APP-sensor (sub) en het massacircuit (B3) 5 V is.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+<ptxt>
+Ga naar Stap 8 wanneer deze DTC nog steeds wordt waargenomen.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134054010">
+<title>
+Controle voedingscircuit van de APP-sensor (sub)
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen van de ECM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de ECM-stekkerverbindingen zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer, als de verbindingen in orde zijn, of het voedingscircuit (B1) van de APP-sensor (secundair) aan het volgende voldoet.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van het APP-sensorvoedingscircuit (secundair) is minder dan 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van het APP-sensorvoedingscircuit (sub) tussen de stekker van het gaspedaal (geïntegreerd met de APP-sensor) en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de voedingscircuitaansluitklem van de APP-sensor (secundair) en andere aansluitklemmen op de stekkerverbinding van de APP-sensor is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De voedingscircuitspanning van de APP-sensor (sub) is 0 - 1 V met het contactslot op ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 8.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134054011">
+<title>
+Controle APP-sensorsignaalcircuit (sub)
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen van de ECM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de ECM-stekkerverbindingen zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Als de verbindingen in orde zijn, controleer dan of het signaalcircuit (B2) van de APP-sensor aan het volgende voldoet.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van het APP-sensorsignaalcircuit (secundair) is minder dan 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van het signaalcircuit van de APP-sensor (sub) tussen de stekker van het gaspedaal (geïntegreerd met de APP-sensor) en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de signaalcircuitaansluitklem van de APP-sensor (sub) en andere aansluitklemmen op de stekkerverbinding van het gaspedaalsamenstel (geïntegreerd met de APP-sensor) is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuitspanning van het APP-sensorsignaalcircuit (sub) is 0 - 1 V met het contactslot op ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 7.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134054012">
+<title>
+Controle APP-sensor
+</title>
+<test1>
+<ptxt>
+Controleer de APP-sensor. 
+<intxreftitleoff1 refid = "U8T40A1336006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 8.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het gaspedaalsamenstel (geïntegreerd met de APP-sensor).
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134054013">
+<title>
+Storingzoeken voor andere DTC&apos;s die tegelijk worden waargenomen
+</title>
+<question>
+Worden er tegelijkertijd andere DTC&apos;s waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar storingzoeken voor de betrokken DTC.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

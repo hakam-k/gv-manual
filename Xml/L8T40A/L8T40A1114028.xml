@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1114028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0117: Circuito basso temperatura refrigerante motore
+</title>
+<servinfosub id = "L8T40A1114028001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1114027">DTC P0116: Circuito temperatura refrigerante motore Range &#x002F; Rendimento:M16A e J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1114028002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.110in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.090in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La tensione di uscita del sensore ECT e inferiore a 0,2 V per 0,5 sec.
+</ptxt>
+<ptxt>
+(Alta temperatura refrigerante motore (tensione bassa &#x002F; resistenza bassa))
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 1)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito del sensore ECT
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore ECT
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1114028003">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e cancellare il DTC usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e lasciarlo acceso per 10 sec o piu.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllare DTC e DTC in corso.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1114028004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<attention3>
+<ptxt>
+Prima di eseguire questa procedura di individuazione guasto, leggere le precauzioni per l&#8217;individuazione DTC facendo riferimento a 
+<intxref refid = "L8T40A1110003">Precauzione per la risoluzione dei problemi DTC:M16A e J20A</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "L8T40A1114028005">
+<testgroup id = "L8T40A1114028006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1114001">Verifica del sistema di controllo motore e emissioni:M16A e J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114028007">
+<title>
+Controllo del sensore ECT e del suo circuito.
+</title>
+<test1>
+<ptxt>
+Collegare lo scanner con l&#8217;interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la temp. del refrigerante motore sullo scanner.
+</ptxt>
+</test1>
+<question>
+E indicato 130 &#176;C (266 &#176;F)?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Guasto intermittente.
+</ptxt>
+<ptxt>
+Controllare intermittenze facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114028008">
+<title>
+Controllo della tensione ECM.
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori dal sensore ECT con l&#8217;interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare che la connessione al sensore ECT sia corretta sui terminali &#8220;PPL&#x002F;YEL&#8221; e &#8220;GRY&#x002F;GRN&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se e OK, accendere l&#8217;interruttore di accensione (ON), misurare la tensione tra il terminale &#8220;PPL&#x002F;YEL&#8221; del connettore del sensore ECT e la massa della carrozzeria.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I5JB0A110040.swf" width = "90.000mm" height = "33.220mm" ver = "01" gw = "109" gh = "77"/>
+</testfigure>
+</test1>
+<question>
+La tensione e circa 4 &#8211; 6 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114028009">
+<title>
+Controllo corto circuito sensore ECT
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori dal modulo ECM controllando che il commutatore di avviamento sia in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra i terminali &#8220;PPL&#x002F;YEL&#8221; del connettore del sensore ECT e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La resistenza e infinita?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Corto a massa sul filo &#8220;PPL&#x002F;YEL&#8221;.
+</ptxt>
+<ptxt>
+Se i cavi sono OK, sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114028010">
+<title>
+Controllo corto circuito sensore ECT
+</title>
+<test1>
+<ptxt>
+Portare il commutatore di accensione in posizione ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la tensione tra i terminali &#8220;PPL&#x002F;YEL&#8221; del connettore del sensore ECT e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La tensione e circa 0 V?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Il filo &#8220;PPL&#x002F;YEL&#8221; e in corto sull&apos;altro circuito.
+</ptxt>
+<ptxt>
+Se i cavi sono OK, sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1114028011">
+<title>
+Controllo rendimento sensore ECT
+</title>
+<test1>
+<ptxt>
+Controllare il sensore ECT facendo riferimento a 
+<intxref refid = "L8T40A1316009">Ispezione del sensore temperatura del liquido di raffreddamento (ECT):M16A e J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il sensore ECT.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

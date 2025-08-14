@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A4504009" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+ABS Warning Light Comes ON Steady
+</title>
+<servinfosub id = "S8T40A4504009001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A4504008">ABS Warning Light Does Not Come ON at Ignition Switch ON</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A4504009002">
+<title>
+Circuit Description
+</title>
+<ptxt>
+Operation (ON&#x002F;OFF) of ABS warning light is controlled by ABS (ESP&#174;) control module through light driver module in combination meter.
+</ptxt>
+<ptxt>
+If the Antilock brake system is in good condition, ABS (ESP&#174;) control module turns ABS warning light ON at the ignition switch ON, keeps it ON for 2 seconds and then turns it OFF. If an abnormality in the system is detected, ABS warning light is turned ON continuously by ABS (ESP&#174;) control module. Also, it is turned ON continuously by light driver module when the connector of ABS (ESP&#174;) control module is disconnected.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A4504009003">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A4504009004">
+<testgroup id = "S8T40A4504009005">
+<test1>
+<ptxt>
+Perform diagnostic trouble code check.
+</ptxt>
+</test1>
+<question>
+Is there any DTC(s)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A4504009006">
+<question>
+Are main fuses for ABS pump motor and ABS solenoid in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace fuse and check circuit for short to ground.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A4504009007">
+<test1>
+<ptxt>
+Turn ignition switch to OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect ABS (ESP&#174;) control module connector.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to ABS (ESP&#174;) control module connector at terminals &#8220;E03-7&#8221;, &#8220;E03-13&#8221; and &#8220;E03-26&#8221; (or &#8220;E53-16&#8221;, &#8220;E53-39&#8221; and &#8220;E53-47&#8221;).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK then turn ignition switch to ON position and measure voltage between terminal &#8220;E03-7&#8221; (or &#8220;E53-39&#8221;) and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is it 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;GRN&#x002F;ORN&#8221; circuit open.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A4504009008">
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to ABS (ESP&#174;) control module connector at terminals &#8220;E03-1&#8221; and &#8220;E03-14&#8221; (or &#8220;E53-1&#8221; and &#8220;E53-32&#8221;).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If OK then turn ignition switch to ON position and measure voltage between each terminal of &#8220;E03-1&#8221;, &#8220;E03-14&#8221; (or &#8220;E53-1&#8221;, &#8220;E53-32&#8221;) and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Are they 10 &#8211; 14 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;WHT&#x002F;RED&#8221; and&#x002F;or &#8220;WHT&#x002F;BLU&#8221; circuit open.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A4504009009">
+<test1>
+<ptxt>
+Turn ignition switch to OFF and measure resistance between each terminal of &#8220;E03-13&#8221;, &#8220;E03-26&#8221; (or &#8220;E-53-16&#8221;, &#8220;E53-47&#8221;) and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is resistance less than 2 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Ground circuit for ABS (ESP&#174;) hydraulic unit &#x002F; control module open or high resistance.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A4504009010">
+<ptxt>
+Check CAN communication circuit between combination meter and ABS (ESP&#174;) control module. 
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+M16A and J20B model: 
+<intxreftitleoff1 refid = "S8T40AA814002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+J24B and N32A model: 
+<intxreftitleoff1 refid = "S8T40AA824002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+F9Q model: 
+<intxreftitleoff1 refid = "S8T40AA834002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+<question>
+Is CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good combination meter and recheck. If ABS warning light remains ON, substitute a known-good ABS (ESP&#174;) hydraulic unit &#x002F; control module assembly and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

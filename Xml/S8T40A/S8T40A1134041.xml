@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1134041" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0481
+</title>
+<servinfosub id = "S8T40A1134041001">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.290in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.913in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P0481: Fan 2 Control Circuit
+</emph>
+</ptxt>
+<ptxt>
+Radiator cooling fan relay No.2 drive circuit malfunction is detected.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C detection logic but MIL does not light up)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Radiator cooling for relay No.2 (coil side) and&#x002F;or its circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1134041002">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S8T40A1134040">DTC P0480:N32A</intxref>
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1134041003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+Run engine at idle for 1 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S8T40A1134041004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S8T40A1134041005">
+<testgroup id = "S8T40A1134041006">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1134001">Engine and Emission Control System Check:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134041007">
+<title>
+Radiator cooling fan relay No.2 power supply circuit (switch side) check
+</title>
+<test1>
+<ptxt>
+With ignition switch turned OFF, remove radiator cooling fan relay, No.2.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to cooling fan relay No.2 connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that radiator cooling fan relay No.2 power supply circuit (coil side) (C1) is battery voltage with ignition switch turned ON.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134041008">
+<title>
+Radiator cooling fan relay No.2 check
+</title>
+<test1>
+<ptxt>
+Check radiator cooling fan relay No.2. 
+<intxreftitleoff1 refid = "S8T40A1636010"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace radiator cooling fan relay No.2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134041009">
+<title>
+Radiator cooling fan relay No.2 drive circuit check
+</title>
+<test1>
+<ptxt>
+With ignition switch turned OFF, disconnect connectors from ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that radiator cooling fan relay No.2 drive circuits (C3) is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of radiator cooling fan relay No.2 drive circuits is less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between radiator cooling fan relay No.2 drive circuits and vehicle body ground is infinity.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between radiator cooling fan No.2 drive circuit terminal and other terminal at radiator cooling fan relay No.2 connectors.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of radiator cooling fan relay No.2 drive circuits is 0 &#8211; 1 V with ignition switch turned ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1134041010">
+<title>
+Troubleshooting of other DTC(s) detected at the same time
+</title>
+<question>
+Is other DTC(s) detected together?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to troubleshooting for applicable DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

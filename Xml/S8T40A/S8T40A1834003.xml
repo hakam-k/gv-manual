@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1H">
+<servcat sctnbr = "01" scnbr = "08">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1834003" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Ignition System Check
+</title>
+<diag type = "test" id = "S8T40A1834003001">
+<testgroup id = "S8T40A1834003002">
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Go to 
+<intxref refid = "S8T40A1134001">Engine and Emission Control System Check:N32A</intxref>
+. 
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1834003003">
+<title>
+Ignition spark test 1
+</title>
+<test1>
+<ptxt>
+Perform ignition spark test. 
+<intxreftitleoff1 refid = "S8T40A1834004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is test result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1834003004">
+<title>
+Ignition timing check
+</title>
+<test1>
+<ptxt>
+Check ignition timing. 
+<intxreftitleoff1 refid = "S8T40A1836005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is check result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Ignition system is in good condition.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace malfunction part. 
+<intxreftitleoff1 refid = "S8T40A1836005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1834003005">
+<title>
+Confirmation of malfunction-detected cylinder
+</title>
+<test1>
+<ptxt>
+Confirm any cylinder which shows malfunction in ignition spark test.
+</ptxt>
+</test1>
+<question>
+Are there malfunctions in all cylinders?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1834003006">
+<title>
+Ignition spark test 2
+</title>
+<test1>
+<ptxt>
+Replace spark plug in malfunction-detected cylinder one with spark plug of normal cylinder.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Perform ignition spark test on spark plug installed in malfunction-detected cylinder. 
+<intxreftitleoff1 refid = "S8T40A1834004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is test result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace spark plug in malfunction-detected cylinder. 
+<intxreftitleoff1 refid = "S8T40A1836001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1834003007">
+<title>
+Ignition spark test 3
+</title>
+<test1>
+<ptxt>
+Replace ignition coil assembly of malfunction-detected cylinder with an ignition coil assembly of normal cylinder.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Perform ignition spark test on spark plug in malfunction-detected cylinder. 
+<intxreftitleoff1 refid = "S8T40A1834004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is test result satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace ignition coil in malfunction-detected cylinder. 
+<intxreftitleoff1 refid = "S8T40A1836003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1834003008">
+<title>
+Ignition coil assembly power supply and ground circuit check
+</title>
+<test1>
+<ptxt>
+Check ignition coil power supply circuit (A1 &#8211; A6) and ignition coil ground signal circuit (C1 &#8211; C6) of ignition coil assembly for open, short and poor connection.
+</ptxt>
+</test1>
+<question>
+Are circuits in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace malfunctioning part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1834003009">
+<title>
+Ignition coil assembly control circuits check
+</title>
+<test1>
+<ptxt>
+Check ignition coil control circuit (B1 &#8211; B6) for open, short circuit and poor connection.
+</ptxt>
+</test1>
+<question>
+Are circuits in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace malfunctioning part.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "S8T40A1834003010">
+<title>
+CKP sensor and CMP sensor check
+</title>
+<test1>
+<ptxt>
+Check CKP sensor and CMP sensor.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+CKP sensor: 
+<intxreftitleoff1 refid = "S8T40A1336017"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+CMP sensor: 
+<intxreftitleoff1 refid = "S8T40A1336015"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are check results satisfactory?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace CKP sensor or CMP sensor.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

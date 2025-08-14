@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "H6JB0A1111005" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "1" supplyoff = "1" modify = "0">
+<title>
+CAN kommunikációs rendszer leírása
+</title>
+<ptxt>
+Jelen járműben az ECM (1), az ABS &#x002F; ESP&#174; vezérlőmodul egység (2), a TCM (A&#x002F;T modellek esetén) (3), a BCM (4), a 4WD vezérlő modul (5), a műszeregység (6) és a kulcsnélküli indítás vezérlőmodulja (ha van) (7) és a kormányelfordulásiszög-érzékelő (ESP&#174; esetén) elektronikusan továbbítja a vezérlési adatokat mindegyik vezérlőmodul között.
+</ptxt>
+<ptxt>
+Valamennyi vezérlőmodul kommunikációját a CAN (helyi hálózatvezérlő) kommunikációs rendszer látja el.
+</ptxt>
+<figure>
+<graphic graphicname = "I6JB01110110.swf" width = "183.000mm" height = "73.733mm" ver = "02" gw = "291" gh = "192"/>
+</figure>
+<p-change/>
+<ptxt>
+A CAN kommunikációs rendszer soros kommunikációt használ, amelyen keresztül az adatok nagy sebességgel kerülnek továbbításra. A nagysebességű adatátvitelhez két sodrott érpárú kommunikációs vezetéket használnak. Egyik jellemzője, hogy egyszerre több vezérlőegység tud kommunikálni egymással. Ezenkívül egy olyan funkcióval is rendelkezik, hogy automatikusan észleli a kommunikációs hibákat. Mindegyik modul kiolvassa a szükséges adatokat a fogadott adatok közül, és adatokat is továbbít. Az ECM a vezérlési adatokat kommunikálja mindegyik vezérlőmodullal a következők szerint.
+</ptxt>
+<servinfosub id = "H6JB0A1111005001">
+<title>
+ECM adatátviteli adatok
+</title>
+<figure>
+<graphic graphicname = "I6JB0A111004H.swf" width = "183.000mm" height = "150.286mm" ver = "01" gw = "449" gh = "409"/>
+</figure>
+<attention3>
+<ptxt>
+Az ECM és a műszeregység, az ECM és a kulcsnélküli indításvezérlő modul (ha van), valamint az ECM és a 4WD vezérlőmodul közötti kommunikáció során az adatok csak az ECM-től az előbbi vezérlőmodulok felé kerülnek továbbításra. (A műszeregység, a kulcsnélküli indításvezérlő modul és a 4WD vezérlőmodul nem továbbít adatokat az ECM-nek.)
+</ptxt>
+</attention3>
+</servinfosub>
+<p-change/>
+<servinfosub id = "H6JB0A1111005002">
+<title>
+ECM által fogadott adatok
+</title>
+<figure>
+<graphic graphicname = "I6JB0A111005H.swf" width = "183.000mm" height = "100.192mm" ver = "01" gw = "412" gh = "267"/>
+</figure>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

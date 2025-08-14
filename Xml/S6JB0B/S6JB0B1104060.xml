@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B1104060" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "1">
+<title>
+DTC P2103: Throttle Actuator Control Motor Circuit High
+</title>
+<servinfosub id = "S6JB0B1104060001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B1104058">DTC P2101: Throttle Actuator Control Motor Circuit Range &#x002F; Performance</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1104060002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+Power supply current of throttle actuator control circuit is higher than specification for more than 0.5 sec.
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Throttle actuator control circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Electric throttle body assembly
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B1104060003">
+<title>
+DTC Confirmation Procedure
+</title>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC by using scan tool if any.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Keep ignition switch is at ON position for 5 seconds or longer.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC by using scan tool.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B1104060004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S6JB0B1100003">Precautions for DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+</servinfosub>
+<diag type = "test" id = "S6JB0B1104060005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Throttle actuator circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from electric throttle body assembly and ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to electric throttle body assembly and ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that throttle actuator motor circuit is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of each throttle actuator motor drive circuit (1 and 2) is less than 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between each throttle actuator motor drive circuit (1 and 2) and vehicle body ground is Infinity
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance of wire harness is infinity between throttle actuator motor drive terminal (1) and each other terminal at electric throttle body connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuit voltage of each throttle actuator motor drive circuit (1 and 2) is 0 &#8211; 1 V with ignition switch turned ON.
+</ptxt>
+<testfigure>
+<graphic graphicname = "I6JB01110058.swf" width = "88.000mm" height = "38.456mm" ver = "01" gw = "170" gh = "92"/>
+</testfigure>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace throttle actuator motor drive circuit(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Electric throttle body assembly check
+</title>
+<test1>
+<ptxt>
+Check electric throttle body for performance referring to 
+<intxref refid = "S6JB0B1306004">Electric Throttle Body Assembly On-Vehicle Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace electric throttle body assembly.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

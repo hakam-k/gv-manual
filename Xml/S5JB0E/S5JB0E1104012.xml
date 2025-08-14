@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0E1104012" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Malfunction Indicator Lamp Remains ON after Engine Starts
+</title>
+<servinfosub id = "S5JB0E1104012001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0E1104011">Malfunction Indicator Lamp Does Not Come ON with Ignition Switch ON and Engine Stop (but Engine Can Be Started)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0E1104012002">
+<title>
+Circuit Description
+</title>
+<ptxt>
+When the ignition switch is turned ON, ECM causes the main relay to turn ON (close the contact point). Then, ECM being supplied with the main power, transmits indication ON signal of malfunction indicator lamp (MIL) to combination meter in order to turn MIL ON. And then, combination meter turns MIL ON. When the engine starts to run and no malfunction is detected in the system, ECM transmits MIL indication OFF signal to combination meter in order to turn MIL OFF. And then, combination meter turns MIL OFF, but if a malfunction was or is detected, MIL remains ON even when the engine is running.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0E1104012003">
+<title>
+Troubleshooting
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Before performed troubleshooting, be sure to read the 
+<intxref refid = "S5JB0E1100004">Precautions of ECM Circuit Inspection</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When measuring circuit voltage, resistance and&#x002F;or pulse signal at ECM connector, connect the special tool to ECM and&#x002F;or the ECM connectors referring to 
+<intxref refid = "S5JB0E1104080">Inspection of ECM and Its Circuits</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "S5JB0E1104012004">
+<testgroup>
+<title>
+DTC check
+</title>
+<test1>
+<ptxt>
+Start engine and recheck DTC of ECM and TCM (for A&#x002F;T model) while engine running.
+</ptxt>
+</test1>
+<question>
+Is there any DTC(s)?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2 of 
+<intxref refid = "S5JB0E1104001">Engine and Emission Control System Check</intxref>
+, Step 2 of 
+<intxref refid = "S5JB0E5104001">A&#x002F;T System Check</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN communication line circuit check
+</title>
+<test1>
+<ptxt>
+Check CAN communication line circuit between combination meter and ECM, TCM (for A&#x002F;T model), ABS &#x002F; ESP&#174; control module, 4WD control module (if equipped), keyless start control module (if equipped) referring to Step 9 to 15 
+<intxref refid = "S5JB0E1104064">DTC P1674: CAN Communication (Bus Off Error)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good combination meter and recheck. If MIL still remains ON, substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace CAN communication circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1124052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119
+</title>
+<servinfosub id = "U8T40A1124052001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2119: Regelsysteem van de gasklepstelmotor - open geblokkeerd
+</emph>
+</ptxt>
+<ptxt>
+Het verschil tussen de beoogde TP en gemeten TP is groter dan de voorgeschreven waarde.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gasklepmotor en&#x002F;of bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+TP-sensorcircuit (hoofd)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gasklephuissamenstel
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1124052002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1124052003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention3>
+<ptxt>
+Indien er eerder in de DTC-bevestigingsprocedure andere dan de beoogde DTC&apos;s werden waargenomen, los dan ook de eerder waargenomen DTC&apos;s op.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Start de motor en laat hem op de normale bedrijfstemperatuur komen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laat de motor gedurende 20 sec stationair draaien
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laat de motor met 3.000 omw&#x002F;min gedurende 20 sec draaien
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 2) en 3) 3 keer.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1124052004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1124052005">
+<testgroup id = "U8T40A1124052006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1124001">Controle van het motor- en emissieregelsysteem:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124052007">
+<title>
+DTC-controle
+</title>
+<test1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</test1>
+<question>
+Worden er behalve P2119 nog andere DTC&apos;s weergegeven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar de betrokken DTC&apos;s.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124052008">
+<title>
+Controle voedingscircuit van de gasklepmotor
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen los van de ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de ECM-stekkerverbindingen zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON als alle verbindingen goed zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of het voedingscircuit van de gasklepmotor (A4) accuspanning bevat.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124052009">
+<title>
+Controle gasklepmotorstuurkring
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF, maak de stekkerverbinding los van het gasklephuissamenstel.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of de aansluitklemmen goed op de stekkerverbinding van het gasklephuissamenstel zijn aangesloten.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Als de verbinding in orde is , controleer dan of de gasklepmotorstuurkring (onderbroken en gesloten) (B1, B2) aan het volgende voldoet.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van elke gasklepmotorstuurkring is minder dan 3 &#937;
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van elke gasklepmotorstuurkring tussen de stekker van het gasklephuissamenstel en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen de stuurkringaansluitklemmen van elke gasklepmotor en andere aansluitklemmen op de stekkerverbinding van het gasklephuissamenstel is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De stuurkringspanning van elke gasklepmotor is 0 - 1 V met het contactslot in de stand ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124052010">
+<title>
+Controle van het signaalcircuit van de TP-sensor (hoofd)
+</title>
+<test1>
+<ptxt>
+Controleer of het circuit (C2) van het TP-sensorsignaal (hoofd) aan het volgende voldoet.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+De bedradingsbundelweerstand van het TP-sensorsignaalcircuit (hoofd) is minder dan 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van het TP-sensorsignaalcircuit (hoofd) tussen de stekkerverbinding van het gasklephuissamenstel en de carrosseriemassa is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De isolatieweerstand van de bedradingsbundel tussen het signaalcircuit van het TP-sensorsignaal (hoofd) en elke aansluitklem op de stekkerverbinding van het gasklephuissamenstel is oneindig.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De circuitspanning van het (hoofd)signaalcircuit van de TP-sensor is 0 - 1 V met het contactslot in de stand ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang de defecte bedradingsbundel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1124052011">
+<title>
+Controle van het gasklephuissamenstel
+</title>
+<test1>
+<ptxt>
+Controleer de werking en de toestand van het gasklephuis. 
+<intxreftitleoff1 refid = "U8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het klephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

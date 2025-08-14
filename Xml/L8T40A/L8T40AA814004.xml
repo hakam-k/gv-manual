@@ -1,0 +1,1143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10H">
+<servcat sctnbr = "10" scnbr = "08">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40AA814004" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Risoluzione dei problemi per bus di comunicazione disattivato
+</title>
+<servinfosub id = "L8T40AA814004001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Vedere 
+<intxref refid = "L8T40AA812001">Schema circuito sistema di comunicazione CAN:Modello M16A e J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40AA814004002">
+<title>
+Procedura della diagnosi
+</title>
+<attention3>
+<ptxt>
+Prima di eseguire gli elementi in questo flusso, assicurarsi di eseguire 
+<intxref refid = "L8T40AA814001">Controllo del sistema di comunicazione CAN:Modello M16A e J20A</intxref>
+.
+</ptxt>
+</attention3>
+<ptxt>
+Qua do in uno qualsiasi dei moduli di controllo viene rilevato &#8220;Bus comunicazione CAN Off&#8221; o quando non e possibile comunicare con qualsiasi dei moduli di controllo tramite lo scanner SUZUKI (SUZUKI SDT), eseguire l&apos;ispezione adottando la seguente procedura.
+</ptxt>
+<s1>
+<ptxt>
+Connettere lo scanner SUZUKI (SUZUKI SDT) e lasciare visualizzare il DTC del BCM per controllare la comunicazione con l&apos;BCM. Se lo scanner non riesce a comunicare con il BCM, controllare lo scanner SUZUKI e cavo di comunicazione, circuito di tensione e massa DLC.
+</ptxt>
+<ptxt>
+Se la comunicazione non e buona, procedere e andare al passo successivo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Usando un oscilloscopio o funzione dell&apos;oscilloscopio dello scanner SUZUKI (SUZUKI SDT), osservare sia il terminale CAN alto (1) e terminale CAN basso (2) per la forma d&apos;onda del segnale CAN sul DLC nella seguente condizione quando l&apos;interruttore di accensione e nella posizione ON.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<title>
+Condizione di misurazione
+</title>
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Terminale di misurazione
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: Terminale CAN alto (1) al terminale di massa DLC (3)
+</ptxt>
+<ptxt>
+CH2: Terminale CAN basso (2) al terminale di massa DLC (3)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Impostazione dell&apos;oscilloscopio
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+CH1: 1 V&#x002F;DIV, CH2: 1 V&#x002F;DIV
+</ptxt>
+<ptxt>
+DURATA: 5 ms&#x002F;DIV
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione di misurazione
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Commutatore di avviamento su ON
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<figure>
+<graphic graphicname = "I7V10AA81005.swf" width = "88.000mm" height = "32.106mm" ver = "02" gw = "223" gh = "74"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.703in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+DLC (Vista: &#x005B;a&#x005D;)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</s1>
+<s1>
+<ptxt>
+Confrontare la forma d&apos;onda del segnale e le forme d&apos;onda fornite come 
+<intxref refid = "L8T40AA814004003">Forma d&apos;onda di riferimento</intxref>
+. Rilevare la forma d&apos;onda del segnale maggiormente simile e identificare il sistema di problemi e la natura del problema della &#8220;Forma d&apos;onda di riferimento&#8221; applicabili.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Basandosi su il sistema di errore identificato e la natura del problema, eseguire la risoluzione dei problemi in conformita a 
+<intxref refid = "L8T40AA814004011">Risoluzione dei problemi</intxref>
+.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40AA814004003">
+<title>
+Forma d&apos;onda di riferimento
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Sotto vengono indicate le forme d&apos;onda osservate con la funzione oscilloscopio dello scanner SUZUKI (SUZUKI-SDT) come esempi di riferimento.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Forme d&apos;onda in &#8220;Esempi di forme d&apos;onda anomale&#8221; sono rilevate come esempi tra le forme d&apos;onda di comunicazione durante il perdurare dell&apos;anomalia. Tuttavia, la stessa forma d&apos;onda non puo essere osservata. Quindi, per identificare il contenuto dell&apos;anomalia, selezionare una forma d&apos;onda che e la piu simile alla forma d&apos;onda osservata in 
+<intxref refid = "L8T40AA814004005">esempi di forme d&apos;onda anomale</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<topic id = "L8T40AA814004004">
+<title>
+Forma d&apos;onda normale
+</title>
+<ptxt>
+La tensione di riferimento e 2,5 V (1) per sia il segnale CAN alto (2) che segnale CAN basso (3).
+</ptxt>
+<ptxt>
+Forma d&apos;onda del CAN alto e 2,5 &#8211; 3,5 V e quello del segnale CAN basso e 2,5 &#8211; 1,5 V.
+</ptxt>
+<ptxt>
+Per dettagli, fare riferimento a &#8220;Segnale di comunicazione CAN&#8221; in 
+<intxref refid = "L8T40AA811001">Descrizione del sistema di comunicazione CAN:Modello M16A e J20A</intxref>
+.
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81006.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "162" gh = "188"/>
+</figure>
+<figure>
+<title>
+Riferimento (divisione tempo 50 us)
+</title>
+<graphic graphicname = "I7V10AA81007.swf" width = "88.000mm" height = "72.379mm" ver = "01" gw = "158" gh = "188"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "4" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.752in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "1.752in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Tensione di riferimento (2,5 V)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Segnale CAN basso
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Segnale CAN alto
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</topic>
+<topic id = "L8T40AA814004005">
+<title>
+esempi di forme d&apos;onda anomale
+</title>
+<subtopic id = "L8T40AA814004006">
+<title>
+Nel caso del segnale CAN alto e&#x002F;o del segnale CAN basso il filo del segnale e in corto sul circuito di massa
+</title>
+<ptxt>
+<emph etype = "bold">
+Forma d&apos;onda caratteristica
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando il filo del segnale CAN Alto e in corto sul circuito di massa: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Entrambi il segnale CAN alto e il segnale CAN basso sono fissati vicino al livello di massa (GND) (0V) (1).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando il filo del segnale CAN Basso e in corto sul circuito di massa: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Il livello di riferimento di entrambi il segnale CAN alto e il segnale CAN basso sono fissati vicino al livello di massa (GND) (0V).
+</ptxt>
+<ptxt>
+La forma d&apos;onda del segnale CAN alto oscilla irregolarmente (4) tra 0 V e 3 V e quello del segnale CAN basso e fissato su 0 V (3).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81008.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "376" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.968in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Tensione di riferimento (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "L8T40AA814004007">
+<title>
+Nel caso del segnale CAN alto e&#x002F;o del segnale CAN basso e interrotto
+</title>
+<ptxt>
+<emph etype = "bold">
+Forma d&apos;onda caratteristica
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando il filo del segnale CAN Alto e interrotto: &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+Il livello della tensione di riferimento del segnale CAN alto e segnale CAN basso e instabile e tende a indicare un valore inferiore allo stato normale (2,5 V) (1). Inoltre la forma d&apos;onda del segnale CAN alto oscilla irregolarmente (3) ma quella del segnale CAN basso e quasi costante (2).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando il filo del segnale CAN Basso e interrotto: &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+Il livello della tensione di riferimento del segnale CAN alto e segnale CAN basso e instabile e tende a indicare un valore superiore allo stato normale (2,5 V) (4). Inoltre la forma d&apos;onda del segnale CAN alto e quasi costante (5) ma quella del segnale CAN basso oscilla irregolarmente (6).
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81009.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+</figure>
+</subtopic>
+<subtopic id = "L8T40AA814004008">
+<title>
+Nel caso del segnale CAN alto e&#x002F;o del segnale CAN basso il filo del segnale e in corto sul circuito di tensione (12 V)
+</title>
+<ptxt>
+<emph etype = "bold">
+Forma d&apos;onda caratteristica
+</emph>
+</ptxt>
+<ptxt>
+Entrambi il segnale CAN alto e il segnale CAN basso sono fissati su 12 V (2). 
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81010.swf" width = "88.000mm" height = "71.278mm" ver = "01" gw = "149" gh = "185"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.598in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Tensione di riferimento (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "L8T40AA814004009">
+<title>
+Nel caso del segnale CAN alto e&#x002F;o del segnale CAN basso il filo del segnale e in corto sul circuito di tensione (5V)
+</title>
+<ptxt>
+<emph etype = "bold">
+Forma d&apos;onda caratteristica
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando il filo del segnale CAN Alto e in corto sul circuito di tensione (5V): &#x005B;A&#x005D;
+</ptxt>
+<ptxt>
+La tensione di riferimento (1) e 5 V per sia il segnale CAN alto (2) che segnale CAN basso (3).
+</ptxt>
+<ptxt>
+La forma d&apos;onda del segnale CAN alto oscilla irregolarmente vicino a 5 V (3) e quello del segnale CAN basso tra 5 V e 2 V (4).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando il filo del segnale CAN basso e in corto sul circuito di tensione (5V): &#x005B;B&#x005D;
+</ptxt>
+<ptxt>
+La tensione di riferimento (5) e 5 V e della stessa fase per sia il segnale CAN alto che segnale CAN basso e la loro forma d&apos;onda oscilla irregolarmente (6) tra 5 V e 2,5 V.
+</ptxt>
+</item>
+</list1>
+<figure>
+<graphic graphicname = "I7V10AA81011.swf" width = "183.000mm" height = "70.770mm" ver = "01" gw = "355" gh = "184"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.673in"/>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1" align = "left">
+<ptxt>
+Tensione di riferimento (2,5 V)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</subtopic>
+<subtopic id = "L8T40AA814004010">
+<title>
+Nel caso del segnale CAN alto e del segnale CAN basso i fili sono in corto l&apos;uno con l&apos;altro
+</title>
+<ptxt>
+<emph etype = "bold">
+Forma d&apos;onda caratteristica
+</emph>
+</ptxt>
+<ptxt>
+Forma d&apos;onda caratteristica Entrambi il segnale CAN alto e il segnale CAN basso sono fissati vicino a 2,5 V (1).
+</ptxt>
+<figure>
+<graphic graphicname = "I7V10AA81012.swf" width = "88.000mm" height = "70.770mm" ver = "01" gw = "149" gh = "184"/>
+</figure>
+</subtopic>
+</topic>
+</servinfosub>
+<servinfosub id = "L8T40AA814004011">
+<title>
+Risoluzione dei problemi
+</title>
+<ptxt>
+Eseguire l&apos;ispezione secondo la seguente procedura di individuazione dei problemi.
+</ptxt>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando si esegue il &#8220;Controllo bus di comunicazione&#8221; usando lo scanner SUZUKI (SUZUKI-SDT) in ciascun punto di questa procedura di individuazione dei guasti, usare la seguente tabella per determinare se il modulo di controllo e in buone condizioni o meno.
+</ptxt>
+<ptxt>
+Inoltre, durante il &#8220;Controllo bus di comunicazione&#8221;, non eseguire interventi diversi da quelli indicati in questa procedura di individuazione dei guasti. Oppure, la visualizzazione del modulo di controllo &#x002F; sensore sulla schermata di questo scanner SUZUKI-SDT e&#x002F;o colore di sfondo puo cambiare.
+</ptxt>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "1.303in"/>
+<colspec colnum = "2" colname = "2" colwidth = "5.787in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Giudizio
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Visualizzazione del Controllo bus di comunicazione
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Normale
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Tutti i moduli di controllo &#x002F; sensori connessi (comunicati da CAN) vengono visualizzati e il colore dello sfondo e &#8220;Bianco&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Lo stato di cui sopra persiste immutato durante il monitoraggio per oltre 1 minuto.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Anomalo
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Anche quando uno dei moduli di controllo &#x002F; sensori (comunicati da CAN) connessi non e visualizzato.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La visualizzazione di anche uno dei moduli di controllo &#x002F; sensori (comunicati da CAN) cambia.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il colore di sfondo di anche uno dei moduli di controllo &#x002F; sensori connessi (comunicati da CAN) viene visualizzato in &#8220;grigio&#8221; o &#8220;verde chiaro&#8221;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Il colore di sfondo di anche uno dei moduli di controllo &#x002F; sensori connessi (comunicati da CAN) cambia.
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8220;Controllo bus di comunicazione&#8221; non puo essere eseguito.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</item>
+<item>
+<ptxt>
+Controllare le specifiche del veicolo e familiarizzarsi con i moduli di controllo installati prima dell&apos;ispezione. Quindi eseguire la procedura di individuazione dei guasti.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<diag type = "test" id = "L8T40AA814004012">
+<testgroup id = "L8T40AA814004013">
+<title>
+Controllo linea comunicazione CAN
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Staccare i connettori di tutti i moduli di controllo &#x002F; sensori che comunicano tramite CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che le connessioni dei terminali siano corrette con ciascun circuito di comunicazione CAN su tutti i connettori del modulo di controllo &#x002F; sensori (comunicati da CAN).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se in ordine, controllare ciascun circuito di comunicazione CAN per rotture, corto sul circuito di tensione, corto circuito su ciascun altro filo di comunicazione CAN o alta resistenza, basandosi sui risultati tramite misurazione e identificazione della natura del problema nei punti 2) e 3) di 
+<intxref refid = "L8T40AA814004002">Procedura della diagnosi</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Tutti i circuiti di comunicazione CAN sono in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare il circuito di comunicazione CAN.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40AA814004014">
+<title>
+Controllo della resistenza terminale ECM CAN
+</title>
+<test1>
+<ptxt>
+Collegare il connettore al modulo ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la resistenza terminale in ECM come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modello ESP&#174;:
+</ptxt>
+<ptxt>
+Misurare la resistenza tra il terminale &#8220;E53-43&#8221; e &#8220;E53-44&#8221; del connettore modulo di controllo ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modello non-ESP&#174;:
+</ptxt>
+<ptxt>
+Misurare la resistenza tra il terminale &#8220;E03-10&#8221; e &#8220;E03-8&#8221; del connettore del modulo di controllo ABS.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La resistenza e 114 &#8211; 134 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40AA814004015">
+<title>
+Controllo resistenza terminale CAN quadro strumenti 
+</title>
+<test1>
+<ptxt>
+Collegare i connettori al quadro strumenti.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra il terminale &#8220;G31-1&#8221; e &#8220;G31-3&#8221; del connettore del BCM.
+</ptxt>
+</test1>
+<question>
+La resistenza e 114 &#8211; 134 &#937;?
+</question>
+<result>
+SI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un quadro strumenti che si e certi funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40AA814004016">
+<title>
+Controllo dell&apos;ECM, quadro strumenti e BCM
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Collegare il connettore al modulo BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Usando un cavo ponticello (1), connettere i terminali di connettore modulo di controllo ABS &#x002F; ESP&#174; come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modello ESP&#174; &#x005B;A&#x005D;:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Connettere un ponticello di servizio tra il terminale &#8220;E53-43&#8221; e &#8220;E53-42&#8221; di connettore modulo di controllo ESP&#174;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Connettere un ponticello di servizio tra il terminale &#8220;E53-44&#8221; e &#8220;E53-45&#8221; di connettore modulo di controllo ESP&#174;.
+</ptxt>
+</item>
+</list2>
+<item>
+<ptxt>
+Modello non-ESP&#174; &#x005B;B&#x005D;:
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+Connettere un ponticello di servizio tra il terminale &#8220;E03-12&#8221; e &#8220;E03-10&#8221; del connettore del modulo ABS.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Connettere un ponticello di servizio tra il terminale &#8220;E03-6&#8221; e &#8220;E03-8&#8221; del connettore del modulo ABS
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80006.swf" width = "90.000mm" height = "69.147mm" ver = "01" gw = "228" gh = "179"/>
+</testfigure>
+</item>
+</list2>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione ON e selezionare &#8220;Controllo del bus di comunicazione&#8221; in &#8220;Controllo bus di comunicazione&#8221; per lo scanner SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la comunicazione CAN sia normale per ECM, quadro strumenti e BCM.
+</ptxt>
+</test1>
+<question>
+La comunicazione e normale?
+</question>
+<result>
+SI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Modello A&#x002F;T: Passare al punto 5.
+</ptxt>
+<ptxt>
+Modello M&#x002F;T: Passare al punto 7.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40AA814004017">
+<title>
+Controllo TCM
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Collegare il connettore al modulo TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione ON e selezionare &#8220;Controllo del bus di comunicazione&#8221; in &#8220;Controllo bus di comunicazione&#8221; per lo scanner SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la comunicazione CAN sia normale per ECM, quadro strumenti, BCM e TCM.
+</ptxt>
+</test1>
+<question>
+La comunicazione e normale?
+</question>
+<result>
+SI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Modello 4WD: Passare al punto 6.
+</ptxt>
+<ptxt>
+Modello 2WD: Passare al punto 7.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo modulo di controllo 4WD
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connettere il connettore al modulo di controllo 4WD.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione ON e selezionare &#8220;Controllo del bus di comunicazione&#8221; in &#8220;Controllo bus di comunicazione&#8221; per lo scanner SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la comunicazione CAN sia normale per ECM, quadro strumenti, BCM, TCM e modulo di controllo 4WD.
+</ptxt>
+</test1>
+<question>
+La comunicazione e normale?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un modulo di controllo 4WD che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo modulo di controllo HVAC
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connettere il connettore al modulo di controllo HVAC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione ON e selezionare &#8220;Controllo del bus di comunicazione&#8221; in &#8220;Controllo bus di comunicazione&#8221; per lo scanner SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la comunicazione CAN sia in condizioni normali per ECM, quadro strumenti, BCM, TCM (modello A&#x002F;T), modulo di controllo 4WD (modello cambio motore tipo 4WD) e modulo di controllo HVAC.
+</ptxt>
+</test1>
+<question>
+La comunicazione e normale?
+</question>
+<result>
+SI
+</result>
+<action>
+<paragroup>
+<ptxt>
+Modello con avviamento senza chiave: Passare al punto 8.
+</ptxt>
+<ptxt>
+Modello avviamento non senza chiave: Passare al punto 9.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un modulo di controllo HVAC che si sa per certo funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo modulo di controllo avviamento senza chiave
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connettere il connettore al modulo di controllo avviamento senza chiave.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione ON e selezionare &#8220;Controllo del bus di comunicazione&#8221; in &#8220;Controllo bus di comunicazione&#8221; per lo scanner SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la comunicazione CAN sia in condizioni normali per ECM, quadro strumenti, BCM, TCM (modello A&#x002F;T), modulo di controllo 4WD (modello cambio motore tipo 4WD) e modulo di controllo HVAC e modulo di controllo avvio senza chiave.
+</ptxt>
+</test1>
+<question>
+La comunicazione e normale?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Rimpiazzare con un modulo di controllo HVAC che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<question>
+Veicolo dotato di ESP&#174;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un modulo di controllo ABS che si sa per certo funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo del sensore angolo di sterzata
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Connettere il connettore al sensore dell&apos;angolo di sterzata.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione ON e selezionare &#8220;Controllo del bus di comunicazione&#8221; in &#8220;Controllo bus di comunicazione&#8221; per lo scanner SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la comunicazione CAN sia in condizioni normali per ECM, quadro strumenti, BCM, TCM (modello A&#x002F;T), modulo di controllo 4WD (modello cambio motore tipo 4WD) e modulo di controllo HVAC e modulo di controllo avvio senza chiave (modello con avvio senza chiave) e sensore angolo di sterzata.
+</ptxt>
+</test1>
+<question>
+La comunicazione e normale?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un modulo di controllo ESP per certo funzionante&#174; e ricontrollare
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il sensore angolo di sterzo.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40AA814004018">
+<title>
+Controllo BCM
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Scollegare il connettore dal modulo BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Usando il cavo di servizio (1), connettere i terminali del connettore BCM come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Connettere un ponticello di servizio tra il terminale &#8220;G31-3&#8221; e &#8220;G31-4&#8221; dei connettori BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Connettere un ponticello di servizio tra il terminale &#8220;G31-2&#8221; e &#8220;G31-1&#8221; dei connettori BCM
+</ptxt>
+<testfigure>
+<graphic graphicname = "I9T401A80005.swf" width = "90.000mm" height = "55.389mm" ver = "01" gw = "214" gh = "140"/>
+</testfigure>
+</item>
+</list1>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione ON e selezionare &#8220;Controllo del bus di comunicazione&#8221; in &#8220;Controllo bus di comunicazione&#8221; per lo scanner SUZUKI.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la comunicazione CAN sia la condizione normale per ECM e quadro strumenti.
+</ptxt>
+</test1>
+<question>
+La comunicazione e normale?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un BCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 12.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40AA814004019">
+<title>
+Controllo quadro strumenti
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Staccare i servizi cablati connessi al passo 4 dal connettore modulo di controllo ABS &#x002F; ESP&#174;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Scollegare i fili di servizio connessi nel punto 11 dal connettore BCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Accendere l&apos;interruttore di accensione (ON).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Osservare la forma d&apos;onda ottenuta sui terminali &#8220;G31-1&#8221; e &#8220;G31-3&#8221; del connettore BCM.
+</ptxt>
+</test1>
+<question>
+La forma d&apos;onda osservata e normale?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire con un quadro strumenti che si e certi funzioni e ricontrollare.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

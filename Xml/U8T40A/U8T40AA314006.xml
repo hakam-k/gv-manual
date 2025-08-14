@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40AA314006" svcinfotypenbr = "06" svcinfoqualnbr = "03" page = "1" supplyoff = "1" modify = "0">
+<title>
+Het startblokkeringscontrolelichtje gaat niet branden met het contactslot op ON en de motor uit
+</title>
+<servinfosub id = "U8T40AA314006001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40AA312001">Bedradingsschakelschema van het regelsysteem van de startblokkering:Model met benzinemotor</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA314006002">
+<title>
+Beschrijving van het circuit
+</title>
+<ptxt>
+Wanneer het contactslot op ON wordt gezet, stuurt de ECM een AAN-signaal naar de combimeter om het startblokkeringscontrolelichtje te laten branden wanneer er geen probleem is met het regelsysteem van de startblokkering. De combimeter zet het lichtje dan aan. Wanneer de motor start, stuurt de ECM een UIT-signaal naar de combimeter om het lichtje te doven. De combimeter schakelt het startblokkeringscontrolelichtje dan uit. Wanneer het regelsysteem van de startblokkering echter defect is, knippert het startblokkeringscontrolelichtje wanneer het contactslot op ON wordt gezet.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40AA314006003">
+<title>
+Storingzoeken
+</title>
+<diag type = "test" id = "U8T40AA314006004">
+<testgroup>
+<title>
+Controle van de voeding van het startblokkeringscontrolelichtje
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Gaan er andere waarschuwingslampjes branden?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van diagnosecodes (DTC)
+</title>
+<test1>
+<ptxt>
+Controleer of DTC U0073, U0101, U0121 en&#x002F;of U0140 worden waargenomen door de ECM volgens 
+<intxref refid = "U8T40AA314002">DTC-controle:Model met benzinemotor</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Wordt een van deze DTC&apos;s waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Onderzoek de storing volgens het overeenkomstige stroomschema in hoofdstuk 1A.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de combimeter door een goed bevonden exemplaar en controleer opnieuw. Als het startblokkeringscontrolelichtje nog steeds uit blijft, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van de zekering
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of er een betrokken zekering is gesprongen.
+</ptxt>
+</test1>
+<question>
+Is er een zekering gesprongen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang de gesprongen zekering en controleer op kortsluiting.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het voedingsbedradingscircuit van de combimeter
+</title>
+<test1>
+<ptxt>
+Verwijder de combimeter volgens 
+<intxref refid = "U8T40A9306003">Uitbouw en inbouw van de combimeter</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer of draadaansluiting &#34;G28-1&#34; en &#34;G28-3&#34; van de combimeterstekker goed aangesloten zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Indien OK, zet dan het contactslot op ON en meet de spanning tussen draadaansluiting &#34;G28-1&#34; van de combimeter en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Bedraagt de spanning 10 - 14 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer de stroomonderbreking in het voedingsbedradingscircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controle van het massadraadcircuit van de combinatiemeter
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen stekkeraansluiting &#34;G28-3&#34; van de combimeter en de carrosseriemassa.
+</ptxt>
+</test1>
+<question>
+Is de weerstand 1 &#937; of minder?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vervang de combimeter door een goed bevonden exemplaar en controleer opnieuw. Als het startblokkeringscontrolelichtje nog steeds uit blijft, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer de stroomonderbreking of hoge weerstand in het massabedradingscircuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

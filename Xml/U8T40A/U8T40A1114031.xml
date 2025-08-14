@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114031" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0123: Hoge spanning in het circuit van de (hoofd) gaskleppositiesensor
+</title>
+<servinfosub id = "U8T40A1114031001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1114030">DTC P0122: Lage spanning in het circuit van de (hoofd) gaskleppositiesensor:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114031002">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.867in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.324in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+De uitgangsspanning van de (hoofd) gaskleppositiesensor is ononderbroken hoger dan 4,7 V gedurende de voorgeschreven tijd.
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+(Hoofd) gaskleppositiesensorcircuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Elektrische-gasklephuissamenstel
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<attention3>
+<ptxt>
+Wanneer DTC P0123 en P0223 samen worden aangegeven, is het mogelijk dat de &#34;WHT&#34;-draad is kortgesloten naar het voedingscircuit, en&#x002F;of de &#34;GRN&#34;-draad is onderbroken.
+</ptxt>
+</attention3>
+<servinfosub id = "U8T40A1114031003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Houd het gaspedaal 2 seconden in de stationaire stand.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Houd het gaspedaal 2 seconden volledig ingetrapt.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Herhaal stap 3) en 4) 3 keer.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controleer de DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1114031004">
+<title>
+DTC-storingzoeken
+</title>
+<attention3>
+<ptxt>
+Lees de voorzorgsmaatregelen voor DTC-storingzoeken zoals beschreven in 
+<intxref refid = "U8T40A1110003">Voorzorgsmaatregelen bij DTC-storingzoeken:M16A and J20A</intxref>
+ alvorens deze procedure te volgen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "U8T40A1114031005">
+<testgroup id = "U8T40A1114031006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031007">
+<title>
+Controle van de gaskleppositiesensor en het bijbehorend circuit
+</title>
+<test1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON en controleer of &#34;TP Sensor 1 Volt&#34; wordt weergegeven op het uitleesapparaat met het gaspedaal in de stationaire stand en volledig ingetrapt.
+</ptxt>
+</test1>
+<question>
+Is de weergegeven TP-sensorwaarde zoals beschreven in 
+<intxref refid = "U8T40A1114007">Gegevens van het uitleesapparaat:M16A and J20A</intxref>
+?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Sporadische storing.
+</ptxt>
+<ptxt>
+Controleer op sporadische storingen volgens 
+<intxref refid = "U8T40A0006002">Onderzoek naar intermitterende en slechte aansluitingen</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031008">
+<title>
+Controle van de ECM-spanning
+</title>
+<test1>
+<ptxt>
+Maak de stekkerverbinding van het elektrische-gasklephuissamenstel los met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer de WHT&#34;-, &#34;GRN&#34;- en &#34;BLK&#34;-draadaansluitingen op een goede verbinding met het elektrische-gasklephuissamenstel.
+</ptxt>
+<testfigure>
+<title>
+Voor J20A-motor
+</title>
+<graphic graphicname = "I5JB0A110042.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "158" gh = "76"/>
+</testfigure>
+<testfigure>
+<title>
+Voor M16A-motor
+</title>
+<graphic graphicname = "I5JB0A110043.swf" width = "90.000mm" height = "32.811mm" ver = "01" gw = "149" gh = "76"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Als de verbindingen in orde zijn, meet dan de spanning tussen de &#34;WHT&#34;-draadaansluiting van de stekkerverbinding van het elektrische-gasklephuissamenstel en de motormassa met het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Is de spanning 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031009">
+<title>
+Controle van de bedradingsbundel
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen van de ECM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer aansluiting &#34;C37-53&#34; op een goede verbinding met de ECM-stekkerverbinding.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de spanning tussen aansluiting &#34;C37-53&#34; van de ECM-stekkerverbinding en de motormassa met het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Is de spanning 0 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+ De &#34;WHT&#34;-draad is kortgesloten naar het voedingscircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031010">
+<title>
+Controle van de bedradingsbundel
+</title>
+<test1>
+<ptxt>
+Meet de spanning tussen de &#34;BLK&#34;-draadaansluiting van de stekkerverbinding van het elektrische-gasklephuissamenstel en de motormassa met het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Is de spanning 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 9.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031011">
+<title>
+Controle van de bedradingsbundel
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verwijder de ECM van zijn steun terwijl de ECM-stekkerverbindingen aangesloten zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer aansluitklemmen &#34;C37-53&#34; en &#34;C37-54&#34; van de ECM-stekker op een goede verbinding.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Als de verbinding in orde is, meet dan de spanning tussen aansluiting &#34;C37-54&#34; van de ECM-stekkerverbinding en de motormassa met het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Is de spanning 4 - 6 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Stroomonderbreking of hoge weerstand in het &#34;BLK&#34;-draadcircuit.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031012">
+<title>
+Controle van de bedradingsbundel
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen van de ECM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen de &#34;BLK&#34;- en &#34;WHT&#34;-draadaansluitingen van de stekkerverbinding van het elektrische-gasklephuissamenstel.
+</ptxt>
+</test1>
+<question>
+Is de weerstand oneindig?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 8.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+De &#34;BLK&#34;-draad is kortgesloten naar de &#34;WHT&#34;-draad.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031013">
+<title>
+Controle van de bedradingsbundel
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de spanning tussen aansluiting &#34;C37-54&#34; van de ECM-stekkerverbinding en de motormassa.
+</ptxt>
+</test1>
+<question>
+Is de spanning 0 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+&#34;BLK&#34;-draad is kortgesloten naar voedingscircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031014">
+<title>
+Controle van het massacircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen de &#34;GRN&#34;-draadaansluiting van de stekkerverbinding van het elektrische-gasklephuissamenstel en de motormassa.
+</ptxt>
+</test1>
+<question>
+Bedraagt de weerstand minder dan 5 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 11.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 10.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031015">
+<title>
+Controle van het massacircuit
+</title>
+<test1>
+<ptxt>
+Verwijder de ECM van zijn steun terwijl de ECM-stekkerverbindingen aangesloten zijn.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controleer aansluiting &#34;C37-41&#34; op een goede verbinding met de ECM-stekkerverbinding.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen aansluiting &#34;C37-41&#34; van de ECM-stekkerverbinding en de motormassa met het contactslot op OFF.
+</ptxt>
+</test1>
+<question>
+Bedraagt de weerstand minder dan 5 &#937;?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Stroomonderbreking of hoge weerstand in de &#34;GRN&#34;-draad.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+ECM-massacircuit defect. Als het circuit in orde is, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114031016">
+<title>
+Controle van het elektrische-gasklephuissamenstel
+</title>
+<test1>
+<ptxt>
+Controleer de gasklep-&#x002F;pedaalpositiesensor zoals beschreven in &#34;Controle van de prestaties van de gaskleppositiesensor&#34; onder 
+<intxref refid = "U8T40A1316003">Onderzoek elektrisch-gasklephuissamenstel in het voertuig:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de uitgangsspanning zoals voorgeschreven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang het elektrische-gasklephuissamenstel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

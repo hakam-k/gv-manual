@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0AA324031" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1716: Keyless Start Control Module CAN Communication Error
+</title>
+<attention3>
+<ptxt>
+If DTC related to CAN failure is detected by ECM and BCM, first perform applicable DTC diag. flow.
+</ptxt>
+</attention3>
+<servinfosub id = "S6JB0AA324031001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0AA322001">Immobilizer Control System Wiring Circuit Diagram:For Diesel Engine Model</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0AA324031002">
+<title>
+Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Reception error of communication data for keyless start control module is detected for longer than specified time continuously.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+CAN communication circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Steering angle sensor (ESP&#174; model)
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+Keyless start control module (if equipped)
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS&#x002F;ESP&#174; control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combination meter
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0AA324031003">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0AA324031004">
+<testgroup>
+<question>
+Was &#8220;Immobilizer Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0AA324001">Immobilizer Control System Check:For Diesel Engine Model</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+DTC check for ECM
+</title>
+<question>
+Is DTC other than B1716 detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to applicable DTC diag. flow.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Control module connector check
+</title>
+<test1>
+<ptxt>
+With the ignition switch at OFF position, check intermittent and poor connection of following each connector referring to 
+<intxref refid = "S6JB0A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ABS &#x002F; ESP&#174; control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Keyless start control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combination meter
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD control module
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are all connectors in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair malfunction part and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+CAN communication circuit check
+</title>
+<test1>
+<ptxt>
+Check for open, short and high resistance in CAN communication circuit between ECM and keyless start control module.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Check of keyless start control module power and ground wire circuits
+</title>
+<test1>
+<ptxt>
+Check keyless start control module power and ground wire circuits referring to 
+<intxref refid = "S6JB0AA504016">Keyless Start Control Module Power and Ground Circuit Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Are they in normal?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known-good keyless start control module and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair malfunctional wire circuit.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

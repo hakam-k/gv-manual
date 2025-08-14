@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114039" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304: Willekeurig overslaan waargenomen &#x002F; overslaan van cilinder 1&#x002F;cilinder 2&#x002F;cilinder 3&#x002F;cilinder 4 waargenomen
+</title>
+<servinfosub id = "U8T40A1114039001">
+<title>
+Beschrijving van het systeem
+</title>
+<ptxt>
+De ECM meet de hoek van de krukas op basis van het impulssignaal van de CKP-sensor en de CMP-sensor voor elke cilinder. Als er een grote wijziging in de hoeksnelheid van de krukas wordt vastgesteld, stelt hij het overslaan vast. Wanneer het aantal malen overslaan dat de ECM vaststelt hoger is dan de DTC-waarnemingsvoorwaarde, bepaalt de ECM in welke cilinder het overslaan zich voordoet en meldt hij dit als een DTC.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114039002">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.392in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.813in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+DTC P0300:
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Overslag vastgesteld in 2 of meer cilinders, waardoor katalysator oververhit raakt gedurende 200 motoromwentelingen. (MIL knippert zolang het overslaan voortduurt.)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+of
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Het overslaan, dat de uitlaatgasemissie negatief beïnvloedt gedurende 1000 motoromwentelingen, is bij 2 of meer cilinders waargenomen. (opsporingslogica van 2 rijcyclus)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ontstekingssysteem
+</ptxt>
+</item>
+<item>
+<ptxt>
+Brandstofverstuiver en bijbehorend circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+Brandstofdruk
+</ptxt>
+</item>
+<item>
+<ptxt>
+EGR-systeem
+</ptxt>
+</item>
+<item>
+<ptxt>
+Abnormale luchtaanzuiging
+</ptxt>
+</item>
+<item>
+<ptxt>
+Motorcompressie
+</ptxt>
+</item>
+<item>
+<ptxt>
+Klepspelingafsteller
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kleptiming
+</ptxt>
+</item>
+<item>
+<ptxt>
+Brandstoftekort
+</ptxt>
+</item>
+<item>
+<ptxt>
+Uitlaatsysteem
+</ptxt>
+</item>
+<item>
+<ptxt>
+Brandstof van slechte kwaliteit
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+DTC P0301, P0302, P0303, P0304:
+</emph>
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Overslag waargenomen in 1 cilinder, waardoor de katalysator oververhit raakt gedurende 200 motoromwentelingen. (MIL knippert zolang het overslaan voortduurt.)
+</ptxt>
+</item>
+</list1>
+<ptxt>
+of
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Overslaan, dat de uitlaatgasemissie negatief beïnvloedt gedurende 1000 motoromwentelingen, is waargenomen bij 1 cilinder. (opsporingslogica van 2 rijcyclus)
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1114039003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kies voor een proefrit een verkeersvrije plaats waar geen gevaar voor verkeersongevallen is, en wees uiterst voorzichtig tijdens de proefrit om ongevallen te vermijden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De proefrit moet door 2 personen worden uitgevoerd, een bestuurder en iemand die de test uitvoert, op een effen weg.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<ptxt>
+Controleer of aan de volgende voorwaarden is voldaan bij het uitvoeren van deze &#34;DTC-bevestigingsprocedure&#34;.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Inlaatluchttemperatuur bij het starten van de motor: -10 &#176;C (14 &#176;F) tot 80 &#176;C (176 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Inlaatluchttemperatuur: -10 &#176;C (14 &#176;F) tot 70 &#176;C (158 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Motorkoelvloeistoftemperatuur: -10 &#176;C (14 &#176;F) tot 150 &#176;C (302 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Hoogte (barometrische druk): 2400 m, 8000 ft. of minder (560 mmHg, 75 kPa of meer)
+</ptxt>
+</item>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en druk de freeze-framegegevens af of noteer ze met behulp van het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Wis de DTC&apos;s met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Bedien het voertuig binnen de genoteerde freeze-framecondities gedurende 1 min. of langer.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop het voertuig en controleer de DTC&apos;s en voorlopige DTC&apos;s.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1114039004">
+<title>
+DTC-storingzoeken
+</title>
+<attention3>
+<ptxt>
+Lees de voorzorgsmaatregelen voor DTC-storingzoeken zoals beschreven in 
+<intxref refid = "U8T40A1110003">Voorzorgsmaatregelen bij DTC-storingzoeken:M16A and J20A</intxref>
+ alvorens deze procedure te volgen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "U8T40A1114039005">
+<testgroup id = "U8T40A1114039006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039007">
+<question>
+Geeft de brandstofmeter het peil &#34;E&#34; aan (leeg)?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Vul brandstof bij en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039008">
+<title>
+Controle van de brandstofkwaliteit
+</title>
+<test1>
+<ptxt>
+Controleer of er brandstof van goede kwaliteit in de brandstoftank zit.
+</ptxt>
+</test1>
+<question>
+Is het in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Reinig het brandstofsysteemcircuit en vervang de brandstof.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039009">
+<title>
+Controle van het ontstekingssysteem
+</title>
+<test1>
+<ptxt>
+Controleer de bougie en de ontstekingsvonk van de cilinder waar het overslaan gebeurt, zoals beschreven in 
+<intxref refid = "U8T40A1816004">Onderzoek bougie:M16A and J20A</intxref>
+ en 
+<intxref refid = "U8T40A1814004">Ontstekingsvonktest:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Bobine, bedradingsbundel, bougie of andere systeemonderdelen defect.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039010">
+<title>
+Controle van het brandstofverstuivercircuit
+</title>
+<test1>
+<ptxt>
+Controleer met een stethoscoop het bedrijfsgeluid van elke verstuiver bij het starten van de motor of bij een stationair draaiende motor.
+</ptxt>
+</test1>
+<question>
+Is het bedrijfsgeluid van alle verstuivers hoorbaar?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Controleer of de stekkeraansluiting en de bedradingsbundel van de verstuiver geen bedrijfsgeluid maakt en ook de verstuiver zelf. Indien OK, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039011">
+<title>
+Controle van de brandstofdruk
+</title>
+<test1>
+<ptxt>
+Controleer de brandstofdruk volgens 
+<intxref refid = "U8T40A1714004">Controle van de brandstofdruk:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 7.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het brandstofsysteem.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039012">
+<title>
+Controle van de brandstofverstuiver
+</title>
+<test1>
+<ptxt>
+Controleer de brandstofverstuiver(s) volgens 
+<intxref refid = "U8T40A1716009">Inspecteren brandstofverstuiver:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 8.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Vervang de defecte verstuiver.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039013">
+<title>
+Controle van het ontstekingstijdstip
+</title>
+<test1>
+<ptxt>
+Controleer de ontstekingsafstelling volgens 
+<intxref refid = "U8T40A1816007">Onderzoek van het ontstekingstijdstip:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 9.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Controleer de betrokken sensors.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039014">
+<title>
+Controle EGR-systeem
+</title>
+<test1>
+<ptxt>
+Controleer het EGR-systeem volgens 
+<intxref refid = "U8T40A1214001">Onderzoek van het EGR-systeem:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Voldoet het resultaat van de controle?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 10.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het EGR-systeem.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039015">
+<title>
+Controle van het uitlaatsysteem
+</title>
+<test1>
+<ptxt>
+Controleer het uitlaatsysteem op uitlaatgasverstopping.
+</ptxt>
+</test1>
+<question>
+Is het in orde?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 11.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer de verstopping van het uitlaatsysteem.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114039016">
+<title>
+Controle van de mechanische systemen van de motor.
+</title>
+<test1>
+<ptxt>
+Controleer de mechanische motoronderdelen of -systemen die een rauw klinkend stationair toerental of slechte prestaties kunnen veroorzaken.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motorcompressie (Zie 
+<intxref refid = "U8T40A1424001">Controle van de compressie:J20A</intxref>
+ of 
+<intxref refid = "U8T40A1414001">Controle van de compressie:M16A</intxref>
+.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Klepspeling (Zie 
+<intxref refid = "U8T40A1424003">Onderzoeken van de klepspeling (toelaatbare speling):J20A</intxref>
+ of 
+<intxref refid = "U8T40A1414003">Onderzoeken van de klepspeling (toelaatbare speling):M16A</intxref>
+.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Kleptiming (Zie 
+<intxref refid = "U8T40A1426016">Uit- en inbouw van de 2e distributieketting en de kettingspanner:J20A</intxref>
+ of 
+<intxref refid = "U8T40A1416017">Uitbouw en inbouw van de distributieketting en de kettingspanner:M16A</intxref>
+.)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Zijn ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Controleer de bedradingsbundel en de verbinding van de ECM-massa, het ontstekingssysteem en de brandstofverstuiver op onregelmatige stroomonderbreking en kortsluiting.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het defecte onderdeel.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

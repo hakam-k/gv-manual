@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124029" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0300 &#x002F; P0301 &#x002F; P0302 &#x002F; P0303 &#x002F; P0304
+</title>
+<attention3>
+<ptxt>
+Az egyes hengerek azonosításával kapcsolatos további részletekről lásd: 
+<intxref refid = "H8T40A1120009">A henger azonosításával kapcsolatos óvintézkedések:J24B</intxref>
+.
+</ptxt>
+</attention3>
+<servinfosub id = "H8T40A1124029001">
+<title>
+A rendszer leírása
+</title>
+<ptxt>
+Az ECM a forgattyústengely szögsebességét méri a az egyes hengerek CKP és CMP érzékelőinek impulzusjelei alapján. Ha nagy változást észlel a forgattyústengely szögsebességénél, ez gyújtáskimaradásra utal. Ha az ECM által számolt gyújtáskimaradások száma a DTC észlelési feltételeit meghaladja, határozza meg azt a hengert, ahol a gyújtáskimaradás történt, és DTC-ként került kijelzésre.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124029002">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "5.296in"/>
+<colspec colnum = "2" colname = "2" colwidth = "1.908in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+P0300: Véletlenszerű &#x002F; Több henger gyújtáskimaradás észlelés
+</emph>
+</ptxt>
+<ptxt>
+Ez a DTC akkor jelenik meg, ha teljesül a következő feltételek valamelyike.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A gyújtáskimaradás 2, vagy több hengernél túllépi a meghatározott gyújtáskimaradási arányt, mely a katalizátor sérülését okozhatja.
+</ptxt>
+<ptxt>
+(A MIL addig villog, amíg ez a gyújtáskimaradás folyamatosan fennáll.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+A gyújtáskimaradás 2, vagy több hengernél túllépi a meghatározott gyújtáskimaradási arányt, mely káros hatással van a kipufogógáz emisszióra.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kipufogórendszer
+</ptxt>
+</item>
+<item>
+<ptxt>
+Levegőbeszívó rendszer
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gyújtásrendszer
+</ptxt>
+</item>
+<item>
+<ptxt>
+Üzemanyag-ellátó rendszer
+</ptxt>
+</item>
+<item>
+<ptxt>
+Motor kompresszió
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szelephézag
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szelepvezérlés
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+DTC P0301: 1. henger gyújtáskimaradás észlelése
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+DTC P0302: 2. henger gyújtáskimaradás észlelése
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+DTC P0303: 3. henger gyújtáskimaradás észlelése
+</emph>
+</ptxt>
+<ptxt>
+<emph>
+DTC P0304: 4. henger gyújtáskimaradás észlelése
+</emph>
+</ptxt>
+<ptxt>
+Ez a DTC akkor jelenik meg, ha teljesül a következő feltételek valamelyike.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A gyújtáskimaradás a meghatározott hengernél túllépi a meghatározott gyújtáskimaradási arányt, mel y a katalizátor sérülését okozza.
+</ptxt>
+<ptxt>
+(A MIL addig villog, amíg ez a gyújtáskimaradás folyamatosan fennáll.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+A gyújtáskimaradási arány a meghatározott hengernél túllépi a meghatározott gyújtáskimaradási arányt, mely káros hatással van a kipufogógáz emisszióra. (2 működési ciklusos észlelési logika)
+</ptxt>
+</item>
+</list1>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Gyújtásrendszer
+</ptxt>
+</item>
+<item>
+<ptxt>
+Motor kompresszió
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szelephézag
+</ptxt>
+</item>
+<item>
+<ptxt>
+Üzemanyag-befecskendező és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<figure>
+<graphic graphicname = "I8T401112014.swf" width = "183.000mm" height = "142.525mm" ver = "01" gw = "446" gh = "387"/>
+<callout>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "6" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "0.315in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.249in"/>
+<colspec colnum = "3" colname = "3" colwidth = "0.315in"/>
+<colspec colnum = "4" colname = "4" colwidth = "2.124in"/>
+<colspec colnum = "5" colname = "5" colwidth = "0.315in"/>
+<colspec colnum = "6" colname = "6" colwidth = "1.791in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+&#x005B;A&#x005D;:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+ECM csatlakozó (Nézet: A)
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+B3:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 3. sz. parancsáramköre
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+2.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+2. sz. gyújtótekercs egység
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+A1:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 1. sz. tápáramköre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+B4:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 4. sz. parancsáramköre
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+3.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+3. sz. gyújtótekercs egység
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+A2:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 2. sz. tápáramköre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+C1:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 1. sz. testáramköre
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+4.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+4. sz. gyújtótekercs egység
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+A3:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 3. sz. tápáramköre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+C2:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 2. sz. testáramköre
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+5.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+ECM
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+A4:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 4. sz. tápáramköre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+C3:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 3. sz. testáramköre
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+6.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+&#8220;IGN&#8221; biztosíték
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+B1:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 1. sz. parancsáramköre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+C4:
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 4. sz. testáramköre
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+7.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtáskapcsoló 
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+B2:
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+Gyújtótekercs 2. sz. parancsáramköre
+</ptxt>
+</entry>
+<entry colname = "3" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+1.
+</ptxt>
+</entry>
+<entry colname = "4" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+1. sz. gyújtótekercs egység
+</ptxt>
+</entry>
+<entry colname = "5" border-top = "1" border-bottom = "1" border-left = "1" border-right = "0" align = "right">
+<ptxt>
+8.
+</ptxt>
+</entry>
+<entry colname = "6" border-top = "1" border-bottom = "1" border-left = "0" border-right = "1">
+<ptxt>
+&#8220;IG COIL&#8221; biztosíték
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</callout>
+</figure>
+</servinfosub>
+<servinfosub id = "H8T40A1124029003">
+<title>
+DTC megerősítési eljárás
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Közúti próba végzéséhez olyan helyet válasszon, ahol nincs forgalom, illetve nem áll fenn a közúti baleset veszélye. A próbát a balesetek elkerülése érdekében igen óvatosan végezze.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A közúti próbát vízszintes úton, két személy végezze, a vezető és a vizsgálatot végző személy.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Amennyiben a DTC-t, mely más, mint a cél DTC, észlelt előzőleg a DTC megerősítési eljárásban, győződjön meg róla, hogy hibakeresést végez az előzőleg észlelt DTC ügyében.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Győződjön meg arról, hogy az alábbi feltételek teljesülnek-e, amikor ezt az eljárást alkalmazza.
+</ptxt>
+</item>
+<list2 type = "unordered">
+<item>
+<ptxt>
+&#8211;10 &#176;C (14 &#176;F) &lt; IAT a motor indulásakor &lt; 80 &#176;C (176 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8211;10 &#176;C (14 &#176;F) &lt; IAT &lt; 70 &#176;C (158 &#176;F)
+</ptxt>
+</item>
+<item>
+<ptxt>
+BARO &gt; 75 kPa (0,8 kgf&#x002F;cm&#x00B2;, 10,8 psi, 0,75 bar)
+</ptxt>
+</item>
+</list2>
+</list1>
+</attention3>
+<s1>
+<ptxt>
+Vezesse a járművet 80 &#8211; 100 km&#x002F;h (50 &#8211; 62 mérföld&#x002F;h) sebességgel 10 percig (tartsa a motor fordulatszámát 2500 &#8211; 4000 ford&#x002F;perc értéken ennél a lépésnél.)
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124029004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124029005">
+<testgroup id = "H8T40A1124029006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124029011">
+<title>
+DTC ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a DTC-t.
+</ptxt>
+</test1>
+<question>
+Található a P0300, P0301, P0302, P0303-on és a P0304-en kívül más DTC is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC-kkel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124029007">
+<title>
+Levegőbeszívó és kipufogórendszer vizsgálata
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a kipufogó és a levegőbeszívó rendszer nem tömődött-e el, vagy nem szivárog-e.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás alkatrészeket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124029008">
+<title>
+Gyújtásrendszer vizsgálata
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a gyújtásrendszert. 
+<intxreftitleoff1 refid = "H8T40A1824003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás alkatrészeket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124029009">
+<title>
+Motor mechanikai rendszereinek ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a motornak azon alkatrészeit vagy rendszereit, amelyek a motor egyenetlen alapjáratát vagy gyenge teljesítményét okozhatják.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motor kompresszió: 
+<intxreftitleoff1 refid = "H8T40A1434001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szelephézag: 
+<intxreftitleoff1 refid = "H8T40A1434003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+<item>
+<ptxt>
+Szelepvezérlés: 
+<intxreftitleoff1 refid = "H8T40A1436021"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás alkatrészeket.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124029010">
+<title>
+Üzemanyag-ellátó rendszer vizsgálata
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az üzemanyagellátó-rendszert. 
+<intxreftitleoff1 refid = "H8T40A1724003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás alkatrészeket, vagy vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

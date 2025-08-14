@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "4E">
+<servcat sctnbr = "04" scnbr = "05">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A4504022" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC U1100: Lost Communication with ECM (Reception Error) (Diesel Engine Model)
+</title>
+<servinfosub id = "S6JB0A4504022001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0A4504021">DTC U1073: Control Module Communication Bus Off (Diesel Engine Model)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A4504022009">
+<title>
+DTC Detecting Condition
+</title>
+<ptxt>
+Reception error of communication data for ECM is detected more than specified time continuously.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A4504022010">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0A4504022002">
+<testgroup>
+<question>
+Was 
+<intxref refid = "S6JB0A4504001">ABS Check</intxref>
+ performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0A4504001">ABS Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<ptxt>
+Check DTC in ABS (ESP&#174;).
+</ptxt>
+<question>
+Is DTC U1073 detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0A4504021">DTC U1073: Control Module Communication Bus Off (Diesel Engine Model)</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Check connection of connectors of all control modules communicating by means of CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check DTC for ABS (ESP&#174;).
+</ptxt>
+</test1>
+<question>
+Is DTC U1100 detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Intermittent trouble. Check for intermittent referring to 
+<intxref refid = "S6JB0A0006002">Intermittent and Poor Connection Inspection</intxref>
+ in related manual.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect connectors of ABS hydraulic unit &#x002F; control module and ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check CAN communication circuit between ABS and ECM for open, short and high resistance.
+</ptxt>
+</test1>
+<question>
+Is CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace the CAN communication line.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Disconnect connectors of all control modules communicating by means of CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check CAN communication circuit between control modules other than Step 5 for open, short and high resistance.
+</ptxt>
+</test1>
+<question>
+Is each CAN communication circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace the CAN communication line.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Connect connectors of disconnected control modules communicating by means of CAN.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Disconnect each connector and check DTC for ABS (ESP&#174;) in turn.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+<item>
+<ptxt>
+4WD control module (if equipped)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Immobilizer Control module (ICM) (if equipped)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Combination meter
+</ptxt>
+</item>
+<item>
+<ptxt>
+Steering angle sensor (ESP&#174; model)
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Is DTC U1073 detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Check ABS (ESP&#174;) control module power and ground circuit. If circuits are OK, substitute a known-good ABS (ESP&#174;) hydraulic unit &#x002F; control module assembly and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check applicable control module power and ground circuit. If circuit is OK, substitute a known-good applicable control module and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

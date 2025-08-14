@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1134044" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0607 &#x002F; P2610
+</title>
+<attention3>
+<ptxt>
+Miután újraprogramozta az ECM-et, majd megjelenik a P0607 DTC, az ECM újraprogramozása nem fejeződött be megfelelően.
+</ptxt>
+</attention3>
+<servinfosub id = "H8T40A1134044001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.085in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.115in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0607: Vezérlőmodul működés
+</emph>
+</ptxt>
+<ptxt>
+Ez a DTC akkor jelenik meg, ha teljesül a következő feltételek valamelyike.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+AZ ECM belső hibája észlelhető.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az elektromos fojtószelep vezérlő rendszerrel kapcsolatos belső meghibásodás észlelhető az ECM-ben.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+(1 D&#x002F;C észlelési logika), (1 D&#x002F;C észlelési logika, de a MIL nem világít), vagy (2 D&#x002F;C észlelési logika, de a MIL nem világít)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+ECM tápellátó áramkör és&#x002F;vagy testelés áramkör
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM újraprogramozási hiba
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2610: ECM&#x002F;PCM belső motor lekapcsolás időzítés működése
+</emph>
+</ptxt>
+<ptxt>
+A motor lekapcsolás időzítés hibája észlelhető az ECM-ben.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika, de a MIL nem gyullad fel)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1134044002">
+<title>
+A rendszer leírása
+</title>
+<ptxt>
+A belső vezérlőmodul az ECM-be van építve.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1134044003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe legalább 1 percre.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Indítsa be a motort, ha ez lehetséges.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1134044004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1134044005">
+<testgroup id = "H8T40A1134044006">
+<title>
+DTC újraellenőrzése
+</title>
+<test1>
+<ptxt>
+Törölje a DTC-t, lásd: 
+<intxref refid = "H8T40A1134004">DTC törlése:N32A</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Végezze el a DTC megerősítési eljárást és ellenőrizze a DTC-ket.
+</ptxt>
+</test1>
+<question>
+Észlelhető a P0607, vagy P2610 DTC?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Ellenőrizze, hogy van-e időszakosan jelentkező probléma. 
+<intxreftitleoff1 refid = "H8T40A0006002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134044007">
+<title>
+ECM újraprogramozás ellenőrzése
+</title>
+<question>
+Elvégezte az ECM újraprogramozását?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Ismételje meg még egyszer megfelelően az ECM újraprogramozását.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134044008">
+<title>
+ECM tápáramköri és testáramköri ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az ECM áramellátó és testáramkörét. 
+<intxreftitleoff1 refid = "H8T40A1134064"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1134044009">
+<title>
+Az egy időben észlelt más DTC-k hibakeresése
+</title>
+<question>
+Észlelt más hibakódot is?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a vonatkozó DTC hibakereséssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

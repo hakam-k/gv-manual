@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40AA314012" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P1621: Errore linea di comunicazione immobilizzatore
+</title>
+<ptxt>
+<intxrefpoff refid = "L8T40AA312001">Diagramma circuito cablaggio del sistema di controllo dell&apos;immobilizzatore:Modello con motore a benzina</intxrefpoff>
+</ptxt>
+<servinfosub id = "L8T40AA314012001">
+<title>
+Rilevamento condizioni e zona avaria
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione di rilevamento
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Errore di comunicazione tra ICM e ECM rilevato dall&apos;ECM.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Il fusibile corrispondente è bruciato
+</ptxt>
+</item>
+<item>
+<ptxt>
+Connessione difettosa del connettore ICM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Connessione difettosa del connettore ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruzione nel circuito del filo di tensione di alimentazione.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruzione nel circuito del filo di massa.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Interruzione nel circuito di comunicazione
+</ptxt>
+</item>
+<item>
+<ptxt>
+Corto a massa nel circuito di comunicazione.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Corto a tensione nei circuiti di comunicazione.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Corto dei circuiti di comunicazione
+</ptxt>
+</item>
+<item>
+<ptxt>
+ICM difettoso
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM difettoso
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40AA314012002">
+<title>
+Risoluzione dei problemi
+</title>
+<diag type = "test" id = "L8T40AA314012003">
+<testgroup>
+<title>
+Conferma del codice diagnostico guasti (DTC)
+</title>
+<test1>
+<ptxt>
+Azzerare i DTC facendo riferimento a 
+<intxref refid = "L8T40AA314003">Spazio libero DTC:Modello con motore a benzina</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione su OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare se sono stati rilevati dei DTC facendo riferimento a 
+<intxref refid = "L8T40AA314002">Controllo DTC:Modello con motore a benzina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il DTC P1621 viene ancora rilevato?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+La procedura di ricerca dei guasti è stata completata.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo fusibili
+</title>
+<test1>
+<ptxt>
+Controllare se ci sono fusibili corrispondenti bruciati.
+</ptxt>
+</test1>
+<question>
+Ci sono fusibili bruciati?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Sostituire il fusibile (i) bruciato(i) con fusibile(i) nuovo(i).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo della connessione ICM scarsa
+</title>
+<test1>
+<ptxt>
+Staccare il connettore ICM &#8220;G24&#8221; facendo riferimento a 
+<intxref refid = "L8T40AA316001">Rimozione e installazione del modulo di controllo immobilizzatore (ICM):Modello con motore a benzina</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare se le connessioni sono normali sul connettore ICM &#8220;G24&#8221;.
+</ptxt>
+</test1>
+<question>
+Ciascuna connessione filo è normale?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare la connessioni difettose.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo della connessione ECM scarsa
+</title>
+<test1>
+<ptxt>
+Staccare il connettore ECM &#8220;E23&#8221;.
+</ptxt>
+<ptxt>
+- Modelli M16A e J20A: 
+<intxreftitleoff1 refid = "L8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- modello J24B: 
+<intxreftitleoff1 refid = "L8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modello N32A: 
+<intxreftitleoff1 refid = "L8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+verificare la corretta connessione dei terminali al connettore ECM.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modello M16A, J20A e J24B: &#8220;E23-13&#8221; e &#8220;E23-28&#8221;
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modello N32A: &#8220;E23-1&#8221; e &#8220;E23-3&#8221;
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Ciascuna connessione filo è normale?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare la connessioni difettose.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Interruzione nel circuito del filo di tensione di alimentazione.
+</title>
+<test1>
+<ptxt>
+Connettere il connettore ICM &#8220;G24&#8221; facendo riferimento a 
+<intxref refid = "L8T40AA316001">Rimozione e installazione del modulo di controllo immobilizzatore (ICM):Modello con motore a benzina</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Con l&apos;interruttore di avviamento in posizione ON, controllare il voltaggio tra il terminale del cavo &#8220;G24-1&#8221; all&apos;ICM e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La tensione è circa 12 V?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare l&apos;interruzione nel circuito del filo di tensione di alimentazione.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificare la presenza di interruzioni nel circuito del filo di tensione di alimentazione.
+</title>
+<test1>
+<ptxt>
+Con l&apos;interruttore di avviamento in posizione ON, controllare il voltaggio tra il terminale del cavo &#8220;G24-2&#8221; all&apos;ICM e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La tensione è 0
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare l&apos;interruzione nel circuito del filo di massa.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificare la presenza di un corto a massa nel circuito di comunicazione.
+</title>
+<test1>
+<ptxt>
+Con il connettore ICM &#8220;G24&#8221; e connettore ECM &#8220;E23&#8221; staccati, controllare la resistenza tra il terminale &#8220;G24-4&#8221; &#x002F; &#8220;G24-3&#8221; sul connettore ICM e massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La resistenza è infinita?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 8.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare il corto circuito a massa nel circuito di comunicazione.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificare la presenza di un corto a tensione nel circuito di comunicazione.
+</title>
+<test1>
+<ptxt>
+Con il connettore ICM &#8220;G24&#8221; e connettore ECM &#8220;E23&#8221; staccati, portare la chiavetta di accensione in posizione ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la tensione tra i terminali filo &#8220;G24-4&#8221; &#x002F; &#8220;G24-3&#8221; del connettore ICM e la massa della carrozzeria.
+</ptxt>
+</test1>
+<question>
+La tensione è 0
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 9.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare il circuito corto a tensione nel circuito dei cablaggio di comunicazione.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificare la presenza di un corto nel circuito di comunicazione
+</title>
+<test1>
+<ptxt>
+Con il connettore ICM &#8220;G24&#8221; e connettore ECM &#8220;E23&#8221; staccati, controllare la resistenza tra il terminale &#8220;G24-3&#8221; e &#8220;G24-3&#8221; del connettore ICM.
+</ptxt>
+</test1>
+<question>
+La resistenza è infinita?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 10.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare il corto dei circuiti di comunicazione
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Verificare la presenza di interruzioni nel circuito del filo di comunicazione.
+</title>
+<test1>
+<ptxt>
+Staccare il connettore ICM &#8220;G24&#8221; facendo riferimento a 
+<intxref refid = "L8T40AA316001">Rimozione e installazione del modulo di controllo immobilizzatore (ICM):Modello con motore a benzina</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Staccare il connettore ECM &#8220;E23&#8221;.
+</ptxt>
+<ptxt>
+- Modelli M16A e J20A: 
+<intxreftitleoff1 refid = "L8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- modello J24B: 
+<intxreftitleoff1 refid = "L8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modello N32A: 
+<intxreftitleoff1 refid = "L8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare la resistenza tra i seguenti terminali del connettore ICM e connettore ECM con la chiavetta di accensione in posizione ON.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Modello M16A, J20A e J24B: &#8220;G24-4&#8221; e &#8220;E23-13&#8221; (&#8220;PNK&#x002F;BLU&#8221;) terminale cavo &#x002F; 
+</ptxt>
+<ptxt>
+&#8220;G24-3&#8221; e &#8220;E23-28&#8221; (&#8220;GRY&#x002F;BLU&#8221;) terminale cavo
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modello N32A: &#8220;G24-4&#8221; e &#8220;E23-1&#8221; (&#8220;PNK&#x002F;BLU&#8221;) terminale cavo &#x002F; 
+</ptxt>
+<ptxt>
+ &#8220;G24-3&#8221; e &#8220;E23-3&#8221; (&#8220;GRY&#x002F;BLU&#8221;) terminale cavo
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+La resistenza è infinita?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Riparare l&apos;interruzione nel circuito del cablaggio di comunicazione.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 11.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo ICM
+</title>
+<test1>
+<ptxt>
+Controllare l&apos;ICM facendo riferimento a 
+<intxref refid = "L8T40AA314020">Ispezione del modulo di controllo immobilizzatore (ICM) e dei suoi circuiti:Modello con motore a benzina</intxref>
+.
+</ptxt>
+</test1>
+<question>
+L&apos;ICM è normale?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Sostituire ECM con uno nuovo.
+</ptxt>
+<ptxt>
+- Modelli M16A e J20A: 
+<intxreftitleoff1 refid = "L8T40A1316001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- modello J24B: 
+<intxreftitleoff1 refid = "L8T40A1326001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+- Modello N32A: 
+<intxreftitleoff1 refid = "L8T40A1336001"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Quindi eseguire 
+<intxref refid = "L8T40AA316003">Procedura dopo la sostituzione del modulo ECM:Modello con motore a benzina</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire l&apos;ICM con uno nuovo facendo riferimento a 
+<intxref refid = "L8T40AA316001">Rimozione e installazione del modulo di controllo immobilizzatore (ICM):Modello con motore a benzina</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

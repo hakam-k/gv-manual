@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "3">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1134048" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0560 &#x002F; P0562 &#x002F; P0563
+</title>
+<servinfosub id = "U8T40A1134048001">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.228in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.968in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0560: Systeemspanning
+</emph>
+</ptxt>
+<ptxt>
+Spanning van ECM-voedingscircuit is lager dan 2,5 V gedurende 2 sec
+</ptxt>
+<ptxt>
+(Opsporingslogica van 2 rijcycli)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Voedingscircuit van de ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Laadsysteem
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0562: Systeemspanning laag
+</emph>
+</ptxt>
+<ptxt>
+Spanning van ECM-voedingscircuit is lager dan 10 V gedurende 2 sec bij het starten van de motor.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 2 rijcycli)
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P0563: Systeemspanning hoog
+</emph>
+</ptxt>
+<ptxt>
+Spanning van ECM-voedingscircuit is hoger dan 18 V gedurende 2 sec bij draaiende motor.
+</ptxt>
+<ptxt>
+(Opsporingslogica van 2 rijcycli)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1134048002">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1134064">Controle van het voedings- en massacircuit van de ECM:N32A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1134048003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention3>
+<ptxt>
+Indien er eerder in de DTC-bevestigingsprocedure andere dan de beoogde DTC&apos;s werden waargenomen, los dan ook de eerder waargenomen DTC&apos;s op.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Start de motor en laat hem op de normale bedrijfstemperatuur komen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Rijd 10 km&#x002F;h (6 mile&#x002F;h) of harder gedurende 5 min.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1134048004">
+<title>
+DTC-storingzoeken
+</title>
+<diag type = "test" id = "U8T40A1134048005">
+<testgroup id = "U8T40A1134048006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1134001">Controle van het motor- en emissieregelsysteem:N32A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134048007">
+<title>
+Controle voedingscircuit van de ECM
+</title>
+<test1>
+<ptxt>
+Controleer ECM-voedingscircuit(H4) zoals beschreven in 1) en 2) onder 
+<intxref refid = "U8T40A1134064">Controle van het voedings- en massacircuit van de ECM:N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is ze in goede staat?
+</question>
+<result>
+JA
+</result>
+<action>
+<paragroup>
+<ptxt>
+Controleer op sporadische storingen. 
+<intxreftitleoff1 refid = "U8T40A0006002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+<ptxt>
+Indien in orde, ga naar stap 3.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Repareer of vervang het defecte onderdeel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1134048008">
+<title>
+Storingzoeken voor andere DTC&apos;s die tegelijk worden waargenomen
+</title>
+<question>
+Worden er tegelijkertijd andere DTC&apos;s waargenomen?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar storingzoeken voor de betrokken DTC.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

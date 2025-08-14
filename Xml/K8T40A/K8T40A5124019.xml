@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40A5124019" svcinfotypenbr = "06" svcinfoqualnbr = "03" supplyoff = "1" modify = "0">
+<title>
+Δεν εκτελείται Εμπλοκή
+</title>
+<servinfosub id = "K8T40A5124019001">
+<title>
+Περιγρα&#248;ή συμπτώματος
+</title>
+<ptxt>
+Το TCM θέτει την ηλεκτρομαγνητική βαλβίδα TCC ελέγχου πίεσης σε κατάσταση OFF κάτω από κάποια από τις παρακάτω συνθήκες.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Η θερμοκρασία του ψυκτικού υγρού του κινητήρα είναι χαμηλότερη από 60 &#176;C (140 &#176;F).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ο διακόπτης 4L &#x002F; N ενεργοποιείται. (λειτουργία 4L ή N)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ο διακόπτης των &#248;ώτων στοπ είναι στη θέση ON. (Το πεντάλ &#248;ρένων είναι πατημένο)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Το TCM ανιχνεύει τους παρακάτω κωδικούς βλαβών.
+</ptxt>
+<ptxt>
+Κωδικοί DTC P0602, P0962, P0963, P0966, P0967, P0970, P0971, P0973, P0974, P0976, P0977, P0985, P0986, P1702, P1706, P2763, P2764, U0073 ή&#x002F;και U0100
+</ptxt>
+</item>
+</list1>
+</servinfosub>
+<servinfosub id = "K8T40A5124019002">
+<title>
+Διάγνωση βλαβών
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Κατά την εκτέλεση μιας δοκιμαστικής οδήγησης, επιλέξτε ένα ασ&#248;αλές σημείο όπου δεν υπάρχει κυκλο&#248;ορία ή πιθανότητα οδικού ατυχήματος και να είστε πολύ προσεκτικοί στη διάρκεια της δοκιμής για να μην συμβεί κάποιο ατύχημα.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Η δοκιμαστική οδήγηση πρέπει να εκτελείται με 2 πρόσωπα, έναν οδηγό και έναν δοκιμαστή, σε επίπεδο δρόμο.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<diag type = "test" id = "K8T40A5124019003">
+<testgroup>
+<question>
+Εκτελέστηκε ο &#34;Έλεγχος συστήματος Α&#x002F;T&#34;;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο 
+<intxref refid = "K8T40A5124001">Έλεγχος Συστήματος A&#x002F;T:5 Αυτόματο Κιβώτιο</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Ελέγξτε για Κωδικό DTC
+</title>
+<question>
+Ανιχνεύεται ο κωδικός DTC P0602, P0962, P0963, P0966, P0967, P0970, P0971, P0973, P0974, P0976, P0977, P0985, P0986, P1702, P1706, P2763, P2764, U0073 ή U0100;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Εκτελέστε τη ροή του κωδικού βλάβης για την επισκευή και δοκιμάστε ξανά.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Έλεγχος ECT 
+</title>
+<test1>
+<ptxt>
+Ζεστάνετε τον κινητήρα μέχρι να αποκτήσει την κανονική θερμοκρασία λειτουργίας.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ελέγξτε το ECT χρησιμοποιώντας διαγνωστικό εργαλείο.
+</ptxt>
+</test1>
+<question>
+Είναι το ECT περισσότερο από 60 &#176;C (140 &#176;F);
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 4.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Ελαττωματικός αισθητήρας ECT, ελαττωματικό κύκλωμα σε αυτόν ή ελαττωματικό σύστημα ψύξης κινητήρα. Εάν είναι ΟΚ, τοποθετήστε ένα TCM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Επιθεώρηση σήματος διακόπτη 4L&#x002F;N
+</title>
+<test1>
+<ptxt>
+Με το διακόπτη ανά&#248;λεξης ανοικτό, ελέγξτε την τάση μεταξύ του ακροδέκτη &#34;Ε93-4&#34; της &#248;ίσας του TCM και της γείωσης.
+</ptxt>
+<spec>
+<title>
+Προδιαγρα&#248;ή διακόπτη 4L&#x002F;N
+</title>
+<ptxt>
+Η θέση σχέσης μετάδοσης είναι &#34;4Η&#34;: Τάση μπαταρίας
+</ptxt>
+<ptxt>
+Η θέση σχέσης μετάδοσης είναι &#34;4L&#34; ή N&#34;: 0 - 2 V
+</ptxt>
+</spec>
+</test1>
+<question>
+Το αποτέλεσμα είναι όπως προβλέπεται;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 5.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Ελαττωματικός διακόπτης 4L&#x002F;N ή το κύκλωμά του. Εάν είναι ΟΚ, τοποθετήστε ένα TCM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Επιθεώρηση σήματος διακόπτη &#248;ώτων στοπ
+</title>
+<test1>
+<ptxt>
+Με το διακόπτη ανά&#248;λεξης ανοικτό, ελέγξτε την τάση μεταξύ του ακροδέκτη της &#248;ίσας του ECM και της γείωσης.
+</ptxt>
+<spec>
+<title>
+Προδιαγρα&#248;ή διακόπτη &#248;ώτων στοπ
+</title>
+<ptxt>
+Το πεντάλ &#248;ρένων είναι απελευθερωμένο: 0 - 1 V
+</ptxt>
+<ptxt>
+Το πεντάλ &#248;ρένων είναι πατημένο: Τάση μπαταρίας
+</ptxt>
+</spec>
+</test1>
+<question>
+Το αποτέλεσμα είναι όπως προβλέπεται;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα TCM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Μη ρυθμισμένος διακόπτης &#248;ώτων στοπ, ελαττωματικός διακόπτης &#248;ώτων στοπ ή ελαττωματικό κύκλωμα του διακόπτη. Εάν είναι ΟΚ, τοποθετήστε ένα TCM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

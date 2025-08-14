@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124093" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2016 &#x002F; P2017
+</title>
+<servinfosub id = "H8T40A1124093001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.887in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.327in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph>
+DTC P2016: Szívócső kapcsolás helyzetérzékelő&#x002F;kapcsoló feszültsége alacsony
+</emph>
+</ptxt>
+<ptxt>
+Az IMRC szelep helyzetérzékelő jeláramkör kimeneti feszültsége kisebb, mint 0,22 V.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" morerows = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+IMRC szelep helyzetérzékelő és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+<ptxt>
+</ptxt>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph>
+DTC P2017: Szívócső kapcsolás helyzetérzékelő&#x002F;kapcsoló feszültsége magas
+</emph>
+</ptxt>
+<ptxt>
+Az IMRC szelep helyzetérzékelő jeláramkör kimeneti feszültsége nagyobb, mint 4,3 V.
+</ptxt>
+<ptxt>
+(2 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124093002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124091">DTC P2004 &#x002F; P2006:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124093003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe 10 másodpercig.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124093004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H8T40A1124093005">
+<testgroup id = "H8T40A1124093006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124093007">
+<title>
+IMRC szelep helyzetérzékelő áramellátó áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az IMRC szelep aktuátorról.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása az IMRC szelep aktuátor csatlakozójánál.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a csatlakozás rendben van, fordítsa a gyújtáskapcsolót ON helyzetbe.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a feszültség az IMRC szelep helyzetérzékelő áramellátó áramkör (B1) és az IMRC szelep helyzetérzékelő testáramkör (B3) között 5 V.
+</ptxt>
+</test1>
+<question>
+ Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa az 5. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124093008">
+<title>
+IMRC szelep helyzetérzékelő testáramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a feszültség az IMRC szelep helyzetérzékelő áramellátó áramkör (B1) és a karosszéria testelése között 5 V-e.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+<ptxt>
+Ha a DTC továbbra is észlelhető, a mostani helyére tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124093009">
+<title>
+IMRC szelep helyzetérzékelő áramellátó áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben vannak a csatlakozások, ellenőrizze, hogy az IMRC szelep helyzetérzékelő áramellátó áramköre (B1) megfelel-e a következőknek.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az IMRC szelep helyzetérzékelő áramellátó áramkör vezetékkötegének ellenállása kevesebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az IMRC szelep helyzetérzékelő áramellátó áramköre és a karosszériatest közötti szigetelési ellenállás végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása az IMRC szelep helyzetérzékelő áramellátó áramkör érintkezője és az IMRC szelep aktuátor csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az IMRC szelep helyzetérzékelő áramellátó áramkörének áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124093010">
+<title>
+IMRC szelep helyzetérzékelő jeláramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy megfelelő-e a csatlakozók és vezetékek csatlakozása az ECM-nél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha rendben vannak a csatlakozások, ellenőrizze, hogy az IMRC szelep helyzetérzékelő jeláramköre (B2) megfelel-e a következőknek.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Az IMRC szelep helyzetérzékelő jeláramkör vezetékkötegének ellenállása kevesebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az IMRC szelep helyzetérzékelő jeláramköre és a karosszériatest közötti szigetelési ellenállás végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása az IMRC szelep helyzetérzékelő jeláramkör érintkezője és az IMRC szelep aktuátor csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Az IMRC szelep helyzetérzékelő jeláramkörének áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 6. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124093011">
+<title>
+IMRC szelep aktuátor ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze az IMRC szelep aktuátort. 
+<intxreftitleoff1 refid = "H8T40A1326033"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki az IMRC szelepet. 
+<intxreftitleoff1 refid = "H8T40A1326032"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

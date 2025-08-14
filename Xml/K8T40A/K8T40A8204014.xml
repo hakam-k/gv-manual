@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "K8T40A8204014" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1021: Ενεργοποιημένη μονάδα αερόσακου
+</title>
+<servinfosub id = "K8T40A8204014001">
+<title>
+Ο Κωδικός Βλάβης Θα Καταγραφεί όταν
+</title>
+<ptxt>
+Το SDM ανιχνεύει μια σύγκρουση επαρκούς δύναμης για να εγγυηθεί την ενεργοποίηση του συστήματος αερόσακων. (Το SDM εξάγει μια εντολή φουσκώματος.)
+</ptxt>
+</servinfosub>
+<servinfosub id = "K8T40A8204014002">
+<title>
+Περιγραφή Ροής Ελέγχου
+</title>
+<ptxt>
+<emph etype = "bold">
+Βήμα 1: Ελέγξτε ότι ο κωδικός βλάβης B1021 έχει καταγραφεί παρότι δεν έχει ενεργοποιηθεί ο αερόσακος.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Βήμα 2: Ελέγξτε ότι ο κωδικός βλάβης έχει καταγραφεί εξαιτίας βλάβης του SDM.
+</emph>
+</ptxt>
+<attention3>
+<ptxt>
+Πριν την εκτέλεση των βημάτων αυτής της ροής, πρέπει να εκτελέσετε το 
+<intxref refid = "K8T40A8204001">Έλεγχος Διαγνωστικού Συστήματος Αερόσακων</intxref>
+.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "K8T40A8204014003">
+<title>
+Διάγνωση Κωδικού DTC
+</title>
+<diag type = "test" id = "K8T40A8204014004">
+<testgroup id = "K8T40A8204014005">
+<test1>
+<ptxt>
+Κλείστε το διακόπτη ανάφλεξης.
+</ptxt>
+</test1>
+<question>
+Έχει φουσκώσει ο αερόσακος;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Αντικαταστήστε τα εξαρτήματα και τελέστε επιθεωρήσεις σύμφωνα με τις οδηγίες στο 
+<intxref refid = "K8T40A8204041">Επισκευή και Επιθεώρηση που Απαιτούνται μετά από ένα Ατύχημα</intxref>
+.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Πηγαίνετε στο Βήμα 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "K8T40A8204014006">
+<test1>
+<ptxt>
+Επιθεωρήστε το μπροστινό τμήμα του αυτοκινήτου και την περιοχή κάτω από το δάπεδο για σημάδια πρόσκρουσης.
+</ptxt>
+</test1>
+<question>
+Υπάρχουν σημάδια πρόσκρουσης;
+</question>
+<result>
+ΝΑΙ
+</result>
+<action>
+<ptxt>
+Αντικαταστήστε τα εξαρτήματα και τελέστε επιθεωρήσεις σύμφωνα με τις οδηγίες στο 
+<intxref refid = "K8T40A8204041">Επισκευή και Επιθεώρηση που Απαιτούνται μετά από ένα Ατύχημα</intxref>
+.
+</ptxt>
+</action>
+<result>
+ΟΧΙ
+</result>
+<action>
+<ptxt>
+Τοποθετήστε ένα SDM που γνωρίζετε ότι λειτουργεί σωστά και ελέγξτε πάλι.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Με την ολοκλήρωση της επιθεώρησης και της επισκευής, εκτελέστε τα παρακάτω.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Επανασυνδέστε όλα τα εξαρτήματα του συστήματος αερόσακων και βεβαιωθείτε ότι όλα τα εξαρτήματα είναι κατάλληλα στηριγμένα.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Επαναλάβετε τον 
+<intxref refid = "K8T40A8204001">Έλεγχος Διαγνωστικού Συστήματος Αερόσακων</intxref>
+ για να βεβαιωθείτε ότι το πρόβλημα έχει διορθωθεί.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Διαγράψτε τους κωδικούς βλάβης DTC του BCM αναφερόμενοι στο 
+<intxref refid = "K8T40AA204006">Διαγρα&#248;ή Κωδικού DTC</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

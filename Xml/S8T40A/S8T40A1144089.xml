@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "4">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40A1144089" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0016: CKP &#8211; CMP Correlation
+</title>
+<attention3>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Conditions for applying fault finding procedures to stored faults: The fault becomes present after an attempt to start.
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the fault is stored, erase the fault from the ECM memory. Turn OFF ignition switch, start the engine and check that the fault does not reappear.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Use service wire for any operation on the ECM connectors.
+</ptxt>
+</item>
+</list1>
+</attention3>
+<servinfosub id = "S8T40A1144089001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+For wiring circuit and connector number, refer to 
+<intxref refid = "S8T40A910E013">A-5 Engine and A&#x002F;C Control System Circuit Diagram (Diesel Model)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40A1144089002">
+<title>
+Detecting Condition
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.445in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.445in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Displaying on SUZUKI scan tool
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Detecting condition
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+D1
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Inconsistency of signal
+</ptxt>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40A1144089003">
+<title>
+Troubleshooting
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "1" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "6.890in"/>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the CKP sensor and CMP sensor connections.
+</ptxt>
+<ptxt>
+Check the ECM connections.
+</ptxt>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Check the continuity and the absence of interference resistance with the connector disconnected from the following connections:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C08-1&#8221; wire of CMP sensor connector and &#8220;C86-18&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C08-2&#8221; wire of CMP sensor connector and &#8220;C86-15&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C20-1&#8221; wire of CKP sensor connector and &#8220;C86-17&#8221; terminal of ECM connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+Between &#8220;C20-2&#8221; wire of CKP sensor connector and &#8220;C86-16&#8221; terminal of ECM connector
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Repair if necessary.
+</ptxt>
+</entry>
+</row>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+With ignition switch ON and the CMP sensor connected: Use a voltmeter to measure the voltage across &#8220;C08-1&#8221; and &#8220;C08-3&#8221; wire of the CMP sensor connector:
+</ptxt>
+<ptxt>
+The voltage displayed should be equal to the battery voltage &#8211;0.08 to 0.08 V.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+If the voltage is outside permitted tolerance values, take the measurement again on the connector, with the CMP sensor disconnected,
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the voltage is still outside permitted tolerance values with the sensor disconnected.
+</ptxt>
+</item>
+</list1>
+<ptxt>
+Check the following connection for continuity and for the absence of interference resistance:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Between &#8220;C08-3&#8221; wire of the CMP sensor connector and &#8220;E33-6&#8221; wire of main relay mounting connector
+</ptxt>
+</item>
+<item>
+<ptxt>
+If the measured voltage is correct with the sensor disconnected.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Measure the resistance of the CMP sensor between &#8220;C08-2&#8221; and &#8220;C08-3&#8221; terminals.
+</ptxt>
+<ptxt>
+Replace the CMP sensor if the resistance is not 9750 &#8211; 10750 &#937; at 20 &#176;C, 68 &#176;F
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check that the CKP sensor is correctly mounted and that the flywheel target is not damaged.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check that the gap between the CKP sensor and the engine flywheel is 0.5 &#8211; 1.8 mm (0.020 &#8211; 0.017 in).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Check the resistance of the CKP sensor between &#8220;C20-1&#8221; and &#8220;C20-2&#8221; terminals.
+</ptxt>
+<ptxt>
+Replace the CKP sensor if its resistance is not 612 &#8211; 880 &#937; at 20 &#176;C, 68 &#176;F.
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

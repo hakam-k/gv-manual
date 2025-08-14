@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10C">
+<servcat sctnbr = "10" scnbr = "03">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S8T40AA314010" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P1616: Unregistered Keyless Start Control Module (for Vehicle with Keyless Start System)
+</title>
+<servinfosub id = "S8T40AA314010001">
+<title>
+Circuit Description
+</title>
+<ptxt>
+P1616 is detected when ECM detects different ID codes registered in ECM and keyless start control module after turning engine start knob to ON position. Normally, when keyless start control module is replaced with new one, ECM automatically registers the applicable code in keyless start control module after turning ignition switch to ON position. However, when keyless start control module is replaced with used one, ECM does not automatically register the applicable code in keyless start control module even if ignition switch is turned to ON position.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S8T40AA314010002">
+<title>
+Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Detecting Condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Trouble Area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+ECM detects different ID codes registered in ECM and keyless start control module.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Keyless start control module faulty
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM faulty
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S8T40AA314010003">
+<title>
+Troubleshooting
+</title>
+<diag type = "test" id = "S8T40AA314010004">
+<testgroup>
+<title>
+Diagnostic Trouble Code (DTC) confirmation
+</title>
+<test1>
+<ptxt>
+Clear DTC(s) referring to 
+<intxref refid = "S8T40AA314003">DTC Clearance:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Turn ignition switch to OFF position.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check if any DTC is detected referring to 
+<intxref refid = "S8T40AA314004">DTC Table:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is DTC P1616 still detected?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+The troubleshooting is completed.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Registration of the ignition key
+</title>
+<test1>
+<ptxt>
+Clear DTC referring to 
+<intxref refid = "S8T40AA314003">DTC Clearance:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Register the transponder code in the transponder in the ignition key with ECM referring to 
+<intxref refid = "S8T40AA316002">Registration of the Ignition Key:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Was it possible to register the ignition key (transponder code) in ECM?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Keyless start system operation check
+</title>
+<test1>
+<ptxt>
+Start engine using keyless start system.
+</ptxt>
+</test1>
+<question>
+Does engine start?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+The troubleshooting is completed.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check if any DTC is detected by ECM. If detected, perform the troubleshooting referring to the corresponding flowchart.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Diagnostic Trouble Code (DTC) check
+</title>
+<test1>
+<ptxt>
+Check ECM for DTC referring to 
+<intxref refid = "S8T40AA314002">DTC Check:Petrol Engine Model</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Are DTC P1618 and&#x002F;or P1615 detected other than P1616?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to troubleshooting for applicable DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

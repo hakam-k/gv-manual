@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A5124036" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0974 &#x002F; P0977 &#x002F; P0986: Elettrovalvola del cambio &#8220;A&#8221; Circuito di controllo alto &#x002F; Elettrovalvola del cambio &#8220;B&#8221; Circuito di controllo alto &#x002F; Elettrovalvola del cambio &#8220;E&#8221; Circuito di controllo alto
+</title>
+<servinfosub id = "L8T40A5124036001">
+<title>
+Cablaggio del sistema
+</title>
+<ptxt>
+Vedere 
+<intxref refid = "L8T40A5124035">DTC P0973 &#x002F; P0976 &#x002F; P0985: Elettrovalvola del cambio &#8220;A&#8221; Circuito di controllo basso &#x002F; Elettrovalvola del cambio &#8220;B&#8221; Circuito di controllo basso &#x002F; Elettrovalvola del cambio &#8220;E&#8221; Circuito di controllo basso:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A5124036002">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.134in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.031in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Condizione rilevamento DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+La tensione del terminale TCM dell&apos;elettrovalvola di cambio è 6alta sebbene il TCM stia comandando all&apos;elettrovalvola di cambio di spegnersi.
+</ptxt>
+<ptxt>
+(Logica di rilevamento ciclo di guida 1)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito elettrovalvola di cambio aperto o in corto al circuito di alimentazione.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Avaria dell&apos;elettrovalvola cambio
+</ptxt>
+</item>
+<item>
+<ptxt>
+TCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A5124036003">
+<title>
+Procedura di conferma DTC
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Quando si esegue una prova su strada, scegliere un luogo in cui non ci sia traffico o possibilità di un incidente e fare molta attenzione durante la prova per evitare incidenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La prova su strada deve essere eseguita con 2 persone, un guidatore e un collaudatore su una strada in pianura.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Resettare i DTC nella memoria TCM e ECM usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e selezionare con la leva del cambio il rapporto &#8220;D&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il veicolo ed aumentare la velocità fino a 60 km&#x002F;h (37 miglia&#x002F;h) in rapporto &#8220;D&#8221;.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Mantenere la velocità per 20 secondi e poi rallentare gradualmente.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Fermare il veicolo.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllo DTC, DTC in attesa e dati freeze-frame.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A5124036004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A5124036005">
+<testgroup>
+<question>
+È stato effettuato il &#8220;controllo del sistema A&#x002F;T&#8221;?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A5124001">Controllo sistema A&#x002F;T:5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllare il circuito elettrovalvola del cambio per verificare la presenza di cortocircuiti all&apos;alimentazione.
+</title>
+<test1>
+<ptxt>
+Scollegare i connettori TCM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare il corretto collegamento al TCM in corrispondenza dei terminali &#8220;E92-16&#8221; (per l&apos;elettrovalvola del cambio A), &#8220;E92-15&#8221; (per l&apos;elettrovalvola del cambio B) o &#8220;E92-14&#8221; (per l&apos;elettrovalvola del cambio E).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se il collegamento è OK, portare l&apos;interruttore di accensione su ON e misurare la tensione tra il terminale &#8220;E92-16&#8221; (per l&apos;elettrovalvola del cambio A), &#8220;E92-15&#8221; (per l&apos;elettrovalvola del cambio B) o &#8220;E92-14&#8221; (per l&apos;elettrovalvola del cambio E) del connettore TCM lato cablaggio scollegato e la massa.
+</ptxt>
+</test1>
+<question>
+È 0 &#8211; 2 V?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Corto del circuito di controllo dell&apos;elettrovalvola del cambio A, B o E sul circuito di alimentazione della tensione.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllare l&apos;eventuale presenza di un&apos;interruzione nel circuito dell&apos;elettrovalvola del cambio
+</title>
+<test1>
+<ptxt>
+Controllare la continuità tra il terminale &#8220;E92-16&#8221; (per l&apos;elettrovalvola del cambio A), &#8220;E92-15&#8221; (per l&apos;elettrovalvola del cambio B) o &#8220;E92-14&#8221; (per l&apos;elettrovalvola del cambio E) del connettore TCM lato cablaggio scollegato e la massa.
+</ptxt>
+</test1>
+<question>
+È infinita?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<paragroup>
+<ptxt>
+Il circuito di controllo dell&apos;elettrovalvola del cambio A, B o E è un circuito aperto.
+</ptxt>
+<ptxt>
+Se il circuito è OK, andare al punto 4.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllare l&apos;elettrovalvola di controllo
+</title>
+<test1>
+<ptxt>
+Controllare la valvola solenoide facendo riferimento a 
+<intxref refid = "L8T40A5126021">Ispezione elettrovalvole (elettrovalvola del cambio A, elettrovalvola del cambio B, elettrovalvola del cambio E, elettrovalvola di controllo pressione TCC, elettrovalvola di controllo pressione A, elettrovalvola di controllo pressione B ed elettrovalvola di controllo pressione C):5 A&#x002F;T</intxref>
+.
+</ptxt>
+</test1>
+<question>
+I risultati del controllo sono soddisfacenti?
+</question>
+<result>
+SÌ
+</result>
+<action>
+<ptxt>
+Guasto intermittente o TCM difettoso. Controllare l&apos;eventuale presenza di un guasto intermittente facendo riferimento a 
+<intxref refid = "L8T40A0006002">Ispezione delle connessioni scarse e discontinue</intxref>
+. Se OK, sostituire con un TCM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire l&apos;elettrovalvola difettosa del cambio facendo riferimento a 
+<intxref refid = "L8T40A5126020">Rimozione e installazione elettrovalvole (elettrovalvola del cambio A, elettrovalvola del cambio B, elettrovalvola del cambio E, elettrovalvola di controllo pressione TCC, elettrovalvola di controllo pressione A, elettrovalvola di controllo pressione B ed elettrovalvola di controllo pressione C):5 A&#x002F;T</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

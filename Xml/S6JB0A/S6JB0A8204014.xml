@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0A8204014" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1021: Air Bag Module Deployed
+</title>
+<servinfosub id = "S6JB0A8204014001">
+<title>
+DTC Will Set when
+</title>
+<ptxt>
+The SDM detects a crash of sufficient force to warrant activation of the air bag system. (SDM outputs a deployment command.)
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0A8204014002">
+<title>
+Flow Test Description
+</title>
+<ptxt>
+<emph etype = "bold">
+Step 1: Check that DTC B1021 has been set although air bag has not been deployed.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Step 2: Check that DTC has been set due to failure of SDM.
+</emph>
+</ptxt>
+<attention3>
+<ptxt>
+Before executing items in this flow, be sure to perform 
+<intxref refid = "S6JB0A8204001">Air Bag Diagnostic System Check</intxref>
+.
+</ptxt>
+</attention3>
+</servinfosub>
+<servinfosub id = "S6JB0A8204014003">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0A8204014004">
+<testgroup>
+<test1>
+<ptxt>
+Turn ignition switch OFF.
+</ptxt>
+</test1>
+<question>
+Has air bag deployed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace components and perform inspections as directed in 
+<intxref refid = "S6JB0A8204041">Repair and Inspection Required after Accident</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Inspect front of vehicle and undercarriage for signs of impact.
+</ptxt>
+</test1>
+<question>
+Are there signs of impact?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Replace components and perform inspections as directed in 
+<intxref refid = "S6JB0A8204041">Repair and Inspection Required after Accident</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Substitute a known-good SDM and recheck.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Upon completion of inspection and repair work, perform the following items.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Reconnect all air bag system components and ensure all components are properly mounted.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Repeat 
+<intxref refid = "S6JB0A8204001">Air Bag Diagnostic System Check</intxref>
+ to confirm that the trouble has been corrected.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Clear DTCs of BCM referring to 
+<intxref refid = "S6JB0AA204006">DTC Clearance</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

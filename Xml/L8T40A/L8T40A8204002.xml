@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A8204002" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Sequenza di controllo sistema diagnostico airbag
+</title>
+<attention2>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Assicurarsi di eseguire 
+<intxref refid = "L8T40A8204001">Controllo diagnostico sistema airbag</intxref>
+ prima di dare avvio alle procedure diagnostiche previste in ciascuno schema.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando la procedura diagnostica richiede la misurazione della resistenza o della tensione, utilizzare un tester insieme a un apposito adattatore per terminali dall&apos;attrezzo speciale (kit adattatore test connettori).
+</ptxt>
+</item>
+<item>
+<ptxt>
+Quando e necessario verificare che non vi siano problemi a carico dei collegamenti, consultare 
+<intxref refid = "L8T40A8204040">Controllo di problemi intermittenti e collegamenti difettosi</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Se nel cablaggio dell&apos;airbag viene rilevata un&apos;interruzione nel circuito o un connettore o un morsetto danneggiato, sostituire rispettivamente l&apos;intero gruppo cablaggio, connettori o terminali.
+</ptxt>
+</item>
+</list1>
+</attention2>
+<servinfosub id = "L8T40A8204002001">
+<title>
+Descrizione test di flusso
+</title>
+<ptxt>
+<emph etype = "bold">
+Punto 1: Controllare la spia &#8220;AIR BAG&#8221; e i circuiti relativi.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Punto 2: Controllare che la spia &#8220;AIR BAG&#8221; si accenda.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Punto 3: Controllare che la spia &#8220;AIR BAG&#8221; lampeggi per sei volte dopo aver acceso il quadro.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Punto 4: Controllare che i codici di errore storici siano presenti nella memoria SDM. 
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Punto 5: Controllare che il codice di errore attuale sia presente nella memoria SDM. 
+</emph>
+</ptxt>
+<diag type = "test" id = "L8T40A8204002002">
+<testgroup id = "L8T40A8204002003">
+<test1>
+<ptxt>
+Assicurarsi che la tensione della batteria sia di circa 11 V o superiore.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Osservare la spia &#8220;AIR BAG&#8221; nel momento in cui viene acceso il quadro.
+</ptxt>
+</test1>
+<question>
+La spia di avvertimento &#8220;AIR BAG&#8221; si accende quando viene acceso il quadro?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare a 
+<intxref refid = "L8T40A8204008">La spia di avvertimento &#8220;AIR BAG&#8221; non si accende</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A8204002004">
+<question>
+La spia di avvertimento &#8220;AIR BAG&#8221; si accende e rimane fissa?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare a 
+<intxref refid = "L8T40A8204007">La spia di avvertimento &#8220;AIR BAG&#8221; si accende e rimane fissa</intxref>
+.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A8204002005">
+<question>
+La spia di avvertimento &#8220;AIR BAG&#8221; si spegne dopo aver lampeggiato 6 volte?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Il circuito della spia di avvertimento &#8220;AIR BAG&#8221; e in buone condizioni. Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Il circuito della spia di avvertimento &#8220;AIR BAG&#8221; e in buone condizioni. Passare al punto 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A8204002006">
+<ptxt>
+Controllare il DTC facendo riferimento a 
+<intxref refid = "L8T40A8204004">Controllo DTC</intxref>
+.
+</ptxt>
+<question>
+Sullo scanner SUZUKI si legge &#8220;NO CODES&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Il sistema airbag e in buone condizioni.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Si e verificato un problema intermittente da qualche parte.
+</ptxt>
+<ptxt>
+Controllare il cablaggio del connettore, ecc. relativo al DTC rilevato.
+</ptxt>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A8204040">Controllo di problemi intermittenti e collegamenti difettosi</intxref>
+.
+</ptxt>
+<ptxt>
+Cancellare quindi il DTC (facendo riferimento a 
+<intxref refid = "L8T40A8204005">Spazio libero DTC</intxref>
+.) e ripetere questa procedura.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A8204002007">
+<ptxt>
+Controllare il DTC facendo riferimento a 
+<intxref refid = "L8T40A8204004">Controllo DTC</intxref>
+.
+</ptxt>
+<question>
+Sullo scanner SUZUKI si legge &#8220;NO CODES&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Rimpiazzare con un SDM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Controllare e riparare in base alla tabella di flusso corrispondente a quel DTC.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

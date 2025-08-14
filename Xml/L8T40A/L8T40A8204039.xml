@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A8204039" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC B1334 &#x002F; B1338: Corto al circuito di alimentazione nel circuito attivatore airbag laterale a tendina sinistro &#x002F; destro
+</title>
+<servinfosub id = "L8T40A8204039001">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A8204036">DTC B1331 &#x002F; B1335: Resistenza alta circuito di attivazione airbag laterale a tendina sinistro &#x002F; destro</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Accertarsi di seguire le istruzioni riportate in ATTENZIONE in &#8220;Flusso di controllo diagnostico sistema airbag&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "L8T40A8204039002">
+<title>
+Il DTC viene generato quando
+</title>
+<ptxt>
+La tensione misurata al circuito attivatore dell&apos;airbag laterale a tendina (sinistro o destro) e superiore ad un valore specificato per un determinato tempo.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A8204039003">
+<title>
+Descrizione test di flusso
+</title>
+<ptxt>
+<emph etype = "bold">
+Punto 1: Controllare se il malfunzionamento e nel modulo (attivatore) airbag laterale a tendina.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+Punto 2: Controllare il circuito attivatore airbag laterale a tendina.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A8204039004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A8204039005">
+<testgroup id = "L8T40A8204039006">
+<test1>
+<ptxt>
+Con il commutatore d&apos;accensione in posizione OFF, rimuovere il rivestimento superiore della parte posteriore del lato sinistro o destro e staccare il connettore del modulo attivatore airbag a tendina laterale.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che non vi siano problemi di collegamento sul modulo attivatore dell&apos;airbag laterale a tendina (attivatore) ai terminali sul connettore &#8220;L18&#8221; or &#8220;L41&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se OK, allora collegare gli strumenti speciali (A), (B) e (C) al connettore (attivatore) dell&apos;airbag a tendina laterale.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0178">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0179">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0180">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I9T401821063I.swf" width = "90.000mm" height = "53.272mm" ver = "01" gw = "123" gh = "134"/>
+</testfigure>
+</test1>
+<test1>
+<ptxt>
+Controllo DTC SDM.
+</ptxt>
+</test1>
+<question>
+Con il commutatore di accensione su ON, il DTC B1334 o B1338 e ancora presente?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+Sostituire il modulo airbag tendina laterale (attivatore) facendo riferimento a 
+<intxref refid = "L8T40A8206011">Montaggio e installazione del modulo airbag laterale a tendina (attivatore)</intxref>
+.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "L8T40A8204039007">
+<test1>
+<ptxt>
+Con il commutatore d&apos;accensione in posizione OFF, staccare il connettore SDM &#8220;L32&#8221;.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Togliere la barra di corto nel connettore SDM inserendo lo strumento di sgancio (1) incluso nell&apos;attrezzo speciale (A).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Misurare la resistenza tra il terminale &#8220;L32-1&#8221; e la massa della carrozzeria, il terminale &#8220;L32-2&#8221; e la massa della carrozzeria (per il DTC B1334) o il terminale &#8220;L32-3&#8221; e la massa della carrozzeria, o tra il terminale &#8220;L32-4&#8221; e la massa della carrozzeria (per il DTC B1338) con gli strumenti speciali (A), (B) e (C) collegati.
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0181">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0182">
+<s-part>
+(B)
+</s-part>
+<s-number num = "09932-75010">
+09932&#8211;75010
+</s-number>
+</servicetoolitem>
+<servicetoolitem id = "L8B0183">
+<s-part>
+(C)
+</s-part>
+<s-number num = "09932-78310">
+09932&#8211;78310
+</s-number>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I9T401821066I.swf" width = "90.000mm" height = "55.389mm" ver = "01" gw = "229" gh = "140"/>
+</testfigure>
+</test1>
+<question>
+Con il commutatore d&apos;accensione in posizione ON, la tensione e 4 V o inferiore?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Rimpiazzare con un SDM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1034: Riparare il corto dal circuito del filo &#8220;YEL&#x002F;GRN&#8221; o &#8220;YEL&#x002F;BLU&#8221; al circuito di alimentazione.
+</ptxt>
+<ptxt>
+DTC B1038: Riparare il corto dal circuito del filo &#8220;BLK&#x002F;YEL&#8221; o &#8220;BRN&#x002F;YEL&#8221; al circuito di alimentazione.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Una volta completato il lavoro di controllo e riparazione, eseguire i punti seguenti.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Ricollegare tutti i componenti del sistema airbag, assicurandosi che siano montati correttamente.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Cancellare i DTC facendo riferimento a 
+<intxref refid = "L8T40A8204005">Spazio libero DTC</intxref>
+, se presenti.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Ripetere 
+<intxref refid = "L8T40A8204001">Controllo diagnostico sistema airbag</intxref>
+ per confermare che il problema e stato risolto.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

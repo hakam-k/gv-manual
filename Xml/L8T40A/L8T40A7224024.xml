@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "7B">
+<servcat sctnbr = "07" scnbr = "02">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A7224024" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC B1546: Malfunzionamento pressione refrigerante A&#x002F;C
+</title>
+<servinfosub id = "L8T40A7224024001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.768in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.436in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Condizione rilevamento DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+La temperatura esterna e superiore al valore specificato. Comunque, la pressione del refrigerante e inferiore al valore prescritto.
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Circuito sensore di pressione refrigerante
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore pressione refrigerante
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito sensore temperatura esterna aria
+</ptxt>
+</item>
+<item>
+<ptxt>
+Sensore della temperatura dell&apos;aria esterna
+</ptxt>
+</item>
+<item>
+<ptxt>
+Modulo di controllo HVAC
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+BCM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A7224024002">
+<title>
+Procedura di conferma DTC
+</title>
+<s1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e cancellare il DTC usando lo scanner.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Avviare il sistema A&#x002F;C per 1 minuto o piu.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Controllare DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A7224024003">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A7224024004">
+<testgroup>
+<title>
+Controllo DTC
+</title>
+<test1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare l&apos;commutatore di avviamento in posizione ON e cancellare il DTC.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Interruttore di accensione in posizione OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Portare il commutatore di avviamento in posizione ON e controllare il DTC.
+</ptxt>
+</test1>
+<question>
+E presente il DTC B1546?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Confermare le condizioni del sistema A&#x002F;C del veicolo facendo riferimento a 
+<intxref refid = "L8T40A7224009">Ispezione performance del sistema A&#x002F;C:Modello J24B e N32A</intxref>
+e ricontrollare i DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllare la pressione del refrigerante
+</title>
+<test1>
+<ptxt>
+Collegare lo scanner a DLC con interruttore di accensione spento (OFF).
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Interruttore di accensione in posizione ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare la pressione del refrigerante sullo scanner.
+</ptxt>
+</test1>
+<question>
+E 340 kPa o superiore?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Caricare il refrigerante e confermare le condizioni del sistema A&#x002F;C del veicolo facendo riferimento a 
+<intxref refid = "L8T40A7224009">Ispezione performance del sistema A&#x002F;C:Modello J24B e N32A</intxref>
+. E ricontrollare i DTC.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo sistema A&#x002F;C
+</title>
+<test1>
+<ptxt>
+Confermare le condizioni del sistema A&#x002F;C del veicolo facendo riferimento a 
+<intxref refid = "L8T40A7224009">Ispezione performance del sistema A&#x002F;C:Modello J24B e N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il sistema A&#x002F;C e in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare e&#x002F;o sostituire.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo del sensore pressione refrigerante
+</title>
+<test1>
+<ptxt>
+Controllare il sensore di pressione refrigerante facendo riferimento a 
+<intxref refid = "L8T40A7226015">Controllo del sensore di pressione refrigerante A&#x002F;C e relativo circuito:Modello J24B e N32A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il sensore della pressione del refrigerante e&#x002F;o i suoi circuiti sono in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare il circuito e&#x002F;o sostituire il sensore della pressione del refrigerante.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Controllo sensore di temperatura esterna
+</title>
+<test1>
+<ptxt>
+Controllare il sensore della temperatura esterna facendo riferimento a 
+<intxref refid = "L8T40A9306013">Ispezione del sensore temperatura esterna (se in dotazione)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Il sensore della temperatura esterna e in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire il modulo di controllo HVAC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire il sensore della temperatura esterna
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

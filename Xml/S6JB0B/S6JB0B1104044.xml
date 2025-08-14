@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0B1104044" svcinfotypenbr = "06" svcinfoqualnbr = "02" page = "1" supplyoff = "1" modify = "0">
+<title>
+DTC P0403: Exhaust Gas Recirculation Control Circuit
+</title>
+<servinfosub id = "S6JB0B1104044001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S6JB0B1104043">DTC P0401 &#x002F; P0402: Exhaust Gas Recirculation Flow Insufficient Detected &#x002F; Excessive Detected</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0B1104044002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1" pgwide = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.564in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.648in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+EGR valve control duty pulse monitor signal is less than 0.8 V at OFF duty pulse or more than 2.2 V at ON duty pulse for more than 4 times.
+</ptxt>
+<ptxt>
+(1 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+EGR valve circuit open
+</ptxt>
+</item>
+<item>
+<ptxt>
+EGR valve
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S6JB0B1104044003">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When performing a road test, select a place where there is no traffic or possibility of a traffic accident and be very careful during testing to avoid occurrence of an accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Road test should be carried out with 2 persons, a driver and a tester, on a level road.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+With ignition switch OFF, connect scan tool to DLC.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm it up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Run engine at 2000 rpm and increase engine speed to 5000 rpm and then decrease it to 2000 rpm noting in order not to close throttle valve.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Repeat step 4) 4 times.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop vehicle and check DTC and pending DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S6JB0B1104044004">
+<title>
+DTC Troubleshooting
+</title>
+<diag type = "test" id = "S6JB0B1104044005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S6JB0B1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+EGR valve power supply circuit check
+</title>
+<test1>
+<ptxt>
+With ignition switch OFF, disconnect connector from EGR valve.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+With ignition switch ON, check that EGR valve power supply circuit voltage between.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+&#8220;a&#8221; terminal of EGR valve connector and vehicle body ground is battery voltage.
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8220;b&#8221; terminal of EGR valve connector and vehicle body ground is battery voltage.
+</ptxt>
+</item>
+</list1>
+<testfigure>
+<graphic graphicname = "I4JA01111012.swf" width = "90.000mm" height = "39.358mm" ver = "01" gw = "103" gh = "95"/>
+</testfigure>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+EGR valve power supply circuit is open or shorted to ground.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wiring harness check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper terminal connection to EGR valve and ECM connectors.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, check that EGR valve control circuit is as follows.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Wiring harness resistance of all EGR valve control circuits are less than 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Insulation resistance between all EGR valve control circuits and vehicle body ground are infinity.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Are they in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair or replace defective wire harness.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+EGR valve check
+</title>
+<test1>
+<ptxt>
+Check EGR valve for resistance referring to 
+<intxref refid = "S6JB0B1206010">EGR Valve Assembly Inspection (If Equipped)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Substitute a known good ECM and recheck.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace EGR valve.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

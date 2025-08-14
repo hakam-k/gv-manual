@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "1">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "U8T40A1114045" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0403: Regelcircuit uitlaatgasrecirculatie
+</title>
+<servinfosub id = "U8T40A1114045001">
+<title>
+Bedradingsschema
+</title>
+<ptxt>
+Zie 
+<intxref refid = "U8T40A1114044">DTC P0401 &#x002F; P0402: Onvoldoende &#x002F; overdreven uitlaatgasrecirculatiestroming waargenomen:M16A and J20A</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "U8T40A1114045002">
+<title>
+DTC-waarnemingsvoorwaarde en locatie van de storing
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.370in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.813in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC-waarnemingsvoorwaarde
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Locatie van de storing
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+De gecontroleerde spanning van de drijfpuls van de EGR-klep verschilt van het uitgangscommando met meer dan 1 pool op 4.
+</ptxt>
+<ptxt>
+(opsporingslogica van 1 rijcyclus)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Stroomonderbreking in het circuit van de EGR-klep
+</ptxt>
+</item>
+<item>
+<ptxt>
+EGR-klep
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "U8T40A1114045003">
+<title>
+DTC-bevestigingsprocedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Kies voor een proefrit een verkeersvrije plaats waar geen gevaar voor verkeersongevallen is, en wees uiterst voorzichtig tijdens de proefrit om ongevallen te vermijden.
+</ptxt>
+</item>
+<item>
+<ptxt>
+De proefrit moet door 2 personen worden uitgevoerd, een bestuurder en iemand die de test uitvoert, op een effen weg.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+Sluit het uitleesapparaat aan op de DLC met het contactslot op OFF.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Zet het contactslot op ON en wis de DTC met het uitleesapparaat.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Laat de motor op de normale bedrijfstemperatuur komen.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Rijd met een motortoerental van 2000 - 3500 omw&#x002F;min.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Rijd met de bovenstaande rijsnelheid gedurende 1 min. (Tijdens deze stap blijft de gasklepopening constant.)
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Stop het voertuig en controleer de DTC&apos;s en voorlopige DTC&apos;s.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "U8T40A1114045004">
+<title>
+DTC-storingzoeken
+</title>
+<attention3>
+<ptxt>
+Lees de voorzorgsmaatregelen voor DTC-storingzoeken zoals beschreven in 
+<intxref refid = "U8T40A1110003">Voorzorgsmaatregelen bij DTC-storingzoeken:M16A and J20A</intxref>
+ alvorens deze procedure te volgen.
+</ptxt>
+</attention3>
+<diag type = "test" id = "U8T40A1114045005">
+<testgroup id = "U8T40A1114045006">
+<question>
+Is de &#34;Controle van het motor- en emissieregelsysteem&#34; uitgevoerd?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 2.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar 
+<intxref refid = "U8T40A1114001">Controle van het motor- en emissieregelsysteem:M16A and J20A</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114045007">
+<title>
+Controle van het voedingscircuit van de EGR-klep
+</title>
+<test1>
+<ptxt>
+Maak de stekkerverbinding van de EGR-klep los met het contactslot op OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de spanning tussen de &#34;BLU&#x002F;BLK&#34;-draadaansluiting van de stekkerverbinding van de EGR-klep en de carrosseriemassa met het contactslot op ON.
+</ptxt>
+</test1>
+<question>
+Bedraagt de spanning 10 - 14 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 3.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Stroomonderbreking in het &#34;BLU&#x002F;BLK&#34;-draadcircuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114045008">
+<title>
+Controle van het draadcircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en maak de stekkerverbindingen van de ECM los.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Zet het contactslot op ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de spanning tussen de motormassa en elke &#34;YEL&#x002F;BLK&#34;-, &#34;YEL&#x002F;RED&#34;-, &#34;YEL&#x002F;GRN&#34;- en &#34;YEL&#34;-draadaansluiting van de stekkerverbinding van de EGR-klep.
+</ptxt>
+</test1>
+<question>
+Ligt de spanning telkens tussen 0 V?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 4.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Defecte draad of draden kortgesloten naar een ander circuit.
+</ptxt>
+<ptxt>
+Als de draden in orde zijn, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114045009">
+<title>
+Controle van het draadcircuit
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en meet de weerstand tussen de motormassa en elke &#34;YEL&#x002F;BLK&#34;-, &#34;YEL&#x002F;RED&#34;-, &#34;YEL&#x002F;GRN&#34;-, &#34;YEL&#34;-draadaansluiting van de stekkerverbinding van de EGR-klep.
+</ptxt>
+</test1>
+<question>
+Is de weerstand oneindig?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 5.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<paragroup>
+<ptxt>
+Defecte draad of draden kortgesloten naar het massacircuit.
+</ptxt>
+<ptxt>
+Als de draden in orde zijn, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114045010">
+<title>
+Controle van het regelcircuit van de EGR-klep op kortsluiting
+</title>
+<test1>
+<ptxt>
+Zet het contactslot op OFF en meet de weerstand tussen elke draad van het regelcircuit van de EGR-klep (&#34;YEL&#x002F;BLK&#34;, &#34;YEL&#x002F;RED&#34;, &#34;YEL&#x002F;GRN&#34; en &#34;YEL&#34;) en elke draad van het regelcircuit van de EGR-klep.
+</ptxt>
+</test1>
+<question>
+Is elke weerstand oneindig?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Ga naar stap 6.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Defecte draad of draden kortgesloten.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114045011">
+<title>
+Controle van het circuit van de stappenmotorspoel van de EGR-klep
+</title>
+<test1>
+<ptxt>
+Sluit de stekkerverbinding van de EGR-klep aan met het contactslot op OFF
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Meet de weerstand tussen &#34;E23-1&#x002F;16&#34; en elke &#34;C37-3&#34;-, &#34;C37-4&#34;-, &#34;C37-5&#34;- en &#34;C37-6&#34;-aansluitklem van de ECM-stekkerverbinding.
+</ptxt>
+</test1>
+<question>
+Is de weerstand 20 - 31 &#937; bij 20 &#176;C, 68 &#176;F?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Defecte ECM. Sluit een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Ga naar stap 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "U8T40A1114045012">
+<title>
+Controle van de EGR-klep
+</title>
+<test1>
+<ptxt>
+Controleer de weerstand van de EGR-klep volgens 
+<intxref refid = "U8T40A1216008">Onderzoek van de EGR-klep:M16A and J20A</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is de weerstand zoals voorgeschreven?
+</question>
+<result>
+JA
+</result>
+<action>
+<ptxt>
+Stroomonderbreking of hoge weerstand in het circuit van de defecte draad of draden. Als de draden in orde zijn, sluit dan een goed bevonden ECM aan en controleer opnieuw.
+</ptxt>
+</action>
+<result>
+NEEN
+</result>
+<action>
+<ptxt>
+Defecte EGR-klep.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

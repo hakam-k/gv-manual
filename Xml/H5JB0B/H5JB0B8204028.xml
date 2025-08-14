@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "8B">
+<servcat sctnbr = "08" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H5JB0B8204028" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "0" modify = "0">
+<title>
+DTC B1074 &#x002F; B1078: Vezetőoldali &#x002F; utasoldali haladásérzékelő áramkör zárlatos a tápáramkörrel vagy megszakadt
+</title>
+<servinfosub id = "H5JB0B8204028001">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H5JB0B8204027">DTC B1073 &#x002F; B1077: Vezetőoldali &#x002F; utasoldali haladásérzékelő áramkör testel</intxref>
+.
+</ptxt>
+<attention2>
+<ptxt>
+Mindenképpen olvassa el a VIGYÁZAT címszóval jelzett figyelmeztetéseket a következő fejezetben: &#8220;Légzsák diagnosztikai rendszerének ellenőrzési folyamata&#8221;.
+</ptxt>
+</attention2>
+</servinfosub>
+<servinfosub id = "H5JB0B8204028002">
+<title>
+DTC akkor jelenik meg, amikor
+</title>
+<ptxt>
+A haladásérzékelő rendellenes jelét érzékeli az SDM.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0B8204028003">
+<title>
+Áramlási teszt leírása
+</title>
+<ptxt>
+<emph etype = "bold">
+1. lépés: Ellenőrizze, hogy a haladásérzékelő áramkörében nincs-e szakadás.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+2. lépés: Ellenőrizze, hogy nincs-e rövidzárlat a haladásérzékelő áramköre és a tápáramkör között.
+</emph>
+</ptxt>
+<ptxt>
+<emph etype = "bold">
+3. lépés: Ellenőrizze, hogy a hiba a haladásérzékelőben van-e.
+</emph>
+</ptxt>
+</servinfosub>
+<servinfosub id = "H5JB0B8204028004">
+<title>
+DTC hibaelhárítás
+</title>
+<diag type = "test" id = "H5JB0B8204028005">
+<testgroup>
+<test1>
+<ptxt>
+Kapcsolja ki a gyújtást.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Csatlakoztassa le az &#8220;E13&#8221; és &#8220;E24&#8221; haladásérzékelő csatlakozót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Csatlakoztassa le az SDM &#8220;G47&#8221; vagy &#8220;L33&#8221; csatlakozóját.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a megfelelő csatlakozást az SDM felé a &#8220;G47-9&#8221; és &#8220;G47-17&#8221; vagy az &#8220;L33-9&#8221; és &#8220;L33-10&#8221; (DTC B1074 esetén) érintkezőknél, vagy pedig a &#8220;G47-11&#8221; és &#8220;G47-19&#8221; vagy &#8220;L33-11&#8221; és &#8220;L33-12&#8221; (DTC B1078 esetén) érintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a megfelelő csatlakozást a haladásérzékelő csatlakozója felé az &#8220;E13-1&#8221; és &#8220;E13-2&#8221; vagy &#8220;E24-1&#8221; és &#8220;E24-2&#8221; érintkezőknél.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Egy munkavezetékkel (1) csatlakoztassa a haladásérzékelő csatlakozójának &#8220;E13-1&#8221; és &#8220;E13-2&#8221; (DTC B1074 esetén) érintkezőit vagy &#8220;E24-1&#8221; és &#8220;E24-2&#8221; (DTC B1078 esetén) érintkezőit.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg az ellenállást a &#8220;G47-9&#8221; és &#8220;G47-17&#8221; érintkezők között (DTC B1074 esetén) vagy a &#8220;G47-11&#8221; és &#8220;G47-19&#8221; érintkezők között &#x005B;A&#x005D; (DTC B1078 esetén), vagy pedig az &#8220;L33-9&#8221; és &#8220;L33-10&#8221; érintkezők között (DTC B1074 esetén) vagy az &#8220;L33-11&#8221; és &#8220;L33-12&#8221; érintkezők között &#x005B;B&#x005D; (DTC B1078 esetén).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0125">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820051.swf" width = "90.000mm" height = "60.681mm" ver = "01" gw = "230" gh = "155"/>
+</testfigure>
+</test1>
+<question>
+Az ellenállás mindenhol 1 &#937; vagy kevesebb?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1074 esetén: Magas ellenállás vagy vezetékszakadás az &#8220;ORN&#8221; áramkörben vagy a &#8220;PNK&#x002F;BLK&#8221; áramkörben.
+</ptxt>
+<ptxt>
+DTC B1078 esetén: Magas ellenállás vagy vezetékszakadás a &#8220;PNK&#8221; áramkörben vagy a &#8220;PNK&#x002F;BLU&#8221; áramkörben.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Csatlakoztassa le a munkavezetéket az &#8220;E13&#8221; vagy az &#8220;E24&#8221; haladásérzékelő csatlakozóról.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Mérje meg a feszültséget a &#8220;G47-9&#8221; érintkező és a karosszéria testelése között, a &#8220;G47-17&#8221; érintkező és a karosszéria testelése között (DTC B1074 esetén) vagy a &#8220;G47-11&#8221; érintkező és a karosszéria testelése között, a &#8220;G47-19&#8221; érintkező és a karosszéria testelése között &#x005B;A&#x005D; (DTC B1078 esetén), vagy pedig az &#8220;L33-9&#8221; érintkező és a karosszéria testelése között, az &#8220;L33-10&#8221; érintkező és a karosszéria testelése között (DTC B1074 esetén) vagy az &#8220;L33-11&#8221; érintkező és a karosszéria testelése között, az &#8220;L33-12&#8221; érintkező és a karosszéria testelése között &#x005B;B&#x005D; (DTC B1078 esetén).
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L8B0126">
+<s-part>
+(A)
+</s-part>
+<s-number num = "09932-76010">
+09932&#8211;76010
+</s-number>
+<ptxt>
+</ptxt>
+</servicetoolitem>
+</servicetool>
+<testfigure>
+<graphic graphicname = "I5JB0A820052.swf" width = "90.000mm" height = "59.975mm" ver = "01" gw = "195" gh = "153"/>
+</testfigure>
+</test1>
+<question>
+Bekapcsolt gyújtás mellett a feszültség 1 V vagy kevesebb?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+DTC B1074 esetén: Az &#8220;ORN&#8221; áramkör vagy a &#8220;PNK&#x002F;BLK&#8221; áramkör zárlatos a tápáramkörrel.
+</ptxt>
+<ptxt>
+DTC B1078 esetén: A &#8220;PNK&#8221; áramkör vagy a &#8220;PNK&#x002F;BLU&#8221; áramkör zárlatos a tápáramkörrel.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<test1>
+<ptxt>
+Ellenőrizze a haladásérzékelőt, lásd: 
+<intxref refid = "H5JB0B8206014">Haladásérzékelő ellenőrzése</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó SDM-et és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Cserélje ki a haladásérzékelőt, lásd: 
+<intxref refid = "H5JB0B8206013">Haladásérzékelő leszerelése és felszerelése</intxref>
+. Ha a DTC még mindig érvényben van, akkor tegyen be egy bizonyosan jó SDM-et és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<attention3>
+<ptxt>
+Az ellenőrzés és a javítás elvégzése után hajtsa végre a következőket:
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+Újból kösse be a légzsákrendszer összes elemét, és ellenőrizze, hogy minden elem jól van-e felerősítve.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Törölje a DTC-t, ha van, lásd: 
+<intxref refid = "H5JB0B8204005">DTC törlése</intxref>
+.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A hiba kijavításának megerősítése érdekében ismételje meg a következő műveletet: 
+<intxref refid = "H5JB0B8204001">Légzsák diagnosztikai rendszerének ellenőrzése</intxref>
+.
+</ptxt>
+</item>
+</list1>
+</attention3>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "10B">
+<servcat sctnbr = "10" scnbr = "02">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S6JB0AA204002" svcinfotypenbr = "06" svcinfoqualnbr = "01" supplyoff = "1" modify = "0">
+<title>
+Body Electrical Control System Check
+</title>
+<diag type = "test" id = "S6JB0AA204002001">
+<testgroup>
+<title>
+<intxreftitleoff refid = "S6JB0AA204002002"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Customer complaint analysis
+</title>
+<test1>
+<ptxt>
+Perform customer complaint analysis.
+</ptxt>
+</test1>
+<question>
+Was customer complaint analysis performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Perform customer complaint analysis.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "S6JB0AA204002003"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Problem symptom confirmation
+</title>
+<test1>
+<ptxt>
+Perform problem symptom confirmation.
+</ptxt>
+</test1>
+<question>
+Does trouble recur?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "S6JB0AA204002004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ DTC check
+</title>
+<test1>
+<ptxt>
+Check DTC.
+</ptxt>
+</test1>
+<question>
+Is it malfunction code?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "S6JB0AA204002005"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Troubleshooting for DTC
+</title>
+<test1>
+<ptxt>
+Check and repair according to DTC diag. flow.
+</ptxt>
+</test1>
+<question>
+Are check and repair completed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Check and repair malfunction part(s).
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "S6JB0AA204002006"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Body electrical control system symptom diagnosis
+</title>
+<test1>
+<ptxt>
+Perform check and repair referring to &#8220;Symptom Diagnosis&#8221; of system having a trouble.
+</ptxt>
+</test1>
+<question>
+Is there faulty condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Repair or replace malfunction part(s).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "S6JB0AA204002007"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Check for intermittent problem
+</title>
+<test1>
+<ptxt>
+Check for intermittent problem.
+</ptxt>
+</test1>
+<question>
+Is there faulty condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Repair or replace malfunction part(s).
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to Step 7.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+<intxreftitleoff refid = "S6JB0AA204002008"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff>
+ Final confirmation test
+</title>
+<test1>
+<ptxt>
+Clear DTC referring to 
+<intxref refid = "S6JB0AA204006">DTC Clearance</intxref>
+.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check DTC referring to 
+<intxref refid = "S6JB0AA204005">DTC Check</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is there any DTC?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+End.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+<servinfosub id = "S6JB0AA204002002">
+<title>
+Customer Complaint Analysis
+</title>
+<ptxt>
+Record details of the problem (failure, complaint) and how it occurred as described by the customer.
+</ptxt>
+<ptxt>
+For this purpose, use of such a questionnaire form as shown in the figure will facilitate collecting information to the point required for proper analysis and diagnosis.
+</ptxt>
+<figure>
+<title>
+Customer questionnaire (example)
+</title>
+<graphic graphicname = "I5RS0DA20006.swf" width = "183.000mm" height = "134.059mm" ver = "01" gw = "469" gh = "363"/>
+</figure>
+</servinfosub>
+<servinfosub id = "S6JB0AA204002003">
+<title>
+Problem Symptom Confirmation
+</title>
+<ptxt>
+Check if what the customer claimed in &#8220;Customer Questionnaire&#8221; is accurately found in the vehicle. If that symptom is found, check whether the symptom is identified as a failure. (This step should be shared with the customer if possible.)
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0AA204002004">
+<title>
+DTC Check
+</title>
+<ptxt>
+Check DTC stored in BCM memory referring to 
+<intxref refid = "S6JB0AA204005">DTC Check</intxref>
+, record it and then clear it referring to 
+<intxref refid = "S6JB0AA204006">DTC Clearance</intxref>
+. DTC indicates malfunction that occurred in the system but does not indicate whether it exists now or it occurred in the past and the normal condition has been restored now. To check which case applies, clear DTC once and check whether or not any fault exists.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0AA204002005">
+<title>
+Troubleshooting for DTC
+</title>
+<ptxt>
+Based on the DTC indicated in Step 3 and referring to applicable DTC flow, locate the cause of the trouble, namely in a sensor, wire harness, connector, BCM or other part and repair or replace faulty parts.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0AA204002006">
+<title>
+Body Electrical Control System Symptom Diagnosis
+</title>
+<ptxt>
+Check the parts or system suspected as a possible cause referring to symptom diagnosis of each system.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0AA204002007">
+<title>
+Check for Intermittent Problem
+</title>
+<ptxt>
+Check parts where an intermittent trouble is easy to occur (e.g., wire harness, connector, etc.), referring to 
+<intxref refid = "S6JB0A0006002">Intermittent and Poor Connection Inspection</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S6JB0AA204002008">
+<title>
+Final Confirmation Test
+</title>
+<ptxt>
+Confirm that the problem symptom has gone and the body electrical control system is free from any abnormal conditions. If what has been repaired is related to the malfunction DTC, check DTC again and confirm that no DTC is indicated.
+</ptxt>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

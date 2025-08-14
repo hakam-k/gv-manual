@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "H8T40A1124050" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2102 &#x002F; P2103
+</title>
+<servinfosub id = "H8T40A1124050001">
+<title>
+DTC észlelésének körülményei és a hiba helye
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.011in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.193in"/>
+<thead valign = "middle">
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+DTC észlelésének körülményei
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" align = "center">
+<ptxt>
+A hiba helye
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2102: Fojtószelep aktuátor vezérlő motor áramkörének feszültsége alacsony
+</emph>
+</ptxt>
+<ptxt>
+A fojtószelep motor áramellátó áramkör monitor feszültsége kisebb, mint 5 V, még ha a fojtószelep motor vezérlőrelé be is van kapcsolva (gyújtáskapcsoló ON helyzetben).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fojtószelep motor vezérlőrelé és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+&#8220;THR MOT&#8221; biztosíték
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+<emph etype = "bold">
+P2103: Fojtószelep aktuátor vezérlő motor áramkörének feszültsége magas
+</emph>
+</ptxt>
+<ptxt>
+A fojtószelep motor áramellátó áramkör kimeneti feszültsége nagyobb, mint 5 V, még akkor is, ha a fojtószelep motor vezérlőrelé ki van kapcsolva (gyújtáskapcsoló OFF helyzetben).
+</ptxt>
+<ptxt>
+(1 D&#x002F;C észlelési logika)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Fojtószelep motor vezérlőrelé és&#x002F;vagy áramköre
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "H8T40A1124050002">
+<title>
+Kapcsolási rajz
+</title>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "H8T40A1124050003">
+<title>
+DTC megerősítési eljárás
+</title>
+<s1>
+<ptxt>
+Fordítsa a gyújtáskapcsolót ON helyzetbe 10 másodpercig.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Kapcsolja ki a gyújtást 10 másodpercre.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "H8T40A1124050004">
+<title>
+DTC hibakeresés (P2102)
+</title>
+<diag type = "test" id = "H8T40A1124050005">
+<testgroup id = "H8T40A1124050006">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124050007">
+<title>
+Fojtószelep motor vezérlőrelé áramköri ellenőrzés
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep motor vezérlőrelét. 
+<intxreftitleoff1 refid = "H8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószelep motor vezérlőrelét.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124050008">
+<title>
+Fojtószelep motor vezérlőrelé áramellátó áramköri ellenőrzése
+</title>
+<test1>
+<ptxt>
+Miközben a gyújtáskapcsoló OFF helyzetben van, távolítsa el a fojtószelep motor vezérlőrelét.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep motor vezérlőrelé csatlakozó érintkezőinek megfelelő csatlakozását.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ha a csatlakozások megfelelőek, ellenőrizze, hogy az egyes fojtószelep motor vezérlőrelé áramellátó áramkörök (A1 &#8211; A2) és a karosszéria testelése közötti feszültség az akkumulátorfeszültség-e.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 4. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124050009">
+<title>
+Fojtószelep motor vezérlőrelé parancsáramkör és a Fojtószelep motor áramellátó áramkör ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kikapcsolt gyújtáskapcsoló mellett, csatlakoztassa le a csatlakozókat az ECM-ről.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a fojtószelep motor vezérlőrelé parancsáramköre (A3) és a fojtószelep motor áramellátó áramköre (A4) az alábbiaknak megfelel.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+A fojtószelep motor vezérlőrelé vezérlő áramkörének és a fojtószelep motor áramellátó áramkörének vezetékköteg ellenállása kisebb, mint 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A fojtószelep motor vezérlőrelé vezérlő áramköre és a fojtószelep motor áramellátó áramköre és a karosszéria testelése közötti szigetelési ellenállás végtelen. 
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása a fojtószelep motor vezérlőrelé áramkörök érintkezői és a fojtószelep motor vezérlőrelé csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A vezetékköteg szigetelési ellenállása a fojtószelep motor áramellátó áramkör érintkezői és a fojtószelep motor vezérlőrelé csatlakozójának többi érintkezője között végtelen.
+</ptxt>
+</item>
+<item>
+<ptxt>
+A fojtószelep motor vezérlőrelé parancsáramkörének áramköri feszültsége és a fojtószelep motor áramellátó áramkör áramköri feszültsége 0 &#8211; 1 V, miközben a gyújtáskapcsoló ON helyzetben van.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+Jó állapotban vannak?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+<servinfosub id = "H8T40A1124050010">
+<title>
+DTC hibakeresés (P2103)
+</title>
+<diag type = "test" id = "H8T40A1124050011">
+<testgroup id = "H8T40A1124050012">
+<question>
+A &#8220;motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése&#8221; megtörtént?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 2. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Lásd: 
+<intxref refid = "H8T40A1124001">Motorvezérlő és károsanyagkibocsátás-csökkentő rendszer ellenőrzése:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124050013">
+<title>
+Fojtószelep motor vezérlőrelé ellenőrzése
+</title>
+<test1>
+<ptxt>
+Ellenőrizze a fojtószelep motor vezérlőrelét. 
+<intxreftitleoff1 refid = "H8T40A1326031"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+Folytassa a 3. lépéssel.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Cserélje ki a fojtószelep motor vezérlőrelét.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "H8T40A1124050014">
+<title>
+Fojtószelep motor áramellátó áramkörének ellenőrzése
+</title>
+<test1>
+<ptxt>
+Kapcsolja KI a gyújtáskapcsolót.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Ellenőrizze, hogy a fojtószelep motor áramellátó áramkörének (A4) feszültsége 0 &#8211; 1 V-e, miközben a gyújtáskapcsoló OFF helyzetben van.
+</ptxt>
+</test1>
+<question>
+Rendben van?
+</question>
+<result>
+IGEN
+</result>
+<action>
+<ptxt>
+A meglévő helyett tegyen be egy bizonyosan jó ECM-et, és ismételje meg az ellenőrzést.
+</ptxt>
+</action>
+<result>
+NEM
+</result>
+<action>
+<ptxt>
+Javítsa meg, vagy cserélje ki a hibás vezetékköteget.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "0">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "S5JB0A1104036" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P0140: O2 Sensor (HO2S) Circuit No Activity Detected (Sensor-2)
+</title>
+<servinfosub id = "S5JB0A1104036001">
+<title>
+Wiring Diagram
+</title>
+<ptxt>
+Refer to 
+<intxref refid = "S5JB0A1104035">DTC P0137 &#x002F; P0138: O2 Sensor (HO2S) Circuit Low Voltage &#x002F; High Voltage (Sensor-2)</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "S5JB0A1104036002">
+<title>
+DTC Detecting Condition and Trouble Area
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "4.626in"/>
+<colspec colnum = "2" colname = "2" colwidth = "2.565in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+DTC detecting condition
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "middle" align = "center">
+<ptxt>
+Trouble area
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody>
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+HO2S-2 voltage is higher than specified value after warming up engine (circuit open).
+</ptxt>
+<ptxt>
+(2 driving cycle detection logic)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+HO2S-2
+</ptxt>
+</item>
+<item>
+<ptxt>
+HO2S-2 circuit
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+<item>
+<ptxt>
+Exhaust gas leakage
+</ptxt>
+</item>
+<item>
+<ptxt>
+Air intake system
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "S5JB0A1104036003">
+<title>
+DTC Confirmation Procedure
+</title>
+<attention1>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When performing a road test, select a place where there is no traffic or possibility of a traffic accident and be very careful during testing to avoid occurrence of an accident.
+</ptxt>
+</item>
+<item>
+<ptxt>
+Road test should be carried out by 2 persons, a driver and a tester, on a level road.
+</ptxt>
+</item>
+</list1>
+</attention1>
+<s1>
+<ptxt>
+With ignition switch turned OFF, connect scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Turn ON ignition switch and clear DTC using scan tool.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Start engine and warm up to normal operating temperature.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Increase vehicle speed to 60 &#8211; 80 km&#x002F;h (37 &#8211; 50 mile&#x002F;h) at 5th gear or D range.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Release accelerator pedal and with engine brake applied, keep vehicle coasting (with fuel cut for 4 sec. or more), then stop vehicle and run engine at idle speed for 60 sec. or more.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Check DTC and pending DTC.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "S5JB0A1104036004">
+<title>
+DTC Troubleshooting
+</title>
+<attention3>
+<ptxt>
+Before this trouble shooting is performed, read the precautions for DTC troubleshooting referring to 
+<intxref refid = "S5JB0A1100005">Precautions For DTC Troubleshooting</intxref>
+.
+</ptxt>
+</attention3>
+<diag type = "test" id = "S5JB0A1104036005">
+<testgroup>
+<question>
+Was &#8220;Engine and Emission Control System Check&#8221; performed?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Go to 
+<intxref refid = "S5JB0A1104001">Engine and Emission Control System Check</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+HO2S-2 ground check
+</title>
+<test1>
+<ptxt>
+Disconnect connector from HO2S-2 with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Check for proper connection to HO2S-2 connector at &#8220;PNK&#8221;, &#8220;BLK&#x002F;RED&#8221;, &#8220;GRN&#8221; and &#8220;RED&#8221; wire terminals.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+If connections are OK, measure resistance between &#8220;GRN&#8221; wire terminal of HO2S-2 connector and engine ground.
+</ptxt>
+</test1>
+<question>
+Is resistance less than 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 3.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+&#8220;GRN&#8221; and&#x002F;or &#8220;GRY&#x002F;GRN&#8221; wire is open or high resistance circuit. Poor &#8220;C37-57&#8221; terminal connection. Faulty ECM ground.
+</ptxt>
+<ptxt>
+If they are OK, substitute a known-good ECM and recheck.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+Wire circuit check
+</title>
+<test1>
+<ptxt>
+Disconnect connectors from ECM with ignition switch turned OFF.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure resistance between &#8220;RED&#8221; wire terminal of HO2S-2 connector and &#8220;C37-11&#8221; terminal of ECM connector.
+</ptxt>
+</test1>
+<question>
+Is resistance less than 3 &#937;?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<paragroup>
+<ptxt>
+&#8220;RED&#8221; wire is high resistance circuit or open circuit. Poor &#8220;C37-11&#8221; terminal connection.
+</ptxt>
+<ptxt>
+If they are OK, substitute a known-good ECM and recheck.
+</ptxt>
+</paragroup>
+</action>
+</testgroup>
+<testgroup>
+<title>
+HO2S-2 signal circuit check
+</title>
+<test1>
+<ptxt>
+Turn ON ignition switch.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Measure voltage between &#8220;RED&#8221; wire terminal of HO2S-2 connector and vehicle body ground.
+</ptxt>
+</test1>
+<question>
+Is voltage 0 V?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+&#8220;RED&#8221; wire is shorted to other circuit.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+HO2S-2 heater circuit check
+</title>
+<test1>
+<ptxt>
+Check HO2S-2 heater circuit referring to 
+<intxref refid = "S5JB0A1104016">DTC P0037 &#x002F; P0038: HO2S Heater Control Circuit Low &#x002F; High (Sensor-2)</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is circuit in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<ptxt>
+Go to Step 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Repair HO2S-2 circuit. If circuit is OK, substitute a known-good ECM and recheck.
+</ptxt>
+</action>
+</testgroup>
+<testgroup>
+<title>
+HO2S-2 check
+</title>
+<test1>
+<ptxt>
+Check HO2S-2 referring to 
+<intxref refid = "S5JB0A1306010">Heated Oxygen Sensor (HO2S-2) Heater On-Vehicle Inspection</intxref>
+.
+</ptxt>
+</test1>
+<question>
+Is it in good condition?
+</question>
+<result>
+YES
+</result>
+<action>
+<paragroup>
+<ptxt>
+Substitute a known-good ECM and recheck.
+</ptxt>
+</paragroup>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Replace HO2S-2.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

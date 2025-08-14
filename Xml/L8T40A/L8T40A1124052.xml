@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "1A">
+<servcat sctnbr = "01" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "4">
+<servinfo servinfosgmlid = "L8T40A1124052" svcinfotypenbr = "06" svcinfoqualnbr = "02" supplyoff = "1" modify = "0">
+<title>
+DTC P2119
+</title>
+<servinfosub id = "L8T40A1124052001">
+<title>
+Area rilevamento condizioni e avarie DTC
+</title>
+<table frame = "all" colsep = "1" rowsep = "1">
+<tgroup cols = "2" colsep = "1" rowsep = "1">
+<colspec colnum = "1" colname = "1" colwidth = "3.602in"/>
+<colspec colnum = "2" colname = "2" colwidth = "3.602in"/>
+<thead>
+<row rowsep = "1">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Condizione rilevazione DTC
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1">
+<ptxt>
+Area guasti
+</ptxt>
+</entry>
+</row>
+</thead>
+<tbody valign = "top">
+<row rowsep = "0">
+<entry colname = "1" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<ptxt>
+<emph etype = "bold">
+P2119: Sistema controllo attuatore farfalla &#8211; Incollato aperto
+</emph>
+</ptxt>
+<ptxt>
+La differenza tra il TP di riferimento e il TP rilevato e superiore al parametro specificato.
+</ptxt>
+<ptxt>
+(1 logica di rilevamento D&#x002F;C)
+</ptxt>
+</entry>
+<entry colname = "2" border-top = "1" border-bottom = "1" border-left = "1" border-right = "1" valign = "top" align = "left">
+<list1 type = "unordered">
+<item>
+<ptxt>
+Motorino della farfalla e&#x002F;o il suo circuito
+</ptxt>
+</item>
+<item>
+<ptxt>
+Circuito sensore TP (principale)
+</ptxt>
+</item>
+<item>
+<ptxt>
+Gruppo corpo farfallato
+</ptxt>
+</item>
+<item>
+<ptxt>
+ECM
+</ptxt>
+</item>
+</list1>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</servinfosub>
+<servinfosub id = "L8T40A1124052002">
+<title>
+Schema elettrico
+</title>
+<ptxt>
+Fare riferimento a 
+<intxref refid = "L8T40A1124023">DTC P0122 &#x002F; P0123:J24B</intxref>
+.
+</ptxt>
+</servinfosub>
+<servinfosub id = "L8T40A1124052003">
+<title>
+Procedura di conferma DTC
+</title>
+<attention3>
+<ptxt>
+Se nella procedura di conferma DTC vengono rilevati DTC diversi da quelli cercati, accertarsi di fare la rilevazione guasto del DTC precedentemente rilevato.
+</ptxt>
+</attention3>
+<s1>
+<ptxt>
+Avviare il motore e portarlo alla temperatura d&apos;esercizio normale.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Far andare il motore al minimo per 20 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+far funzionare il motore a 3000 g&#x002F;min per 20 sec.
+</ptxt>
+</s1>
+<s1>
+<ptxt>
+Ripetere i punti da 2) a 3) per 3 volte.
+</ptxt>
+</s1>
+</servinfosub>
+<servinfosub id = "L8T40A1124052004">
+<title>
+Risoluzione dei problemi DTC
+</title>
+<diag type = "test" id = "L8T40A1124052005">
+<testgroup id = "L8T40A1124052006">
+<question>
+E stata eseguita la &#8220;Verifica del sistema di controllo motore e emissioni&#8221;?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 2.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Andare a 
+<intxref refid = "L8T40A1124001">Verifica del sistema di controllo motore e emissioni:J24B</intxref>
+.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124052007">
+<title>
+Controllo DTC
+</title>
+<test1>
+<ptxt>
+Controllare DTC.
+</ptxt>
+</test1>
+<question>
+Ci sono DTC diversi da P2119?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Andare ai relativi DTC.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Passare al punto 3.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124052008">
+<title>
+Controllare il circuito di alimentazione motorino farfalla
+</title>
+<test1>
+<ptxt>
+Spegnere l&#8217;interruttore di accensione e scollegare i connettori dall&#8217;ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Verificare la connessione corretta dei terminali ai connettori ECM.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se le connessioni sono in ordine, portare l&apos;interruttore di accensione nella posizione ON.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che il circuito di alimentazione del motorino farfalla (A4) sia la tensione della batteria.
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 4.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire il cablaggio preassemblato difettoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124052009">
+<title>
+Controllo del circuito conduttore del motorino della farfalla
+</title>
+<test1>
+<ptxt>
+Portare l&apos;interruttore di accensione in posizione OFF e staccare il connettore da gruppo corpo farfallato.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Controllare che la connessione con il terminale del connettore del gruppo del corpo farfallato sia corretta.
+</ptxt>
+</test1>
+<test1>
+<ptxt>
+Se le connessioni sono OK, controllare che il circuito conduttore motorino farfalla (B1 &#8211; B2) sia come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistenza cablaggio conduttori di ciascun circuito conduttore del motorino farfalla sia inferiore a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistenza di isolamento di ciascun circuito conduttore motorino farfalla sia infinita tra connettore gruppo corpo farfallato e la massa della carrozzeria del veicolo.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistenza del cablaggio conduttori e infinita tra ciascun terminale circuito conduttore motore farfalla e altri terminali del connettore del gruppo corpo farfallato.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensione di circuito di ciascun circuito conduttore motorino farfalla e 0 &#8211; 1 V con il commutatore di accensione in posizione ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 5.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire il cablaggio preassemblato difettoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124052010">
+<title>
+Controllo circuito segnale sensore TP (principale)
+</title>
+<test1>
+<ptxt>
+Controllare che il circuito segnale del sensore TP (principale) (C2) sia come segue.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+La resistenza cablaggio conduttori di ciascun circuito segnale del sensore TP (principale) sia inferiore a 3 &#937;.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistenza all&apos;isolamento del circuito segnale del sensore TP (principale) e infinita tra il connettore gruppo corpo farfallato e massa della carrozzeria.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La resistenza all&apos;isolamento del cablaggio preassemblato e infinita tra circuito segnale sensore TP (principale) e ciascun terminale in prossimita del connettore del gruppo corpo farfallato.
+</ptxt>
+</item>
+<item>
+<ptxt>
+La tensione del circuito del circuito di alimentazione del sensore TP (principale) e 0 &#8211; 1 V con il commutatore di accensione in posizione ON.
+</ptxt>
+</item>
+</list1>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Passare al punto 6.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Riparare o sostituire il cablaggio preassemblato difettoso.
+</ptxt>
+</action>
+</testgroup>
+<testgroup id = "L8T40A1124052011">
+<title>
+Controllo del gruppo corpo farfallato 
+</title>
+<test1>
+<ptxt>
+Controllare le condizioni e il funzionamento del corpo farfallato. 
+<intxreftitleoff1 refid = "L8T40A1326004"><img src = "..\icon\intxreftitleoff.gif"/></intxreftitleoff1>
+</ptxt>
+</test1>
+<question>
+E in buone condizioni?
+</question>
+<result>
+SI
+</result>
+<action>
+<ptxt>
+Sostituire con un ECM che si sa per certo che funzioni e ricontrollare.
+</ptxt>
+</action>
+<result>
+NO
+</result>
+<action>
+<ptxt>
+Sostituire l&apos;assieme corpo farfallato.
+</ptxt>
+</action>
+</testgroup>
+</diag>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>

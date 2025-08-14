@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><?xml-stylesheet type="text/xsl" href="..\config\suzuki.xsl" ?><!DOCTYPE suzuki [<!ENTITY % sdatacharaents SYSTEM "..\config\sdatacharaents.txt">%sdatacharaents;]><suzuki><manual>
+<section sectnbr = "5A">
+<servcat sctnbr = "05" scnbr = "01">
+<configtype typenbr = "2">
+<servinfotype sitcode = "1">
+<servinfo servinfosgmlid = "S8T40A5121008" svcinfotypenbr = "03" svcinfoqualnbr = "01" page = "2" supplyoff = "1" modify = "0">
+<title>
+On-Board Diagnostic System Description
+</title>
+<servinfosub id = "S8T40A5121008004">
+<title>
+For E-OBD Model
+</title>
+<ptxt>
+For automatic transmission control system, TCM has the following functions. Refer to 
+<intxref refid = "S8T40A5124048">Inspection of TCM and Its Circuits:5 A/T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When the ignition switch is turned ON with the engine at a stop, malfunction indicator lamp (MIL) (1) turns ON to check the bulb of the MIL.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When TCM detects a malfunction in A&#x002F;T control system (and&#x002F;or a malfunction which gives an adverse effect to vehicle emission) while the engine is running, TCM requires ECM to make the malfunction indicator lamp in the meter cluster of the instrument panel turn ON. TCM stores the malfunction area in TCM memory.
+</ptxt>
+<ptxt>
+(If it detects that continuously 3 driving cycles are normal after detecting a malfunction, however, it makes MIL turn OFF although DTC stored in its memory will remain.)
+</ptxt>
+</item>
+<item>
+<ptxt>
+It is possible to communicate through DLC (2) by using not only SUZUKI scan tool but also OBD generic scan tool. (Diagnostic information can be accessed by using a scan tool.)
+</ptxt>
+<servicetool>
+<servicetoolitem id = "L5A228">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI scan tool (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I9T401511002.swf" width = "88.000mm" height = "102.309mm" ver = "01" gw = "189" gh = "273"/>
+</figure>
+</item>
+</list1>
+<topic id = "S8T40A5121008005">
+<title>
+2 driving cycle detection logic
+</title>
+<ptxt>
+The malfunction detected in the first driving cycle is stored in TCM memory (in the form of pending DTC and freeze frame data) but the malfunction indicator lamp does not light at this time. It lights up at the second detection of same malfunction also in the next driving cycle.
+</ptxt>
+</topic>
+<topic id = "S8T40A5121008001">
+<title>
+Pending DTC
+</title>
+<ptxt>
+Pending DTC means a DTC detected and stored temporarily at 1 driving cycle of the DTC which is detected in the 2 driving cycle detection logic.
+</ptxt>
+</topic>
+<topic id = "S8T40A5121008002">
+<title>
+Freeze frame data
+</title>
+<ptxt>
+TCM stores the engine and driving conditions at the moment of the detection of a malfunction in its memory. This data is called &#8220;Freeze frame data&#8221;.
+</ptxt>
+<ptxt>
+Therefore, it is possible to know engine and driving conditions (e.g., whether the engine was warm or not, where the vehicle was running or stopped) when a malfunction was detected by checking the freeze frame data.
+</ptxt>
+</topic>
+</servinfosub>
+<servinfosub id = "S8T40A5121008003">
+<title>
+For Non-E-OBD Model
+</title>
+<ptxt>
+For automatic transmission control system, TCM has the following functions. Refer to 
+<intxref refid = "S8T40A5124048">Inspection of TCM and Its Circuits:5 A/T</intxref>
+.
+</ptxt>
+<list1 type = "unordered">
+<item>
+<ptxt>
+When ignition switch is turned ON with no malfunction in A&#x002F;T control system is detected, transmission warning light (1) lights for about 2 seconds after ignition switch is turned ON and then goes OFF for bulb check.
+</ptxt>
+</item>
+<item>
+<ptxt>
+When TCM detects a malfunction in A&#x002F;T control system, it indicates transmission warning light (1) and stores malfunction DTC in its memory.
+</ptxt>
+</item>
+<item>
+<ptxt>
+It is possible to communicate with TCM through data link connector (DLC) (2) by using SUZUKI scan tool. Diagnostic information can be checked and erased by using SUZUKI scan tool.
+</ptxt>
+</item>
+</list1>
+<servicetool>
+<servicetoolitem id = "L5A229">
+<s-part>
+(A)
+</s-part>
+<s-number num = "NNNNN-00024">
+SUZUKI scan tool (SUZUKI-SDT)
+</s-number>
+</servicetoolitem>
+</servicetool>
+<figure>
+<graphic graphicname = "I8T40A511002.swf" width = "88.000mm" height = "109.011mm" ver = "01" gw = "189" gh = "292"/>
+</figure>
+<topic id = "S8T40A5121008006">
+<title>
+2 driving cycle detection logic
+</title>
+<ptxt>
+The malfunction detected in the first driving cycle is stored in TCM memory (in the form of pending DTC and freeze frame data) but the malfunction indicator lamp does not light at this time. It lights up at the second detection of same malfunction also in the next driving cycle.
+</ptxt>
+</topic>
+<topic id = "S8T40A5121008007">
+<title>
+Pending DTC
+</title>
+<ptxt>
+Pending DTC means a DTC detected and stored temporarily at 1 driving cycle of the DTC which is detected in the 2 driving cycle detection logic.
+</ptxt>
+</topic>
+</servinfosub>
+</servinfo>
+</servinfotype>
+</configtype>
+</servcat>
+</section></manual></suzuki>
