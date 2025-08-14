@@ -1008,37 +1008,37 @@
 	<xsl:param name="lang"/>
 	<xsl:choose>
 		<xsl:when test="$lang = 'du'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Afbeelding vergroten" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Afbeelding vergroten" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'fr'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Agrandir l'image" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Agrandir l'image" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'ge'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Bild vergrößern" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Bild vergrößern" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'gk'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Επέκταση εικόνας" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Επέκταση εικόνας" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'hr'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Proširi sliku" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Proširi sliku" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'hu'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Kép nagyítása" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Kép nagyítása" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'it'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Ingrandire l'immagine" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Ingrandire l'immagine" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'jp'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="拡大" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="拡大" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'sl'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Roztiahnuť obraz" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Roztiahnuť obraz" border="0"/>
 		</xsl:when>
 		<xsl:when test="$lang = 'sp'">
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Ampliar imagen" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Ampliar imagen" border="0"/>
 		</xsl:when>
 		<xsl:otherwise>
-			<img class="expandicon" src="../../icon/zoom.gif" width="30px" title="Expand image" border="0"/>
+			<img class="expandicon" src="Xml/icon/zoom.gif" width="30px" title="Expand image" border="0"/>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
@@ -1159,7 +1159,7 @@
 			<xsl:text>AVVERTENZA:</xsl:text>
 		</xsl:when>
 		<xsl:when test="$lang = 'jp'">
-			<img class="attenmark" src="../../icon/attenmark.gif" width="16px" border="0"/>
+			<img class="attenmark" src="Xml/icon/attenmark.gif" width="16px" border="0"/>
 			<xsl:text> 警告:</xsl:text>
 		</xsl:when>
 		<xsl:when test="$lang = 'sl'">
@@ -1199,7 +1199,7 @@
 			<xsl:text>ATTENZIONE:</xsl:text>
 		</xsl:when>
 		<xsl:when test="$lang = 'jp'">
-			<img class="attenmark" src="../../icon/attenmark.gif" width="16px" border="0"/>
+			<img class="attenmark" src="Xml/icon/attenmark.gif" width="16px" border="0"/>
 			<xsl:text> 注意:</xsl:text>
 		</xsl:when>
 		<xsl:when test="$lang = 'sl'">

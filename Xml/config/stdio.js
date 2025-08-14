@@ -167,7 +167,7 @@ function toggle(id) {
 		visible=(objBlock.style.display!="none")
 		if (visible) {
 			objBlock.style.display="none";
-			objImg.src="../../icon/closed.gif";
+			objImg.src="Xml/icon/closed.gif";
 			divs=parent.NAVI.objBlock.getElementsByTagName("div")
 			for (i=0;i<divs.length;i++) {
 				if (divs[i].id.substr(0,3)=="blk") {
@@ -177,12 +177,12 @@ function toggle(id) {
 			imgs=objBlock.getElementsByTagName("img")
 			for (i=0;i<imgs.length;i++) {
 				if (imgs[i].id.substr(0,2)=="mk") {
-					imgs[i].src="../../icon/closed.gif";
+					imgs[i].src="Xml/icon/closed.gif";
 				}
 			}
 		} else {
 			objBlock.style.display="block";
-			objImg.src="../../icon/open.gif";
+			objImg.src="Xml/icon/open.gif";
 
 			if (id.length==2) {
 				if (objBlock.getElementsByTagName("div").length==0) {
@@ -199,7 +199,7 @@ function expand(id) {
 	objBlock=parent.NAVI.document.getElementById("blk" + id);
 	if (objBlock) {
 		objBlock.style.display="block";
-		objImg.src="../../icon/open.gif";
+		objImg.src="Xml/icon/open.gif";
 	}
 }
 
@@ -243,7 +243,7 @@ function loadSIE(id,back) {
 			
 			var xDoc_main = document.implementation.createDocument("", "", null);
 			xDoc_main.async = false;
-			xDoc_main.load("../../config/suzuki_all.xsl");
+			xDoc_main.load("Xml/config/suzuki_all.xsl");
 			xsltProcessor_main.importStylesheet(xDoc_main);
 			xsltProcessor_main.setParameter("", "UI_lang", UI_lang);
 		}
@@ -349,7 +349,7 @@ src += '</html>';
 	}
 
 		if (window.ActiveXObject) {
-			styleMain = xmlLoad("../../config/suzuki_all.xsl");
+			styleMain = xmlLoad("Xml/config/suzuki_all.xsl");
 			srcMain = xmlLoad(file);
 			styleMain.selectSingleNode("//xsl:param[@name='UI_lang']").setAttribute("select","'" + UI_lang + "'");
 			htmlMain = srcMain.transformNode(styleMain);
@@ -361,7 +361,7 @@ src += '</html>';
 				
 				var xDoc_main = document.implementation.createDocument("", "", null);
 				xDoc_main.async = false;
-				xDoc_main.load("../../config/suzuki_all.xsl");
+				xDoc_main.load("Xml/config/suzuki_all.xsl");
 				xsltProcessor_main.importStylesheet(xDoc_main);
 				xsltProcessor_main.setParameter("", "UI_lang", UI_lang);
 			}
@@ -527,12 +527,12 @@ function markSie(id,back) {
 	var obj_target=parent.NAVI.document.getElementById(target);
 	
 	if (parent.CTL.document.ctl.mode.value=="navi_sym") {
-		obj_target.style.background="url(../../icon/sie_bg_dtcsym.gif) repeat-y";
+		obj_target.style.background="url(Xml/icon/sie_bg_dtcsym.gif) repeat-y";
 	}
 	else if (parent.CTL.document.ctl.mode.value=="navi_dtc") {
-		obj_target.style.background="url(../../icon/sie_bg_dtcsym.gif) repeat-y";
+		obj_target.style.background="url(Xml/icon/sie_bg_dtcsym.gif) repeat-y";
 	} else {
-		obj_target.style.background="url(../../icon/sie_bg.gif) repeat-y";
+		obj_target.style.background="url(Xml/icon/sie_bg.gif) repeat-y";
 	}
 	obj_target.style.backgroundColor="#ffcc00";
 	
@@ -645,7 +645,7 @@ htmlMain="";
 	if (file!="") {
 		UI_lang = parent.opener.parent.CTL.document.ctl.lang.value;
 		if (window.ActiveXObject) {
-			styleMain = xmlLoad("../../config/suzuki_all.xsl");
+			styleMain = xmlLoad("Xml/config/suzuki_all.xsl");
 			srcMain = xmlLoad(file);
 			styleMain.selectSingleNode("//xsl:param[@name='UI_lang']").setAttribute("select","'" + UI_lang + "'");
 			htmlMain = srcMain.transformNode(styleMain);
@@ -657,7 +657,7 @@ htmlMain="";
 				
 				var xDoc_main = document.implementation.createDocument("", "", null);
 				xDoc_main.async = false;
-				xDoc_main.load("../../config/suzuki_all.xsl");
+				xDoc_main.load("Xml/config/suzuki_all.xsl");
 				xsltProcessor_main.importStylesheet(xDoc_main);
 				xsltProcessor_main.setParameter("", "UI_lang", UI_lang);
 			}
@@ -725,7 +725,7 @@ function btnHelp() {
 	
 	if (modelName!="empty") {
 		var langCode = modelName.substr(0,1);
-		var helpPath = "../../guide/guide1" + langCode + ".pdf";
+		var helpPath = "Xml/guide/guide1" + langCode + ".pdf";
 		helpWin = window.open(helpPath,"","menubar=yes,toolbar=no,locationbar=no,statusbar=no,scrollbars=yes,width=820,height=640,resizable=yes");
 	} else {
 		alert("Error: Manual ID not set!");
@@ -734,7 +734,7 @@ function btnHelp() {
 
 function openManual(num) { 
 	var item = num.value;
-	var path = "../../" + item + "/index.html";
+	var path = "Xml/" + item + "/index.html";
 	
 	num.options[0].selected = true;
 	
@@ -917,7 +917,7 @@ function showTool(tnum,ttop) {
 if (!UI_lang) {
 	UI_lang = parent.CTL.document.ctl.lang.value;
 }
-var listPath = "../../image/TOOL/Tool_" + UI_lang + ".xml";
+var listPath = "Xml/image/TOOL/Tool_" + UI_lang + ".xml";
 htmlMain="";
 
 	if (parent.frames.length==4) {
@@ -936,7 +936,7 @@ htmlMain="";
 
 
 		if (window.ActiveXObject) {
-			styleMain = xmlLoad("../../config/toollist.xsl");
+			styleMain = xmlLoad("Xml/config/toollist.xsl");
 			srcMain = xmlLoad(listPath);
 			styleMain.selectSingleNode("//xsl:param[@name='tgtTool']").setAttribute("select","'" + tnum + "'");
 			styleMain.selectSingleNode("//xsl:param[@name='tb']").setAttribute("select","'" + tb + "'");
@@ -951,7 +951,7 @@ htmlMain="";
 				
 				var xDoc_main = document.implementation.createDocument("", "", null);
 				xDoc_main.async = false;
-				xDoc_main.load("../../config/toollist.xsl");
+				xDoc_main.load("Xml/config/toollist.xsl");
 				xsltProcessor_main.importStylesheet(xDoc_main);
 				xsltProcessor_main.setParameter("", "tgtTool", tnum);
 				xsltProcessor_main.setParameter("", "tb", tb);
@@ -1022,7 +1022,7 @@ src += '</html>';
 
 
 		if (window.ActiveXObject) {
-			stylePre = xmlLoad("../../config/prereqs.xsl");
+			stylePre = xmlLoad("Xml/config/prereqs.xsl");
 			stylePre.selectSingleNode("//xsl:param[@name='UI_lang']").setAttribute("select","'" + UI_lang + "'");
 			htmlMain = srcMain.transformNode(stylePre);
 		}
@@ -1033,7 +1033,7 @@ src += '</html>';
 				
 				var xDoc_main = document.implementation.createDocument("", "", null);
 				xDoc_main.async = false;
-				xDoc_main.load("../../config/prereqs.xsl");
+				xDoc_main.load("Xml/config/prereqs.xsl");
 				xsltProcessor_main.importStylesheet(xDoc_main);
 				xsltProcessor_main.setParameter("", "UI_lang", UI_lang);
 			}

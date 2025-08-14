@@ -20,9 +20,9 @@ htmlMods_List="";
 if (window.ActiveXObject) {
 	sourceDoc = xmlLoad("../webdocstructure.xml");
 	
-	styleNavi = xmlLoad("../../config/navi-kousei-e.xslt");
+	styleNavi = xmlLoad("Xml/config/navi-kousei-e.xslt");
 	
-	styleMain = xmlLoad("../../config/suzuki_all.xsl");
+	styleMain = xmlLoad("Xml/config/suzuki_all.xsl");
 
 	htmlNavi = sourceDoc.transformNode(styleNavi);
 }
@@ -33,7 +33,7 @@ else if (window.XSLTProcessor) {
 	sourceDoc = xmlLoad_ff("../webdocstructure.xml");
 
 // load styleNavi and get transform in string htmlNavi
-	var xDoc = xmlLoad_ff("../../config/navi-kousei-e.xslt");
+	var xDoc = xmlLoad_ff("Xml/config/navi-kousei-e.xslt");
 	xsltProcessor.reset();
 	xsltProcessor.importStylesheet(xDoc);
 // do transform with current loaded stylesheet
@@ -43,12 +43,12 @@ else if (window.XSLTProcessor) {
 
 function get_htmlMods_List() {
 	if (window.ActiveXObject) {
-		styleMods_List = xmlLoad("../../config/mods-list-e.xslt");
+		styleMods_List = xmlLoad("Xml/config/mods-list-e.xslt");
 		htmlMods_List = sourceDoc.transformNode(styleMods_List);
 	}
 	else if (window.XSLTProcessor) {
 	// load styleMods_List and get transform in string htmlMods_List
-		var xDoc = xmlLoad_ff("../../config/mods-list-e.xslt");
+		var xDoc = xmlLoad_ff("Xml/config/mods-list-e.xslt");
 		xsltProcessor.reset();
 		xsltProcessor.importStylesheet(xDoc);
 	// do transform with current loaded stylesheet
@@ -59,12 +59,12 @@ function get_htmlMods_List() {
 
 function get_htmlSearch() {
 	if (window.ActiveXObject) {
-		styleSearch = xmlLoad("../../config/searchindex-e.xslt");
+		styleSearch = xmlLoad("Xml/config/searchindex-e.xslt");
 		htmlSearch = sourceDoc.transformNode(styleSearch);
 	}
 	else if (window.XSLTProcessor) {
 	// load styleSearch and get transform in string htmlSearch
-		var xDoc = xmlLoad_ff("../../config/searchindex-e.xslt");
+		var xDoc = xmlLoad_ff("Xml/config/searchindex-e.xslt");
 		xsltProcessor.reset();
 		xsltProcessor.importStylesheet(xDoc);
 	// do transform with current loaded stylesheet
@@ -76,13 +76,13 @@ function get_htmlSearch() {
 function get_htmlNavi_Dtc() {
 	if (window.ActiveXObject) {
 		srcDtc = xmlLoad("../webdocstructure-dtc.xml");
-		styleNavi_Dtc = xmlLoad("../../config/navi-dtc-e.xslt");
+		styleNavi_Dtc = xmlLoad("Xml/config/navi-dtc-e.xslt");
 		htmlNavi_Dtc = srcDtc.transformNode(styleNavi_Dtc);
 	}
 	else if (window.XSLTProcessor) {
 	// load styleNavi_Dtc and get transform in string htmlNavi_Dtc
 		xSrcDtc = xmlLoad_ff("../webdocstructure-dtc.xml");
-		var xDoc = xmlLoad_ff("../../config/navi-dtc-e.xslt");
+		var xDoc = xmlLoad_ff("Xml/config/navi-dtc-e.xslt");
 		xsltProcessor.reset();
 		xsltProcessor.importStylesheet(xDoc);
 	// do transform with current loaded stylesheet
@@ -96,7 +96,7 @@ function get_htmlSearch_Dtc() {
 		if (htmlSearch_Dtc=="") {
 			srcDtc = xmlLoad("../webdocstructure-dtc.xml");
 		}
-		styleSearch_Dtc = xmlLoad("../../config/search-dtc-e.xslt");
+		styleSearch_Dtc = xmlLoad("Xml/config/search-dtc-e.xslt");
 		htmlSearch_Dtc = srcDtc.transformNode(styleSearch_Dtc);
 	}
 	else if (window.XSLTProcessor) {
@@ -104,7 +104,7 @@ function get_htmlSearch_Dtc() {
 		if (htmlSearch_Dtc=="") {
 			xSrcDtc = xmlLoad_ff("../webdocstructure-dtc.xml");
 		}
-		var xDoc = xmlLoad_ff("../../config/search-dtc-e.xslt");
+		var xDoc = xmlLoad_ff("Xml/config/search-dtc-e.xslt");
 		xsltProcessor.reset();
 		xsltProcessor.importStylesheet(xDoc);
 	// do transform with current loaded stylesheet
@@ -116,13 +116,13 @@ function get_htmlSearch_Dtc() {
 function get_htmlNavi_Sym() {
 	if (window.ActiveXObject) {
 		srcSym = xmlLoad("../webdocstructure-sym.xml");
-		styleNavi_Sym = xmlLoad("../../config/navi-sym-e.xslt");
+		styleNavi_Sym = xmlLoad("Xml/config/navi-sym-e.xslt");
 		htmlNavi_Sym = srcSym.transformNode(styleNavi_Sym);
 	}
 	else if (window.XSLTProcessor) {
 	// load styleNavi_Sym and get transform in string htmlNavi_Sym
 		xSrcSym = xmlLoad_ff("../webdocstructure-sym.xml");
-		var xDoc = xmlLoad_ff("../../config/navi-sym-e.xslt");
+		var xDoc = xmlLoad_ff("Xml/config/navi-sym-e.xslt");
 		xsltProcessor.reset();
 		xsltProcessor.importStylesheet(xDoc);
 	// do transform with current loaded stylesheet
@@ -136,7 +136,7 @@ function get_htmlSearch_Sym() {
 		if (htmlSearch_Sym=="") {
 			srcSym = xmlLoad("../webdocstructure-sym.xml");
 		}
-		styleSearch_Sym = xmlLoad("../../config/search-sym-e.xslt");
+		styleSearch_Sym = xmlLoad("Xml/config/search-sym-e.xslt");
 		htmlSearch_Sym = srcSym.transformNode(styleSearch_Sym);
 	}
 	else if (window.XSLTProcessor) {
@@ -144,7 +144,7 @@ function get_htmlSearch_Sym() {
 		if (htmlSearch_Dtc=="") {
 			xSrcSym = xmlLoad_ff("../webdocstructure-sym.xml");
 		}
-		var xDoc = xmlLoad_ff("../../config/search-sym-e.xslt");
+		var xDoc = xmlLoad_ff("Xml/config/search-sym-e.xslt");
 		xsltProcessor.reset();
 		xsltProcessor.importStylesheet(xDoc);
 	// do transform with current loaded stylesheet
@@ -160,7 +160,7 @@ function getInnerNaviHtml(id) {
 	subDocPath = "../webdocstructure_" + id + ".xml";
 	if (window.ActiveXObject) {
 		subDoc = xmlLoad(subDocPath);
-		styleNavi_SubDoc = xmlLoad("../../config/navi-subdoc.xslt");
+		styleNavi_SubDoc = xmlLoad("Xml/config/navi-subdoc.xslt");
 		styleNavi_SubDoc.selectSingleNode("//xsl:param[@name='lang']").setAttribute("select","'" + UI_lang + "'");
 		styleNavi_SubDoc.selectSingleNode("//xsl:param[@name='sc']").setAttribute("select","'" + id + "'");
 		innerHtml = subDoc.transformNode(styleNavi_SubDoc);
@@ -168,7 +168,7 @@ function getInnerNaviHtml(id) {
 	else if (window.XSLTProcessor) {
 	// load subDoc file and get transform in string innerHtml
 		subDoc = xmlLoad_ff(subDocPath);
-		var xDoc = xmlLoad_ff("../../config/navi-subdoc.xslt");
+		var xDoc = xmlLoad_ff("Xml/config/navi-subdoc.xslt");
 		xsltProcessor.reset();
 		xsltProcessor.importStylesheet(xDoc);
 		xsltProcessor.setParameter("", "lang", UI_lang);

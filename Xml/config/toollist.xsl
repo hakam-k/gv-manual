@@ -24,12 +24,12 @@
 	<xsl:value-of select="$tgtTool"/>
 </xsl:if>
 </title>
-<link rel="stylesheet" href="../../config/tool.css" type="text/css"/>
+<link rel="stylesheet" href="Xml/config/tool.css" type="text/css"/>
 	<xsl:value-of select="$newline"/>
 <script type="text/javascript">
 var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 </script>
-<script type="text/javascript" src="../../config/stdio.js">
+<script type="text/javascript" src="Xml/config/stdio.js">
 <xsl:comment>
 </xsl:comment>
 </script>
@@ -56,7 +56,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 	<xsl:attribute name="class">figure</xsl:attribute>
 
 <xsl:variable name="gpath">
-	<xsl:text>../../image/TOOL/</xsl:text>
+	<xsl:text>Xml/image/TOOL/</xsl:text>
 	<xsl:choose>
 		<xsl:when test="@pre">
 			<xsl:value-of select="@pre"/>
@@ -117,16 +117,16 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 
 <xsl:if test="not(contains(@id, 'NNNNN-')) and $tb='on' and $dc!='0'">
 <xsl:variable name="tbdatapath">
-	<xsl:if test="document('../../image/TOOL/tbpaths.xml', .)">
-		<xsl:value-of select="document('../../image/TOOL/tbpaths.xml', .)//path[@dc = $dc]"/>
+	<xsl:if test="document('Xml/image/TOOL/tbpaths.xml', .)">
+		<xsl:value-of select="document('Xml/image/TOOL/tbpaths.xml', .)//path[@dc = $dc]"/>
 	</xsl:if>
 	<xsl:text>/</xsl:text>
 	<xsl:value-of select="$dc"/>
 	<xsl:text>/</xsl:text>
 </xsl:variable>
 <xsl:variable name="tbfileurl">
-	<xsl:if test="document('../../image/TOOL/tbpaths.xml', .)">
-		<xsl:value-of select="document('../../image/TOOL/tbpaths.xml', .)//path[@dc = $dc]/@url"/>
+	<xsl:if test="document('Xml/image/TOOL/tbpaths.xml', .)">
+		<xsl:value-of select="document('Xml/image/TOOL/tbpaths.xml', .)//path[@dc = $dc]/@url"/>
 	</xsl:if>
 </xsl:variable>
 <xsl:variable name="tbfilename">
@@ -143,7 +143,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 	<xsl:value-of select="$tbfilename"/>
 </xsl:variable>
 
-	<xsl:if test="count(document(concat('../../../',$tbdatapath,'tblist.xml'), .)//tb[@f=$tbfilename])!=0">
+	<xsl:if test="count(document(concat('Xml/../',$tbdatapath,'tblist.xml'), .)//tb[@f=$tbfilename])!=0">
 		<table border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tr>
 		<td align="center">

@@ -91,7 +91,7 @@ function runSearch(query,start)
 					
 						strOutput += "<a href=\"javascript: loadFound('" + arrSieList[i] + "')\" title=\"" + arrSieTitles[i] + getHier(arrSieList[i]) + "\">";
 						strOutput += "<div class=\"sie\" id=\"sie" + arrSieList[i] + "\" onmouseover=\"overDiv(this)\" onmouseout=\"outDiv(this)\">";
-						strOutput += "<img class=\"mark\" src=\"../../icon/doc.gif\" width=\"11px\" border=\"0\">";
+						strOutput += "<img class=\"mark\" src=\"Xml/icon/doc.gif\" width=\"11px\" border=\"0\">";
 						strOutput += arrSieTitles[i];
 						strOutput += "</div></a>";
 
@@ -204,7 +204,7 @@ var type = parent.CTL.document.ctl.mode.value;
 						
 							strOutput += "<a href=\"javascript: loadFound('" + arrSieList_Dtc[i] + "')\" title=\"" + arrSieTitles_Dtc[i] + getHier(arrSieList_Dtc[i]) + "\">";
 							strOutput += "<div class=\"sie\" id=\"sie" + arrSieList_Dtc[i] + "\" onmouseover=\"overDiv(this)\" onmouseout=\"outDiv(this)\">";
-							strOutput += "<img class=\"mark\" src=\"../../icon/doc.gif\" width=\"11px\" border=\"0\">";
+							strOutput += "<img class=\"mark\" src=\"Xml/icon/doc.gif\" width=\"11px\" border=\"0\">";
 							strOutput += arrSieTitles_Dtc[i];
 							strOutput += "</div></a>";
 
@@ -225,7 +225,7 @@ var type = parent.CTL.document.ctl.mode.value;
 						
 							strOutput += "<a href=\"javascript: loadFound('" + arrSieList_Sym[i] + "')\" title=\"" + arrSieTitles_Sym[i] + getHier(arrSieList_Sym[i]) + "\">";
 							strOutput += "<div class=\"sie\" id=\"sie" + arrSieList_Sym[i] + "\" onmouseover=\"overDiv(this)\" onmouseout=\"outDiv(this)\">";
-							strOutput += "<img class=\"mark\" src=\"../../icon/doc.gif\" width=\"11px\" border=\"0\">";
+							strOutput += "<img class=\"mark\" src=\"Xml/icon/doc.gif\" width=\"11px\" border=\"0\">";
 							strOutput += arrSieTitles_Sym[i];
 							strOutput += "</div></a>";
 
@@ -359,7 +359,7 @@ function loadFound(id) {
 				
 				var xDoc_main = document.implementation.createDocument("", "", null);
 				xDoc_main.async = false;
-				xDoc_main.load("../../config/suzuki_all.xsl");
+				xDoc_main.load("Xml/config/suzuki_all.xsl");
 				xsltProcessor_main.importStylesheet(xDoc_main);
 				xsltProcessor_main.setParameter("", "UI_lang", UI_lang)
 			}
@@ -385,7 +385,7 @@ function markTarget(id) {
 			if (divs[i].id!="sie"+id) {
 				divs[i].style.backgroundColor="#ffffff";
 			} else {
-				divs[i].style.background="url(../../icon/search_bg.gif) repeat-y";
+				divs[i].style.background="url(Xml/icon/search_bg.gif) repeat-y";
 				divs[i].style.backgroundColor="#ffcc00";
 			}
 		}

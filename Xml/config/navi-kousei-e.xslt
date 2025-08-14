@@ -20,7 +20,7 @@
 <head>
 <title>Contents Index</title>
 	<xsl:value-of select="$newline"/>
-<link rel="stylesheet" href="../../config/navi.css" type="text/css"/>
+<link rel="stylesheet" href="Xml/config/navi.css" type="text/css"/>
 	<xsl:value-of select="$newline"/>
 <script type="text/javascript">
 <xsl:comment>
@@ -67,11 +67,11 @@ function setModelInfo() {
 </xsl:comment>
 </script>
 	<xsl:value-of select="$newline"/>
-<script type="text/javascript" src="../../config/stdio.js">
+<script type="text/javascript" src="Xml/config/stdio.js">
 <xsl:comment>
 </xsl:comment>
 </script>
-<script type="text/javascript" src="../../config/ui.js">
+<script type="text/javascript" src="Xml/config/ui.js">
 <xsl:comment>
 </xsl:comment>
 </script>
@@ -190,7 +190,7 @@ function setModelInfo() {
 				<xsl:element name="img">
 					<xsl:attribute name="class">mark</xsl:attribute>
 					<xsl:attribute name="id">mk<xsl:value-of select="$sct"/></xsl:attribute>
-					<xsl:attribute name="src">../../icon/closed.gif</xsl:attribute>
+					<xsl:attribute name="src">Xml/icon/closed.gif</xsl:attribute>
 					<xsl:attribute name="width">11px</xsl:attribute>
 					<xsl:attribute name="border">0</xsl:attribute>
 					<xsl:attribute name="alt">icon</xsl:attribute>
@@ -245,7 +245,7 @@ function setModelInfo() {
 		<xsl:element name="img">
 			<xsl:attribute name="class">mark</xsl:attribute>
 			<xsl:attribute name="id">mk<xsl:value-of select="$scid"/></xsl:attribute>
-			<xsl:attribute name="src">../../icon/closed.gif</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/closed.gif</xsl:attribute>
 			<xsl:attribute name="width">11px</xsl:attribute>
 			<xsl:attribute name="border">0</xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
@@ -290,7 +290,7 @@ function setModelInfo() {
 		<xsl:attribute name="onmouseout">outDiv(this)</xsl:attribute>
 		<xsl:element name="img">
 			<xsl:attribute name="class">mark</xsl:attribute>
-			<xsl:attribute name="src">../../icon/doc.gif</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/doc.gif</xsl:attribute>
 			<xsl:attribute name="width">11px</xsl:attribute>
 			<xsl:attribute name="border">0</xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>

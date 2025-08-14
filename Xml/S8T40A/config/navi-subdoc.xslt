@@ -39,7 +39,7 @@
 				<xsl:element name="img">
 					<xsl:attribute name="class">mark</xsl:attribute>
 					<xsl:attribute name="id">mk<xsl:value-of select="$configid"/></xsl:attribute>
-					<xsl:attribute name="src">../../icon/closed.gif</xsl:attribute>
+					<xsl:attribute name="src">Xml/icon/closed.gif</xsl:attribute>
 					<xsl:attribute name="width">11px</xsl:attribute>
 					<xsl:attribute name="border">0</xsl:attribute>
 					<xsl:attribute name="alt">icon</xsl:attribute>
@@ -98,7 +98,7 @@
 		<xsl:element name="img">
 			<xsl:attribute name="class">mark</xsl:attribute>
 			<xsl:attribute name="id">mk<xsl:value-of select="$sitid"/></xsl:attribute>
-			<xsl:attribute name="src">../../icon/closed.gif</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/closed.gif</xsl:attribute>
 			<xsl:attribute name="width">11px</xsl:attribute>
 			<xsl:attribute name="border">0</xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
@@ -144,7 +144,7 @@
 		<xsl:attribute name="onmouseout">outDiv(this)</xsl:attribute>
 		<xsl:element name="img">
 			<xsl:attribute name="class">mark</xsl:attribute>
-			<xsl:attribute name="src">../../icon/doc.gif</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/doc.gif</xsl:attribute>
 			<xsl:attribute name="width">11px</xsl:attribute>
 			<xsl:attribute name="border">0</xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>

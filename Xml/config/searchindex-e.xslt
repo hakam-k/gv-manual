@@ -22,7 +22,7 @@
 	<xsl:value-of select="$newline"/>
 <head>
 	<xsl:value-of select="$newline"/>
-<link rel="stylesheet" href="../../config/search.css" type="text/css"/>
+<link rel="stylesheet" href="Xml/config/search.css" type="text/css"/>
 	<xsl:value-of select="$newline"/>
 <script type="text/javascript">
 
@@ -94,17 +94,17 @@ var arrSitTitles = strSitList.split("::")
 
 </script>
 	<xsl:value-of select="$newline"/>
-<script type="text/javascript" src="../../config/stdio.js">
+<script type="text/javascript" src="Xml/config/stdio.js">
 <xsl:comment>
 </xsl:comment>
 </script>
 	<xsl:value-of select="$newline"/>
-<script type="text/javascript" src="../../config/search.js">
+<script type="text/javascript" src="Xml/config/search.js">
 <xsl:comment>
 </xsl:comment>
 </script>
 	<xsl:value-of select="$newline"/>
-<script type="text/javascript" src="../../config/ui.js">
+<script type="text/javascript" src="Xml/config/ui.js">
 <xsl:comment>
 </xsl:comment>
 </script>

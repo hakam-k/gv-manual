@@ -32,7 +32,7 @@
 	<xsl:value-of select="$newline"/>
 <head>
 	<xsl:value-of select="$newline"/>
-<link rel="stylesheet" href="../../config/navi.css" type="text/css"/>
+<link rel="stylesheet" href="Xml/config/navi.css" type="text/css"/>
 	<xsl:value-of select="$newline"/>
 <script type="text/javascript">
 <xsl:comment>
@@ -47,7 +47,7 @@ var arrSieList = strSieList.split(",")
 </xsl:comment>
 </script>
 	<xsl:value-of select="$newline"/>
-<script type="text/javascript" src="../../config/stdio.js">
+<script type="text/javascript" src="Xml/config/stdio.js">
 <xsl:comment>
 </xsl:comment>
 </script>
@@ -132,7 +132,7 @@ var arrSieList = strSieList.split(",")
 				<xsl:element name="img">
 					<xsl:attribute name="class">mark</xsl:attribute>
 					<xsl:attribute name="id">mk<xsl:value-of select="$sct"/></xsl:attribute>
-					<xsl:attribute name="src">../../icon/closed.gif</xsl:attribute>
+					<xsl:attribute name="src">Xml/icon/closed.gif</xsl:attribute>
 					<xsl:attribute name="width">11px</xsl:attribute>
 					<xsl:attribute name="border">0</xsl:attribute>
 					<xsl:attribute name="alt">icon</xsl:attribute>
@@ -177,7 +177,7 @@ var arrSieList = strSieList.split(",")
 		<xsl:element name="img">
 			<xsl:attribute name="class">mark</xsl:attribute>
 			<xsl:attribute name="id">mk<xsl:value-of select="$scid"/></xsl:attribute>
-			<xsl:attribute name="src">../../icon/closed.gif</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/closed.gif</xsl:attribute>
 			<xsl:attribute name="width">11px</xsl:attribute>
 			<xsl:attribute name="border">0</xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
@@ -197,7 +197,7 @@ var arrSieList = strSieList.split(",")
 
 <xsl:template match="configtype[descendant::servinfo/@dtccode!='']">
 <xsl:variable name="configid">
-	<xsl:value-of select="substring(../../@file,7,2)"/><xsl:value-of select="@id"/>
+	<xsl:value-of select="substring(Xml/@file,7,2)"/><xsl:value-of select="@id"/>
 </xsl:variable>
 
 <xsl:choose>
@@ -215,7 +215,7 @@ var arrSieList = strSieList.split(",")
 				<xsl:element name="img">
 					<xsl:attribute name="class">mark</xsl:attribute>
 					<xsl:attribute name="id">mk<xsl:value-of select="$configid"/></xsl:attribute>
-					<xsl:attribute name="src">../../icon/closed.gif</xsl:attribute>
+					<xsl:attribute name="src">Xml/icon/closed.gif</xsl:attribute>
 					<xsl:attribute name="width">11px</xsl:attribute>
 					<xsl:attribute name="border">0</xsl:attribute>
 					<xsl:attribute name="alt">icon</xsl:attribute>
@@ -251,7 +251,7 @@ var arrSieList = strSieList.split(",")
 	</xsl:choose>
 </xsl:variable>
 <xsl:variable name="sitid">
-	<xsl:value-of select="substring(../../../@file,7,2)"/><xsl:value-of select="../@id"/><xsl:value-of select="$sitcode"/>
+	<xsl:value-of select="substring(Xml/../@file,7,2)"/><xsl:value-of select="../@id"/><xsl:value-of select="$sitcode"/>
 </xsl:variable>
 
 <xsl:element name="a">
@@ -266,7 +266,7 @@ var arrSieList = strSieList.split(",")
 		<xsl:element name="img">
 			<xsl:attribute name="class">mark</xsl:attribute>
 			<xsl:attribute name="id">mk<xsl:value-of select="$sitid"/></xsl:attribute>
-			<xsl:attribute name="src">../../icon/closed.gif</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/closed.gif</xsl:attribute>
 			<xsl:attribute name="width">11px</xsl:attribute>
 			<xsl:attribute name="border">0</xsl:attribute>
 		</xsl:element>
@@ -303,7 +303,7 @@ var arrSieList = strSieList.split(",")
 		<xsl:attribute name="onmouseout">outDiv(this)</xsl:attribute>
 		<xsl:element name="img">
 			<xsl:attribute name="class">mark</xsl:attribute>
-			<xsl:attribute name="src">../../icon/doc.gif</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/doc.gif</xsl:attribute>
 			<xsl:attribute name="width">11px</xsl:attribute>
 			<xsl:attribute name="border">0</xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
@@ -331,7 +331,7 @@ var arrSieList = strSieList.split(",")
 		<xsl:element name="img">
 			<xsl:attribute name="class">symbol</xsl:attribute>
 			<xsl:attribute name="name"><xsl:value-of select="@name"/></xsl:attribute>
-			<xsl:attribute name="src">../../icon/<xsl:value-of select="@name"/>.png</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/<xsl:value-of select="@name"/>.png</xsl:attribute>
 			<xsl:attribute name="title"><xsl:value-of select="@name"/></xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
 		</xsl:element>
@@ -340,7 +340,7 @@ var arrSieList = strSieList.split(",")
 		<xsl:element name="img">
 			<xsl:attribute name="class">symbol</xsl:attribute>
 			<xsl:attribute name="name"><xsl:value-of select="@name"/></xsl:attribute>
-			<xsl:attribute name="src">../../symbol/<xsl:value-of select="@name"/>.png</xsl:attribute>
+			<xsl:attribute name="src">Xml/symbol/<xsl:value-of select="@name"/>.png</xsl:attribute>
 			<xsl:attribute name="title"><xsl:value-of select="@name"/></xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
 		</xsl:element>

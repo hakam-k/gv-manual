@@ -20,13 +20,13 @@
 <head>
 <title>Modifications List</title>
 	<xsl:value-of select="$newline"/>
-<link rel="stylesheet" href="../../config/modslist.css" type="text/css"/>
+<link rel="stylesheet" href="Xml/config/modslist.css" type="text/css"/>
 	<xsl:value-of select="$newline"/>
-<script type="text/javascript" src="../../config/stdio.js">
+<script type="text/javascript" src="Xml/config/stdio.js">
 <xsl:comment>
 </xsl:comment>
 </script>
-<script type="text/javascript" src="../../config/ui.js">
+<script type="text/javascript" src="Xml/config/ui.js">
 <xsl:comment>
 </xsl:comment>
 </script>
@@ -126,7 +126,7 @@
 		<xsl:element name="img">
 			<xsl:attribute name="class">symbol</xsl:attribute>
 			<xsl:attribute name="name"><xsl:value-of select="@name"/></xsl:attribute>
-			<xsl:attribute name="src">../../icon/<xsl:value-of select="@name"/>.png</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/<xsl:value-of select="@name"/>.png</xsl:attribute>
 			<xsl:attribute name="title"><xsl:value-of select="@name"/></xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
 		</xsl:element>

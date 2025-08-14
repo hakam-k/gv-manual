@@ -1038,10 +1038,10 @@ function SetDisplaystring(arDisp) {
 
 	for (iCnt = 0 ; iCnt < arDisp.length ; iCnt++) {
 		if (arDisp[iCnt]['fnm2'] != '') {
-			var manLink = "../xml/" + arDisp[iCnt]['fnm'] + arDisp[iCnt]['fnm2'];
+			var manLink = "../Xml/" + arDisp[iCnt]['fnm'] + arDisp[iCnt]['fnm2'];
 		}
 		else {
-			var manLink = "../xml/" + arDisp[iCnt]['fnm'];
+			var manLink = "../Xml/" + arDisp[iCnt]['fnm'];
 		}
 		dispString += strTR_S;
 		if (mn_row == 0) {

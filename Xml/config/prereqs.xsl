@@ -19,12 +19,12 @@
 	<xsl:value-of select="$newline"/>
 <head>
 <title><xsl:text>PreReqs</xsl:text></title>
-<link rel="stylesheet" href="../../config/prereqs.css" type="text/css"/>
+<link rel="stylesheet" href="Xml/config/prereqs.css" type="text/css"/>
 	<xsl:value-of select="$newline"/>
 <script type="text/javascript">
 var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 </script>
-<script type="text/javascript" src="../../config/stdio.js">
+<script type="text/javascript" src="Xml/config/stdio.js">
 <xsl:comment>
 </xsl:comment>
 </script>

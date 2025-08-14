@@ -22,17 +22,17 @@ use="generate-id(preceding-sibling::condition[1])"/>
 	<xsl:value-of select="$newline"/>
 	<xsl:choose>
 		<xsl:when test="$UI_lang = 'jp'">
-			<link rel="stylesheet" href="../../config/suzukimain_j.css" type="text/css"/>
+			<link rel="stylesheet" href="Xml/config/suzukimain_j.css" type="text/css"/>
 		</xsl:when>
 		<xsl:otherwise>
-			<link rel="stylesheet" href="../../config/suzukimain_e.css" type="text/css"/>
+			<link rel="stylesheet" href="Xml/config/suzukimain_e.css" type="text/css"/>
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:value-of select="$newline"/>
 <script type="text/javascript">
 var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 </script>
-<script type="text/javascript" src="../../config/stdio.js">
+<script type="text/javascript" src="Xml/config/stdio.js">
 <xsl:comment>
 </xsl:comment>
 </script>
@@ -501,7 +501,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 </xsl:variable>
 
 <xsl:variable name="gpath">
-	<xsl:text>../../image/</xsl:text>
+	<xsl:text>Xml/image/</xsl:text>
 	<xsl:choose>
 		<xsl:when test="starts-with($gname,'I')">
 			<xsl:value-of select="substring($gname, 1, 6)"/>
@@ -796,7 +796,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 		<xsl:element name="img">
 			<xsl:attribute name="class">symbol</xsl:attribute>
 			<xsl:attribute name="name"><xsl:value-of select="@name"/></xsl:attribute>
-			<xsl:attribute name="src">../../icon/<xsl:value-of select="@name"/>.png</xsl:attribute>
+			<xsl:attribute name="src">Xml/icon/<xsl:value-of select="@name"/>.png</xsl:attribute>
 			<xsl:attribute name="title"><xsl:value-of select="@name"/></xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
 		</xsl:element>
@@ -805,7 +805,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 		<xsl:element name="img">
 			<xsl:attribute name="class">symbol</xsl:attribute>
 			<xsl:attribute name="name"><xsl:value-of select="@name"/></xsl:attribute>
-			<xsl:attribute name="src">../../symbol/<xsl:value-of select="@name"/>.png</xsl:attribute>
+			<xsl:attribute name="src">Xml/symbol/<xsl:value-of select="@name"/>.png</xsl:attribute>
 			<xsl:attribute name="title"><xsl:value-of select="@name"/></xsl:attribute>
 			<xsl:attribute name="alt">icon</xsl:attribute>
 		</xsl:element>
@@ -1009,7 +1009,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 	<xsl:when test="ancestor::table/@frame='all'">
 		<xsl:choose>
 			<xsl:when test="not(@border-top = '0')">
-				<xsl:if test="count(../../preceding-sibling::thead) = 0 and count(../preceding-sibling::row) = 0">
+				<xsl:if test="count(Xml/preceding-sibling::thead) = 0 and count(../preceding-sibling::row) = 0">
 						<xsl:text>border-top-width:2px;</xsl:text>
 				</xsl:if>
 			</xsl:when>
@@ -1055,7 +1055,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 	<xsl:otherwise>
 		<xsl:choose>
 			<xsl:when test="@border-top = '1'">
-				<xsl:if test="count(../../preceding-sibling::thead) = 0 and count(../preceding-sibling::row) = 0">
+				<xsl:if test="count(Xml/preceding-sibling::thead) = 0 and count(../preceding-sibling::row) = 0">
 						<xsl:text>border-top-width:2px;</xsl:text>
 				</xsl:if>
 			</xsl:when>
@@ -1817,7 +1817,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 			<xsl:value-of select="@refid"/>
 			<xsl:text>')</xsl:text>
 		</xsl:attribute>
-		<img src="../../icon/intxreftitleoff.png" alt="icon"/>
+		<img src="Xml/icon/intxreftitleoff.png" alt="icon"/>
 		<xsl:choose>
 			<xsl:when test = "name(following-sibling::*[1])='intxreftitleoff' or name(following-sibling::*[1])='intxreftitleoff1'">
 				<xsl:text> </xsl:text>

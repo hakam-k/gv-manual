@@ -987,7 +987,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 	<xsl:when test="ancestor::table/@frame='all'">
 		<xsl:choose>
 			<xsl:when test="not(@border-top = '0')">
-				<xsl:if test="count(../../preceding-sibling::thead) = 0 and count(../preceding-sibling::row) = 0">
+				<xsl:if test="count(Xml/preceding-sibling::thead) = 0 and count(../preceding-sibling::row) = 0">
 						<xsl:text>border-top-width:2px;</xsl:text>
 				</xsl:if>
 			</xsl:when>
@@ -1033,7 +1033,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 	<xsl:otherwise>
 		<xsl:choose>
 			<xsl:when test="@border-top = '1'">
-				<xsl:if test="count(../../preceding-sibling::thead) = 0 and count(../preceding-sibling::row) = 0">
+				<xsl:if test="count(Xml/preceding-sibling::thead) = 0 and count(../preceding-sibling::row) = 0">
 						<xsl:text>border-top-width:2px;</xsl:text>
 				</xsl:if>
 			</xsl:when>
@@ -1769,7 +1769,7 @@ var UI_lang = "<xsl:value-of select="$UI_lang"/>";
 			<xsl:value-of select="@refid"/>
 			<xsl:text>')</xsl:text>
 		</xsl:attribute>
-		<img src="../../icon/intxreftitleoff.png" alt="icon"/>
+		<img src="Xml/icon/intxreftitleoff.png" alt="icon"/>
 		<xsl:choose>
 			<xsl:when test = "name(following-sibling::*[1])='intxreftitleoff' or name(following-sibling::*[1])='intxreftitleoff1'">
 				<xsl:text> </xsl:text>
